@@ -175,3 +175,65 @@
     }
   }
 }
+
+// RESPONSIVE
+
+/* MOBILE WIDTH < 740px */
+@media screen and (max-width: 769px) {
+  .rootmainfounder {
+    width: auto;
+    height: 200px;
+    z-index: 20;
+    .carouselcategory {
+      margin-top: 20px;
+      width: 100%;
+      // height: auto;
+      width: 360px;
+      height: 55px;
+
+      width: 60px;
+      height: 24px;
+
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      /* identical to box height, or 150% */
+
+      letter-spacing: -0.5px;
+
+      /* Gray/800 */
+
+      /* Inside auto layout */
+
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+
+      .slick-list {
+        width: 522px;
+        border-bottom: 1px solid gray;
+      }
+      .tab-active {
+        .itemslide {
+          background: #ffffff;
+          width: 150px;
+          padding-top: 17px;
+          padding-bottom: 17px;
+          margin-top: 50px;
+          border-bottom: 2px solid black;
+          color: #222222;
+        }
+      }
+      .itemslide {
+        color: #999999;
+        background: #ffffff;
+        width: 150px;
+        padding-top: 17px;
+        padding-bottom: 17px;
+        margin-top: 50px;
+      }
+    }
+  }
+}
