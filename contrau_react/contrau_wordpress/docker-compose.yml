@@ -1,0 +1,36 @@
+version: '2'
+services:
+  mariadb:
+    image: docker.io/bitnami/mariadb:10.6
+    volumes:
+      - /Users/vu/Project/metacoders/contrau/mariadb:/bitnami/mariadb
+    environment:
+      # ALLOW_EMPTY_PASSWORD is recommended only for development.
+      - ALLOW_EMPTY_PASSWORD=yes
+      - MARIADB_USER=bn_contrau
+      - MARIADB_DATABASE=contrau_wordpress
+  phpmyadmin:
+    image: docker.io/bitnami/phpmyadmin:latest
+    ports:
+      - '8080:8080'
+      - '8443:8443'
+    depends_on:
+      - mariadb
+  wordpress:
+    image: docker.io/bitnami/wordpress:5
+    ports:
+      - '80:8080'
+      - '443:8443'
+    volumes:
+      - /Users/vu/Project/metacoders/contrau/wordpress:/bitnami/wordpress
+    depends_on:
+      - mariadb
+    environment:
+      # ALLOW_EMPTY_PASSWORD is recommended only for development.
+      - ALLOW_EMPTY_PASSWORD=yes
+      - WORDPRESS_USERNAME=tom
+      - WORDPRESS_PASSWORD=tom
+      - WORDPRESS_DATABASE_HOST=mariadb
+      - WORDPRESS_DATABASE_PORT_NUMBER=3306
+      - WORDPRESS_DATABASE_USER=bn_contrau
+      - WORDPRESS_DATABASE_NAME=contrau_wordpress
