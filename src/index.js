@@ -5,19 +5,16 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import store from './app/store';
 import { SnackbarProvider } from 'notistack';
 //alt + shift + o để ss lại import
 ReactDOM.render(
 
   
-      <Provider store={store}>
         <BrowserRouter>
           <SnackbarProvider autoHideDuration={2000} anchorOrigin={{vertical:'top',horizontal:'right'}}>
             <App />
           </SnackbarProvider>
-        </BrowserRouter>
-      </Provider>,
+        </BrowserRouter>,
 
 
   document.getElementById('root')
