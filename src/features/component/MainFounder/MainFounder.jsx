@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import './style.scss';
 import { Box, Button, useMediaQuery, useTheme } from '@material-ui/core';
 import img1 from '../../../img/founder1.png';
 import img2 from '../../../img/founder2.png';
 import img3 from '../../../img/founder3.png';
+import img1mb from '../../../img/founder1mb.png';
+import img2mb from '../../../img/founder2mb.png';
+import img3mb from '../../../img/founder3mb.png';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -21,7 +24,8 @@ function MainFounder(props) {
     { id: 3, name: 'Category 2' },
     { id: 4, name: 'Category 3' },
   ];
-  const listimgfounder = [
+
+  var listimgfounder = [
     { id: 1, imgUrl: img1 },
     { id: 2, imgUrl: img2 },
     { id: 3, imgUrl: img3 },
@@ -35,6 +39,23 @@ function MainFounder(props) {
 
   const [clicked, setClicked] = useState(contentdatacategory[0].name);
   const [listfounder, setListFounder] = useState(listimgfounder);
+
+  useEffect(() => {
+    if (isMatch) {
+      console.log('2');
+      setListFounder([
+        { id: 1, imgUrl: img1mb },
+        { id: 2, imgUrl: img2mb },
+        { id: 3, imgUrl: img3mb },
+        { id: 4, imgUrl: img3mb },
+        { id: 5, imgUrl: img1mb },
+        { id: 6, imgUrl: img2mb },
+        { id: 7, imgUrl: img2mb },
+        { id: 8, imgUrl: img3mb },
+        { id: 9, imgUrl: img1mb },
+      ]);
+    }
+  }, [isMatch]);
 
   const carouselProperties = {
     // initialSlide: 3,
@@ -104,7 +125,7 @@ function MainFounder(props) {
         {listfounder.map((item) => (
           <Box className="frameimgfounder">
             <img src={item.imgUrl} alt="" className="imgfounder" />
-            <Box className="framedetailfoundername">
+            {/* <Box className="framedetailfoundername">
               <Box className="detailfoundername">
                 FOUNDER
                 <Box className="titlename">NAME</Box>
@@ -113,7 +134,7 @@ function MainFounder(props) {
             <Box className="titledetail">
               Lorem ipsum dolor sit amet, cons ectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-            </Box>
+            </Box> */}
           </Box>
         ))}
       </Box>
