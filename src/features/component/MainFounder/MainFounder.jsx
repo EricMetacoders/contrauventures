@@ -52,7 +52,6 @@ function MainFounder(props) {
         { id: 6, imgUrl: img2mb },
         { id: 7, imgUrl: img2mb },
         { id: 8, imgUrl: img3mb },
-        { id: 9, imgUrl: img1mb },
       ]);
     }
   }, [isMatch]);
@@ -84,6 +83,30 @@ function MainFounder(props) {
   };
   const dealClick = (item) => {
     setClicked(item.name);
+    if (isMatch) {
+      setListFounder([
+        { id: 1, imgUrl: img2mb },
+        { id: 2, imgUrl: img1mb },
+        { id: 3, imgUrl: img3mb },
+        { id: 4, imgUrl: img1mb },
+        { id: 5, imgUrl: img2mb },
+        { id: 6, imgUrl: img3mb },
+        { id: 7, imgUrl: img1mb },
+        { id: 8, imgUrl: img2mb },
+      ]);
+    } else {
+      setListFounder([
+        { id: 1, imgUrl: img2 },
+        { id: 2, imgUrl: img1 },
+        { id: 3, imgUrl: img3 },
+        { id: 4, imgUrl: img1 },
+        { id: 5, imgUrl: img3 },
+        { id: 6, imgUrl: img2 },
+        { id: 7, imgUrl: img3 },
+        { id: 8, imgUrl: img2 },
+        { id: 9, imgUrl: img1 },
+      ]);
+    }
   };
   return (
     <div className="rootmainfounder">
@@ -125,7 +148,7 @@ function MainFounder(props) {
         {listfounder.map((item) => (
           <Box className="frameimgfounder">
             <img src={item.imgUrl} alt="" className="imgfounder" />
-            {/* <Box className="framedetailfoundername">
+            <Box className="framedetailfoundername">
               <Box className="detailfoundername">
                 FOUNDER
                 <Box className="titlename">NAME</Box>
@@ -134,7 +157,7 @@ function MainFounder(props) {
             <Box className="titledetail">
               Lorem ipsum dolor sit amet, cons ectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-            </Box> */}
+            </Box>
           </Box>
         ))}
       </Box>

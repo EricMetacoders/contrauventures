@@ -1,23 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
+import ReactDOM from 'react-dom/client';
 import './index.css';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { SnackbarProvider } from 'notistack';
-//alt + shift + o để ss lại import
-ReactDOM.render(
 
-  
-        <BrowserRouter>
-          <SnackbarProvider autoHideDuration={2000} anchorOrigin={{vertical:'top',horizontal:'right'}}>
-            <App />
-          </SnackbarProvider>
-        </BrowserRouter>,
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <>
+    <App />
+  </>
 
-
-  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
