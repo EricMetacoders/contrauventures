@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { Box } from "@material-ui/core";
 import "./style.scss";
 import axios from "axios";
+import dot1 from "../../../../img/dot1.png";
+import dot2 from "../../../../img/dot2.png";
 MainPageDetail.propTypes = {};
 
 function MainPageDetail(props) {
@@ -14,14 +16,6 @@ function MainPageDetail(props) {
   const dealClick = (item) => {
     setClicked(item.name);
   };
-  useEffect(() => {
-    axios
-      .get(`https://jsonplaceholder.typicode.com/users`)
-      .then((res) => {
-        console.log("res:", res.data);
-      })
-      .catch((error) => console.log(error));
-  }, []);
 
   return (
     <div className="rootpagedetail">
@@ -38,7 +32,22 @@ function MainPageDetail(props) {
           </Box>
         ))}
       </Box>
-      <Box className="framehtmlinterview"></Box>
+      <Box className="framehtmlinterview">
+        <Box className="framemaintitle">
+          <Box className="framedot1">
+            <img src={dot1} alt="" />
+          </Box>
+          <Box className="frametitle">
+            <Box className="titlemain">
+              Everyone advised me
+              <Box className="detailtitle">not to do it</Box>
+            </Box>
+          </Box>
+          <Box className="framedot2">
+            <img src={dot2} />
+          </Box>
+        </Box>
+      </Box>
     </div>
   );
 }
