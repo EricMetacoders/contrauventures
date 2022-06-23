@@ -1,17 +1,14 @@
 import React from "react";
-import male from "../../assets/image/male.png";
-import male2 from "../../assets/image/male2.png";
-import female from "../../assets/image/female.png";
-import MobileFounderCarousel from "./MobileFounderCarousel";
+import FounderCarousel from "./FounderCarousel";
 export default function Founders() {
   return (
-    <div className="ml-[36px]  lg:container  lg:mx-auto">
+    <div className="ml-[36px]  lg:container  lg:mx-auto ">
       <div className="mt-[80px] md:mt-[300px]">
-        <div className="ml-0 lg:ml-[30px] 2xl:ml-0">
+        <div className="ml-0 lg:ml-[30px] 2xl:ml-[110px]">
           <p className="font-bold robotoFont  text-[13px]  md:text-[24px]">
             Founders
           </p>
-          <div className="hidden md:block leading-[1]]">
+          <div className="hidden md:block leading-[1] mt-[50px]">
             <p className="text-[50px] xl:text-[110px]  font-thin">
               We don’t go for Deal,
             </p>
@@ -50,33 +47,8 @@ export default function Founders() {
             </p>
           </div>
 
-          <div className=" mt-[78px] lg:mt-[200px]">
-            <div className=" hidden md:grid grid-cols-3 gap-x-4 2xl:mx-[300px]">
-              <div>
-                <img
-                  src={male}
-                  alt="male"
-                  className="w-[278px] h-[431px] rounded-3xl"
-                />
-              </div>
-              <div>
-                <img
-                  src={male2}
-                  alt="male2"
-                  className="w-[278px] h-[431px] rounded-3xl"
-                />
-              </div>
-              <div>
-                <img
-                  src={female}
-                  alt="female"
-                  className="w-[278px] h-[431px] rounded-3xl"
-                />
-              </div>
-            </div>
-            <div className="md:hidden ml-[25px] overflow-hidden ">
-              <MobileFounderCarousel />
-            </div>
+          <div className="ml-[25px] md:ml-0  mt-[25px] md:mt-[78px] lg:mt-[200px] overflow-hidden">
+            <FounderCarousel />
           </div>
         </div>
       </div>

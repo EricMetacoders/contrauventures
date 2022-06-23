@@ -6,14 +6,14 @@ export default function Hero() {
       <div className="md:grid grid-cols-2">
         <div className="py-[5rem] xl:py-[10rem] ">
           <div>
-            <div className="pl-[36px] md:ml-[80px] xl:pl-0 2xl:pl-[300px] ">
-              <p className="font-bold text-[40px] xl:text-7xl italic w-[252px] xl:w-full">
+            <div className="pl-[36px] md:ml-[80px] xl:pl-0 2xl:pl-[300px] leading-[1]">
+              <p className="font-bold text-[40px] xl:text-[110px] italic w-[252px] xl:w-full">
                 We bet on
               </p>
-              <p className="text-[40px] xl:text-[85px] leading-[1] font-extralight ">
+              <p className="text-[40px] xl:text-[110px] leading-[1] font-thin italic">
                 the future of
               </p>
-              <p className="text-red font-bold text-[40px] xl:text-8xl">
+              <p className="text-red font-bold text-[40px] xl:text-[110px]">
                 Vietnam.
               </p>
 
