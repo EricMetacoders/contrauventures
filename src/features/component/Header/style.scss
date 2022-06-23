@@ -1,0 +1,190 @@
+.frameheadermain {
+  display: flex;
+  width: auto;
+  height: 480px;
+  .frameimglayout {
+    position: absolute;
+    width: 100%;
+
+    .logobackgroundheader {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  .frameimglayout::before {
+    background: rgba(0, 0, 0, 0.6);
+    content: "";
+    display: block;
+    height: 99.1%;
+    position: absolute;
+    width: 100%;
+  }
+  .imglogotrauframe-header {
+    position: absolute;
+    left: -0.24%;
+    right: 81.74%;
+    top: -0.07%;
+    bottom: 17.85%;
+    padding-top: 20px;
+  }
+  .titledetaimainframeheader {
+    position: absolute;
+    display: flex;
+    left: 72.74%;
+    right: 0.24%;
+    top: -0.07%;
+    bottom: 17.85%;
+    padding-top: 28px;
+    height: fit-content;
+    .titledetaiframeheader {
+      margin-left: 48px;
+
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 24px;
+      /* identical to box height */
+
+      /* WHITE */
+
+      color: #ffffff;
+
+      /* Inside auto layout */
+
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+    }
+    .titledetaiframeheader-active {
+      margin-left: 48px;
+
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 24px;
+      /* identical to box height */
+
+      /* WHITE */
+
+      color: #ffffff;
+
+      /* Inside auto layout */
+
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+    }
+  }
+  .titleframekoreanheader {
+    position: absolute;
+    width: 238px;
+    height: 24px;
+    left: 17px;
+    top: 88px;
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+
+    color: #ffffff;
+  }
+  .framemaintilecenterheader {
+    position: absolute;
+    width: 754px;
+    height: 140px;
+    left: 583px;
+    top: 200px;
+
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 70px;
+    /* or 117% */
+
+    text-align: center;
+    letter-spacing: -0.01em;
+
+    /* WHITE */
+
+    color: #ffffff;
+    .framedetailtitlemain {
+      font-style: italic;
+      font-weight: 250;
+    }
+  }
+}
+
+// RESPONSIVE
+
+/* MOBILE WIDTH < 740px */
+@media screen and (max-width: 769px) {
+  .frameheadermain {
+    display: flex;
+    width: auto;
+    height: 393px;
+
+    .frameimglayout {
+      position: absolute;
+      width: 100%;
+
+      .logobackgroundheader {
+        width: 100%;
+        object-fit: contain;
+        background: rgba(0, 0, 0, 0.6);
+      }
+    }
+
+    .imglogotrauframe-header {
+      position: absolute;
+      left: -0.24%;
+      right: 81.74%;
+      top: -0.07%;
+      bottom: 17.85%;
+      padding-top: 16.98px;
+      padding-left: 16.76px;
+    }
+    .titledetaimainframeheader {
+      position: absolute;
+      // left: 9px;
+      // top: 20px;
+      height: auto;
+      margin-left: auto;
+      margin-right: 33px;
+    }
+    .titleframekoreanheader {
+      display: none;
+    }
+    .framemaintilecenterheader {
+      position: absolute;
+      width: 284px;
+      height: 176px;
+      left: 36px;
+      top: 173px;
+
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 900;
+      font-size: 40px;
+      line-height: 44px;
+      /* or 110% */
+
+      letter-spacing: -0.01em;
+
+      color: #ffffff;
+      text-align: left;
+      .framedetailtitlemain {
+        font-style: italic;
+        font-weight: 250;
+      }
+    }
+  }
+}
+
+/* TABLET WIDTH >=740px and width < 1024px*/
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+}

@@ -1,0 +1,50 @@
+.rootpagedetail {
+  .framecontentmain {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    .detailcontent-active {
+      width: 120px;
+      height: 32px;
+
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 32px;
+      /* identical to box height, or 160% */
+      letter-spacing: -0.02em;
+      color: #101010;
+
+      border-bottom: 2px solid black;
+      padding-bottom: 10px;
+      cursor: pointer;
+    }
+    .detailcontent {
+      /* Gallery */
+      width: 120px;
+      height: 32px;
+
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 32px;
+      /* identical to box height, or 160% */
+      padding-bottom: 10px;
+
+      letter-spacing: -0.02em;
+      color: #999999;
+      cursor: pointer;
+    }
+  }
+  .framehtmlinterview {
+    width: 1320px;
+    height: 352px;
+    background-color: red;
+    margin: auto;
+
+    .framemaintitle {
+    }
+  }
+}
