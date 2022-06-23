@@ -12,6 +12,7 @@ module.exports = {
       grey: "#F9F9F9",
       hoverGrey: "#828383",
       darkGrey: "#363636",
+      inputBg: "#1e1e1e",
     },
   },
   plugins: [],
