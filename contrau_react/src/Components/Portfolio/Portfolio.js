@@ -6,32 +6,28 @@ export default function Portfolio() {
   return (
     <div className="bg-black pt-[2px] md:mt-[300px] relative h-[871px] md:h[1596px]">
       <div>
-        <img
-          src={bg}
-          alt="background"
-          className="w-full h-[1115px] object-cover"
-        />
+        <img src={bg} alt="background" className="w-full h-auto object-cover" />
         <div className="text-white hidden md:block ">
-          <div className="absolute top-[65%] text-center w-full bg-transparent">
+          <div className="absolute md:top-[30%] 2xl:top-[90%] text-center w-full bg-transparent">
             <div>
-              <p className="robotoFont font-bold text-[24px]">Portfolio</p>
-              <div className="mt-[54px]">
+              <p className="robotoFont font-bold text-[24px] ">Portfolio</p>
+              <div className="mt-[54px] leading-[1]">
                 <div className="flex items-center justify-center">
-                  <p className="font-extrabold italic text-[110px] ">
+                  <p className="font-extrabold italic text-[110px] mb-0">
                     Vietnam's <span className="italic font-thin">victory</span>
                   </p>
                 </div>
-                <div className="flex items-center justify-center text-[110px] space-x-7">
-                  <p className="italic font-thin">is</p>
-                  <p className="font-extrabold text-red ">Our victory</p>
-                  <div className=" w-[20px] h-[20px] rounded-full bg-red mt-[100px]"></div>
+                <div className="flex items-center justify-center text-[110px] space-">
+                  <p className="italic font-thin mb-0">is</p>
+                  <p className="font-extrabold text-red  mb-0">Our victory</p>
+                  <div className=" w-[25px] h-[25px] rounded-full bg-red mt-[79px]"></div>
                 </div>
               </div>
               <div className="mt-[54px]">
-                <p className="text-[20px] font-normal">
+                <p className="text-[20px] font-normal text-hoverGrey mb-0">
                   We invest in areas that can increase Vietnam's growth potentia
                 </p>
-                <p className="text-[20px]  font-normal">
+                <p className="text-[20px]  font-norma text-hoverGrey mb-0l">
                   where Vietnam can become strong.
                 </p>
               </div>
@@ -40,17 +36,17 @@ export default function Portfolio() {
         </div>
       </div>
       <div className="md:hidden ml-[36px] bg-black">
-        <div className="text-white absolute top-[75%]">
-          <p className="robotoFont text-[13px] font-bold ">Portfolio</p>
-          <div className="mt-[27px] text-[40px]">
-            <p className="font-extrabold">Vietnam's</p>
-            <p className="italic  font-extralight">victory is</p>
+        <div className="text-white absolute top-[20%]">
+          <p className="robotoFont text-[13px] font-bold mb-0">Portfolio</p>
+          <div className="mt-[27px] text-[40px] leading-[1]">
+            <p className="font-extrabold mb-0">Vietnam's</p>
+            <p className="italic  font-extralight mb-0">victory is</p>
             <div className="flex items-center justify-start space-x-1">
-              <p className="font-extrabold text-red">Our victory</p>
+              <p className="font-extrabold text-red mb-0">Our victory</p>
               <div className="w-[10px] h-[10px] bg-red rounded-full mt-[40px]"></div>
             </div>
           </div>
-          <div className="mt-[45px]">
+          <div className="mt-[30px]">
             <p className="text-[13px] w-[210px] text-white">
               We invest in areas that can increase Vietnam's growth potential
               where Vietnam can become strong.
@@ -58,7 +54,7 @@ export default function Portfolio() {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-center  md:pt-[206px] 2xl:pt-[100px] bg-black text-white ">
+      <div className="flex items-center justify-center mt-[249px] 2xl:mt-0 md:pt-[206px] 2xl:pt-[186px] bg-black text-white ">
         <button className="w-[280px] h-[60px] border border-white hover:bg-grey hover:text-black transition-all">
           View All
         </button>

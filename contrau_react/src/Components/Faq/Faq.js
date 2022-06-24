@@ -39,11 +39,11 @@ export default function Faq() {
     setPlus4(plus4 === aplus ? ic_plus : aplus);
   };
   return (
-    <div className="ml-[40px] xl:mx-[300px]  mt-[260px] md:mt-[280px]">
+    <div className="mx-[40px] xl:mx-[300px]  mt-[260px] md:mt-[280px]">
       <div className="border-b-2 border-darkGrey pb-[10px] md:pb-[90px]">
         <div className="flex items-end justify-start">
           <p className="italic text-[60px] font-extrabold">FAQ</p>
-          <div className="w-[15px] h-[15px] rounded-full bg-red mb-[15px]"></div>
+          <div className="w-[15px] h-[15px] rounded-full bg-red mb-[78px]"></div>
         </div>
       </div>
       <div>

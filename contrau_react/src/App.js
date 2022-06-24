@@ -1,4 +1,6 @@
+import Contact from "./Components/Contact/Contact";
 import Faq from "./Components/Faq/Faq";
+import Footer from "./Components/Footer/Footer";
 import Founders from "./Components/Founders/Founders";
 import Group from "./Components/Group/Group";
 import Header from "./Components/Header/Header";
@@ -17,6 +19,8 @@ function App() {
       <ValueAdd />
       <Faq />
       <News />
+      <Contact />
+      <Footer />
     </div>
   );
 }
