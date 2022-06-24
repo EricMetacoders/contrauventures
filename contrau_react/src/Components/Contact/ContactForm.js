@@ -144,7 +144,7 @@ export default function ContactForm() {
             className="w-[289px] h-[58px] 2xl:w-[339px] 2xl:h-[84px] bg-white text-black hover:bg-black hover:border hover:border-white hover:text-white transition-all cursor-pointer flex items-center justify-center"
             onClick={handleSubmit}
           >
-            <p className="mb-0 cursor-pointer 2xl:text-[24px] font-extrabold">
+            <p className="popinsFont mb-0 cursor-pointer 2xl:text-[24px] font-semibold">
               Send Message
             </p>
           </div>

@@ -1,0 +1,48 @@
+/* .imgCarousel::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: -665px;
+  left: 0;
+  border-bottom: 1.5rem;
+  background: rgba(0, 0, 0, 0.351);
+  filter: blur(8px);
+}
+
+.imgCarousel:hover:after {
+  transform: translateY(-100px);
+  transition-property: all;
+  transition-duration: 200ms;
+} */
+
+.bgBlur {
+  bottom: -628px;
+  left: 0;
+  border-bottom: 1.5rem;
+  background: rgba(0, 0, 0, 0.351);
+  filter: blur(8px);
+}
+
+.btnInterview {
+  position: absolute;
+  bottom: -71px;
+  left: 120px;
+}
+
+#divBtn:hover > .bgBlur {
+  transform: translateY(-150px);
+  transition-property: all;
+  transition-duration: 200ms;
+}
+#divBtn:hover > .btnInterview {
+  transform: translateY(-136px);
+  transition-property: all;
+  transition-duration: 200ms;
+}
+
+#divBtn:hover > .imgText {
+  transform: translateY(-136px);
+  transition-property: all;
+  transition-duration: 200ms;
+}
