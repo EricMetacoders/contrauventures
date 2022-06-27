@@ -20,5 +20,6 @@ export default homeSlice.reducer;
 
 export const getFaqList = createAsyncThunk("getFaqList", async () => {
   const response = await homeServices.getList();
+  console.log("data", response.data);
   return response.data;
 });
