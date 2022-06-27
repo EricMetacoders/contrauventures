@@ -1,5 +1,5 @@
 import axios from "axios";
-const url = "https://62b9202341bf319d22766f73.mockapi.io/student";
+const url = "http://192.168.50.159/wp-json/wp/v2/faqs";
 export const homeServices = {
   getList() {
     return axios({
