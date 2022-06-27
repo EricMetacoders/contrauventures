@@ -1,55 +1,63 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import { Collapse } from "antd";
 import aplus from "../../../../assets/homepage_img/plus.png";
 import ic_plus from "../../../../assets/homepage_img/ic_plus.png";
+import FaqQues from "./FaqQues";
 export default function Faq() {
+  const faqList = useSelector((state) => state.homeSlice.faqList);
+
+  const { Panel } = Collapse;
+
   const [ques1, setQues1] = useState(false);
-  const [ques2, setQues2] = useState(false);
-  const [ques3, setQues3] = useState(false);
-  const [ques4, setQues4] = useState(false);
-  const [plus1, setPlus1] = useState(aplus);
-  const [plus2, setPlus2] = useState(aplus);
-  const [plus3, setPlus3] = useState(aplus);
-  const [plus4, setPlus4] = useState(aplus);
-  const quesHandler1 = () => {
-    setQues1(!ques1);
-    setQues2(false);
-    setQues3(false);
-    setQues4(false);
-    setPlus1(plus1 === aplus ? ic_plus : aplus);
-    setPlus2(aplus);
-    setPlus3(aplus);
-    setPlus4(aplus);
-  };
-  const quesHandler2 = () => {
-    setQues2(!ques2);
-    setQues1(false);
-    setQues3(false);
-    setQues4(false);
-    setPlus2(plus2 === aplus ? ic_plus : aplus);
-    setPlus1(aplus);
-    setPlus3(aplus);
-    setPlus4(aplus);
-  };
-  const quesHandler3 = () => {
-    setQues3(!ques3);
-    setQues2(false);
-    setQues1(false);
-    setQues4(false);
-    setPlus3(plus3 === aplus ? ic_plus : aplus);
-    setPlus2(aplus);
-    setPlus1(aplus);
-    setPlus4(aplus);
-  };
-  const quesHandler4 = () => {
-    setQues4(!ques4);
-    setQues2(false);
-    setQues3(false);
-    setQues1(false);
-    setPlus4(plus4 === aplus ? ic_plus : aplus);
-    setPlus2(aplus);
-    setPlus3(aplus);
-    setPlus1(aplus);
-  };
+  // const [ques2, setQues2] = useState(false);
+  // const [ques3, setQues3] = useState(false);
+  // const [ques4, setQues4] = useState(false);
+  // const [plus1, setPlus1] = useState(aplus);
+  // const [plus2, setPlus2] = useState(aplus);
+  // const [plus3, setPlus3] = useState(aplus);
+  // const [plus4, setPlus4] = useState(aplus);
+
+  // const quesHandler1 = () => {
+  //   setQues1(!ques1);
+  //   setQues2(false);
+  //   setQues3(false);
+  //   setQues4(false);
+  //   setPlus1(plus1 === aplus ? ic_plus : aplus);
+  //   setPlus2(aplus);
+  //   setPlus3(aplus);
+  //   setPlus4(aplus);
+  // };
+  // const quesHandler2 = () => {
+  //   setQues2(!ques2);
+  //   setQues1(false);
+  //   setQues3(false);
+  //   setQues4(false);
+  //   setPlus2(plus2 === aplus ? ic_plus : aplus);
+  //   setPlus1(aplus);
+  //   setPlus3(aplus);
+  //   setPlus4(aplus);
+  // };
+  // const quesHandler3 = () => {
+  //   setQues3(!ques3);
+  //   setQues2(false);
+  //   setQues1(false);
+  //   setQues4(false);
+  //   setPlus3(plus3 === aplus ? ic_plus : aplus);
+  //   setPlus2(aplus);
+  //   setPlus1(aplus);
+  //   setPlus4(aplus);
+  // };
+  // const quesHandler4 = () => {
+  //   setQues4(!ques4);
+  //   setQues2(false);
+  //   setQues3(false);
+  //   setQues1(false);
+  //   setPlus4(plus4 === aplus ? ic_plus : aplus);
+  //   setPlus2(aplus);
+  //   setPlus3(aplus);
+  //   setPlus1(aplus);
+  // };
   return (
     <div className="mx-[34px] xl:mx-[300px]  mt-[260px] md:mt-[280px]">
       <div className="border-b-2 border-darkGrey pb-[10px] md:pb-[90px]">
@@ -61,7 +69,12 @@ export default function Faq() {
         </div>
       </div>
       <div>
-        <div className="border-b-2 border-darkGrey pb-[10px] md:pb-[50px]">
+        <Collapse accordion>
+          {faqList.map((faq) => {
+            return <FaqQues data={faq} />;
+          })}
+        </Collapse>
+        {/* <div className="border-b-2 border-darkGrey pb-[10px] md:pb-[50px]">
           <div className="mt-[10px] xl:mt-[50px] 2xl:mx-[20px]">
             <div className="flex items-center justify-between">
               <div className="md:flex items-center justify-between md:space-x-5">
@@ -81,7 +94,6 @@ export default function Faq() {
                 />
               </div>
             </div>
-            {/* qes */}
             {ques1 ? (
               <div>
                 <div className="ml-[-3px] mr-[47px] pb-[40px] md:mx-[50px] ">
@@ -115,7 +127,6 @@ export default function Faq() {
             ) : (
               <></>
             )}
-            {/* end ques */}
           </div>
         </div>
         <div className="border-b-2 border-darkGrey pb-[10px] md:pb-[50px]">
@@ -138,7 +149,6 @@ export default function Faq() {
                 />
               </div>
             </div>
-            {/* qes */}
             {ques2 ? (
               <div>
                 <div className="ml-[-3px] mr-[47px]  pb-[40px]   md:mx-[50px]">
@@ -172,7 +182,6 @@ export default function Faq() {
             ) : (
               <></>
             )}
-            {/* end ques */}
           </div>
         </div>
         <div className="border-b-2 border-darkGrey pb-[10px] md:pb-[50px]">
@@ -195,7 +204,6 @@ export default function Faq() {
                 />
               </div>
             </div>
-            {/* qes */}
             {ques3 ? (
               <div>
                 <div className="ml-[-3px] mr-[47px] pb-[40px]   md:mx-[50px]">
@@ -229,7 +237,6 @@ export default function Faq() {
             ) : (
               <></>
             )}
-            {/* end ques */}
           </div>
         </div>
         <div className="border-b-2 border-darkGrey pb-[10px] md:pb-[50px]">
@@ -252,7 +259,6 @@ export default function Faq() {
                 />
               </div>
             </div>
-            {/* qes */}
             {ques4 ? (
               <div>
                 <div className="ml-[-3px] mr-[47px] pb-[40px]  md:mx-[50px]">
@@ -286,9 +292,8 @@ export default function Faq() {
             ) : (
               <></>
             )}
-            {/* end ques */}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

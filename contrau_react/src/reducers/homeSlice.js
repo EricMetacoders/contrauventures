@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { homeServices } from "../services/homeServices";
 
 const initialState = {
-  list: null,
+  faqList: null,
 };
 
 const homeSlice = createSlice({
@@ -10,15 +10,15 @@ const homeSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(getList.fulfilled, (state, action) => {
-      state.list = action.payload;
+    builder.addCase(getFaqList.fulfilled, (state, action) => {
+      state.faqList = action.payload;
     });
   },
 });
 // export const { getList } = homeSlice.actions;
 export default homeSlice.reducer;
 
-export const getList = createAsyncThunk("getList", async () => {
+export const getFaqList = createAsyncThunk("getFaqList", async () => {
   const response = await homeServices.getList();
   return response.data;
 });
