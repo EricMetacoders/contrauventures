@@ -1,9 +1,20 @@
-import React from "react";
-import frame2 from "../../../../assets/homepage_img//frame2.png";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
 import photo2 from "../../../../assets/homepage_img//logo2.png";
+import { getPartnersList } from "../../../../reducers/homeSlice";
 import "./group.css";
 
 export default function Group() {
+  const dispatch = useDispatch();
+
+  const partners = useSelector((state) => state.homeSlice.partners);
+  console.log(partners);
+
+  useEffect(() => {
+    dispatch(getPartnersList());
+  }, []);
+
   return (
     <div className="bg-black overflow-hidden">
       <div className=" mx-[34px] md:mx-[117px] 2xl:mx-[300px] pb-[61px] ">
@@ -20,8 +31,8 @@ export default function Group() {
                     a Fund of
                   </p>
                 </div>
-                <div className="flex space-x-7 justify-start">
-                  <p className="italic popinsFont font-thin text-[110px]">
+                <div className="flex space-x-1 justify-start">
+                  <p className="italic popinsFont font-thin text-[110px] mr-[16px]">
                     Korean
                   </p>
                   <span className="popinsFont text-[110px] font-bold">
@@ -64,26 +75,38 @@ export default function Group() {
         </div>
       </div>
       <div className="hidden md:block ">
-        <div className="left-right">
-          <img
-            src={photo2}
-            alt="photo2"
-            className="mt-[46px] w-full h-[171px]"
-          />
+        <div className="left-right flex justify-center items-center space-x-16">
+          {partners?.map((logo) => {
+            return (
+              <img
+                src={logo.acf.image}
+                alt={logo.acf.name}
+                className="w-[173px] h-[152px] opacity-80 hover:opacity-100"
+              />
+            );
+          })}
         </div>
-        <div className="right-left">
-          <img
-            src={photo2}
-            alt="photo2"
-            className="mt-[46px] h-[171px] w-full"
-          />
+        <div className="right-left flex justify-center items-center space-x-16 my-[50px]">
+          {partners?.map((logo) => {
+            return (
+              <img
+                src={logo.acf.image}
+                alt={logo.acf.name}
+                className="w-[173px] h-[152px] opacity-80 hover:opacity-100"
+              />
+            );
+          })}
         </div>
-        <div className="left-right">
-          <img
-            src={photo2}
-            alt="photo2"
-            className="mt-[46px] h-[171px] w-full"
-          />
+        <div className="left-right flex justify-center items-center space-x-16">
+          {partners?.map((logo) => {
+            return (
+              <img
+                src={logo.acf.image}
+                alt={logo.acf.name}
+                className="w-[173px] h-[152px] opacity-80 hover:opacity-100"
+              />
+            );
+          })}
         </div>
         <div className="flex items-center justify-center mt-[20px] ">
           <button className="mb-[129px] text-[24px] mt-[129px]  px-[40px] py-[15px] border border-white text-white hover:bg-white hover:text-black transition-all">
@@ -91,15 +114,39 @@ export default function Group() {
           </button>
         </div>
       </div>
-      <div className="block md:hidden  overflow-hidden">
-        <div className="left-right">
-          <img src={frame2} alt="frame2" className="h-[106px] w-[1083px]" />
+      <div className="block md:hidden  overflow-hidden ">
+        <div className="left-right flex items-center justify-center space-x-16">
+          {partners?.map((logo) => {
+            return (
+              <img
+                src={logo.acf.image}
+                alt={logo.acf.name}
+                className="w-[80px] h-[80px] opacity-80 hover:opacity-100"
+              />
+            );
+          })}
         </div>
-        <div className="right-left">
-          <img src={frame2} alt="frame2" className="h-[106px] w-[1083px]" />
+        <div className="right-left flex items-center justify-center space-x-16 my-[30px]">
+          {partners?.map((logo) => {
+            return (
+              <img
+                src={logo.acf.image}
+                alt={logo.acf.name}
+                className="w-[80px] h-[80px]"
+              />
+            );
+          })}
         </div>
-        <div className="left-right">
-          <img src={frame2} alt="frame2" className="h-[106px] w-[1083px]" />
+        <div className="left-right flex items-center justify-center space-x-16">
+          {partners?.map((logo) => {
+            return (
+              <img
+                src={logo.acf.image}
+                alt={logo.acf.name}
+                className="w-[80px] h-[80px]"
+              />
+            );
+          })}
         </div>
         <div className="flex items-cener justify-center mt-[76px] mb-[76px]">
           <button className="px-[50px] py-[15px] text-white border hover:bg-white hover:text-black transition-all">

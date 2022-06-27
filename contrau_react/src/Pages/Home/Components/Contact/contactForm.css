@@ -13,18 +13,13 @@
   font-size: 18px;
   position: absolute;
   top: 28px;
-  padding-left: 60px;
 }
 .custom-file-input:hover::before {
   border-color: black;
 }
-.custom-file-input:active {
+/* .custom-file-input:active {
   outline: 0;
-}
-.custom-file-input:active::before {
+} */
+/* .custom-file-input:active::before {
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
-}
-
-.boxShadow {
-  /* box-shadow: 0px 50px 19px 25px rgba(0, 0, 0, 0.31); */
-}
+} */
