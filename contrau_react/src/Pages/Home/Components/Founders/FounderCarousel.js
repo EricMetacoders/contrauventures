@@ -2,9 +2,12 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import male from "../../assets/image/male.png";
-import male2 from "../../assets/image/male2.png";
-import female from "../../assets/image/female.png";
+import male from "../../../../assets/homepage_img/male.png";
+import male2 from "../../../../assets/homepage_img/male2.png";
+import female from "../../../../assets/homepage_img/female.png";
+import FounderImageCarousel from "./FounderImageCarousel";
+
+const founders = [male, male2, female];
 
 export default function FounderCarousel() {
   let settings = {
@@ -43,27 +46,9 @@ export default function FounderCarousel() {
   };
   return (
     <Slider {...settings}>
-      <div>
-        <img
-          src={male}
-          alt="male"
-          className="rounded-3xl w-[278px] h-[431px] md:w-[223px] md:h-[350px] xl:h-[550px] xl:w-[350px] 2xl:h-[664px] 2xl:w-[424px]"
-        />
-      </div>
-      <div>
-        <img
-          src={male2}
-          alt="male2"
-          className="rounded-3xl w-[278px] h-[431px] md:w-[223px] md:h-[350px]  xl:h-[550px] xl:w-[350px]  2xl:h-[664px] 2xl:w-[424px]"
-        />
-      </div>
-      <div>
-        <img
-          src={female}
-          alt="female"
-          className="rounded-3xl w-[278px] h-[431px] md:w-[223px] md:h-[350px]  xl:h-[550px] xl:w-[350px]  2xl:h-[664px] 2xl:w-[424px]"
-        />
-      </div>
+      {founders.map((img) => {
+        return <FounderImageCarousel data={img} />;
+      })}
     </Slider>
   );
 }

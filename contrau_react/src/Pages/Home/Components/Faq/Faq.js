@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import aplus from "../../assets/image/plus.png";
-import ic_plus from "../../assets/image/ic_plus.png";
+import aplus from "../../../../assets/homepage_img/plus.png";
+import ic_plus from "../../../../assets/homepage_img/ic_plus.png";
 export default function Faq() {
   const [ques1, setQues1] = useState(false);
   const [ques2, setQues2] = useState(false);
@@ -16,6 +16,9 @@ export default function Faq() {
     setQues3(false);
     setQues4(false);
     setPlus1(plus1 === aplus ? ic_plus : aplus);
+    setPlus2(aplus);
+    setPlus3(aplus);
+    setPlus4(aplus);
   };
   const quesHandler2 = () => {
     setQues2(!ques2);
@@ -23,6 +26,9 @@ export default function Faq() {
     setQues3(false);
     setQues4(false);
     setPlus2(plus2 === aplus ? ic_plus : aplus);
+    setPlus1(aplus);
+    setPlus3(aplus);
+    setPlus4(aplus);
   };
   const quesHandler3 = () => {
     setQues3(!ques3);
@@ -30,6 +36,9 @@ export default function Faq() {
     setQues1(false);
     setQues4(false);
     setPlus3(plus3 === aplus ? ic_plus : aplus);
+    setPlus2(aplus);
+    setPlus1(aplus);
+    setPlus4(aplus);
   };
   const quesHandler4 = () => {
     setQues4(!ques4);
@@ -37,24 +46,29 @@ export default function Faq() {
     setQues3(false);
     setQues1(false);
     setPlus4(plus4 === aplus ? ic_plus : aplus);
+    setPlus2(aplus);
+    setPlus3(aplus);
+    setPlus1(aplus);
   };
   return (
-    <div className="mx-[40px] xl:mx-[300px]  mt-[260px] md:mt-[280px]">
+    <div className="mx-[34px] xl:mx-[300px]  mt-[260px] md:mt-[280px]">
       <div className="border-b-2 border-darkGrey pb-[10px] md:pb-[90px]">
         <div className="flex items-end justify-start">
-          <p className="italic text-[60px] font-extrabold">FAQ</p>
-          <div className="w-[15px] h-[15px] rounded-full bg-red mb-[78px]"></div>
+          <p className="popinsFont italic text-[40px]  2xl:text-[60px] font-[900]">
+            FAQ
+          </p>
+          <div className="w-[10px] h-[10px] 2xl:w-[15px] 2xl:h-[15px] rounded-full bg-red mb-[53px] 2xl:mb-[78px]"></div>
         </div>
       </div>
       <div>
         <div className="border-b-2 border-darkGrey pb-[10px] md:pb-[50px]">
-          <div className="mt-[50px] mx-[20px]">
+          <div className="mt-[10px] xl:mt-[50px] 2xl:mx-[20px]">
             <div className="flex items-center justify-between">
               <div className="md:flex items-center justify-between md:space-x-5">
-                <p className="italic  text-[18px] md:text-[24px] text-red">
+                <p className="popinsFont text-[18px] font-light  2xl:text-[24px] italic text-red mb-0">
                   Q1
                 </p>
-                <p className="text-[18px] md:text-[32px] w-[260px] md:w-[522px] 2xl:w-[900px] ">
+                <p className="text-[18px] md:text-[32px] w-[299px] md:w-[522px] 2xl:w-[900px]  popinsFont 2xl:text-[32px] 2xl:font-normal font-light  mb-0 ">
                   Question about this company and?
                 </p>
               </div>
@@ -62,7 +76,7 @@ export default function Faq() {
                 <img
                   src={plus1}
                   alt="plus"
-                  className="w-[20px] h-[20px] md:w-[30px] md:h-[30px] mb-[50px] md:mb-0 "
+                  className=" w-[20px] h-[20px] md:w-[30px] md:h-[30px] mb-[50px] md:mb-0"
                   onClick={quesHandler1}
                 />
               </div>
@@ -70,8 +84,8 @@ export default function Faq() {
             {/* qes */}
             {ques1 ? (
               <div>
-                <div className="ml-[-3px] mr-[47px] pb-[40px] md:mx-[50px]">
-                  <p className="md:mt-[71px] mt-[40px] text-[13px] md:text-[20px]">
+                <div className="ml-[-3px] mr-[47px] pb-[40px] md:mx-[50px] ">
+                  <p className="md:mt-[71px] mt-[40px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
                     On the other hand, we denounce with righteous indignation
                     and dislike men who are so beguiled and demoralized by the
                     charms of pleasure of the moment, so blinded by desire, that
@@ -80,7 +94,7 @@ export default function Faq() {
                     duty through weakness of will, which is the same as saying
                     through shrinking from toil and pain.
                   </p>
-                  <p className="mt-0 md:mt-[42px] text-[13px] md:text-[20px]">
+                  <p className="mt-[20px] md:mt-[42px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
                     These cases are perfectly simple and easy to distinguish. In
                     a free hour, when our power of choice is untrammelled and
                     when nothing prevents our being able to do what we like
@@ -90,7 +104,7 @@ export default function Faq() {
                     frequently occur that pleasures have to be repudiated and
                     annoyances accepted.{" "}
                   </p>
-                  <p className="mt-0 md:mt-[42px] text-[13px] md:text-[20px]">
+                  <p className="mt-[20px] md:mt-[42px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
                     The wise man therefore always holds in these matters to this
                     principle of selection: he rejects pleasures to secure other
                     greater pleasures, or else he endures pains to avoid worse
@@ -105,13 +119,13 @@ export default function Faq() {
           </div>
         </div>
         <div className="border-b-2 border-darkGrey pb-[10px] md:pb-[50px]">
-          <div className="mt-[50px] mx-[20px]">
+          <div className="mt-[10px] 2xl:mt-[50px] 2xl:mx-[20px]">
             <div className="flex items-center justify-between">
               <div className="md:flex items-center justify-between md:space-x-5">
-                <p className="italic  text-[18px] md:text-[24px] text-red">
+                <p className="popinsFont text-[18px] font-light  2xl:text-[24px] italic text-red mb-0">
                   Q2
                 </p>
-                <p className="text-[18px] md:text-[32px] w-[260px] md:w-[522px] 2xl:w-[900px]  ">
+                <p className="text-[18px] md:text-[32px] w-[299px] md:w-[522px] 2xl:w-[900px]  popinsFont 2xl:text-[32px] 2xl:font-normal font-light  mb-0 ">
                   Question about this company and?
                 </p>
               </div>
@@ -128,7 +142,7 @@ export default function Faq() {
             {ques2 ? (
               <div>
                 <div className="ml-[-3px] mr-[47px]  pb-[40px]   md:mx-[50px]">
-                  <p className="md:mt-[71px] mt-[40px] text-[13px] md:text-[20px]">
+                  <p className="md:mt-[71px] mt-[40px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
                     On the other hand, we denounce with righteous indignation
                     and dislike men who are so beguiled and demoralized by the
                     charms of pleasure of the moment, so blinded by desire, that
@@ -137,7 +151,7 @@ export default function Faq() {
                     duty through weakness of will, which is the same as saying
                     through shrinking from toil and pain.
                   </p>
-                  <p className="mt-0 md:mt-[42px] text-[13px] md:text-[20px]">
+                  <p className="mt-[20px] md:mt-[42px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
                     These cases are perfectly simple and easy to distinguish. In
                     a free hour, when our power of choice is untrammelled and
                     when nothing prevents our being able to do what we like
@@ -147,7 +161,7 @@ export default function Faq() {
                     frequently occur that pleasures have to be repudiated and
                     annoyances accepted.{" "}
                   </p>
-                  <p className="mt-0 md:mt-[42px] text-[13px] md:text-[20px]">
+                  <p className="mt-[20px] md:mt-[42px]text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
                     The wise man therefore always holds in these matters to this
                     principle of selection: he rejects pleasures to secure other
                     greater pleasures, or else he endures pains to avoid worse
@@ -162,13 +176,13 @@ export default function Faq() {
           </div>
         </div>
         <div className="border-b-2 border-darkGrey pb-[10px] md:pb-[50px]">
-          <div className="mt-[50px] mx-[20px]">
+          <div className="mt-[10px] xl:mt-[50px] 2xl:mx-[20px]">
             <div className="flex items-center justify-between">
               <div className="md:flex items-center justify-between md:space-x-5">
-                <p className="italic  text-[18px] md:text-[24px] text-red">
+                <p className="popinsFont text-[18px] font-light  2xl:text-[24px] italic text-red mb-0">
                   Q3
                 </p>
-                <p className="text-[18px] md:text-[32px] md:w-[522px] 2xl:w-[900px]  ">
+                <p className="text-[18px] md:text-[32px] w-[299px] md:w-[522px] 2xl:w-[900px]  popinsFont 2xl:text-[32px] 2xl:font-normal font-light  mb-0 ">
                   Question about this company and?
                 </p>
               </div>
@@ -185,7 +199,7 @@ export default function Faq() {
             {ques3 ? (
               <div>
                 <div className="ml-[-3px] mr-[47px] pb-[40px]   md:mx-[50px]">
-                  <p className="md:mt-[71px] mt-[40px] text-[13px] md:text-[20px]">
+                  <p className="md:mt-[71px] mt-[40px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
                     On the other hand, we denounce with righteous indignation
                     and dislike men who are so beguiled and demoralized by the
                     charms of pleasure of the moment, so blinded by desire, that
@@ -194,7 +208,7 @@ export default function Faq() {
                     duty through weakness of will, which is the same as saying
                     through shrinking from toil and pain.
                   </p>
-                  <p className="mt-0 md:mt-[42px] text-[13px] md:text-[20px]">
+                  <p className="mt-[20px] md:mt-[42px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
                     These cases are perfectly simple and easy to distinguish. In
                     a free hour, when our power of choice is untrammelled and
                     when nothing prevents our being able to do what we like
@@ -204,7 +218,7 @@ export default function Faq() {
                     frequently occur that pleasures have to be repudiated and
                     annoyances accepted.{" "}
                   </p>
-                  <p className="mt-0 md:mt-[42px] text-[13px] md:text-[20px]">
+                  <p className="mt-[20px] md:mt-[42px]text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
                     The wise man therefore always holds in these matters to this
                     principle of selection: he rejects pleasures to secure other
                     greater pleasures, or else he endures pains to avoid worse
@@ -219,13 +233,13 @@ export default function Faq() {
           </div>
         </div>
         <div className="border-b-2 border-darkGrey pb-[10px] md:pb-[50px]">
-          <div className="mt-[50px] mx-[20px]">
+          <div className="mt-[10px] xl:mt-[50px] 2xl:mx-[20px]">
             <div className="flex items-center justify-between">
               <div className="md:flex items-center justify-between md:space-x-5">
-                <p className="italic  text-[18px] md:text-[24px] text-red">
+                <p className="popinsFont text-[18px] font-light  2xl:text-[24px] italic text-red mb-0">
                   Q4
                 </p>
-                <p className="text-[18px] md:text-[32px] md:w-[522px] 2xl:w-[900px] ">
+                <p className="text-[18px] md:text-[32px] w-[299px] md:w-[522px] 2xl:w-[900px]  popinsFont 2xl:text-[32px] 2xl:font-normal font-light  mb-0  ">
                   Question about this company and?
                 </p>
               </div>
@@ -242,7 +256,7 @@ export default function Faq() {
             {ques4 ? (
               <div>
                 <div className="ml-[-3px] mr-[47px] pb-[40px]  md:mx-[50px]">
-                  <p className="md:mt-[71px] mt-[40px] text-[13px] md:text-[20px]">
+                  <p className="md:mt-[71px] mt-[40px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
                     On the other hand, we denounce with righteous indignation
                     and dislike men who are so beguiled and demoralized by the
                     charms of pleasure of the moment, so blinded by desire, that
@@ -251,7 +265,7 @@ export default function Faq() {
                     duty through weakness of will, which is the same as saying
                     through shrinking from toil and pain.
                   </p>
-                  <p className="mt-0 md:mt-[42px] text-[13px] md:text-[20px]">
+                  <p className="mt-[20px] md:mt-[42px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
                     These cases are perfectly simple and easy to distinguish. In
                     a free hour, when our power of choice is untrammelled and
                     when nothing prevents our being able to do what we like
@@ -261,7 +275,7 @@ export default function Faq() {
                     frequently occur that pleasures have to be repudiated and
                     annoyances accepted.{" "}
                   </p>
-                  <p className="mt-0 md:mt-[42px] text-[13px] md:text-[20px]">
+                  <p className="mt-[20px] md:mt-[42px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
                     The wise man therefore always holds in these matters to this
                     principle of selection: he rejects pleasures to secure other
                     greater pleasures, or else he endures pains to avoid worse

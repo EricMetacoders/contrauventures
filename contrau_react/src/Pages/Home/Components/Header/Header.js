@@ -1,6 +1,6 @@
 import React from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
-import logo from "../../assets/image/logo.png";
+import logo from "../../../../assets/homepage_img/logo.png";
+import HeaderDropDown from "./HeaderDropDown";
 export default function Header() {
   return (
     <div className="h-[80px] py-6">
@@ -24,7 +24,7 @@ export default function Header() {
             </p>
           </div>
           <div className="mr-[30px]  md:hidden">
-            <GiHamburgerMenu size={40} />
+            <HeaderDropDown />
           </div>
         </div>
       </div>

@@ -1,0 +1,87 @@
+.left-right {
+  /* animation properties */
+  -moz-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+
+  -moz-animation: leftRightAnimation 15s linear infinite;
+  -webkit-animation: leftRightAnimation 15s linear infinite;
+  animation: leftRightAnimation 15s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes leftRightAnimation {
+  from {
+    -moz-transform: translateX(-100%);
+  }
+  to {
+    -moz-transform: translateX(100%);
+  }
+}
+
+/* for Chrome */
+@-webkit-keyframes leftRightAnimation {
+  from {
+    -webkit-transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(100%);
+  }
+}
+
+@keyframes leftRightAnimation {
+  from {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  to {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+
+.right-left {
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(-00%);
+
+  -moz-animation: rightLeftAnimation 15s linear infinite;
+  -webkit-animation: rightLeftAnimation 15s linear infinite;
+  animation: rightLeftAnimation 15s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes rightLeftAnimation {
+  from {
+    -moz-transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+  }
+}
+
+/* for Chrome */
+@-webkit-keyframes rightLeftAnimation {
+  from {
+    -webkit-transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+@keyframes rightLeftAnimation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
