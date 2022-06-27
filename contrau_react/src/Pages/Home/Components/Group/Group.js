@@ -1,8 +1,6 @@
 import React from "react";
-import frame1 from "../../assets/image/frame1.png";
-import frame2 from "../../assets/image/frame2.png";
-import photo2 from "../../assets/image/logo2.png";
-import photo3 from "../../assets/image/logo3.png";
+import frame2 from "../../../../assets/homepage_img//frame2.png";
+import photo2 from "../../../../assets/homepage_img//logo2.png";
 import "./group.css";
 
 export default function Group() {
@@ -95,13 +93,13 @@ export default function Group() {
       </div>
       <div className="block md:hidden  overflow-hidden">
         <div className="left-right">
-          <img src={frame2} alt="frame2" />
+          <img src={frame2} alt="frame2" className="h-[106px] w-[1083px]" />
         </div>
         <div className="right-left">
-          <img src={frame2} alt="frame2" />
+          <img src={frame2} alt="frame2" className="h-[106px] w-[1083px]" />
         </div>
         <div className="left-right">
-          <img src={frame2} alt="frame2" />
+          <img src={frame2} alt="frame2" className="h-[106px] w-[1083px]" />
         </div>
         <div className="flex items-cener justify-center mt-[76px] mb-[76px]">
           <button className="px-[50px] py-[15px] text-white border hover:bg-white hover:text-black transition-all">

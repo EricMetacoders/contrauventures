@@ -1,5 +1,5 @@
 import React from "react";
-import male from "../../assets/image/male.png";
+import male from "../../../../assets/homepage_img/male.png";
 import "./founderImageCarousel.css";
 export default function FounderImageCarousel({ data }) {
   return (

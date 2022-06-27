@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import "./contactForm.css";
-import ic_file from "../../assets/image/ic_file.png";
+import ic_file from "../../../../assets/homepage_img/ic_file.png";
 export default function ContactForm() {
   const [message, setMessage] = useState(null);
   const [title, setTitle] = useState(null);

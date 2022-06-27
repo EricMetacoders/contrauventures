@@ -2,9 +2,9 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import male from "../../assets/image/male.png";
-import male2 from "../../assets/image/male2.png";
-import female from "../../assets/image/female.png";
+import male from "../../../../assets/homepage_img/male.png";
+import male2 from "../../../../assets/homepage_img/male2.png";
+import female from "../../../../assets/homepage_img/female.png";
 import FounderImageCarousel from "./FounderImageCarousel";
 
 const founders = [male, male2, female];

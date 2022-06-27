@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import aplus from "../../assets/image/plus.png";
-import ic_plus from "../../assets/image/ic_plus.png";
+import aplus from "../../../../assets/homepage_img/plus.png";
+import ic_plus from "../../../../assets/homepage_img/ic_plus.png";
 export default function Faq() {
   const [ques1, setQues1] = useState(false);
   const [ques2, setQues2] = useState(false);

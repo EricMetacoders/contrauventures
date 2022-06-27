@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/image/logo.png";
+import logo from "../../../../assets/homepage_img/logo.png";
 import HeaderDropDown from "./HeaderDropDown";
 export default function Header() {
   return (

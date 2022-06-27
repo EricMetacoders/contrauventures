@@ -1,6 +1,6 @@
 import React from "react";
-import value_add_1 from "../../assets/image/value_add_1.png";
-import value_add_2 from "../../assets/image/value_add_2.png";
+import value_add_1 from "../../../../assets/homepage_img/value_add_1.png";
+import value_add_2 from "../../../../assets/homepage_img/value_add_2.png";
 export default function ValueAdd() {
   return (
     <div className="mx-[34px] md:mt-[1069px] 2xl:mx-[300px]  mt-[120px] 2xl:mt-[1377px] ">

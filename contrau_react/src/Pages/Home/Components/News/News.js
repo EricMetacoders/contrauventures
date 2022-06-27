@@ -1,7 +1,7 @@
 import React from "react";
-import news_photo1 from "../../assets/image/news1.png";
-import news_photo2 from "../../assets/image/news2.png";
-import news_photo3 from "../../assets/image/news3.png";
+import news_photo1 from "../../../../assets/homepage_img//news1.png";
+import news_photo2 from "../../../../assets/homepage_img//news2.png";
+import news_photo3 from "../../../../assets/homepage_img//news3.png";
 export default function News() {
   return (
     <div className="mt-[307px]">

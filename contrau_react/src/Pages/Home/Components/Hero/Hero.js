@@ -1,5 +1,5 @@
 import React from "react";
-import imgPhoto from "../../assets/image/img_hero.png";
+import imgPhoto from "../../../../assets/homepage_img/img_hero.png";
 import HeroTextAnim from "./HeroTextAnim";
 export default function Hero() {
   return (

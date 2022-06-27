@@ -1,7 +1,7 @@
 import React from "react";
-import bg from "../../assets/image/porti_bg.png";
-import logo from "../../assets/image/porti_logo.png";
-import logo2 from "../../assets/image/porti_logo2.png";
+import bg from "../../../../assets/homepage_img/porti_bg.png";
+import logo from "../../../../assets/homepage_img/porti_logo.png";
+import logo2 from "../../../../assets/homepage_img/porti_logo2.png";
 export default function Portfolio() {
   return (
     <div className="bg-black pt-[2px] md:mt-[171px] 2xl:mt-[300px] relative h-[871px] md:h[1596px]">

@@ -1,9 +1,9 @@
 import React from "react";
-import footerLogo from "../../assets/image/footer_logo.png";
-import shadowBg from "../../assets/image/shadowBg.png";
-import reserved from "../../assets/image/reserved.png";
-import li from "../../assets/image/LI.png";
-import fb from "../../assets/image/FB.png";
+import footerLogo from "../../../../assets/homepage_img/footer_logo.png";
+import shadowBg from "../../../../assets/homepage_img/shadowBg.png";
+import reserved from "../../../../assets/homepage_img/reserved.png";
+import li from "../../../../assets/homepage_img/LI.png";
+import fb from "../../../../assets/homepage_img/FB.png";
 export default function Footer() {
   return (
     <div className="relative">
