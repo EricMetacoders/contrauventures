@@ -13,4 +13,28 @@ export const homeServices = {
       method: "GET",
     });
   },
+  getFounderList() {
+    return axios({
+      url: `${url}founders`,
+      method: "GET",
+    });
+  },
+  getPortfolioList() {
+    return axios({
+      url: `${url}portfoilos`,
+      method: "GET",
+    });
+  },
+  getNewsList() {
+    return axios({
+      url: `${url}news`,
+      method: "GET",
+    });
+  },
+  getEmpowerList() {
+    return axios({
+      url: `${url}empowers`,
+      method: "GET",
+    });
+  },
 };

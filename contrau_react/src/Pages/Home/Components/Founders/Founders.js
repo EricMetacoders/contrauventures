@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getFounderList } from "../../../../reducers/homeSlice";
 import FounderCarousel from "./FounderCarousel";
 export default function Founders() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getFounderList());
+  }, []);
+
   return (
-    <div className="mx-[34px]    lg:mx-[300px] ">
+    <div className="mx-[34px]  lg:mx-[300px] ">
       <div className="mt-[80px] md:mt-[300px]">
         <div className="">
           <p className="font-bold robotoFlexFont  text-[13px]  md:text-[24px]">
@@ -47,7 +54,7 @@ export default function Founders() {
             </p>
           </div>
 
-          <div className="ml-[25px] md:ml-0 mb-[30px] md:mb-0  mt-[110px] md:mt-[78px] lg:mt-[200px] overflow-hidden">
+          <div className="ml-[25px] md:ml-0 mb-[30px] md:mb-0  mt-[110px] md:mt-[78px] lg:mt-[200px] overflow-visible">
             <FounderCarousel />
           </div>
         </div>

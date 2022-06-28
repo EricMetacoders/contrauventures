@@ -9,12 +9,14 @@ import "./faqCollapse.css";
 
 export default function Faq() {
   const dispatch = useDispatch();
+
+  const faqList = useSelector((state) => state.homeSlice.faqList);
+
   useEffect(() => {
     dispatch(getFAQList());
   }, []);
 
   const { Panel } = Collapse;
-  const faqList = useSelector((state) => state.homeSlice.faqList);
   return (
     <div className="mx-[34px] xl:mx-[300px]  mt-[260px] md:mt-[280px]">
       <div className="  pb-[10px] md:pb-[90px]">
@@ -26,12 +28,7 @@ export default function Faq() {
         </div>
       </div>
       <div>
-        <Collapse
-          accordion
-          onClick={() => {
-            console.log("Collapse");
-          }}
-        >
+        <Collapse accordion>
           {faqList?.map((ques, index) => {
             return (
               <Panel

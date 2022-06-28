@@ -1,8 +1,14 @@
-import React from "react";
-import news_photo1 from "../../../../assets/homepage_img//news1.png";
-import news_photo2 from "../../../../assets/homepage_img//news2.png";
-import news_photo3 from "../../../../assets/homepage_img//news3.png";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getNewsList } from "../../../../reducers/homeSlice";
+
 export default function News() {
+  const dispatch = useDispatch();
+  const data = useSelector((state) => state.homeSlice.news);
+  useEffect(() => {
+    dispatch(getNewsList());
+  }, []);
+
   return (
     <div className="mt-[307px]">
       <div className=" mx-[34px] xl:mx-[300px]">
@@ -23,64 +29,28 @@ export default function News() {
         </div>
         <div className="mt-[109px]">
           <div className="flex flex-col 2xl:flex-row items-center justify-center 2xl:space-x-6">
-            <div className="2xl:w-[428px] 2xl:h-[399px] w-[291px] h-[377px] border-b-2 border-black pb-[20px] mb-[50px] cursor-pointer">
-              <img
-                src={news_photo1}
-                alt="news1"
-                className="w-[288px] h-[168px] 2xl:w-[424px] 2xl:h-[178px]"
-              />
-              <div className="mt-[36px]">
-                <p className="text-[14px] robotoFlexFont italic text-red mb-0">
-                  Category
-                </p>
-                <p className="popinsFont 2xl:text-[24px] 2xl:font-normal text-[18px] font-light mb-0">
-                  What happens when AI and NFT meets?
-                </p>
-                <p className="2xl-text[16px] 2xl:font-light 2xl:robotoFlexFont text-[13px] popinsFont font-light mb-0">
-                  Sub text max 2 line sub text goes here and sub text goes here
-                  and sub text goes hereSub text max 2 line sub text go...
-                </p>
-              </div>
-            </div>
-            <div className="2xl:w-[428px] 2xl:h-[399px] w-[291px] h-[377px] border-b-2 border-black pb-[20px] mb-[50px]  cursor-pointer">
-              <img
-                src={news_photo2}
-                alt="news2"
-                className="w-[288px] h-[168px] 2xl:w-[424px] 2xl:h-[178px]"
-              />
-              <div className="mt-[36px]">
-                <p className="text-[14px] robotoFont italic text-red mb-0">
-                  Category
-                </p>
-                <p className="popinsFont 2xl:text-[24px] 2xl:font-normal text-[18px] font-light mb-0">
-                  Title max 2 lines Title max 2 linesTitle max 2 linesTitle max
-                  2 ...
-                </p>
-                <p className="2xl-text[16px] 2xl:font-light 2xl:robotoFlexFont text-[13px] popinsFont font-light mb-0">
-                  Sub text max 2 line sub text goes here and sub text goes here
-                  and sub text goes hereSub text max 2 line sub text go...
-                </p>
-              </div>
-            </div>
-            <div className="2xl:w-[428px] 2xl:h-[399px] w-[291px] h-[377px] border-b-2 border-black pb-[20px]  mb-[50px]  cursor-pointer">
-              <img
-                src={news_photo3}
-                alt="news3"
-                className="w-[288px] h-[168px] 2xl:w-[424px] 2xl:h-[178px]"
-              />
-              <div className="mt-[36px]">
-                <p className="text-[14px] robotoFlexFont italic text-red mb-0">
-                  Category
-                </p>
-                <p className="popinsFont 2xl:text-[24px] 2xl:font-normal text-[18px] font-light mb-0">
-                  What happens when AI and NFT meets?
-                </p>
-                <p className="2xl-text[16px] 2xl:font-light 2xl:robotoFlexFont text-[13px] popinsFont font-light mb-0">
-                  Sub text max 2 line sub text goes here and sub text goes here
-                  and sub text goes hereSub text max 2 line sub text go...
-                </p>
-              </div>
-            </div>
+            {data?.map((n) => {
+              return (
+                <div className="2xl:w-[428px] 2xl:h-[399px] w-[291px] h-[377px] border-b-2 border-black pb-[20px] mb-[50px] cursor-pointer">
+                  <img
+                    src={n.acf?.image}
+                    alt={n.acf?.title}
+                    className="w-[288px] h-[168px] 2xl:w-[424px] 2xl:h-[178px]"
+                  />
+                  <div className="mt-[36px]">
+                    <p className="text-[14px] robotoFlexFont italic text-red mb-0">
+                      {n.acf?.categies}
+                    </p>
+                    <p className="popinsFont 2xl:text-[24px] 2xl:font-normal text-[18px] font-light mb-0">
+                      {n.acf?.title.slice(0, 77).concat("...")}
+                    </p>
+                    <p className="2xl-text[16px] 2xl:font-light 2xl:robotoFlexFont text-[13px] popinsFont font-light mb-0">
+                      {n.acf?.newscontent.slice(0, 115).concat("...")}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

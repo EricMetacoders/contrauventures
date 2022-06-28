@@ -1,5 +1,4 @@
 import React from "react";
-import male from "../../../../assets/homepage_img/male.png";
 import "./founderImageCarousel.css";
 export default function FounderImageCarousel({ data }) {
   return (
@@ -7,7 +6,11 @@ export default function FounderImageCarousel({ data }) {
       id="divBtn"
       className="relative imgCarousel  w-[278px] h-[431px] md:w-[223px] md:h-[350px] xl:h-[550px] xl:w-[350px] 2xl:h-[664px] 2xl:w-[424px] rounded-3xl overflow-hidden "
     >
-      <img src={data} alt="male" className="rounded-3xl w-full" />
+      <img
+        src={data?.acf?.image}
+        alt={data?.acf?.name}
+        className="rounded-3xl w-full"
+      />
       <div className="hidden 2xl:block absolute bottom-[63px] w-full imgText">
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center leading-[1]">
@@ -15,13 +18,12 @@ export default function FounderImageCarousel({ data }) {
               FOUNDER
             </p>
             <p className="text-white text-[32px] 2xl:text-[50px] font-[900] popinsFont">
-              NAME
+              {data?.acf?.name}
             </p>
           </div>
           <div className="flex items-center justify-center mx-[20px]">
             <p className="text-white popinsFont  font-light text-[13px] 2xl:text-[20px] 2xl:font-normal text-center">
-              Lorem ipsum dolor sit amet, cons ectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore{" "}
+              {data?.acf?.title.slice(0, 100).concat("...")}
             </p>
           </div>
         </div>
@@ -33,13 +35,12 @@ export default function FounderImageCarousel({ data }) {
               FOUNDER
             </p>
             <p className="text-white text-[32px] 2xl:text-[50px] font-[900] popinsFont">
-              NAME
+              {data?.acf?.name}
             </p>
           </div>
           <div className="flex items-center justify-center mx-[20px]">
             <p className="text-white popinsFont  font-light text-[13px] 2xl:text-[20px] 2xl:font-normal text-center">
-              Lorem ipsum dolor sit amet, cons ectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore{" "}
+              {data?.acf?.title.slice(0, 64).concat("...")}
             </p>
           </div>
         </div>

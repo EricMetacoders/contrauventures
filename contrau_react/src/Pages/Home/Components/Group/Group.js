@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import photo2 from "../../../../assets/homepage_img//logo2.png";
 import { getPartnersList } from "../../../../reducers/homeSlice";
 import "./group.css";
 
@@ -9,7 +8,6 @@ export default function Group() {
   const dispatch = useDispatch();
 
   const partners = useSelector((state) => state.homeSlice.partners);
-  console.log(partners);
 
   useEffect(() => {
     dispatch(getPartnersList());
@@ -79,8 +77,8 @@ export default function Group() {
           {partners?.map((logo) => {
             return (
               <img
-                src={logo.acf.image}
-                alt={logo.acf.name}
+                src={logo?.acf?.image}
+                alt={logo?.acf?.name}
                 className="w-[173px] h-[152px] opacity-80 hover:opacity-100"
               />
             );
@@ -90,8 +88,8 @@ export default function Group() {
           {partners?.map((logo) => {
             return (
               <img
-                src={logo.acf.image}
-                alt={logo.acf.name}
+                src={logo?.acf?.image}
+                alt={logo?.acf?.name}
                 className="w-[173px] h-[152px] opacity-80 hover:opacity-100"
               />
             );
@@ -101,8 +99,8 @@ export default function Group() {
           {partners?.map((logo) => {
             return (
               <img
-                src={logo.acf.image}
-                alt={logo.acf.name}
+                src={logo?.acf?.image}
+                alt={logo?.acf?.name}
                 className="w-[173px] h-[152px] opacity-80 hover:opacity-100"
               />
             );
@@ -119,8 +117,8 @@ export default function Group() {
           {partners?.map((logo) => {
             return (
               <img
-                src={logo.acf.image}
-                alt={logo.acf.name}
+                src={logo?.acf?.image}
+                alt={logo?.acf?.name}
                 className="w-[80px] h-[80px] opacity-80 hover:opacity-100"
               />
             );
@@ -130,8 +128,8 @@ export default function Group() {
           {partners?.map((logo) => {
             return (
               <img
-                src={logo.acf.image}
-                alt={logo.acf.name}
+                src={logo?.acf?.image}
+                alt={logo?.acf?.name}
                 className="w-[80px] h-[80px]"
               />
             );
@@ -141,8 +139,8 @@ export default function Group() {
           {partners?.map((logo) => {
             return (
               <img
-                src={logo.acf.image}
-                alt={logo.acf.name}
+                src={logo?.acf?.image}
+                alt={logo?.acf?.name}
                 className="w-[80px] h-[80px]"
               />
             );
