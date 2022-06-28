@@ -44,11 +44,11 @@ export default function Portfolio() {
             <p className="italic font-thin text-[40px] popinsFont mb-0">
               victory is
             </p>
-            <div className="flex items-center justify-start space-x-1">
+            <div className="flex items-center justify-start space-x-[1px]">
               <p className="font-[900] text-red mb-0 popinsFont text-[40px]">
                 Our victory
               </p>
-              <div className="w-[10px] h-[10px] bg-red rounded-full mt-[40px]"></div>
+              <div className="w-[13px] h-[13px] bg-red rounded-full mt-[40px]"></div>
             </div>
           </div>
           <div className="mt-[30px]">

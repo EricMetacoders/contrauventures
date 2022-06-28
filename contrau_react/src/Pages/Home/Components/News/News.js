@@ -11,7 +11,7 @@ export default function News() {
             <p className="popinsFont italic text-[40px]  2xl:text-[60px] font-[900]">
               News
             </p>
-            <div className="w-[10px] h-[10px] 2xl:w-[15px] 2xl:h-[15px] rounded-full bg-red mb-[58px] 2xl:mb-[86px]"></div>
+            <div className="w-[10px] h-[10px] 2xl:w-[15px] 2xl:h-[15px] rounded-full bg-red mb-[14px] 2xl:mb-[22px]"></div>
           </div>
           <div>
             <div className="border-b-2 border-darkGrey">

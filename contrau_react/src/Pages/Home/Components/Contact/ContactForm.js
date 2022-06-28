@@ -25,7 +25,9 @@ export default function ContactForm() {
     setEmail(null);
     setFile(null);
 
+    // reset form
     handleClick();
+
     //  call api
   };
   const formRef = useRef();
@@ -63,7 +65,7 @@ export default function ContactForm() {
           <input
             type="file"
             id="file"
-            className="w-full 2xl:h-[75px] bg-inputBg pl-[26px] text-white  custom-file-input cursor-pointer"
+            className="w-full 2xl:h-[75px] bg-inputBg pt-[30px] pl-[100px] text-white  custom-file-input cursor-pointer"
             onChange={(e) => {
               setFile(e.target.files[0]);
             }}
@@ -73,7 +75,6 @@ export default function ContactForm() {
             alt="file"
             className="absolute top-5 left-[30px]"
           />
-          {file ? <p className="text-white pl-[30px]">{file.name} </p> : <></>}
         </div>
         <div className="hidden 2xl:block 2xl:mt-[12px] space-x-4">
           <input
