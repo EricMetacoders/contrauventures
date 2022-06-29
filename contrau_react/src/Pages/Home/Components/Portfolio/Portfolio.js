@@ -174,7 +174,7 @@ export default function Portfolio() {
               </TabPane>
             </Tabs>
           </div>
-          <div className="block 2xl:hidden">
+          <div className="block 2xl:hidden lg:mt-[134px]">
             <PortfolioMobileTabs />
           </div>
         </div>

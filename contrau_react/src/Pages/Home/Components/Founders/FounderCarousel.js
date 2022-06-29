@@ -21,7 +21,18 @@ export default function FounderCarousel() {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true,
+          dots: false,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+          arrows: false,
+          dots: false,
         },
       },
       {
@@ -31,6 +42,7 @@ export default function FounderCarousel() {
           slidesToScroll: 2,
           initialSlide: 2,
           arrows: false,
+          dots: false,
         },
       },
       {
@@ -39,6 +51,7 @@ export default function FounderCarousel() {
           slidesToShow: 1,
           slidesToScroll: 1,
           arrows: false,
+          dots: false,
         },
       },
     ],

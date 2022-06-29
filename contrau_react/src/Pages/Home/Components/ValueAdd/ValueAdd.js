@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import value_add_1 from "../../../../assets/homepage_img/value_add_1.png";
-import value_add_2 from "../../../../assets/homepage_img/value_add_2.png";
+
 import { getEmpowerList } from "../../../../reducers/homeSlice";
 export default function ValueAdd() {
   const dispatch = useDispatch();

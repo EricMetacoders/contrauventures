@@ -4,14 +4,14 @@ export default function FounderImageCarousel({ data }) {
   return (
     <div
       id="divBtn"
-      className="relative imgCarousel  w-[278px] h-[431px] md:w-[223px] md:h-[350px] xl:h-[550px] xl:w-[350px] 2xl:h-[664px] 2xl:w-[424px] rounded-3xl overflow-hidden "
+      className="relative imgCarousel  w-[278px] h-[431px] md:w-[223px] md:h-[350px] xl:h-[550px] xl:w-[323px] 2xl:h-[664px] 2xl:w-[424px] rounded-3xl overflow-hidden "
     >
       <img
         src={data?.acf?.image}
         alt={data?.acf?.name}
-        className="rounded-3xl w-full"
+        className="rounded-3xl w-full h-full"
       />
-      <div className="hidden 2xl:block absolute bottom-[63px] w-full imgText">
+      <div className="hidden lg:block absolute bottom-[63px] w-full imgText">
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center leading-[1]">
             <p className="text-white text-[32px] 2xl:text-[50px] font-thin popinsFont">
@@ -28,7 +28,7 @@ export default function FounderImageCarousel({ data }) {
           </div>
         </div>
       </div>
-      <div className="block 2xl:hidden absolute bottom-[63px] w-full">
+      <div className="block lg:hidden absolute bottom-[63px] w-full">
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center leading-[1]">
             <p className="text-white text-[32px] 2xl:text-[50px] font-thin popinsFont">
@@ -45,7 +45,7 @@ export default function FounderImageCarousel({ data }) {
           </div>
         </div>
       </div>
-      <div className="absolute block top-[386px] left-[20%] 2xl:hidden">
+      <div className="absolute block top-[386px] left-[20%] md:top-[299px] md:left-[27px] lg:hidden">
         <div className=" w-[170px] h-[30px] bg-white  cursor-pointer z-50">
           <div className="flex items-center justify-center w-full h-full">
             <p className="popinsFont font-semibold text-[14px] text-black mb-0">
@@ -54,9 +54,9 @@ export default function FounderImageCarousel({ data }) {
           </div>
         </div>
       </div>
-      <div className="hidden 2xl:block  w-full h-full absolute bgBlur"></div>
+      <div className="hidden lg:block  w-full h-full absolute bgBlur"></div>
       <div className="btnInterview">
-        <div className="hidden 2xl:block w-[200px] h-[60px] bg-white  cursor-pointer z-50">
+        <div className="hidden lg:block w-[200px] h-[60px] bg-white  cursor-pointer z-50">
           <div className="flex items-center justify-center w-full h-full">
             <p className="popinsFont font-semibold text-[20px] text-black mb-0">
               See Full Interview

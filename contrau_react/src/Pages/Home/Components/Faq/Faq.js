@@ -28,29 +28,31 @@ export default function Faq() {
         </div>
       </div>
       <div>
-        <Collapse accordion>
+        <Collapse
+          accordion
+          expandIcon={({ isActive }) =>
+            isActive ? (
+              <img src={ic_plus} alt="plus" />
+            ) : (
+              <img src={plus} alt="plus" />
+            )
+          }
+        >
           {faqList?.map((ques, index) => {
             return (
               <Panel
-                showArrow={false}
+                showArrow={true}
                 header={
                   <div className="border-t-2 md:pb-[50px]">
                     <div className="mt-[10px] xl:mt-[50px] 2xl:mx-[20px]">
                       <div className="flex items-center justify-between">
-                        <div className="md:flex items-center justify-between md:space-x-5">
+                        <div>
                           <p className="popinsFont text-[18px] font-light  2xl:text-[24px] italic text-red mb-0">
                             Q{index + 1}
                           </p>
                           <p className="text-[18px] md:text-[32px] w-[299px] md:w-[522px] 2xl:w-[900px]  popinsFont 2xl:text-[32px] 2xl:font-normal font-light  mb-0 ">
                             {ques.acf.question}
                           </p>
-                        </div>
-                        <div>
-                          <img
-                            src={plus}
-                            alt="plus"
-                            className=" w-[20px] h-[20px] md:w-[30px] md:h-[30px] mb-[50px] md:mb-0"
-                          />
                         </div>
                       </div>
                     </div>
