@@ -22,9 +22,18 @@
   top: 72px;
 }
 
-@media only screen and (min-width: 0) and (max-width: 375px) {
+@media only screen and (min-width: 0) and (max-width: 320px) {
+  .mText {
+    font-size: 12px !important;
+  }
   .ant-collapse-expand-icon {
-    left: 274px;
+    left: 214px;
+    top: 9px;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 375px) {
+  .ant-collapse-expand-icon {
+    left: 264px;
     top: 9px;
   }
 }

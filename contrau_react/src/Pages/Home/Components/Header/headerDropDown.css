@@ -1,0 +1,34 @@
+.ant-btn-primary {
+  color: #fff;
+  border: none;
+  background: transparent;
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  background: transparent !important;
+  border: none !important;
+}
+html {
+  --antd-wave-shadow-color: transparent;
+  --scroll-bar: 0;
+}
+
+.ant-modal-header {
+  display: none !important;
+}
+
+.ant-modal-close-x {
+  display: none !important;
+}
+
+.ant-modal-footer {
+  display: none !important;
+}
+
+.ant-modal-content {
+  right: -118px;
+  width: 248px;
+  top: -109px;
+  height: 100vh;
+}

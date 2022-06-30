@@ -48,7 +48,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="mx-[12px]  mt-[20px] 2xl:hidden">
+      <div className="mx-[21px]  mt-[20px] 2xl:hidden">
         <img src={footerLogo} alt="logo" />
         <div className="flex justify-between items-center">
           <div>

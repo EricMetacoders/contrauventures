@@ -10,7 +10,7 @@ export default function ValueAdd() {
   }, []);
 
   return (
-    <div className="mx-[34px] md:mt-[1069px] 2xl:mx-[300px]  mt-[331px] 2xl:mt-[1132px] ">
+    <div className="mx-[34px] md:mt-[1069px] 2xl:mx-[300px]  mt-[323px] 2xl:mt-[1278px] ">
       <div>
         <p className="robotoFlexFont text-[13px] md:text-[24px] font-bold">
           Value Add
@@ -38,7 +38,7 @@ export default function ValueAdd() {
             <div className=" mt-[26px] 2xl:mt-[65px]">
               <div className="mx-[20px] 2xl:mx-0 block 2xl:flex items-center justify-star 2xl:space-x-4">
                 <p className="popinsFont text-[18px] font-light  2xl:text-[24px] italic text-red mb-0">
-                  {i + 1}
+                  {i > 9 ? i + 1 : `0${i + 1}`}
                 </p>
                 <p className="popinsFont text-[24px] 2xl:text-[40px] font-light mb-0 ">
                   {empower?.acf?.title}

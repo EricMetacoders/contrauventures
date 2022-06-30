@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { Collapse } from "antd";
@@ -32,7 +32,7 @@ export default function Faq() {
           accordion
           expandIcon={({ isActive }) =>
             isActive ? (
-              <img src={ic_plus} alt="plus" />
+              <img src={ic_plus} alt="ic_plus" />
             ) : (
               <img src={plus} alt="plus" />
             )
@@ -46,11 +46,11 @@ export default function Faq() {
                   <div className="border-t-2 md:pb-[50px]">
                     <div className="mt-[10px] xl:mt-[50px] 2xl:mx-[20px]">
                       <div className="flex items-center justify-between">
-                        <div>
-                          <p className="popinsFont text-[18px] font-light  2xl:text-[24px] italic text-red mb-0">
+                        <div className="md:flex  space-center justify-center md:space-x-5">
+                          <p className="popinsFont md:mt-[8px] text-[18px] font-light  2xl:text-[24px] italic text-red mb-0">
                             Q{index + 1}
                           </p>
-                          <p className="text-[18px] md:text-[32px] w-[299px] md:w-[522px] 2xl:w-[900px]  popinsFont 2xl:text-[32px] 2xl:font-normal font-light  mb-0 ">
+                          <p className="text-[18px] md:text-[32px] w-[299px] md:w-[522px] 2xl:w-[900px]  popinsFont 2xl:text-[32px] 2xl:font-normal font-light  mb-0 mText">
                             {ques.acf.question}
                           </p>
                         </div>

@@ -1,0 +1,142 @@
+.rootfooter {
+  width: 100%;
+  margin-top: 100px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  background-color: #e8e9eb;
+  .mainfooter {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    // background-color: aqua;
+    .addressdetailfooter {
+      height: 16px;
+
+      font-weight: 700;
+      font-size: 11px;
+      line-height: 16px;
+      /* identical to box height, or 145% */
+
+      letter-spacing: -0.01em;
+
+      color: #101010;
+
+      opacity: 0.4;
+      margin-top: 10px;
+      margin-left: 30px;
+    }
+    .allrightframe {
+      margin-left: auto;
+      margin-top: 10px;
+      height: 16px;
+
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 16px;
+      /* identical to box height, or 145% */
+
+      letter-spacing: -0.01em;
+
+      /* BLACK */
+
+      color: #101010;
+
+      opacity: 0.4;
+    }
+    .framelogofb-mb {
+      display: none;
+    }
+    .framelogolk-mb {
+      display: none;
+    }
+    .framelogofb {
+      /* Auto layout */
+      margin-left: 20px;
+      width: 34px;
+      height: 34px;
+      background: rgba(0, 0, 0, 0.12);
+      border-radius: 100px;
+    }
+    .framelogolk {
+      margin-left: 10px;
+      width: 34px;
+      height: 34px;
+
+      background: rgba(0, 0, 0, 0.12);
+      border-radius: 100px;
+    }
+  }
+}
+
+//RESPONSIVE
+@media screen and (max-width: 769px) {
+  .rootfooter {
+    width: 100%;
+    margin-top: 100px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    .mainfooter {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 80%;
+      margin: auto;
+
+      .frameaddress {
+        display: flex;
+        .addressdetailfooter {
+          height: 32px;
+          width: 212px;
+          font-weight: 700;
+          font-size: 9px;
+          line-height: 16px;
+          /* identical to box height, or 145% */
+
+          letter-spacing: -0.01em;
+          text-align: left;
+          color: #101010;
+
+          opacity: 0.4;
+          margin-top: 10px;
+          margin-left: 0px;
+        }
+
+        .framelogofb-mb {
+          display: block;
+          margin-top: 10px;
+          margin-left: 10px;
+        }
+        .framelogolk-mb {
+          display: block;
+          margin-top: 10px;
+          margin-left: 10px;
+        }
+      }
+      .allrightframe {
+        height: 16px;
+
+        font-weight: 400;
+        font-size: 9px;
+        line-height: 16px;
+        /* identical to box height, or 145% */
+
+        letter-spacing: -0.01em;
+
+        /* BLACK */
+
+        color: #101010;
+
+        opacity: 0.4;
+        margin: 0px;
+      }
+      .framelogofb {
+        display: none;
+      }
+      .framelogolk {
+        display: none;
+      }
+    }
+  }
+}

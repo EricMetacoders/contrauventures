@@ -25,7 +25,7 @@ export default function Portfolio() {
   });
 
   return (
-    <div className="bg-black pt-[2px] md:mt-[171px] 2xl:mt-[300px] relative h-[871px] md:h[1596px]">
+    <div className="bg-portfolioBg pt-[2px] md:mt-[171px] 2xl:mt-[300px] relative h-[871px] md:h[1596px]">
       <div>
         <img src={bg} alt="background" className="w-full h-auto object-cover" />
         <div className="text-white hidden md:block ">
@@ -57,7 +57,7 @@ export default function Portfolio() {
           </div>
         </div>
       </div>
-      <div className="md:hidden ml-[36px] bg-black">
+      <div className="md:hidden ml-[36px] bg-portfolioBg">
         <div className="text-white absolute top-[20%]">
           <p className="robotoFlexFont text-[13px] font-bold mb-0">Portfolio</p>
           <div className="mt-[27px] text-[40px] leading-[1]">
@@ -80,7 +80,7 @@ export default function Portfolio() {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-center mt-[300px] lg:mt-[-210px] 2xl:mt-0 2xl:pb-[200px] md:pt-[206px] 2xl:pt-[186px] bg-black">
+      <div className="flex items-center justify-center mt-[300px] lg:mt-[-210px] 2xl:mt-0 2xl:pb-[200px] md:pt-[206px] 2xl:pt-[186px] bg-portfolioBg">
         <div className="mx-[20px]">
           <div className="hidden 2xl:block">
             <Tabs defaultActiveKey="1">
@@ -93,8 +93,10 @@ export default function Portfolio() {
                 key="1"
               >
                 <div className="grid grid-cols-4">
-                  {viewAll?.map((logo) => {
-                    return (
+                  {viewAll?.map((logo, i) => {
+                    return i > 8 ? (
+                      <></>
+                    ) : (
                       <div className="flex items-center justify-center">
                         <img
                           src={logo?.acf?.image}

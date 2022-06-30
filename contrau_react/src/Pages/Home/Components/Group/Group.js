@@ -14,13 +14,14 @@ export default function Group() {
   }, []);
 
   return (
-    <div className="bg-black overflow-hidden">
-      <div className=" mx-[34px] md:mx-[117px] 2xl:mx-[300px] pb-[61px] ">
+    <div className="bg-partnersContactBg overflow-hidden">
+      <div className=" mx-[34px] md:mx-[117px] 2xl:mx-[300px] pb-[195px] ">
         <div className="pt-[80px] xl:pt-[324px] ">
           <div>
             <p className="text-white robotoFlexFont font-[700] text-[13px] 2xl:text-[24px] mb-[17px]">
               Partners
             </p>
+            z
             <div className="hidden xl:block">
               <div className="text-white  leading-[1] ">
                 <div className="flex space-x-7">
@@ -84,7 +85,7 @@ export default function Group() {
             );
           })}
         </div>
-        <div className="right-left flex justify-center items-center space-x-16 my-[50px]">
+        <div className="right-left flex justify-center items-center space-x-16 my-[53px]">
           {partners?.map((logo) => {
             return (
               <img

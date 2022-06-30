@@ -4,9 +4,9 @@
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
 
-  -moz-animation: leftRightAnimation 15s linear infinite;
-  -webkit-animation: leftRightAnimation 15s linear infinite;
-  animation: leftRightAnimation 15s linear infinite;
+  -moz-animation: leftRightAnimation 10s linear infinite;
+  -webkit-animation: leftRightAnimation 10s linear infinite;
+  animation: leftRightAnimation 10s linear infinite;
 }
 
 /* for Firefox */
@@ -48,9 +48,9 @@
   -webkit-transform: translateX(100%);
   transform: translateX(-00%);
 
-  -moz-animation: rightLeftAnimation 15s linear infinite;
-  -webkit-animation: rightLeftAnimation 15s linear infinite;
-  animation: rightLeftAnimation 15s linear infinite;
+  -moz-animation: rightLeftAnimation 10s linear infinite;
+  -webkit-animation: rightLeftAnimation 10s linear infinite;
+  animation: rightLeftAnimation 10s linear infinite;
 }
 
 /* for Firefox */
