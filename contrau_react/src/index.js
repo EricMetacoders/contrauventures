@@ -7,11 +7,13 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import homeSlice from "./reducers/homeSlice";
+import interviewSlice from "./reducers/interviewSlice";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const store = configureStore({
   reducer: {
     homeSlice,
+    interviewSlice
   },
   middleware: [thunk],
 });

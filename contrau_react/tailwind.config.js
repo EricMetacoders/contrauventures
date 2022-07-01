@@ -8,8 +8,6 @@ module.exports = {
       current: "currentColor",
       white: "#ffffff",
       black: "#101010",
-      partnersContactBg: "#151515",
-      portfolioBg: "#0e0e0e",
       red: "#DB2F33",
       grey: "#F9F9F9",
       hoverGrey: "#828383",
