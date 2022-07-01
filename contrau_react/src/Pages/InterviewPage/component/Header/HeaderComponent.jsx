@@ -53,7 +53,10 @@ function HeaderComponent({ pagecurrent }) {
           <TemporaryDrawer />
         ) : (
           <Box className="titledetaimainframeheader">
-            <Box className="titledetaiframeheader">HOME</Box>
+            <Link to="/">
+              {" "}
+              <Box className="titledetaiframeheader">HOME</Box>
+            </Link>
             <Box className="titledetaiframeheader">About Us</Box>
             <Box className="titledetaiframeheader">Portfolio</Box>
             <Link to="/story">
