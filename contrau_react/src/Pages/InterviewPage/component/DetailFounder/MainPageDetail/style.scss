@@ -2,7 +2,6 @@
   .framecontentmain {
     display: flex;
     justify-content: center;
-    padding-top: 20px;
     column-gap: 10px;
     border: 0.5px solid #d0d0d0;
     background: #ffffff;
@@ -19,6 +18,8 @@
       border-bottom: 3px solid black;
       padding-bottom: 15px;
       cursor: pointer;
+      padding-top: 20px;
+
       text-align: center;
     }
     .detailcontent {
@@ -32,7 +33,7 @@
       line-height: 32px;
       /* identical to box height, or 160% */
       padding-bottom: 15px;
-
+      padding-top: 20px;
       letter-spacing: -0.02em;
       color: #999999;
       cursor: pointer;
@@ -41,7 +42,7 @@
       font-weight: 500;
       letter-spacing: -0.02em;
       color: #101010;
-
+      background-color: #f9f9f9;
       padding-bottom: 10px;
       cursor: pointer;
     }
@@ -64,7 +65,7 @@
         margin-top: 50px;
         font-family: "Poppins", sans-serif;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 20px;
         line-height: 36px;
         text-align: left;
@@ -174,7 +175,7 @@
           text-align: left;
           font-family: "Roboto Flex", sans-serif;
           font-style: normal;
-          font-weight: 500;
+          font-weight: 400;
           font-size: 20px;
           line-height: 36px;
           /* or 180% */
@@ -342,11 +343,15 @@
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
         }
+        :nth-child(3):hover {
+          cursor: pointer;
+          text-decoration: underline black 2px;
+        }
         :nth-child(4) {
           margin-top: 15px;
           font-family: "Roboto Flex", sans-serif;
           font-style: normal;
-          font-weight: 500;
+          font-weight: 300;
           font-size: 16px;
           line-height: 24px;
           /* or 150% */
@@ -431,7 +436,7 @@
           margin-top: 50px;
           font-family: "Poppins", sans-serif;
           font-style: normal;
-          font-weight: 400;
+          font-weight: 300;
           font-size: 14px;
           line-height: 36px;
           text-align: left;
@@ -487,7 +492,7 @@
               border-bottom: 9px solid red;
             }
             :nth-child(3) {
-              font-weight: 100;
+              font-weight: 200;
             }
           }
         }
@@ -521,7 +526,7 @@
             margin-top: 25px;
             text-align: left;
             font-style: normal;
-            font-weight: 500;
+            font-weight: 300;
             font-size: 14px;
             line-height: 24px;
             /* or 180% */
@@ -600,7 +605,7 @@
       .framenewtitle {
         display: flex;
         height: 44px;
-        width: 80%;
+        width: 290px;
         margin: auto;
         text-align: center;
         /* H2 */
@@ -647,9 +652,8 @@
         .framedetail {
           display: flex;
           margin: auto;
-
           flex-direction: column;
-          width: 80%;
+          width: 290px;
           height: 370px;
           text-align: left;
           border-bottom: 1px solid #101010;
@@ -680,10 +684,14 @@
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
           }
+          :nth-child(3):hover {
+            cursor: pointer;
+            text-decoration: underline black 2px;
+          }
           :nth-child(4) {
             width: 90%;
             margin-top: 10px;
-            font-family: "Roboto Flex", sans-serif;
+            font-family: "Poppins", sans-serif;
             font-style: normal;
             font-size: 16px;
             line-height: 24px;

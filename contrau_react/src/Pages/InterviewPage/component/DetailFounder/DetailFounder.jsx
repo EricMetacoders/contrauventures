@@ -33,6 +33,7 @@ function DetailFounder({ currentFounder }) {
       setDetailFounder(_detailfounder.data);
     }
     fechData();
+    window.scrollTo(0, 0);
   }, []);
 
   // const getDetailFounder = () => {};

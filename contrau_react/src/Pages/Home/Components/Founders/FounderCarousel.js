@@ -58,8 +58,8 @@ export default function FounderCarousel() {
   };
   return (
     <Slider {...settings}>
-      {data?.map((img) => {
-        return <FounderImageCarousel data={img} />;
+      {data?.map((img, index) => {
+        return <FounderImageCarousel key={index} data={img} />;
       })}
     </Slider>
   );

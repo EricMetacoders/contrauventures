@@ -16,7 +16,7 @@ export default function Founders() {
             Founders
           </p>
           <div className="hidden md:block leading-[1] mt-[50px]">
-            <p className="popinsFont text-[110px]  font-thin mb-0">
+            <p className="popinsFont text-[110px]  font-thin mb-[5px] 2xl:mb-0">
               We don’t go for Deal,
             </p>
             <div className="flex items-center justify-start 2xl:space-x-5 mb-0">

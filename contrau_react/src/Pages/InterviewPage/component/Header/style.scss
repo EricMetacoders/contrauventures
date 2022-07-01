@@ -38,6 +38,7 @@
     padding-top: 28px;
     height: fit-content;
     .titledetaiframeheader {
+      cursor: pointer;
       margin-left: 48px;
       font-family: "Poppins", sans-serif;
       font-style: normal;
@@ -82,7 +83,7 @@
     transform: translateX(-50%) translateY(-70%);
     font-family: "Poppins", sans-serif;
     font-style: normal;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 60px;
     line-height: 70px;
     /* or 117% */

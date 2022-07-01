@@ -16,7 +16,9 @@ function FooterComponent(props) {
         </Box>
         <Box className="frameaddress">
           <Box className="addressdetailfooter">
-            Tell 1234-5678-910 | E-mail abcd@gmail.com | Address 36-1
+            <span style={{ fontWeight: "700" }}>Tell</span>&nbsp; 1234-5678-910
+            | <span style={{ fontWeight: "700" }}>E-mail</span> abcd@gmail.com |
+            <span style={{ fontWeight: "700" }}>&nbsp;Address</span> 36-1
             Chungdam-dong, Seoul, Korea
           </Box>
           <Box className="framelogofb-mb">

@@ -15,8 +15,8 @@ export default function ValueAdd() {
         <p className="robotoFlexFont text-[13px] md:text-[24px] font-bold">
           Value Add
         </p>
-        <div className="mt-[30px] 2xl:mt-[74px] border-b-2 border-black pb-[40px] 2xl:pb-[80px] leading-[1]">
-          <p className="popinsFont text-[40px] md:text-[80px] 2xl:text-[110px]  font-[900] mb-0">
+        <div className="mt-[30px] 2xl:mt-[74px] border-b-[1px] border-black pb-[40px] 2xl:pb-[80px] leading-[1]">
+          <p className="popinsFont text-[40px]  font-[900] md:text-[80px] 2xl:text-[110px]  2xl:font-thin 2xl:italic mb-0">
             We empower
           </p>
           <p className="popinsFont text-[40px] md:text-[80px] 2xl:text-[110px]  italic font-thin mb-0">
@@ -34,7 +34,10 @@ export default function ValueAdd() {
       </div>
       {data?.map((empower, i) => {
         return (
-          <div className="border-b-2 border-darkGrey pb-[26px] 2xl:pb-[65px] ">
+          <div
+            className="border-b-[1px] border-darkGrey pb-[26px] 2xl:pb-[65px]"
+            key={i}
+          >
             <div className=" mt-[26px] 2xl:mt-[65px]">
               <div className="mx-[20px] 2xl:mx-0 block 2xl:flex items-center justify-star 2xl:space-x-4">
                 <p className="popinsFont text-[18px] font-light  2xl:text-[24px] italic text-red mb-0">

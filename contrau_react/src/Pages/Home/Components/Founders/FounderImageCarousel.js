@@ -1,31 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { interviewServices } from "../../../../services/interviewService";
 import "./founderImageCarousel.css";
 export default function FounderImageCarousel({ data }) {
   const history = useNavigate();
-  // get details of Fouders
-  async function getIdFounderFromAPI() {
-    try {
-      let listFounderInteview = await interviewServices.getFounderIDByName();
-      return listFounderInteview;
-    } catch (error) {
-      console.log("Failed to fetch", error);
+  const [founderList, setFounderList] = useState(null);
+
+  useEffect(() => {
+    // get details of Fouders
+    async function getFounderList() {
+      try {
+        const listFounderInteview =
+          await interviewServices.getFounderIDByName();
+        setFounderList(listFounderInteview);
+      } catch (err) {
+        console.log("Failed to fetch", err);
+      }
     }
-  }
+    getFounderList();
+  }, []);
 
-  const handleSeeFull = async (data) => {
-    let resultList = await getIdFounderFromAPI();
-
-    var findID = await Object.values(resultList.data).find(
-      (element) => element.acf.name == data.acf.name
+  const handleSeeFull = (data) => {
+    console.log("data");
+    var findID = Object.values(founderList.data).find(
+      (element) =>
+        element.acf.first_name.toLowerCase() ==
+          data.acf.first_name.toLowerCase() &&
+        element.acf.last_name.toLowerCase() == data.acf.last_name.toLowerCase()
     );
     history(`/detailfounder/${findID.id}`);
   };
   return (
     <div
       id="divBtn"
-      className="relative imgCarousel  w-[289px] h-[431px] md:w-[223px] md:h-[350px] xl:h-[550px] xl:w-[323px] 2xl:h-[664px] 2xl:w-[424px] rounded-3xl overflow-hidden "
+      className="relative imgCarousel  h-[448px] md:w-[223px] md:h-[350px] xl:h-[550px] xl:w-[323px] 2xl:h-[664px] 2xl:w-[424px] rounded-3xl overflow-hidden "
     >
       <img
         src={data?.acf?.image}
@@ -38,12 +46,12 @@ export default function FounderImageCarousel({ data }) {
             <p className="text-white text-[32px] 2xl:text-[50px] font-thin popinsFont">
               FOUNDER
             </p>
-            <div className="flex items-center justify-center space-x-1">
+            <div className="flex items-center justify-center space-x-3">
               <p className="text-white text-[32px] 2xl:text-[50px] font-[900] popinsFont">
-                {data?.acf?.first_name}
+                {data?.acf?.first_name.toUpperCase()}
               </p>
               <p className="text-white text-[32px] 2xl:text-[50px] font-[900] popinsFont">
-                {data?.acf?.last_name}
+                {data?.acf?.last_name.toUpperCase()}
               </p>
             </div>
           </div>
@@ -60,12 +68,12 @@ export default function FounderImageCarousel({ data }) {
             <p className="text-white text-[32px] 2xl:text-[50px] font-thin popinsFont">
               FOUNDER
             </p>
-            <div className="flex items-center justify-center space-x-1">
+            <div className="flex items-center justify-center space-x-3">
               <p className="text-white text-[32px] 2xl:text-[50px] font-[900] popinsFont">
-                {data?.acf?.first_name}
+                {data?.acf?.first_name.toUpperCase()}
               </p>
               <p className="text-white text-[32px] 2xl:text-[50px] font-[900] popinsFont">
-                {data?.acf?.last_name}
+                {data?.acf?.last_name.toUpperCase()}
               </p>
             </div>
           </div>

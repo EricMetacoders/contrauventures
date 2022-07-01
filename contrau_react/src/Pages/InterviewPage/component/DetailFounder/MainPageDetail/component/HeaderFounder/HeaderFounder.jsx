@@ -28,17 +28,20 @@ function HeaderFounder({ detailFounder }) {
           {isMatch ? (
             <img
               src={
-                Object.keys(detailFounder).length != 0 &&
-                detailFounder.acf.thumbnail
+                Object.keys(detailFounder).length != 0
+                  ? detailFounder.acf.thumbnail
+                  : undefined
               }
+              // src={interviewdetail}
               alt="logotrau"
               className="logobackgroundheader"
             />
           ) : (
             <img
               src={
-                Object.keys(detailFounder).length != 0 &&
-                detailFounder.acf.image
+                Object.keys(detailFounder).length != 0
+                  ? detailFounder.acf.image.toString()
+                  : undefined
               }
               alt="logotrau"
               className="logobackgroundheader"

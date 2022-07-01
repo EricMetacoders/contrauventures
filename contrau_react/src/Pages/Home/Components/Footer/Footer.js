@@ -43,8 +43,16 @@ export default function Footer() {
           </div>
           <div className="flex items-center justify-center space-x-4 ">
             <img src={reserved} alt="reserved" />
-            <img src={fb} alt="fb" />
-            <img src={li} alt="li" />
+            <img
+              src={fb}
+              alt="fb"
+              className="opacity-80 hover:opacity-100 cursor-pointer"
+            />
+            <img
+              src={li}
+              alt="li"
+              className="opacity-80 hover:opacity-100 cursor-pointer"
+            />
           </div>
         </div>
       </div>
@@ -77,8 +85,16 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex space-x-3">
-            <img src={fb} alt="facebook" />
-            <img src={li} alt="li" />
+            <img
+              src={fb}
+              alt="facebook"
+              className="opacity-80 hover:opacity-100 cursor-pointer"
+            />
+            <img
+              src={li}
+              alt="li"
+              className="opacity-80 hover:opacity-100 cursor-pointer"
+            />
           </div>
         </div>
         <div className="mt-[25px] mb-[37px]">

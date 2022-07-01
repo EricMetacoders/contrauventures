@@ -29,6 +29,9 @@ function MainPageDetail({ detailArticle }) {
       )[0].style.display = "block");
     }
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="rootpagedetail">

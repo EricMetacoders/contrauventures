@@ -12,7 +12,7 @@ export default function Header() {
               <img src={logo} alt="logo" />
             </div>
           </Link>
-          <div className="hidden md:flex item-center justify-center space-x-12 relative left-[230px]">
+          <div className="hidden md:flex item-center justify-center space-x-12 relative left-[236px]">
             <Link to="/">
               <p className="popinsFont text-[16px] font-extrabold hover:text-hoverGrey transition-all cursor-pointer">
                 HOME

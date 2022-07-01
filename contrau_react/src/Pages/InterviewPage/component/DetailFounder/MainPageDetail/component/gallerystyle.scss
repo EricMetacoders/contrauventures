@@ -127,6 +127,11 @@
         opacity: 0.4;
         width: fit-content;
       }
+      li:hover {
+        color: #ffffff;
+        text-decoration-line: underline;
+        opacity: 1;
+      }
       .slick-active {
         color: #ffffff;
         text-decoration-line: underline;

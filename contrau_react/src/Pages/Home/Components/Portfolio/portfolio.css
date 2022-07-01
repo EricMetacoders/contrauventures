@@ -79,3 +79,8 @@
     font-size: 10px;
   }
 }
+
+.ant-tabs-content-holder {
+  height: 283px;
+  overflow: scroll;
+}

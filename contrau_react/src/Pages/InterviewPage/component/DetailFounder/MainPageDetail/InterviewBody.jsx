@@ -1,21 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { Box, useMediaQuery, useTheme } from "@material-ui/core";
 
-import imagequote from "../../../../../assets/interview-img/imagequote.png";
-import imagequotemb from "../../../../../assets/interview-img/imagequote-mb.png";
-import imagearticle from "../../../../../assets/interview-img/imagearticle.png";
-import imgarticle1 from "../../../../../assets/interview-img/imgarticle1.png";
-import imgarticle2 from "../../../../../assets/interview-img/imgarticle2.png";
-import imgarticle1mb from "../../../../../assets/interview-img/imgarticle1mb.png";
-import imgarticle2mb from "../../../../../assets/interview-img/imgarticle2mb.png";
-import imagearticlemobile from "../../../../../assets/interview-img/imagearticlemobile.png";
-import new1 from "../../../../../assets/interview-img/new1.png";
-import new2 from "../../../../../assets/interview-img/new2.png";
-import new3 from "../../../../../assets/interview-img/new3.png";
-import new1mb from "../../../../../assets/interview-img/new1mb.png";
-import new2mb from "../../../../../assets/interview-img/new2mb.png";
-import new3mb from "../../../../../assets/interview-img/new3mb.png";
+import { interviewServices } from "../../../../../services/interviewService";
+import { useState } from "react";
 InterviewBody.propTypes = {
   detailArticle: PropTypes.object,
 };
@@ -335,6 +323,24 @@ function InterviewBody({ detailArticle }) {
       </div>
     </div>
   </div>`;
+
+  async function getAPINew() {
+    try {
+      let listNew = await interviewServices.getNew();
+      return listNew;
+    } catch (error) {
+      console.log("Failed to fetch", error);
+    }
+  }
+  const [listNew, setListNew] = useState([]);
+  useEffect(() => {
+    async function fetchDataNew() {
+      const listDataNew = await getAPINew();
+      setListNew(listDataNew.data);
+    }
+    fetchDataNew();
+  }, []);
+
   return (
     <Box>
       {/* GET CONTENT FROM API */}
@@ -345,6 +351,7 @@ function InterviewBody({ detailArticle }) {
         />
       )}
 
+      {/* FRAME NEW */}
       <Box className="framenew">
         <Box className="framenewtitle">
           <span>
@@ -353,45 +360,24 @@ function InterviewBody({ detailArticle }) {
           <span className="viewtitle">view more</span>
         </Box>
         <Box className="framedetailnewmain">
-          <Box className="framedetail">
-            <Box className="frameimgnew">
-              <img src={isMatch ? new1mb : new1} alt="" />
-            </Box>
-            <Box>Category</Box>
-            <Box>What happens when AI and NFT meets? </Box>
-            <Box>
-              Sub text max 2 line sub text goes here and sub text goes here and
-              sub text goes hereSub text max 2 line sub text goes here and sub
-              text goes here and sub text goes here
-            </Box>
-          </Box>
-          <Box className="framedetail">
-            <Box className="frameimgnew">
-              <img src={isMatch ? new2mb : new2} alt="" />
-            </Box>
-            <Box>Category</Box>
-            <Box>
-              Title max 2 lines Title max 2 linesTitle max 2 linesTitle max 2
-              linesTitle max 2 lines{" "}
-            </Box>
-            <Box>
-              Sub text max 2 line sub text goes here and sub text here and sub
-              text goes hereSub text max 2 line sub text here and sub text goes
-              here and sub text goes here
-            </Box>
-          </Box>
-          <Box className="framedetail">
-            <Box className="frameimgnew">
-              <img src={isMatch ? new3mb : new3} alt="" />
-            </Box>
-            <Box>Category</Box>
-            <Box>What happens when AI and NFT meets? </Box>
-            <Box>
-              Sub text max 2 line sub text goes here and sub text goes here and
-              sub text goes hereSub text max 2 line sub text goes here and sub
-              text goes here and sub text goes here
-            </Box>
-          </Box>
+          {listNew.length != 0 &&
+            listNew.map((item) => (
+              <Box className="framedetail" key={item.id}>
+                <Box className="frameimgnew">
+                  <img
+                    src={
+                      isMatch
+                        ? item.acf.thumbnail.toString()
+                        : item.acf.image.toString()
+                    }
+                    alt=""
+                  />
+                </Box>
+                <Box>{item.acf.categies}</Box>
+                <Box>{item.acf.title}</Box>
+                <Box>{item.acf.newscontent}</Box>
+              </Box>
+            ))}
         </Box>
       </Box>
     </Box>

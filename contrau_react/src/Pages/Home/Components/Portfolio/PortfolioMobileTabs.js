@@ -48,9 +48,9 @@ export default function PortfolioMobileTabs() {
 
         <TabPanel>
           <div className="grid grid-cols-2">
-            {viewAll?.map((logo) => {
+            {viewAll?.map((logo, i) => {
               return (
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center" key={i}>
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.category}
@@ -63,9 +63,9 @@ export default function PortfolioMobileTabs() {
         </TabPanel>
         <TabPanel>
           <div className="grid grid-cols-2">
-            {sWInfrastructure?.map((logo) => {
+            {sWInfrastructure?.map((logo, i) => {
               return (
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center" key={i}>
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.category}
@@ -78,9 +78,9 @@ export default function PortfolioMobileTabs() {
         </TabPanel>
         <TabPanel>
           <div className="grid grid-cols-2">
-            {digitalSupplyChain?.map((logo) => {
+            {digitalSupplyChain?.map((logo, i) => {
               return (
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center" key={i}>
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.category}
@@ -93,9 +93,9 @@ export default function PortfolioMobileTabs() {
         </TabPanel>
         <TabPanel>
           <div className="grid grid-cols-2">
-            {sustainableMegacity?.map((logo) => {
+            {sustainableMegacity?.map((logo, i) => {
               return (
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center" key={i}>
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.category}

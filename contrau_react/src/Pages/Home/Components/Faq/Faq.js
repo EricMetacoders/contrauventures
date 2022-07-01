@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { ReactComponent as PlusImage } from "../../../../assets/homepage_img/plus.svg";
+import { ReactComponent as MinusImage } from "../../../../assets/homepage_img/minus.svg";
 import { Collapse } from "antd";
-import plus from "../../../../assets/homepage_img/plus.png";
-import ic_plus from "../../../../assets/homepage_img/ic_plus.png";
 import { getFAQList } from "../../../../reducers/homeSlice";
 import "./faqCollapse.css";
 
@@ -32,9 +31,11 @@ export default function Faq() {
           accordion
           expandIcon={({ isActive }) =>
             isActive ? (
-              <img src={ic_plus} alt="ic_plus" />
+              // <AiOutlineMinus size={30} color="#101010" />
+              <MinusImage className="scale-75 2xl:scale-100" />
             ) : (
-              <img src={plus} alt="plus" />
+              // <AiOutlinePlus size={30} color="#101010" />
+              <PlusImage className="scale-75 2xl:scale-100" />
             )
           }
         >
@@ -43,7 +44,7 @@ export default function Faq() {
               <Panel
                 showArrow={true}
                 header={
-                  <div className="border-t-2 md:pb-[50px]">
+                  <div className="border-t-[1px] md:pb-[50px]">
                     <div className="mt-[10px] xl:mt-[50px] 2xl:mx-[20px]">
                       <div className="flex items-center justify-between">
                         <div className="md:flex  space-center justify-center md:space-x-5">

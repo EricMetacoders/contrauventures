@@ -41,7 +41,7 @@ export default function Portfolio() {
                 </div>
                 <div className="flex items-center justify-center text-[110px] space-x-3">
                   <p className="popinsFont italic font-thin mb-0">is</p>
-                  <p className="font-extrabold text-red  mb-0">Our victory</p>
+                  <p className="font-[900] text-red  mb-0">Our victory</p>
                   <div className=" w-[25px] h-[25px] rounded-full bg-red mt-[79px]"></div>
                 </div>
               </div>
@@ -94,10 +94,8 @@ export default function Portfolio() {
               >
                 <div className="grid grid-cols-4">
                   {viewAll?.map((logo, i) => {
-                    return i > 8 ? (
-                      <></>
-                    ) : (
-                      <div className="flex items-center justify-center">
+                    return (
+                      <div className="flex items-center justify-center" key={i}>
                         <img
                           src={logo?.acf?.image}
                           alt={logo?.acf?.category}
@@ -117,9 +115,9 @@ export default function Portfolio() {
                 key="2"
               >
                 <div className="grid grid-cols-4">
-                  {sWInfrastructure?.map((logo) => {
+                  {sWInfrastructure?.map((logo, i) => {
                     return (
-                      <div className="flex items-center justify-center">
+                      <div className="flex items-center justify-center" key={i}>
                         <img
                           src={logo?.acf?.image}
                           alt={logo?.acf?.category}
@@ -139,9 +137,9 @@ export default function Portfolio() {
                 key="3"
               >
                 <div className="grid grid-cols-4">
-                  {digitalSupplyChain?.map((logo) => {
+                  {digitalSupplyChain?.map((logo, i) => {
                     return (
-                      <div className="flex items-center justify-center">
+                      <div className="flex items-center justify-center" key={i}>
                         <img
                           src={logo?.acf?.image}
                           alt={logo?.acf?.category}
@@ -161,9 +159,9 @@ export default function Portfolio() {
                 key="4"
               >
                 <div className="grid grid-cols-4">
-                  {sustainableMegacity?.map((logo) => {
+                  {sustainableMegacity?.map((logo, i) => {
                     return (
-                      <div className="flex items-center justify-center">
+                      <div className="flex items-center justify-center" key={i}>
                         <img
                           src={logo?.acf?.image}
                           alt={logo?.acf?.category}

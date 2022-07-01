@@ -13,32 +13,23 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useNavigate } from "react-router-dom";
 import { interviewServices } from "../../../../services/interviewService";
+import { useDispatch, useSelector } from "react-redux";
+import { getListFounder } from "../../../../reducers/interviewSlice";
+
 MainFounder.propTypes = {};
 
 function MainFounder(props) {
   //RESPONSIVE
   const theme = useTheme();
+  const dispatch = useDispatch();
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
 
   // const [listFounder, setListFounder] = useState([]);
 
   const [listFounder2, setListFounder2] = useState([]);
-  async function getListFounder() {
-    try {
-      let listFounder = await interviewServices.getListFounder();
-      return listFounder;
-    } catch (error) {
-      console.log("Failed to fetch", error);
-    }
-  }
-
+  const listFounder = useSelector((state) => state.interviewSlice.listFounder);
   useEffect(() => {
-    async function fetchData() {
-      var _listFounder = await getListFounder();
-
-      setListFounder2(_listFounder.data);
-    }
-    fetchData();
+    dispatch(getListFounder());
   }, []);
 
   const contentdatacategory = [
@@ -131,11 +122,13 @@ function MainFounder(props) {
 
   const clickDetailFounder = async (item) => {
     // GET API
-    console.log(item.acf.name);
     let resultList = await getIdFounderFromAPI();
 
-    var findID = await Object.values(resultList.data).find(
-      (element) => element.acf.name == item.acf.name
+    var findID = Object.values(resultList.data).find(
+      (element) =>
+        element.acf.first_name.toLowerCase() ==
+          item.acf.first_name.toLowerCase() &&
+        element.acf.last_name.toLowerCase() == item.acf.last_name.toLowerCase()
     );
     history(`/detailfounder/${findID.id}`);
   };
@@ -180,22 +173,21 @@ function MainFounder(props) {
         </div>
       )}
       {/* FRAME FOUNDER */}
-      <div className="framefounder">
-        {Object.values(listFounder2).length != 0 &&
-          Object.values(listFounder2).map((item) => (
-            <div
-              className="frameimgfounder"
-              onClick={() => clickDetailFounder(item)}
-            >
-              <img
-                src={isMatch ? item.acf.thumbnail : item.acf.image}
-                alt=""
-                className="imgfounder"
-              />
+      <div className="framefounder overflow-hidden">
+        {listFounder?.map((item) => (
+          <div className="frameimgfounder" key={item.id}>
+            <img
+              src={isMatch ? item.acf.thumbnail : item.acf.image}
+              alt=""
+              className="imgfounder"
+            />
+
+            <div className="framemaintile">
               <Box className="framedetailfoundername">
                 <Box className="detailfoundername">
-                  {item.acf.first_name.toUpperCase()}
-                  <Box className="titlename">
+                  FOUNDER
+                  <Box className="titlename ">
+                    {item.acf.first_name.toUpperCase()} &nbsp;
                     {item.acf.last_name.toUpperCase()}
                   </Box>
                 </Box>
@@ -207,7 +199,24 @@ function MainFounder(props) {
                 nisi ut aliquip
               </Box>
             </div>
-          ))}
+
+            <div className="hidden lg:block  w-full h-full absolute bgBlur"></div>
+            <div className="btnInterview">
+              <div className="hidden lg:block w-[200px] h-[60px] bg-white  cursor-pointer z-50">
+                <div className="flex items-center justify-center w-full h-full">
+                  <p
+                    className="popinsFont font-semibold text-[20px] text-black mb-0"
+                    onClick={() => {
+                      clickDetailFounder(item);
+                    }}
+                  >
+                    See Full Interview
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
