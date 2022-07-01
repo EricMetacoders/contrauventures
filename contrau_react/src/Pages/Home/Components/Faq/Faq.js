@@ -1,20 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { ReactComponent as PlusImage } from "../../../../assets/homepage_img/plus.svg";
+import { ReactComponent as MinusImage } from "../../../../assets/homepage_img/minus.svg";
 import { Collapse } from "antd";
-import plus from "../../../../assets/homepage_img/plus.png";
-import ic_plus from "../../../../assets/homepage_img/ic_plus.png";
 import { getFAQList } from "../../../../reducers/homeSlice";
 import "./faqCollapse.css";
 
 export default function Faq() {
   const dispatch = useDispatch();
+
+  const faqList = useSelector((state) => state.homeSlice.faqList);
+
   useEffect(() => {
     dispatch(getFAQList());
   }, []);
 
   const { Panel } = Collapse;
-  const faqList = useSelector((state) => state.homeSlice.faqList);
   return (
     <div className="mx-[34px] xl:mx-[300px]  mt-[260px] md:mt-[280px]">
       <div className="  pb-[10px] md:pb-[90px]">
@@ -28,32 +29,31 @@ export default function Faq() {
       <div>
         <Collapse
           accordion
-          onClick={() => {
-            console.log("Collapse");
-          }}
+          expandIcon={({ isActive }) =>
+            isActive ? (
+              // <AiOutlineMinus size={30} color="#101010" />
+              <MinusImage className="scale-75 2xl:scale-100" />
+            ) : (
+              // <AiOutlinePlus size={30} color="#101010" />
+              <PlusImage className="scale-75 2xl:scale-100" />
+            )
+          }
         >
           {faqList?.map((ques, index) => {
             return (
               <Panel
-                showArrow={false}
+                showArrow={true}
                 header={
-                  <div className="border-t-2 md:pb-[50px]">
+                  <div className="border-t-[1px] md:pb-[50px]">
                     <div className="mt-[10px] xl:mt-[50px] 2xl:mx-[20px]">
                       <div className="flex items-center justify-between">
-                        <div className="md:flex items-center justify-between md:space-x-5">
-                          <p className="popinsFont text-[18px] font-light  2xl:text-[24px] italic text-red mb-0">
+                        <div className="md:flex  space-center justify-center md:space-x-5">
+                          <p className="popinsFont md:mt-[8px] text-[18px] font-light  2xl:text-[24px] italic text-red mb-0">
                             Q{index + 1}
                           </p>
-                          <p className="text-[18px] md:text-[32px] w-[299px] md:w-[522px] 2xl:w-[900px]  popinsFont 2xl:text-[32px] 2xl:font-normal font-light  mb-0 ">
+                          <p className="text-[18px] md:text-[32px] w-[299px] md:w-[522px] 2xl:w-[900px]  popinsFont 2xl:text-[32px] 2xl:font-normal font-light  mb-0 mText">
                             {ques.acf.question}
                           </p>
-                        </div>
-                        <div>
-                          <img
-                            src={plus}
-                            alt="plus"
-                            className=" w-[20px] h-[20px] md:w-[30px] md:h-[30px] mb-[50px] md:mb-0"
-                          />
                         </div>
                       </div>
                     </div>

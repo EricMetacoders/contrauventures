@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <div className="mt-[142px] 2xl:mt-[243px]">
       <div className=" mx-[12px] 2xl:mx-[181px] ">
-        <div className="bg-black pb-[32px] 2xl:pb-[115px] boxShadow">
+        <div className="bg-partnersContactBg pb-[32px] 2xl:pb-[115px] shadowContact">
           <div className="pt-[83] 2xl:pt-[124px] mx-[24px] 2xl:mx-[112px]">
             <div className="flex items-center">
               <p className="popinsFont italic text-[40px]  text-white 2xl:text-[60px] font-[900]">

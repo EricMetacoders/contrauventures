@@ -1,0 +1,243 @@
+.rootgallery {
+  width: auto;
+  height: 1200px;
+  background-color: #151515;
+
+  .slick-slider {
+    width: 80%;
+    margin: auto;
+    // display: flex;
+    .carousel-gallery {
+      position: relative;
+      // padding-left: 150px;
+      color: #ffffff;
+      padding-top: 50px;
+      .frameimgmain {
+        // background-color: red;
+        .frameimgtop {
+          display: flex;
+          margin-left: auto;
+          width: 80%;
+          .frameimg2 {
+            margin-top: auto;
+            margin-left: 150px;
+          }
+        }
+        .frameimgbot {
+          width: 80%;
+          display: flex;
+          margin-top: 150px;
+          margin-left: 180px;
+          .frameimg3 {
+          }
+          .frameimg4 {
+            margin-top: 120px;
+            margin-left: 150px;
+          }
+        }
+      }
+      .frameimgmain2 {
+        // background-color: aqua;
+        .frameimgtop {
+          display: flex;
+          margin-left: auto;
+          width: 80%;
+
+          .frameimg1 {
+            margin-top: 150px;
+          }
+          .frameimg2 {
+            margin-left: 150px;
+          }
+        }
+        .frameimgbot {
+          width: 80%;
+          display: flex;
+          margin: auto;
+          .frameimg3 {
+            margin: auto;
+            margin-top: 180px;
+            padding-bottom: 25px;
+          }
+          .frameimg4 {
+            display: none;
+          }
+        }
+      }
+      .frametitleyear {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        .titleyeardetail {
+          width: 519px;
+          height: 200px;
+          font-family: "Inter", sans-serif;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 200px;
+          line-height: 100%;
+          /* identical to box height, or 200px */
+          text-align: center;
+          letter-spacing: 0.02em;
+        }
+        .titleyeardetail::after {
+          color: #fcfcfc;
+          content: "";
+          display: block;
+          width: 43px;
+          height: 2px;
+          margin: auto;
+          background: #fcfcfc;
+        }
+        .detailtitle {
+          /* Body 20 Poppins */
+          font-family: "Poppins", sans-serif;
+          margin-top: 20px;
+          width: 450px;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 32px;
+          /* or 160% */
+          text-align: center;
+          letter-spacing: -0.02em;
+        }
+      }
+    }
+    .slick-dots {
+      display: flex;
+      flex-direction: column;
+      width: 55px;
+      height: 32px;
+      font-family: "Inter", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 32px;
+      color: #ffffff;
+      top: 35%;
+      left: 0;
+      // right: 50;
+      /* identical to box height, or 160% */
+      letter-spacing: 0.02em;
+      font-feature-settings: "tnum" on, "lnum" on;
+      li {
+        margin-top: 40px;
+        opacity: 0.4;
+        width: fit-content;
+      }
+      li:hover {
+        color: #ffffff;
+        text-decoration-line: underline;
+        opacity: 1;
+      }
+      .slick-active {
+        color: #ffffff;
+        text-decoration-line: underline;
+        width: fit-content;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// RESPONSIVE
+
+/* MOBILE WIDTH < 740px */
+
+@media screen and (max-width: 769px) {
+  .rootgallery {
+    width: auto;
+    height: 400px;
+    background-color: black;
+
+    .slick-slider {
+      width: 90%;
+      // margin: 0;
+      // display: flex;
+      .carousel-gallery {
+        // padding-left: 150px;
+        color: #ffffff;
+        margin-top: 100px;
+        .frameimgmain {
+          .frameimgtop {
+            display: flex;
+            margin: auto;
+            width: 80%;
+            .frameimg2 {
+              margin-top: auto;
+              margin-left: 40px;
+            }
+          }
+          .frameimgbot {
+            width: 80%;
+            display: flex;
+            margin-top: 30px;
+            margin-left: 10px;
+            .frameimg3 {
+            }
+            .frameimg4 {
+              margin-top: 0px;
+              margin-left: 40px;
+            }
+          }
+        }
+        .frametitleyear {
+          position: absolute;
+          // left: 0;
+          // margin-left: 400px;
+          // bottom: 20%;
+          top: 50%;
+          margin-top: 0px;
+          margin-left: 20px;
+          // margin-top: -90px;
+          z-index: 2000;
+          .titleyeardetail {
+            width: 156px;
+            height: 60px;
+            font-size: 60px;
+            margin: auto;
+          }
+          .detailtitle {
+            margin: auto;
+            width: 288px;
+            font-size: 14px;
+            line-height: 20px;
+            /* or 160% */
+            text-align: center;
+            letter-spacing: -0.02em;
+          }
+        }
+      }
+
+      .slick-dots {
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+        width: 39px;
+        height: 24px;
+        font-size: 14px;
+        line-height: 24px;
+        color: #ffffff;
+        top: 0;
+        left: 0;
+        // right: 50;
+        /* identical to box height, or 160% */
+        letter-spacing: 0.02em;
+        font-feature-settings: "tnum" on, "lnum" on;
+        li {
+          margin-top: 20px;
+          opacity: 0.4;
+          width: fit-content;
+        }
+        .slick-active {
+          color: #ffffff;
+          text-decoration-line: underline;
+          width: fit-content;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

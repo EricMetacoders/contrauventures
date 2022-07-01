@@ -17,9 +17,8 @@
 .custom-file-input:hover::before {
   border-color: black;
 }
-/* .custom-file-input:active {
-  outline: 0;
-} */
-/* .custom-file-input:active::before {
-  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
-} */
+
+.shadowContact {
+  -webkit-box-shadow: 1px 50px 14px 0px rgba(198, 198, 198, 0.8);
+  box-shadow: 1px 50px 14px 0px rgba(198, 198, 198, 0.8);
+}

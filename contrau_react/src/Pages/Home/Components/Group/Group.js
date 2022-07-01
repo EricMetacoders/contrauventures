@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import photo2 from "../../../../assets/homepage_img//logo2.png";
 import { getPartnersList } from "../../../../reducers/homeSlice";
 import "./group.css";
 
@@ -9,24 +8,26 @@ export default function Group() {
   const dispatch = useDispatch();
 
   const partners = useSelector((state) => state.homeSlice.partners);
-  console.log(partners);
 
   useEffect(() => {
     dispatch(getPartnersList());
   }, []);
 
   return (
-    <div className="bg-black overflow-hidden">
-      <div className=" mx-[34px] md:mx-[117px] 2xl:mx-[300px] pb-[61px] ">
+    <div className="bg-partnersContactBg overflow-hidden">
+      <div className=" mx-[34px] md:mx-[117px] 2xl:mx-[300px] pb-[195px] ">
         <div className="pt-[80px] xl:pt-[324px] ">
           <div>
-            <p className="text-white robotoFlexFont font-[700] text-[13px] 2xl:text-[24px] mb-[17px]">
+            <p className="text-white robotoFlexFont font-[700] text-[13px] 2xl:text-[24px] 2xl:mb-[32px]">
               Partners
             </p>
+            z
             <div className="hidden xl:block">
               <div className="text-white  leading-[1] ">
                 <div className="flex space-x-7">
-                  <p className=" text-[110px] font-bold mb-0">We are </p>
+                  <p className="popinsFont  text-[110px] font-[900] mb-0">
+                    We are{" "}
+                  </p>
                   <p className="popinsFont italic text-[110px] font-thin mb-0">
                     a Fund of
                   </p>
@@ -35,7 +36,7 @@ export default function Group() {
                   <p className="italic popinsFont font-thin text-[110px] mr-[16px]">
                     Korean
                   </p>
-                  <span className="popinsFont text-[110px] font-bold">
+                  <span className="popinsFont text-[110px] font-[900]">
                     FOUNDERS
                   </span>
                   <div className="inline-block bg-red w-[23px] h-[23px] rounded-full mt-[70px]"></div>
@@ -76,34 +77,37 @@ export default function Group() {
       </div>
       <div className="hidden md:block ">
         <div className="left-right flex justify-center items-center space-x-16">
-          {partners?.map((logo) => {
+          {partners?.map((logo, i) => {
             return (
               <img
-                src={logo.acf.image}
-                alt={logo.acf.name}
+                src={logo?.acf?.image}
+                alt={logo?.acf?.name}
                 className="w-[173px] h-[152px] opacity-80 hover:opacity-100"
+                key={i}
               />
             );
           })}
         </div>
-        <div className="right-left flex justify-center items-center space-x-16 my-[50px]">
-          {partners?.map((logo) => {
+        <div className="right-left flex justify-center items-center space-x-16 my-[53px]">
+          {partners?.map((logo, i) => {
             return (
               <img
-                src={logo.acf.image}
-                alt={logo.acf.name}
+                src={logo?.acf?.image}
+                alt={logo?.acf?.name}
                 className="w-[173px] h-[152px] opacity-80 hover:opacity-100"
+                key={i}
               />
             );
           })}
         </div>
         <div className="left-right flex justify-center items-center space-x-16">
-          {partners?.map((logo) => {
+          {partners?.map((logo, i) => {
             return (
               <img
-                src={logo.acf.image}
-                alt={logo.acf.name}
+                src={logo?.acf?.image}
+                alt={logo?.acf?.name}
                 className="w-[173px] h-[152px] opacity-80 hover:opacity-100"
+                key={i}
               />
             );
           })}
@@ -116,34 +120,37 @@ export default function Group() {
       </div>
       <div className="block md:hidden  overflow-hidden ">
         <div className="left-right flex items-center justify-center space-x-16">
-          {partners?.map((logo) => {
+          {partners?.map((logo, i) => {
             return (
               <img
-                src={logo.acf.image}
-                alt={logo.acf.name}
+                src={logo?.acf?.image}
+                alt={logo?.acf?.name}
                 className="w-[80px] h-[80px] opacity-80 hover:opacity-100"
+                key={i}
               />
             );
           })}
         </div>
         <div className="right-left flex items-center justify-center space-x-16 my-[30px]">
-          {partners?.map((logo) => {
+          {partners?.map((logo, i) => {
             return (
               <img
-                src={logo.acf.image}
-                alt={logo.acf.name}
+                src={logo?.acf?.image}
+                alt={logo?.acf?.name}
                 className="w-[80px] h-[80px]"
+                key={i}
               />
             );
           })}
         </div>
         <div className="left-right flex items-center justify-center space-x-16">
-          {partners?.map((logo) => {
+          {partners?.map((logo, i) => {
             return (
               <img
-                src={logo.acf.image}
-                alt={logo.acf.name}
+                src={logo?.acf?.image}
+                alt={logo?.acf?.name}
                 className="w-[80px] h-[80px]"
+                key={i}
               />
             );
           })}

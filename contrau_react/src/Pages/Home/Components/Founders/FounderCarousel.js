@@ -2,14 +2,11 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import male from "../../../../assets/homepage_img/male.png";
-import male2 from "../../../../assets/homepage_img/male2.png";
-import female from "../../../../assets/homepage_img/female.png";
 import FounderImageCarousel from "./FounderImageCarousel";
-
-const founders = [male, male2, female];
+import { useSelector } from "react-redux";
 
 export default function FounderCarousel() {
+  const data = useSelector((state) => state.homeSlice.founders);
   let settings = {
     dots: false,
     infinite: true,
@@ -24,7 +21,18 @@ export default function FounderCarousel() {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true,
+          dots: false,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+          arrows: false,
+          dots: false,
         },
       },
       {
@@ -33,6 +41,8 @@ export default function FounderCarousel() {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
+          arrows: false,
+          dots: false,
         },
       },
       {
@@ -40,14 +50,16 @@ export default function FounderCarousel() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          arrows: false,
+          dots: false,
         },
       },
     ],
   };
   return (
     <Slider {...settings}>
-      {founders.map((img) => {
-        return <FounderImageCarousel data={img} />;
+      {data?.map((img, index) => {
+        return <FounderImageCarousel key={index} data={img} />;
       })}
     </Slider>
   );

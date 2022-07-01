@@ -15,3 +15,67 @@
 .ant-collapse > .ant-collapse-item > .ant-collapse-header {
   padding: 0;
 }
+
+.ant-collapse-expand-icon {
+  position: absolute;
+  left: 1269px;
+  top: 59px;
+}
+
+@media only screen and (min-width: 0) and (max-width: 320px) {
+  .mText {
+    font-size: 12px !important;
+  }
+  .ant-collapse-expand-icon {
+    left: 214px;
+    top: 9px;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 375px) {
+  .ant-collapse-expand-icon {
+    left: 264px;
+    top: 9px;
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 414px) {
+  .ant-collapse-expand-icon {
+    left: 299px;
+    top: 9px;
+  }
+}
+
+@media only screen and (min-width: 415px) and (max-width: 800px) {
+  .ant-collapse-expand-icon {
+    left: 676px;
+    top: 15px;
+  }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 834px) {
+  .ant-collapse-expand-icon {
+    left: 701px;
+    top: 22px;
+  }
+}
+
+@media only screen and (min-width: 835px) and (max-width: 1024px) {
+  .ant-collapse-expand-icon {
+    left: 896px;
+    top: 18px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  .ant-collapse-expand-icon {
+    left: 626px;
+    top: 61px;
+  }
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 1440px) {
+  .ant-collapse-expand-icon {
+    left: 792px;
+    top: 55px;
+  }
+}
