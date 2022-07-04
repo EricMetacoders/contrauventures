@@ -88,6 +88,7 @@ function MainFounder(props) {
     setClicked(item.name);
     if (item.name !== "View All") {
       var _listFounder = await getListFounder();
+      console.log("_listFounder:", _listFounder);
       const filtercategory = _listFounder.data.filter((founder) => {
         return item.name.toLowerCase() == founder.acf.category;
       });
@@ -169,7 +170,7 @@ function MainFounder(props) {
                 alt=""
                 className="imgfounder"
               />
-
+              {/* #B0ACA3" */}
               <div className="framemaintile">
                 <Box className="framedetailfoundername">
                   <Box className="detailfoundername">

@@ -19,15 +19,6 @@ function MainPageDetail({ detailArticle }) {
 
   const dealClick = (item) => {
     setClicked(item.name);
-    if (item.name == "Gallery") {
-      const varrt = (document.getElementsByClassName(
-        "rootfooter"
-      )[0].style.display = "none");
-    } else {
-      const varrt = (document.getElementsByClassName(
-        "rootfooter"
-      )[0].style.display = "block");
-    }
   };
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -48,7 +39,6 @@ function MainPageDetail({ detailArticle }) {
           </Box>
         ))}
       </Box>
-      {/* Interview */}
       {clicked == "Interview" ? (
         <InterviewBody detailArticle={detailArticle} />
       ) : (

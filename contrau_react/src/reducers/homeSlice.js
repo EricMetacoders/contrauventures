@@ -69,7 +69,6 @@ export const getPartnersList = createAsyncThunk("getPartnersList", async () => {
 
 export const getFounderList = createAsyncThunk("getFounderList", async () => {
   const response = await homeServices.getFounderList();
-  console.log("data", response.data);
   return response.data;
 });
 
@@ -77,7 +76,6 @@ export const getPortfolioList = createAsyncThunk(
   "getPortfolioList",
   async () => {
     const response = await homeServices.getPortfolioList();
-    console.log("data", response.data);
     return response.data;
   }
 );
