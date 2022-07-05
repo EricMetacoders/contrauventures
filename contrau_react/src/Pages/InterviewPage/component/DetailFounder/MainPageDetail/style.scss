@@ -2,7 +2,7 @@
   .framecontentmain {
     display: flex;
     justify-content: center;
-    column-gap: 10px;
+    // column-gap: 10px;
     border: 0.5px solid #d0d0d0;
     background: #ffffff;
     .detailcontent-active {
@@ -21,6 +21,8 @@
       padding-top: 20px;
 
       text-align: center;
+      transition-duration: 150ms;
+      transition-property: all;
     }
     .detailcontent {
       /* Gallery */
@@ -37,6 +39,8 @@
       letter-spacing: -0.02em;
       color: #999999;
       cursor: pointer;
+      transition-duration: 150ms;
+      transition-property: all;
     }
     .detailcontent:hover {
       font-weight: 500;
@@ -62,7 +66,7 @@
       .framearticle {
         width: 1024px;
         margin: auto;
-        margin-top: 50px;
+        margin-top: 30px;
         font-family: "Poppins", sans-serif;
         font-style: normal;
         font-weight: 400;

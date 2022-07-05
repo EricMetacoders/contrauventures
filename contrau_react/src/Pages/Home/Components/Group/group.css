@@ -1,87 +1,214 @@
-.left-right {
-  /* animation properties */
-  -moz-transform: translateX(-100%);
-  -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
-
-  -moz-animation: leftRightAnimation 10s linear infinite;
-  -webkit-animation: leftRightAnimation 10s linear infinite;
-  animation: leftRightAnimation 10s linear infinite;
+.left-right1 {
+  -moz-animation: 10s linear 0s infinite normal none running leftRight1;
+  -webkit-animation: 10s linear 0s infinite normal none running leftRight1;
+  animation: 10s linear 0s infinite normal none running leftRight1;
 }
 
 /* for Firefox */
-@-moz-keyframes leftRightAnimation {
-  from {
-    -moz-transform: translateX(-100%);
+@-moz-keyframes leftRight1 {
+  0% {
+    transform: translateX(-100%);
   }
-  to {
-    -moz-transform: translateX(100%);
+
+  100% {
+    transform: translateX(0%);
   }
 }
 
 /* for Chrome */
-@-webkit-keyframes leftRightAnimation {
-  from {
-    -webkit-transform: translateX(-100%);
-  }
-  to {
-    -webkit-transform: translateX(100%);
-  }
-}
-
-@keyframes leftRightAnimation {
-  from {
-    -moz-transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
+@-webkit-keyframes leftRight1 {
+  0% {
     transform: translateX(-100%);
   }
-  to {
-    -moz-transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
+
+  100% {
+    transform: translateX(0%);
   }
 }
 
-.right-left {
-  /* animation properties */
-  -moz-transform: translateX(100%);
-  -webkit-transform: translateX(100%);
-  transform: translateX(-00%);
+@keyframes leftRight1 {
+  0% {
+    transform: translateX(-100%);
+  }
 
-  -moz-animation: rightLeftAnimation 10s linear infinite;
-  -webkit-animation: rightLeftAnimation 10s linear infinite;
-  animation: rightLeftAnimation 10s linear infinite;
+  100% {
+    transform: translateX(0%);
+  }
+}
+.left-right2 {
+  -moz-animation: 10s linear 0s infinite normal none running leftRight2;
+  -webkit-animation: 10s linear 0s infinite normal none running leftRight2;
+  animation: 10s linear 0s infinite normal none running leftRight2;
 }
 
 /* for Firefox */
-@-moz-keyframes rightLeftAnimation {
-  from {
-    -moz-transform: translateX(100%);
+@-moz-keyframes leftRight2 {
+  0% {
+    transform: translateX(0%);
   }
-  to {
-    -moz-transform: translateX(-100%);
+  100% {
+    transform: translateX(100%);
   }
 }
 
 /* for Chrome */
-@-webkit-keyframes rightLeftAnimation {
-  from {
-    -webkit-transform: translateX(100%);
+@-webkit-keyframes leftRight2 {
+  0% {
+    transform: translateX(0%);
   }
-  to {
-    -webkit-transform: translateX(-100%);
+  100% {
+    transform: translateX(100%);
   }
 }
 
-@keyframes rightLeftAnimation {
-  from {
-    -moz-transform: translateX(100%);
-    -webkit-transform: translateX(100%);
+@keyframes leftRight2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
     transform: translateX(100%);
   }
-  to {
-    -moz-transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
+}
+.left-right3 {
+  -moz-animation: 10s linear 0s infinite normal none running leftRight3;
+  -webkit-animation: 10s linear 0s infinite normal none running leftRight3;
+  animation: 10s linear 0s infinite normal none running leftRight3;
+}
+
+/* for Firefox */
+@-moz-keyframes leftRight3 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+/* for Chrome */
+@-webkit-keyframes leftRight3 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes leftRight3 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.right-left1 {
+  -moz-animation: 10s linear 0s infinite normal none running rightLeft1;
+  -webkit-animation: 10s linear 0s infinite normal none running rightLeft1;
+  animation: 10s linear 0s infinite normal none running rightLeft1;
+}
+
+/* for Firefox */
+@-moz-keyframes rightLeft1 {
+  0% {
+    transform: translateX(-0%);
+  }
+
+  100% {
     transform: translateX(-100%);
+  }
+}
+
+/* for Chrome */
+@-webkit-keyframes rightLeft1 {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes rightLeft1 {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.right-left2 {
+  -moz-animation: 10s linear 0s infinite normal none running rightLeft2;
+  -webkit-animation: 10s linear 0s infinite normal none running rightLeft2;
+  animation: 10s linear 0s infinite normal none running rightLeft2;
+}
+
+/* for Firefox */
+@-moz-keyframes rightLeft2 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* for Chrome */
+@-webkit-keyframes rightLeft2 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes rightLeft2 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.right-left3 {
+  /* animation properties */
+  -moz-animation: 10s linear 0s infinite normal none running rightLeft3;
+  -webkit-animation: 10s linear 0s infinite normal none running rightLeft3;
+  animation: 10s linear 0s infinite normal none running rightLeft3;
+}
+
+/* for Firefox */
+@-moz-keyframes rightLeft3 {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* for Chrome */
+@-webkit-keyframes rightLeft3 {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes rightLeft3 {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }

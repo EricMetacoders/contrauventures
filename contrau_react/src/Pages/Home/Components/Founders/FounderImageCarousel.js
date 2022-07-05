@@ -98,7 +98,12 @@ export default function FounderImageCarousel({ data }) {
           </div>
         </div>
       </div>
-      <div className="hidden lg:block  w-full h-full absolute bgBlur"></div>
+      <div
+        className="hidden lg:block  w-full h-full absolute bgBlur"
+        style={{
+          background: `${data?.acf?.gradient_color}`,
+        }}
+      ></div>
       <div className="btnInterview">
         <div className="hidden lg:block w-[200px] h-[60px] bg-white  cursor-pointer z-50">
           <div className="flex items-center justify-center w-full h-full">

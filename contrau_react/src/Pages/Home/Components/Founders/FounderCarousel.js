@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 
 export default function FounderCarousel() {
   const data = useSelector((state) => state.homeSlice.founders);
+  console.log("data", data);
   let settings = {
     dots: false,
     infinite: true,

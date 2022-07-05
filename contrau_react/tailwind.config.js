@@ -13,6 +13,8 @@ module.exports = {
       hoverGrey: "#828383",
       darkGrey: "#363636",
       inputBg: "#1e1e1e",
+      partnersContactBg: "#151515",
+      portfolioBg: "#0e0e0e",
     },
   },
   plugins: [],

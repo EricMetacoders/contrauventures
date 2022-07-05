@@ -21,7 +21,7 @@ export default function Group() {
             <p className="text-white robotoFlexFont font-[700] text-[13px] 2xl:text-[24px] 2xl:mb-[32px]">
               Partners
             </p>
-            z
+
             <div className="hidden xl:block">
               <div className="text-white  leading-[1] ">
                 <div className="flex space-x-7">
@@ -76,85 +76,169 @@ export default function Group() {
         </div>
       </div>
       <div className="hidden md:block ">
-        <div className="left-right flex justify-center items-center space-x-16">
-          {partners?.map((logo, i) => {
-            return (
-              <img
-                src={logo?.acf?.image}
-                alt={logo?.acf?.name}
-                className="w-[173px] h-[152px] opacity-80 hover:opacity-100"
-                key={i}
-              />
-            );
-          })}
+        {/* logo */}
+        <div className="overflow-hidden flex  relative h-[179px] items-center">
+          <div className="left-right1 absolute flex justify-center items-center ">
+            {partners?.map((logo, i) => {
+              return (
+                <img
+                  src={logo?.acf?.image}
+                  alt={logo?.acf?.name}
+                  className="w-[173px] h-full opacity-80 hover:opacity-100 mx-[4rem]"
+                  key={i}
+                />
+              );
+            })}
+          </div>
+          <div className=" left-right2 absolute flex justify-center items-center ">
+            {partners?.map((logo, i) => {
+              return (
+                <img
+                  src={logo?.acf?.image}
+                  alt={logo?.acf?.name}
+                  className="w-[173px] h-full opacity-80 hover:opacity-100 mx-[4rem]"
+                  key={i}
+                />
+              );
+            })}
+          </div>
+          <div className=" left-right3 absolute flex justify-center items-center ">
+            {partners?.map((logo, i) => {
+              return (
+                <img
+                  src={logo?.acf?.image}
+                  alt={logo?.acf?.name}
+                  className="w-[173px] h-full opacity-80 hover:opacity-100 mx-[4rem]"
+                  key={i}
+                />
+              );
+            })}
+          </div>
         </div>
-        <div className="right-left flex justify-center items-center space-x-16 my-[53px]">
-          {partners?.map((logo, i) => {
-            return (
-              <img
-                src={logo?.acf?.image}
-                alt={logo?.acf?.name}
-                className="w-[173px] h-[152px] opacity-80 hover:opacity-100"
-                key={i}
-              />
-            );
-          })}
+        <div className="overflow-hidden flex  relative h-[179px] items-center my-[60px]">
+          <div className="right-left1 absolute flex justify-center items-center">
+            {partners?.map((logo, i) => {
+              return (
+                <img
+                  src={logo?.acf?.image}
+                  alt={logo?.acf?.name}
+                  className="w-[173px] h-full opacity-80 hover:opacity-100 mx-[4rem]"
+                  key={i}
+                />
+              );
+            })}
+          </div>
+          <div className=" right-left2 absolute flex justify-center items-center">
+            {partners?.map((logo, i) => {
+              return (
+                <img
+                  src={logo?.acf?.image}
+                  alt={logo?.acf?.name}
+                  className="w-[173px] h-full opacity-80 hover:opacity-100 mx-[4rem]"
+                  key={i}
+                />
+              );
+            })}
+          </div>
+          <div className=" right-left3 absolute flex justify-center items-center">
+            {partners?.map((logo, i) => {
+              return (
+                <img
+                  src={logo?.acf?.image}
+                  alt={logo?.acf?.name}
+                  className="w-[173px] h-full opacity-80 hover:opacity-100 mx-[4rem]"
+                  key={i}
+                />
+              );
+            })}
+          </div>
         </div>
-        <div className="left-right flex justify-center items-center space-x-16">
-          {partners?.map((logo, i) => {
-            return (
-              <img
-                src={logo?.acf?.image}
-                alt={logo?.acf?.name}
-                className="w-[173px] h-[152px] opacity-80 hover:opacity-100"
-                key={i}
-              />
-            );
-          })}
+        <div className="overflow-hidden flex  relative h-[179px] items-center ">
+          <div className="absolute left-right1 flex justify-center items-center">
+            {partners?.map((logo, i) => {
+              return (
+                <img
+                  src={logo?.acf?.image}
+                  alt={logo?.acf?.name}
+                  className="w-[173px] h-full opacity-80 hover:opacity-100  mx-[4rem]"
+                  key={i}
+                />
+              );
+            })}
+          </div>
+          <div className="absolute left-right2 flex justify-center items-center">
+            {partners?.map((logo, i) => {
+              return (
+                <img
+                  src={logo?.acf?.image}
+                  alt={logo?.acf?.name}
+                  className="w-[173px] h-full opacity-80 hover:opacity-100  mx-[4rem]"
+                  key={i}
+                />
+              );
+            })}
+          </div>
+          <div className="absolute left-right3 flex justify-center items-center">
+            {partners?.map((logo, i) => {
+              return (
+                <img
+                  src={logo?.acf?.image}
+                  alt={logo?.acf?.name}
+                  className="w-[173px] h-full opacity-80 hover:opacity-100 mx-[4rem]"
+                  key={i}
+                />
+              );
+            })}
+          </div>
         </div>
+        {/* logo */}
         <div className="flex items-center justify-center mt-[20px] ">
           <button className="mb-[129px] text-[24px] mt-[129px]  px-[40px] py-[15px] border border-white text-white hover:bg-white hover:text-black transition-all">
             View all 1000+ partners
           </button>
         </div>
       </div>
-      <div className="block md:hidden  overflow-hidden ">
-        <div className="left-right flex items-center justify-center space-x-16">
-          {partners?.map((logo, i) => {
-            return (
-              <img
-                src={logo?.acf?.image}
-                alt={logo?.acf?.name}
-                className="w-[80px] h-[80px] opacity-80 hover:opacity-100"
-                key={i}
-              />
-            );
-          })}
+      <div className="block md:hidden ">
+        {/* logo */}
+        <div className="overflow-hidden flex  relative h-[80px] items-center ">
+          <div className="translate-x-[10%] h-[80px] absolute flex justify-center items-center ">
+            {partners?.map((logo, i) => {
+              return (
+                <img
+                  src={logo?.acf?.image}
+                  alt={logo?.acf?.name}
+                  className="w-[80px] h-full opacity-80 hover:opacity-100 mx-[10px]"
+                  key={i}
+                />
+              );
+            })}
+          </div>
+          {/* <div className="h-[80px] absolute flex justify-center items-center ">
+            {partners?.map((logo, i) => {
+              return (
+                <img
+                  src={logo?.acf?.image}
+                  alt={logo?.acf?.name}
+                  className="w-[80px] h-full opacity-80 hover:opacity-100 mx-[10px]"
+                  key={i}
+                />
+              );
+            })}
+          </div> */}
+          {/* <div className="mobile-left-right1 h-[80px] absolute flex justify-center items-center ">
+            {partners?.map((logo, i) => {
+              return (
+                <img
+                  src={logo?.acf?.image}
+                  alt={logo?.acf?.name}
+                  className="w-[80px] h-full opacity-80 hover:opacity-100 mx-[5px]"
+                  key={i}
+                />
+              );
+            })}
+          </div> */}
         </div>
-        <div className="right-left flex items-center justify-center space-x-16 my-[30px]">
-          {partners?.map((logo, i) => {
-            return (
-              <img
-                src={logo?.acf?.image}
-                alt={logo?.acf?.name}
-                className="w-[80px] h-[80px]"
-                key={i}
-              />
-            );
-          })}
-        </div>
-        <div className="left-right flex items-center justify-center space-x-16">
-          {partners?.map((logo, i) => {
-            return (
-              <img
-                src={logo?.acf?.image}
-                alt={logo?.acf?.name}
-                className="w-[80px] h-[80px]"
-                key={i}
-              />
-            );
-          })}
-        </div>
+        {/* logo */}
         <div className="flex items-cener justify-center mt-[76px] mb-[76px]">
           <button className="px-[50px] py-[15px] text-white border hover:bg-white hover:text-black transition-all">
             View All
