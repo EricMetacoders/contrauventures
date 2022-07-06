@@ -354,6 +354,9 @@
           transition-property: none;
           transition-duration: 200ms;
         }
+        img {
+          transform: none;
+        }
       }
     }
   }

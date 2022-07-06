@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./test.scss";
+import "./portfolioSlick.scss";
 import { useSelector } from "react-redux";
 
-export default function Test() {
+export default function PortfolioSlick() {
   const viewAll = useSelector((state) => state.homeSlice.portfolios);
   // set data
   const digitalSupplyChain = viewAll?.filter((logo) => {

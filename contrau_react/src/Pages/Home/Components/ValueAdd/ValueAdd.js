@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
+import ValueAddAnimation from "./ValueAddAnimation";
 import { getEmpowerList } from "../../../../reducers/homeSlice";
 export default function ValueAdd() {
   const dispatch = useDispatch();
@@ -9,33 +9,82 @@ export default function ValueAdd() {
     dispatch(getEmpowerList());
   }, []);
 
+  const [offset, setOffset] = useState(null);
+  const handleScroll = () => setOffset(window.pageYOffset);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
   return (
-    <div className="mx-[34px] md:mt-[1069px] 2xl:mx-[300px]  mt-[323px] 2xl:mt-[1278px] ">
-      <div>
-        <p className="robotoFlexFont text-[13px] md:text-[24px] font-bold">
-          Value Add
-        </p>
-        <div className="mt-[30px] 2xl:mt-[74px] border-b-2 border-black pb-[40px] 2xl:pb-[80px] leading-[1]">
-          <p className="popinsFont text-[40px]  font-[900] md:text-[80px] 2xl:text-[110px]  2xl:font-thin 2xl:italic mb-0">
-            We empower
-          </p>
-          <p className="popinsFont text-[40px] md:text-[80px] 2xl:text-[110px]  italic font-thin mb-0">
-            ourselve with
-          </p>
-          <div className="block md:flex items-center justify-start md:space-x-5">
-            <p className="popinsFont text-[40px] md:text-[80px] 2xl:text-[110px]  italic font-thin mb-0">
-              various
+    <div className="mx-[34px]  2xl:mx-[300px] mt-[61px]  2xl:mt-[294px]">
+      {/* desktop animation */}
+      <div className="hidden md:block">
+        {/* start animation */}
+        {offset > 6190 && offset < 7859 ? (
+          <ValueAddAnimation />
+        ) : (
+          <div>
+            <p className="robotoFlexFont text-[13px] md:text-[24px] font-bold">
+              Value Add
             </p>
-            <p className="popinsFont text-[40px] md:text-[80px] 2xl:text-[110px] font-[900] text-red italic mb-0">
-              potentials
-            </p>
+            <div className="mt-[30px] 2xl:mt-[74px] border-t-2 border-black pb-[40px] 2xl:pb-[80px] leading-[1]">
+              <p className="popinsFont text-[40px]  font-[900] md:text-[80px] 2xl:text-[110px]  2xl:font-thin 2xl:italic mb-0">
+                We empower
+              </p>
+              <p className="popinsFont text-[40px] md:text-[80px] 2xl:text-[110px]  italic font-thin mb-0">
+                ourselve with
+              </p>
+              <div className="block md:flex items-center justify-start md:space-x-5">
+                <p className="popinsFont text-[40px] md:text-[80px] 2xl:text-[110px]  italic font-thin mb-0">
+                  various
+                </p>
+                <p className="popinsFont text-[40px] md:text-[80px] 2xl:text-[110px] font-[900] text-red italic mb-0">
+                  potentials
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
+        )}
+        {/* end animation */}
       </div>
+
+      {/* mobile animation*/}
+      <div className="block md:hidden">
+        {/* start animation */}
+        {offset > 2926 && offset < 4126 ? (
+          <ValueAddAnimation />
+        ) : (
+          <div>
+            <p className="robotoFlexFont text-[13px] md:text-[24px] font-bold">
+              Value Add
+            </p>
+            <div className="mt-[30px] 2xl:mt-[74px] border-t-2 border-black pb-[40px] 2xl:pb-[80px] leading-[1]">
+              <p className="popinsFont text-[40px]  font-[900] md:text-[80px] 2xl:text-[110px]  2xl:font-thin 2xl:italic mb-0">
+                We empower
+              </p>
+              <p className="popinsFont text-[40px] md:text-[80px] 2xl:text-[110px]  italic font-thin mb-0">
+                ourselve with
+              </p>
+              <div className="block md:flex items-center justify-start md:space-x-5">
+                <p className="popinsFont text-[40px] md:text-[80px] 2xl:text-[110px]  italic font-thin mb-0">
+                  various
+                </p>
+                <p className="popinsFont text-[40px] md:text-[80px] 2xl:text-[110px] font-[900] text-red italic mb-0">
+                  potentials
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+        {/* end animation */}
+      </div>
+
       {data?.map((empower, i) => {
         return (
           <div
-            className="border-b-2 border-darkGrey pb-[26px] 2xl:pb-[65px]"
+            className="border-darkGrey border-t-[1px] pb-[26px] 2xl:pb-[65px]"
             key={i}
           >
             <div className=" mt-[26px] 2xl:mt-[65px]">

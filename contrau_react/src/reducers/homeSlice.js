@@ -8,6 +8,7 @@ const initialState = {
   portfolios: null,
   news: null,
   empower: null,
+  loading: 0,
 };
 
 const homeSlice = createSlice({
