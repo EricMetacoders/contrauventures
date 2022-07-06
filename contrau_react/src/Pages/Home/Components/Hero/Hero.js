@@ -32,14 +32,12 @@ export default function Hero() {
 
                 <div className="hidden xl:block">
                   <p className="text-black mr-[91px] xl:mr-0 leading-[20px]  mb-[23px] xl:mb-0 xl:w-[670px] text-[13px]  2xl:text-[20px] 2xl:font-[400] 2xl:leading-[32px] popinsFont">
-                    We discover in the founders the power of persistence
-                    inherent in Vietnamese people in the history of thousands of
-                    years of struggle and victories.
+                    The unyielding spirit, the youthful energy, and the thirst
+                    for knowledge of Vietnamese founders amaze us completely.
                   </p>
                   <p className="text-black mr-[74px] 2xl:mr-0  xl:w-[679px]  leading-[20px]    text-[13px]  2xl:text-[20px]  2xl:font-[400]  popinsFont 2xl:leading-[32px]  2xl:mt-[26px]">
-                    Their youthful energy, eagerness to learn, and commitment to
-                    the future of their families make us confident of the future
-                    of Vietnam.
+                    Their remarkable qualities have strengthened our belief in
+                    the bright future of the country.
                   </p>
                 </div>
                 <div className="block xl:hidden">

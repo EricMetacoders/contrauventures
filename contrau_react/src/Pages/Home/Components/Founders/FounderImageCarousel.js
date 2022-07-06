@@ -38,10 +38,10 @@ export default function FounderImageCarousel({ data }) {
       <img
         src={data?.acf?.image}
         alt={data?.acf?.name}
-        className="rounded-3xl w-full h-full"
+        className="rounded-3xl w-full h-full scaleImg"
       />
-      <div className="hidden lg:block absolute bottom-[63px] w-full imgText">
-        <div className="flex flex-col items-center justify-center">
+      <div className="hidden lg:block absolute bottom-[63px] w-full imgText z-50">
+        <div className="flex flex-col items-center justify-center space-y-5">
           <div className="flex flex-col items-center justify-center leading-[1]">
             <p className="text-white text-[32px] 2xl:text-[50px] font-thin popinsFont">
               FOUNDER
@@ -63,8 +63,8 @@ export default function FounderImageCarousel({ data }) {
         </div>
       </div>
       <div className="block lg:hidden absolute bottom-[63px] w-full">
-        <div className="flex flex-col items-center justify-center">
-          <div className="flex flex-col items-center justify-center leading-[1]">
+        <div className="flex flex-col items-center justify-center z-10">
+          <div className="flex flex-col items-center justify-center leading-[1] ">
             <p className="text-white text-[32px] 2xl:text-[50px] font-thin popinsFont">
               FOUNDER
             </p>
@@ -85,7 +85,7 @@ export default function FounderImageCarousel({ data }) {
         </div>
       </div>
       <div className="absolute block top-[386px] left-[20%] md:top-[299px] md:left-[27px] lg:hidden">
-        <div className=" w-[170px] h-[30px] bg-white  cursor-pointer z-50">
+        <div className=" w-[170px] h-[30px] bg-white  cursor-pointer">
           <div className="flex items-center justify-center w-full h-full">
             <p
               className="popinsFont font-semibold text-[14px] text-black mb-0"
@@ -101,7 +101,7 @@ export default function FounderImageCarousel({ data }) {
       <div
         className="hidden lg:block  w-full h-full absolute bgBlur"
         style={{
-          background: `${data?.acf?.gradient_color}`,
+          background: `linear-gradient(0deg,${data.acf.gradient_color} 49%, ${data.acf.background_color}75%)`,
         }}
       ></div>
       <div className="btnInterview">

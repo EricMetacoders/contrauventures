@@ -1,6 +1,6 @@
 .rootgallery {
   width: auto;
-  height: 1200px;
+  height: 1150px;
   background-color: #151515;
 
   .slick-slider {
@@ -8,18 +8,17 @@
     margin: auto;
     .carousel-gallery {
       position: relative;
-      // padding-left: 150px;
+      padding-top: 100px;
       color: #ffffff;
-      padding-top: 50px;
       .frameimgmain {
         height: 1000px;
         .frameimgtop {
           display: flex;
-          margin-left: auto;
+          margin-left: 0px;
           width: 80%;
           .frameimg2 {
             margin-top: auto;
-            margin-left: 150px;
+            margin-left: 200px;
           }
         }
         .frameimgbot {
@@ -76,6 +75,9 @@
         left: 50%;
         top: 50%;
         transform: translateX(-50%) translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
         .titleyeardetail {
           width: 519px;
           height: 200px;
@@ -95,6 +97,7 @@
           width: 43px;
           height: 2px;
           margin: auto;
+          margin-top: 20px;
           background: #fcfcfc;
         }
         .detailtitle {
@@ -161,15 +164,17 @@
 
     .slick-slider {
       width: 90%;
-      // margin: 0;
       // display: flex;
+      margin-top: 50px;
       .carousel-gallery {
-        // padding-left: 150px;
         color: #ffffff;
-        margin-top: 50px;
+        // margin-top: 20px;
+        background-color: antiquewhite;
+
         .frameimgmain {
-          height: 100%;
-          // background-color: red;
+          height: 250px;
+          background-color: red;
+
           .frameimgtop {
             display: flex;
             margin: auto;
@@ -203,9 +208,8 @@
           }
         }
         .frameimgmain2 {
-          // background-color: aqua;
-          height: 100%;
-
+          background-color: aqua;
+          height: 250px;
           .frameimgtop {
             display: flex;
             margin-left: 50px;
@@ -244,7 +248,7 @@
           // left: 0;
           // margin-left: 400px;
           // bottom: 20%;
-          top: 58%;
+          top: 61%;
           margin-top: 0px;
           margin-left: 0px;
           // margin-top: -90px;
@@ -291,8 +295,7 @@
         font-size: 14px;
         line-height: 24px;
         color: #ffffff;
-        top: 0;
-        left: 0;
+
         // right: 50;
         /* identical to box height, or 160% */
         letter-spacing: 0.02em;

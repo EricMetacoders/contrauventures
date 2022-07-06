@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     // column-gap: 10px;
-    border: 0.5px solid #d0d0d0;
+    border-bottom: 0.5px solid #d0d0d0;
     background: #ffffff;
     .detailcontent-active {
       width: 130px;
@@ -114,6 +114,7 @@
         height: 349px;
         background: #151515;
         margin-top: 150px;
+        margin-bottom: 150px;
         .detailtitle {
           width: 1040px;
           height: 216px;
@@ -148,7 +149,7 @@
       .framequestiontitle {
         width: 1040px;
         margin: auto;
-        margin-top: 150px;
+        margin-top: 100px;
         .questiontitle {
           width: 1024px;
           text-align: left;
@@ -202,7 +203,8 @@
       .frameimgarticle {
         width: 1320px;
         margin: auto;
-        margin-top: 50px;
+        margin-top: 165px;
+        margin-bottom: 170px;
         display: flex;
         .frameimgarticle1 {
           img {
@@ -268,6 +270,7 @@
     width: 1320px;
     margin: auto;
     margin-top: 150px;
+    margin-bottom: 150px;
     .framenewtitle {
       width: 202px;
       height: 60px;

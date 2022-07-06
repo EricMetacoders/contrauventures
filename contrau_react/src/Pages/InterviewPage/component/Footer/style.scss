@@ -1,11 +1,10 @@
 .rootfooter {
   width: 100%;
-  margin-top: 100px;
   padding-bottom: 56px;
-  padding-top: 50px;
-  padding-left: 179px;
-  padding-right: 179px;
-  background-color: #e8e9eb;
+  padding-top: 44px;
+  padding-left: 229px;
+  padding-right: 229px;
+  background-color: #d9dade;
   .mainfooter {
     display: flex;
     width: 100%;
@@ -79,18 +78,19 @@
 @media screen and (max-width: 769px) {
   .rootfooter {
     width: 100%;
-    margin-top: 100px;
-    padding-bottom: 50px;
-    padding-top: 50px;
+    margin-top: 170px;
+    padding-bottom: 90px;
+    padding-top: 80px;
     padding-left: 0px;
-    padding-right: 0px;
+    padding-right: 9px;
     .mainfooter {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       width: 100%;
       margin: auto;
-      padding-left: 30px;
+      padding-left: 45px;
+      padding-right: 45px;
       .frameaddress {
         display: flex;
         margin-top: 15px;

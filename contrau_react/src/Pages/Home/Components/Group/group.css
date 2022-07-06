@@ -212,3 +212,155 @@
     transform: translateX(100%);
   }
 }
+
+/* for mobile */
+.mobile-left-right1 {
+  -moz-animation: 10s linear 0s infinite normal none running mobileLeftRight1;
+  -webkit-animation: 10s linear 0s infinite normal none running mobileLeftRight1;
+  animation: 10s linear 0s infinite normal none running mobileLeftRight1;
+}
+
+/* for Firefox */
+@-moz-keyframes mobileLeftRight1 {
+  0% {
+    transform: translateX(-150%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* for Chrome */
+@-webkit-keyframes mobileLeftRight1 {
+  0% {
+    transform: translateX(-150%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes mobileLeftRight1 {
+  0% {
+    transform: translateX(-150%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.mobile-left-right2 {
+  -moz-animation: 10s linear 0s infinite normal none running mobileLeftRight2;
+  -webkit-animation: 10s linear 0s infinite normal none running mobileLeftRight2;
+  animation: 10s linear 0s infinite normal none running mobileLeftRight2;
+}
+
+/* for Firefox */
+@-moz-keyframes mobileLeftRight2 {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+/* for Chrome */
+@-webkit-keyframes mobileLeftRight2 {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+@keyframes mobileLeftRight2 {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+.mobile-right-left1 {
+  -moz-animation: 10s linear 0s infinite normal none running mobileRightLeft1;
+  animation: 10s linear 0s infinite normal none running mobileRightLeft1;
+}
+
+/* for Firefox */
+@-moz-keyframes mobileRightLeft1 {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-150%);
+  }
+}
+
+/* for Chrome */
+@-webkit-keyframes mobileRightLeft1 {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-150%);
+  }
+}
+
+@keyframes mobileRightLeft1 {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-150%);
+  }
+}
+
+.mobile-right-left2 {
+  -moz-animation: 10s linear 0s infinite normal none running mobileRightLeft2;
+  -webkit-animation: 10s linear 0s infinite normal none running mobileRightLeft2;
+  animation: 10s linear 0s infinite normal none running mobileRightLeft2;
+}
+
+/* for Firefox */
+@-moz-keyframes mobileRightLeft2 {
+  0% {
+    transform: translateX(150%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* for Chrome */
+@-webkit-keyframes mobileRightLeft2 {
+  0% {
+    transform: translateX(150%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes mobileRightLeft2 {
+  0% {
+    transform: translateX(150%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
