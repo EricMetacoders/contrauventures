@@ -1,39 +1,40 @@
 import axios from "axios";
-const url = "http://192.168.50.159/wp-json/acf/v3/";
+import { BASE_URL } from "../constants/apiConstants";
+
 export const homeServices = {
   getFAQList() {
     return axios({
-      url: `${url}faqs`,
+      url: `${BASE_URL}faqs`,
       method: "GET",
     });
   },
   getPartnersList() {
     return axios({
-      url: `${url}partners`,
+      url: `${BASE_URL}partners`,
       method: "GET",
     });
   },
   getFounderList() {
     return axios({
-      url: `${url}founders`,
+      url: `${BASE_URL}founders`,
       method: "GET",
     });
   },
   getPortfolioList() {
     return axios({
-      url: `${url}portfoilos`,
+      url: `${BASE_URL}portfoilos`,
       method: "GET",
     });
   },
   getNewsList() {
     return axios({
-      url: `${url}news`,
+      url: `${BASE_URL}news`,
       method: "GET",
     });
   },
   getEmpowerList() {
     return axios({
-      url: `${url}empowers`,
+      url: `${BASE_URL}empowers`,
       method: "GET",
     });
   },
