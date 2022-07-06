@@ -355,7 +355,7 @@ function InterviewBody({ detailArticle }) {
       <Box className="framenew">
         <Box className="framenewtitle">
           <span>
-            New <span style={{ color: "#DB2F33" }}>.</span>
+            NEWS <span style={{ color: "#DB2F33" }}>.</span>
           </span>
           <span className="viewtitle">view more</span>
         </Box>

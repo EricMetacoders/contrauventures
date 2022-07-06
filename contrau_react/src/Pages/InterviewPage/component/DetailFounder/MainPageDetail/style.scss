@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     // column-gap: 10px;
-    border: 0.5px solid #d0d0d0;
+    border-bottom: 0.5px solid #d0d0d0;
     background: #ffffff;
     .detailcontent-active {
       width: 130px;
@@ -59,14 +59,15 @@
       height: auto;
       z-index: 100;
       .frameimagequote {
+        margin-top: 60px;
         img {
-          content: url("http://192.168.50.159/wp-content/uploads/2022/06/imagequote.png");
+          content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imagequote.png");
         }
       }
       .framearticle {
         width: 1024px;
         margin: auto;
-        margin-top: 30px;
+        margin-top: 40px;
         font-family: "Poppins", sans-serif;
         font-style: normal;
         font-weight: 400;
@@ -77,13 +78,20 @@
         letter-spacing: -0.02em;
         /* BLACK */
         color: #101010;
+        .detailarticle {
+          p {
+            display: inline-block;
+            margin-top: 55px;
+            margin-bottom: 90px;
+          }
+        }
       }
       .frameimg {
         width: 1320px;
         // height: 450px;
-        margin-top: 150px;
+        margin-top: 90px;
         img {
-          content: url("http://192.168.50.159/wp-content/uploads/2022/06/imagearticle.png");
+          content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imagearticle.png");
         }
         p {
           font-family: "Roboto Flex", sans-serif;
@@ -96,7 +104,6 @@
           letter-spacing: -0.02em;
 
           color: #999999;
-
           /* Inside auto layout */
 
           flex: none;
@@ -114,6 +121,7 @@
         height: 349px;
         background: #151515;
         margin-top: 150px;
+        margin-bottom: 150px;
         .detailtitle {
           width: 1040px;
           height: 216px;
@@ -148,7 +156,7 @@
       .framequestiontitle {
         width: 1040px;
         margin: auto;
-        margin-top: 150px;
+        margin-top: 180px;
         .questiontitle {
           width: 1024px;
           text-align: left;
@@ -175,7 +183,7 @@
           }
         }
         .articlequestion {
-          margin-top: 50px;
+          margin-top: 60px;
           text-align: left;
           font-family: "Roboto Flex", sans-serif;
           font-style: normal;
@@ -194,30 +202,43 @@
           order: 1;
           align-self: stretch;
           flex-grow: 0;
+          p:nth-child(2) {
+            display: inline-block;
+            margin-top: 0px;
+          }
           .detailarticle2 {
-            padding-top: 50px;
+            padding-top: 40px;
           }
         }
       }
       .frameimgarticle {
         width: 1320px;
         margin: auto;
-        margin-top: 50px;
+        margin-top: 0px;
+        // margin-top: 165px;
+        // margin-bottom: 170px;
+        margin-bottom: 0px;
         display: flex;
         .frameimgarticle1 {
+          margin-top: 205px;
+          margin-bottom: 105px;
           img {
-            content: url("http://192.168.50.159/wp-content/uploads/2022/06/imgarticle1.png");
+            content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle1.png");
           }
         }
         .frameimgarticle2 {
+          margin-top: 205px;
+          margin-bottom: 105px;
           margin-left: 15px;
           img {
-            content: url("http://192.168.50.159//wp-content/uploads/2022/06/imgarticle2.png");
+            content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle2.png");
           }
         }
         .frameimgarticle3 {
+          margin-top: 125px;
+
           img {
-            content: url("http://192.168.50.159/wp-content/uploads/2022/06/imgarticle3.png");
+            content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle3.png");
           }
           p {
             width: 1320px;
@@ -238,11 +259,13 @@
           }
         }
         .frameimgarticle4 {
-          margin-top: 50px;
+          margin-top: 120px;
           img {
-            content: url("http://192.168.50.159/wp-content/uploads/2022/06/imgarticle4.png");
+            content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle4.png");
           }
           p {
+            display: inline-block;
+            margin-bottom: 110px;
             width: 1320px;
             height: 22px;
 
@@ -268,8 +291,9 @@
     width: 1320px;
     margin: auto;
     margin-top: 150px;
+    margin-bottom: 150px;
     .framenewtitle {
-      width: 202px;
+      width: auto;
       height: 60px;
       margin: auto;
       text-align: center;
@@ -295,7 +319,7 @@
     }
     .framedetailnewmain {
       display: flex;
-      margin-top: 150px;
+      margin-top: 100px;
       column-gap: 20px;
       .framedetail {
         display: flex;
@@ -383,10 +407,12 @@
 /* MOBILE WIDTH < 740px */
 @media screen and (max-width: 769px) {
   .rootpagedetail {
+    // height: 100%;
     height: 100%;
     .framecontentmain {
       display: flex;
-      justify-content: center;
+      justify-content: left;
+      padding-left: 60px;
       .detailcontent-active {
         width: 100px;
 
@@ -429,9 +455,9 @@
         .frameimagequote {
           width: 80%;
           margin: auto;
-          margin-top: 50px;
+          margin-top: 40px;
           img {
-            content: url("http://192.168.50.159/wp-content/uploads/2022/06/imagequote-mb.png");
+            content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imagequote-mb.png");
           }
         }
         .framearticle {
@@ -448,13 +474,23 @@
           letter-spacing: -0.02em;
           /* BLACK */
           color: #101010;
+          .detailarticle {
+            p {
+              display: inline-block;
+              margin-top: 30px;
+              margin-bottom: 30px;
+            }
+            div {
+              margin-bottom: 30px;
+            }
+          }
         }
         .frameimg {
           width: 100%;
           margin-top: 20px;
           img {
             width: 100%;
-            content: url("http://192.168.50.159/wp-content/uploads/2022/06/imagearticlemobile.png");
+            content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imagearticlemobile.png");
           }
           p {
             font-size: 13px;
@@ -464,11 +500,13 @@
       }
       .framequestionmain {
         width: 100%;
-        margin-top: 50px;
+        margin-top: 60px;
         .frametitle {
           width: 100%;
           height: auto;
           margin-top: 0px;
+          margin-bottom: 60px;
+
           .detailtitle {
             width: 80%;
             height: 100%;
@@ -503,7 +541,7 @@
         .framequestiontitle {
           width: 288px;
           margin: auto;
-          margin-top: 50px;
+          margin-top: 60px;
           .questiontitle {
             width: 288px;
             text-align: left;
@@ -553,24 +591,28 @@
           display: flex;
           flex-direction: column;
           .frameimgarticle1 {
+            margin-top: 30px;
+            margin-bottom: 0px;
             img {
               width: 100%;
-              content: url("http://192.168.50.159/wp-content/uploads/2022/06/imgarticle1mb.png");
+              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle1mb.png");
             }
           }
           .frameimgarticle2 {
             margin-left: 0px;
-            margin-top: 15px;
+            margin-top: 20px;
+            margin-bottom: 0px;
             img {
               width: 100%;
-              content: url("http://192.168.50.159/wp-content/uploads/2022/06/imgarticle2mb.png");
+              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle2mb.png");
             }
           }
           .frameimgarticle3 {
+            margin-top: 30px;
             img {
               width: 100%;
               // URL WRONGNAME ==> img3
-              content: url("http://192.168.50.159/wp-content/uploads/2022/06/imgarticle4-mb.png");
+              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle4-mb.png");
             }
             p {
               width: auto;
@@ -583,11 +625,14 @@
             }
           }
           .frameimgarticle4 {
+            margin-top: 30px;
             img {
               width: 100%;
-              content: url("http://192.168.50.159/wp-content/uploads/2022/06/imgarticle3-mb.png");
+              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle3-mb.png");
             }
             p {
+              display: inline-block;
+              margin-bottom: 0px;
               width: auto;
               height: 22px;
               font-size: 13px;
@@ -604,7 +649,7 @@
     .framenew {
       width: auto;
       margin: auto;
-      margin-top: 150px;
+      margin-top: 120px;
 
       .framenewtitle {
         display: flex;

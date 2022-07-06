@@ -38,19 +38,19 @@ export default function News() {
                   className="2xl:w-[428px] 2xl:h-[399px] w-[291px] h-[377px] border-b-[1px] border-black pb-[20px] mb-[50px] cursor-pointer"
                 >
                   <img
-                    src={n.acf?.image}
-                    alt={n.acf?.title}
+                    src={n.acf.image}
+                    alt={n.acf.title}
                     className="w-[288px] h-[168px] 2xl:w-[424px] 2xl:h-[178px]"
                   />
                   <div className="mt-[36px]">
                     <p className="text-[14px] robotoFlexFont italic text-red mb-0">
-                      {n.acf?.categies}
+                      {n.acf.categies}
                     </p>
                     <p className="popinsFont 2xl:text-[24px] 2xl:font-normal text-[18px] font-light mb-0 hover:underline underline-offset-1">
-                      {n.acf?.title.slice(0, 77).concat("...")}
+                      {n.acf.title.slice(0, 77).concat("...")}
                     </p>
                     <p className="2xl-text[16px] 2xl:font-light 2xl:robotoFlexFont text-[13px] popinsFont font-light mb-0">
-                      {n.acf?.newscontent.slice(0, 115).concat("...")}
+                      {n.acf.newscontent.slice(0, 115).concat("...")}
                     </p>
                   </div>
                 </div>

@@ -23,180 +23,41 @@ function SlideGallery({ detailFounder }) {
       console.log("Failed to fetch", error);
     }
   }
-  const [listGallery, setListGallery] = useState([]);
+  const [listGallery, setListGallery] = useState([{}]);
 
-  // CHANGE COLOR
-  // const changeColor = (current) => {
-  //   if (!isMatch) {
-  //     // CHANGE ADD COLOR IMG1
-  //     let addColorImg = document.querySelector(".slick-active");
-  //     //   // CHECK SLIDE HAVE 4 IMAGE OR 3 IMAGE
-  //     if (addColorImg.getElementsByClassName("frameimgmain")[0]) {
-  //       if (listGallery.length != 0) {
-  //         var stringUrlImg1 = `http://192.168.50.159${listGallery[
-  //           current
-  //         ].image[0].guid.slice(16, 49)}color-1.png`;
-  //         var stringUrlImg2 = `http://192.168.50.159${listGallery[
-  //           current
-  //         ].image[0].guid.slice(16, 49)}color-2.png`;
-  //         var stringUrlImg3 = `http://192.168.50.159${listGallery[
-  //           current
-  //         ].image[0].guid.slice(16, 49)}color-3.png`;
-  //         var stringUrlImg4 = `http://192.168.50.159${listGallery[
-  //           current
-  //         ].image[0].guid.slice(16, 49)}color-4.png`;
-
-  //         addColorImg
-  //           .getElementsByClassName("frameimgtop")[0]
-  //           .getElementsByClassName("frameimg1")[0]
-  //           .getElementsByTagName("img")[0].src = stringUrlImg1;
-  //         addColorImg
-  //           .getElementsByClassName("frameimgtop")[0]
-  //           .getElementsByClassName("frameimg2")[0]
-  //           .getElementsByTagName("img")[0].src = stringUrlImg2;
-  //         addColorImg
-  //           .getElementsByClassName("frameimgbot")[0]
-  //           .getElementsByClassName("frameimg3")[0]
-  //           .getElementsByTagName("img")[0].src = stringUrlImg3;
-  //         addColorImg
-  //           .getElementsByClassName("frameimgbot")[0]
-  //           .getElementsByClassName("frameimg4")[0]
-  //           .getElementsByTagName("img")[0].src = stringUrlImg4;
-  //       }
-  //     } else {
-  //       if (listGallery.length != 0) {
-  //         var stringUrlImg1 = `http://192.168.50.159${listGallery[
-  //           current
-  //         ].image[0].guid.slice(16, 49)}2022-color-1.png`;
-  //         var stringUrlImg2 = `http://192.168.50.159${listGallery[
-  //           current
-  //         ].image[0].guid.slice(16, 49)}2022-color-2.png`;
-  //         var stringUrlImg3 = `http://192.168.50.159${listGallery[
-  //           current
-  //         ].image[0].guid.slice(16, 49)}2022-color-3.png`;
-
-  //         addColorImg
-  //           .getElementsByClassName("frameimgtop")[0]
-  //           .getElementsByClassName("frameimg1")[0]
-  //           .getElementsByTagName("img")[0].src = stringUrlImg1;
-
-  //         addColorImg
-  //           .getElementsByClassName("frameimgtop")[0]
-  //           .getElementsByClassName("frameimg2")[0]
-  //           .getElementsByTagName("img")[0].src = stringUrlImg2;
-
-  //         addColorImg
-  //           .getElementsByClassName("frameimgbot")[0]
-  //           .getElementsByClassName("frameimg3")[0]
-  //           .getElementsByTagName("img")[0].src = stringUrlImg3;
-  //       }
-  //     }
-
-  //     // CHANGE NO COLOR IMG1
-  //     let noColorImg1 = document.querySelectorAll(
-  //       ".slick-slide:not(.slick-active)"
-  //     );
-  //     for (var i = 0; i < noColorImg1.length; i++) {
-  //       if (noColorImg1[i].getElementsByClassName("frameimgmain")[0]) {
-  //         noColorImg1[i]
-  //           .getElementsByClassName("frameimgtop")[0]
-  //           .getElementsByClassName("frameimg1")[0]
-  //           .getElementsByTagName(
-  //             "img"
-  //           )[0].src = `http://192.168.50.159${listGallery[0].image[0].guid.slice(
-  //           16
-  //         )}`;
-  //         noColorImg1[i]
-  //           .getElementsByClassName("frameimgtop")[0]
-  //           .getElementsByClassName("frameimg2")[0]
-  //           .getElementsByTagName(
-  //             "img"
-  //           )[0].src = `http://192.168.50.159${listGallery[0].image[1].guid.slice(
-  //           16
-  //         )}`;
-  //         noColorImg1[i]
-  //           .getElementsByClassName("frameimgbot")[0]
-  //           .getElementsByClassName("frameimg3")[0]
-  //           .getElementsByTagName(
-  //             "img"
-  //           )[0].src = `http://192.168.50.159${listGallery[0].image[2].guid.slice(
-  //           16
-  //         )}`;
-  //         noColorImg1[i]
-  //           .getElementsByClassName("frameimgbot")[0]
-  //           .getElementsByClassName("frameimg4")[0]
-  //           .getElementsByTagName(
-  //             "img"
-  //           )[0].src = `http://192.168.50.159${listGallery[0].image[3].guid.slice(
-  //           16
-  //         )}`;
-  //       } else {
-  //         noColorImg1[i]
-  //           .getElementsByClassName("frameimgtop")[0]
-  //           .getElementsByClassName("frameimg1")[0]
-  //           .getElementsByTagName(
-  //             "img"
-  //           )[0].src = `http://192.168.50.159${listGallery[1].image[3].guid.slice(
-  //           16
-  //         )}`;
-  //         noColorImg1[i]
-  //           .getElementsByClassName("frameimgtop")[0]
-  //           .getElementsByClassName("frameimg2")[0]
-  //           .getElementsByTagName(
-  //             "img"
-  //           )[0].src = `http://192.168.50.159${listGallery[1].image[4].guid.slice(
-  //           16
-  //         )}`;
-  //         noColorImg1[i]
-  //           .getElementsByClassName("frameimgbot")[0]
-  //           .getElementsByClassName("frameimg3")[0]
-  //           .getElementsByTagName(
-  //             "img"
-  //           )[0].src = `http://192.168.50.159${listGallery[1].image[5].guid.slice(
-  //           16
-  //         )}`;
-  //       }
-  //     }
-  //   } else {
-  //   }
-  // };
   const changeColor2 = (current) => {
     // if (!isMatch) {
     // CHANGE ADD COLOR SLIDE ACTIVE
     let addColorImg = document.querySelector(".slick-active");
 
-    if (listGallery.length != 0) {
+    if (listGallery) {
       addColorImg.getElementsByTagName("img")[0].style.filter = "grayscale(0)";
-      console.log(
-        "addColorImg:",
-        addColorImg.getElementsByTagName("img")[0].style.filter
-      );
       addColorImg.getElementsByTagName("img")[1].style.filter = "grayscale(0)";
       addColorImg.getElementsByTagName("img")[2].style.filter = "grayscale(0)";
       addColorImg.getElementsByTagName("img")[3].style.filter = "grayscale(0)";
-    }
 
-    // ADD NO COLOR
-    // CHANGE NO COLOR IMG1
-    let noColorImg1 = document.querySelectorAll(
-      ".slick-slide:not(.slick-active)"
-    );
-    for (var i = 0; i < noColorImg1.length; i++) {
-      noColorImg1[i].getElementsByTagName("img")[0].style.filter =
-        "grayscale(100%)";
-      noColorImg1[i].getElementsByTagName("img")[1].style.filter =
-        "grayscale(100%)";
-      noColorImg1[i].getElementsByTagName("img")[2].style.filter =
-        "grayscale(100%)";
-      noColorImg1[i].getElementsByTagName("img")[3].style.filter =
-        "grayscale(100%)";
+      // ADD NO COLOR
+      // CHANGE NO COLOR IMG1
+      let noColorImg1 = document.querySelectorAll(
+        ".slick-slide:not(.slick-active)"
+      );
+      for (var i = 0; i < noColorImg1.length; i++) {
+        noColorImg1[i].getElementsByTagName("img")[0].style.filter =
+          "grayscale(100%)";
+        noColorImg1[i].getElementsByTagName("img")[1].style.filter =
+          "grayscale(100%)";
+        noColorImg1[i].getElementsByTagName("img")[2].style.filter =
+          "grayscale(100%)";
+        noColorImg1[i].getElementsByTagName("img")[3].style.filter =
+          "grayscale(100%)";
+      }
     }
-    // }
   };
   // GET LIST ALL GALLERY
   async function getGalleryFounderList() {
     try {
       let listGalleryFounder = await interviewServices.getAllGallery();
+
       return listGalleryFounder;
     } catch (error) {
       console.log("Failed to fetch", error);
@@ -227,6 +88,7 @@ function SlideGallery({ detailFounder }) {
 
       // HAVE ID ==> TO GET API DETAIL GALLERY OF FOUNDER
       let detailfoundergallery = await getGalleryFounderDetail(findID.id);
+
       // console.log("detailfoundergallery:", detailfoundergallery.data.acf.image);
 
       var array = [];
@@ -257,53 +119,6 @@ function SlideGallery({ detailFounder }) {
     }
   }, []);
 
-  // ADD COLOR FOR 4 IMAGE WHEN SECOND RENDER
-  // useEffect(() => {
-  //   if (!isMatch) {
-  //     // CHANGE ADD COLOR IMG1
-  //     let addColorImg = document.querySelector(".slick-active");
-  //     if (addColorImg) {
-  //       //   // CHECK SLIDE HAVE 4 IMAGE OR 3 IMAGE
-  //       if (addColorImg.getElementsByClassName("frameimgmain")[0]) {
-  //         if (listGallery.length != 0) {
-  //           var stringUrlImg1 = `http://192.168.50.159${listGallery[0].image[0].guid.slice(
-  //             16,
-  //             49
-  //           )}color-1.png`;
-  //           var stringUrlImg2 = `http://192.168.50.159${listGallery[0].image[0].guid.slice(
-  //             16,
-  //             49
-  //           )}color-2.png`;
-  //           var stringUrlImg3 = `http://192.168.50.159${listGallery[0].image[0].guid.slice(
-  //             16,
-  //             49
-  //           )}color-3.png`;
-  //           var stringUrlImg4 = `http://192.168.50.159${listGallery[0].image[0].guid.slice(
-  //             16,
-  //             49
-  //           )}color-4.png`;
-
-  //           addColorImg
-  //             .getElementsByClassName("frameimgtop")[0]
-  //             .getElementsByClassName("frameimg1")[0]
-  //             .getElementsByTagName("img")[0].src = stringUrlImg1;
-  //           addColorImg
-  //             .getElementsByClassName("frameimgtop")[0]
-  //             .getElementsByClassName("frameimg2")[0]
-  //             .getElementsByTagName("img")[0].src = stringUrlImg2;
-  //           addColorImg
-  //             .getElementsByClassName("frameimgbot")[0]
-  //             .getElementsByClassName("frameimg3")[0]
-  //             .getElementsByTagName("img")[0].src = stringUrlImg3;
-  //           addColorImg
-  //             .getElementsByClassName("frameimgbot")[0]
-  //             .getElementsByClassName("frameimg4")[0]
-  //             .getElementsByTagName("img")[0].src = stringUrlImg4;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }, [listGallery]);
   const settings = {
     dots: true,
     vertical: true,
@@ -322,27 +137,12 @@ function SlideGallery({ detailFounder }) {
         breakpoint: 1024,
         settings: {},
       },
-      {
-        breakpoint: 769,
-        settings: {
-          slidesToShow: 1,
-          vertical: false,
-          verticalSwiping: false,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          vertical: false,
-          verticalSwiping: false,
-        },
-      },
     ],
   };
+  Object.keys(listGallery).length > 1 && console.log(listGallery[0]);
   const bannerData =
-    listGallery.length != 0 &&
-    listGallery.map((item) => (
+    Object.keys(listGallery).length > 1 &&
+    listGallery?.map((item) => (
       <div key={item.year} className="carousel-gallery">
         <div
           className={
@@ -359,12 +159,9 @@ function SlideGallery({ detailFounder }) {
                   item.year == "2014" ||
                   item.year == "2018" ||
                   item.year == "2020"
-                    ? `http://192.168.50.159${item.image[4].guid
-                        .slice(16)
-                        .toString()}`
-                    : `http://192.168.50.159${item.image[0].guid
-                        .slice(16)
-                        .toString()}`
+                    ? `${item.image[4].guid}
+                    `
+                    : `${item.image[0].guid}`
                 }
               />
             </div>
@@ -375,12 +172,8 @@ function SlideGallery({ detailFounder }) {
                   item.year == "2014" ||
                   item.year == "2018" ||
                   item.year == "2020"
-                    ? `http://192.168.50.159${item.image[5].guid
-                        .slice(16)
-                        .toString()}`
-                    : `http://192.168.50.159${item.image[1].guid
-                        .slice(16)
-                        .toString()}`
+                    ? `${item.image[5].guid}`
+                    : `${item.image[1].guid}`
                 }
               />
             </div>
@@ -394,12 +187,9 @@ function SlideGallery({ detailFounder }) {
                   item.year == "2014" ||
                   item.year == "2018" ||
                   item.year == "2020"
-                    ? `http://192.168.50.159${item.image[6].guid
-                        .slice(16)
-                        .toString()}`
-                    : `http://192.168.50.159${item.image[2].guid
-                        .slice(16)
-                        .toString()}`
+                    ? `${item.image[6].guid}
+                       `
+                    : `${item.image[2].guid}`
                 }
               />
             </Box>
@@ -410,9 +200,7 @@ function SlideGallery({ detailFounder }) {
                   (item.year == "2014" ||
                     item.year == "2018" ||
                     item.year == "2020") &&
-                  `http://192.168.50.159${item.image[7].guid
-                    .slice(16)
-                    .toString()}`
+                  `${item.image[7].guid}`
                 }
               />
             </Box>
@@ -421,15 +209,15 @@ function SlideGallery({ detailFounder }) {
 
         <div className="frametitleyear">
           <div className="titleyeardetail">{item.year}</div>
-          <div className="detailtitle">{item.title}</div>
+          <div className="detailtitle">
+            <div>{item.title_top}</div>
+            <div>{item.title_bottom}</div>
+          </div>
         </div>
       </div>
     ));
   return (
     <div>
-      {/* <button onClick={testchange} style={{ background: "red" }}>
-        Click
-      </button> */}
       <Slider {...settings}>{bannerData}</Slider>
     </div>
   );

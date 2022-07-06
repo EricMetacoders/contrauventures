@@ -1,0 +1,24 @@
+.active {
+  background: white;
+  width: 100%;
+  height: 100%;
+  p {
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+.notActive {
+  background: black;
+  width: 100%;
+  height: 100%;
+  p {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+  }
+}

@@ -120,7 +120,19 @@ function MainFounder(props) {
     );
     history(`/detailfounder/${findID.id}`);
   };
+  const clickDetailFounderMobile = async (item) => {
+    // GET API
+    let resultList = await getIdFounderFromAPI();
 
+    var findID = Object.values(resultList.data).find(
+      (element) =>
+        element.acf.first_name.toLowerCase() ==
+          item.acf.first_name.toLowerCase() &&
+        element.acf.last_name.toLowerCase() == item.acf.last_name.toLowerCase()
+    );
+    history(`/detailfounder/${findID.id}`);
+  };
+  console.log(listFounder2);
   return (
     <div className="rootmainfounder">
       {/* FRAME BUTTON */}
@@ -169,6 +181,9 @@ function MainFounder(props) {
                 src={isMatch ? item.acf.thumbnail : item.acf.image}
                 alt=""
                 className="imgfounder"
+                onClick={() => {
+                  isMatch && clickDetailFounderMobile(item);
+                }}
               />
               {/* #B0ACA3" */}
               <div className="framemaintile">
@@ -188,8 +203,17 @@ function MainFounder(props) {
                   laboris nisi ut aliquip
                 </Box>
               </div>
-
-              <div className="hidden lg:block  w-full h-full absolute bgBlur"></div>
+              {/*    background: linear-gradient(
+          180deg,
+          rgba(111, 111, 117, 0) 49%,
+          rgba(49, 50, 52, 1) 75%
+        ); */}
+              <div
+                className="hidden lg:block  w-full h-full absolute bgBlur2"
+                style={{
+                  background: `linear-gradient(0deg,${item.acf.gradient_color} 49%, ${item?.acf.background_color}75%)`,
+                }}
+              ></div>
               <div className="btnInterview">
                 <div className="hidden lg:block w-[200px] h-[60px] bg-white  cursor-pointer z-50">
                   <div className="flex items-center justify-center w-full h-full">

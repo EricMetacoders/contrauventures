@@ -1,53 +1,49 @@
 .rootgallery {
   width: auto;
-  height: 1200px;
+  height: 1350px;
   background-color: #151515;
 
   .slick-slider {
-    width: 80%;
+    width: 83%;
     margin: auto;
     .carousel-gallery {
       position: relative;
-      // padding-left: 150px;
+      padding-top: 0px;
       color: #ffffff;
-      padding-top: 50px;
       .frameimgmain {
-        height: 1000px;
+        height: 1120px;
+        padding-top: 60px;
         .frameimgtop {
           display: flex;
-          margin-left: auto;
-          width: 80%;
+          margin-left: 150px;
+          width: 100%;
+          column-gap: 150px;
+          .frameimg1 {
+            margin-left: 170px;
+          }
           .frameimg2 {
             margin-top: auto;
-            margin-left: 150px;
           }
         }
         .frameimgbot {
-          width: 80%;
+          width: 100%;
           display: flex;
           margin-top: 130px;
-          margin-left: 180px;
+          margin-left: 120px;
           .frameimg3 {
           }
           .frameimg4 {
-            // margin-top: 0px;
-            position: relative;
-            margin-left: 150px;
-            img {
-              position: relative;
-              top: 100%;
-              transform: translateY(-90%);
-            }
+            margin-left: 200px;
+            margin-top: 130px;
           }
         }
       }
       .frameimgmain2 {
         // background-color: aqua;
-        height: 1000px;
-
+        height: 1120px;
         .frameimgtop {
           display: flex;
-          margin-left: auto;
+          margin-left: 210px;
           width: 80%;
 
           .frameimg1 {
@@ -61,9 +57,9 @@
           width: 80%;
           display: flex;
           margin: auto;
+          margin-top: 285px;
           .frameimg3 {
             margin: auto;
-            margin-top: 180px;
             padding-bottom: 25px;
           }
           .frameimg4 {
@@ -74,8 +70,11 @@
       .frametitleyear {
         position: absolute;
         left: 50%;
-        top: 50%;
-        transform: translateX(-50%) translateY(-50%);
+        top: 43%;
+        transform: translateX(-50%) translateY(-43%);
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
         .titleyeardetail {
           width: 519px;
           height: 200px;
@@ -95,11 +94,13 @@
           width: 43px;
           height: 2px;
           margin: auto;
+          margin-top: 20px;
           background: #fcfcfc;
         }
         .detailtitle {
           /* Body 20 Poppins */
           font-family: "Poppins", sans-serif;
+          margin: auto;
           margin-top: 20px;
           width: 450px;
           font-style: normal;
@@ -156,27 +157,33 @@
 @media screen and (max-width: 769px) {
   .rootgallery {
     width: auto;
-    height: 400px;
+    height: 420px;
     background-color: black;
-
     .slick-slider {
       width: 90%;
-      // margin: 0;
       // display: flex;
+      margin: auto;
+      margin-top: 0px;
+      padding-top: 50px;
       .carousel-gallery {
-        // padding-left: 150px;
+        position: relative;
         color: #ffffff;
-        margin-top: 50px;
+        margin-top: 0px;
+        padding-top: 0px;
+        width: 100%;
         .frameimgmain {
-          height: 100%;
-          // background-color: red;
+          height: 250px;
+          margin-top: 70px;
+          padding-top: 0px;
           .frameimgtop {
             display: flex;
             margin: auto;
-            width: 80%;
+            width: 100%;
+            column-gap: 0px;
             .frameimg1 {
               width: 123px;
               height: 83px;
+              margin-left: 60px;
             }
             .frameimg2 {
               width: 105px;
@@ -189,7 +196,8 @@
             width: 80%;
             display: flex;
             margin-top: 30px;
-            margin-left: 10px;
+            margin-left: 30px;
+
             .frameimg3 {
               width: 115px;
               height: 76px;
@@ -197,20 +205,20 @@
             .frameimg4 {
               width: 110px;
               height: 62px;
-              margin-top: 0px;
+              margin-top: 20px;
               margin-left: 40px;
             }
           }
         }
         .frameimgmain2 {
-          // background-color: aqua;
-          height: 100%;
+          margin-top: 70px;
 
+          height: 250px;
           .frameimgtop {
             display: flex;
             margin-left: 50px;
-            width: 80%;
-
+            width: 100%;
+            margin-left: 50px;
             .frameimg1 {
               width: 120px;
               height: 80px;
@@ -244,20 +252,24 @@
           // left: 0;
           // margin-left: 400px;
           // bottom: 20%;
-          top: 58%;
+          left: 50%;
+          top: 50%;
+          transform: translateX(-50%) translateY(-50%);
           margin-top: 0px;
           margin-left: 0px;
           // margin-top: -90px;
           z-index: 2000;
           display: flex;
           flex-direction: column;
-          row-gap: 30px;
+          row-gap: 40px;
+          margin-top: 10px;
           .titleyeardetail {
             width: 156px;
             height: 60px;
             font-size: 60px;
             margin: auto;
             margin-top: 0px;
+            margin-bottom: 0px;
           }
           .titleyeardetail::after {
             color: #fcfcfc;
@@ -266,7 +278,7 @@
             width: 43px;
             height: 2px;
             margin: auto;
-            margin-top: 50px;
+            margin-top: 20px;
             background: #fcfcfc;
           }
           .detailtitle {
@@ -292,7 +304,9 @@
         line-height: 24px;
         color: #ffffff;
         top: 0;
-        left: 0;
+        // left: 50%;
+        transform: translateX(50%);
+        padding-bottom: 0px;
         // right: 50;
         /* identical to box height, or 160% */
         letter-spacing: 0.02em;
