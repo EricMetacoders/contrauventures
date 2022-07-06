@@ -22,7 +22,7 @@ export default function ValueAdd() {
       {/* desktop animation */}
       <div className="hidden md:block">
         {/* start animation */}
-        {offset > 6190 && offset < 7859 ? (
+        {offset > 5700 ? (
           <ValueAddAnimation />
         ) : (
           <div>
@@ -53,7 +53,7 @@ export default function ValueAdd() {
       {/* mobile animation*/}
       <div className="block md:hidden">
         {/* start animation */}
-        {offset > 2926 && offset < 4126 ? (
+        {offset > 2926 ? (
           <ValueAddAnimation />
         ) : (
           <div>
@@ -81,35 +81,37 @@ export default function ValueAdd() {
         {/* end animation */}
       </div>
 
-      {data?.map((empower, i) => {
-        return (
-          <div
-            className="border-darkGrey border-t-[1px] pb-[26px] 2xl:pb-[65px]"
-            key={i}
-          >
-            <div className=" mt-[26px] 2xl:mt-[65px]">
-              <div className="mx-[20px] 2xl:mx-0 block 2xl:flex items-center justify-star 2xl:space-x-4">
-                <p className="popinsFont text-[18px] font-light  2xl:text-[24px] italic text-red mb-0">
-                  {i > 9 ? i + 1 : `0${i + 1}`}
-                </p>
-                <p className="popinsFont text-[24px] 2xl:text-[40px] font-light mb-0 ">
-                  {empower?.acf?.title}
+      <div>
+        {data?.map((empower, i) => {
+          return (
+            <div
+              className="border-darkGrey border-t-[1px] pb-[26px] 2xl:pb-[65px]"
+              key={i}
+            >
+              <div className=" mt-[26px] 2xl:mt-[65px]">
+                <div className="mx-[20px] 2xl:mx-0 block 2xl:flex items-center justify-star 2xl:space-x-4">
+                  <p className="popinsFont text-[18px] font-light  2xl:text-[24px] italic text-red mb-0">
+                    {i > 9 ? i + 1 : `0${i + 1}`}
+                  </p>
+                  <p className="popinsFont text-[24px] 2xl:text-[40px] font-light mb-0 ">
+                    {empower?.acf?.title}
+                  </p>
+                </div>
+              </div>
+              <div className=" flex-col space-y-5 2xl:space-y-0 justify-start flex 2xl:flex-row 2xl:items-start 2xl:justify-center 2xl:ml-[45px] 2xl:mt-[30px]">
+                <img
+                  src={empower?.acf?.image}
+                  alt={empower?.acf?.title}
+                  className="w-[288px] h-[160px] 2xl:w-[370px] 2xl:h-[205px] ml-[20px] 2xl:mx-0"
+                />
+                <p className=" popinsFont leading-[18px] font-light 2xl:leading-[32px] 2xl:font-normal 2xl:ml-[20px] 2xl:text-[20px] ml-[20px]  mr-[30px] 2xl:mr-0 text-[13px] mb-0">
+                  {empower?.acf?.content}
                 </p>
               </div>
             </div>
-            <div className=" flex-col space-y-5 2xl:space-y-0 justify-start flex 2xl:flex-row 2xl:items-start 2xl:justify-center 2xl:ml-[45px] 2xl:mt-[30px]">
-              <img
-                src={empower?.acf?.image}
-                alt={empower?.acf?.title}
-                className="w-[288px] h-[160px] 2xl:w-[370px] 2xl:h-[205px] ml-[20px] 2xl:mx-0"
-              />
-              <p className=" popinsFont leading-[18px] font-light 2xl:leading-[32px] 2xl:font-normal 2xl:ml-[20px] 2xl:text-[20px] ml-[20px]  mr-[30px] 2xl:mr-0 text-[13px] mb-0">
-                {empower?.acf?.content}
-              </p>
-            </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 }

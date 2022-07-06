@@ -23,7 +23,7 @@ export default function Founders() {
           {/* desktop animation */}
           <div className="hidden md:block">
             {/* start animation */}
-            {offset > 2200 && offset < 4300 ? (
+            {offset > 2200 ? (
               <FounderTextAnimation />
             ) : (
               <>
@@ -78,7 +78,7 @@ export default function Founders() {
           {/* mobile animation */}
           <div className="block md:hidden">
             {/* start animation */}
-            {offset > 1100 && offset < 2500 ? (
+            {offset > 1100 ? (
               <FounderTextAnimation />
             ) : (
               <>

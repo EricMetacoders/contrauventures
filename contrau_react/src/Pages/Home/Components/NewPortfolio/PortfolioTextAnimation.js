@@ -4,7 +4,7 @@ import { fadeInUp } from "react-animations";
 const FadeInUpAnimation = keyframes`${fadeInUp}`;
 
 const FadeInUpDiv = styled.div`
-  animation: 3s ${FadeInUpAnimation};
+  animation: 2s ${FadeInUpAnimation};
 `;
 export default function Components() {
   return (

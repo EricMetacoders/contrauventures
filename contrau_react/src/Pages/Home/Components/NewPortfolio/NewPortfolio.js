@@ -48,7 +48,7 @@ export default function NewPortfolio() {
           {/* desktop animation */}
           <div className="hidden md:block">
             {/* start animation */}
-            {offset > 4500 && offset < 6700 ? (
+            {offset > 4500 ? (
               <PortfolioTextAnimation />
             ) : (
               <>
@@ -127,7 +127,7 @@ export default function NewPortfolio() {
           {/* mobile animation */}
           <div className="block md:hidden">
             {/* start animation */}
-            {offset > 2100 && offset < 3500 ? (
+            {offset > 2100 ? (
               <PortfolioTextAnimation />
             ) : (
               <>
@@ -227,7 +227,7 @@ export default function NewPortfolio() {
                           <img
                             src={logo?.acf?.image}
                             alt={logo?.acf?.category}
-                            className="opacity-80 hover:opacity-100"
+                            className="opacity-40 hover:opacity-100"
                           />
                         </div>
                       );
@@ -252,7 +252,7 @@ export default function NewPortfolio() {
                           <img
                             src={logo?.acf?.image}
                             alt={logo?.acf?.category}
-                            className="opacity-80 hover:opacity-100"
+                            className="opacity-40 hover:opacity-100"
                           />
                         </div>
                       );
@@ -277,7 +277,7 @@ export default function NewPortfolio() {
                           <img
                             src={logo?.acf?.image}
                             alt={logo?.acf?.category}
-                            className="opacity-80 hover:opacity-100"
+                            className="opacity-40 hover:opacity-100"
                           />
                         </div>
                       );
@@ -302,7 +302,7 @@ export default function NewPortfolio() {
                           <img
                             src={logo?.acf?.image}
                             alt={logo?.acf?.category}
-                            className="opacity-80 hover:opacity-100"
+                            className="opacity-40 hover:opacity-100"
                           />
                         </div>
                       );
