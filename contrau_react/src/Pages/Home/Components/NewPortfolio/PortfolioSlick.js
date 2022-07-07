@@ -168,7 +168,7 @@ export default function PortfolioSlick() {
                 <img
                   src={logo?.acf?.image}
                   alt={logo?.acf?.category}
-                  className="opacity-80 hover:opacity-100"
+                  className="opacity-80 hover:opacity-100 w-[180px] h-[103px] object-contain"
                 />
               </div>
             );
@@ -185,7 +185,7 @@ export default function PortfolioSlick() {
                 <img
                   src={logo?.acf?.image}
                   alt={logo?.acf?.category}
-                  className="opacity-80 hover:opacity-100"
+                  className="opacity-80 hover:opacity-100 w-[180px] h-[103px] object-contain"
                 />
               </div>
             );
@@ -202,7 +202,7 @@ export default function PortfolioSlick() {
                 <img
                   src={logo?.acf?.image}
                   alt={logo?.acf?.category}
-                  className="opacity-80 hover:opacity-100"
+                  className="opacity-80 hover:opacity-100 w-[180px] h-[103px] object-contain"
                 />
               </div>
             );
@@ -219,7 +219,7 @@ export default function PortfolioSlick() {
                 <img
                   src={logo?.acf?.image}
                   alt={logo?.acf?.category}
-                  className="opacity-80 hover:opacity-100"
+                  className="opacity-80 hover:opacity-100 w-[180px] h-[103px] object-contain"
                 />
               </div>
             );

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BiMenu } from "react-icons/bi";
+import mobileMenu from "../../../../assets/homepage_img/mobile_menu.png";
 import "antd/dist/antd.css";
 import { Button, Modal } from "antd";
 
@@ -24,10 +24,10 @@ export default function HeaderDropDown() {
   return (
     <>
       <Button type="primary" onClick={showModal}>
-        <BiMenu color="black" size={40} />
+        <img src={mobileMenu} alt="menu" />
       </Button>
       <Modal
-        title={<BiMenu />}
+        title={<img src={mobileMenu} alt="menu" />}
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}

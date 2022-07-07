@@ -29,7 +29,6 @@ function DetailFounder({ currentFounder }) {
   useEffect(() => {
     async function fechData() {
       let _detailfounder = await getAPIDetailFounder();
-      // console.log("_detailfounder:", _detailfounder.data);
       setDetailFounder(_detailfounder.data);
     }
     fechData();

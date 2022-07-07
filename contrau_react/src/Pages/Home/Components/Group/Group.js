@@ -24,148 +24,20 @@ export default function Group() {
   return (
     <>
       <div className="bg-partnersContactBg overflow-hidden">
-        {/* desktop animation */}
-        <div className="md:block hidden">
-          {/* start animation */}
-          {offset > 100 ? (
-            <GroupTextAnimation />
-          ) : (
-            <div className=" mx-[34px] md:mx-[117px] 2xl:mx-[300px] pb-[65px] ">
-              <div className="pt-[80px] xl:pt-[324px] ">
-                <div>
-                  <p className="text-white robotoFlexFont font-[700] text-[13px] 2xl:text-[24px] 2xl:mb-[32px]">
-                    Partners
-                  </p>
+        <div className="mx-[34px] md:mx-[117px] 2xl:mx-[300px] pb-[65px] mt-[84px] md:mt-[318px]">
+          {/* desktop animation */}
+          <div className="md:block hidden md:w-[1320px] md:h-[498px]">
+            {/* start animation */}
+            {offset > 100 ? <GroupTextAnimation /> : <></>}
+            {/* end animation */}
+          </div>
 
-                  <div className="hidden xl:block">
-                    <div className="text-white  leading-[1] ">
-                      <div className="flex space-x-7">
-                        <p className="popinsFont  text-[110px] font-[900] mb-0">
-                          We are{" "}
-                        </p>
-                        <p className="popinsFont italic text-[110px] font-thin mb-0">
-                          a Fund of
-                        </p>
-                      </div>
-                      <div className="flex space-x-1 justify-start">
-                        <p className="italic popinsFont font-thin text-[110px] mr-[16px]">
-                          Korean
-                        </p>
-                        <span className="popinsFont text-[110px] font-[900]">
-                          FOUNDERS
-                        </span>
-                        <div className="inline-block bg-red w-[23px] h-[23px] rounded-full mt-[70px]"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="block xl:hidden">
-                    <div className="text-white mt-[27px]]">
-                      <p className="popinsfont text-[40px] font-extrabold mb-[3px]">
-                        We are
-                      </p>
-                      <p className="popinsFont text-[40px] italic font-thin w-[220px] mb-0 leading-[1]">
-                        a Fund of Korean
-                      </p>
-                      <div className="flex mt-[3px]">
-                        <p className="popinsFont text-[40px] font-[900]">
-                          FOUNDERS
-                        </p>
-                        <div className="inline-block bg-red w-[13px] h-[13px] rounded-full mt-[32px] ml-[1px]"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="text-white mt-[45px] 2xl:mt-[90px] ">
-                  <div className="2xl:mr-[-70px]">
-                    <p className="popinsFont  text-[13px] 2xl:text-[20px] leading-[20px] 2xl:leading-[32px] font-[300]">
-                      We once encountered the challenges facing many startup-ers
-                      these days. We are here to accompany them on this arduous
-                      yet exciting journey. Different linguistic and cultural
-                      backgrounds don’t matter when we look in the same
-                      direction.
-                    </p>
-                    <p className="popinsFont text-[13px] pt-[24px] 2xl:text-[20px]  leading-[20px] 2xl:leading-[32px]  font-[300] mr-[20px]">
-                      We take pride in being the pioneer in Korea's digital
-                      transformation over the past decade.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-          {/* end animation */}
-        </div>
-
-        {/* mobile animation */}
-        <div className="md:hidden block">
-          {/* start animation */}
-          {offset > 100 ? (
-            <GroupTextAnimation />
-          ) : (
-            <div className=" mx-[34px] md:mx-[117px] 2xl:mx-[300px] pb-[65px] ">
-              <div className="pt-[80px] xl:pt-[324px] ">
-                <div>
-                  <p className="text-white robotoFlexFont font-[700] text-[13px] 2xl:text-[24px] 2xl:mb-[32px]">
-                    Partners
-                  </p>
-
-                  <div className="hidden xl:block">
-                    <div className="text-white  leading-[1] ">
-                      <div className="flex space-x-7">
-                        <p className="popinsFont  text-[110px] font-[900] mb-0">
-                          We are{" "}
-                        </p>
-                        <p className="popinsFont italic text-[110px] font-thin mb-0">
-                          a Fund of
-                        </p>
-                      </div>
-                      <div className="flex space-x-1 justify-start">
-                        <p className="italic popinsFont font-thin text-[110px] mr-[16px]">
-                          Korean
-                        </p>
-                        <span className="popinsFont text-[110px] font-[900]">
-                          FOUNDERS
-                        </span>
-                        <div className="inline-block bg-red w-[23px] h-[23px] rounded-full mt-[70px]"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="block xl:hidden">
-                    <div className="text-white mt-[27px]]">
-                      <p className="popinsfont text-[40px] font-extrabold mb-[3px]">
-                        We are
-                      </p>
-                      <p className="popinsFont text-[40px] italic font-thin w-[220px] mb-0 leading-[1]">
-                        a Fund of Korean
-                      </p>
-                      <div className="flex mt-[3px]">
-                        <p className="popinsFont text-[40px] font-[900]">
-                          FOUNDERS
-                        </p>
-                        <div className="inline-block bg-red w-[13px] h-[13px] rounded-full mt-[32px] ml-[1px]"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="text-white mt-[45px] 2xl:mt-[90px] ">
-                  <div className="2xl:mr-[-70px]">
-                    <p className="popinsFont  text-[13px] 2xl:text-[20px] leading-[20px] 2xl:leading-[32px] font-[300]">
-                      We once encountered the challenges facing many startup-ers
-                      these days. We are here to accompany them on this arduous
-                      yet exciting journey. Different linguistic and cultural
-                      backgrounds don’t matter when we look in the same
-                      direction.
-                    </p>
-                    <p className="popinsFont text-[13px] pt-[24px] 2xl:text-[20px]  leading-[20px] 2xl:leading-[32px]  font-[300] mr-[20px]">
-                      We take pride in being the pioneer in Korea's digital
-                      transformation over the past decade.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-          {/* end animation */}
+          {/* mobile animation */}
+          <div className="md:hidden block w-[292px] h-[474.5px]">
+            {/* start animation */}
+            {offset > 100 ? <GroupTextAnimation /> : <></>}
+            {/* end animation */}
+          </div>
         </div>
       </div>
       <div className="bg-partnersContactBg overflow-hidden">
@@ -178,7 +50,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[173px] h-full opacity-80 hover:opacity-100 mx-[2rem]"
+                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 mx-[2rem]"
                     key={i}
                   />
                 );
@@ -190,7 +62,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[173px] h-full opacity-80 hover:opacity-100 mx-[2rem]"
+                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 mx-[2rem]"
                     key={i}
                   />
                 );
@@ -202,7 +74,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[173px] h-full opacity-80 hover:opacity-100 mx-[2rem]"
+                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 mx-[2rem]"
                     key={i}
                   />
                 );
@@ -216,7 +88,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[173px] h-full opacity-80 hover:opacity-100 mx-[2rem]"
+                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 mx-[2rem]"
                     key={i}
                   />
                 );
@@ -228,7 +100,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[173px] h-full opacity-80 hover:opacity-100 mx-[2rem]"
+                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 mx-[2rem]"
                     key={i}
                   />
                 );
@@ -240,7 +112,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[173px] h-full opacity-80 hover:opacity-100 mx-[2rem]"
+                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 mx-[2rem]"
                     key={i}
                   />
                 );
@@ -254,7 +126,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[173px] h-full opacity-80 hover:opacity-100  mx-[2rem]"
+                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100  mx-[2rem]"
                     key={i}
                   />
                 );
@@ -266,7 +138,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[173px] h-full opacity-80 hover:opacity-100  mx-[2rem]"
+                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100  mx-[2rem]"
                     key={i}
                   />
                 );
@@ -278,7 +150,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[173px] h-full opacity-80 hover:opacity-100 mx-[2rem]"
+                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 mx-[2rem]"
                     key={i}
                   />
                 );
@@ -301,7 +173,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[80px] h-full opacity-80 hover:opacity-100 mx-[5px]"
+                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 mx-[5px]"
                     key={i}
                   />
                 );
@@ -313,7 +185,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[80px] h-full opacity-80 hover:opacity-100 mx-[5px]"
+                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 mx-[5px]"
                     key={i}
                   />
                 );
@@ -327,7 +199,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[80px] h-full opacity-80 hover:opacity-100 mx-[5px]"
+                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 mx-[5px]"
                     key={i}
                   />
                 );
@@ -339,7 +211,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[80px] h-full opacity-80 hover:opacity-100 mx-[5px]"
+                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 mx-[5px]"
                     key={i}
                   />
                 );
@@ -353,7 +225,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[80px] h-full opacity-80 hover:opacity-100 mx-[5px]"
+                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 mx-[5px]"
                     key={i}
                   />
                 );
@@ -365,7 +237,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[80px] h-full opacity-80 hover:opacity-100 mx-[5px]"
+                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 mx-[5px]"
                     key={i}
                   />
                 );

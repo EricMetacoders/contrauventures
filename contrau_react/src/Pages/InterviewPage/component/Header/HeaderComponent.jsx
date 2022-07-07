@@ -8,7 +8,6 @@ import logotraumb from "../../../../assets/interview-img/logotrauventure-mb.png"
 import "./style.scss";
 import TemporaryDrawer from "./TemporaryDrawer";
 import { Link } from "react-router-dom";
-
 HeaderComponent.propTypes = {};
 
 function HeaderComponent({ pagecurrent }) {

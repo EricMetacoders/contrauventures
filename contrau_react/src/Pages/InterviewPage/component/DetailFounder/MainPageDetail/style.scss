@@ -54,20 +54,24 @@
 
   .framearticle {
     .framehtmlinterview {
-      width: 1320px;
+      width: 100%;
       margin: auto;
       height: auto;
       z-index: 100;
       .frameimagequote {
         margin-top: 60px;
+        margin-left: 300px;
+        margin-right: 300px;
         img {
           content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imagequote.png");
         }
       }
       .framearticle {
-        width: 1024px;
+        width: 100%;
         margin: auto;
         margin-top: 40px;
+        padding-left: 448px;
+        padding-right: 448px;
         font-family: "Poppins", sans-serif;
         font-style: normal;
         font-weight: 400;
@@ -90,6 +94,8 @@
         width: 1320px;
         // height: 450px;
         margin-top: 90px;
+        margin-left: 300px;
+        margin-right: 300px;
         img {
           content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imagearticle.png");
         }
@@ -143,10 +149,10 @@
           color: #ffffff;
           .detailtitlered {
             display: inline-block;
-            height: 40px;
+            height: 52px;
             font-style: italic;
             font-weight: 800;
-            border-bottom: 18px solid red;
+            border-bottom: 18px solid #db2f33ed;
           }
           :nth-child(3) {
             font-weight: 100;
@@ -154,9 +160,11 @@
         }
       }
       .framequestiontitle {
-        width: 1040px;
+        width: 100%;
         margin: auto;
         margin-top: 180px;
+        padding-left: 448px;
+        padding-right: 448px;
         .questiontitle {
           width: 1024px;
           text-align: left;
@@ -168,22 +176,19 @@
           /* identical to box height, or 140% */
 
           letter-spacing: -0.01em;
-          /* BLACK */
-
-          color: #101010;
-
           /* Inside auto layout */
 
           flex: none;
           order: 0;
           align-self: stretch;
           flex-grow: 0;
-          span {
-            color: red;
+          color: #101010;
+          .redcontent {
+            color: #db2f33;
           }
         }
         .articlequestion {
-          margin-top: 60px;
+          margin-top: 40px;
           text-align: left;
           font-family: "Roboto Flex", sans-serif;
           font-style: normal;
@@ -202,15 +207,75 @@
           order: 1;
           align-self: stretch;
           flex-grow: 0;
-          p:nth-child(2) {
+          .somecannot {
             display: inline-block;
-            margin-top: 0px;
+            margin-top: 30px;
           }
+
           .detailarticle2 {
             padding-top: 40px;
           }
         }
       }
+      .framequestiontitle2 {
+        width: 100%;
+        margin: auto;
+        margin-top: 110px;
+        padding-left: 448px;
+        padding-right: 448px;
+        .questiontitle {
+          width: 1024px;
+          text-align: left;
+          font-family: "Poppins", sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 40px;
+          line-height: 56px;
+          /* identical to box height, or 140% */
+
+          letter-spacing: -0.01em;
+          /* Inside auto layout */
+
+          flex: none;
+          order: 0;
+          align-self: stretch;
+          flex-grow: 0;
+          color: #101010;
+          .redcontent {
+            color: #db2f33;
+          }
+        }
+        .articlequestion {
+          margin-top: 40px;
+          text-align: left;
+          font-family: "Roboto Flex", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 36px;
+          /* or 180% */
+
+          /* BLACK */
+
+          color: #101010;
+
+          /* Inside auto layout */
+
+          flex: none;
+          order: 1;
+          align-self: stretch;
+          flex-grow: 0;
+          .somecannot {
+            display: inline-block;
+            margin-top: 30px;
+          }
+
+          .detailarticle2 {
+            padding-top: 40px;
+          }
+        }
+      }
+
       .frameimgarticle {
         width: 1320px;
         margin: auto;
@@ -221,15 +286,15 @@
         display: flex;
         .frameimgarticle1 {
           margin-top: 205px;
-          margin-bottom: 105px;
+          margin-bottom: 25px;
           img {
             content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle1.png");
           }
         }
         .frameimgarticle2 {
           margin-top: 205px;
-          margin-bottom: 105px;
-          margin-left: 15px;
+          margin-bottom: 25px;
+          margin-left: 23px;
           img {
             content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle2.png");
           }
@@ -341,7 +406,6 @@
           /* identical to box height, or 171% */
 
           color: #db2f33;
-
           /* Inside auto layout */
 
           flex: none;
@@ -453,7 +517,9 @@
         margin: auto;
         height: auto;
         .frameimagequote {
-          width: 80%;
+          width: 100%;
+          padding-left: 27px;
+          padding-right: 12px;
           margin: auto;
           margin-top: 40px;
           img {
@@ -461,8 +527,10 @@
           }
         }
         .framearticle {
-          width: 288px;
+          width: 100%;
           margin: auto;
+          padding-left: 35px;
+          padding-right: 35px;
           margin-top: 50px;
           font-family: "Poppins", sans-serif;
           font-style: normal;
@@ -477,17 +545,19 @@
           .detailarticle {
             p {
               display: inline-block;
-              margin-top: 30px;
-              margin-bottom: 30px;
+              margin-top: 10px;
+              margin-bottom: 10px;
             }
             div {
-              margin-bottom: 30px;
+              margin-bottom: 50px;
             }
           }
         }
         .frameimg {
           width: 100%;
           margin-top: 20px;
+          margin-left: 0px;
+          margin-right: 0px;
           img {
             width: 100%;
             content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imagearticlemobile.png");
@@ -501,6 +571,7 @@
       .framequestionmain {
         width: 100%;
         margin-top: 60px;
+
         .frametitle {
           width: 100%;
           height: auto;
@@ -508,12 +579,13 @@
           margin-bottom: 60px;
 
           .detailtitle {
-            width: 80%;
+            width: 100%;
             height: 100%;
             padding-top: 75px;
             padding-bottom: 75px;
             margin: auto;
-
+            padding-left: 35px;
+            padding-right: 50px;
             font-family: "Poppins", sans-serif;
             font-style: normal;
             font-weight: 900;
@@ -528,10 +600,10 @@
             color: #ffffff;
             .detailtitlered {
               display: inline-block;
-              height: 20px;
+              height: 26px;
               font-style: italic;
               font-weight: 800;
-              border-bottom: 9px solid red;
+              border-bottom: 7px solid red;
             }
             :nth-child(3) {
               font-weight: 200;
@@ -539,11 +611,13 @@
           }
         }
         .framequestiontitle {
-          width: 288px;
+          width: 100%;
           margin: auto;
           margin-top: 60px;
+          padding-left: 35px;
+          padding-right: 35px;
           .questiontitle {
-            width: 288px;
+            width: 100%;
             text-align: left;
 
             font-size: 18px;
@@ -582,8 +656,77 @@
             flex: none;
             order: 1;
             flex-grow: 0;
+            .somecannot {
+              display: inline-block;
+              margin-top: 30px;
+            }
+            .thesecond {
+              display: inline-block;
+              margin-top: 35px;
+            }
+
+            .detailarticle2 {
+              padding-top: 40px;
+            }
           }
         }
+        .framequestiontitle2 {
+          width: 100%;
+          margin: auto;
+          margin-top: 60px;
+          padding-left: 35px;
+          padding-right: 35px;
+          .questiontitle {
+            width: 100%;
+            text-align: left;
+
+            font-size: 18px;
+            line-height: 24px;
+            /* identical to box height, or 140% */
+
+            letter-spacing: -0.01em;
+            /* BLACK */
+
+            color: #101010;
+
+            /* Inside auto layout */
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            .titlered {
+              color: red;
+            }
+          }
+          .articlequestion {
+            margin-top: 25px;
+            text-align: left;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 24px;
+            /* or 180% */
+
+            /* BLACK */
+
+            color: #101010;
+
+            /* Inside auto layout */
+
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            .thesecond {
+              display: inline-block;
+              margin-top: 35px;
+            }
+
+            .detailarticle2 {
+              padding-top: 40px;
+            }
+          }
+        }
+
         .frameimgarticle {
           width: 100%;
           margin: auto;
@@ -633,7 +776,7 @@
             p {
               display: inline-block;
               margin-bottom: 0px;
-              width: auto;
+              width: 100%;
               height: 22px;
               font-size: 13px;
               line-height: 22px;
@@ -647,15 +790,17 @@
     }
 
     .framenew {
-      width: auto;
+      width: 100%;
       margin: auto;
       margin-top: 120px;
 
       .framenewtitle {
         display: flex;
         height: 44px;
-        width: 290px;
+        width: 100%;
         margin: auto;
+        padding-left: 30px;
+        padding-right: 30px;
         text-align: center;
         /* H2 */
         font-size: 40px;
@@ -697,12 +842,14 @@
         flex-direction: column;
         margin-top: 50px;
         column-gap: 0px;
-
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-bottom: 70px;
         .framedetail {
           display: flex;
           margin: auto;
           flex-direction: column;
-          width: 290px;
+          width: 100%;
           height: 370px;
           text-align: left;
           border-bottom: 1px solid #101010;
