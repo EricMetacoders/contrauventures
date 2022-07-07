@@ -132,7 +132,6 @@ function MainFounder(props) {
     );
     history(`/detailfounder/${findID.id}`);
   };
-  console.log(listFounder2);
   return (
     <div className="rootmainfounder">
       {/* FRAME BUTTON */}

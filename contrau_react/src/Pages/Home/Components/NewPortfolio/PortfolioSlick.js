@@ -100,7 +100,7 @@ export default function PortfolioSlick() {
     <div>
       <Slider {...settings}>
         <div
-          className="w-[129px] h-[56px] "
+          className="h-[56px] setWidth"
           onClick={() => {
             handleShowViewAll();
             handleViewAllActive();

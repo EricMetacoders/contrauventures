@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const FadeInUpAnimation = keyframes`${fadeInUp}`;
 
 const FadeInUpDiv = styled.div`
-  animation: 0.5s ${FadeInUpAnimation};
+  animation: 1s ${FadeInUpAnimation};
 `;
 export default function Components() {
   const [showText2, setShowText2] = useState(false);
@@ -54,7 +54,7 @@ export default function Components() {
               ) : (
                 <></>
               )}
-              {showText3 ? (
+              {showText2 ? (
                 <FadeInUpDiv>
                   <div className="flex items-center justify-center text-[110px] space-x-3">
                     <p className="popinsFont italic font-thin mb-0">is</p>
@@ -68,7 +68,7 @@ export default function Components() {
             </div>
 
             <div className="mt-[54px]">
-              {showText4 ? (
+              {showText3 ? (
                 <FadeInUpDiv>
                   <p className="text-[20px] popinsFont font-normal text-hoverGrey mb-0">
                     Our investments focus on the fields that could help boost
@@ -78,7 +78,7 @@ export default function Components() {
               ) : (
                 <></>
               )}
-              {showText5 ? (
+              {showText3 ? (
                 <FadeInUpDiv>
                   <p className="text-[20px] popinsFont font-normal text-hoverGrey mb-0">
                     We will lay the groundwork and sow the seeds for Vietnam's
@@ -88,7 +88,7 @@ export default function Components() {
               ) : (
                 <></>
               )}
-              {showText6 ? (
+              {showText3 ? (
                 <FadeInUpDiv>
                   <p className="text-[20px] popinsFont font-normal text-hoverGrey mb-0">
                     Rather than a fund with the highest profit, we aim to be
@@ -118,7 +118,7 @@ export default function Components() {
             ) : (
               <></>
             )}
-            {showText3 ? (
+            {showText2 ? (
               <FadeInUpDiv>
                 <p className="italic font-thin text-[40px] popinsFont mb-0">
                   victory is
@@ -127,7 +127,7 @@ export default function Components() {
             ) : (
               <></>
             )}
-            {showText4 ? (
+            {showText2 ? (
               <FadeInUpDiv>
                 <div className="flex items-center justify-start space-x-[1px]">
                   <p className="font-[900] text-red mb-0 popinsFont text-[40px]">
@@ -142,7 +142,7 @@ export default function Components() {
             )}
           </div>
           <div className="mt-[30px]">
-            {showText5 ? (
+            {showText3 ? (
               <FadeInUpDiv>
                 <p className="popinsFont text-[13px] w-[243px] text-white leading-[20px] font-light">
                   We invest in areas that can increase Vietnam's growth

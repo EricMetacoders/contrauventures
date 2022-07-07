@@ -45,7 +45,7 @@ export default function Components() {
         ) : (
           <></>
         )}
-        {showText3 ? (
+        {showText2 ? (
           <FadeInUpDiv>
             <p className="popinsFont text-[40px] md:text-[80px] 2xl:text-[110px]  italic font-thin mb-0">
               ourselve with
@@ -55,7 +55,7 @@ export default function Components() {
           <></>
         )}
 
-        {showText4 ? (
+        {showText2 ? (
           <FadeInUpDiv>
             <div className="hidden md:flex items-center justify-start space-x-5">
               <p className="popinsFont text-[40px] md:text-[80px] 2xl:text-[110px]  italic font-thin mb-0">
@@ -71,7 +71,7 @@ export default function Components() {
         )}
 
         <div className="block md:hidden items-center justify-start ">
-          {showText4 ? (
+          {showText2 ? (
             <FadeInUpDiv>
               <p className="popinsFont text-[40px] md:text-[80px] 2xl:text-[110px]  italic font-thin mb-0">
                 various
@@ -81,7 +81,7 @@ export default function Components() {
             <></>
           )}
 
-          {showText5 ? (
+          {showText2 ? (
             <FadeInUpDiv>
               <p className="popinsFont text-[40px] md:text-[80px] 2xl:text-[110px] font-[900] text-red italic mb-0">
                 potentials
