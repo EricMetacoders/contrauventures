@@ -4,11 +4,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { Box, useMediaQuery, useTheme } from "@material-ui/core";
+import { Box, debounce, useMediaQuery, useTheme } from "@material-ui/core";
 import { collection, wasClick } from "./ChangeImage.js";
 import { interviewServices } from "../../../../../../services/interviewService";
 import { useParams } from "react-router-dom";
 import { current } from "@reduxjs/toolkit";
+import "./ChangeImage.js";
 SlideGallery.propTypes = {};
 
 function SlideGallery({ detailFounder }) {
@@ -119,6 +120,41 @@ function SlideGallery({ detailFounder }) {
     }
   }, []);
 
+  const slider = useRef(null);
+
+  function scroll(e) {
+    if (slider === null) return 0;
+    var scrollTo = null;
+
+    e.wheelDelta > 0 ? slider.current.slickNext() : slider.current.slickPrev();
+  }
+  function mouseEnterSlide(e) {
+    if (slider === null) return 0;
+    document.body.style.overflow = "hidden";
+    console.log("1");
+  }
+  function mouseOverSlide(e) {
+    if (slider === null) return 0;
+    document.body.style.overflow = "auto";
+    console.log("2");
+  }
+  function clickMe(params) {
+    document.body.style.overflow = "hidden";
+  }
+  function clickMe2(params) {
+    document.body.style.overflow = "auto";
+  }
+  useEffect(() => {
+    // window.addEventListener("wheel", scroll, true);
+    // var getSlide = document.getElementsByClassName("slick-list")[0];
+    // getSlide.addEventListener("mouseenter", mouseEnterSlide);
+    // getSlide.addEventListener("mouseover", mouseOverSlide);
+    return () => {
+      // window.removeEventListener("wheel", scroll, true);
+      // getSlide.removeEventListener("mouseenter", mouseEnterSlide, false);
+      // getSlide.removeEventListener("mouseover", mouseOverSlide, false);
+    };
+  }, []);
   const settings = {
     dots: true,
     vertical: true,
@@ -139,7 +175,6 @@ function SlideGallery({ detailFounder }) {
       },
     ],
   };
-  Object.keys(listGallery).length > 1 && console.log(listGallery[0]);
   const bannerData =
     Object.keys(listGallery).length > 1 &&
     listGallery?.map((item) => (
@@ -216,9 +251,18 @@ function SlideGallery({ detailFounder }) {
         </div>
       </div>
     ));
+
   return (
     <div>
-      <Slider {...settings}>{bannerData}</Slider>
+      <Slider {...settings} ref={slider}>
+        {bannerData}
+      </Slider>
+      {/* <button onClick={clickMe} style={{ background: "red" }}>
+        CLICK ME
+      </button>
+      <button onClick={clickMe2} style={{ background: "red" }}>
+        CLICK ME2
+      </button> */}
     </div>
   );
 }

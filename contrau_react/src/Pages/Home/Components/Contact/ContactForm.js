@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "./contactForm.css";
+import "./contactForm.scss";
 import ic_file from "../../../../assets/homepage_img/ic_file.png";
 export default function ContactForm() {
   const [message, setMessage] = useState(null);
@@ -76,7 +76,7 @@ export default function ContactForm() {
             className="absolute top-5 left-[30px]"
           />
         </div>
-        <div className="hidden 2xl:block 2xl:mt-[12px] space-x-4">
+        <div id="contactD" className="hidden 2xl:block 2xl:mt-[12px] space-x-4">
           <input
             type="text"
             id="name"

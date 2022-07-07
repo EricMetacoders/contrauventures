@@ -162,7 +162,7 @@ export default function NewPortfolio() {
                           <img
                             src={logo?.acf?.image}
                             alt={logo?.acf?.category}
-                            className="opacity-40 hover:opacity-100  w-[204px] h-[117px] object-contain"
+                            className="opacity-40 hover:opacity-100  w-[200px] h-[117px] object-contain"
                           />
                         </div>
                       );

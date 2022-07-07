@@ -65,10 +65,10 @@
 
 @media only screen and (min-width: 769px) and (max-width: 1280px) {
   .slick-prev:before {
-    left: -142px;
+    left: -62px;
   }
   .slick-next:before {
-    left: 29px;
+    left: -54px;
   }
   .btnInterview {
     bottom: -74px;
@@ -87,7 +87,7 @@
     left: -150px;
   }
   .slick-next:before {
-    left: 4px;
+    left: -47px;
   }
   .btnInterview {
     bottom: -74px;
@@ -97,5 +97,38 @@
     transform: translateY(-265px);
     transition-property: all;
     transition-duration: 200ms;
+  }
+}
+
+@media screen and (min-width: 1536px) and (max-width: 1600px) {
+  #divBtn {
+    width: 300px !important ;
+    height: 448px !important;
+    #seeF {
+    }
+    #founderText {
+      #founder {
+        p {
+          font-size: 10px;
+        }
+      }
+    }
+    #pText {
+      p {
+        font-size: 10px;
+      }
+    }
+  }
+  #nameText {
+    p {
+      font-size: 30px;
+    }
+  }
+  .btnInterview {
+    left: 51px;
+  }
+
+  #divBtn:hover > .bgBlur {
+    transform: translateY(-539px);
   }
 }

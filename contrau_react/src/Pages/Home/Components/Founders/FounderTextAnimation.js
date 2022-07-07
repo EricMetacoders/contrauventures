@@ -48,7 +48,7 @@ export default function Components() {
                 <p className="text-[110px] popinsFont italic font-[900] text-red">
                   Founders
                 </p>
-                <div className="bg-red w-[10px] h-[10px] xl:w-[23px] xl:h-[23px] rounded-full  mt-[30px] md:mt-[27px] xl:mt-[-41px] 2xl:mt-[57px]"></div>
+                <div className="bg-red w-[10px] h-[10px] xl:w-[23px] xl:h-[23px] rounded-full  mt-[30px] md:mt-[27px]  xl:mt-[-41px] 2xl:mt-[57px]"></div>
               </div>
             </div>
           </FadeInUpDiv>

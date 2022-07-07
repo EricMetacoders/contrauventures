@@ -1,13 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
 import { Box, useMediaQuery, useTheme } from "@material-ui/core";
+import { Link, useNavigate } from "react-router-dom";
 import logobackgroundheader from "../../../../assets/interview-img/logobackgroundheader.png";
 import logobackgroundheadermb from "../../../../assets/interview-img/logobackgroundheadermb.png";
-import logotrau from "../../../../assets/interview-img/logotrauventure.png";
 import logotraumb from "../../../../assets/interview-img/logotrauventure-mb.png";
+import logotrau from "../../../../assets/interview-img/logotrauventure.png";
 import "./style.scss";
 import TemporaryDrawer from "./TemporaryDrawer";
-import { Link } from "react-router-dom";
 HeaderComponent.propTypes = {};
 
 function HeaderComponent({ pagecurrent }) {
@@ -18,7 +16,11 @@ function HeaderComponent({ pagecurrent }) {
   const theme = useTheme();
 
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-
+  let navigate = useNavigate();
+  const clickToScroll = () => {
+    navigate("/", { state: { id: 1, name: "sabaoon" } });
+  };
+  let test = "12";
   //END RESPONSIVE
   return (
     <div>
@@ -54,7 +56,11 @@ function HeaderComponent({ pagecurrent }) {
           <Box className="titledetaimainframeheader">
             <Box className="titledetaiframeheader">HOME</Box>
             <Box className="titledetaiframeheader">About Us</Box>
-            <Box className="titledetaiframeheader">Portfolio</Box>
+
+            <Box className="titledetaiframeheader" onClick={clickToScroll}>
+              Portfolio
+            </Box>
+
             <Link to="/story">
               <Box className="titledetaiframeheader-active">Story</Box>
             </Link>

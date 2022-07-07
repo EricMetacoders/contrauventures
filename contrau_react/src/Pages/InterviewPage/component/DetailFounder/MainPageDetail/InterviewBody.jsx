@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { Box, useMediaQuery, useTheme } from "@material-ui/core";
-
+import dot1 from "../../../../../assets/interview-img/dot1.png";
+import dot2 from "../../../../../assets/interview-img/dot2.png";
 import { interviewServices } from "../../../../../services/interviewService";
 import { useState } from "react";
+
 InterviewBody.propTypes = {
   detailArticle: PropTypes.object,
 };
@@ -15,40 +17,40 @@ function InterviewBody({ detailArticle }) {
   var test1 = `
   <div class="framearticle">
     <div class="framehtmlinterview">
-      <div class="frameimagequote">
-        <img />
-      </div>
-      <div class="framearticle">
-        <div class="detailarticle">
-          Just three years after its release, app revenue has given them a
-          boost.G writers reach 20 million a month. In 2022, bTaskee broke
-          its own record when the income of bee sisters reached three.0
-          million a month.
-          <p>
-            He graduated from the University of Waterloo, one of the best
-            universities in the world.i Canada on training software
-            engineers. Attractive job invitations with tens of thousands of
-            dollars in income from companies and corporations.In a country
-            with autumn leaves, it seems like everyone's dream. But it
-            wasn't the final destination on the way to find the young
-            engineer's ideal of life in any year. Something that always
-            motivates you. make one's own mark, giving one's own impression
-            It's different for society in Vietnam.
-          </p>
-          <div>
-            Starting a business has always been a long and demanding path
-            for you. Flexible for travelers who want to start it. To go far
-            and sustainably requires that we prepare for the second act.c is
-            strong enough in areas that want to start a business and the
-            prerequisite is to persevere until the end.
+          <div class="frameimagequote">
+            <img />
           </div>
-        </div>
-      </div>
-      <div class="frameimg">
-        <img alt="" />
-        <p>Co Founder and collaborator from bTaskee</p>
-      </div>
-    </div>
+            <div class="framearticle">
+                    <div class="detailarticle">
+                      Just three years after its release, app revenue has given them a
+                      boost.G writers reach 20 million a month. In 2022, bTaskee broke
+                      its own record when the income of bee sisters reached three.0
+                      million a month.
+                      <p>
+                        He graduated from the University of Waterloo, one of the best
+                        universities in the world.i Canada on training software
+                        engineers. Attractive job invitations with tens of thousands of
+                        dollars in income from companies and corporations.In a country
+                        with autumn leaves, it seems like everyone's dream. But it
+                        wasn't the final destination on the way to find the young
+                        engineer's ideal of life in any year. Something that always
+                        motivates you. make one's own mark, giving one's own impression
+                        It's different for society in Vietnam.
+                      </p>
+                      <div>
+                        Starting a business has always been a long and demanding path
+                        for you. Flexible for travelers who want to start it. To go far
+                        and sustainably requires that we prepare for the second act.c is
+                        strong enough in areas that want to start a business and the
+                        prerequisite is to persevere until the end.
+                      </div>
+                    </div>
+                </div>
+                  <div class="frameimg">
+                    <img alt="" />
+                    <p>Co Founder and collaborator from bTaskee</p>
+                  </div>
+            </div>
 
     <div class="framequestionmain">
       <div class="frametitle">
@@ -348,27 +350,28 @@ function InterviewBody({ detailArticle }) {
   }
   const [listNew, setListNew] = useState([]);
   const [article, setArticle] = useState({});
+  console.log("article:", article);
 
-  // useEffect(() => {
-  //   if (Object.values(detailArticle).length != 0) {
-  //     async function fetchDataArticle() {
-  //       const listDataArticle = await getArticleNew();
+  useEffect(() => {
+    if (Object.values(detailArticle).length != 0) {
+      async function fetchDataArticle() {
+        const listDataArticle = await getArticleNew();
 
-  //       let findArticle = listDataArticle.data.find(
-  //         (element) =>
-  //           element.acf.first_name == detailArticle.acf.first_name &&
-  //           element.acf.last_name == detailArticle.acf.last_name
-  //       );
-  //       setArticle(findArticle.acf.content);
-  //     }
-  //     async function fetchDataNew() {
-  //       const listDataNew = await getAPINew();
-  //       setListNew(listDataNew.data);
-  //     }
-  //     fetchDataArticle();
-  //     fetchDataNew();
-  //   }
-  // }, [detailArticle]);
+        let findArticle = listDataArticle.data.find(
+          (element) =>
+            element.acf.first_name == detailArticle.acf.first_name &&
+            element.acf.last_name == detailArticle.acf.last_name
+        );
+        setArticle(findArticle.acf.content);
+      }
+      async function fetchDataNew() {
+        const listDataNew = await getAPINew();
+        setListNew(listDataNew.data);
+      }
+      fetchDataArticle();
+      fetchDataNew();
+    }
+  }, [detailArticle]);
 
   return (
     <Box>
@@ -381,8 +384,26 @@ function InterviewBody({ detailArticle }) {
         />
       )} */}
 
-      {/* <div className="framearticle">
+      <div className="framearticle">
         <div className="framehtmlinterview">
+          <div className="framequote">
+            <div className="framedot1">
+              <img src={dot1} />
+            </div>
+            <div className="frametitleqoute">
+              <span className="title1">
+                {Object.values(article).length != 0 && article.qoute.part_1}
+                &nbsp;
+              </span>
+              <span className="title2">
+                {Object.values(article).length != 0 && article.qoute.part_2}
+              </span>
+            </div>
+            <div className="framedot2">
+              <img src={dot2} />
+            </div>
+          </div>
+
           {Object.values(article).length != 0 && (
             <div
               className="framearticle"
@@ -391,23 +412,34 @@ function InterviewBody({ detailArticle }) {
               }}
             />
           )}
+
+          {Object.values(article).length != 0 && (
+            <div
+              className=""
+              dangerouslySetInnerHTML={{
+                __html: article.content_part_1.detail_content_image,
+              }}
+            />
+          )}
         </div>
 
-        {Object.values(article).length != 0 && (
-          <div
-            dangerouslySetInnerHTML={{
-              __html: article.content_part_2.detail_content,
-            }}
-          />
-        )}
-        {Object.values(article).length != 0 && (
-          <div
-            dangerouslySetInnerHTML={{
-              __html: article.content_part_3.detail_content,
-            }}
-          />
-        )}
-      </div> */}
+        <div className="framearticle">
+          {Object.values(article).length != 0 && (
+            <div
+              dangerouslySetInnerHTML={{
+                __html: article.content_part_2.detail_content,
+              }}
+            />
+          )}
+          {Object.values(article).length != 0 && (
+            <div
+              dangerouslySetInnerHTML={{
+                __html: article.content_part_3.detail_content,
+              }}
+            />
+          )}
+        </div>
+      </div>
 
       {/* FRAME NEW */}
       <Box className="framenew">

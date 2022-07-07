@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { interviewServices } from "../../../../services/interviewService";
-import "./founderImageCarousel.css";
+import "./founderImageCarousel.scss";
 export default function FounderImageCarousel({ data }) {
   const history = useNavigate();
   const [founderList, setFounderList] = useState(null);
@@ -33,7 +33,7 @@ export default function FounderImageCarousel({ data }) {
   return (
     <div
       id="divBtn"
-      className=" relative imgCarousel  h-[448px] md:w-[223px] md:h-[350px] xl:h-[550px] xl:w-[323px] 2xl:h-[664px] 2xl:w-[424px] rounded-3xl overflow-hidden"
+      className=" relative imgCarousel  w-[291px] h-[448px] md:w-[223px] md:h-[350px] xl:h-[550px] xl:w-[323px] 2xl:h-[664px] 2xl:w-[424px] rounded-3xl overflow-hidden"
     >
       <img
         src={data?.acf?.image}
@@ -46,7 +46,10 @@ export default function FounderImageCarousel({ data }) {
             <p className="text-white text-[32px] 2xl:text-[50px] font-thin popinsFont">
               FOUNDER
             </p>
-            <div className="flex items-center justify-center space-x-3">
+            <div
+              id="nameText"
+              className="flex items-center justify-center space-x-3"
+            >
               <p className="text-white text-[32px] 2xl:text-[50px] font-[900] popinsFont">
                 {data?.acf?.first_name.toUpperCase()}
               </p>
@@ -64,8 +67,14 @@ export default function FounderImageCarousel({ data }) {
       </div>
       <div className="block lg:hidden absolute bottom-[63px] w-full">
         <div className="flex flex-col items-center justify-center z-10 ">
-          <div className="flex flex-col items-center justify-center leading-[1] ">
-            <p className="text-white text-[32px] 2xl:text-[50px] font-thin popinsFont">
+          <div
+            id="foundeText"
+            className="flex flex-col items-center justify-center leading-[1] "
+          >
+            <p
+              id="founder"
+              className="text-white text-[32px] 2xl:text-[50px] font-thin popinsFont"
+            >
               FOUNDER
             </p>
             <div className="flex items-center justify-center space-x-3">
@@ -77,7 +86,10 @@ export default function FounderImageCarousel({ data }) {
               </p>
             </div>
           </div>
-          <div className="flex items-center justify-center mx-[20px]">
+          <div
+            id="pText"
+            className="flex items-center justify-center mx-[20px]"
+          >
             <p className="text-white popinsFont  font-light text-[13px] 2xl:text-[20px] 2xl:font-normal text-center pt-[20px] mb-[26px]">
               {data?.acf?.title.slice(0, 64).concat("...")}
             </p>
@@ -106,7 +118,10 @@ export default function FounderImageCarousel({ data }) {
       ></div>
       <div className="btnInterview">
         <div className="hidden lg:block w-[200px] h-[60px] bg-white  cursor-pointer z-50">
-          <div className="flex items-center justify-center w-full h-full">
+          <div
+            id="seeF"
+            className="flex items-center justify-center w-full h-full"
+          >
             <p
               className="popinsFont font-semibold text-[20px] text-black mb-0"
               onClick={() => {
