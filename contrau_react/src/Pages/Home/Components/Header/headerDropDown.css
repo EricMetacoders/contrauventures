@@ -27,8 +27,12 @@ html {
 }
 
 .ant-modal-content {
-  right: -118px;
+  right: -155px;
   width: 248px;
   top: -109px;
   height: 100vh;
+}
+
+a {
+  color: black;
 }

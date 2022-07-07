@@ -65,7 +65,7 @@ function InterviewBody({ detailArticle }) {
       <div class="framequestiontitle">
         <div class="questiontitle">
           What is the application
-          <span>&nbsp;idea for bTaskee?</span>
+          <span class="redcontent">idea for bTaskee?</span>
         </div>
         <div class="articlequestion">
           <p>
@@ -78,18 +78,18 @@ function InterviewBody({ detailArticle }) {
             life.What about you? They don't have the right to choose what
             they want.What, what do I do?
           </p>
-          <p style={{ marginTop: "50px" }}>
+          <div class="somecannot">
             Some cannot even afford to send their children to school,
             especially single mothers. I want to help them realize the value
             of what they are doing and the potential for career development.
             That's the driving force behind his idea of starting a business.
-          </p>
+          </div>
         </div>
       </div>
-      <div class="framequestiontitle">
+      <div class="framequestiontitle2" >
         <div class="questiontitle">
           You mentioned that you failed to start a business. After that,
-          <span>What kind of fortune</span>&nbsp;did you bring back for your
+          <span class="redcontent">What kind of fortune</span>&nbsp;did you bring back for your
           next journey?
         </div>
         <div class="articlequestion">
@@ -119,7 +119,7 @@ function InterviewBody({ detailArticle }) {
       <div class="framequestiontitle">
         <div class="questiontitle">
           What was the
-          <span>&nbsp;hardest thing you had to go through&nbsp;</span>
+          <span class="redcontent">&nbsp;hardest thing you had to go through&nbsp;</span>
           when you chose to start a business?
         </div>
         <div class="articlequestion">
@@ -132,13 +132,15 @@ function InterviewBody({ detailArticle }) {
             the way workers think and behave. However, you are quite a
             patient person. I'd like to get opinions from all sides.There
             are more diverse views on one issue, but you will stick to your
-            decision until the end. The second is his belief in the workers.
-            One sentence. If you don't trust them, who's going to do it? I
-            have to give them the feeling of listening, of being trusted, of
-            being respected.If anything happens, I'm sure they'll trust me
-            and do their best for this job. Photo: bTaskee participating in
-            Saigon Tech Startup Fest in 2016
+            decision until the end. 
           </p>
+          <p class="thesecond">The second is his belief in the workers.
+          One sentence. If you don't trust them, who's going to do it? I
+          have to give them the feeling of listening, of being trusted, of
+          being respected.If anything happens, I'm sure they'll trust me
+          and do their best for this job.</p>
+          <p> Photo: bTaskee participating in
+          Saigon Tech Startup Fest in 2016</p>
         </div>
       </div>
     </div>
@@ -158,7 +160,7 @@ function InterviewBody({ detailArticle }) {
       <div class="framequestiontitle">
         <div class="questiontitle">
           What did you&nbsp;
-          <span>get and lose&nbsp;</span>
+          <span class="redcontent">get and lose&nbsp;</span>
           when you chose to start a business?
         </div>
         <div class="articlequestion">
@@ -168,10 +170,11 @@ function InterviewBody({ detailArticle }) {
             you can create very meaningful values for the community. This
             profession has helped many people earn better income to cover
             their lives and gave them a different perspective on their
-            profession. Many "bee sisters" who joined bTaskee no longer
-            watch help.Ha is another "living profession" that for them is
-            future career orientation and is really proud of it.
+            profession
           </p>
+          <p class="manybee">Many "bee sisters" who joined bTaskee no longer
+          watch help.Ha is another "living profession" that for them is
+          future career orientation and is really proud of it.</p>
           <p class="detailarticle2">
             He is also happy that he can build a team with corporate
             development mindset to improve the lives of others, not for
@@ -189,7 +192,7 @@ function InterviewBody({ detailArticle }) {
       <div class="framequestiontitle">
         <div class="questiontitle">
           What made
-          <span>&nbsp; bTaskee really different?</span>
+          <span class="redcontent">bTaskee really different?</span>
         </div>
         <div class="articlequestion">
           <p>
@@ -263,7 +266,7 @@ function InterviewBody({ detailArticle }) {
       </div>
       <div class="framequestiontitle">
         <div class="questiontitle">
-          Future plans
+          <span class="redcontent">Future plans</span>
           <span>&nbsp;for bTaskee?</span>
         </div>
         <div class="articlequestion">
@@ -292,7 +295,7 @@ function InterviewBody({ detailArticle }) {
       <div class="framequestiontitle">
         <div class="questiontitle">
           What
-          <span>&nbsp;advice do you have for young people&nbsp;</span>
+          <span class="redcontent">&nbsp;advice do you have for young people&nbsp;</span>
           preparing to start a business?
         </div>
         <div class="articlequestion">
@@ -324,6 +327,17 @@ function InterviewBody({ detailArticle }) {
     </div>
   </div>`;
 
+  // GET API FOR ARTICLE
+  async function getArticleNew() {
+    try {
+      let listArticle = await interviewServices.getArticleDetail();
+      return listArticle;
+    } catch (error) {
+      console.log("Failed to fetch", error);
+    }
+  }
+
+  // GET API FOR NEW
   async function getAPINew() {
     try {
       let listNew = await interviewServices.getNew();
@@ -333,23 +347,67 @@ function InterviewBody({ detailArticle }) {
     }
   }
   const [listNew, setListNew] = useState([]);
-  useEffect(() => {
-    async function fetchDataNew() {
-      const listDataNew = await getAPINew();
-      setListNew(listDataNew.data);
-    }
-    fetchDataNew();
-  }, []);
+  const [article, setArticle] = useState({});
+
+  // useEffect(() => {
+  //   if (Object.values(detailArticle).length != 0) {
+  //     async function fetchDataArticle() {
+  //       const listDataArticle = await getArticleNew();
+
+  //       let findArticle = listDataArticle.data.find(
+  //         (element) =>
+  //           element.acf.first_name == detailArticle.acf.first_name &&
+  //           element.acf.last_name == detailArticle.acf.last_name
+  //       );
+  //       setArticle(findArticle.acf.content);
+  //     }
+  //     async function fetchDataNew() {
+  //       const listDataNew = await getAPINew();
+  //       setListNew(listDataNew.data);
+  //     }
+  //     fetchDataArticle();
+  //     fetchDataNew();
+  //   }
+  // }, [detailArticle]);
 
   return (
     <Box>
-      {/* GET CONTENT FROM API */}
-      {Object.keys(detailArticle).length != 0 && (
+      {/* GET CONTENT 1 FROM API */}
+      {/* {Object.keys(article).length != 0 && (
         <div
           className="framearticle"
-          dangerouslySetInnerHTML={{ __html: detailArticle.acf.content }}
+          // dangerouslySetInnerHTML={{ __html: detailArticle.acf.content }}
+          dangerouslySetInnerHTML={{ __html: test1 }}
         />
-      )}
+      )} */}
+
+      {/* <div className="framearticle">
+        <div className="framehtmlinterview">
+          {Object.values(article).length != 0 && (
+            <div
+              className="framearticle"
+              dangerouslySetInnerHTML={{
+                __html: article.content_part_1.detail_content,
+              }}
+            />
+          )}
+        </div>
+
+        {Object.values(article).length != 0 && (
+          <div
+            dangerouslySetInnerHTML={{
+              __html: article.content_part_2.detail_content,
+            }}
+          />
+        )}
+        {Object.values(article).length != 0 && (
+          <div
+            dangerouslySetInnerHTML={{
+              __html: article.content_part_3.detail_content,
+            }}
+          />
+        )}
+      </div> */}
 
       {/* FRAME NEW */}
       <Box className="framenew">
