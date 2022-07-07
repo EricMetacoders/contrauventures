@@ -40,7 +40,6 @@ export default function HeaderDropDown() {
           <p className="popinsFont text-[1rem] ">About Us</p>
           <p className="popinsFont text-[1rem] ">Portfolio</p>
           <Link to="/story">
-            {" "}
             <p className="popinsFont text-[1rem] ">Story</p>
           </Link>
         </div>

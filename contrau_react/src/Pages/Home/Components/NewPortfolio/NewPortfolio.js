@@ -27,7 +27,6 @@ export default function NewPortfolio() {
   });
 
   const [offset, setOffset] = useState(null);
-  console.log(offset);
   const handleScroll = () => setOffset(window.pageYOffset);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);

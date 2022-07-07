@@ -6,44 +6,20 @@ import { useState } from "react";
 const FadeInUpAnimation = keyframes`${fadeInUp}`;
 
 const FadeInUpDiv = styled.div`
-  animation: 0.5s ${FadeInUpAnimation};
+  animation: 1s ${FadeInUpAnimation};
 `;
 
 export default function Components() {
   const [showText2, setShowText2] = useState(false);
   const [showText3, setShowText3] = useState(false);
-  const [showText4, setShowText4] = useState(false);
-  const [showText5, setShowText5] = useState(false);
-  const [showText6, setShowText6] = useState(false);
-  const [showText7, setShowText7] = useState(false);
-  const [showText8, setShowText8] = useState(false);
-  const [showText9, setShowText9] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
       setShowText2(true);
-    }, 500);
-    setTimeout(() => {
-      setShowText3(true);
     }, 1000);
     setTimeout(() => {
-      setShowText4(true);
+      setShowText3(true);
     }, 1500);
-    setTimeout(() => {
-      setShowText5(true);
-    }, 2000);
-    setTimeout(() => {
-      setShowText6(true);
-    }, 2500);
-    setTimeout(() => {
-      setShowText7(true);
-    }, 3000);
-    setTimeout(() => {
-      setShowText8(true);
-    }, 3500);
-    setTimeout(() => {
-      setShowText9(true);
-    }, 4000);
   }, []);
 
   return (
@@ -72,7 +48,7 @@ export default function Components() {
               ) : (
                 <></>
               )}
-              {showText3 ? (
+              {showText2 ? (
                 <FadeInUpDiv>
                   <div className="flex space-x-1 justify-start">
                     <p className="italic popinsFont font-thin text-[110px] mr-[16px]">
@@ -90,98 +66,57 @@ export default function Components() {
             </div>
           </div>
 
-          <div className="block xl:hidden">
-            <div className="text-white mt-[27px]]">
-              {showText2 ? (
-                <FadeInUpDiv>
+          {showText2 ? (
+            <FadeInUpDiv>
+              <div className="block xl:hidden">
+                <div className="text-white mt-[27px]">
                   <p className="popinsfont text-[40px] font-extrabold mb-[3px]">
                     We are
                   </p>
-                </FadeInUpDiv>
-              ) : (
-                <></>
-              )}
-
-              {showText3 ? (
-                <FadeInUpDiv>
                   <p className="popinsFont text-[40px] italic font-thin w-[220px] mb-0 leading-[1]">
                     a Fund of
                   </p>
-                </FadeInUpDiv>
-              ) : (
-                <></>
-              )}
-
-              {showText4 ? (
-                <FadeInUpDiv>
                   <p className="popinsFont text-[40px] italic font-thin w-[220px] mb-0 leading-[1]">
                     Korean
                   </p>
-                </FadeInUpDiv>
-              ) : (
-                <></>
-              )}
-
-              {showText5 ? (
-                <FadeInUpDiv>
                   <div className="flex mt-[3px]">
                     <p className="popinsFont text-[40px] font-[900]">
                       FOUNDERS
                     </p>
-
                     <div className="inline-block bg-red w-[13px] h-[13px] rounded-full mt-[32px] ml-[1px]"></div>
                   </div>
-                </FadeInUpDiv>
-              ) : (
-                <></>
-              )}
-            </div>
-          </div>
+                </div>
+              </div>
+            </FadeInUpDiv>
+          ) : (
+            <></>
+          )}
         </div>
-
         <div className="text-white mt-[45px] 2xl:mt-[90px] ">
-          <div className="2xl:mr-[-70px]">
-            {showText6 ? (
-              <FadeInUpDiv>
+          {showText3 ? (
+            <FadeInUpDiv>
+              <div className="2xl:mr-[-70px]">
                 <p className="popinsFont  text-[13px] 2xl:text-[20px] leading-[20px] 2xl:leading-[32px] font-[300]">
                   We once encountered the challenges facing many startup-ers
                   these days.
                 </p>
-              </FadeInUpDiv>
-            ) : (
-              <></>
-            )}
-            {showText7 ? (
-              <FadeInUpDiv>
                 <p className="popinsFont  text-[13px] 2xl:text-[20px] leading-[20px] 2xl:leading-[32px] font-[300]">
                   We are here to accompany them on this arduous yet exciting
                   journey.
                 </p>
-              </FadeInUpDiv>
-            ) : (
-              <></>
-            )}
-            {showText8 ? (
-              <FadeInUpDiv>
                 <p className="popinsFont  text-[13px] 2xl:text-[20px] leading-[20px] 2xl:leading-[32px] font-[300]">
                   Different linguistic and cultural backgrounds don’t matter
                   when we look in the same direction.
                 </p>
-              </FadeInUpDiv>
-            ) : (
-              <></>
-            )}
-            {showText9 ? (
-              <FadeInUpDiv>
                 <p className="popinsFont text-[13px] pt-[24px] 2xl:text-[20px]  leading-[20px] 2xl:leading-[32px]  font-[300] mr-[20px]">
                   We take pride in being the pioneer in Korea's digital
                   transformation over the past decade.
                 </p>
-              </FadeInUpDiv>
-            ) : (
-              <></>
-            )}
-          </div>
+              </div>
+            </FadeInUpDiv>
+          ) : (
+            <></>
+          )}
         </div>
       </div>
     </>

@@ -5,15 +5,12 @@ import { useEffect, useState } from "react";
 const FadeInUpAnimation = keyframes`${fadeInUp}`;
 
 const FadeInUpDiv = styled.div`
-  animation: 0.5s ${FadeInUpAnimation};
+  animation: 1s ${FadeInUpAnimation};
 `;
 
 export default function Components() {
   const [showText2, setShowText2] = useState(false);
   const [showText3, setShowText3] = useState(false);
-  const [showText4, setShowText4] = useState(false);
-  const [showText5, setShowText5] = useState(false);
-  const [showText6, setShowText6] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -22,15 +19,6 @@ export default function Components() {
     setTimeout(() => {
       setShowText3(true);
     }, 1000);
-    setTimeout(() => {
-      setShowText4(true);
-    }, 1500);
-    setTimeout(() => {
-      setShowText5(true);
-    }, 2000);
-    setTimeout(() => {
-      setShowText6(true);
-    }, 2500);
   }, []);
   return (
     <>
@@ -50,7 +38,7 @@ export default function Components() {
           <></>
         )}
 
-        {showText3 ? (
+        {showText2 ? (
           <FadeInUpDiv>
             <div className="flex items-center justify-start 2xl:space-x-5 mb-0">
               <p className="md:leading-[60px] lg:leading-[110px] md:text-[50px] lg:text-[110px] popinsFont italic font-[900]  ">
@@ -71,14 +59,13 @@ export default function Components() {
       <div className="block md:hidden leading-[1] mt-[27px] ">
         {showText2 ? (
           <FadeInUpDiv>
-            {" "}
             <p className="popinsFont text-[40px] font-thin mb-0">We don't</p>
           </FadeInUpDiv>
         ) : (
           <></>
         )}
 
-        {showText3 ? (
+        {showText2 ? (
           <FadeInUpDiv>
             <p className="popinsFont font-extrabold italic text-[40px] mb-0">
               We go for
@@ -87,7 +74,7 @@ export default function Components() {
         ) : (
           <></>
         )}
-        {showText4 ? (
+        {showText2 ? (
           <FadeInUpDiv>
             <p className=" font-extrabold italic text-[40px] text-red">
               Founders
@@ -99,7 +86,7 @@ export default function Components() {
       </div>
 
       <div className="popinsFont text-[13px] 2xl:text-[20px]  md:text-[20px] mt-[-16px] md:mt-[50px] 2xl:mt-[76px] pt-[67px] xl:pt-0 mr-[30px] ">
-        {showText5 ? (
+        {showText3 ? (
           <FadeInUpDiv>
             <p className="mb-0">
               We don’t pursue a high follow-up investment ratio.
@@ -108,7 +95,7 @@ export default function Components() {
         ) : (
           <></>
         )}
-        {showText6 ? (
+        {showText3 ? (
           <FadeInUpDiv>
             <p className="mb-0">
               Our goal is to be the first friend that founders can turn to in

@@ -63,7 +63,7 @@ export default function FounderImageCarousel({ data }) {
         </div>
       </div>
       <div className="block lg:hidden absolute bottom-[63px] w-full">
-        <div className="flex flex-col items-center justify-center z-10">
+        <div className="flex flex-col items-center justify-center z-10 ">
           <div className="flex flex-col items-center justify-center leading-[1] ">
             <p className="text-white text-[32px] 2xl:text-[50px] font-thin popinsFont">
               FOUNDER
@@ -78,7 +78,7 @@ export default function FounderImageCarousel({ data }) {
             </div>
           </div>
           <div className="flex items-center justify-center mx-[20px]">
-            <p className="text-white popinsFont  font-light text-[13px] 2xl:text-[20px] 2xl:font-normal text-center">
+            <p className="text-white popinsFont  font-light text-[13px] 2xl:text-[20px] 2xl:font-normal text-center pt-[20px] mb-[26px]">
               {data?.acf?.title.slice(0, 64).concat("...")}
             </p>
           </div>
