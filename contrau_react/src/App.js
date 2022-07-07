@@ -7,8 +7,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route exact path="/story" element={<InterviewPage/>}/>
-        <Route exact path="/detailfounder/:founderid" element={<DetailFounder/>}/>
+        <Route exact path="/story" element={<InterviewPage />} />
+        <Route exact path="/detailfounder/:founderId" element={<DetailFounder />} />
       </Routes>
     </BrowserRouter>
   );

@@ -28,8 +28,8 @@ function HeaderFounder({ detailFounder }) {
           {isMatch ? (
             <img
               src={
-                Object.keys(detailFounder).length != 0
-                  ? detailFounder.acf.thumbnail
+                !!detailFounder
+                  ? detailFounder.acf.header_thumbnail
                   : undefined
               }
               // src={interviewdetail}
@@ -39,8 +39,8 @@ function HeaderFounder({ detailFounder }) {
           ) : (
             <img
               src={
-                Object.keys(detailFounder).length != 0
-                  ? detailFounder.acf.image.toString()
+                !!detailFounder
+                  ? detailFounder.acf.header_image
                   : undefined
               }
               alt="logotrau"
@@ -82,7 +82,7 @@ function HeaderFounder({ detailFounder }) {
           </Box>
           <Box className="titlecompany">
             {Object.keys(detailFounder).length != 0 &&
-              detailFounder.acf.company}
+              detailFounder.acf.company_name}
           </Box>
         </Box>
       </Box>
