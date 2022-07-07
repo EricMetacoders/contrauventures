@@ -17,11 +17,11 @@ export default function Founders() {
     };
   }, []);
   return (
-    <div className="mx-[34px] md:mx-[117px] 2xl:mx-[300px] ">
+    <div className="mx-[34px] md:mx-[117px] 2xl:mx-[300px]">
       <div className="mt-[80px] md:mt-[300px]">
         <div>
           {/* desktop animation */}
-          <div className="hidden md:block w-[1319px] h-[442px]">
+          <div className="hidden md:block xl:w-[1119px] 2xl:w-[1319px] h-[442px]">
             {/* start animation */}
             {offset > 2300 ? <FounderTextAnimation /> : <></>}
           </div>

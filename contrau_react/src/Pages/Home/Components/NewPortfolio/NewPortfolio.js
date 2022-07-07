@@ -67,7 +67,7 @@ export default function NewPortfolio() {
         {/* tabs */}
         <div className="flex items-center justify-center pb-[87px] 2xl:pb-[200px] pt-[38px] 2xl:pt-[119px] bg-portfolioBg">
           <div className="mx-[20px]">
-            <div className="hidden 2xl:block">
+            <div className="hidden md:block">
               <Tabs defaultActiveKey="1">
                 <TabPane
                   tab={
@@ -97,7 +97,7 @@ export default function NewPortfolio() {
                 <TabPane
                   tab={
                     <div className="popinsFont text-[10px] 2xl:text-[20px] 2xl:font-semibold w-full h-full   flex flex-col items-center justify-center">
-                      <p className="2xl:block hidden">SW Infrastructure</p>
+                      <p className="md:block hidden">SW Infrastructure</p>
                     </div>
                   }
                   key="2"
@@ -122,7 +122,7 @@ export default function NewPortfolio() {
                 <TabPane
                   tab={
                     <div className=" popinsFont 2xl:text-[20px] 2xl:font-semibold w-full h-full  flex flex-col items-center justify-center">
-                      <p className="2xl:block hidden">Digital Supply Chainl</p>
+                      <p className="md:block hidden">Digital Supply Chainl</p>
                     </div>
                   }
                   key="3"
@@ -147,7 +147,7 @@ export default function NewPortfolio() {
                 <TabPane
                   tab={
                     <div className="popinsFont text-[10px] 2xl:text-[20px] 2xl:font-semibold w-full h-full   flex items-center justify-center">
-                      <p className="hidden 2xl:block">Sustainable Megacity</p>
+                      <p className="hidden md:block">Sustainable Megacity</p>
                     </div>
                   }
                   key="4"
@@ -171,7 +171,7 @@ export default function NewPortfolio() {
                 </TabPane>
               </Tabs>
             </div>
-            <div className="block 2xl:hidden lg:mt-[134px]">
+            <div className="block md:hidden lg:mt-[134px]">
               <div className="w-screen h-full">
                 <PortfolioSlick />
               </div>

@@ -11,7 +11,7 @@ export default function News() {
 
   return (
     <div>
-      <div className=" mx-[34px] xl:mx-[300px]">
+      <div className=" mx-[34px] xl:mx-[100px] 2xl:mx-[300px]">
         <div className="border-t-[1px] 2xl:mt-[2px]"></div>
         <div className="flex items-center justify-between mt-[276px]">
           <div className="flex items-end justify-start">
@@ -30,7 +30,7 @@ export default function News() {
         </div>
 
         <div className="mt-[109px]">
-          <div className="flex flex-col 2xl:flex-row items-center justify-center 2xl:space-x-6">
+          <div className="flex flex-col md:flex-row items-center justify-center 2xl:space-x-6">
             {data?.map((n, index) => {
               return (
                 <div

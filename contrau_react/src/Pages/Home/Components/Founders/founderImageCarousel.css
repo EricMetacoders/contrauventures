@@ -74,6 +74,7 @@
     bottom: -74px;
     left: 65px;
   }
+
   #divBtn:hover > .bgBlur {
     transform: translateY(-265px);
     transition-property: all;

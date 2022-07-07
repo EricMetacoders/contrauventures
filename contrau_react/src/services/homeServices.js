@@ -22,7 +22,7 @@ export const homeServices = {
   },
   getPortfolioList() {
     return axios({
-      url: `${BASE_URL}portfoilos`,
+      url: `${BASE_URL}portfoilos/?per_page=100`,
       method: "GET",
     });
   },
