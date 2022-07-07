@@ -5,7 +5,7 @@ import logoMobile from "../../../../assets/homepage_img/logo_mobile.png";
 import HeaderDropDown from "./HeaderDropDown";
 export default function Header() {
   return (
-    <div className="md:h-[80px] w-screen">
+    <div className="md:h-[80px] ">
       <div className="ml-[20px] mr-[10px] md:mx-[90px] h-full">
         <div className="flex items-center justify-between w-full h-full">
           <div className="hidden md:block">

@@ -58,6 +58,51 @@
       margin: auto;
       height: auto;
       z-index: 100;
+
+      .framequote {
+        width: 1320px;
+        height: 352px;
+        margin: auto;
+        margin-top: 100px;
+        .framedot1 {
+          width: fit-content;
+          margin-left: 61px;
+          margin-top: 40px;
+        }
+        .frametitleqoute {
+          margin-left: 210px;
+          margin-right: 210px;
+
+          font-family: "Poppins", sans-serif;
+          font-size: 54px;
+          line-height: 100%;
+          font-style: normal;
+          letter-spacing: 0.02em;
+          color: #000000;
+          width: 907px;
+          height: 54px;
+          text-align: center;
+          .title1 {
+            font-weight: 100;
+          }
+          .title2 {
+            width: fit-content;
+            display: inline-block;
+            height: 58px;
+            font-style: italic;
+            font-weight: 800;
+            border-bottom: 18px solid rgba(219, 47, 51, 0.9294117647);
+          }
+        }
+        .framedot2 {
+          width: fit-content;
+          margin-left: auto;
+          margin-right: 86px;
+          margin-bottom: 31px;
+          // margin-top: 40px;
+        }
+      }
+
       .frameimagequote {
         margin-top: 60px;
         margin-left: 300px;
@@ -66,6 +111,7 @@
           content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imagequote.png");
         }
       }
+
       .framearticle {
         width: 100%;
         margin: auto;
@@ -516,6 +562,49 @@
         width: auto;
         margin: auto;
         height: auto;
+        .framequote {
+          width: 100%;
+          height: auto;
+          margin: auto;
+          margin-top: 40px;
+          .framedot1 {
+            width: 60px;
+            height: 60px;
+            margin-left: 12px;
+            margin-top: 0px;
+          }
+          .frametitleqoute {
+            margin-left: 0px;
+            margin-right: 0px;
+            margin: auto;
+            font-size: 24px;
+            line-height: 100%;
+            letter-spacing: 0.02em;
+            color: #000000;
+            width: 259px;
+            height: 48px;
+            text-align: center;
+            .title1 {
+              font-weight: 100;
+            }
+            .title2 {
+              width: fit-content;
+              display: inline-block;
+              height: 23px;
+              font-style: italic;
+              font-weight: 800;
+              border-bottom: 8px solid rgba(219, 47, 51, 0.9294117647);
+            }
+          }
+          .framedot2 {
+            width: 60px;
+            height: 60px;
+            margin-left: auto;
+            margin-right: 12px;
+            margin-bottom: 0px;
+            // margin-top: 40px;
+          }
+        }
         .frameimagequote {
           width: 100%;
           padding-left: 27px;
@@ -793,7 +882,6 @@
       width: 100%;
       margin: auto;
       margin-top: 120px;
-
       .framenewtitle {
         display: flex;
         height: 44px;
@@ -842,8 +930,8 @@
         flex-direction: column;
         margin-top: 50px;
         column-gap: 0px;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 35px;
+        padding-right: 35px;
         margin-bottom: 70px;
         .framedetail {
           display: flex;
@@ -852,7 +940,6 @@
           width: 100%;
           height: 370px;
           text-align: left;
-          border-bottom: 1px solid #101010;
           margin-bottom: 30px;
 
           :nth-child(2) {
@@ -870,7 +957,7 @@
             flex-grow: 0;
           }
           :nth-child(3) {
-            width: 90%;
+            width: 100%;
             margin-top: 10px;
             font-size: 18px;
             /* or 142% */
@@ -885,7 +972,7 @@
             text-decoration: underline black 2px;
           }
           :nth-child(4) {
-            width: 90%;
+            width: 100%;
             margin-top: 10px;
             font-family: "Poppins", sans-serif;
             font-style: normal;

@@ -38,6 +38,7 @@ export default function FounderCarousel() {
       {
         breakpoint: 600,
         settings: {
+          centerMode: true,
           slidesToShow: 2,
           slidesToScroll: 1,
           initialSlide: 2,

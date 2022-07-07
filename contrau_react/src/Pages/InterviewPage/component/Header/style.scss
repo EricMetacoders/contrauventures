@@ -2,7 +2,7 @@
   display: flex;
   position: relative;
   width: auto;
-  height: 480px;
+  // height: auto;
   .frameimglayout {
     position: relative;
     width: 100%;
@@ -52,6 +52,9 @@
       order: 0;
       flex-grow: 0;
     }
+    .titledetaiframeheader:hover {
+      color: #828383;
+    }
     .titledetaiframeheader-active {
       margin-left: 48px;
 
@@ -71,6 +74,9 @@
       flex: none;
       order: 0;
       flex-grow: 0;
+    }
+    .titledetaiframeheader-active:hover {
+      color: #828383;
     }
   }
 
@@ -160,4 +166,8 @@
 
 /* TABLET WIDTH >=740px and width < 1024px*/
 @media only screen and (min-width: 740px) and (max-width: 1023px) {
+}
+
+/* PC WIDTH >=1280px and width < 1535px*/
+@media only screen and (min-width: 1280px) and (max-width: 1535px) {
 }

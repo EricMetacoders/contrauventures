@@ -86,11 +86,12 @@ function MainFounder(props) {
 
   const dealClick = async (item) => {
     setClicked(item.name);
+
     if (item.name !== "View All") {
       var _listFounder = await getListFounder();
-      console.log("_listFounder:", _listFounder);
+
       const filtercategory = _listFounder.data.filter((founder) => {
-        return item.name.toLowerCase() == founder.acf.category;
+        return founder.acf.category == item.name;
       });
       setListFounder2(filtercategory);
     } else {
@@ -98,7 +99,6 @@ function MainFounder(props) {
       setListFounder2(_listFounder.data);
     }
   };
-
   async function getIdFounderFromAPI() {
     try {
       let listFounderInteview = await interviewServices.getFounderIDByName();
@@ -112,18 +112,7 @@ function MainFounder(props) {
     const interviewId = item.acf.interview[0];
     history(`/detailfounder/${interviewId}`);
   };
-  const clickDetailFounderMobile = async (item) => {
-    // GET API
-    let resultList = await getIdFounderFromAPI();
 
-    var findID = Object.values(resultList.data).find(
-      (element) =>
-        element.acf.first_name.toLowerCase() ==
-          item.acf.first_name.toLowerCase() &&
-        element.acf.last_name.toLowerCase() == item.acf.last_name.toLowerCase()
-    );
-    history(`/detailfounder/${findID.id}`);
-  };
   return (
     <div className="rootmainfounder">
       {/* FRAME BUTTON */}
@@ -173,7 +162,7 @@ function MainFounder(props) {
                 alt=""
                 className="imgfounder"
                 onClick={() => {
-                  isMatch && clickDetailFounderMobile(item);
+                  clickDetailFounder(item);
                 }}
               />
               {/* #B0ACA3" */}
@@ -194,11 +183,7 @@ function MainFounder(props) {
                   laboris nisi ut aliquip
                 </Box>
               </div>
-              {/*    background: linear-gradient(
-          180deg,
-          rgba(111, 111, 117, 0) 49%,
-          rgba(49, 50, 52, 1) 75%
-        ); */}
+
               <div
                 className="hidden lg:block  w-full h-full absolute bgBlur2"
                 style={{

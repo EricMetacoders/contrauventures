@@ -79,3 +79,9 @@
     top: 55px;
   }
 }
+
+@media screen and (min-width: 1536px) and (max-width: 1600px) {
+  .ant-collapse-expand-icon {
+    left: 948px;
+  }
+}
