@@ -339,7 +339,6 @@ var test1 = `
     </div>
   </div>`;
 
-// GET API FOR NEW
 async function getAPINew() {
   try {
     const listNew = await interviewServices.getNew();
@@ -353,7 +352,7 @@ function InterviewBody({ detailArticle }) {
   const theme = useTheme();
 
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-
+  
   const [listNew, setListNew] = useState([]);
 
   useEffect(() => {
@@ -364,14 +363,6 @@ function InterviewBody({ detailArticle }) {
   }, []);
   return (
     <Box>
-      {/* GET CONTENT 1 FROM API */}
-      {/* {Object.keys(article).length != 0 && (
-        <div
-          className="framearticle"
-          // dangerouslySetInnerHTML={{ __html: detailArticle.acf.content }}
-          dangerouslySetInnerHTML={{ __html: test1 }}
-        />
-      )} */}
       <div className="framearticle">
         <div className="framehtmlinterview">
           <div className="framequote">

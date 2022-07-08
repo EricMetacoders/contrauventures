@@ -20,7 +20,6 @@ function HeaderComponent({ pagecurrent }) {
   const clickToScroll = () => {
     navigate("/", { state: { id: 1, name: "porfolio" } });
   };
-
   //END RESPONSIVE
   return (
     <div>
