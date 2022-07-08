@@ -63,13 +63,13 @@ function HeaderFounder({ detailFounder }) {
         )}
         <Box className="framemaintilecenterheader">
           {
-            !isMatch
+            isMatch
             ? detailFounder?.acf?.first_name.toUpperCase() || ""
             : detailFounder?.acf?.first_name.toLowerCase() || ""
           }
           <Box className="framedetailtitlemain">
             {
-              !isMatch
+              isMatch
               ? detailFounder?.acf?.last_name.toUpperCase() || ""
               : detailFounder?.acf?.last_name.toLowerCase() || ""
             }
