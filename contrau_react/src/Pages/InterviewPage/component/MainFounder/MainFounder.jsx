@@ -99,26 +99,10 @@ function MainFounder(props) {
       setListFounder2(_listFounder.data);
     }
   };
-  async function getIdFounderFromAPI() {
-    try {
-      let listFounderInteview = await interviewServices.getFounderIDByName();
-      return listFounderInteview;
-    } catch (error) {
-      console.log("Failed to fetch", error);
-    }
-  }
 
   const clickDetailFounder = async (item) => {
-    // GET API
-    let resultList = await getIdFounderFromAPI();
-
-    var findID = Object.values(resultList.data).find(
-      (element) =>
-        element.acf.first_name.toLowerCase() ==
-          item.acf.first_name.toLowerCase() &&
-        element.acf.last_name.toLowerCase() == item.acf.last_name.toLowerCase()
-    );
-    history(`/detailfounder/${findID.id}`);
+    const founderId = item.acf.interview[0];
+    history(`/detailfounder/${founderId}`);
   };
 
   return (

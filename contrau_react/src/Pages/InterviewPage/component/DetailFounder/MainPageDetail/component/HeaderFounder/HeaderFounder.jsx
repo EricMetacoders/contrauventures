@@ -1,11 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Box, useMediaQuery, useTheme } from "@material-ui/core";
-import logobackgroundheader from "../../../../../../../assets/interview-img/logobackgroundheader.png";
-import logobackgroundheadermb from "../../../../../../../assets/interview-img/logobackgroundheadermb.png";
 import logotrau from "../../../../../../../assets/interview-img/logotrauventure.png";
 import logotraumb from "../../../../../../../assets/interview-img/logotrauventure-mb.png";
-import interviewdetail from "../../../../../../../assets/interview-img/interviewdetail.png";
 import "./style.scss";
 import { Link } from "react-router-dom";
 import TemporaryDrawer from "./TemporaryDrawer";
@@ -15,12 +12,10 @@ HeaderFounder.propTypes = {
 };
 
 function HeaderFounder({ detailFounder }) {
-  //RESPONSIVE
   const theme = useTheme();
 
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
 
-  //END RESPONSIVE
   return (
     <div>
       <Box className="frameheaderfoundermain">
@@ -28,20 +23,15 @@ function HeaderFounder({ detailFounder }) {
           {isMatch ? (
             <img
               src={
-                Object.keys(detailFounder).length != 0
-                  ? detailFounder.acf.thumbnail
-                  : undefined
+                detailFounder?.acf?.header_thumbnail || ""
               }
-              // src={interviewdetail}
               alt="logotrau"
               className="logobackgroundheader"
             />
           ) : (
             <img
               src={
-                Object.keys(detailFounder).length != 0
-                  ? detailFounder.acf.image.toString()
-                  : undefined
+                detailFounder?.acf?.header_image || ""
               }
               alt="logotrau"
               className="logobackgroundheader"
@@ -70,19 +60,22 @@ function HeaderFounder({ detailFounder }) {
           </Box>
         )}
         <Box className="framemaintilecenterheader">
-          {Object.keys(detailFounder).length != 0 &&
-            (!isMatch
-              ? detailFounder.acf.first_name.toUpperCase()
-              : detailFounder.acf.first_name)}
+          {
+            !isMatch
+            ? detailFounder?.acf?.first_name.toUpperCase() || ""
+            : detailFounder?.acf?.first_name.toLowerCase() || ""
+          }
           <Box className="framedetailtitlemain">
-            {Object.keys(detailFounder).length != 0 &&
-              (!isMatch
-                ? detailFounder.acf.last_name.toUpperCase()
-                : detailFounder.acf.last_name)}
+            {
+              !isMatch
+              ? detailFounder?.acf?.last_name.toUpperCase() || ""
+              : detailFounder?.acf?.last_name.toLowerCase() || ""
+            }
           </Box>
           <Box className="titlecompany">
-            {Object.keys(detailFounder).length != 0 &&
-              detailFounder.acf.company}
+            {
+              detailFounder?.acf?.company_name.split('"')[0]
+            }
           </Box>
         </Box>
       </Box>

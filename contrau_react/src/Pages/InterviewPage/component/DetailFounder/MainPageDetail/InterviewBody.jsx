@@ -10,11 +10,7 @@ InterviewBody.propTypes = {
   detailArticle: PropTypes.object,
 };
 
-function InterviewBody({ detailArticle }) {
-  const theme = useTheme();
-
-  const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-  var test1 = `
+var test1 = `
   <div class="framearticle">
     <div class="framehtmlinterview">
               <div className="framequote">
@@ -343,49 +339,30 @@ function InterviewBody({ detailArticle }) {
     </div>
   </div>`;
 
-  // GET API FOR ARTICLE
-  async function getArticleNew() {
-    try {
-      let listArticle = await interviewServices.getArticleDetail();
-      return listArticle;
-    } catch (error) {
-      console.log("Failed to fetch", error);
-    }
+// GET API FOR NEW
+async function getAPINew() {
+  try {
+    const listNew = await interviewServices.getNew();
+    return listNew;
+  } catch (error) {
+    console.log("Failed to fetch", error);
   }
+}
 
-  // GET API FOR NEW
-  async function getAPINew() {
-    try {
-      let listNew = await interviewServices.getNew();
-      return listNew;
-    } catch (error) {
-      console.log("Failed to fetch", error);
-    }
-  }
+function InterviewBody({ detailArticle }) {
+  const theme = useTheme();
+
+  const isMatch = useMediaQuery(theme.breakpoints.down("md"));
+
   const [listNew, setListNew] = useState([]);
-  const [article, setArticle] = useState({});
-  console.log("article:", article);
 
   useEffect(() => {
-    if (Object.values(detailArticle).length != 0) {
-      async function fetchDataArticle() {
-        const listDataArticle = await getArticleNew();
-
-        let findArticle = listDataArticle.data.find(
-          (element) =>
-            element.acf.first_name == detailArticle.acf.first_name &&
-            element.acf.last_name == detailArticle.acf.last_name
-        );
-        setArticle(findArticle.acf.content);
-      }
-      async function fetchDataNew() {
-        const listDataNew = await getAPINew();
-        setListNew(listDataNew.data);
-      }
-      fetchDataArticle();
-      fetchDataNew();
-    }
-  }, [detailArticle]);
+    (async function() {
+      const _listNew = await getAPINew();
+      setListNew(_listNew.data);
+    })();
+    // setArticle(detailArticle);
+  }, []);
   return (
     <Box>
       {/* GET CONTENT 1 FROM API */}
@@ -396,7 +373,6 @@ function InterviewBody({ detailArticle }) {
           dangerouslySetInnerHTML={{ __html: test1 }}
         />
       )} */}
-
       <div className="framearticle">
         <div className="framehtmlinterview">
           <div className="framequote">
@@ -405,55 +381,65 @@ function InterviewBody({ detailArticle }) {
             </div>
             <div className="frametitleqoute">
               <span className="title1">
-                {Object.values(article).length != 0 && article.qoute.part_1}
-                &nbsp;
+                {
+                  detailArticle?.qoute?.part_1 || ""
+                }
               </span>
+              &nbsp;
               <span className="title2">
-                {Object.values(article).length != 0 && article.qoute.part_2}
+                {
+                  detailArticle?.qoute?.part_2 || ""
+                }
               </span>
             </div>
             <div className="framedot2">
               <img src={dot2} />
             </div>
           </div>
-
-          {Object.values(article).length != 0 && (
-            <div
-              className="framearticle"
-              dangerouslySetInnerHTML={{
-                __html: article.content_part_1.detail_content,
-              }}
-            />
-          )}
-
-          {Object.values(article).length != 0 && (
-            <div
-              className=""
-              dangerouslySetInnerHTML={{
-                __html: article.content_part_1.detail_content_image,
-              }}
-            />
-          )}
+          {
+            !detailArticle
+            ? <div />
+            : <div
+                className="framearticle"
+                dangerouslySetInnerHTML={{
+                  __html: detailArticle.content_part_1?.detail_content || "",
+                }}
+              />
+          }
+          {
+            !detailArticle
+            ? <div />
+            : <div
+                className="framearticle"
+                dangerouslySetInnerHTML={{
+                  __html: detailArticle.content_part_1?.detail_content_image || "",
+                }}
+              />
+          }
         </div>
-
         <div className="framearticle">
-          {Object.values(article).length != 0 && (
-            <div
-              dangerouslySetInnerHTML={{
-                __html: article.content_part_2.detail_content,
-              }}
-            />
-          )}
-          {Object.values(article).length != 0 && (
-            <div
-              dangerouslySetInnerHTML={{
-                __html: article.content_part_3.detail_content,
-              }}
-            />
-          )}
+          {
+            !detailArticle
+            ? <div />
+            : <div
+                className="framearticle"
+                dangerouslySetInnerHTML={{
+                  __html: detailArticle.content_part_2?.detail_content || "",
+                }}
+              />
+          }
+          {
+            !detailArticle
+            ? <div />
+            : <div
+                className="framearticle"
+                dangerouslySetInnerHTML={{
+                  __html: detailArticle.content_part_2?.detail_content || "",
+                }}
+              />
+          }
         </div>
       </div>
-
       {/* FRAME NEW */}
       <Box className="framenew">
         <Box className="framenewtitle">
@@ -470,8 +456,8 @@ function InterviewBody({ detailArticle }) {
                   <img
                     src={
                       isMatch
-                        ? item.acf.thumbnail.toString()
-                        : item.acf.image.toString()
+                        ? item?.acf?.thumbnail.toString() || ""
+                        : item?.acf?.image.toString() || ""
                     }
                     alt=""
                   />
