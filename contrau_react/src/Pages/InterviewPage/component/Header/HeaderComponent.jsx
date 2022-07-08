@@ -54,9 +54,7 @@ function HeaderComponent({ pagecurrent }) {
           <TemporaryDrawer />
         ) : (
           <Box className="titledetaimainframeheader">
-            <Link to="/">
-              <Box className="titledetaiframeheader">HOME</Box>
-            </Link>
+            <Box className="titledetaiframeheader">HOME</Box>
             <Box className="titledetaiframeheader">About Us</Box>
 
             <Box className="titledetaiframeheader" onClick={clickToScroll}>

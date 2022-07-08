@@ -194,3 +194,24 @@
 /* TABLET WIDTH >=740px and width < 1024px*/
 @media only screen and (min-width: 740px) and (max-width: 1023px) {
 }
+
+/* PC WIDTH >=1280px and width < 1535px*/
+@media only screen and (min-width: 1280px) and (max-width: 1535px) {
+  .frameheaderfoundermain {
+    .framemaintilecenterheader {
+      // CHANGE FONT SIZE FOR RESOLUTION
+      font-size: 80px;
+      line-height: 80px;
+      .framedetailtitlemain {
+        font-style: normal;
+        font-weight: 700;
+      }
+      .framedetailtitlemain::after {
+        // CHANGE FONT SIZE FOR RESOLUTION
+        margin-top: 30px;
+        margin-left: 5px;
+        background: #fcfcfc;
+      }
+    }
+  }
+}
