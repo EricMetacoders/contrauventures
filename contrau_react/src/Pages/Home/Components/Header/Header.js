@@ -4,6 +4,13 @@ import logo from "../../../../assets/homepage_img/logo.png";
 import logoMobile from "../../../../assets/homepage_img/logo_mobile.png";
 import HeaderDropDown from "./HeaderDropDown";
 export default function Header() {
+  const handleClick = () => {
+    // window.scrollTo(0, 6343);
+    window.scrollTo({
+      top: 6343,
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="md:h-[80px] ">
       <div className="ml-[20px] mr-[10px] md:mx-[90px] h-full">
@@ -30,7 +37,10 @@ export default function Header() {
             <p className="popinsFont text-[16px] font-normal hover:text-hoverGrey transition-all cursor-pointer">
               About Us
             </p>
-            <p className="popinsFont text-[16px] font-normal hover:text-hoverGrey transition-all cursor-pointer">
+            <p
+              className="popinsFont text-[16px] font-normal hover:text-hoverGrey transition-all cursor-pointer"
+              onClick={handleClick}
+            >
               Portfolio
             </p>
             <Link to="/story">

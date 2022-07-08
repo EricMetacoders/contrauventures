@@ -4,6 +4,7 @@ import FounderTextAnimation from "./FounderTextAnimation";
 import { getFounderList } from "../../../../reducers/homeSlice";
 import FounderCarousel from "./FounderCarousel";
 import MobileCarousel from "./MobileCarousel";
+import "./founderImageCarousel.scss";
 export default function Founders() {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -23,7 +24,7 @@ export default function Founders() {
         <div className="mt-[80px] md:mt-[300px]">
           <div>
             {/* desktop animation */}
-            <div className="hidden md:block xl:w-[1119px] 2xl:w-[1319px] h-[442px]">
+            <div className="hidden md:block xl:w-[1119px] 2xl:w-[1127px] h-[442px]">
               {/* start animation */}
               {offset > 2300 ? <FounderTextAnimation /> : <></>}
             </div>
@@ -40,10 +41,11 @@ export default function Founders() {
       </div>
       <div
         id="founderCarousel"
-        className="hidden md:block md:ml-0 mb-[30px] md:mb-0  mt-[110px] md:mt-[78px] lg:mt-[200px] overflow-visible xl:ml-[107px] 2xl:mx-[300px]"
+        className="hidden md:block md:ml-[12%] md:mt-[46%] lg:ml-0 mb-[30px] md:mb-0  mt-[110px] sm:mt-[78px] lg:mt-[27%px] overflow-visible xl:ml-[107px] 2xl:mx-[300px]"
       >
         <FounderCarousel />
       </div>
+
       <div className="block md:hidden">
         <MobileCarousel />
       </div>

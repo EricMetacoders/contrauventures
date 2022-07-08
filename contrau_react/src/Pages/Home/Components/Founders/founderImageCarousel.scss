@@ -8,7 +8,7 @@
 .btnInterview {
   position: absolute;
   bottom: -71px;
-  left: 120px;
+  left: 105px;
 }
 
 #divBtn:hover > .bgBlur {
@@ -65,26 +65,29 @@
 
 @media only screen and (min-width: 769px) and (max-width: 1280px) {
   .slick-prev:before {
-    left: -62px;
+    left: -467%;
   }
   .slick-next:before {
-    left: -54px;
+    right: -129%;
   }
   .btnInterview {
     bottom: -74px;
-    left: 65px;
+    left: 20%;
   }
 
   #divBtn:hover > .bgBlur {
-    transform: translateY(-265px);
+    transform: translateY(-560px);
     transition-property: all;
     transition-duration: 200ms;
+  }
+  .slick-slider {
+    padding-left: -4%;
   }
 }
 
 @media only screen and (min-width: 1281px) and (max-width: 1440px) {
   .slick-prev:before {
-    left: -150px;
+    left: -143px;
   }
   .slick-next:before {
     left: -47px;
@@ -94,7 +97,7 @@
     left: 65px;
   }
   #divBtn:hover > .bgBlur {
-    transform: translateY(-265px);
+    transform: translateY(-522px);
     transition-property: all;
     transition-duration: 200ms;
   }
@@ -102,10 +105,8 @@
 
 @media screen and (min-width: 1536px) and (max-width: 1600px) {
   #divBtn {
-    width: 300px !important ;
-    height: 448px !important;
-    #seeF {
-    }
+    width: 327px !important;
+    height: 554px !important;
     #founderText {
       #founder {
         p {
@@ -125,10 +126,14 @@
     }
   }
   .btnInterview {
-    left: 51px;
+    left: 61px;
   }
 
   #divBtn:hover > .bgBlur {
     transform: translateY(-539px);
   }
+}
+
+.carousel.carousel-slider {
+  margin: auto;
 }

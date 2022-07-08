@@ -18,9 +18,9 @@ function HeaderComponent({ pagecurrent }) {
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
   let navigate = useNavigate();
   const clickToScroll = () => {
-    navigate("/", { state: { id: 1, name: "sabaoon" } });
+    navigate("/", { state: { id: 1, name: "porfolio" } });
   };
-  let test = "12";
+
   //END RESPONSIVE
   return (
     <div>

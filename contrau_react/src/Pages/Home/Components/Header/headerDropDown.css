@@ -26,13 +26,14 @@ html {
   display: none !important;
 }
 
-.ant-modal-content {
-  right: -155px;
-  width: 248px;
-  top: -109px;
-  height: 100vh;
+.ant-modal {
+  margin: 0 !important;
 }
 
 a {
   color: black;
+}
+
+.ant-modal-body {
+  height: 100vh;
 }

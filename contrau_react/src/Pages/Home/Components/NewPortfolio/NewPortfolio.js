@@ -65,7 +65,7 @@ export default function NewPortfolio() {
         </div>
 
         {/* tabs */}
-        <div className="flex items-center justify-center pb-[87px] 2xl:pb-[200px] pt-[38px] 2xl:pt-[119px] bg-portfolioBg">
+        <div className="flex items-center justify-center pb-[87px] 2xl:pb-[200px] pt-[38px] lg:pt-[15%] 2xl:pt-[119px] bg-portfolioBg">
           <div className="mx-[20px]">
             <div className="hidden md:block">
               <Tabs defaultActiveKey="1">
@@ -172,7 +172,7 @@ export default function NewPortfolio() {
               </Tabs>
             </div>
             <div className="block md:hidden lg:mt-[134px]">
-              <div className="w-screen h-full">
+              <div className="w-[330px]">
                 <PortfolioSlick />
               </div>
             </div>

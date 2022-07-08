@@ -33,7 +33,7 @@ export default function FounderImageCarousel({ data }) {
   return (
     <div
       id="divBtn"
-      className=" relative imgCarousel  w-[291px] h-[448px] md:w-[223px] md:h-[350px] xl:h-[550px] xl:w-[323px] 2xl:h-[664px] 2xl:w-[424px] rounded-3xl overflow-hidden"
+      className=" relative imgCarousel  w-[291px] h-[448px] md:w-[294px] md:h-[457px] xl:h-[550px] xl:w-[323px] 2xl:h-[664px] 2xl:w-[424px] rounded-3xl overflow-hidden"
     >
       <img
         src={data?.acf?.image}

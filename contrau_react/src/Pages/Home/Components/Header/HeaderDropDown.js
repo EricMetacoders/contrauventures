@@ -27,7 +27,9 @@ export default function HeaderDropDown() {
         <img src={mobileMenu} alt="menu" />
       </Button>
       <Modal
+        width={`50%`}
         title={<img src={mobileMenu} alt="menu" />}
+        style={{ top: 0, right: `-50%` }}
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
@@ -38,7 +40,17 @@ export default function HeaderDropDown() {
             <p className="popinsFont text-[1rem] font-extrabold">Home</p>
           </Link>
           <p className="popinsFont text-[1rem] ">About Us</p>
-          <p className="popinsFont text-[1rem] ">Portfolio</p>
+          <p
+            className="popinsFont text-[1rem] "
+            onClick={() => {
+              window.scrollTo({
+                top: 2825,
+                behavior: "smooth",
+              });
+            }}
+          >
+            Portfolio
+          </p>
           <Link to="/story">
             <p className="popinsFont text-[1rem] ">Story</p>
           </Link>
