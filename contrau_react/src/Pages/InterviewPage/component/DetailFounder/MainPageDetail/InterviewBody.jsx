@@ -361,7 +361,6 @@ function InterviewBody({ detailArticle }) {
       const _listNew = await getAPINew();
       setListNew(_listNew.data);
     })();
-    // setArticle(detailArticle);
   }, []);
   return (
     <Box>
