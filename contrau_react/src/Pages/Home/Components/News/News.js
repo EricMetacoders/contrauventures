@@ -47,7 +47,7 @@ export default function News() {
                       {n.acf.categies}
                     </p>
                     <p className="popinsFont 2xl:text-[24px] 2xl:font-normal text-[18px] font-light mb-0 hover:underline underline-offset-1">
-                      {n.acf.title.slice(0, 77).concat("...")}
+                      {n.acf.title.slice(0, 50).concat("...")}
                     </p>
                     <p className="2xl-text[16px] 2xl:font-light 2xl:robotoFlexFont text-[13px] popinsFont font-light mb-0">
                       {n.acf.newscontent.slice(0, 115).concat("...")}

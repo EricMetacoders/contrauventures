@@ -12,8 +12,21 @@ import Footer from "./Components/Footer/Footer";
 import "./index.css";
 import NewPortfolio from "./Components/NewPortfolio/NewPortfolio";
 import Loading from "../../Components/Loading/Loading";
+import { useLocation } from "react-router-dom";
 export default function Home() {
+  const location = useLocation();
   const loading = useSelector((state) => state.homeSlice.loading);
+  useEffect(() => {
+    location?.state?.name === "porfolio"
+      ? window.scrollTo({
+          top: 6343,
+          behavior: "smooth",
+        })
+      : window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+  }, []);
 
   return (
     <>
