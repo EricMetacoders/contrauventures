@@ -99,18 +99,10 @@ function MainFounder(props) {
       setListFounder2(_listFounder.data);
     }
   };
-  async function getIdFounderFromAPI() {
-    try {
-      let listFounderInteview = await interviewServices.getFounderIDByName();
-      return listFounderInteview;
-    } catch (error) {
-      console.log("Failed to fetch", error);
-    }
-  }
 
   const clickDetailFounder = async (item) => {
-    const interviewId = item.acf.interview[0];
-    history(`/detailfounder/${interviewId}`);
+    const founderId = item.acf.interview[0];
+    history(`/detailfounder/${founderId}`);
   };
 
   return (

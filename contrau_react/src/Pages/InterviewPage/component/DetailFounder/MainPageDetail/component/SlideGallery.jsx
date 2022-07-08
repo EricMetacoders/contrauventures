@@ -257,12 +257,6 @@ function SlideGallery({ detailFounder }) {
       <Slider {...settings} ref={slider}>
         {bannerData}
       </Slider>
-      {/* <button onClick={clickMe} style={{ background: "red" }}>
-        CLICK ME
-      </button>
-      <button onClick={clickMe2} style={{ background: "red" }}>
-        CLICK ME2
-      </button> */}
     </div>
   );
 }
