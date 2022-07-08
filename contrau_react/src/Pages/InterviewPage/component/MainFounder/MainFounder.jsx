@@ -109,8 +109,16 @@ function MainFounder(props) {
   }
 
   const clickDetailFounder = async (item) => {
-    const interviewId = item.acf.interview[0];
-    history(`/detailfounder/${interviewId}`);
+    // GET API
+    let resultList = await getIdFounderFromAPI();
+
+    var findID = Object.values(resultList.data).find(
+      (element) =>
+        element.acf.first_name.toLowerCase() ==
+          item.acf.first_name.toLowerCase() &&
+        element.acf.last_name.toLowerCase() == item.acf.last_name.toLowerCase()
+    );
+    history(`/detailfounder/${findID.id}`);
   };
 
   return (

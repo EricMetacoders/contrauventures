@@ -17,9 +17,23 @@ function InterviewBody({ detailArticle }) {
   var test1 = `
   <div class="framearticle">
     <div class="framehtmlinterview">
-          <div class="frameimagequote">
-            <img />
-          </div>
+              <div className="framequote">
+              <div className="framedot1">
+                <img src={dot1} />
+              </div>
+              <div className="frametitleqoute">
+                <span className="title1">
+                      Every one advised mE
+                  &nbsp;
+                </span>
+                <span className="title2">
+                not to do it
+                </span>
+              </div>
+              <div className="framedot2">
+                <img src={dot2} />
+              </div>
+            </div>
             <div class="framearticle">
                     <div class="detailarticle">
                       Just three years after its release, app revenue has given them a
@@ -372,7 +386,6 @@ function InterviewBody({ detailArticle }) {
       fetchDataNew();
     }
   }, [detailArticle]);
-
   return (
     <Box>
       {/* GET CONTENT 1 FROM API */}

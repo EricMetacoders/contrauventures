@@ -6,35 +6,36 @@ import HeaderComponent from "../Header/HeaderComponent";
 import { useParams } from "react-router-dom";
 import { interviewServices } from "../../../../services/interviewService.js";
 import HeaderFounder from "./MainPageDetail/component/HeaderFounder/HeaderFounder";
-
 DetailFounder.propTypes = {
   currentFounder: PropTypes.string,
 };
 
-async function getAPIDetailFounder(founderId) {
-  try {
-    const interviewHtmlGetByFounderId = await interviewServices.getInterviewHtmlByFounderId(
-      founderId
-    );
-    return interviewHtmlGetByFounderId;
-  } catch (error) {
-    console.log("Failed to fetch", error);
-  }
-}
-
 function DetailFounder({ currentFounder }) {
-  var { founderId } = useParams();
+  var founderid = useParams();
 
   const [detailFounder, setDetailFounder] = useState({});
 
+  async function getAPIDetailFounder() {
+    try {
+      let detailFounder = await interviewServices.getFounderDetail(
+        founderid.founderid
+      );
+      return detailFounder;
+    } catch (error) {
+      console.log("Failed to fetch", error);
+    }
+  }
+
   useEffect(() => {
-    (async function () {
-      const interviewHtmlGetByFounderId = await getAPIDetailFounder(founderId);
-      setDetailFounder(interviewHtmlGetByFounderId.data);
-    })();
-  
+    async function fechData() {
+      let _detailfounder = await getAPIDetailFounder();
+      setDetailFounder(_detailfounder.data);
+    }
+    fechData();
     window.scrollTo(0, 0);
   }, []);
+
+  // const getDetailFounder = () => {};
 
   return (
     <div>
