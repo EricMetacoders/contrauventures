@@ -41,7 +41,11 @@ export default function Founders() {
       </div>
       <div
         id="founderCarousel"
+<<<<<<< HEAD
         className="hidden md:block md:ml-[12%] md:mt-[46%] xl:mt-[13%] 2xl:mt-[8%] lg:ml-0 mb-[30px] md:mb-0  mt-[110px] sm:mt-[78px] lg:mt-[27%px] overflow-visible xl:ml-[107px] 2xl:mx-[300px]"
+=======
+        className="hidden md:block md:ml-[12%] md:mt-[10%] lg:ml-0 mb-[30px] md:mb-0  mt-[110px] sm:mt-[78px] lg:mt-[27%px] overflow-visible xl:ml-[107px] 2xl:mx-[300px]"
+>>>>>>> e0ead99ed70da2973c3fa8416d880e45ec3a4e2f
       >
         <FounderCarousel />
       </div>

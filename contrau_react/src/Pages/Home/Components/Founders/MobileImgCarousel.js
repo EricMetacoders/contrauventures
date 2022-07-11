@@ -21,14 +21,8 @@ export default function MobileImgCarousel({ data }) {
   }, []);
 
   const handleSeeFull = (data) => {
-    console.log("data");
-    var findID = Object.values(founderList.data).find(
-      (element) =>
-        element.acf.first_name.toLowerCase() ==
-          data.acf.first_name.toLowerCase() &&
-        element.acf.last_name.toLowerCase() == data.acf.last_name.toLowerCase()
-    );
-    history(`/detailfounder/${findID.id}`);
+    const founderId = data.acf.interview[0];
+    history(`/detailfounder/${founderId}`);
   };
   return (
     <>

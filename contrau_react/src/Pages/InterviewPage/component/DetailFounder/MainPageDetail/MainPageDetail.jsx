@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { Box, useMediaQuery, useTheme } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 import "./style.scss";
-import axios from "axios";
 import InterviewBody from "./InterviewBody";
 import GalleryBody from "./GalleryBody";
 
@@ -40,7 +39,7 @@ function MainPageDetail({ detailArticle }) {
         ))}
       </Box>
       {clicked == "Interview" ? (
-        <InterviewBody detailArticle={detailArticle} />
+        <InterviewBody detailArticle={detailArticle?.acf?.content || {}} />
       ) : (
         <GalleryBody detailFounder={detailArticle} />
       )}

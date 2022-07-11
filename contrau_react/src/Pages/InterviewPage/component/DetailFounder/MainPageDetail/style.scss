@@ -99,16 +99,7 @@
           margin-left: auto;
           margin-right: 86px;
           margin-bottom: 31px;
-          // margin-top: 40px;
-        }
-      }
-
-      .frameimagequote {
-        margin-top: 60px;
-        margin-left: 300px;
-        margin-right: 300px;
-        img {
-          content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imagequote.png");
+          margin-top: 10px;
         }
       }
 
@@ -143,7 +134,7 @@
         margin-left: 300px;
         margin-right: 300px;
         img {
-          content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imagearticle.png");
+          // content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imagearticle.png");
         }
         p {
           font-family: "Roboto Flex", sans-serif;
@@ -199,6 +190,7 @@
             font-style: italic;
             font-weight: 800;
             border-bottom: 18px solid #db2f33ed;
+            margin-left: -10px;
           }
           :nth-child(3) {
             font-weight: 100;
@@ -978,6 +970,602 @@
             font-style: normal;
             font-size: 16px;
             line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* PC WIDTH >=1280px and width < 1535px*/
+@media only screen and (min-width: 1280px) and (max-width: 1535px) {
+  .rootpagedetail {
+    .framearticle {
+      .framehtmlinterview {
+        width: 100%;
+        margin: auto;
+        height: auto;
+        z-index: 100;
+        .framequote {
+          width: 100%;
+          height: auto; // RES ADD
+          margin: auto;
+          margin-top: 100px;
+          .framedot1 {
+            // RESPONSIVE
+            margin-left: 61px;
+            margin-top: 40px;
+          }
+          .frametitleqoute {
+            margin-left: 0x;
+            margin-right: 0px;
+            margin: auto;
+            width: 70%; //responsive
+            height: auto; //responsive
+            text-align: center; //responsive
+            .title1 {
+              width: 100%; //responsive add
+              font-weight: 100;
+            }
+            .title2 {
+              width: fit-content;
+              display: inline-block;
+              height: 58px;
+              font-weight: 800;
+              border-bottom: 18px solid rgba(219, 47, 51, 0.9294117647);
+            }
+          }
+          .framedot2 {
+            width: fit-content;
+            margin-left: auto;
+            margin-right: 61px;
+            margin-bottom: 0px;
+            margin-top: 10px;
+          }
+        }
+
+        .framearticle {
+          width: 75%;
+          margin: auto;
+          margin-top: 40px;
+          padding-left: 0px; // RES
+          padding-right: 0px; // RES
+        }
+        .frameimg {
+          width: 80%; //Res add
+          // height: 450px;
+          margin-left: 0px;
+          margin-right: 0px;
+          margin: auto;
+          margin-top: 90px;
+
+          img {
+          }
+          p {
+            font-family: "Roboto Flex", sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 22px;
+            /* identical to box height, or 157% */
+            text-align: left;
+            letter-spacing: -0.02em;
+
+            color: #999999;
+            /* Inside auto layout */
+
+            flex: none;
+            order: 1;
+            align-self: stretch;
+            flex-grow: 0;
+          }
+        }
+      }
+      .framequestionmain {
+        width: 100%;
+        margin-top: 50px;
+        .frametitle {
+          width: 100%;
+          height: auto;
+          background: #151515;
+          margin-top: 150px;
+          margin-bottom: 150px;
+          .detailtitle {
+            width: 80%;
+            height: auto; //res add
+            padding-top: 75px;
+            padding-bottom: 58px;
+          }
+        }
+        .framequestiontitle {
+          width: 100%;
+          margin: auto;
+          margin-top: 180px;
+          padding-left: 0px;
+          padding-right: 0px;
+          .questiontitle {
+            margin: auto;
+            width: 75%;
+            text-align: left;
+          }
+          .articlequestion {
+            margin: auto;
+            margin-top: 40px;
+            width: 75%;
+
+            .somecannot {
+              display: inline-block;
+              margin-top: 30px;
+            }
+
+            .detailarticle2 {
+              padding-top: 40px;
+            }
+          }
+        }
+        .framequestiontitle2 {
+          width: 100%;
+          margin: auto;
+          margin-top: 110px;
+          padding-left: 0px;
+          padding-right: 0px;
+          .questiontitle {
+            margin: auto;
+            width: 75%;
+            text-align: left;
+            .redcontent {
+              color: #db2f33;
+            }
+          }
+          .articlequestion {
+            margin: auto;
+            margin-top: 40px;
+            width: 75%;
+          }
+        }
+
+        .frameimgarticle {
+          width: 100%;
+          margin-top: 0px;
+          // margin-top: 165px;
+          // margin-bottom: 170px;
+          margin-bottom: 0px;
+          display: flex;
+          // background-color: brown;
+          align-items: center;
+          justify-content: center;
+          .frameimgarticle1 {
+            width: 39%;
+            margin-top: 205px;
+            margin-bottom: 25px;
+            img {
+              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle1.png");
+            }
+          }
+          .frameimgarticle2 {
+            width: 39%;
+            margin-top: 205px;
+            margin-bottom: 25px;
+            margin-left: 23px;
+            img {
+              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle2.png");
+            }
+          }
+          .frameimgarticle3 {
+            margin-top: 125px;
+            width: 80%;
+            img {
+              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle3.png");
+            }
+            p {
+              width: 100%;
+              height: 22px;
+
+              font-family: "Roboto Flex", sans-serif;
+              font-style: normal;
+              font-weight: 300;
+              font-size: 14px;
+              line-height: 22px;
+              /* identical to box height, or 157% */
+
+              letter-spacing: -0.02em;
+
+              color: #999999;
+              text-align: left;
+              /* Inside auto layout */
+            }
+          }
+          .frameimgarticle4 {
+            margin-top: 120px;
+            width: 80%;
+            img {
+              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle4.png");
+            }
+            p {
+              display: inline-block;
+              margin-bottom: 110px;
+              width: 100%;
+              height: 22px;
+
+              font-family: "Roboto Flex", sans-serif;
+              font-style: normal;
+              font-weight: 300;
+              font-size: 14px;
+              line-height: 22px;
+              /* identical to box height, or 157% */
+
+              letter-spacing: -0.02em;
+
+              color: #999999;
+              text-align: left;
+              /* Inside auto layout */
+            }
+          }
+        }
+      }
+    }
+
+    .framenew {
+      width: 100%;
+      margin: auto;
+      margin-top: 150px;
+      margin-bottom: 150px;
+      .framenewtitle {
+        width: auto;
+        height: 60px;
+        margin: auto;
+        text-align: center;
+        /* H2 */
+
+        .viewtitle {
+          display: none;
+        }
+      }
+      .framedetailnewmain {
+        display: flex;
+        margin: auto;
+        margin-top: 100px;
+        column-gap: 20px;
+        width: 80%;
+        .framedetail {
+          display: flex;
+
+          flex-direction: column;
+          width: 334px;
+          height: 355px;
+          text-align: left;
+          border-bottom: 1px solid #101010;
+
+          :nth-child(2) {
+            color: red;
+            margin-top: 15px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            /* identical to box height, or 171% */
+
+            color: #db2f33;
+            /* Inside auto layout */
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+          }
+          :nth-child(3) {
+            margin-top: 15px;
+
+            font-size: 24px;
+            line-height: 34px;
+          }
+          :nth-child(3):hover {
+            cursor: pointer;
+            text-decoration: underline black 2px;
+          }
+          :nth-child(4) {
+            margin-top: 15px;
+
+            font-size: 16px;
+            line-height: 24px;
+            /* or 150% */
+            /* BLACK */
+          }
+        }
+      }
+    }
+  }
+}
+
+/* PC WIDTH >=1536px and width < 1600px*/
+@media only screen and (min-width: 1536px) and (max-width: 1600px) {
+  .rootpagedetail {
+    .framearticle {
+      .framehtmlinterview {
+        width: 100%;
+        margin: auto;
+        height: auto;
+        z-index: 100;
+
+        .framequote {
+          width: auto;
+          height: auto;
+          margin: auto;
+          margin-top: 100px;
+          .framedot1 {
+            width: fit-content;
+            margin-left: 61px;
+            margin-top: 40px;
+          }
+          .frametitleqoute {
+            margin-left: 0x;
+            margin-right: 0px;
+            margin: auto;
+            width: 70%;
+            height: auto; //responsive
+            text-align: center;
+            .title1 {
+              width: 100%; //responsive add
+              font-weight: 100;
+            }
+            .title2 {
+              width: fit-content;
+              display: inline-block;
+
+              font-style: italic;
+              font-weight: 800;
+              border-bottom: 18px solid rgba(219, 47, 51, 0.9294117647);
+            }
+          }
+          .framedot2 {
+            width: fit-content;
+            margin-left: auto;
+            margin-right: 86px;
+            margin-bottom: 31px;
+            // margin-top: 40px;
+          }
+        }
+
+        .framearticle {
+          width: 75%;
+          margin: auto;
+          margin-top: 40px;
+          padding-left: 0px; // RES
+          padding-right: 0px; // RES
+        }
+        .frameimg {
+          width: 80%; //Res add
+          // height: 450px;
+          margin-left: 0px;
+          margin-right: 0px;
+          margin: auto;
+          margin-top: 90px;
+          img {
+          }
+          p {
+            flex: none;
+            order: 1;
+            align-self: stretch;
+            flex-grow: 0;
+          }
+        }
+      }
+
+      .framequestionmain {
+        width: 100%;
+        margin-top: 50px;
+        .frametitle {
+          width: 100%;
+          height: auto;
+          margin-top: 150px;
+          margin-bottom: 150px;
+          .detailtitle {
+            width: 75%;
+            height: auto; //res add
+            padding-top: 75px;
+            padding-bottom: 58px;
+          }
+        }
+        .framequestiontitle {
+          width: 100%;
+          margin: auto;
+          margin-top: 180px;
+          padding-left: 0px;
+          padding-right: 0px;
+          .questiontitle {
+            margin: auto;
+            width: 75%;
+            text-align: left;
+          }
+          .articlequestion {
+            margin: auto;
+            margin-top: 40px;
+            width: 75%;
+
+            .somecannot {
+              display: inline-block;
+              margin-top: 30px;
+            }
+
+            .detailarticle2 {
+              padding-top: 40px;
+            }
+          }
+        }
+        .framequestiontitle2 {
+          width: 100%;
+          margin: auto;
+          margin-top: 110px;
+          padding-left: 0px;
+          padding-right: 0px;
+          .questiontitle {
+            margin: auto;
+            width: 75%;
+          }
+          .articlequestion {
+            margin: auto;
+            margin-top: 40px;
+            width: 75%;
+            text-align: left;
+          }
+        }
+
+        .frameimgarticle {
+          width: 1320px;
+          margin: auto;
+          margin-top: 0px;
+          // margin-top: 165px;
+          // margin-bottom: 170px;
+          margin-bottom: 0px;
+          display: flex;
+          .frameimgarticle1 {
+            margin-top: 205px;
+            margin-bottom: 25px;
+            img {
+              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle1.png");
+            }
+          }
+          .frameimgarticle2 {
+            margin-top: 205px;
+            margin-bottom: 25px;
+            margin-left: 23px;
+            img {
+              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle2.png");
+            }
+          }
+          .frameimgarticle3 {
+            margin-top: 125px;
+
+            img {
+              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle3.png");
+            }
+            p {
+              width: 1320px;
+              height: 22px;
+            }
+          }
+          .frameimgarticle4 {
+            margin-top: 120px;
+            img {
+              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle4.png");
+            }
+            p {
+              display: inline-block;
+              margin-bottom: 110px;
+              width: 1320px;
+              height: 22px;
+            }
+          }
+        }
+      }
+    }
+
+    .framenew {
+      width: 1320px;
+      margin: auto;
+      margin-top: 150px;
+      margin-bottom: 150px;
+      .framenewtitle {
+        width: auto;
+        height: 60px;
+        margin: auto;
+        text-align: center;
+        /* H2 */
+        font-family: "Poppins", sans-serif;
+        font-style: italic;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 60px;
+        /* identical to box height, or 100% */
+
+        letter-spacing: -0.01em;
+        color: #101010;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        .viewtitle {
+          display: none;
+        }
+      }
+      .framedetailnewmain {
+        display: flex;
+        margin-top: 100px;
+        column-gap: 20px;
+        .framedetail {
+          display: flex;
+
+          flex-direction: column;
+          width: 441px;
+          height: 401px;
+          text-align: left;
+          border-bottom: 1px solid #101010;
+
+          :nth-child(2) {
+            color: red;
+            margin-top: 15px;
+            font-family: "Roboto Flex", sans-serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            /* identical to box height, or 171% */
+
+            color: #db2f33;
+            /* Inside auto layout */
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+          }
+          :nth-child(3) {
+            margin-top: 15px;
+            font-family: "Poppins", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 34px;
+            /* or 142% */
+
+            letter-spacing: -0.01em;
+            /* BLACK */
+            color: #101010;
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+          }
+          :nth-child(3):hover {
+            cursor: pointer;
+            text-decoration: underline black 2px;
+          }
+          :nth-child(4) {
+            margin-top: 15px;
+            font-family: "Roboto Flex", sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 24px;
+            /* or 150% */
+            /* BLACK */
+            color: #101010;
+            opacity: 0.8;
+            /* Inside auto layout */
+            flex: none;
+            order: 1;
+            align-self: stretch;
+            flex-grow: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
           }
         }
       }
