@@ -66,51 +66,12 @@ function ListFounder({ listDataFounder }) {
           // columns={{ xs: 12, sm: 2, md: 12, lg: 12, xl: 12 }}
           columns={{ xss: 1, xs: 1, sm: 1, md: 5, lg: 12, xl: 4 }}
           className={styles.gridItem}
-          //   sx={{
-          //     backgroundColor: [
-          //       "red", // theme.breakpoints.up('xxs')
-          //       "orange", // theme.breakpoints.up('xs')
-          //       "green", // theme.breakpoints.up('sm')
-          //       "blue", // theme.breakpoints.up('md')
-          //       "pink", // theme.breakpoints.up('lg')
-          //       "purple", // theme.breakpoints.up('xl')
-          //     ],
-          //   }}
         >
           {/* {Array.from(Array(6)).map((_, index) => ( */}
 
           {listDataFounder &&
             Object.values(listDataFounder).map((item) => (
-              <Grid
-                item
-                key={item.id}
-                // sx={{
-                //   backgroundColor: [
-                //     "cyan", // theme.breakpoints.up('xxs')
-                //     "aqua", // theme.breakpoints.up('xs')
-                //     "brown", // theme.breakpoints.up('sm')
-                //     "gray", // theme.breakpoints.up('md')
-                //     "yellow", // theme.breakpoints.up('lg')
-                //     "black", // theme.breakpoints.up('xl')
-                //   ],
-                // }}
-                className="framefounder"
-              >
-                {/* <Box
-                  sx={{
-                    width: [
-                      "144px",
-                      "144px",
-                      "424px",
-                      "424px",
-                      "424px",
-                      "424px",
-                    ],
-                  }}
-                >
-                  {item.id}
-                </Box> */}
-
+              <Grid item key={item.id} className="framefounder">
                 <Box
                   className="frameimgfounder"
                   key={item.id}
