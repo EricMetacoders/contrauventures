@@ -41,7 +41,8 @@ export default function Group() {
         </div>
       </div>
       <div className="bg-partnersContactBg overflow-hidden">
-        <div className="hidden md:block mt-[172px] ">
+        {/* desktop */}
+        <div className="hidden xl:block mt-[172px] ">
           {/* logo */}
           <div className="overflow-hidden flex  relative h-[179px] items-center">
             <div className="right-left1 absolute flex justify-center items-center ">
@@ -50,7 +51,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 mx-[10px]"
+                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
                     key={i}
                   />
                 );
@@ -62,7 +63,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 mx-[10px]"
+                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
                     key={i}
                   />
                 );
@@ -74,7 +75,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 mx-[10px]"
+                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
                     key={i}
                   />
                 );
@@ -88,7 +89,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 mx-[10px]"
+                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
                     key={i}
                   />
                 );
@@ -100,7 +101,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 mx-[10px]"
+                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
                     key={i}
                   />
                 );
@@ -112,7 +113,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 mx-[10px]"
+                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
                     key={i}
                   />
                 );
@@ -126,7 +127,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100  mx-[10px]"
+                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100  ml-[10px]"
                     key={i}
                   />
                 );
@@ -138,7 +139,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100  mx-[10px]"
+                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100  ml-[10px]"
                     key={i}
                   />
                 );
@@ -150,7 +151,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 mx-[10px]"
+                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
                     key={i}
                   />
                 );
@@ -164,7 +165,133 @@ export default function Group() {
             </button>
           </div>
         </div>
-        <div className="block md:hidden ">
+
+        {/* tablet */}
+        <div className="hidden sm:block xl:hidden">
+          <div className="overflow-hidden flex  relative h-[179px] items-center">
+            <div className="right-left1 absolute flex justify-center items-center ">
+              {partners?.map((logo, i) => {
+                return (
+                  <img
+                    src={logo?.acf?.image}
+                    alt={logo?.acf?.name}
+                    className="w-[92px] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
+                    key={i}
+                  />
+                );
+              })}
+            </div>
+            <div className=" right-left2 absolute flex justify-center items-center ">
+              {partners?.map((logo, i) => {
+                return (
+                  <img
+                    src={logo?.acf?.image}
+                    alt={logo?.acf?.name}
+                    className="w-[92px]  h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
+                    key={i}
+                  />
+                );
+              })}
+            </div>
+            <div className=" right-left3 absolute flex justify-center items-center ">
+              {partners?.map((logo, i) => {
+                return (
+                  <img
+                    src={logo?.acf?.image}
+                    alt={logo?.acf?.name}
+                    className="w-[92px]  h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
+                    key={i}
+                  />
+                );
+              })}
+            </div>
+          </div>
+          <div className="overflow-hidden flex  relative h-[179px] items-center">
+            <div className="left-right1 absolute flex justify-center items-center">
+              {partners?.map((logo, i) => {
+                return (
+                  <img
+                    src={logo?.acf?.image}
+                    alt={logo?.acf?.name}
+                    className="w-[92px]  ] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
+                    key={i}
+                  />
+                );
+              })}
+            </div>
+            <div className=" left-right2 absolute flex justify-center items-center">
+              {partners?.map((logo, i) => {
+                return (
+                  <img
+                    src={logo?.acf?.image}
+                    alt={logo?.acf?.name}
+                    className="w-[92px]   h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
+                    key={i}
+                  />
+                );
+              })}
+            </div>
+            <div className=" left-right3 absolute flex justify-center items-center">
+              {partners?.map((logo, i) => {
+                return (
+                  <img
+                    src={logo?.acf?.image}
+                    alt={logo?.acf?.name}
+                    className="w-[92px]  h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
+                    key={i}
+                  />
+                );
+              })}
+            </div>
+          </div>
+          <div className="overflow-hidden flex  relative h-[179px] items-center ">
+            <div className="absolute right-left1 flex justify-center items-center">
+              {partners?.map((logo, i) => {
+                return (
+                  <img
+                    src={logo?.acf?.image}
+                    alt={logo?.acf?.name}
+                    className="w-[92px] h-[173px] object-contain opacity-80 hover:opacity-100  ml-[10px]"
+                    key={i}
+                  />
+                );
+              })}
+            </div>
+            <div className="absolute right-left2 flex justify-center items-center">
+              {partners?.map((logo, i) => {
+                return (
+                  <img
+                    src={logo?.acf?.image}
+                    alt={logo?.acf?.name}
+                    className="w-[92px]   h-[173px] object-contain opacity-80 hover:opacity-100  ml-[10px]"
+                    key={i}
+                  />
+                );
+              })}
+            </div>
+            <div className="absolute right-left3 flex justify-center items-center">
+              {partners?.map((logo, i) => {
+                return (
+                  <img
+                    src={logo?.acf?.image}
+                    alt={logo?.acf?.name}
+                    className="w-[92px]   h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
+                    key={i}
+                  />
+                );
+              })}
+            </div>
+          </div>
+          {/* logo */}
+          <div className="flex items-center justify-center mt-[20px] ">
+            <button className="mb-[129px] text-[24px] mt-[129px]  px-[40px] py-[15px] border border-white text-white hover:bg-white hover:text-black transition-all">
+              View all 1000+ partners
+            </button>
+          </div>
+        </div>
+
+        {/* mobile */}
+        <div className="block sm:hidden ">
           {/* logo */}
           <div className="overflow-hidden flex  relative h-[80px] items-center ">
             <div className="mobile-right-left1 absolute flex justify-center items-center ">
@@ -173,7 +300,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 mx-[5px]"
+                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 ml-[5px]"
                     key={i}
                   />
                 );
@@ -185,7 +312,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 mx-[5px]"
+                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 ml-[5px]"
                     key={i}
                   />
                 );
@@ -199,19 +326,19 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 mx-[5px]"
+                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 ml-[5px]"
                     key={i}
                   />
                 );
               })}
             </div>
-            <div className="mobile-left-right2 absolute flex justify-center items-center ">
+            <div className="mobile-left-right2 absolute flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 mx-[5px]"
+                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 ml-[5px]"
                     key={i}
                   />
                 );
@@ -225,7 +352,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 mx-[5px]"
+                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 ml-[5px]"
                     key={i}
                   />
                 );
@@ -237,7 +364,7 @@ export default function Group() {
                   <img
                     src={logo?.acf?.image}
                     alt={logo?.acf?.name}
-                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 mx-[5px]"
+                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 ml-[5px]"
                     key={i}
                   />
                 );
