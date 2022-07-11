@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-arround",
-    width: "20%",
+    width: "10%",
     padding: "20px 20px",
     position: "absolute",
     backgroundColor: "aqua",
