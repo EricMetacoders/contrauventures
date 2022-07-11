@@ -10,9 +10,7 @@ export default function Faq() {
   const dispatch = useDispatch();
 
   const faqList = useSelector((state) => state.homeSlice.faqList);
-  const sortList = faqList?.slice().sort((a, b) => {
-    return a.acf.order - b.acf.order;
-  });
+
   useEffect(() => {
     dispatch(getFAQList());
   }, []);
@@ -42,7 +40,7 @@ export default function Faq() {
             )
           }
         >
-          {sortList?.map((ques, index) => {
+          {faqList?.map((ques, index) => {
             return (
               <Panel
                 showArrow={true}

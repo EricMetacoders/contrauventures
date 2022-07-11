@@ -36,7 +36,7 @@ export default function NewPortfolio() {
   }, []);
 
   return (
-    <div className="bg-portfolioBg pt-[2px] md:mt-[171px] 2xl:mt-[300px] relative">
+    <div className="bg-portfolioBg pt-[2px] mt-[171px] 2xl:mt-[300px] relative">
       {/* image */}
       <div className="absolute">
         <img
@@ -46,13 +46,13 @@ export default function NewPortfolio() {
         />
       </div>
 
-      <div className="mt-[157px] 2xl:mt-[787px] bg-portfolioBg">
+      <div className="mt-[50%] 2xl:mt-[787px] bg-portfolioBg">
         {/* text content */}
         <div className="relative">
           {/* desktop animation */}
           <div className="hidden md:block h-[454px]">
             {/* start animation */}
-            {offset > 4700 ? <PortfolioTextAnimation /> : <></>}
+            {offset > 4100 ? <PortfolioTextAnimation /> : <></>}
             {/* end aimation */}
           </div>
 
@@ -67,7 +67,7 @@ export default function NewPortfolio() {
         {/* tabs */}
         <div className="flex items-center justify-center pb-[87px] 2xl:pb-[200px] pt-[38px] lg:pt-[15%] 2xl:pt-[119px] bg-portfolioBg">
           <div className="mx-[20px]">
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <Tabs defaultActiveKey="1">
                 <TabPane
                   tab={
@@ -146,7 +146,7 @@ export default function NewPortfolio() {
                 </TabPane>
                 <TabPane
                   tab={
-                    <div className="popinsFont text-[10px] 2xl:text-[20px] 2xl:font-semibold w-full h-full   flex items-center justify-center">
+                    <div className="popinsFont text-[10px] 2xl:text-[20px] 2xl:font-semibold w-full h-full flex items-center justify-center">
                       <p className="hidden md:block">Sustainable Megacity</p>
                     </div>
                   }
@@ -171,7 +171,7 @@ export default function NewPortfolio() {
                 </TabPane>
               </Tabs>
             </div>
-            <div className="block md:hidden lg:mt-[134px]">
+            <div className="block lg:hidden mt-[0] md:mt-[65%] lg:mt-[134px]">
               <div className="w-[330px]">
                 <PortfolioSlick />
               </div>

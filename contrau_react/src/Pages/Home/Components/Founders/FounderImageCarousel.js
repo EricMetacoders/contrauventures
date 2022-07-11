@@ -105,7 +105,7 @@ export default function FounderImageCarousel({ data }) {
         </div>
       </div>
       <div
-        className="hidden lg:block  w-full h-full absolute bgBlur"
+        className="hidden lg:block  w-full h-full absolute bgBlur "
         style={{
           background: `linear-gradient(0deg,${data.acf.gradient_color} 49%, ${data.acf.background_color}75%)`,
         }}
