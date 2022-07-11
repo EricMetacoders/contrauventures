@@ -32,9 +32,11 @@ export default function FounderImageCarousel({ data }) {
       <img
         src={data?.acf?.image}
         alt={data?.acf?.name}
-        className="rounded-3xl w-full h-full scaleImg"
+        className="rounded-3xl w-full h-full scaleImg "
       />
-      <div className="hidden lg:block absolute bottom-[9%] w-full imgText z-50">
+
+      {/* Desktop */}
+      <div className="hidden 2xl:block absolute bottom-[9%] w-full imgText z-50 ">
         <div className="flex flex-col items-center justify-center space-y-5">
           <div className="flex flex-col items-center justify-center leading-[1]">
             <p className="text-white text-[32px] 2xl:text-[50px] font-thin popinsFont">
@@ -55,7 +57,57 @@ export default function FounderImageCarousel({ data }) {
           </div>
         </div>
       </div>
-      <div className="block lg:hidden absolute bottom-[10%] w-full">
+
+      {/* Small Desktop Screen */}
+
+      <div className="hidden lg:block 2xl:hidden absolute bottom-[9%] w-full imgText z-50 ">
+        <div className="flex flex-col items-center justify-center space-y-5">
+          <div className="flex flex-col items-center justify-center leading-[1]">
+            <p className="text-white text-[32px] 2xl:text-[50px] font-thin popinsFont">
+              FOUNDER
+            </p>
+            <div id="nameText">
+              <p className="text-white text-[32px] 2xl:text-[40px] font-[900] popinsFont break-all">
+                {data?.acf?.first_name.toUpperCase()}
+                &nbsp;
+                {data?.acf?.last_name.toUpperCase()}
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center justify-center mx-[20px]">
+            <p className="text-white popinsFont  font-light text-[13px] 2xl:text-[20px] 2xl:font-normal text-center">
+              {data?.acf?.title.slice(0, 80).concat("...")}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Tablet */}
+      <div className="hidden sm:block lg:hidden absolute bottom-[20%] w-full z-50 ">
+        <div className="flex flex-col items-center justify-center space-y-5">
+          <div className="flex flex-col items-center justify-center leading-[1]">
+            <p className="text-white text-[38px] font-thin popinsFont">
+              FOUNDER
+            </p>
+            <div id="nameText">
+              <p className="text-white text-[40px] font-[900] popinsFont break-all">
+                {data?.acf?.first_name.toUpperCase()}
+                &nbsp;
+                {data?.acf?.last_name.toUpperCase()}
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center justify-center mx-[20px]">
+            <p className="text-white popinsFont  font-light text-[20px] text-center">
+              {data?.acf?.title.slice(0, 80).concat("...")}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile */}
+
+      <div className="block sm:hidden absolute bottom-[16%] w-full ">
         <div className="flex flex-col items-center justify-center z-10 ">
           <div
             id="foundeText"
@@ -63,15 +115,14 @@ export default function FounderImageCarousel({ data }) {
           >
             <p
               id="founder"
-              className="text-white text-[32px] 2xl:text-[40px] font-thin popinsFont"
+              className="text-white text-[28px] 2xl:text-[40px] font-thin popinsFont"
             >
               FOUNDER
             </p>
-            <div className="flex items-center justify-center space-x-3">
-              <p className="text-white text-[29px] 2xl:text-[40px] font-[900] popinsFont">
+            <div>
+              <p className="text-white text-[30px]  font-[900] popinsFont break-all">
                 {data?.acf?.first_name.toUpperCase()}
-              </p>
-              <p className="text-white text-[29px] 2xl:text-[40px] font-[900] popinsFont">
+                &nbsp;
                 {data?.acf?.last_name.toUpperCase()}
               </p>
             </div>
@@ -80,14 +131,14 @@ export default function FounderImageCarousel({ data }) {
             id="pText"
             className="flex items-center justify-center mx-[20px]"
           >
-            <p className="text-white popinsFont  font-light text-[13px] 2xl:text-[20px] 2xl:font-normal text-center pt-[20px] mb-[26px]">
+            <p className="text-white popinsFont  font-light text-[12px] text-center pt-[3%] mb-[26px]">
               {data?.acf?.title.slice(0, 64).concat("...")}
             </p>
           </div>
         </div>
       </div>
-      <div className="absolute  bottom-[6%]  lg:hidden w-full flex justify-center">
-        <div className=" w-[170px] h-[30px] bg-white  cursor-pointer">
+      <div className="absolute  bottom-[6%]  lg:hidden w-full flex justify-center ">
+        <div className=" w-[196px] h-[53px] bg-white  cursor-pointer">
           <div className="flex items-center justify-center w-full h-full">
             <p
               className="popinsFont font-semibold text-[14px] text-black mb-0"
@@ -100,13 +151,15 @@ export default function FounderImageCarousel({ data }) {
           </div>
         </div>
       </div>
+
+      {/* Blur Background */}
       <div
         className="hidden lg:block  w-full h-full absolute bgBlur -translate-y-[43%]"
         style={{
           background: `linear-gradient(0deg,${data.acf.gradient_color} 49%, ${data.acf.background_color}75%)`,
         }}
       ></div>
-      <div className="btnInterview flex justify-center w-full">
+      <div className="btnInterview flex justify-center w-full ">
         <div className="hidden lg:block w-[200px] h-[60px] bg-white  cursor-pointer z-50">
           <div
             id="seeF"
