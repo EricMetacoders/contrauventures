@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import FounderTextAnimation from "./FounderTextAnimation";
 import { getFounderList } from "../../../../reducers/homeSlice";
-import FounderCarousel from "./FounderCarousel";
-import MobileCarousel from "./MobileCarousel";
-import "./founderImageCarousel.scss";
+import FounderCarousel from "./Carousel/FounderCarousel";
+import "./Carousel/founderImageCarousel.scss";
+import TabletCarousel from "./Carousel/TabletCarousel";
+import MobileCarousel from "./Carousel/MobileCarousel";
 export default function Founders() {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -38,15 +39,14 @@ export default function Founders() {
             {/* end animation */}
           </div>
         </div>
+        <div className="hidden lg:block mt-[20%] md:mt-[43%] lg:mt-[18%]">
+          <FounderCarousel />
+        </div>
       </div>
-      <div
-        id="founderCarousel"
-        className="hidden md:block md:ml-[12%] md:mt-[10%] lg:ml-0 mb-[30px] md:mb-0  mt-[110px] sm:mt-[78px] lg:mt-[27%px] overflow-visible xl:ml-[107px] 2xl:mx-[300px]"
-      >
-        <FounderCarousel />
+      <div className="hidden  md:block lg:hidden mt-[20%] md:mt-[43%] lg:mt-[18%]">
+        <TabletCarousel />
       </div>
-
-      <div className="block md:hidden">
+      <div className="block  md:hidden mt-[20%] md:mt-[43%] lg:mt-[18%]">
         <MobileCarousel />
       </div>
     </div>

@@ -1,29 +1,29 @@
 /* Caousel card animation */
 .bgBlur {
-  bottom: -628px;
   left: 0;
   border-bottom: 1.5rem;
 }
 
 .btnInterview {
   position: absolute;
-  bottom: -71px;
-  left: 105px;
+  // bottom: -71px;
+  // left: 50%;
+  transform: translateY(12px);
 }
 
 #divBtn:hover > .bgBlur {
-  transform: translateY(-443px);
+  transform: translateY(-75%);
   transition-property: all;
   transition-duration: 200ms;
 }
 #divBtn:hover > .btnInterview {
-  transform: translateY(-136px);
+  transform: translateY(-178%);
   transition-property: all;
   transition-duration: 200ms;
 }
 
 #divBtn:hover > .imgText {
-  transform: translateY(-132px);
+  transform: translateY(-56%);
   transition-property: all;
   transition-duration: 200ms;
 }
@@ -49,34 +49,27 @@
 }
 
 .slick-prev:before {
-  content: url(../../../../assets/homepage_img/prev_arrow.png);
+  content: url(../../../../../assets/homepage_img/prev_arrow.png);
   width: 100px;
   height: 100px;
   position: absolute;
-  left: -189px;
+  transform: translateX(-175%);
 }
 .slick-next:before {
-  content: url(../../../../assets/homepage_img/next_arrow.png);
+  content: url(../../../../../assets/homepage_img/next_arrow.png);
   width: 100px;
   height: 100px;
   position: absolute;
-  right: -181px;
+  transform: translateX(76%);
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1280px) {
-  .slick-prev:before {
-    left: -467%;
-  }
-  .slick-next:before {
-    right: -129%;
-  }
   .btnInterview {
     bottom: -74px;
-    left: 20%;
   }
 
   #divBtn:hover > .bgBlur {
-    transform: translateY(-560px);
+    transform: translateY(-86%);
     transition-property: all;
     transition-duration: 200ms;
   }
@@ -86,18 +79,15 @@
 }
 
 @media only screen and (min-width: 1281px) and (max-width: 1440px) {
-  .slick-prev:before {
-    left: -143px;
-  }
-  .slick-next:before {
-    left: -47px;
-  }
-  .btnInterview {
-    bottom: -74px;
-    left: 65px;
-  }
+  // .slick-prev:before {
+  //   left: -143px;
+  // }
+  // .slick-next:before {
+  //   left: -47px;
+  // }
+
   #divBtn:hover > .bgBlur {
-    transform: translateY(-522px);
+    transform: translateY(-84%);
     transition-property: all;
     transition-duration: 200ms;
   }
@@ -105,8 +95,8 @@
 
 @media screen and (min-width: 1536px) and (max-width: 1600px) {
   #divBtn {
-    width: 327px !important;
-    height: 554px !important;
+    // width: 327px !important;
+    // height: 554px !important;
     #founderText {
       #founder {
         p {
@@ -125,15 +115,21 @@
       font-size: 30px;
     }
   }
-  .btnInterview {
-    left: 61px;
-  }
 
   #divBtn:hover > .bgBlur {
-    transform: translateY(-539px);
+    transform: translateY(-99%);
   }
 }
 
 .carousel.carousel-slider {
   margin: auto;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1535px) {
+  .slick-prev:before {
+    transform: translateX(-135%);
+  }
+  .slick-next:before {
+    transform: translateX(36%);
+  }
 }
