@@ -1,6 +1,5 @@
 /* Caousel card animation */
 .bgBlur {
-  bottom: -628px;
   left: 0;
   border-bottom: 1.5rem;
 }
@@ -13,18 +12,18 @@
 }
 
 #divBtn:hover > .bgBlur {
-  transform: translateY(-85%);
+  transform: translateY(-75%);
   transition-property: all;
   transition-duration: 200ms;
 }
 #divBtn:hover > .btnInterview {
-  transform: translateY(-220%);
+  transform: translateY(-178%);
   transition-property: all;
   transition-duration: 200ms;
 }
 
 #divBtn:hover > .imgText {
-  transform: translateY(-90%);
+  transform: translateY(-56%);
   transition-property: all;
   transition-duration: 200ms;
 }
@@ -70,7 +69,7 @@
   }
 
   #divBtn:hover > .bgBlur {
-    transform: translateY(-126%);
+    transform: translateY(-86%);
     transition-property: all;
     transition-duration: 200ms;
   }
@@ -88,7 +87,7 @@
   // }
 
   #divBtn:hover > .bgBlur {
-    transform: translateY(-522px);
+    transform: translateY(-84%);
     transition-property: all;
     transition-duration: 200ms;
   }
