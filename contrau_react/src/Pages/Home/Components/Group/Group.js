@@ -26,14 +26,21 @@ export default function Group() {
       <div className="bg-partnersContactBg overflow-hidden">
         <div className="mx-[34px] md:mx-[117px] 2xl:mx-[300px] pb-[65px] mt-[84px] md:mt-[318px]">
           {/* desktop animation */}
-          <div className="md:block hidden md:w-[1320px] md:h-[498px]">
+          <div className="xl:block hidden md:w-[1320px] md:h-[498px]">
+            {/* start animation */}
+            {offset > 100 ? <GroupTextAnimation /> : <></>}
+            {/* end animation */}
+          </div>
+
+          {/* tablet animation */}
+          <div className="hidden sm:block xl:hidden md:w-[1320px] md:h-[498px]">
             {/* start animation */}
             {offset > 100 ? <GroupTextAnimation /> : <></>}
             {/* end animation */}
           </div>
 
           {/* mobile animation */}
-          <div className="md:hidden block w-[292px] h-[474.5px]">
+          <div className="sm:hidden block w-[292px] h-[474.5px]">
             {/* start animation */}
             {offset > 100 ? <GroupTextAnimation /> : <></>}
             {/* end animation */}

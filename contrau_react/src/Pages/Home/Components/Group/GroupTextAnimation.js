@@ -27,11 +27,12 @@ export default function Components() {
       <div>
         <div>
           <FadeInUpDiv>
-            <p className="text-white robotoFlexFont font-[700] text-[13px] 2xl:text-[24px] 2xl:mb-[32px]">
+            <p className="text-white robotoFlexFont font-[700] text-[13px] sm:text-[24px] 2xl:mb-[32px]">
               Partners
             </p>
           </FadeInUpDiv>
 
+          {/* Desktop */}
           <div className="hidden xl:block">
             <div className="text-white  leading-[1] ">
               {showText2 ? (
@@ -66,9 +67,45 @@ export default function Components() {
             </div>
           </div>
 
+          {/* Tablet*/}
+          <div className="hidden sm:block xl:hidden">
+            <div className="text-white  leading-[1] ">
+              {showText2 ? (
+                <FadeInUpDiv>
+                  <div className="flex space-x-7">
+                    <p className="popinsFont  text-[63px] font-[900] mb-0">
+                      We are{" "}
+                    </p>
+                    <p className="popinsFont italic text-[63px] font-thin mb-0">
+                      a Fund of
+                    </p>
+                  </div>
+                </FadeInUpDiv>
+              ) : (
+                <></>
+              )}
+              {showText2 ? (
+                <FadeInUpDiv>
+                  <div className="flex space-x-1 justify-start">
+                    <p className="italic popinsFont font-thin text-[63px] mr-[16px]">
+                      Korean
+                    </p>
+                    <span className="popinsFont text-[63px] font-[900]">
+                      FOUNDERS
+                    </span>
+                    <div className="inline-block bg-red w-[23px] h-[23px] rounded-full mt-[31px]"></div>
+                  </div>
+                </FadeInUpDiv>
+              ) : (
+                <></>
+              )}
+            </div>
+          </div>
+
+          {/* Mobile */}
           {showText2 ? (
             <FadeInUpDiv>
-              <div className="block xl:hidden">
+              <div className="block sm:hidden">
                 <div className="text-white mt-[27px]">
                   <p className="popinsfont text-[40px] font-extrabold mb-[3px]">
                     We are
