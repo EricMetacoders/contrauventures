@@ -1,28 +1,29 @@
 import * as React from "react";
-import { experimentalStyled as styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-import { makeStyles, useMediaQuery } from "@material-ui/core";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { useMediaQuery } from "@mui/material";
+import { createTheme, makeStyles, ThemeProvider } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 ListFounder.propTypes = {};
-const useStyles = makeStyles((theme) => ({
-  gridItem: {
-    [theme.breakpoints.up("xs")]: {
-      columnGap: "20px",
-      rowGap: "20px",
-    },
-    [theme.breakpoints.up("lg")]: {
-      columnGap: "25px",
-      rowGap: "40px",
-    },
-    [theme.breakpoints.up("xl")]: {
-      columnGap: "25px",
-      rowGap: "40px",
-    },
-  },
-}));
+
+// const useStyles = makeStyles((theme) => ({
+//   gridItem: {
+//     [theme.breakpoints.up("xs")]: {
+//       columnGap: "20px",
+//       rowGap: "20px",
+//     },
+//     [theme.breakpoints.up("lg")]: {
+//       columnGap: "25px",
+//       rowGap: "40px",
+//     },
+//     [theme.breakpoints.up("xl")]: {
+//       columnGap: "25px",
+//       rowGap: "40px",
+//     },
+//   },
+// }));
+
 const theme = createTheme({
   breakpoints: {
     values: {
@@ -40,7 +41,7 @@ function ListFounder({ listDataFounder }) {
   const matchMobile = useMediaQuery("(max-width:1023px)");
   const history = useNavigate();
   console.log("listDataFounder:", listDataFounder);
-  const styles = useStyles();
+
   const clickDetailFounder = async (item) => {
     const founderId = item.acf.interview[0];
     history(`/detailfounder/${founderId}`);
@@ -65,10 +66,26 @@ function ListFounder({ listDataFounder }) {
           container
           // columns={{ xs: 12, sm: 2, md: 12, lg: 12, xl: 12 }}
           columns={{ xss: 1, xs: 1, sm: 1, md: 5, lg: 12, xl: 4 }}
-          className={styles.gridItem}
+          // className={styles.gridItem}
+          sx={{
+            columnGap: [
+              "5px", //0
+              "20px", //xs 640
+              "15px", //sm 768
+              "15px", //md 1024
+              "25px", //lg 1280
+              "25px", //xl 1536
+            ],
+            rowGap: [
+              "20px", //0
+              "20px", //xs 640
+              "20px", //sm 768
+              "5px", //md 1024
+              "40px", //lg 1280
+              "40px", //xl 1536
+            ],
+          }}
         >
-          {/* {Array.from(Array(6)).map((_, index) => ( */}
-
           {listDataFounder &&
             Object.values(listDataFounder).map((item) => (
               <Grid item key={item.id} className="framefounder">

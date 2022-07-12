@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Box, useMediaQuery, useTheme } from "@material-ui/core";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 import logotrau from "../../../../../../../assets/interview-img/logotrauventure.png";
 import logotraumb from "../../../../../../../assets/interview-img/logotrauventure-mb.png";
 import "./style.scss";

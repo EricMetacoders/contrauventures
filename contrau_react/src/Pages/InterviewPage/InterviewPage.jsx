@@ -4,7 +4,7 @@ import HeaderComponent from "../InterviewPage/component/Header/HeaderComponent";
 import MainFounder from "../InterviewPage/component/MainFounder/MainFounder";
 import FooterComponent from "../InterviewPage/component/Footer/Footer";
 import { useEffect } from "react";
-import { createTheme, MuiThemeProvider } from "@material-ui/core";
+import { createTheme, ThemeProvider } from "@mui/material";
 
 InterviewPage.propTypes = {};
 
@@ -27,9 +27,9 @@ function InterviewPage(props) {
 
   return (
     <div>
-      <MuiThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
         <HeaderComponent pagecurrent="story" />
-      </MuiThemeProvider>
+      </ThemeProvider>
       <MainFounder />
       <FooterComponent />
     </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./style.scss";
-import { Box } from "@material-ui/core";
+import { Box } from "@mui/material";
 import logotraufooter from "../../../../assets/interview-img/logotraufooter.png";
 import logofb from "../../../../assets/interview-img/FB.png";
 import logolk from "../../../../assets/interview-img/LI.png";
