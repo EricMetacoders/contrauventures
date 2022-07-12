@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import { Box, useMediaQuery, useTheme } from "@material-ui/core";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 import dot1 from "../../../../../assets/interview-img/dot1.png";
 import dot2 from "../../../../../assets/interview-img/dot2.png";
 import { interviewServices } from "../../../../../services/interviewService";
 import { useState } from "react";
+import News from "./component/News/News";
 
 InterviewBody.propTypes = {
   detailArticle: PropTypes.object,
@@ -339,30 +340,12 @@ var test1 = `
     </div>
   </div>`;
 
-async function getAPINew() {
-  try {
-    const listNew = await interviewServices.getNew();
-    return listNew;
-  } catch (error) {
-    console.log("Failed to fetch", error);
-  }
-}
-
 function InterviewBody({ detailArticle }) {
   const theme = useTheme();
 
-  const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-  
-  const [listNew, setListNew] = useState([]);
-
-  useEffect(() => {
-    (async function() {
-      const _listNew = await getAPINew();
-      setListNew(_listNew.data);
-    })();
-  }, []);
   return (
     <Box>
+      {/* FRAME CONTENT */}
       <div className="framearticle">
         <div className="framehtmlinterview">
           <div className="framequote">
@@ -371,94 +354,64 @@ function InterviewBody({ detailArticle }) {
             </div>
             <div className="frametitleqoute">
               <span className="title1">
-                {
-                  detailArticle?.qoute?.part_1 || ""
-                }
+                {detailArticle?.qoute?.part_1 || ""}
               </span>
               &nbsp;
               <span className="title2">
-                {
-                  detailArticle?.qoute?.part_2 || ""
-                }
+                {detailArticle?.qoute?.part_2 || ""}
               </span>
             </div>
             <div className="framedot2">
               <img src={dot2} />
             </div>
           </div>
-          {
-            !detailArticle
-            ? <div />
-            : <div
-                className="framearticle"
-                dangerouslySetInnerHTML={{
-                  __html: detailArticle.content_part_1?.detail_content || "",
-                }}
-              />
-          }
-          {
-            !detailArticle
-            ? <div />
-            : <div
-                className="framearticle"
-                dangerouslySetInnerHTML={{
-                  __html: detailArticle.content_part_1?.detail_content_image || "",
-                }}
-              />
-          }
+
+          {!detailArticle ? (
+            <div />
+          ) : (
+            <div
+              className="framearticle"
+              dangerouslySetInnerHTML={{
+                __html: detailArticle.content_part_1?.detail_content || "",
+              }}
+            />
+          )}
+
+          {!detailArticle ? (
+            <div />
+          ) : (
+            <div
+              className=""
+              dangerouslySetInnerHTML={{
+                __html:
+                  detailArticle.content_part_1?.detail_content_image || "",
+              }}
+            />
+          )}
         </div>
         <div className="framearticle">
-          {
-            !detailArticle
-            ? <div />
-            : <div
-                className="framearticle"
-                dangerouslySetInnerHTML={{
-                  __html: detailArticle.content_part_2?.detail_content || "",
-                }}
-              />
-          }
-          {
-            !detailArticle
-            ? <div />
-            : <div
-                className="framearticle"
-                dangerouslySetInnerHTML={{
-                  __html: detailArticle.content_part_2?.detail_content || "",
-                }}
-              />
-          }
+          {!detailArticle ? (
+            <div />
+          ) : (
+            <div
+              dangerouslySetInnerHTML={{
+                __html: detailArticle.content_part_2?.detail_content || "",
+              }}
+            />
+          )}
+          {!detailArticle ? (
+            <div />
+          ) : (
+            <div
+              dangerouslySetInnerHTML={{
+                __html: detailArticle.content_part_2?.detail_content || "",
+              }}
+            />
+          )}
         </div>
       </div>
       {/* FRAME NEW */}
-      <Box className="framenew">
-        <Box className="framenewtitle">
-          <span>
-            NEWS <span style={{ color: "#DB2F33" }}>.</span>
-          </span>
-          <span className="viewtitle">view more</span>
-        </Box>
-        <Box className="framedetailnewmain">
-          {listNew.length != 0 &&
-            listNew.map((item) => (
-              <Box className="framedetail" key={item.id}>
-                <Box className="frameimgnew">
-                  <img
-                    src={
-                      isMatch
-                        ? item?.acf?.thumbnail.toString() || ""
-                        : item?.acf?.image.toString() || ""
-                    }
-                    alt=""
-                  />
-                </Box>
-                <Box>{item.acf.categies}</Box>
-                <Box>{item.acf.title}</Box>
-                <Box>{item.acf.newscontent}</Box>
-              </Box>
-            ))}
-        </Box>
-      </Box>
+      <News />
     </Box>
   );
 }

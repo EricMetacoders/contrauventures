@@ -1,4 +1,4 @@
-import { Box, useMediaQuery, useTheme } from "@material-ui/core";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import logobackgroundheader from "../../../../assets/interview-img/logobackgroundheader.png";
 import logobackgroundheadermb from "../../../../assets/interview-img/logobackgroundheadermb.png";
@@ -9,55 +9,42 @@ import TemporaryDrawer from "./TemporaryDrawer";
 HeaderComponent.propTypes = {};
 
 function HeaderComponent({ pagecurrent }) {
-  // console.log("pagecurrent:", pagecurrent);
   // CHECK CURRENT PARENT PAGE(Detail Founder & Story) CALL HEADER COMPONENT
 
   //RESPONSIVE
   const theme = useTheme();
 
-  const isMatch = useMediaQuery(theme.breakpoints.down("md"));
+  const matchMobile = useMediaQuery("(max-width:640px)");
   let navigate = useNavigate();
   const clickToScroll = () => {
-    navigate("/", { state: { id: 1, name: "porfolio" } });
+    navigate("/", { state: { id: 1, name: "test" } });
   };
   //END RESPONSIVE
   return (
     <div>
       <Box className="frameheadermain">
         <Box className="frameimglayout">
-          {isMatch ? (
-            <img
-              src={logobackgroundheadermb}
-              alt="logotrau"
-              className="logobackgroundheader"
-            />
-          ) : (
-            <img
-              src={logobackgroundheader}
-              alt="logotrau"
-              className="logobackgroundheader"
-            />
-          )}
+          <img
+            src={matchMobile ? logobackgroundheadermb : logobackgroundheader}
+            alt="logotrau"
+            className="logobackgroundheader"
+          />
         </Box>
-
         <Box className="imglogotrauframe-header">
           <Link to="/">
             <img
-              src={isMatch ? logotraumb : logotrau}
+              src={matchMobile ? logotraumb : logotrau}
               alt="logotrau"
               className="logotrau"
             />
           </Link>
         </Box>
-        {isMatch ? (
+        {matchMobile ? (
           <TemporaryDrawer />
         ) : (
           <Box className="titledetaimainframeheader">
-            <Link to="/">
-              <Box className="titledetaiframeheader">HOME</Box>
-            </Link>
+            <Box className="titledetaiframeheader">HOME</Box>
             <Box className="titledetaiframeheader">About Us</Box>
-
             <Box className="titledetaiframeheader" onClick={clickToScroll}>
               Portfolio
             </Box>

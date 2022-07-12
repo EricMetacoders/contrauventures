@@ -15,12 +15,12 @@ export default function Header() {
     <div className="md:h-[80px] ">
       <div className="ml-[20px] mr-[10px] md:mx-[90px] h-full">
         <div className="flex items-center justify-between w-full h-full">
-          <div className="hidden md:block">
+          <div className="hidden sm:block">
             <Link to="/">
               <img src={logo} alt="logo" />
             </Link>
           </div>
-          <div className="block md:hidden">
+          <div className="block sm:hidden">
             <Link to="/">
               {" "}
               <img src={logoMobile} alt="logo" />
@@ -28,9 +28,9 @@ export default function Header() {
           </div>
 
           {/* menu select desktop */}
-          <div className="hidden md:flex item-center justify-center space-x-12 md:mt-[4px]">
+          <div className="hidden sm:flex item-center justify-center space-x-12 md:mt-[4px]">
             <Link to="/">
-              <p className="popinsFont text-[16px] font-extrabold hover:text-hoverGrey transition-all cursor-pointer">
+              <p className="popinsFont text-[16px] font-extrabold text-black hover:text-hoverGrey transition-all cursor-pointer">
                 HOME
               </p>
             </Link>
@@ -44,14 +44,14 @@ export default function Header() {
               Portfolio
             </p>
             <Link to="/story">
-              <p className="popinsFont text-[16px] font-normal hover:text-hoverGrey transition-all cursor-pointer">
+              <p className="popinsFont text-[16px] font-normal text-black hover:text-hoverGrey transition-all cursor-pointer">
                 Story
               </p>
             </Link>
           </div>
 
           {/* menu select mobile */}
-          <div className="md:hidden">
+          <div className="sm:hidden">
             <HeaderDropDown />
           </div>
         </div>

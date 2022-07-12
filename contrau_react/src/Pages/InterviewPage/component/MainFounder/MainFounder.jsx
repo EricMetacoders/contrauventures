@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import "./style.scss";
-import { Box, Button, useMediaQuery, useTheme } from "@material-ui/core";
+import { Box, Button, useMediaQuery, useTheme } from "@mui/material";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { interviewServices } from "../../../../services/interviewService";
 import { useDispatch, useSelector } from "react-redux";
 import { getListFounder } from "../../../../reducers/interviewSlice";
+import ListFounder from "./ListFounder/ListFounder";
 
 MainFounder.propTypes = {};
 
@@ -17,14 +18,7 @@ function MainFounder(props) {
   //RESPONSIVE
   const theme = useTheme();
   const dispatch = useDispatch();
-  const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-
-  // const [listFounder, setListFounder] = useState([]);
-  // const listFounder = useSelector((state) => state.interviewSlice.listFounder);
-
-  // useEffect(() => {
-  //   dispatch(getListFounder());
-  // }, []);
+  const matchMobile = useMediaQuery("(max-width:640px)");
 
   const [listFounder2, setListFounder2] = useState([]);
 
@@ -69,10 +63,11 @@ function MainFounder(props) {
           slidesToShow: 3,
         },
       },
+
       {
         breakpoint: 769,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
         },
       },
       {
@@ -117,7 +112,7 @@ function MainFounder(props) {
     <div className="rootmainfounder">
       {/* FRAME BUTTON */}
 
-      {isMatch ? (
+      {matchMobile ? (
         <Box className="carouselcategory">
           <Slider {...carouselProperties}>
             {contentdatacategory.map((item) => (
@@ -153,62 +148,9 @@ function MainFounder(props) {
         </div>
       )}
       {/* FRAME FOUNDER */}
-      <div className="framemainfounder">
-        <div className="framefounder overflow-hidden">
-          {Object.values(listFounder2).length != 0 &&
-            Object.values(listFounder2).map((item) => (
-              <div className="frameimgfounder" key={item.id}>
-                <img
-                  src={isMatch ? item.acf.thumbnail : item.acf.image}
-                  alt=""
-                  className="imgfounder"
-                  onClick={() => {
-                    clickDetailFounder(item);
-                  }}
-                />
-                {/* #B0ACA3" */}
-                <div className="framemaintile">
-                  <Box className="framedetailfoundername">
-                    <Box className="detailfoundername">
-                      FOUNDER
-                      <Box className="titlename ">
-                        {item.acf.first_name.toUpperCase()} &nbsp;
-                        {item.acf.last_name.toUpperCase()}
-                      </Box>
-                    </Box>
-                  </Box>
-                  <Box className="titledetail">
-                    Lorem ipsum dolor sit amet, cons ectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip
-                  </Box>
-                </div>
-
-                <div
-                  className="hidden lg:block  w-full h-full absolute bgBlur2"
-                  style={{
-                    background: `linear-gradient(0deg,${item.acf.gradient_color} 49%, ${item?.acf.background_color}75%)`,
-                  }}
-                ></div>
-                <div className="btnInterviewfounder">
-                  <div className="hidden lg:block w-[200px] h-[60px] bg-white  cursor-pointer z-50">
-                    <div className="flex items-center justify-center w-full h-full">
-                      <p
-                        className="popinsFont font-semibold text-[20px] text-black mb-0"
-                        onClick={() => {
-                          clickDetailFounder(item);
-                        }}
-                      >
-                        See Full Interview
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-        </div>
-      </div>
+      {Object.values(listFounder2).length != 0 && (
+        <ListFounder listDataFounder={listFounder2} />
+      )}
     </div>
   );
 }

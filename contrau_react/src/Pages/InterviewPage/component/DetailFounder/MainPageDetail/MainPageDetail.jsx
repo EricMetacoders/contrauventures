@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { Box } from "@material-ui/core";
+import { Box } from "@mui/material";
 import "./style.scss";
 import InterviewBody from "./InterviewBody";
 import GalleryBody from "./GalleryBody";
