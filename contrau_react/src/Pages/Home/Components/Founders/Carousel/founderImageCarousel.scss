@@ -65,7 +65,7 @@
 
 @media only screen and (min-width: 769px) and (max-width: 1280px) {
   .btnInterview {
-    bottom: -74px;
+    bottom: -14%;
   }
 
   #divBtn:hover > .bgBlur {
@@ -79,13 +79,6 @@
 }
 
 @media only screen and (min-width: 1281px) and (max-width: 1440px) {
-  // .slick-prev:before {
-  //   left: -143px;
-  // }
-  // .slick-next:before {
-  //   left: -47px;
-  // }
-
   #divBtn:hover > .bgBlur {
     transform: translateY(-84%);
     transition-property: all;
@@ -95,8 +88,6 @@
 
 @media screen and (min-width: 1536px) and (max-width: 1600px) {
   #divBtn {
-    // width: 327px !important;
-    // height: 554px !important;
     #founderText {
       #founder {
         p {
@@ -131,5 +122,11 @@
   }
   .slick-next:before {
     transform: translateX(36%);
+  }
+}
+
+@media (max-width: 1023px) {
+  #divBtn:hover > .scaleImg {
+    transform: none;
   }
 }
