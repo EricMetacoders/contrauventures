@@ -7,6 +7,7 @@ import "./Carousel/founderImageCarousel.scss";
 import TabletCarousel from "./Carousel/TabletCarousel";
 import MobileCarousel from "./Carousel/MobileCarousel";
 import LandspaceCaoursel from "./Carousel/LandspaceCaoursel";
+import "./founder.scss";
 export default function Founders() {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -54,26 +55,32 @@ export default function Founders() {
         </div>
 
         {/* Desktop Small Screen */}
-        <div className="hidden lg:block 2xl:hidden mt-[20%] md:mt-[43%] lg:mt-[18%]  ">
+        <div className="hidden lg:block 2xl:hidden mt-[20%] md:mt-[43%] lg:mt-[18%]   land">
           <FounderCarousel />
         </div>
       </div>
 
       {/* Tablet */}
-      <div className=" hidden md:block lg:hidden mt-[20%] md:mt-[35%] lg:mt-[18%]  ">
+      <div
+        id="tabletCarousel"
+        className=" hidden md:block lg:hidden mt-[20%] md:mt-[35%] lg:mt-[18%]  "
+      >
         <TabletCarousel />
       </div>
 
       {/* Mobile */}
 
-      <div className="block  md:hidden mt-[20%] md:mt-[43%] lg:mt-[18%]">
+      <div
+        id="tabletCarousel"
+        className="block  md:hidden mt-[20%] md:mt-[43%] lg:mt-[18%]"
+      >
         <MobileCarousel />
       </div>
 
       {/* Landspace */}
-      {/* <div className=" mt-[18%] lg:hidden lg:mt-[18%] portrait:hidden">
+      <div id="landscapeCarousel" className=" mt-[18%] lg:hidden lg:mt-[18%]">
         <LandspaceCaoursel />
-      </div> */}
+      </div>
     </div>
   );
 }

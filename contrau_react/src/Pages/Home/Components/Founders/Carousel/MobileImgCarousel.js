@@ -6,20 +6,6 @@ export default function MobileImgCarousel({ data }) {
   const history = useNavigate();
   const [founderList, setFounderList] = useState(null);
 
-  useEffect(() => {
-    // get details of Fouders
-    async function getFounderList() {
-      try {
-        const listFounderInteview =
-          await interviewServices.getFounderIDByName();
-        setFounderList(listFounderInteview);
-      } catch (err) {
-        console.log("Failed to fetch", err);
-      }
-    }
-    getFounderList();
-  }, []);
-
   const handleSeeFull = (data) => {
     const founderId = data.acf.interview[0];
     history(`/detailfounder/${founderId}`);

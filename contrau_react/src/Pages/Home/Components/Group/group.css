@@ -5,34 +5,40 @@
 }
 
 /* for Firefox */
-/* @-moz-keyframes leftRight1 {
+@-moz-keyframes leftRight1 {
   0% {
+    -moz-transform: translateX(-100%);
     transform: translateX(-100%);
   }
 
   100% {
+    -moz-transform: translateX(0%);
     transform: translateX(0%);
   }
-} */
+}
 
 /* for Chrome */
-/* @-webkit-keyframes leftRight1 {
+@-webkit-keyframes leftRight1 {
   0% {
     -webkit-transform: translateX(-100%);
+    transform: translateX(0%);
   }
 
   100% {
     -webkit-transform: translateX(0%);
+    transform: translateX(0%);
   }
-} */
+}
 
 @keyframes leftRight1 {
   0% {
     transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
   }
 
   100% {
     transform: translateX(0%);
+    -webkit-transform: translateX(0%);
   }
 }
 
@@ -43,31 +49,37 @@
 }
 
 /* for Firefox */
-/* @-moz-keyframes leftRight2 {
+@-moz-keyframes leftRight2 {
   0% {
+    -moz-transform: translateX(0%);
     transform: translateX(0%);
   }
   100% {
+    -moz-transform: translateX(100%);
     transform: translateX(100%);
   }
-} */
+}
 
 /* for Chrome */
-/* @-webkit-keyframes leftRight2 {
+@-webkit-keyframes leftRight2 {
   0% {
     -webkit-transform: translateX(0%);
+    transform: translateX(0%);
   }
   100% {
     -webkit-transform: translateX(100%);
+    transform: translateX(100%);
   }
-} */
+}
 
 @keyframes leftRight2 {
   0% {
     transform: translateX(0%);
+    -webkit-transform: translateX(0%);
   }
   100% {
     transform: translateX(100%);
+    -webkit-transform: translateX(100%);
   }
 }
 .left-right3 {
@@ -77,31 +89,37 @@
 }
 
 /* for Firefox */
-/* @-moz-keyframes leftRight3 {
+@-moz-keyframes leftRight3 {
   0% {
+    -moz-transform: translateX(100%);
     transform: translateX(100%);
   }
   100% {
+    -moz-transform: translateX(200%);
     transform: translateX(200%);
   }
-} */
+}
 
 /* for Chrome */
-/* @-webkit-keyframes leftRight3 {
+@-webkit-keyframes leftRight3 {
   0% {
     -webkit-transform: translateX(100%);
+    transform: translateX(100%);
   }
   100% {
     -webkit-transform: translateX(200%);
+    transform: translateX(200%);
   }
-} */
+}
 
 @keyframes leftRight3 {
   0% {
     transform: translateX(100%);
+    -webkit-transform: translateX(100%);
   }
   100% {
     transform: translateX(200%);
+    -webkit-transform: translateX(200%);
   }
 }
 
@@ -112,34 +130,40 @@
 }
 
 /* for Firefox */
-/* @-moz-keyframes rightLeft1 {
+@-moz-keyframes rightLeft1 {
   0% {
-    transform: translateX(-0%);
-  }
-
-  100% {
-    transform: translateX(-100%);
-  }
-} */
-
-/* for Chrome */
-/* @-webkit-keyframes rightLeft1 {
-  0% {
-    -webkit-transform: translateX(0%);
-  }
-
-  100% {
-    -webkit-transform: translateX(-100%);
-  }
-} */
-
-@keyframes rightLeft1 {
-  0% {
+    -moz-transform: translateX(-0%);
     transform: translateX(0%);
   }
 
   100% {
+    -moz-transform: translateX(-100%);
     transform: translateX(-100%);
+  }
+}
+
+/* for Chrome */
+@-webkit-keyframes rightLeft1 {
+  0% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes rightLeft1 {
+  0% {
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
   }
 }
 
@@ -150,31 +174,37 @@
 }
 
 /* for Firefox */
-/* @-moz-keyframes rightLeft2 {
+@-moz-keyframes rightLeft2 {
   0% {
+    -moz-transform: translateX(100%);
     transform: translateX(100%);
   }
   100% {
+    -moz-transform: translateX(0%);
     transform: translateX(0%);
   }
-} */
+}
 
 /* for Chrome */
-/* @-webkit-keyframes rightLeft2 {
+@-webkit-keyframes rightLeft2 {
   0% {
     -webkit-transform: translateX(100%);
+    transform: translateX(100%);
   }
   100% {
     -webkit-transform: translateX(0%);
+    transform: translateX(0%);
   }
-} */
+}
 
 @keyframes rightLeft2 {
   0% {
     transform: translateX(100%);
+    -webkit-transform: translateX(100%);
   }
   100% {
     transform: translateX(0%);
+    -webkit-transform: translateX(0%);
   }
 }
 
@@ -188,29 +218,35 @@
 /* for Firefox */
 @-moz-keyframes rightLeft3 {
   0% {
+    -moz-transform: translateX(200%);
     transform: translateX(200%);
   }
   100% {
+    -moz-transform: translateX(100%);
     transform: translateX(100%);
   }
 }
 
 /* for Chrome */
-/* @-webkit-keyframes rightLeft3 {
+@-webkit-keyframes rightLeft3 {
   0% {
     -webkit-transform: translateX(200%);
+    transform: translateX(200%);
   }
   100% {
     -webkit-transform: translateX(100%);
+    transform: translateX(100%);
   }
-} */
+}
 
 @keyframes rightLeft3 {
   0% {
     transform: translateX(200%);
+    -webkit-transform: translateX(200%);
   }
   100% {
     transform: translateX(100%);
+    -webkit-transform: translateX(100%);
   }
 }
 
@@ -222,34 +258,40 @@
 }
 
 /* for Firefox */
-/* @-moz-keyframes mobileLeftRight1 {
+@-moz-keyframes mobileLeftRight1 {
   0% {
+    -moz-transform: translateX(-150%);
     transform: translateX(-150%);
   }
 
   100% {
+    -moz-transform: translateX(0%);
     transform: translateX(0%);
   }
-} */
+}
 
 /* for Chrome */
-/* @-webkit-keyframes mobileLeftRight1 {
+@-webkit-keyframes mobileLeftRight1 {
   0% {
     -webkit-transform: translateX(-150%);
+    transform: translateX(-150%);
   }
 
   100% {
     -webkit-transform: translateX(0%);
+    transform: translateX(0%);
   }
-} */
+}
 
 @keyframes mobileLeftRight1 {
   0% {
     transform: translateX(-150%);
+    -webkit-transform: translateX(-150%);
   }
 
   100% {
     transform: translateX(0%);
+    -webkit-transform: translateX(0%);
   }
 }
 
@@ -262,32 +304,38 @@
 /* for Firefox */
 @-moz-keyframes mobileLeftRight2 {
   0% {
+    -moz-transform: translateX(0%);
     transform: translateX(0%);
   }
 
   100% {
+    -moz-transform: translateX(150%);
     transform: translateX(150%);
   }
 }
 
 /* for Chrome */
-/* @-webkit-keyframes mobileLeftRight2 {
+@-webkit-keyframes mobileLeftRight2 {
   0% {
     -webkit-transform: translateX(0%);
-  }
-
-  100% {
-    -webkit-transform: translateX(150%);
-  }
-} */
-
-@keyframes mobileLeftRight2 {
-  0% {
     transform: translateX(0%);
   }
 
   100% {
+    -webkit-transform: translateX(150%);
     transform: translateX(150%);
+  }
+}
+
+@keyframes mobileLeftRight2 {
+  0% {
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(150%);
+    -webkit-transform: translateX(150%);
   }
 }
 
@@ -298,34 +346,40 @@
 }
 
 /* for Firefox */
-/* @-moz-keyframes mobileRightLeft1 {
+@-moz-keyframes mobileRightLeft1 {
   0% {
+    -moz-transform: translateX(0%);
     transform: translateX(0%);
   }
 
   100% {
+    -moz-transform: translateX(-150%);
     transform: translateX(-150%);
   }
-} */
+}
 
 /* for Chrome */
-/* @-webkit-keyframes mobileRightLeft1 {
+@-webkit-keyframes mobileRightLeft1 {
   0% {
     -webkit-transform: translateX(0%);
+    transform: translateX(0%);
   }
 
   100% {
     -webkit-transform: translateX(-150%);
+    transform: translateX(-150%);
   }
-} */
+}
 
 @keyframes mobileRightLeft1 {
   0% {
     transform: translateX(0%);
+    -webkit-transform: translateX(0%);
   }
 
   100% {
     transform: translateX(-150%);
+    -webkit-transform: translateX(-150%);
   }
 }
 
@@ -336,33 +390,39 @@
 }
 
 /* for Firefox */
-/* @-moz-keyframes mobileRightLeft2 {
+@-moz-keyframes mobileRightLeft2 {
   0% {
+    -moz-transform: translateX(150%);
     transform: translateX(150%);
   }
 
   100% {
+    -moz-transform: translateX(0%);
     transform: translateX(0%);
   }
-} */
+}
 
 /* for Chrome */
-/* @-webkit-keyframes mobileRightLeft2 {
+@-webkit-keyframes mobileRightLeft2 {
   0% {
     -webkit-transform: translateX(150%);
+    transform: translateX(150%);
   }
 
   100% {
     -webkit-transform: translateX(0%);
+    transform: translateX(0%);
   }
-} */
+}
 
 @keyframes mobileRightLeft2 {
   0% {
     transform: translateX(150%);
+    -webkit-transform: translateX(150%);
   }
 
   100% {
     transform: translateX(0%);
+    -webkit-transform: translateX(0%);
   }
 }
