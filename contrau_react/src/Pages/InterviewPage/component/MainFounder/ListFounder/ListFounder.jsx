@@ -27,17 +27,17 @@ const theme = createTheme({
   breakpoints: {
     values: {
       xxs: 0, // smol phone
-      xs: 300, // phone
-      sm: 600, // tablets
-      md: 900, // small laptop
-      lg: 1200, // desktop
+      xs: 640, // phone
+      sm: 768, // tablets
+      md: 1024, // small laptop
+      lg: 1280, // desktop
       xl: 1536, // large screens
     },
   },
 });
 
 function ListFounder({ listDataFounder }) {
-  const isMatch = useMediaQuery(theme.breakpoints.down("md"));
+  const matchMobile = useMediaQuery("(max-width:1023px)");
   const history = useNavigate();
   console.log("listDataFounder:", listDataFounder);
   const styles = useStyles();
@@ -51,10 +51,10 @@ function ListFounder({ listDataFounder }) {
       <Box
         sx={{
           width: [
-            "200px", // theme.breakpoints.up('xxs')
-            "310px", // theme.breakpoints.up('xs')
-            "310px", // theme.breakpoints.up('sm')
-            "310px", // theme.breakpoints.up('md')
+            "310px", // theme.breakpoints.up('xxs')
+            "480px", // theme.breakpoints.up('xs')
+            "640px", // theme.breakpoints.up('sm')
+            "870px", // theme.breakpoints.up('md')
             "880px", // theme.breakpoints.up('lg')
             "1325px", // theme.breakpoints.up('xl')
           ],
@@ -79,7 +79,7 @@ function ListFounder({ listDataFounder }) {
                     width: [
                       "144px",
                       "144px", //xs
-                      "424px",
+                      "144px",
                       "424px",
                       "424px",
                       "424px", //xl
@@ -87,7 +87,7 @@ function ListFounder({ listDataFounder }) {
                   }}
                 >
                   <img
-                    src={isMatch ? item.acf.thumbnail : item.acf.image}
+                    src={matchMobile ? item.acf.thumbnail : item.acf.image}
                     alt=""
                     className="imgfounder"
                     onClick={() => {

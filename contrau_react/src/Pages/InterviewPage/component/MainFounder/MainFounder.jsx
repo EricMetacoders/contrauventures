@@ -18,7 +18,7 @@ function MainFounder(props) {
   //RESPONSIVE
   const theme = useTheme();
   const dispatch = useDispatch();
-  const isMatch = useMediaQuery(theme.breakpoints.down("md"));
+  const matchMobile = useMediaQuery("(max-width:640px)");
 
   // const [listFounder, setListFounder] = useState([]);
   // const listFounder = useSelector((state) => state.interviewSlice.listFounder);
@@ -118,7 +118,7 @@ function MainFounder(props) {
     <div className="rootmainfounder">
       {/* FRAME BUTTON */}
 
-      {isMatch ? (
+      {matchMobile ? (
         <Box className="carouselcategory">
           <Slider {...carouselProperties}>
             {contentdatacategory.map((item) => (
