@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { interviewServices } from "../../../../services/interviewService";
 import { useDispatch, useSelector } from "react-redux";
 import { getListFounder } from "../../../../reducers/interviewSlice";
+import ListFounder from "./ListFounder/ListFounder";
 
 MainFounder.propTypes = {};
 
@@ -153,62 +154,63 @@ function MainFounder(props) {
         </div>
       )}
       {/* FRAME FOUNDER */}
-      <div className="framemainfounder">
-        <div className="framefounder overflow-hidden">
-          {Object.values(listFounder2).length != 0 &&
-            Object.values(listFounder2).map((item) => (
-              <div className="frameimgfounder" key={item.id}>
-                <img
-                  src={isMatch ? item.acf.thumbnail : item.acf.image}
-                  alt=""
-                  className="imgfounder"
-                  onClick={() => {
-                    clickDetailFounder(item);
-                  }}
-                />
-                {/* #B0ACA3" */}
-                <div className="framemaintile">
-                  <Box className="framedetailfoundername">
-                    <Box className="detailfoundername">
-                      FOUNDER
-                      <Box className="titlename ">
-                        {item.acf.first_name.toUpperCase()} &nbsp;
-                        {item.acf.last_name.toUpperCase()}
-                      </Box>
+      {Object.values(listFounder2).length != 0 && (
+        <ListFounder listDataFounder={listFounder2} />
+      )}
+
+      {/* <div className="framefounder ">
+        {Object.values(listFounder2).length != 0 &&
+          Object.values(listFounder2).map((item) => (
+            <div className="frameimgfounder" key={item.id}>
+              <img
+                src={isMatch ? item.acf.thumbnail : item.acf.image}
+                alt=""
+                className="imgfounder"
+                onClick={() => {
+                  clickDetailFounder(item);
+                }}
+              />
+              <div className="framemaintile">
+                <Box className="framedetailfoundername">
+                  <Box className="detailfoundername">
+                    FOUNDER
+                    <Box className="titlename ">
+                      {item.acf.first_name.toUpperCase()} &nbsp;
+                      {item.acf.last_name.toUpperCase()}
                     </Box>
                   </Box>
-                  <Box className="titledetail">
-                    Lorem ipsum dolor sit amet, cons ectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip
-                  </Box>
-                </div>
+                </Box>
+                <Box className="titledetail">
+                  Lorem ipsum dolor sit amet, cons ectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip
+                </Box>
+              </div>
 
-                <div
-                  className="hidden lg:block  w-full h-full absolute bgBlur2"
-                  style={{
-                    background: `linear-gradient(0deg,${item.acf.gradient_color} 49%, ${item?.acf.background_color}75%)`,
-                  }}
-                ></div>
-                <div className="btnInterviewfounder">
-                  <div className="hidden lg:block w-[200px] h-[60px] bg-white  cursor-pointer z-50">
-                    <div className="flex items-center justify-center w-full h-full">
-                      <p
-                        className="popinsFont font-semibold text-[20px] text-black mb-0"
-                        onClick={() => {
-                          clickDetailFounder(item);
-                        }}
-                      >
-                        See Full Interview
-                      </p>
-                    </div>
+              <div
+                className="hidden lg:block  w-full h-full absolute bgBlur2"
+                style={{
+                  background: `linear-gradient(0deg,${item.acf.gradient_color} 49%, ${item?.acf.background_color}75%)`,
+                }}
+              ></div>
+              <div className="btnInterviewfounder">
+                <div className="hidden lg:block w-[200px] h-[60px] bg-white  cursor-pointer z-50">
+                  <div className="flex items-center justify-center w-full h-full">
+                    <p
+                      className="popinsFont font-semibold text-[20px] text-black mb-0"
+                      onClick={() => {
+                        clickDetailFounder(item);
+                      }}
+                    >
+                      See Full Interview
+                    </p>
                   </div>
                 </div>
               </div>
-            ))}
-        </div>
-      </div>
+            </div>
+          ))}
+      </div> */}
     </div>
   );
 }

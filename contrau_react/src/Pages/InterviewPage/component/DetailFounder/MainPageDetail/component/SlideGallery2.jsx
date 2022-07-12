@@ -10,9 +10,9 @@ import { interviewServices } from "../../../../../../services/interviewService";
 import { useParams } from "react-router-dom";
 import { current } from "@reduxjs/toolkit";
 import "./ChangeImage.js";
-SlideGallery.propTypes = {};
+SlideGallery2.propTypes = {};
 
-function SlideGallery({ detailFounder }) {
+function SlideGallery2({ detailFounder }) {
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -261,4 +261,4 @@ function SlideGallery({ detailFounder }) {
   );
 }
 
-export default SlideGallery;
+export default SlideGallery2;
