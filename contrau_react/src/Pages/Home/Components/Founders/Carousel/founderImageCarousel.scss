@@ -79,13 +79,6 @@
 }
 
 @media only screen and (min-width: 1281px) and (max-width: 1440px) {
-  // .slick-prev:before {
-  //   left: -143px;
-  // }
-  // .slick-next:before {
-  //   left: -47px;
-  // }
-
   #divBtn:hover > .bgBlur {
     transform: translateY(-84%);
     transition-property: all;
@@ -95,8 +88,6 @@
 
 @media screen and (min-width: 1536px) and (max-width: 1600px) {
   #divBtn {
-    // width: 327px !important;
-    // height: 554px !important;
     #founderText {
       #founder {
         p {
@@ -131,5 +122,17 @@
   }
   .slick-next:before {
     transform: translateX(36%);
+  }
+}
+
+@media (min-width: 1023px) {
+  #divBtn:hover > .scaleImg {
+    --tw-scale-x: 0;
+    --tw-scale-y: 0;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transition-property: all;
+    transition-duration: 200ms;
   }
 }
