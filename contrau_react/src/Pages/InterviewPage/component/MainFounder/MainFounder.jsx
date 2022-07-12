@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import "./style.scss";
-import { Box, Button, useMediaQuery, useTheme } from "@material-ui/core";
+import { Box, Button, useMediaQuery, useTheme } from "@mui/material";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
