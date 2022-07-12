@@ -1,15 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import PropTypes from "prop-types";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 
-import { Box, debounce, useMediaQuery, useTheme } from "@mui/material";
-import { collection, wasClick } from "./ChangeImage.js";
-import { interviewServices } from "../../../../../../services/interviewService";
-import { useParams } from "react-router-dom";
-import { current } from "@reduxjs/toolkit";
-import "./ChangeImage.js";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
+import { interviewServices } from "../../../../../../../services/interviewService";
 SlideGallery.propTypes = {};
 
 function SlideGallery({ detailFounder }) {

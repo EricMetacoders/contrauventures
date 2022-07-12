@@ -14,36 +14,32 @@ HeaderFounder.propTypes = {
 function HeaderFounder({ detailFounder }) {
   const theme = useTheme();
 
-  const isMatch = useMediaQuery(theme.breakpoints.down("md"));
+  const matchMobile = useMediaQuery("(max-width:640px)");
   console.log(detailFounder?.acf?.first_name.toUpperCase());
   return (
     <div>
       <Box className="frameheaderfoundermain">
         <Box className="frameimglayout">
-          {isMatch ? (
-            <img
-              src={detailFounder?.acf?.header_thumbnail || ""}
-              alt="logotrau"
-              className="logobackgroundheader"
-            />
-          ) : (
-            <img
-              src={detailFounder?.acf?.header_image || ""}
-              alt="logotrau"
-              className="logobackgroundheader"
-            />
-          )}
+          <img
+            src={
+              matchMobile
+                ? detailFounder?.acf?.header_thumbnail
+                : detailFounder?.acf?.header_image
+            }
+            alt="logotrau"
+            className="logobackgroundheader"
+          />
         </Box>
         <Box className="imglogotrauframe-header">
           <Link to="/">
             <img
-              src={isMatch ? logotraumb : logotrau}
+              src={matchMobile ? logotraumb : logotrau}
               alt="logotrau"
               className="logotrau"
             />
           </Link>
         </Box>
-        {isMatch ? (
+        {matchMobile ? (
           <TemporaryDrawer />
         ) : (
           <Box className="titledetaimainframeheader">
@@ -58,11 +54,11 @@ function HeaderFounder({ detailFounder }) {
           </Box>
         )}
         <Box className="framemaintilecenterheader">
-          {isMatch
+          {matchMobile
             ? detailFounder?.acf?.first_name.toUpperCase() || ""
             : detailFounder?.acf?.first_name.toUpperCase() || ""}
           <Box className="framedetailtitlemain">
-            {isMatch
+            {matchMobile
               ? detailFounder?.acf?.last_name.toUpperCase() || ""
               : detailFounder?.acf?.last_name.toUpperCase() || ""}
           </Box>
