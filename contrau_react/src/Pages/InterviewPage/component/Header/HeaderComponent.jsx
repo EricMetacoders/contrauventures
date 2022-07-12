@@ -1,4 +1,4 @@
-import { Box, useMediaQuery, useTheme } from "@material-ui/core";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import logobackgroundheader from "../../../../assets/interview-img/logobackgroundheader.png";
 import logobackgroundheadermb from "../../../../assets/interview-img/logobackgroundheadermb.png";

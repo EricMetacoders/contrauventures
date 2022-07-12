@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import { Box, useMediaQuery, useTheme } from "@material-ui/core";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 import dot1 from "../../../../../assets/interview-img/dot1.png";
 import dot2 from "../../../../../assets/interview-img/dot2.png";
 import { interviewServices } from "../../../../../services/interviewService";

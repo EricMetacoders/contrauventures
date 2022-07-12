@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { Box, debounce, useMediaQuery, useTheme } from "@material-ui/core";
+import { Box, debounce, useMediaQuery, useTheme } from "@mui/material";
 import { collection, wasClick } from "./ChangeImage.js";
 import { interviewServices } from "../../../../../../services/interviewService";
 import { useParams } from "react-router-dom";
