@@ -15,24 +15,20 @@ function HeaderFounder({ detailFounder }) {
   const theme = useTheme();
 
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-
+  console.log(detailFounder?.acf?.first_name.toUpperCase());
   return (
     <div>
       <Box className="frameheaderfoundermain">
         <Box className="frameimglayout">
           {isMatch ? (
             <img
-              src={
-                detailFounder?.acf?.header_thumbnail || ""
-              }
+              src={detailFounder?.acf?.header_thumbnail || ""}
               alt="logotrau"
               className="logobackgroundheader"
             />
           ) : (
             <img
-              src={
-                detailFounder?.acf?.header_image || ""
-              }
+              src={detailFounder?.acf?.header_image || ""}
               alt="logotrau"
               className="logobackgroundheader"
             />
@@ -62,22 +58,16 @@ function HeaderFounder({ detailFounder }) {
           </Box>
         )}
         <Box className="framemaintilecenterheader">
-          {
-            isMatch
+          {isMatch
             ? detailFounder?.acf?.first_name.toUpperCase() || ""
-            : detailFounder?.acf?.first_name.toLowerCase() || ""
-          }
+            : detailFounder?.acf?.first_name.toUpperCase() || ""}
           <Box className="framedetailtitlemain">
-            {
-              isMatch
+            {isMatch
               ? detailFounder?.acf?.last_name.toUpperCase() || ""
-              : detailFounder?.acf?.last_name.toLowerCase() || ""
-            }
+              : detailFounder?.acf?.last_name.toUpperCase() || ""}
           </Box>
           <Box className="titlecompany">
-            {
-              detailFounder?.acf?.company_name.split('"')[0]
-            }
+            {detailFounder?.acf?.company_name.split('"')[0]}
           </Box>
         </Box>
       </Box>

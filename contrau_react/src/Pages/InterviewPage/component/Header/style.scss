@@ -1,108 +1,85 @@
-.frameheadermain {
-  display: flex;
+// .frameheadermain {
+//   display: flex;
+//   position: relative;
+//   width: auto;
+.frameimglayout {
   position: relative;
-  width: auto;
-  // height: auto;
-  .frameimglayout {
-    position: relative;
+  width: 100%;
+  .logobackgroundheader {
     width: 100%;
-    .logobackgroundheader {
-      width: 100%;
-    }
-  }
-  .frameimglayout::before {
-    background: rgba(0, 0, 0, 0.6);
-    content: "";
-    display: block;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-  }
-  .imglogotrauframe-header {
-    position: absolute;
-    left: 90px;
-    right: 0%;
-    top: -0.07%;
-    bottom: 17.85%;
-    padding-top: 20px;
-    height: fit-content;
-    width: fit-content;
-  }
-  .titledetaimainframeheader {
-    position: absolute;
-    display: flex;
-    // left: 75.8%;
-    right: 90px;
-    top: 0%;
-    bottom: 0%;
-    padding-top: 28px;
-    height: fit-content;
-    .titledetaiframeheader {
-      cursor: pointer;
-      margin-left: 48px;
-      font-family: "Poppins", sans-serif;
-      font-style: normal;
-      font-weight: 300;
-      font-size: 16px;
-      line-height: 24px;
-      /* WHITE */
-      color: #ffffff;
-      /* Inside auto layout */
-      flex: none;
-      order: 0;
-      flex-grow: 0;
-    }
-    .titledetaiframeheader:hover {
-      color: #828383;
-    }
-    .titledetaiframeheader-active {
-      margin-left: 48px;
-
-      font-family: "Poppins", sans-serif;
-      font-style: normal;
-      font-weight: 800;
-      font-size: 16px;
-      line-height: 24px;
-      /* identical to box height */
-
-      /* WHITE */
-
-      color: #ffffff;
-
-      /* Inside auto layout */
-
-      flex: none;
-      order: 0;
-      flex-grow: 0;
-    }
-    .titledetaiframeheader-active:hover {
-      color: #828383;
-    }
-  }
-
-  .framemaintilecenterheader {
-    position: absolute;
-    width: auto;
-    height: auto;
-    left: 50%;
-    top: 70%;
-    transform: translateX(-50%) translateY(-70%);
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 60px;
-    line-height: 70px;
-    /* or 117% */
-    text-align: center;
-    letter-spacing: -0.01em;
-    /* WHITE */
-    color: #ffffff;
-    .framedetailtitlemain {
-      font-style: italic;
-      font-weight: 100;
-    }
   }
 }
+
+// .frameimglayout::before {
+//   background: rgba(0, 0, 0, 0.6);
+//   content: "";
+//   display: block;
+//   height: 100%;
+//   position: absolute;
+//   width: 100%;
+// }
+.imglogotrauframe-header {
+  position: absolute;
+  left: 90px;
+  right: 0%;
+  top: -0.07%;
+  bottom: 17.85%;
+  padding-top: 20px;
+  height: fit-content;
+  width: fit-content;
+}
+.titledetaimainframeheader {
+  position: absolute;
+  display: flex;
+  // left: 75.8%;
+  right: 90px;
+  top: 0%;
+  bottom: 0%;
+  padding-top: 28px;
+  height: fit-content;
+  .titledetaiframeheader {
+    cursor: pointer;
+    margin-left: 48px;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    /* WHITE */
+    color: #ffffff;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  .titledetaiframeheader:hover {
+    color: #828383;
+  }
+  .titledetaiframeheader-active {
+    margin-left: 48px;
+
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+
+    /* WHITE */
+
+    color: #ffffff;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  .titledetaiframeheader-active:hover {
+    color: #828383;
+  }
+}
+// }
 
 // RESPONSIVE
 
@@ -147,7 +124,6 @@
       top: 70%;
       transform: translateY(-50%);
       font-family: "Poppins", sans-serif;
-      font-style: normal;
       font-weight: 900;
       font-size: 40px;
       line-height: 44px;
@@ -168,6 +144,6 @@
 @media only screen and (min-width: 740px) and (max-width: 1023px) {
 }
 
-/* PC WIDTH >=1280px and width < 1535px*/
-@media only screen and (min-width: 1280px) and (max-width: 1535px) {
+/* PC WIDTH >=1200px and width < 1535px*/
+@media only screen and (min-width: 1200px) and (max-width: 1535px) {
 }
