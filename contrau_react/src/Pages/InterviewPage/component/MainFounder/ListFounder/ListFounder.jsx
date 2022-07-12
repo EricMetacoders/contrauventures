@@ -38,7 +38,7 @@ const theme = createTheme({
 });
 
 function ListFounder({ listDataFounder }) {
-  const matchMobile = useMediaQuery("(max-width:1023px)");
+  const matchMobile = useMediaQuery("(max-width:1279px)");
   const history = useNavigate();
   console.log("listDataFounder:", listDataFounder);
 
@@ -97,7 +97,7 @@ function ListFounder({ listDataFounder }) {
                       "144px",
                       "144px", //xs
                       "144px",
-                      "424px",
+                      "144px",
                       "424px",
                       "424px", //xl
                     ],
