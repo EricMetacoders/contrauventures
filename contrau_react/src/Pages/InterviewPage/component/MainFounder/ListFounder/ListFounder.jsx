@@ -59,7 +59,7 @@ function ListFounder({ listDataFounder }) {
             "1325px", // theme.breakpoints.up('xl')
           ],
         }}
-        style={{ margin: "auto", marginTop: "100px", background: "aqua" }}
+        style={{ margin: "auto", marginTop: "100px" }}
       >
         <Grid
           container
