@@ -30,7 +30,7 @@ export default function Header() {
           {/* menu select desktop */}
           <div className="hidden sm:flex item-center justify-center space-x-12 md:mt-[4px]">
             <Link to="/">
-              <p className="popinsFont text-[16px] font-extrabold hover:text-hoverGrey transition-all cursor-pointer">
+              <p className="popinsFont text-[16px] font-extrabold text-black hover:text-hoverGrey transition-all cursor-pointer">
                 HOME
               </p>
             </Link>
@@ -44,7 +44,7 @@ export default function Header() {
               Portfolio
             </p>
             <Link to="/story">
-              <p className="popinsFont text-[16px] font-normal hover:text-hoverGrey transition-all cursor-pointer">
+              <p className="popinsFont text-[16px] font-normal text-black hover:text-hoverGrey transition-all cursor-pointer">
                 Story
               </p>
             </Link>

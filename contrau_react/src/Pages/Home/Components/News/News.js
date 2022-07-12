@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getNewsList } from "../../../../reducers/homeSlice";
+import "./news.scss";
 
 export default function News() {
   const dispatch = useDispatch();
@@ -46,11 +47,11 @@ export default function News() {
                     <p className="text-[14px] robotoFlexFont italic text-red mb-0">
                       {n.acf.categies}
                     </p>
-                    <p className="popinsFont 2xl:text-[24px] 2xl:font-normal text-[18px] font-light mb-0 hover:underline underline-offset-1">
-                      {n.acf.title.slice(0, 50).concat("...")}
+                    <p className="text-break popinsFont 2xl:text-[24px] 2xl:font-normal text-[18px] font-light mb-0 hover:underline underline-offset-1">
+                      {n.acf.title}
                     </p>
-                    <p className="2xl-text[16px] 2xl:font-light 2xl:robotoFlexFont text-[13px] popinsFont font-light mb-0">
-                      {n.acf.newscontent.slice(0, 115).concat("...")}
+                    <p className="text-break 2xl-text[16px] 2xl:font-light 2xl:robotoFlexFont text-[13px] popinsFont font-light mb-0">
+                      {n.acf.newscontent}
                     </p>
                   </div>
                 </div>
