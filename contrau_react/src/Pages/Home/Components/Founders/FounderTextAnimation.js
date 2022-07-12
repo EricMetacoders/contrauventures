@@ -27,7 +27,9 @@ export default function Components() {
           Founders
         </p>
       </FadeInUpDiv>
-      <div className="hidden md:block leading-[1] mt-[50px]">
+
+      {/* desktop */}
+      <div className="hidden xl:block leading-[1] mt-[50px]">
         {showText2 ? (
           <FadeInUpDiv>
             <p className="popinsFont md:text-[70px]  xl:text-[110px]  font-thin mb-[5px] 2xl:mb-0">
@@ -56,7 +58,38 @@ export default function Components() {
           <></>
         )}
       </div>
-      <div className="block md:hidden leading-[1] mt-[27px] ">
+
+      {/* tablet */}
+      <div className="hidden sm:block xl:hidden leading-[1] mt-[50px]">
+        {showText2 ? (
+          <FadeInUpDiv>
+            <p className="popinsFont text-[64px]  font-thin  mb-0">
+              We don’t go for Deal,
+            </p>
+          </FadeInUpDiv>
+        ) : (
+          <></>
+        )}
+
+        {showText2 ? (
+          <FadeInUpDiv>
+            <p className="leading-[110px] text-[80px] ] popinsFont italic font-[900]  ">
+              We go for{" "}
+            </p>
+            <div className="flex items-center">
+              <p className="leading-[110px] text-[80px] ] popinsFont italic font-[900]   text-red">
+                Founders
+              </p>
+              <div className="bg-red w-[20px] h-[20px]   md:w-[23px] md:h-[23px] rounded-full  mt-[30px] md:mt-[27px]  xl:mt-[-41px] 2xl:mt-[57px]"></div>
+            </div>
+          </FadeInUpDiv>
+        ) : (
+          <></>
+        )}
+      </div>
+
+      {/* mobile */}
+      <div className="block sm:hidden leading-[1] mt-[27px] ">
         {showText2 ? (
           <FadeInUpDiv>
             <p className="popinsFont text-[40px] font-thin mb-0">We don't</p>

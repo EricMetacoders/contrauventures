@@ -14,7 +14,6 @@ export default function Faq() {
   const sortList = faqList?.slice().sort((a, b) => {
     return a.acf.order - b.acf.order;
   });
-  console.log("faq", sortList);
 
   useEffect(() => {
     dispatch(getFAQList());
