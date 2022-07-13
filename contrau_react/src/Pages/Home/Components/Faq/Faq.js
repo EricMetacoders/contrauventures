@@ -56,7 +56,7 @@ export default function Faq() {
                           <p className="popinsFont md:mt-[8px] text-[18px] font-light  2xl:text-[24px] italic text-red mb-0">
                             Q{index + 1}
                           </p>
-                          <p className="text-[18px] md:text-[32px] w-[299px] md:w-[522px] 2xl:w-[900px]  popinsFont 2xl:text-[32px] 2xl:font-normal font-light  mb-0 mText">
+                          <p className="break-all text-[18px] md:text-[32px] w-[299px] md:w-[522px] 2xl:w-[900px]  popinsFont 2xl:text-[32px] 2xl:font-normal font-light  mb-0 mText">
                             {ques.acf.question}
                           </p>
                         </div>
@@ -67,13 +67,13 @@ export default function Faq() {
                 key={index + 1}
               >
                 <div className="ml-[-3px] mr-[47px] pb-[40px] md:mx-[50px] ">
-                  <p className="md:mt-[71px] mt-[40px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
+                  <p className="break-all md:mt-[71px] mt-[40px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
                     {ques.acf.answer_part_1}
                   </p>
-                  <p className="mt-[20px] md:mt-[42px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
+                  <p className="break-all mt-[20px] md:mt-[42px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
                     {ques.acf.answer_part_2}
                   </p>
-                  <p className="mt-[20px] md:mt-[42px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
+                  <p className="break-all mt-[20px] md:mt-[42px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
                     {ques.acf.answer_part_3}
                   </p>
                 </div>
