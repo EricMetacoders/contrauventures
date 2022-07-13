@@ -3,6 +3,7 @@
 
 namespace CreativeMail\Managers;
 
+use CreativeMail\Helpers\EnvironmentHelper;
 use CreativeMail\Helpers\OptionsHelper;
 use CreativeMail\Integrations\Integration;
 use CreativeMail\Modules\Contacts\Handlers\BlueHostBuilderPluginHandler;
@@ -35,6 +36,8 @@ class IntegrationManager
     {
         $this->active_integrations = array();
 
+        $environment = strtolower(EnvironmentHelper::get_environment());
+
         // Setup the default integrations
         $this->supported_integrations = array(
             new Integration('jetpack', 'Jetpack Forms', 'jetpack/jetpack.php', JetpackPluginHandler::class, false),
@@ -48,8 +51,9 @@ class IntegrationManager
             new Integration('elementor', 'Elementor', 'elementor/elementor.php', ElementorPluginHandler::class, false),
             new Integration('ninjaforms', 'Ninja Forms', 'ninja-forms/ninja-forms.php', NinjaFormsPluginHandler::class, false, admin_url('plugin-install.php?tab=plugin-information&plugin=ninja-forms&TB_iframe=true&width=772&height=1144')),
             new Integration('caldera', 'Caldera Forms', 'caldera-forms/caldera-core.php', CalderaPluginHandler::class, false, admin_url('plugin-install.php?tab=plugin-information&plugin=caldera-forms&TB_iframe=true&width=772&height=1144')),
-            new Integration('bluehost', 'Bluehost Builder', 'wb4wp-wordpress-plugin-bluehost/wb4wp-plugin.php', BlueHostBuilderPluginHandler::class, false, 'https://www.bluehost.com/'),
-            new Integration('formidable', 'Formidable', 'formidable/formidable.php', FormidablePluginHandler::class, false, admin_url('plugin-install.php?tab=plugin-information&plugin=formidable&TB_iframe=true&width=772&height=1144'))
+            new Integration('bluehost', 'Bluehost Builder', "wb4wp-wordpress-plugin-bluehost-$environment/wb4wp-plugin.php", BlueHostBuilderPluginHandler::class, false, 'https://www.bluehost.com/'),
+            new Integration('formidable', 'Formidable', 'formidable/formidable.php', FormidablePluginHandler::class, false, admin_url('plugin-install.php?tab=plugin-information&plugin=formidable&TB_iframe=true&width=772&height=1144')),
+            new Integration('creativemail', 'CreativeMail', 'creativ-email-wordpress-plugin/creative-mail-plugin.php', CreativeMailPluginHandler::class, true, null, true, true)
         );
     }
 
@@ -58,7 +62,6 @@ class IntegrationManager
      */
     public function add_hooks()
     {
-        $creativeMail= new Integration('creativemail', 'CreativeMail', 'creativ-email-wordpress-plugin/creative-mail-plugin.php', CreativeMailPluginHandler::class, true);
         $active_plugins = array_filter(
             $this->get_active_plugins(), function ($item) {
             return array_search($item->get_slug(), $this->get_activated_plugins(), true) !== false;
@@ -77,16 +80,6 @@ class IntegrationManager
             } catch (\Exception $e) {
                 RaygunManager::get_instance()->exception_handler($e);
             }
-        }
-        try {
-            // use reflection to create instance of class
-            $class = new ReflectionClass($creativeMail->get_integration_handler());
-            $this->active_integrations[$creativeMail->get_slug()] = $class->newInstance();
-
-            // register hooks for integration class
-            $this->active_integrations[$creativeMail->get_slug()]->registerHooks();
-        } catch (\Exception $e) {
-            RaygunManager::get_instance()->exception_handler($e);
         }
     }
 
@@ -121,6 +114,12 @@ class IntegrationManager
             }
         }
 
+        if (count(array_filter($activated_plugins, function ($item) {
+                return $item->get_slug() == 'creativemail';
+            })) == 0) {
+            $x = array_filter($this->supported_integrations, function($item) {return $item->get_slug() == 'creativemail';});
+            array_push($activated_plugins, array_pop($x));
+        }
         return $activated_plugins;
     }
 
@@ -161,7 +160,9 @@ class IntegrationManager
         if (is_array($activated_plugins)) {
             $activated_plugins = implode(';', $activated_plugins);
         }
-        return explode(';', $activated_plugins);
+        $plugins = explode(';', $activated_plugins);
+        array_push($plugins, 'creativemail');
+        return $plugins;
     }
 
     /**
