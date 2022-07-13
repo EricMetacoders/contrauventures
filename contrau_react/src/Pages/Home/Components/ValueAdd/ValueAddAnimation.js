@@ -47,7 +47,7 @@ export default function Components() {
         )}
         {showText2 ? (
           <FadeInUpDiv>
-            <p className="popinsFont text-[40px] md:text-[80px] 2xl:text-[110px]  italic font-thin mb-0">
+            <p className="popinsFont text-[40px] md:text-[64px] lg:text-[80px] 2xl:text-[110px]  italic font-thin mb-0">
               ourselve with
             </p>
           </FadeInUpDiv>
@@ -58,10 +58,10 @@ export default function Components() {
         {showText2 ? (
           <FadeInUpDiv>
             <div className="hidden md:flex items-center justify-start space-x-5">
-              <p className="popinsFont text-[40px] md:text-[80px] 2xl:text-[110px]  italic font-thin mb-0">
+              <p className="popinsFont text-[40px] md:text-[64px] lg:text-[80px] 2xl:text-[110px]  italic font-thin mb-0">
                 various
               </p>
-              <p className="popinsFont text-[40px] md:text-[80px] 2xl:text-[110px] font-[900] text-red italic mb-0">
+              <p className="popinsFont text-[40px] md:text-[64px] lg:text-[80px] 2xl:text-[110px] font-[900] text-red italic mb-0">
                 potentials
               </p>
             </div>

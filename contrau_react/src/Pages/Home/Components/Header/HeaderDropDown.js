@@ -37,11 +37,13 @@ export default function HeaderDropDown() {
         <div className="flex flex-col items-start space-y-5">
           <Link to="/">
             {" "}
-            <p className="popinsFont text-[1rem] font-extrabold">Home</p>
+            <p className="text-black popinsFont text-[1rem] font-extrabold">
+              Home
+            </p>
           </Link>
-          <p className="popinsFont text-[1rem] ">About Us</p>
+          <p className="text-black popinsFont text-[1rem] ">About Us</p>
           <p
-            className="popinsFont text-[1rem] "
+            className="text-black popinsFont text-[1rem] "
             onClick={() => {
               window.scrollTo({
                 top: 2825,
@@ -52,7 +54,7 @@ export default function HeaderDropDown() {
             Portfolio
           </p>
           <Link to="/story">
-            <p className="popinsFont text-[1rem] ">Story</p>
+            <p className="text-black popinsFont text-[1rem] ">Story</p>
           </Link>
         </div>
       </Modal>

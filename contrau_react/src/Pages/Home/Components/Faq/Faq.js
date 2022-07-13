@@ -21,7 +21,7 @@ export default function Faq() {
 
   const { Panel } = Collapse;
   return (
-    <div className="mx-[34px]  xl:mx-[100px] 2xl:mx-[300px]  mt-[2px] md:mt-[-19px]">
+    <div className="mx-[34px]  md:mx-[117px] xl:mx-[100px] 2xl:mx-[300px]  mt-[2px] md:mt-[-19px]">
       <div className="border-t-[1px] border-hoverGrey mb-[258px] 2xl:mb-[283px]"></div>
       <div className="  pb-[10px] md:pb-[90px]">
         <div className="flex items-end justify-start">

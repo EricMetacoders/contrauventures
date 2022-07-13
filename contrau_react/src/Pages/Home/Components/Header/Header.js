@@ -28,7 +28,7 @@ export default function Header() {
           </div>
 
           {/* menu select desktop */}
-          <div className="hidden sm:flex item-center justify-center space-x-12 md:mt-[4px]">
+          <div className="hidden lg:flex item-center justify-center space-x-12 md:mt-[4px]">
             <Link to="/">
               <p className="popinsFont text-[16px] font-extrabold text-black hover:text-hoverGrey transition-all cursor-pointer">
                 HOME
@@ -51,7 +51,7 @@ export default function Header() {
           </div>
 
           {/* menu select mobile */}
-          <div className="sm:hidden">
+          <div className="lg:hidden">
             <HeaderDropDown />
           </div>
         </div>
