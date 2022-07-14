@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import GroupTextAnimation from "./GroupTextAnimation";
 import { getPartnersList } from "../../../../reducers/homeSlice";
 import "./group.css";
+import { PartnerLogo } from "./partnerLogo/partnerLgo";
 
 export default function Group() {
   const dispatch = useDispatch();
@@ -55,11 +56,17 @@ export default function Group() {
             <div className="right-left1 absolute flex justify-center items-center ">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
-                    key={i}
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: logo?.acf?.image || "",
+                        logoName: logo?.acf?.name || "",
+                        key: i,
+                        wrapperWidth: 173,
+                        wrapperHeight: 173,
+                        marginLeft: 10,
+                      }
+                    }
                   />
                 );
               })}
@@ -67,11 +74,17 @@ export default function Group() {
             <div className=" right-left2 absolute flex justify-center items-center ">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
-                    key={i}
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: logo?.acf?.image || "",
+                        logoName: logo?.acf?.name || "",
+                        key: i,
+                        wrapperWidth: 173,
+                        wrapperHeight: 173,
+                        marginLeft: 10,
+                      }
+                    }
                   />
                 );
               })}
@@ -79,11 +92,17 @@ export default function Group() {
             <div className=" right-left3 absolute flex justify-center items-center ">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
-                    key={i}
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: logo?.acf?.image || "",
+                        logoName: logo?.acf?.name || "",
+                        key: i,
+                        wrapperWidth: 173,
+                        wrapperHeight: 173,
+                        marginLeft: 10,
+                      }
+                    }
                   />
                 );
               })}
@@ -93,11 +112,17 @@ export default function Group() {
             <div className="left-right1 absolute flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
-                    key={i}
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: logo?.acf?.image || "",
+                        logoName: logo?.acf?.name || "",
+                        key: i,
+                        wrapperWidth: 173,
+                        wrapperHeight: 173,
+                        marginLeft: 10,
+                      }
+                    }
                   />
                 );
               })}
@@ -105,11 +130,17 @@ export default function Group() {
             <div className=" left-right2 absolute flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
-                    key={i}
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: logo?.acf?.image || "",
+                        logoName: logo?.acf?.name || "",
+                        key: i,
+                        wrapperWidth: 173,
+                        wrapperHeight: 173,
+                        marginLeft: 10,
+                      }
+                    }
                   />
                 );
               })}
@@ -117,11 +148,17 @@ export default function Group() {
             <div className=" left-right3 absolute flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
-                    key={i}
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: logo?.acf?.image || "",
+                        logoName: logo?.acf?.name || "",
+                        key: i,
+                        wrapperWidth: 173,
+                        wrapperHeight: 173,
+                        marginLeft: 10,
+                      }
+                    }
                   />
                 );
               })}
@@ -131,11 +168,17 @@ export default function Group() {
             <div className="absolute right-left1 flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100  ml-[10px]"
-                    key={i}
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: logo?.acf?.image || "",
+                        logoName: logo?.acf?.name || "",
+                        key: i,
+                        wrapperWidth: 173,
+                        wrapperHeight: 173,
+                        marginLeft: 10,
+                      }
+                    }
                   />
                 );
               })}
@@ -143,11 +186,17 @@ export default function Group() {
             <div className="absolute right-left2 flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100  ml-[10px]"
-                    key={i}
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: logo?.acf?.image || "",
+                        logoName: logo?.acf?.name || "",
+                        key: i,
+                        wrapperWidth: 173,
+                        wrapperHeight: 173,
+                        marginLeft: 10,
+                      }
+                    }
                   />
                 );
               })}
@@ -155,11 +204,17 @@ export default function Group() {
             <div className="absolute right-left3 flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
-                    key={i}
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: logo?.acf?.image || "",
+                        logoName: logo?.acf?.name || "",
+                        key: i,
+                        wrapperWidth: 173,
+                        wrapperHeight: 173,
+                        marginLeft: 10,
+                      }
+                    }
                   />
                 );
               })}
@@ -179,11 +234,17 @@ export default function Group() {
             <div className="right-left1 absolute flex justify-center items-center ">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[92px] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
-                    key={i}
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: logo?.acf?.image || "",
+                        logoName: logo?.acf?.name || "",
+                        key: i,
+                        wrapperWidth: 173,
+                        wrapperHeight: 173,
+                        marginLeft: 10,
+                      }
+                    }
                   />
                 );
               })}
@@ -191,11 +252,17 @@ export default function Group() {
             <div className=" right-left2 absolute flex justify-center items-center ">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[92px]  h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
-                    key={i}
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: logo?.acf?.image || "",
+                        logoName: logo?.acf?.name || "",
+                        key: i,
+                        wrapperWidth: 173,
+                        wrapperHeight: 173,
+                        marginLeft: 10,
+                      }
+                    }
                   />
                 );
               })}
@@ -203,11 +270,17 @@ export default function Group() {
             <div className=" right-left3 absolute flex justify-center items-center ">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[92px]  h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
-                    key={i}
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: logo?.acf?.image || "",
+                        logoName: logo?.acf?.name || "",
+                        key: i,
+                        wrapperWidth: 173,
+                        wrapperHeight: 173,
+                        marginLeft: 10,
+                      }
+                    }
                   />
                 );
               })}
@@ -217,11 +290,17 @@ export default function Group() {
             <div className="left-right1 absolute flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[92px]  ] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
-                    key={i}
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: logo?.acf?.image || "",
+                        logoName: logo?.acf?.name || "",
+                        key: i,
+                        wrapperWidth: 173,
+                        wrapperHeight: 173,
+                        marginLeft: 10,
+                      }
+                    }
                   />
                 );
               })}
@@ -229,11 +308,17 @@ export default function Group() {
             <div className=" left-right2 absolute flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[92px]   h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
-                    key={i}
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: logo?.acf?.image || "",
+                        logoName: logo?.acf?.name || "",
+                        key: i,
+                        wrapperWidth: 173,
+                        wrapperHeight: 173,
+                        marginLeft: 10,
+                      }
+                    }
                   />
                 );
               })}
@@ -241,11 +326,17 @@ export default function Group() {
             <div className=" left-right3 absolute flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[92px]  h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
-                    key={i}
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: logo?.acf?.image || "",
+                        logoName: logo?.acf?.name || "",
+                        key: i,
+                        wrapperWidth: 173,
+                        wrapperHeight: 173,
+                        marginLeft: 10,
+                      }
+                    }
                   />
                 );
               })}
@@ -255,11 +346,17 @@ export default function Group() {
             <div className="absolute right-left1 flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[92px] h-[173px] object-contain opacity-80 hover:opacity-100  ml-[10px]"
-                    key={i}
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: logo?.acf?.image || "",
+                        logoName: logo?.acf?.name || "",
+                        key: i,
+                        wrapperWidth: 173,
+                        wrapperHeight: 173,
+                        marginLeft: 10,
+                      }
+                    }
                   />
                 );
               })}
@@ -267,11 +364,17 @@ export default function Group() {
             <div className="absolute right-left2 flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[92px]   h-[173px] object-contain opacity-80 hover:opacity-100  ml-[10px]"
-                    key={i}
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: logo?.acf?.image || "",
+                        logoName: logo?.acf?.name || "",
+                        key: i,
+                        wrapperWidth: 173,
+                        wrapperHeight: 173,
+                        marginLeft: 10,
+                      }
+                    }
                   />
                 );
               })}
@@ -304,11 +407,17 @@ export default function Group() {
             <div className="mobile-right-left1 absolute flex justify-center items-center ">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 ml-[5px]"
-                    key={i}
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: logo?.acf?.image || "",
+                        logoName: logo?.acf?.name || "",
+                        key: i,
+                        wrapperWidth: 80,
+                        wrapperHeight: 80,
+                        marginLeft: 5,
+                      }
+                    }
                   />
                 );
               })}
@@ -316,11 +425,17 @@ export default function Group() {
             <div className="mobile-right-left2 absolute flex justify-center items-center ">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 ml-[5px]"
-                    key={i}
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: logo?.acf?.image || "",
+                        logoName: logo?.acf?.name || "",
+                        key: i,
+                        wrapperWidth: 80,
+                        wrapperHeight: 80,
+                        marginLeft: 5,
+                      }
+                    }
                   />
                 );
               })}
@@ -330,11 +445,17 @@ export default function Group() {
             <div className="mobile-left-right1 absolute flex justify-center items-center ">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 ml-[5px]"
-                    key={i}
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: logo?.acf?.image || "",
+                        logoName: logo?.acf?.name || "",
+                        key: i,
+                        wrapperWidth: 80,
+                        wrapperHeight: 80,
+                        marginLeft: 5,
+                      }
+                    }
                   />
                 );
               })}
@@ -342,11 +463,17 @@ export default function Group() {
             <div className="mobile-left-right2 absolute flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 ml-[5px]"
-                    key={i}
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: logo?.acf?.image || "",
+                        logoName: logo?.acf?.name || "",
+                        key: i,
+                        wrapperWidth: 80,
+                        wrapperHeight: 80,
+                        marginLeft: 5,
+                      }
+                    }
                   />
                 );
               })}
@@ -356,11 +483,17 @@ export default function Group() {
             <div className="mobile-right-left1 absolute flex justify-center items-center ">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 ml-[5px]"
-                    key={i}
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: logo?.acf?.image || "",
+                        logoName: logo?.acf?.name || "",
+                        key: i,
+                        wrapperWidth: 80,
+                        wrapperHeight: 80,
+                        marginLeft: 5,
+                      }
+                    }
                   />
                 );
               })}
@@ -368,11 +501,17 @@ export default function Group() {
             <div className="mobile-right-left2 absolute flex justify-center items-center ">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 ml-[5px]"
-                    key={i}
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: logo?.acf?.image || "",
+                        logoName: logo?.acf?.name || "",
+                        key: i,
+                        wrapperWidth: 80,
+                        wrapperHeight: 80,
+                        marginLeft: 5,
+                      }
+                    }
                   />
                 );
               })}
