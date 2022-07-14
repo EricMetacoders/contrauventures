@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 
 import "./contactForm.scss";
 import ic_file from "../../../../assets/homepage_img/ic_file.png";
@@ -27,14 +28,22 @@ export default function ContactForm() {
     } else {
       console.log("data", data);
       // call api
-      // homeServices
-      //   .postContactInfo(data)
-      //   .then((res) => {
-      //     console.log("res", res);
-      //   })
-      //   .catch((err) => {
-      //     console.log("err", err);
-      //   });
+      homeServices
+        .postContactInfo(data)
+        .then((res) => {
+          Swal.fire({
+            icon: "success",
+            title: "Success",
+            text: "Your message has been sent successfully!",
+          });
+        })
+        .catch((err) => {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+          });
+        });
     }
   };
 
