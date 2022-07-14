@@ -4,16 +4,18 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit10d53f681fff0b354e0bf7cb191275a5
+class ComposerStaticInitece9305b39fb1abdf64566707371cc50
 {
     public static $files = array (
-        'b62570ec8ed5d9ce1990d98269e51fa3' => __DIR__ . '/..' . '/endurance/wp-module-data/bootstrap.php',
+        '305f44d06b4b9b934b549f0b525c4bea' => __DIR__ . '/..' . '/newfold-labs/wp-module-data/bootstrap.php',
         '2f504007b66898166b454912c82ea1be' => __DIR__ . '/..' . '/bluehost/bluehost-wp-customer-data/bootstrap.php',
         '637fa4e5a9fe2956d844ead1daab0f31' => __DIR__ . '/..' . '/bluehost/endurance-wp-module-business-reviews/bootstrap.php',
-        '0774e44945781cd5a8d0b0dc32f80615' => __DIR__ . '/..' . '/bluehost/endurance-wp-module-gutenframe/bootstrap.php',
         '0a7ee76a6dd15c6349ed695bd3b2a987' => __DIR__ . '/..' . '/bluehost/endurance-wp-module-loader/module-loader.php',
-        '6e09b332987211bb2939025b3ed3c51b' => __DIR__ . '/..' . '/bluehost/endurance-wp-module-sso/bootstrap.php',
         '748560bdb9c548e074991a1f2181a2f5' => __DIR__ . '/..' . '/bluehost/wp-module-secure-passwords/bootstrap.php',
+        '95c011b0ec52c15dbf68dec5081b93ec' => __DIR__ . '/..' . '/newfold-labs/wp-module-loader/bootstrap.php',
+        'd74aae4e35e57e9789b924ac610c283e' => __DIR__ . '/..' . '/newfold-labs/wp-module-loader/includes/functions.php',
+        '7c5dbbc48ace6d036fb7435638b4473b' => __DIR__ . '/..' . '/newfold-labs/wp-module-marketplace/bootstrap.php',
+        '44acd1d537592db522c7f66302b330e4' => __DIR__ . '/..' . '/newfold-labs/wp-module-sso/bootstrap.php',
         '89c483fff8e47bfb3a84bf56b0ff5160' => __DIR__ . '/..' . '/wp-forge/helpers/includes/functions.php',
     );
 
@@ -24,7 +26,10 @@ class ComposerStaticInit10d53f681fff0b354e0bf7cb191275a5
         ),
         'W' => 
         array (
+            'WP_Forge\\Options\\' => 17,
             'WP_Forge\\Helpers\\' => 17,
+            'WP_Forge\\Fluent\\' => 16,
+            'WP_Forge\\Container\\' => 19,
         ),
         'P' => 
         array (
@@ -33,11 +38,14 @@ class ComposerStaticInit10d53f681fff0b354e0bf7cb191275a5
         'N' => 
         array (
             'Newfold\\Plugin\\' => 15,
+            'NewfoldLabs\\WP\\Module\\Marketplace\\' => 34,
+            'NewfoldLabs\\WP\\Module\\Data\\' => 27,
+            'NewfoldLabs\\WP\\ModuleLoader\\' => 28,
+            'NewFoldLabs\\WP\\Module\\SSO\\' => 26,
         ),
         'E' => 
         array (
             'Endurance_WP_Plugin_Updater\\' => 28,
-            'Endurance\\WP\\Module\\Data\\' => 25,
         ),
         'D' => 
         array (
@@ -54,12 +62,24 @@ class ComposerStaticInit10d53f681fff0b354e0bf7cb191275a5
     public static $prefixDirsPsr4 = array (
         'wpscholar\\' => 
         array (
-            0 => __DIR__ . '/..' . '/wpscholar/collection',
-            1 => __DIR__ . '/..' . '/wpscholar/url',
+            0 => __DIR__ . '/..' . '/wpscholar/url',
+            1 => __DIR__ . '/..' . '/wpscholar/collection',
+        ),
+        'WP_Forge\\Options\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/wp-forge/wp-options/includes',
         ),
         'WP_Forge\\Helpers\\' => 
         array (
             0 => __DIR__ . '/..' . '/wp-forge/helpers/includes',
+        ),
+        'WP_Forge\\Fluent\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/wp-forge/fluent/includes',
+        ),
+        'WP_Forge\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/wp-forge/container/includes',
         ),
         'Psr\\Container\\' => 
         array (
@@ -69,13 +89,25 @@ class ComposerStaticInit10d53f681fff0b354e0bf7cb191275a5
         array (
             0 => __DIR__ . '/../..' . '/inc',
         ),
+        'NewfoldLabs\\WP\\Module\\Marketplace\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/newfold-labs/wp-module-marketplace/includes',
+        ),
+        'NewfoldLabs\\WP\\Module\\Data\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/newfold-labs/wp-module-data/src',
+        ),
+        'NewfoldLabs\\WP\\ModuleLoader\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/newfold-labs/wp-module-loader/includes',
+        ),
+        'NewFoldLabs\\WP\\Module\\SSO\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/newfold-labs/wp-module-sso/includes',
+        ),
         'Endurance_WP_Plugin_Updater\\' => 
         array (
             0 => __DIR__ . '/..' . '/bluehost/endurance-wp-plugin-updater',
-        ),
-        'Endurance\\WP\\Module\\Data\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/endurance/wp-module-data/src',
         ),
         'Doctrine\\Inflector\\' => 
         array (
@@ -119,11 +151,6 @@ class ComposerStaticInit10d53f681fff0b354e0bf7cb191275a5
         'Bluehost\\RestApi\\AdminErrorController' => __DIR__ . '/../..' . '/inc/RestApi/AdminErrorController.php',
         'Bluehost\\RestApi\\BluehostBlogController' => __DIR__ . '/../..' . '/inc/RestApi/BluehostBlogController.php',
         'Bluehost\\RestApi\\CachingController' => __DIR__ . '/../..' . '/inc/RestApi/CachingController.php',
-        'Bluehost\\RestApi\\MojoItemController' => __DIR__ . '/../..' . '/inc/RestApi/MojoItemController.php',
-        'Bluehost\\RestApi\\MojoItemsController' => __DIR__ . '/../..' . '/inc/RestApi/MojoItemsController.php',
-        'Bluehost\\RestApi\\MojoPluginsController' => __DIR__ . '/../..' . '/inc/RestApi/MojoPluginsController.php',
-        'Bluehost\\RestApi\\MojoServicesController' => __DIR__ . '/../..' . '/inc/RestApi/MojoServicesController.php',
-        'Bluehost\\RestApi\\MojoThemesController' => __DIR__ . '/../..' . '/inc/RestApi/MojoThemesController.php',
         'Bluehost\\RestApi\\SettingsController' => __DIR__ . '/../..' . '/inc/RestApi/SettingsController.php',
         'Bluehost\\RestApi\\StagingController' => __DIR__ . '/../..' . '/inc/RestApi/StagingController.php',
         'Bluehost\\SiteMeta' => __DIR__ . '/../..' . '/inc/SiteMeta.php',
@@ -173,35 +200,41 @@ class ComposerStaticInit10d53f681fff0b354e0bf7cb191275a5
         'Doctrine\\Inflector\\Rules\\Word' => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Inflector/Rules/Word.php',
         'Doctrine\\Inflector\\RulesetInflector' => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Inflector/RulesetInflector.php',
         'Doctrine\\Inflector\\WordInflector' => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Inflector/WordInflector.php',
-        'EIG_Module_Gutenframe' => __DIR__ . '/..' . '/bluehost/endurance-wp-module-gutenframe/src/class-eig-module-gutenframe.php',
-        'Endurance\\WP\\Module\\Data\\API\\Events' => __DIR__ . '/..' . '/endurance/wp-module-data/src/API/Events.php',
-        'Endurance\\WP\\Module\\Data\\API\\Verify' => __DIR__ . '/..' . '/endurance/wp-module-data/src/API/Verify.php',
-        'Endurance\\WP\\Module\\Data\\Data' => __DIR__ . '/..' . '/endurance/wp-module-data/src/Data.php',
-        'Endurance\\WP\\Module\\Data\\Event' => __DIR__ . '/..' . '/endurance/wp-module-data/src/Event.php',
-        'Endurance\\WP\\Module\\Data\\EventManager' => __DIR__ . '/..' . '/endurance/wp-module-data/src/EventManager.php',
-        'Endurance\\WP\\Module\\Data\\Helpers\\Encryption' => __DIR__ . '/..' . '/endurance/wp-module-data/src/Helpers/Encryption.php',
-        'Endurance\\WP\\Module\\Data\\Helpers\\Multibrand' => __DIR__ . '/..' . '/endurance/wp-module-data/src/Helpers/Multibrand.php',
-        'Endurance\\WP\\Module\\Data\\Helpers\\Plugin' => __DIR__ . '/..' . '/endurance/wp-module-data/src/Helpers/Plugin.php',
-        'Endurance\\WP\\Module\\Data\\Helpers\\SiteHealth' => __DIR__ . '/..' . '/endurance/wp-module-data/src/Helpers/SiteHealth.php',
-        'Endurance\\WP\\Module\\Data\\Helpers\\Transient' => __DIR__ . '/..' . '/endurance/wp-module-data/src/Helpers/Transient.php',
-        'Endurance\\WP\\Module\\Data\\HubConnection' => __DIR__ . '/..' . '/endurance/wp-module-data/src/HubConnection.php',
-        'Endurance\\WP\\Module\\Data\\Listeners\\Admin' => __DIR__ . '/..' . '/endurance/wp-module-data/src/Listeners/Admin.php',
-        'Endurance\\WP\\Module\\Data\\Listeners\\BHPlugin' => __DIR__ . '/..' . '/endurance/wp-module-data/src/Listeners/BHPlugin.php',
-        'Endurance\\WP\\Module\\Data\\Listeners\\Content' => __DIR__ . '/..' . '/endurance/wp-module-data/src/Listeners/Content.php',
-        'Endurance\\WP\\Module\\Data\\Listeners\\Cron' => __DIR__ . '/..' . '/endurance/wp-module-data/src/Listeners/Cron.php',
-        'Endurance\\WP\\Module\\Data\\Listeners\\Jetpack' => __DIR__ . '/..' . '/endurance/wp-module-data/src/Listeners/Jetpack.php',
-        'Endurance\\WP\\Module\\Data\\Listeners\\Listener' => __DIR__ . '/..' . '/endurance/wp-module-data/src/Listeners/Listener.php',
-        'Endurance\\WP\\Module\\Data\\Listeners\\Plugin' => __DIR__ . '/..' . '/endurance/wp-module-data/src/Listeners/Plugin.php',
-        'Endurance\\WP\\Module\\Data\\Listeners\\SiteHealth' => __DIR__ . '/..' . '/endurance/wp-module-data/src/Listeners/SiteHealth.php',
-        'Endurance\\WP\\Module\\Data\\Listeners\\Theme' => __DIR__ . '/..' . '/endurance/wp-module-data/src/Listeners/Theme.php',
-        'Endurance\\WP\\Module\\Data\\Logger' => __DIR__ . '/..' . '/endurance/wp-module-data/src/Logger.php',
-        'Endurance\\WP\\Module\\Data\\SubscriberInterface' => __DIR__ . '/..' . '/endurance/wp-module-data/src/SubscriberInterface.php',
         'Endurance_Collection' => __DIR__ . '/..' . '/bluehost/endurance-wp-module-loader/includes/Collection.php',
         'Endurance_ModuleManager' => __DIR__ . '/..' . '/bluehost/endurance-wp-module-loader/includes/ModuleManager.php',
         'Endurance_ModuleRegistry' => __DIR__ . '/..' . '/bluehost/endurance-wp-module-loader/includes/ModuleRegistry.php',
         'Endurance_Options' => __DIR__ . '/..' . '/bluehost/endurance-wp-module-loader/includes/Options.php',
         'Endurance_WP_Plugin_Updater\\Plugin' => __DIR__ . '/..' . '/bluehost/endurance-wp-plugin-updater/Plugin.php',
         'Endurance_WP_Plugin_Updater\\Updater' => __DIR__ . '/..' . '/bluehost/endurance-wp-plugin-updater/Updater.php',
+        'NewFoldLabs\\WP\\Module\\SSO\\SSO_AJAX_Handler' => __DIR__ . '/..' . '/newfold-labs/wp-module-sso/includes/SSO_AJAX_Handler.php',
+        'NewFoldLabs\\WP\\Module\\SSO\\SSO_Helpers' => __DIR__ . '/..' . '/newfold-labs/wp-module-sso/includes/SSO_Helpers.php',
+        'NewFoldLabs\\WP\\Module\\SSO\\SSO_Helpers_Legacy' => __DIR__ . '/..' . '/newfold-labs/wp-module-sso/includes/SSO_Helpers_Legacy.php',
+        'NewFoldLabs\\WP\\Module\\SSO\\SSO_REST_Controller' => __DIR__ . '/..' . '/newfold-labs/wp-module-sso/includes/SSO_REST_Controller.php',
+        'NewfoldLabs\\WP\\ModuleLoader\\Container' => __DIR__ . '/..' . '/newfold-labs/wp-module-loader/includes/Container.php',
+        'NewfoldLabs\\WP\\ModuleLoader\\Module' => __DIR__ . '/..' . '/newfold-labs/wp-module-loader/includes/Module.php',
+        'NewfoldLabs\\WP\\ModuleLoader\\ModuleRegistry' => __DIR__ . '/..' . '/newfold-labs/wp-module-loader/includes/ModuleRegistry.php',
+        'NewfoldLabs\\WP\\ModuleLoader\\Plugin' => __DIR__ . '/..' . '/newfold-labs/wp-module-loader/includes/Plugin.php',
+        'NewfoldLabs\\WP\\Module\\Data\\API\\Events' => __DIR__ . '/..' . '/newfold-labs/wp-module-data/src/API/Events.php',
+        'NewfoldLabs\\WP\\Module\\Data\\API\\Verify' => __DIR__ . '/..' . '/newfold-labs/wp-module-data/src/API/Verify.php',
+        'NewfoldLabs\\WP\\Module\\Data\\Data' => __DIR__ . '/..' . '/newfold-labs/wp-module-data/src/Data.php',
+        'NewfoldLabs\\WP\\Module\\Data\\Event' => __DIR__ . '/..' . '/newfold-labs/wp-module-data/src/Event.php',
+        'NewfoldLabs\\WP\\Module\\Data\\EventManager' => __DIR__ . '/..' . '/newfold-labs/wp-module-data/src/EventManager.php',
+        'NewfoldLabs\\WP\\Module\\Data\\Helpers\\Encryption' => __DIR__ . '/..' . '/newfold-labs/wp-module-data/src/Helpers/Encryption.php',
+        'NewfoldLabs\\WP\\Module\\Data\\Helpers\\Plugin' => __DIR__ . '/..' . '/newfold-labs/wp-module-data/src/Helpers/Plugin.php',
+        'NewfoldLabs\\WP\\Module\\Data\\Helpers\\SiteHealth' => __DIR__ . '/..' . '/newfold-labs/wp-module-data/src/Helpers/SiteHealth.php',
+        'NewfoldLabs\\WP\\Module\\Data\\Helpers\\Transient' => __DIR__ . '/..' . '/newfold-labs/wp-module-data/src/Helpers/Transient.php',
+        'NewfoldLabs\\WP\\Module\\Data\\HiiveConnection' => __DIR__ . '/..' . '/newfold-labs/wp-module-data/src/HiiveConnection.php',
+        'NewfoldLabs\\WP\\Module\\Data\\Listeners\\Admin' => __DIR__ . '/..' . '/newfold-labs/wp-module-data/src/Listeners/Admin.php',
+        'NewfoldLabs\\WP\\Module\\Data\\Listeners\\Content' => __DIR__ . '/..' . '/newfold-labs/wp-module-data/src/Listeners/Content.php',
+        'NewfoldLabs\\WP\\Module\\Data\\Listeners\\Cron' => __DIR__ . '/..' . '/newfold-labs/wp-module-data/src/Listeners/Cron.php',
+        'NewfoldLabs\\WP\\Module\\Data\\Listeners\\Jetpack' => __DIR__ . '/..' . '/newfold-labs/wp-module-data/src/Listeners/Jetpack.php',
+        'NewfoldLabs\\WP\\Module\\Data\\Listeners\\Listener' => __DIR__ . '/..' . '/newfold-labs/wp-module-data/src/Listeners/Listener.php',
+        'NewfoldLabs\\WP\\Module\\Data\\Listeners\\Plugin' => __DIR__ . '/..' . '/newfold-labs/wp-module-data/src/Listeners/Plugin.php',
+        'NewfoldLabs\\WP\\Module\\Data\\Listeners\\SiteHealth' => __DIR__ . '/..' . '/newfold-labs/wp-module-data/src/Listeners/SiteHealth.php',
+        'NewfoldLabs\\WP\\Module\\Data\\Listeners\\Theme' => __DIR__ . '/..' . '/newfold-labs/wp-module-data/src/Listeners/Theme.php',
+        'NewfoldLabs\\WP\\Module\\Data\\Logger' => __DIR__ . '/..' . '/newfold-labs/wp-module-data/src/Logger.php',
+        'NewfoldLabs\\WP\\Module\\Data\\SubscriberInterface' => __DIR__ . '/..' . '/newfold-labs/wp-module-data/src/SubscriberInterface.php',
+        'NewfoldLabs\\WP\\Module\\Marketplace\\Marketplace' => __DIR__ . '/..' . '/newfold-labs/wp-module-marketplace/includes/Marketplace.php',
         'Newfold\\Plugin\\DefaultContent\\Pages' => __DIR__ . '/../..' . '/inc/DefaultContent/Pages.php',
         'Newfold\\Plugin\\DefaultContent\\PagesRestController' => __DIR__ . '/../..' . '/inc/DefaultContent/PagesRestController.php',
         'Newfold\\Plugin\\RestApi\\BaseHiiveController' => __DIR__ . '/../..' . '/inc/RestApi/BaseHiiveController.php',
@@ -230,9 +263,14 @@ class ComposerStaticInit10d53f681fff0b354e0bf7cb191275a5
         'Psr\\Container\\ContainerExceptionInterface' => __DIR__ . '/..' . '/psr/container/src/ContainerExceptionInterface.php',
         'Psr\\Container\\ContainerInterface' => __DIR__ . '/..' . '/psr/container/src/ContainerInterface.php',
         'Psr\\Container\\NotFoundExceptionInterface' => __DIR__ . '/..' . '/psr/container/src/NotFoundExceptionInterface.php',
+        'WP_Forge\\Container\\Container' => __DIR__ . '/..' . '/wp-forge/container/includes/Container.php',
+        'WP_Forge\\Container\\ContainerException' => __DIR__ . '/..' . '/wp-forge/container/includes/ContainerException.php',
+        'WP_Forge\\Container\\NotFoundException' => __DIR__ . '/..' . '/wp-forge/container/includes/NotFoundException.php',
+        'WP_Forge\\Fluent\\Fluent' => __DIR__ . '/..' . '/wp-forge/fluent/includes/Fluent.php',
         'WP_Forge\\Helpers\\Arr' => __DIR__ . '/..' . '/wp-forge/helpers/includes/Arr.php',
         'WP_Forge\\Helpers\\Pluralizer' => __DIR__ . '/..' . '/wp-forge/helpers/includes/Pluralizer.php',
         'WP_Forge\\Helpers\\Str' => __DIR__ . '/..' . '/wp-forge/helpers/includes/Str.php',
+        'WP_Forge\\Options\\Options' => __DIR__ . '/..' . '/wp-forge/wp-options/includes/Options.php',
         'wpscholar\\Collection' => __DIR__ . '/..' . '/wpscholar/collection/Collection.php',
         'wpscholar\\Url' => __DIR__ . '/..' . '/wpscholar/url/Url.php',
     );
@@ -240,10 +278,10 @@ class ComposerStaticInit10d53f681fff0b354e0bf7cb191275a5
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit10d53f681fff0b354e0bf7cb191275a5::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit10d53f681fff0b354e0bf7cb191275a5::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit10d53f681fff0b354e0bf7cb191275a5::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit10d53f681fff0b354e0bf7cb191275a5::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitece9305b39fb1abdf64566707371cc50::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitece9305b39fb1abdf64566707371cc50::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitece9305b39fb1abdf64566707371cc50::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitece9305b39fb1abdf64566707371cc50::$classMap;
 
         }, null, ClassLoader::class);
     }
