@@ -1,154 +1,181 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+
 import "./contactForm.scss";
 import ic_file from "../../../../assets/homepage_img/ic_file.png";
+import { homeServices } from "../../../../services/homeServices";
+
 export default function ContactForm() {
-  const [message, setMessage] = useState(null);
-  const [title, setTitle] = useState(null);
-  const [name, setName] = useState(null);
-  const [phone, setPhone] = useState(null);
-  const [email, setEmail] = useState(null);
-  const [file, setFile] = useState(null);
-  const handleSubmit = () => {
-    const newMessage = {
-      message,
-      title,
-      name,
-      phone,
-      email,
-      file,
-    };
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState,
+    formState: { isSubmitSuccessful },
+    setError,
+    formState: { errors },
+  } = useForm();
 
-    setTitle(null);
-    setMessage(null);
-    setName(null);
-    setPhone(null);
-    setEmail(null);
-    setFile(null);
-
-    // reset form
-    handleClick();
-
-    //  call api
+  const onSubmit = (data) => {
+    const file = data.attachFile[0];
+    if (file.type != "application/pdf") {
+      setError("attachFile", {
+        type: "filetype",
+        message: "Please upload pdf file only.",
+      });
+      return;
+    } else {
+      console.log("data", data);
+      // call api
+      homeServices
+        .postContactInfo(data)
+        .then((res) => {
+          Swal.fire({
+            icon: "success",
+            title: "Success",
+            text: "Your message has been sent successfully!",
+          });
+        })
+        .catch((err) => {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+          });
+        });
+    }
   };
-  const formRef = useRef();
 
-  const handleClick = () => {
-    formRef.current.reset();
-  };
+  // reset input fields
+  // useEffect(() => {
+  //   if (formState.isSubmitSuccessful) {
+  //     reset({
+  //       yourname: "",
+  //       phone: "",
+  //       message: "",
+  //       phone: "",
+  //       attachFile: "",
+  //       title: "",
+  //       email: "",
+  //     });
+  //   }
+  // }, [formState, reset]);
 
   return (
     <div>
-      <form ref={formRef}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <input
+            {...register("title", { required: true })}
             type="text"
             placeholder="Title"
             className=" lg:h-[75px]  w-full h-[40px] bg-inputBg pl-[26px] text-white"
             id="title"
-            onChange={(e) => {
-              setTitle(e.target.value);
-            }}
+            name="title"
           />
+          {errors.title?.type === "required" && (
+            <p className="errorText">Please write the title !</p>
+          )}
         </div>
         <div className="lg:mt-[12px] mt-[6px]">
           <input
+            {...register("message", { required: true })}
             type="text"
             placeholder="Message"
             id="message"
+            name="message"
             className="w-full lg:h-[191px] h-[116px] lg:pb-[117px] bg-inputBg pl-[26px] text-white"
-            onChange={(e) => {
-              setMessage(e.target.value);
-            }}
           />
+          {errors.title?.type === "required" && (
+            <p className="errorText">Please write the message !</p>
+          )}
         </div>
         <div className="hidden lg:block lg:mt-[12px] mt-[6px] relative ">
           <input
+            {...register("attachFile")}
             type="file"
             id="file"
+            name="attachFile"
             className="w-full lgl:h-[75px] bg-inputBg pt-[30px] pl-[100px] text-white  custom-file-input cursor-pointer"
-            onChange={(e) => {
-              setFile(e.target.files[0]);
-            }}
           />
           <img
             src={ic_file}
             alt="file"
             className="absolute top-5 left-[30px]"
           />
+          {errors.attachFile && (
+            <p className="errorText"> {errors.attachFile?.message}</p>
+          )}
         </div>
-        <div id="contactD" className="hidden  lg:mt-[12px] lg:flex space-x-4">
-          <input
-            type="text"
-            id="name"
-            placeholder="Your name"
-            className="lg:w-[33%] lg:h-[77px] bg-inputBg pl-[26px] text-white"
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
-          />
-          <input
-            type="text"
-            id="phone"
-            placeholder="Phone Number"
-            className="lg:w-[33%] lg:h-[77px] bg-inputBg pl-[26px] text-white"
-            onChange={(e) => {
-              setPhone(e.target.value);
-            }}
-          />
-          <input
-            type="text"
-            id="email"
-            placeholder="Email"
-            className="lg:w-[33%] lg:h-[77px] bg-inputBg pl-[26px] text-white"
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-          />
-        </div>
-        <div className="lg:hidden mt-[6px]">
-          <div>
+        <div id="contactD" className="block  lg:mt-[12px] lg:flex lg:space-x-4">
+          <div className="w-full lg:w-[33%]">
             <input
+              {...register("yourname", {
+                required: true,
+                pattern: /^[a-zA-Z ]+$/,
+              })}
               type="text"
-              id="name"
+              id="yourname"
+              name="yourname"
               placeholder="Your name"
-              className="w-full h-[40px] bg-inputBg pl-[26px] text-white"
-              onChange={(e) => {
-                setName(e.target.value);
-              }}
+              className="w-full  h-[40px]  mt-[6px] lg:mt-0 lg:h-[77px] bg-inputBg text-white pl-[26px]"
             />
+            {errors.yourname?.type === "required" && (
+              <p className="errorText ">Please write your name !</p>
+            )}
+            {errors.yourname?.type === "pattern" && (
+              <p className="errorText ">Please check your name !</p>
+            )}
           </div>
-          <div className="mt-[6px]">
+          <div className="w-full   lg:w-[33%]">
             <input
+              {...register("phone", {
+                required: true,
+                pattern: /^\d+$/,
+              })}
               type="text"
               id="phone"
+              name="phone"
               placeholder="Phone Number"
-              className="w-full h-[40px] bg-inputBg pl-[26px] text-white"
-              onChange={(e) => {
-                setPhone(e.target.value);
-              }}
+              className="w-full  h-[40px]  mt-[6px] lg:mt-0  lg:h-[77px] bg-inputBg text-white pl-[26px]"
             />
+            {errors.phone?.type === "required" && (
+              <p className="errorText ">Please write your phone number !</p>
+            )}
+            {errors.phone?.type === "pattern" && (
+              <p className="errorText ">Please check your phone number !</p>
+            )}
           </div>
-          <div className="mt-[6px]">
+          <div className="lg:w-[33%]">
             <input
+              {...register("email", {
+                required: true,
+                pattern: /\S+@\S+\.\S+/,
+              })}
               type="text"
               id="email"
-              placeholder="Email"
-              className="w-full h-[40px] bg-inputBg pl-[26px] text-white"
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
+              name="email"
+              placeholder="Your email"
+              className="w-full  h-[40px]  mt-[6px] lg:mt-0   lg:h-[77px] bg-inputBg text-white pl-[26px]"
             />
+            {errors.email?.type === "required" && (
+              <p className="errorText ">Please write your email !</p>
+            )}
+            {errors.email?.type === "pattern" && (
+              <p className="errorText ">Please check your email address !</p>
+            )}
           </div>
         </div>
+
+        {/* button submit */}
         <div className="flex items-center justify-center lg:justify-end  lg:mt-[44px] mt-[33px]">
-          <div
-            className="w-[289px] h-[58px] lg:w-[339px] lg:h-[84px] bg-white text-black hover:bg-black hover:border hover:border-white hover:text-white transition-all cursor-pointer flex items-center justify-center"
-            onClick={handleSubmit}
+          <button
+            type="submit"
+            className="popinsFont mb-0 lg:text-[24px] font-semibold w-[289px] h-[58px] lg:w-[339px] lg:h-[84px] bg-white text-black hover:bg-black hover:border hover:border-white hover:text-white transition-all cursor-pointer flex items-center justify-center"
           >
-            <p className="popinsFont mb-0 cursor-pointer lg:text-[24px] font-semibold">
-              Send Message
-            </p>
-          </div>
+            Send Message
+          </button>
         </div>
       </form>
     </div>

@@ -48,6 +48,10 @@
   z-index: 1;
 }
 
+.slick-list {
+  padding: 0 !important;
+}
+
 .slick-prev:before {
   content: url(../../../../../assets/homepage_img/prev_arrow.png);
   width: 100px;

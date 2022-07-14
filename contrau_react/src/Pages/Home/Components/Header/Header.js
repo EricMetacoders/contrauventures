@@ -15,11 +15,14 @@ export default function Header() {
     <div className="md:h-[80px] ">
       <div className="ml-[20px] mr-[10px] md:mx-[90px] h-full">
         <div className="flex items-center justify-between w-full h-full">
+          {/* logo Desktop */}
           <div className="hidden sm:block">
             <Link to="/">
               <img src={logo} alt="logo" />
             </Link>
           </div>
+
+          {/* logo Mobile */}
           <div className="block sm:hidden">
             <Link to="/">
               {" "}
@@ -28,7 +31,7 @@ export default function Header() {
           </div>
 
           {/* menu select desktop */}
-          <div className="hidden sm:flex item-center justify-center space-x-12 md:mt-[4px]">
+          <div className="hidden lg:flex item-center justify-center space-x-12 md:mt-[4px]">
             <Link to="/">
               <p className="popinsFont text-[16px] font-extrabold text-black hover:text-hoverGrey transition-all cursor-pointer">
                 HOME
@@ -51,7 +54,7 @@ export default function Header() {
           </div>
 
           {/* menu select mobile */}
-          <div className="sm:hidden">
+          <div className="lg:hidden">
             <HeaderDropDown />
           </div>
         </div>

@@ -23,7 +23,7 @@ export default function Founders() {
   }, []);
   return (
     <div>
-      <div className="mx-[34px] md:mx-[117px] 2xl:mx-[300px]">
+      <div className="mx-[34px] md:mx-[117px] xl:mx-[100px] 2xl:mx-[300px]">
         <div className="mt-[80px] md:mt-[300px]">
           <div>
             {/* desktop animation */}
@@ -55,31 +55,23 @@ export default function Founders() {
         </div>
 
         {/* Desktop Small Screen */}
-        <div className="hidden lg:block 2xl:hidden mt-[20%] md:mt-[43%] lg:mt-[18%]   land">
+        <div className="hidden lg:block 2xl:hidden mt-[20%] md:mt-[43%] lg:mt-[18%] ">
           <FounderCarousel />
         </div>
       </div>
 
       {/* Tablet */}
       <div
-        id="tabletCarousel"
-        className=" hidden md:block lg:hidden mt-[20%] md:mt-[35%] lg:mt-[18%]  "
+        id="tabletSlick"
+        className="hidden md:block lg:hidden mt-[20%] md:mt-[35%] lg:mt-[18%]  "
       >
         <TabletCarousel />
       </div>
 
       {/* Mobile */}
 
-      <div
-        id="tabletCarousel"
-        className="block  md:hidden mt-[20%] md:mt-[43%] lg:mt-[18%]"
-      >
+      <div className="block  md:hidden mt-[20%] md:mt-[43%] lg:mt-[18%]">
         <MobileCarousel />
-      </div>
-
-      {/* Landspace */}
-      <div id="landscapeCarousel" className=" mt-[18%] lg:hidden lg:mt-[18%]">
-        <LandspaceCaoursel />
       </div>
     </div>
   );
