@@ -42,6 +42,7 @@ export const homeServices = {
     return axios({
       url: `https://contrau.metacoders.dev/wp-json/contact-form-7/v1/contact-forms/325/feedback`,
       method: "POST",
+      data: data,
       headers: {
         "Content-Type": "multipart/form-data",
       },
