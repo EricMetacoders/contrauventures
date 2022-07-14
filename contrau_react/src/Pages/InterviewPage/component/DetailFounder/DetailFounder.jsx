@@ -14,6 +14,7 @@ async function getAPIDetailFounder(founderId) {
     let detailFounder = await interviewServices.getInterviewHtmlByFounderId(
       founderId
     );
+
     return detailFounder;
   } catch (error) {
     console.log("Failed to fetch", error);

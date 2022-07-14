@@ -2,66 +2,252 @@
 .rootgallery {
   width: auto;
   background-color: #151515;
-
-  .slick-slider {
-    width: 83%;
+  .carousel-gallery {
+    position: relative;
+    padding-top: 0px;
+    color: #ffffff;
+    width: 73%;
+    height: auto;
     margin: auto;
+    .frameimgmain {
+      height: auto;
+      padding-top: 60px;
+      margin-bottom: 19%;
+      .frameimgtop {
+        display: flex;
+        // width: 100%;
+        column-gap: 14%;
+        height: auto;
+        margin-left: 11.4%;
+        .frameimg1 {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        .frameimg2 {
+          margin-top: auto;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+      .frameimgbot {
+        width: 100%;
+        display: flex;
+        margin-top: 10.5%;
+        margin-left: 0px;
+        height: auto;
+        column-gap: 14%;
+        .frameimg3 {
+          height: auto;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        .frameimg4 {
+          height: auto;
+          margin-left: 0px;
+          margin-top: 9.5%;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+    .frameimgmain2 {
+      height: auto;
+      // padding-top: 60px;
+      margin-bottom: 19%;
+      .frameimgtop {
+        display: flex;
+        column-gap: 11%;
+        height: auto;
+        margin-left: 7%;
+        .frameimg1 {
+          margin-top: 14%;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        .frameimg2 {
+          margin-left: 0px;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+      .frameimgbot {
+        width: 36%;
+        display: flex;
+        margin: auto;
+        margin-top: 21%;
+        height: auto;
+        .frameimg3 {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        .frameimg4 {
+          display: none;
+        }
+      }
+    }
+    .frametitleyear {
+      position: absolute;
+      left: 50%;
+      top: 35%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      row-gap: 0;
+      width: fit-content;
+      .titleyeardetail {
+        width: auto;
+        height: auto;
+        font-family: "Inter", sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        // font-size: 200px;
+        font-size: 10.5vw;
+        line-height: 100%;
+        /* identical to box height, or 200px */
+        text-align: center;
+        letter-spacing: 0.02em;
+      }
+      .titleyeardetail::after {
+        color: #fcfcfc;
+        content: "";
+        display: block;
+        width: 43px;
+        height: 2px;
+        margin: auto;
+        margin-top: 5%;
+        background: #fcfcfc;
+      }
+      .detailtitle {
+        /* Body 20 Poppins */
+        font-family: "Poppins", sans-serif;
+        margin: auto;
+        margin-top: 5%;
+        width: auto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1vw;
+        // line-height: 32px;
+        line-height: 1.7vw;
+        /* or 160% */
+        text-align: center;
+        letter-spacing: -0.02em;
+      }
+    }
+  }
+}
 
+// RESPONSIVE
+
+/* MOBILE WIDTH < 740px */
+@media screen and (max-width: 769px) {
+  .rootgallery {
+    width: auto;
+    background-color: #151515;
     .carousel-gallery {
       position: relative;
       padding-top: 0px;
       color: #ffffff;
+      width: 73%;
+      height: auto;
+      margin: auto;
       .frameimgmain {
-        height: 1120px;
+        height: auto;
         padding-top: 60px;
+        margin-bottom: 19%;
         .frameimgtop {
           display: flex;
-          margin-left: 150px;
-          width: 100%;
-          column-gap: 150px;
+          // width: 100%;
+          column-gap: 14%;
+          height: auto;
+          margin-left: 11.4%;
           .frameimg1 {
-            margin-left: 170px;
+            img {
+              width: 100%;
+              height: auto;
+            }
           }
           .frameimg2 {
             margin-top: auto;
+            img {
+              width: 100%;
+              height: auto;
+            }
           }
         }
         .frameimgbot {
           width: 100%;
           display: flex;
-          margin-top: 130px;
-          margin-left: 120px;
+          margin-top: 10.5%;
+          margin-left: 0px;
+          height: auto;
+          column-gap: 14%;
           .frameimg3 {
+            height: auto;
+            img {
+              width: 100%;
+              height: auto;
+            }
           }
           .frameimg4 {
-            margin-left: 200px;
-            margin-top: 130px;
+            height: auto;
+            margin-left: 0px;
+            margin-top: 9.5%;
+            img {
+              width: 100%;
+              height: auto;
+            }
           }
         }
       }
       .frameimgmain2 {
-        // background-color: aqua;
-        height: 1120px;
+        height: auto;
+        // padding-top: 60px;
+        margin-bottom: 19%;
         .frameimgtop {
           display: flex;
-          margin-left: 210px;
-          width: 80%;
-
+          column-gap: 11%;
+          height: auto;
+          margin-left: 7%;
           .frameimg1 {
-            margin-top: 150px;
+            margin-top: 14%;
+            img {
+              width: 100%;
+              height: auto;
+            }
           }
           .frameimg2 {
-            margin-left: 150px;
+            margin-left: 0px;
+            img {
+              width: 100%;
+              height: auto;
+            }
           }
         }
         .frameimgbot {
-          width: 80%;
+          width: 36%;
           display: flex;
           margin: auto;
-          margin-top: 285px;
+          margin-top: 21%;
+          height: auto;
           .frameimg3 {
-            margin: auto;
-            padding-bottom: 25px;
+            img {
+              width: 100%;
+              height: auto;
+            }
           }
           .frameimg4 {
             display: none;
@@ -71,18 +257,20 @@
       .frametitleyear {
         position: absolute;
         left: 50%;
-        top: 43%;
-        transform: translateX(-50%) translateY(-43%);
+        top: 35%;
+        transform: translateX(-50%);
         display: flex;
         flex-direction: column;
-        row-gap: 30px;
+        row-gap: 0;
+        width: fit-content;
         .titleyeardetail {
-          width: 519px;
-          height: 200px;
+          width: auto;
+          height: auto;
           font-family: "Inter", sans-serif;
           font-style: normal;
           font-weight: 800;
-          font-size: 200px;
+          // font-size: 200px;
+          font-size: 60px;
           line-height: 100%;
           /* identical to box height, or 200px */
           text-align: center;
@@ -95,234 +283,166 @@
           width: 43px;
           height: 2px;
           margin: auto;
-          margin-top: 20px;
+          margin-top: 5%;
           background: #fcfcfc;
         }
         .detailtitle {
           /* Body 20 Poppins */
           font-family: "Poppins", sans-serif;
           margin: auto;
-          margin-top: 20px;
-          width: 450px;
+          margin-top: 5%;
+          width: auto;
           font-style: normal;
           font-weight: 400;
-          font-size: 20px;
-          line-height: 32px;
+          font-size: 14px;
+          line-height: 20px;
           /* or 160% */
           text-align: center;
           letter-spacing: -0.02em;
         }
       }
     }
-    .slick-dots {
-      display: flex;
-      flex-direction: column;
-      width: 55px;
-      height: 32px;
-      font-family: "Inter", sans-serif;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 20px;
-      line-height: 32px;
-      color: #ffffff;
-      top: 35%;
-      left: 0;
-      // right: 50;
-      /* identical to box height, or 160% */
-      letter-spacing: 0.02em;
-      font-feature-settings: "tnum" on, "lnum" on;
-      li {
-        margin-top: 40px;
-        opacity: 0.4;
-        width: fit-content;
-      }
-      li:hover {
-        color: #ffffff;
-        text-decoration-line: underline;
-        opacity: 1;
-      }
-      .slick-active {
-        color: #ffffff;
-        text-decoration-line: underline;
-        width: fit-content;
-        opacity: 1;
-      }
-    }
   }
 }
 
-// RESPONSIVE
+// @media screen and (max-width: 769px) {
+//   .rootgallery {
+//     width: auto;
+//     background-color: black;
+//     .slick-slider {
+//       width: 90%;
+//       // display: flex;
+//       margin: auto;
+//       margin-top: 0px;
+//       padding-top: 50px;
+//       .carousel-gallery {
+//         position: relative;
+//         color: #ffffff;
+//         margin-top: 0px;
+//         padding-top: 0px;
+//         width: 100%;
+//         .frameimgmain {
+//           height: 250px;
+//           margin-top: 70px;
+//           padding-top: 0px;
+//           .frameimgtop {
+//             display: flex;
+//             margin: auto;
+//             width: 100%;
+//             column-gap: 0px;
+//             .frameimg1 {
+//               width: 123px;
+//               height: 83px;
+//               margin-left: 60px;
+//             }
+//             .frameimg2 {
+//               width: 105px;
+//               height: 57px;
+//               margin-top: auto;
+//               margin-left: 40px;
+//             }
+//           }
+//           .frameimgbot {
+//             width: 80%;
+//             display: flex;
+//             margin-top: 30px;
+//             margin-left: 30px;
 
-/* MOBILE WIDTH < 740px */
+//             .frameimg3 {
+//               width: 115px;
+//               height: 76px;
+//             }
+//             .frameimg4 {
+//               width: 110px;
+//               height: 62px;
+//               margin-top: 20px;
+//               margin-left: 40px;
+//             }
+//           }
+//         }
+//         .frameimgmain2 {
+//           margin-top: 70px;
 
-@media screen and (max-width: 769px) {
-  .rootgallery {
-    width: auto;
-    background-color: black;
-    .slick-slider {
-      width: 90%;
-      // display: flex;
-      margin: auto;
-      margin-top: 0px;
-      padding-top: 50px;
-      .carousel-gallery {
-        position: relative;
-        color: #ffffff;
-        margin-top: 0px;
-        padding-top: 0px;
-        width: 100%;
-        .frameimgmain {
-          height: 250px;
-          margin-top: 70px;
-          padding-top: 0px;
-          .frameimgtop {
-            display: flex;
-            margin: auto;
-            width: 100%;
-            column-gap: 0px;
-            .frameimg1 {
-              width: 123px;
-              height: 83px;
-              margin-left: 60px;
-            }
-            .frameimg2 {
-              width: 105px;
-              height: 57px;
-              margin-top: auto;
-              margin-left: 40px;
-            }
-          }
-          .frameimgbot {
-            width: 80%;
-            display: flex;
-            margin-top: 30px;
-            margin-left: 30px;
-
-            .frameimg3 {
-              width: 115px;
-              height: 76px;
-            }
-            .frameimg4 {
-              width: 110px;
-              height: 62px;
-              margin-top: 20px;
-              margin-left: 40px;
-            }
-          }
-        }
-        .frameimgmain2 {
-          margin-top: 70px;
-
-          height: 250px;
-          .frameimgtop {
-            display: flex;
-            margin-left: 50px;
-            width: 100%;
-            margin-left: 50px;
-            .frameimg1 {
-              width: 120px;
-              height: 80px;
-              margin-top: 25px;
-            }
-            .frameimg2 {
-              width: 120px;
-              height: 80px;
-              margin-left: 40px;
-            }
-          }
-          .frameimgbot {
-            width: 80%;
-            display: flex;
-            margin: auto;
-            margin-top: 30px;
-            .frameimg3 {
-              width: 120px;
-              height: 80px;
-              margin: auto;
-              // margin-top: 180px;
-              // padding-bottom: 25px;
-            }
-            .frameimg4 {
-              display: none;
-            }
-          }
-        }
-        .frametitleyear {
-          position: absolute;
-          // left: 0;
-          // margin-left: 400px;
-          // bottom: 20%;
-          left: 50%;
-          top: 50%;
-          transform: translateX(-50%) translateY(-50%);
-          margin-top: 0px;
-          margin-left: 0px;
-          // margin-top: -90px;
-          z-index: 2000;
-          display: flex;
-          flex-direction: column;
-          row-gap: 40px;
-          margin-top: 10px;
-          .titleyeardetail {
-            width: 156px;
-            height: 60px;
-            font-size: 60px;
-            margin: auto;
-            margin-top: 0px;
-            margin-bottom: 0px;
-          }
-          .titleyeardetail::after {
-            color: #fcfcfc;
-            content: "";
-            display: block;
-            width: 43px;
-            height: 2px;
-            margin: auto;
-            margin-top: 20px;
-            background: #fcfcfc;
-          }
-          .detailtitle {
-            margin: auto;
-            width: 288px;
-            font-size: 14px;
-            line-height: 20px;
-            /* or 160% */
-            text-align: center;
-            letter-spacing: -0.02em;
-            margin-top: 0px;
-          }
-        }
-      }
-
-      .slick-dots {
-        display: flex;
-        flex-direction: row;
-        column-gap: 20px;
-        width: 39px;
-        height: 24px;
-        font-size: 14px;
-        line-height: 24px;
-        color: #ffffff;
-        top: 0;
-        // left: 50%;
-        transform: translateX(50%);
-        padding-bottom: 0px;
-        // right: 50;
-        /* identical to box height, or 160% */
-        letter-spacing: 0.02em;
-        font-feature-settings: "tnum" on, "lnum" on;
-        li {
-          margin-top: 20px;
-          opacity: 0.4;
-          width: fit-content;
-        }
-        .slick-active {
-          color: #ffffff;
-          text-decoration-line: underline;
-          width: fit-content;
-          opacity: 1;
-        }
-      }
-    }
-  }
-}
+//           height: 250px;
+//           .frameimgtop {
+//             display: flex;
+//             margin-left: 50px;
+//             width: 100%;
+//             margin-left: 50px;
+//             .frameimg1 {
+//               width: 120px;
+//               height: 80px;
+//               margin-top: 25px;
+//             }
+//             .frameimg2 {
+//               width: 120px;
+//               height: 80px;
+//               margin-left: 40px;
+//             }
+//           }
+//           .frameimgbot {
+//             width: 80%;
+//             display: flex;
+//             margin: auto;
+//             margin-top: 30px;
+//             .frameimg3 {
+//               width: 120px;
+//               height: 80px;
+//               margin: auto;
+//               // margin-top: 180px;
+//               // padding-bottom: 25px;
+//             }
+//             .frameimg4 {
+//               display: none;
+//             }
+//           }
+//         }
+//         .frametitleyear {
+//           position: absolute;
+//           // left: 0;
+//           // margin-left: 400px;
+//           // bottom: 20%;
+//           left: 50%;
+//           top: 50%;
+//           transform: translateX(-50%) translateY(-50%);
+//           margin-top: 0px;
+//           margin-left: 0px;
+//           // margin-top: -90px;
+//           z-index: 2000;
+//           display: flex;
+//           flex-direction: column;
+//           row-gap: 40px;
+//           margin-top: 10px;
+//           .titleyeardetail {
+//             width: 156px;
+//             height: 60px;
+//             font-size: 60px;
+//             margin: auto;
+//             margin-top: 0px;
+//             margin-bottom: 0px;
+//           }
+//           .titleyeardetail::after {
+//             color: #fcfcfc;
+//             content: "";
+//             display: block;
+//             width: 43px;
+//             height: 2px;
+//             margin: auto;
+//             margin-top: 20px;
+//             background: #fcfcfc;
+//           }
+//           .detailtitle {
+//             margin: auto;
+//             width: 288px;
+//             font-size: 14px;
+//             line-height: 20px;
+//             /* or 160% */
+//             text-align: center;
+//             letter-spacing: -0.02em;
+//             margin-top: 0px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

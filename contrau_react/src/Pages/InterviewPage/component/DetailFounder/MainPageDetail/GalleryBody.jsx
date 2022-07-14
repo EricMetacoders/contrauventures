@@ -1,14 +1,18 @@
-import React, { useEffect } from "react";
-import PropTypes from "prop-types";
-import ScrollGallery from "./component/ScrollGallery2/ScrollGallery";
+import React from "react";
+import SlideGallery from "./component/Gallery/SlideGallery";
+import Section from "./component/ReactScroll/ReactScroll";
 import "./component/ScrollGallery2/style.scss";
+import "./component/Gallery/gallerystyle.scss";
 GalleryBody.propTypes = {};
 
 function GalleryBody({ detailFounder }) {
   return (
-    <div id="root2">
-      <ScrollGallery detailFounder={detailFounder} />
+    <div>
+      {/* <ScrollGallery detailFounder={detailFounder} /> */}
       {/* <div style={{ background: "gray",height:'140px' }}>FOOTER</div> */}
+      {/* <ScrollCategory /> */}
+      {/* <Section /> */}
+      <SlideGallery detailFounder={detailFounder} />
     </div>
   );
 }
