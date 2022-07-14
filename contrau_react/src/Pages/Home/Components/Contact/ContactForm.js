@@ -12,37 +12,46 @@ export default function ContactForm() {
     reset,
     formState,
     formState: { isSubmitSuccessful },
+    setError,
     formState: { errors },
   } = useForm();
-  console.log("errors", errors);
-  const onSubmit = (data) => {
-    console.log("data", data);
 
-    // call api
-    // homeServices
-    //   .postContactInfo(data)
-    //   .then((res) => {
-    //     console.log("res", res);
-    //   })
-    //   .catch((err) => {
-    //     console.log("err", err);
-    //   });
+  const onSubmit = (data) => {
+    const file = data.attachFile[0];
+    if (file.type != "application/pdf") {
+      setError("attachFile", {
+        type: "filetype",
+        message: "Please upload pdf file only.",
+      });
+      return;
+    } else {
+      console.log("data", data);
+      // call api
+      // homeServices
+      //   .postContactInfo(data)
+      //   .then((res) => {
+      //     console.log("res", res);
+      //   })
+      //   .catch((err) => {
+      //     console.log("err", err);
+      //   });
+    }
   };
 
   // reset input fields
-  useEffect(() => {
-    if (formState.isSubmitSuccessful) {
-      reset({
-        yourname: "",
-        phone: "",
-        message: "",
-        phone: "",
-        attachfile: "",
-        title: "",
-        email: "",
-      });
-    }
-  }, [formState, reset]);
+  // useEffect(() => {
+  //   if (formState.isSubmitSuccessful) {
+  //     reset({
+  //       yourname: "",
+  //       phone: "",
+  //       message: "",
+  //       phone: "",
+  //       attachFile: "",
+  //       title: "",
+  //       email: "",
+  //     });
+  //   }
+  // }, [formState, reset]);
 
   return (
     <div>
@@ -75,10 +84,10 @@ export default function ContactForm() {
         </div>
         <div className="hidden lg:block lg:mt-[12px] mt-[6px] relative ">
           <input
-            {...register("attachfile")}
+            {...register("attachFile")}
             type="file"
             id="file"
-            name="attachfile"
+            name="attachFile"
             className="w-full lgl:h-[75px] bg-inputBg pt-[30px] pl-[100px] text-white  custom-file-input cursor-pointer"
           />
           <img
@@ -86,6 +95,9 @@ export default function ContactForm() {
             alt="file"
             className="absolute top-5 left-[30px]"
           />
+          {errors.attachFile && (
+            <p className="errorText"> {errors.attachFile?.message}</p>
+          )}
         </div>
         <div id="contactD" className="block  lg:mt-[12px] lg:flex lg:space-x-4">
           <div className="w-full lg:w-[33%]">
@@ -142,7 +154,7 @@ export default function ContactForm() {
               <p className="errorText ">Please write your email !</p>
             )}
             {errors.email?.type === "pattern" && (
-              <p className="errorText ">Please check your email !</p>
+              <p className="errorText ">Please check your email address !</p>
             )}
           </div>
         </div>
