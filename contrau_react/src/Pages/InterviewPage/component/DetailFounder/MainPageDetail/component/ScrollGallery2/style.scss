@@ -10,7 +10,6 @@ $nav-hover: scale-color($primary, $lightness: 88%, $saturation: -30%);
 
 #root2 {
   height: 100vh;
-  background-color: #888;
 }
 
 // This is how CSS "box-sizing" reset it truely done BTW:
@@ -112,11 +111,66 @@ $nav-hover: scale-color($primary, $lightness: 88%, $saturation: -30%);
   .asideContent {
     flex: 100;
     overflow: auto;
+    background-color: #151515;
+    .frameheaderfoundermain {
+      position: sticky;
+      // top: 0;
+      background-color: red;
+    }
+    .hi {
+      background-color: red;
+      position: sticky;
+      top: 0%;
+    }
     > section {
       margin-bottom: $pad-l;
       padding: $pad-m;
       height: 550px;
+      background-color: #151515;
+      .carousel-gallery {
+        // position: relative;
+        padding-top: 0px;
+        color: #ffffff;
+        padding-left: 10%;
+        padding-right: 10%;
+        .frameimgmain {
+          height: 1320px;
+          background-color: #999;
+          z-index: 1;
+          .frameimgtop {
+            display: flex;
+            margin-left: 0px;
+            width: 100%;
+            column-gap: 150px;
+            .frameimg1 {
+              margin-left: 170px;
+              img {
+                z-index: 20;
+              }
+            }
+            .frameimg2 {
+              margin-top: auto;
+            }
+          }
+        }
+        .frameimgmain2 {
+          height: 1320px;
+          padding-top: 60px;
+          background-color: #999;
+          .frameimgtop {
+            display: flex;
+            margin-left: 210px;
+            width: 80%;
 
+            .frameimg1 {
+              margin-top: 150px;
+            }
+            .frameimg2 {
+              margin-left: 150px;
+            }
+          }
+        }
+      }
       &:last-child:not(:first-child) {
         margin-bottom: 50%;
       }

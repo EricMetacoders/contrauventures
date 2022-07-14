@@ -40,7 +40,6 @@ const theme = createTheme({
 function ListFounder({ listDataFounder }) {
   const matchMobile = useMediaQuery("(max-width:1279px)");
   const history = useNavigate();
-  console.log("listDataFounder:", listDataFounder);
 
   const clickDetailFounder = async (item) => {
     const founderId = item.acf.interview[0];

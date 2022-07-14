@@ -3,6 +3,14 @@ import PropTypes from "prop-types";
 
 import _, { map } from "lodash";
 import { createRef } from "react";
+import HeaderFounder from "../HeaderFounder/HeaderFounder";
+import MainPageDetail from "../../MainPageDetail";
+import { Box } from "@mui/material";
+import { interviewServices } from "../../../../../../../services/interviewService";
+import img2014_1 from "../../../../../../../assets/interview-img/2014-1.png";
+import img2014_2 from "../../../../../../../assets/interview-img/2014-2.png";
+import img2014_3 from "../../../../../../../assets/interview-img/2014-3.png";
+import img2014_4 from "../../../../../../../assets/interview-img/2014-4.png";
 
 const sectionsSetup = [
   {
@@ -154,103 +162,220 @@ const CurrentScrolledSection = ({ sectionsWrapperRef, children }) => {
 function TextInputWithFocusButton(name, sectionsRefs2) {
   sectionsRefs2[name] = useRef();
 }
-function Aside({ data }) {
-  const sectionsWrapperRef = useRef();
-  const { onDragMouseDown, dragState, limitDragRange } = useDragExpander({
-    min: -50,
-    max: 200,
-  });
 
-  // prepare DOM refs
-  const sectionsRefs = {};
+function ScrollGallery({ detailFounder }) {
+  console.log("detailFounder:", detailFounder);
+  const [listGallery, setListGallery] = useState([]);
+  // GET LIST ALL GALLERY
+  async function getGalleryFounderList() {
+    try {
+      let listGalleryFounder = await interviewServices.getAllGallery();
 
-  // data.forEach((section) =>
-  //   TextInputWithFocusButton(section.name, sectionsRefs)
-  // );
+      return listGalleryFounder;
+    } catch (error) {
+      console.log("Failed to fetch", error);
+    }
+  }
+  // GET DETAIL GALLERY
+  async function getGalleryFounderDetail(id) {
+    try {
+      let detailgallery = await interviewServices.getGalleryFounder(id);
+      return detailgallery;
+    } catch (error) {
+      console.log("Failed to fetch", error);
+    }
+  }
 
-  // data.forEach((section) => (sectionsRefs[section.name] = useRef()));
+  // GET DATA TO RENDER FIRST TIME
+  useEffect(() => {
+    // changeColor();
+    async function fechData() {
+      // FIND ID FROM LIST ALL GALLERY
+      let listfoundergallery = await getGalleryFounderList();
 
-  // sectionsRefs[data[0].name] = useRef();
-  // sectionsRefs[data[1].name] = useRef();
-  // sectionsRefs[data[2].name] = useRef();
-  // sectionsRefs[data[3].name] = useRef();
-  // sectionsRefs[data[4].name] = useRef();
+      var findID = await listfoundergallery?.data.find(
+        (element) =>
+          // element.acf.first_name == detailFounder.acf.first_name &&
+          // element.acf.last_name == detailFounder.acf.last_name
+          element.acf.first_name == "Nathan" && element.acf.last_name == "Do"
+      );
 
-  // console.log("sectionsRefs:", sectionsRefs);
+      // HAVE ID ==> TO GET API DETAIL GALLERY OF FOUNDER
+      let detailfoundergallery = await getGalleryFounderDetail(findID.id);
 
-  const scrollToTarget = (refName) => () => {
-    if (refName && sectionsRefs[refName] && sectionsRefs[refName].current)
-      // MDN: https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
-      sectionsRefs[refName].current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest",
+      var array = [];
+
+      Object.values(detailfoundergallery.data.acf.image).map((item) => {
+        array.push(item);
       });
-  };
-  // side section
-  const SideSection = useCallback(
-    ({ children, name, ...rest }) => (
-      <section ref={sectionsRefs[name]} {...rest}>
-        {/* <header>{name}</header> */}
-        <div className="sideSectionContent">{children}</div>
-      </section>
-    ),
-    []
-  );
-  const Footer = useCallback(<div>hi</div>, []);
-  // render-props method: get currently viewed section while scrolling:
-  return (
-    <CurrentScrolledSection sectionsWrapperRef={sectionsWrapperRef}>
-      {(currentSection) => (
-        <aside
-          className={`asideComp ${dragState.isDragging ? "isDragging" : ""}`}
-          style={{ "--delta": limitDragRange(dragState.delta) }}
-        >
-          <nav onMouseDown={onDragMouseDown}>
-            {data.map((item) => (
-              <button
-                type="button"
-                key={item.name}
-                title={_.capitalize(item.name)}
-                className={currentSection === item.name ? "active" : ""}
-                onClick={scrollToTarget(item.name)}
-              >
-                {item.icon}
-              </button>
-            ))}
-          </nav>
-          <div className="asideContent" ref={sectionsWrapperRef}>
-            {data.map((item, index) => (
-              <SideSection
-                name={item.name}
-                data-name={item.name}
-                className={currentSection === item.name ? "active" : ""}
-              >
-                {`${item.name}-`}
-                {item.content}
+      setListGallery([...array]);
+    }
+    fechData();
+  }, []);
 
-                {index == data.length - 1 && (
-                  <div
-                    style={{
-                      height: "140px",
-                      width: "140px",
-                      background: "red",
-                      marginBottom: "100%",
-                    }}
+  function Aside({ data }) {
+    const sectionsWrapperRef = useRef();
+    const { onDragMouseDown, dragState, limitDragRange } = useDragExpander({
+      min: -50,
+      max: 200,
+    });
+
+    // prepare DOM refs
+    const sectionsRefs = {};
+
+    // data.forEach((section) =>
+    //   TextInputWithFocusButton(section.name, sectionsRefs)
+    // );
+
+    // data.forEach((section) => (sectionsRefs[section.name] = useRef()));
+
+    sectionsRefs[data[0].name] = useRef();
+    sectionsRefs[data[1].name] = useRef();
+    sectionsRefs[data[2].name] = useRef();
+    sectionsRefs[data[3].name] = useRef();
+    sectionsRefs[data[4].name] = useRef();
+
+    // console.log("sectionsRefs:", sectionsRefs);
+
+    const scrollToTarget = (refName) => () => {
+      if (refName && sectionsRefs[refName] && sectionsRefs[refName].current)
+        // MDN: https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
+        sectionsRefs[refName].current.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest",
+        });
+    };
+    // side section
+    const SideSection = useCallback(
+      ({ children, name, ...rest }) => (
+        <section ref={sectionsRefs[name]} {...rest}>
+          {/* <header>{name}</header> */}
+          <div className="sideSectionContent">{children}</div>
+        </section>
+      ),
+      []
+    );
+
+    const contenttitle = [
+      { id: 1, name: "Interview" },
+      { id: 2, name: "Gallery" },
+    ];
+
+    // render-props method: get currently viewed section while scrolling:
+    return (
+      <CurrentScrolledSection sectionsWrapperRef={sectionsWrapperRef}>
+        {(currentSection) => (
+          <aside
+            className={`asideComp ${dragState.isDragging ? "isDragging" : ""}`}
+            style={{ "--delta": limitDragRange(dragState.delta) }}
+          >
+            <nav onMouseDown={onDragMouseDown}>
+              {Object.keys(listGallery).length > 0 &&
+                listGallery?.map((item) => (
+                  <button
+                    type="button"
+                    key={item.year}
+                    title={_.capitalize(item.year)}
+                    className={currentSection === item.year ? "active" : ""}
+                    onClick={scrollToTarget(item.year)}
                   >
-                    Footer
-                  </div>
-                )}
-              </SideSection>
-            ))}
-          </div>
-        </aside>
-      )}
-    </CurrentScrolledSection>
-  );
-}
+                    {item.year}
+                  </button>
+                ))}
+            </nav>
+            <div className="asideContent" ref={sectionsWrapperRef}>
+              <div className="hi" style={{ zIndex: "50" }}>
+                {/* <HeaderFounder detailFounder={detailFounder} /> */}
+                <Box className="framecontentmain" style={{ zIndex: "50" }}>
+                  <Box className="detailcontent">Interview</Box>
+                  <Box className="detailcontent-active">Gallery</Box>
+                </Box>
+              </div>
 
-function ScrollGallery(props) {
+              {Object.keys(listGallery).length > 0 &&
+                listGallery?.map((item, index) => (
+                  <SideSection
+                    name={item.year}
+                    data-name={item.year}
+                    className={currentSection === item.year ? "active" : ""}
+                  >
+                    <div className="carousel-gallery">
+                      <div
+                        className={
+                          item.year == "2014" ||
+                          item.year == "2018" ||
+                          item.year == "2020"
+                            ? "frameimgmain"
+                            : "frameimgmain2 "
+                        }
+                      >
+                        {/* <div style={{ height: "50%", width: "20%" }}>
+                          <img
+                            src="https://source.unsplash.com/random"
+                            alt=""
+                            srcset=""
+                          />
+                        </div> */}
+
+                        <div className="frameimgtop">
+                          {/* <img
+                            src="https://source.unsplash.com/random"
+                            alt=""
+                            srcset=""
+                          /> */}
+                          <div className="frameimg1">
+                            <div>
+                              <img
+                                src={
+                                  item.year == "2014" ||
+                                  item.year == "2018" ||
+                                  item.year == "2020"
+                                    ? `${item.image[4].guid}
+                    `
+                                    : `${item.image[0].guid}`
+                                }
+                              />
+                            </div>
+                          </div>
+                          <div
+                            className="frameimg2"
+                            style={{ filter: "grayscale(100%)", zIndex: "1" }}
+                          >
+                            <img
+                              src={
+                                item.year == "2014" ||
+                                item.year == "2018" ||
+                                item.year == "2020"
+                                  ? `${item.image[5].guid}`
+                                  : `${item.image[1].guid}`
+                              }
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* {index == data.length - 1 && (
+                      <div
+                        style={{
+                          height: "140px",
+                          width: "140px",
+                          background: "red",
+                          marginBottom: "100%",
+                        }}
+                      >
+                        Footer
+                      </div>
+                    )} */}
+                  </SideSection>
+                ))}
+            </div>
+          </aside>
+        )}
+      </CurrentScrolledSection>
+    );
+  }
+
   return (
     <main className="main">
       <Aside data={sectionsSetup} />
