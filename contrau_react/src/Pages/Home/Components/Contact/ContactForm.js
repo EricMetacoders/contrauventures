@@ -161,14 +161,12 @@ export default function ContactForm() {
 
         {/* button submit */}
         <div className="flex items-center justify-center lg:justify-end  lg:mt-[44px] mt-[33px]">
-          <div className="w-[289px] h-[58px] lg:w-[339px] lg:h-[84px] bg-white text-black hover:bg-black hover:border hover:border-white hover:text-white transition-all cursor-pointer flex items-center justify-center">
-            <button
-              type="submit"
-              className="popinsFont mb-0 cursor-pointer lg:text-[24px] font-semibold"
-            >
-              Send Message
-            </button>
-          </div>
+          <button
+            type="submit"
+            className="popinsFont mb-0 lg:text-[24px] font-semibold w-[289px] h-[58px] lg:w-[339px] lg:h-[84px] bg-white text-black hover:bg-black hover:border hover:border-white hover:text-white transition-all cursor-pointer flex items-center justify-center"
+          >
+            Send Message
+          </button>
         </div>
       </form>
     </div>
