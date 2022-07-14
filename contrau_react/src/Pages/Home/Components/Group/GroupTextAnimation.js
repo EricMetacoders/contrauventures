@@ -27,7 +27,7 @@ export default function Components() {
       <div>
         <div>
           <FadeInUpDiv>
-            <p className="text-white robotoFlexFont font-[700] text-[13px] sm:text-[24px] 2xl:mb-[32px]">
+            <p className="text-white robotoFlexFont font-[700] text-[13px] sm:text-[24px] sm:mb-[3.6%]">
               Partners
             </p>
           </FadeInUpDiv>

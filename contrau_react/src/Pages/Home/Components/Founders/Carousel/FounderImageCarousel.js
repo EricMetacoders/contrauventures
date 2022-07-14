@@ -13,12 +13,12 @@ export default function FounderImageCarousel({ data }) {
   return (
     <div
       id="divBtn"
-      className=" relative imgCarousel  w-[90%] h-full rounded-3xl overflow-hidden mx-auto"
+      className=" relative imgCarousel  w-[90%] rounded-3xl overflow-hidden mx-auto"
     >
       <img
         src={data?.acf?.image}
         alt={data?.acf?.name}
-        className="rounded-3xl w-full h-full scaleImg "
+        className="rounded-3xl  scaleImg mx-auto "
       />
 
       {/* Desktop */}
@@ -72,11 +72,11 @@ export default function FounderImageCarousel({ data }) {
       <div className="hidden sm:block lg:hidden absolute bottom-[20%] w-full z-50 ">
         <div className="flex flex-col items-center justify-center space-y-5">
           <div className="flex flex-col items-center justify-center leading-[1]">
-            <p className="text-white text-[38px] font-thin popinsFont">
+            <p className="text-white text-[28px] font-thin popinsFont">
               FOUNDER
             </p>
             <div id="nameText">
-              <p className="text-white text-[40px] font-[900] popinsFont break-all">
+              <p className="text-white text-[31px] font-[900] popinsFont break-all">
                 {data?.acf?.first_name.toUpperCase()}
                 &nbsp;
                 {data?.acf?.last_name.toUpperCase()}
@@ -84,7 +84,7 @@ export default function FounderImageCarousel({ data }) {
             </div>
           </div>
           <div className="flex items-center justify-center mx-[20px]">
-            <p className="text-white popinsFont  font-light text-[20px] text-center">
+            <p className="text-white popinsFont  font-light text-[14px] text-center">
               {data?.acf?.title.slice(0, 80).concat("...")}
             </p>
           </div>
@@ -124,7 +124,7 @@ export default function FounderImageCarousel({ data }) {
         </div>
       </div>
       <div className="absolute  bottom-[6%]  lg:hidden w-full flex justify-center ">
-        <div className=" w-[196px] h-[53px] bg-white  cursor-pointer">
+        <div className=" w-[192px] h-[44px] bg-white  cursor-pointer">
           <div className="flex items-center justify-center w-full h-full">
             <p
               className="popinsFont font-semibold text-[14px] text-black mb-0"

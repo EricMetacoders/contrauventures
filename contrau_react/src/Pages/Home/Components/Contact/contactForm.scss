@@ -23,6 +23,10 @@
   box-shadow: 1px 50px 14px 0px rgba(198, 198, 198, 0.8);
 }
 
+.errorText {
+  color: red;
+}
+
 @media screen and (min-width: 1536px) and (max-width: 1600px) {
   #contactD {
     input {
