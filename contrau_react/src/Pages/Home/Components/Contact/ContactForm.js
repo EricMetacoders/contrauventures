@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 
 import "./contactForm.scss";
 import ic_file from "../../../../assets/homepage_img/ic_file.png";
-import { Divider } from "@mui/material";
 import { homeServices } from "../../../../services/homeServices";
 
 export default function ContactForm() {
@@ -15,17 +14,19 @@ export default function ContactForm() {
     formState: { isSubmitSuccessful },
     formState: { errors },
   } = useForm();
+  console.log("errors", errors);
   const onSubmit = (data) => {
     console.log("data", data);
 
-    homeServices
-      .postContactInfo(data)
-      .then((res) => {
-        console.log("res", res);
-      })
-      .catch((err) => {
-        console.log("err", err);
-      });
+    // call api
+    // homeServices
+    //   .postContactInfo(data)
+    //   .then((res) => {
+    //     console.log("res", res);
+    //   })
+    //   .catch((err) => {
+    //     console.log("err", err);
+    //   });
   };
 
   // reset input fields
@@ -36,8 +37,8 @@ export default function ContactForm() {
         phone: "",
         message: "",
         phone: "",
-        attachtitle: "",
-        file: "",
+        attachfile: "",
+        title: "",
         email: "",
       });
     }
@@ -55,7 +56,7 @@ export default function ContactForm() {
             id="title"
             name="title"
           />
-          {errors.name?.type === "required" && (
+          {errors.title?.type === "required" && (
             <p className="errorText">Please write the title !</p>
           )}
         </div>
@@ -68,7 +69,7 @@ export default function ContactForm() {
             name="message"
             className="w-full lg:h-[191px] h-[116px] lg:pb-[117px] bg-inputBg pl-[26px] text-white"
           />
-          {errors.name?.type === "required" && (
+          {errors.title?.type === "required" && (
             <p className="errorText">Please write the message !</p>
           )}
         </div>
@@ -86,51 +87,62 @@ export default function ContactForm() {
             className="absolute top-5 left-[30px]"
           />
         </div>
-        <div
-          id="contactD"
-          className="mt-[6px] block  lg:mt-[12px] lg:flex lg:space-x-4"
-        >
-          <div className="w-full  h-[40px]  mt-[6px] lg:mt-0   lg:w-[33%] lg:h-[77px]">
+        <div id="contactD" className="block  lg:mt-[12px] lg:flex lg:space-x-4">
+          <div className="w-full lg:w-[33%]">
             <input
-              {...register("yourname", { required: true })}
+              {...register("yourname", {
+                required: true,
+                pattern: /^[a-zA-Z ]+$/,
+              })}
               type="text"
-              id="name"
+              id="yourname"
               name="yourname"
               placeholder="Your name"
-              className="w-full h-full bg-inputBg text-white pl-[26px]"
+              className="w-full  h-[40px]  mt-[6px] lg:mt-0 lg:h-[77px] bg-inputBg text-white pl-[26px]"
             />
-            {errors.name?.type === "required" && (
-              <p className="errorText">Please write your name !</p>
+            {errors.yourname?.type === "required" && (
+              <p className="errorText ">Please write your name !</p>
+            )}
+            {errors.yourname?.type === "pattern" && (
+              <p className="errorText ">Please check your name !</p>
             )}
           </div>
-          <div className="w-full  h-[40px]  mt-[6px] lg:mt-0   lg:w-[33%] lg:h-[77px]">
+          <div className="w-full   lg:w-[33%]">
             <input
               {...register("phone", {
                 required: true,
+                pattern: /^\d+$/,
               })}
               type="text"
               id="phone"
               name="phone"
               placeholder="Phone Number"
-              className="w-full h-full bg-inputBg text-white pl-[26px]"
+              className="w-full  h-[40px]  mt-[6px] lg:mt-0  lg:h-[77px] bg-inputBg text-white pl-[26px]"
             />
-            {errors.name?.type === "required" && (
-              <p className="errorText">Please write your phone number !</p>
+            {errors.phone?.type === "required" && (
+              <p className="errorText ">Please write your phone number !</p>
+            )}
+            {errors.phone?.type === "pattern" && (
+              <p className="errorText ">Please check your phone number !</p>
             )}
           </div>
-          <div className="w-full  h-[40px]  mt-[6px] lg:mt-0   lg:w-[33%] lg:h-[77px]">
+          <div className="lg:w-[33%]">
             <input
               {...register("email", {
                 required: true,
+                pattern: /\S+@\S+\.\S+/,
               })}
               type="text"
               id="email"
               name="email"
               placeholder="Your email"
-              className="w-full h-full bg-inputBg text-white pl-[26px]"
+              className="w-full  h-[40px]  mt-[6px] lg:mt-0   lg:h-[77px] bg-inputBg text-white pl-[26px]"
             />
-            {errors.name?.type === "required" && (
-              <p className="errorText">Please write your email !</p>
+            {errors.email?.type === "required" && (
+              <p className="errorText ">Please write your email !</p>
+            )}
+            {errors.email?.type === "pattern" && (
+              <p className="errorText ">Please check your email !</p>
             )}
           </div>
         </div>

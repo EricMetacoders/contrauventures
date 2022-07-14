@@ -15,11 +15,14 @@ export default function Header() {
     <div className="md:h-[80px] ">
       <div className="ml-[20px] mr-[10px] md:mx-[90px] h-full">
         <div className="flex items-center justify-between w-full h-full">
+          {/* logo Desktop */}
           <div className="hidden sm:block">
             <Link to="/">
               <img src={logo} alt="logo" />
             </Link>
           </div>
+
+          {/* logo Mobile */}
           <div className="block sm:hidden">
             <Link to="/">
               {" "}
