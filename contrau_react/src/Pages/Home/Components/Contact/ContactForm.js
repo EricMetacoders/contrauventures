@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 
 import "./contactForm.scss";
 import ic_file from "../../../../assets/homepage_img/ic_file.png";
+import { Divider } from "@mui/material";
+import { homeServices } from "../../../../services/homeServices";
 
 export default function ContactForm() {
   const {
@@ -12,28 +14,29 @@ export default function ContactForm() {
     formState,
     formState: { isSubmitSuccessful },
     formState: { errors },
-  } = useForm({
-    defaultValues: {
-      name: "",
-      phone: "",
-      message: "",
-      phone: "",
-      title: "",
-      file: "",
-      email: "",
-    },
-  });
-  const onSubmit = (data) => console.log(data);
+  } = useForm();
+  const onSubmit = (data) => {
+    console.log("data", data);
+
+    homeServices
+      .postContactInfo(data)
+      .then((res) => {
+        console.log("res", res);
+      })
+      .catch((err) => {
+        console.log("err", err);
+      });
+  };
 
   // reset input fields
   useEffect(() => {
     if (formState.isSubmitSuccessful) {
       reset({
-        name: "",
+        yourname: "",
         phone: "",
         message: "",
         phone: "",
-        title: "",
+        attachtitle: "",
         file: "",
         email: "",
       });
@@ -52,6 +55,9 @@ export default function ContactForm() {
             id="title"
             name="title"
           />
+          {errors.name?.type === "required" && (
+            <p className="errorText">Please write the title !</p>
+          )}
         </div>
         <div className="lg:mt-[12px] mt-[6px]">
           <input
@@ -62,13 +68,16 @@ export default function ContactForm() {
             name="message"
             className="w-full lg:h-[191px] h-[116px] lg:pb-[117px] bg-inputBg pl-[26px] text-white"
           />
+          {errors.name?.type === "required" && (
+            <p className="errorText">Please write the message !</p>
+          )}
         </div>
         <div className="hidden lg:block lg:mt-[12px] mt-[6px] relative ">
           <input
-            {...register("file")}
+            {...register("attachfile")}
             type="file"
             id="file"
-            name="file"
+            name="attachfile"
             className="w-full lgl:h-[75px] bg-inputBg pt-[30px] pl-[100px] text-white  custom-file-input cursor-pointer"
           />
           <img
@@ -81,30 +90,49 @@ export default function ContactForm() {
           id="contactD"
           className="mt-[6px] block  lg:mt-[12px] lg:flex lg:space-x-4"
         >
-          <input
-            {...register("name", { required: true })}
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Your name"
-            className="w-full mt-[6px] h-[40px] lg:mt-0 lg:w-[33%] lg:h-[77px] bg-inputBg lg:pl-[26px] text-white"
-          />
-          <input
-            {...register("phone", { required: true })}
-            type="text"
-            id="phone"
-            name="phone"
-            placeholder="Phone Number"
-            className="w-full mt-[6px] h-[40px] lg:mt-0 lg:w-[33%] lg:h-[77px] bg-inputBg lg:pl-[26px] text-white"
-          />
-          <input
-            {...register("email", { required: true })}
-            type="text"
-            id="email"
-            name="email"
-            placeholder="Email"
-            className="w-full mt-[6px] h-[40px] lg:mt-0 lg:w-[33%] lg:h-[77px] bg-inputBg lg:pl-[26px] text-white"
-          />
+          <div className="w-full  h-[40px]  mt-[6px] lg:mt-0   lg:w-[33%] lg:h-[77px]">
+            <input
+              {...register("yourname", { required: true })}
+              type="text"
+              id="name"
+              name="yourname"
+              placeholder="Your name"
+              className="w-full h-full bg-inputBg text-white pl-[26px]"
+            />
+            {errors.name?.type === "required" && (
+              <p className="errorText">Please write your name !</p>
+            )}
+          </div>
+          <div className="w-full  h-[40px]  mt-[6px] lg:mt-0   lg:w-[33%] lg:h-[77px]">
+            <input
+              {...register("phone", {
+                required: true,
+              })}
+              type="text"
+              id="phone"
+              name="phone"
+              placeholder="Phone Number"
+              className="w-full h-full bg-inputBg text-white pl-[26px]"
+            />
+            {errors.name?.type === "required" && (
+              <p className="errorText">Please write your phone number !</p>
+            )}
+          </div>
+          <div className="w-full  h-[40px]  mt-[6px] lg:mt-0   lg:w-[33%] lg:h-[77px]">
+            <input
+              {...register("email", {
+                required: true,
+              })}
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Your email"
+              className="w-full h-full bg-inputBg text-white pl-[26px]"
+            />
+            {errors.name?.type === "required" && (
+              <p className="errorText">Please write your email !</p>
+            )}
+          </div>
         </div>
 
         {/* button submit */}
