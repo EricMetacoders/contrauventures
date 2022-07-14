@@ -34,14 +34,14 @@ export default function ContactForm() {
           Swal.fire({
             icon: "success",
             title: "Success",
-            text: "Your message has been sent successfully!",
+            text: "Your information successfully submitted!",
           });
         })
         .catch((err) => {
           Swal.fire({
             icon: "error",
             title: "Oops...",
-            text: "Something went wrong!",
+            text: "There is unknown issue please try later!",
           });
         });
     }
