@@ -78,6 +78,13 @@ export const getPortfolioList = createAsyncThunk(
   "getPortfolioList",
   async () => {
     const response = await homeServices.getPortfolioList();
+    response.data.sort(function (a, b) {
+      var orderA = a.acf.order, orderB = b.acf.order;
+      if (orderA > orderB) { return 1; }
+      if (orderB > orderA) { return -1; }
+      return 0;
+    });
+    
     return response.data;
   }
 );
