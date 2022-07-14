@@ -15,7 +15,6 @@ function HeaderFounder({ detailFounder }) {
   const theme = useTheme();
 
   const matchMobile = useMediaQuery("(max-width:640px)");
-  console.log(detailFounder?.acf?.first_name.toUpperCase());
   return (
     <div>
       <Box className="frameheaderfoundermain">

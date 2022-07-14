@@ -12,6 +12,7 @@
   }
 
   .imglogotrauframe-header {
+    display: none;
     position: absolute;
     left: 90px;
     right: 0%;
@@ -22,6 +23,7 @@
     width: fit-content;
   }
   .titledetaimainframeheader {
+    display: none;
     position: absolute;
     display: flex;
     // left: 75.8%;
@@ -64,8 +66,15 @@
       order: 0;
       flex-grow: 0;
     }
+    .titledetaiframeheader-active:hover {
+      color: #828383;
+    }
+    .titledetaiframeheader:hover {
+      color: #828383;
+    }
   }
   .framemaintilecenterheader {
+    display: none;
     position: absolute;
     width: auto;
     height: auto;

@@ -5,6 +5,10 @@ import "slick-carousel/slick/slick.css";
 
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { interviewServices } from "../../../../../../../services/interviewService";
+import img2014_1 from "../../../../../../../assets/interview-img/2014-1.png";
+import img2014_2 from "../../../../../../../assets/interview-img/2014-2.png";
+import img2014_3 from "../../../../../../../assets/interview-img/2014-3.png";
+import img2014_4 from "../../../../../../../assets/interview-img/2014-4.png";
 SlideGallery.propTypes = {};
 
 function SlideGallery({ detailFounder }) {
@@ -21,34 +25,6 @@ function SlideGallery({ detailFounder }) {
   }
   const [listGallery, setListGallery] = useState([{}]);
 
-  const changeColor2 = (current) => {
-    // if (!isMatch) {
-    // CHANGE ADD COLOR SLIDE ACTIVE
-    let addColorImg = document.querySelector(".slick-active");
-
-    if (listGallery) {
-      addColorImg.getElementsByTagName("img")[0].style.filter = "grayscale(0)";
-      addColorImg.getElementsByTagName("img")[1].style.filter = "grayscale(0)";
-      addColorImg.getElementsByTagName("img")[2].style.filter = "grayscale(0)";
-      addColorImg.getElementsByTagName("img")[3].style.filter = "grayscale(0)";
-
-      // ADD NO COLOR
-      // CHANGE NO COLOR IMG1
-      let noColorImg1 = document.querySelectorAll(
-        ".slick-slide:not(.slick-active)"
-      );
-      for (var i = 0; i < noColorImg1.length; i++) {
-        noColorImg1[i].getElementsByTagName("img")[0].style.filter =
-          "grayscale(100%)";
-        noColorImg1[i].getElementsByTagName("img")[1].style.filter =
-          "grayscale(100%)";
-        noColorImg1[i].getElementsByTagName("img")[2].style.filter =
-          "grayscale(100%)";
-        noColorImg1[i].getElementsByTagName("img")[3].style.filter =
-          "grayscale(100%)";
-      }
-    }
-  };
   // GET LIST ALL GALLERY
   async function getGalleryFounderList() {
     try {
@@ -97,79 +73,24 @@ function SlideGallery({ detailFounder }) {
     fechData();
   }, []);
 
-  useEffect(() => {
-    // ADD NO COLOR
-    // CHANGE NO COLOR IMG1
-    let noColorImg1 = document.querySelectorAll(
-      ".slick-slide:not(.slick-active)"
-    );
-    for (var i = 0; i < noColorImg1.length; i++) {
-      noColorImg1[i].getElementsByTagName("img")[0].style.filter =
-        "grayscale(100%)";
-      noColorImg1[i].getElementsByTagName("img")[1].style.filter =
-        "grayscale(100%)";
-      noColorImg1[i].getElementsByTagName("img")[2].style.filter =
-        "grayscale(100%)";
-      noColorImg1[i].getElementsByTagName("img")[3].style.filter =
-        "grayscale(100%)";
-    }
-  }, []);
+  // useEffect(() => {
+  //   // ADD NO COLOR
+  //   // CHANGE NO COLOR IMG1
+  //   let noColorImg1 = document.querySelectorAll(
+  //     ".slick-slide:not(.slick-active)"
+  //   );
+  //   for (var i = 0; i < noColorImg1.length; i++) {
+  //     noColorImg1[i].getElementsByTagName("img")[0].style.filter =
+  //       "grayscale(100%)";
+  //     noColorImg1[i].getElementsByTagName("img")[1].style.filter =
+  //       "grayscale(100%)";
+  //     noColorImg1[i].getElementsByTagName("img")[2].style.filter =
+  //       "grayscale(100%)";
+  //     noColorImg1[i].getElementsByTagName("img")[3].style.filter =
+  //       "grayscale(100%)";
+  //   }
+  // }, []);
 
-  const slider = useRef(null);
-
-  function scroll(e) {
-    if (slider === null) return 0;
-    var scrollTo = null;
-
-    e.wheelDelta > 0 ? slider.current.slickNext() : slider.current.slickPrev();
-  }
-  function mouseEnterSlide(e) {
-    if (slider === null) return 0;
-    document.body.style.overflow = "hidden";
-    console.log("1");
-  }
-  function mouseOverSlide(e) {
-    if (slider === null) return 0;
-    document.body.style.overflow = "auto";
-    console.log("2");
-  }
-  function clickMe(params) {
-    document.body.style.overflow = "hidden";
-  }
-  function clickMe2(params) {
-    document.body.style.overflow = "auto";
-  }
-  useEffect(() => {
-    // window.addEventListener("wheel", scroll, true);
-    // var getSlide = document.getElementsByClassName("slick-list")[0];
-    // getSlide.addEventListener("mouseenter", mouseEnterSlide);
-    // getSlide.addEventListener("mouseover", mouseOverSlide);
-    return () => {
-      // window.removeEventListener("wheel", scroll, true);
-      // getSlide.removeEventListener("mouseenter", mouseEnterSlide, false);
-      // getSlide.removeEventListener("mouseover", mouseOverSlide, false);
-    };
-  }, []);
-  const settings = {
-    dots: true,
-    vertical: true,
-    slidesToShow: 1, //when add/edit css img(item)/per slide ==> height change ==> reset to 0 and to 1
-    slidesToScroll: 1,
-    verticalSwiping: true,
-    arrows: false,
-    speed: 1000,
-    afterChange: (current) => changeColor2(current),
-    appendDots: (dots) => {
-      return <ul style={{ margin: "0px" }}>{dots}</ul>;
-    },
-    customPaging: (i) => <div>{listGallery[i].year}</div>,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {},
-      },
-    ],
-  };
   const bannerData =
     Object.keys(listGallery).length > 1 &&
     listGallery?.map((item) => (
@@ -247,13 +168,7 @@ function SlideGallery({ detailFounder }) {
       </div>
     ));
 
-  return (
-    <div>
-      <Slider {...settings} ref={slider}>
-        {bannerData}
-      </Slider>
-    </div>
-  );
+  return <div className="rootgallery">{bannerData}</div>;
 }
 
 export default SlideGallery;
