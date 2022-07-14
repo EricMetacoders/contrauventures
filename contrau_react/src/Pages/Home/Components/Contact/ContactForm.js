@@ -19,12 +19,32 @@ export default function ContactForm() {
 
   const onSubmit = (data) => {
     const file = data.attachFile[0];
-    if (file.type != "application/pdf") {
-      setError("attachFile", {
-        type: "filetype",
-        message: "Please upload pdf file only.",
-      });
-      return;
+    if (file != undefined) {
+      if (file?.type != "application/pdf") {
+        setError("attachFile", {
+          type: "filetype",
+          message: "Please upload pdf file only.",
+        });
+        return;
+      } else {
+        // call api
+        homeServices
+          .postContactInfo(data)
+          .then((res) => {
+            Swal.fire({
+              icon: "success",
+              title: "Success",
+              text: "Your message has been sent successfully!",
+            });
+          })
+          .catch((err) => {
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "Something went wrong!",
+            });
+          });
+      }
     } else {
       console.log("data", data);
       // call api
@@ -111,20 +131,20 @@ export default function ContactForm() {
         <div id="contactD" className="block  lg:mt-[12px] lg:flex lg:space-x-4">
           <div className="w-full lg:w-[33%]">
             <input
-              {...register("yourname", {
+              {...register("yourName", {
                 required: true,
                 pattern: /^[a-zA-Z ]+$/,
               })}
               type="text"
-              id="yourname"
-              name="yourname"
+              id="yourName"
+              name="yourName"
               placeholder="Your name"
               className="w-full  h-[40px]  mt-[6px] lg:mt-0 lg:h-[77px] bg-inputBg text-white pl-[26px]"
             />
-            {errors.yourname?.type === "required" && (
+            {errors.yourName?.type === "required" && (
               <p className="errorText ">Please write your name !</p>
             )}
-            {errors.yourname?.type === "pattern" && (
+            {errors.yourName?.type === "pattern" && (
               <p className="errorText ">Please check your name !</p>
             )}
           </div>
