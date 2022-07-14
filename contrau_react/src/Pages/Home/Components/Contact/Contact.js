@@ -1,5 +1,6 @@
 import React from "react";
 import ContactForm from "./ContactForm";
+
 export default function Contact() {
   return (
     <div className="mt-[142px] lg:mt-[243px]">
