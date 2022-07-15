@@ -1,20 +1,17 @@
+import { Box } from "@mui/material";
 import React from "react";
-import { render } from "react-dom";
 import {
-  Link,
-  DirectLink,
+  animateScroll as scroll,
   Element,
   Events,
-  animateScroll as scroll,
-  scrollSpy,
+  Link,
   scroller,
 } from "react-scroll";
-import { interviewServices } from "../../../../../../../services/interviewService";
 import img2014_1 from "../../../../../../../assets/interview-img/2014-1.png";
 import img2014_2 from "../../../../../../../assets/interview-img/2014-2.png";
 import img2014_3 from "../../../../../../../assets/interview-img/2014-3.png";
 import img2014_4 from "../../../../../../../assets/interview-img/2014-4.png";
-import { Box } from "@mui/material";
+import "./test.js";
 const styles = {
   fontFamily: "sans-serif",
   textAlign: "center",
@@ -35,10 +32,12 @@ class Section extends React.Component {
       console.log("end", arguments);
     });
   }
+
   scrollToTop() {
     scroll.scrollToTop();
   }
   scrollTo() {
+    console.log(scroller);
     scroller.scrollTo("scroll-to-element", {
       duration: 800,
       delay: 0,
@@ -68,6 +67,7 @@ class Section extends React.Component {
       })
     );
   }
+
   componentWillUnmount() {
     Events.scrollEvent.remove("begin");
     Events.scrollEvent.remove("end");

@@ -1,191 +1,265 @@
-// import React, { useEffect } from "react";
-// import { render } from "react-dom";
-// import {
-//   Link,
-//   DirectLink,
-//   Element,
-//   Events,
-//   animateScroll as scroll,
-//   scrollSpy,
-//   scroller,
-// } from "react-scroll";
-// import { interviewServices } from "../../../../../../../services/interviewService";
+import React, { useEffect, useRef, useState } from "react";
+import {
+  animateScroll as scroll,
+  Element,
+  Events,
+  Link,
+  scroller,
+} from "react-scroll";
+import styled from "styled-components";
+import { interviewServices } from "../../../../../../../services/interviewService";
 
-// const styles = {
-//   fontFamily: "sans-serif",
-//   textAlign: "center",
-// };
+function Section2({ detailFounder }) {
+  async function getAPIGallery() {
+    try {
+      let _listGallery = await interviewServices.getGallery();
+      return _listGallery;
+    } catch (error) {
+      console.log("Failed to fetch", error);
+    }
+  }
+  const [listGallery, setListGallery] = useState([{}]);
 
-// function Section({ detailFounder }) {
+  // GET LIST ALL GALLERY
+  async function getGalleryFounderList() {
+    try {
+      let listGalleryFounder = await interviewServices.getAllGallery();
 
-// //   constructor(props) {
-// //     super(props);
-// //     this.scrollToTop = this.scrollToTop.bind(this);
-// //   }
+      return listGalleryFounder;
+    } catch (error) {
+      console.log("Failed to fetch", error);
+    }
+  }
+  // GET DETAIL GALLERY
+  async function getGalleryFounderDetail(id) {
+    try {
+      let detailgallery = await interviewServices.getGalleryFounder(id);
+      return detailgallery;
+    } catch (error) {
+      console.log("Failed to fetch", error);
+    }
+  }
 
-//   useEffect(() => {
-//     Events.scrollEvent.register("begin", function () {
-//         console.log("begin", arguments);
-//       });
+  const refCategory = useRef(null);
+  const onScroll = () => {
+    const position = window.pageYOffset;
 
-//       Events.scrollEvent.register("end", function () {
-//         console.log("end", arguments);
-//       });
+    if (position >= 715) {
+      const myReference = refCategory.current;
+      myReference.style.display = "block";
+    } else if (position < 700) {
+      const myReference = refCategory.current;
+      myReference.style.display = "none";
+    }
+  };
 
-//     return () => {
+  // USE EFFECT TO APPLY LIBRARY AND HIDE AND SHOW YEAR CATEGORY
+  useEffect(() => {
+    Events.scrollEvent.register("begin", function () {
+      console.log("begin", arguments);
+      var noColor =
+        arguments[1].children[0].children[0].children[0].children[0].children[0]
+          .children[0];
 
-//     }
-//   }, [])
-//   () {
+      var noColor2 =
+        arguments[1].children[0].children[0].children[0].children[0].children[1]
+          .children[0];
 
-//   }
-//   scrollToTop() {
-//     scroll.scrollToTop();
-//   }
-//   scrollTo() {
-//     scroller.scrollTo("scroll-to-element", {
-//       duration: 800,
-//       delay: 0,
-//       smooth: "easeInOutQuart",
-//     });
-//   }
-//   scrollToWithContainer() {
-//     let goToContainer = new Promise((resolve, reject) => {
-//       Events.scrollEvent.register("end", () => {
-//         resolve();
-//         Events.scrollEvent.remove("end");
-//       });
+      var noColor3 =
+        arguments[1].children[0].children[0].children[0].children[1].children[0]
+          .children[0];
+      var noColor4 =
+        arguments[1].children[0].children[0].children[0].children[1].children[1]
+          .children[0];
 
-//       scroller.scrollTo("scroll-container", {
-//         duration: 800,
-//         delay: 0,
-//         smooth: "easeInOutQuart",
-//       });
-//     });
+      noColor.style.filter = "grayscale(100%)";
+      noColor2.style.filter = "grayscale(100%)";
+      noColor3.style.filter = "grayscale(100%)";
+      noColor4.style.filter = "grayscale(100%)";
+    });
 
-//     goToContainer.then(() =>
-//       scroller.scrollTo("scroll-container-second-element", {
-//         duration: 800,
-//         delay: 0,
-//         smooth: "easeInOutQuart",
-//         containerId: "scroll-container",
-//       })
-//     );
-//   }
-//   componentWillUnmount() {
-//     Events.scrollEvent.remove("begin");
-//     Events.scrollEvent.remove("end");
-//   }
+    Events.scrollEvent.register("end", function () {
+      console.log("end", arguments);
+      var addColor =
+        arguments[1].children[0].children[0].children[0].children[0].children[0]
+          .children[0];
 
-//     return (
-//       <div>
-//         <nav className="navbar navbar-default navbar">
-//           <div className="container-fluid">
-//             <div
-//               className="collapse navbar-collapse"
-//               id="bs-example-navbar-collapse-1"
-//             >
-//               <ul className="nav navbar-nav">
-//                 <li>
-//                   <Link
-//                     activeClass="active"
-//                     className="test1"
-//                     to="test1"
-//                     spy={true}
-//                     smooth={true}
-//                     duration={500}
-//                   >
-//                     Test 1
-//                   </Link>
-//                 </li>
-//                 <li>
-//                   <Link
-//                     activeClass="active"
-//                     className="test2"
-//                     to="test2"
-//                     spy={true}
-//                     smooth={true}
-//                     duration={500}
-//                   >
-//                     Test 2
-//                   </Link>
-//                 </li>
-//                 <li>
-//                   <Link
-//                     activeClass="active"
-//                     className="test3"
-//                     to="test3"
-//                     spy={true}
-//                     smooth={true}
-//                     duration={500}
-//                   >
-//                     Test 3
-//                   </Link>
-//                 </li>
-//                 <li>
-//                   <Link
-//                     activeClass="active"
-//                     className="test4"
-//                     to="test4"
-//                     spy={true}
-//                     smooth={true}
-//                     duration={500}
-//                   >
-//                     Test 4
-//                   </Link>
-//                 </li>
-//               </ul>
-//             </div>
-//           </div>
-//         </nav>
+      var addColor2 =
+        arguments[1].children[0].children[0].children[0].children[0].children[1]
+          .children[0];
 
-//         <Element name="test1" className="element" style={{ height: "1800px" }}>
-//           test 1
-//         </Element>
+      var addColor3 =
+        arguments[1].children[0].children[0].children[0].children[1].children[0]
+          .children[0];
+      var addColor4 =
+        arguments[1].children[0].children[0].children[0].children[1].children[1]
+          .children[0];
 
-//         <Element name="test2" className="element" style={{ height: "1800px" }}>
-//           test 2
-//         </Element>
+      addColor.style.filter = "grayscale(0%)";
+      addColor2.style.filter = "grayscale(0%)";
+      addColor3.style.filter = "grayscale(0%)";
+      addColor4.style.filter = "grayscale(0%)";
+    });
 
-//         <Element name="test3" className="element" style={{ height: "1800px" }}>
-//           test 3 Giá USD trên thị trường tự do sáng nay tăng vài trăm đồng, lên
-//           24.300 đồng trong khi tỷ giá ngân hàng biến động nhẹ. Sáng 14/7, các
-//           điểm thu đổi ngoại tệ trên thị trường tự do đồng loạt nâng giá mua bán
-//           đôla Mỹ. Mỗi USD hiện giao dịch quanh 24.280 - 24.310 đồng, tăng 130
-//           đồng chiều mua và 60 đồng chiều bán so với hôm qua. Như vậy, chỉ trong
-//           vài ngày, mỗi USD trên thị trường tự do đã tăng giá khoảng 250 đồng.
-//           Tỷ giá trung tâm được Ngân hàng Nhà nước sáng nay công bố ở mức 23.201
-//           đồng, tăng 3 đồng so với hôm qua. Với biên độ 3%, các ngân hàng thương
-//           mại được phép giao dịch USD trong vùng 22.505 - 23.897 đồng. Trên thị
-//           trường liên ngân hàng, tỷ giá USD/VND biến động nhẹ. Giá đôla Mỹ tại
-//           Vietcombank đi ngang so với hôm qua, mua vào 23.220 đồng và bán ra
-//           23.530 đồng. Trong khi đó, giá USD tại Eximbank tăng nhẹ lên 23.270 -
-//           23.490 đồng, Techcombank là 23.249 - 23.534 đồng. Còn Sacombank giữ
-//           nguyên chiều mua 23.271 đồng nhưng bán ra tăng mạnh 100 đồng, lên
-//           23.826 đồng.
-//         </Element>
+    window.addEventListener("scroll", onScroll);
+    return () => {
+      Events.scrollEvent.remove("begin");
+      Events.scrollEvent.remove("end");
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+  // GET DATA TO RENDER FIRST TIME
+  useEffect(() => {
+    // changeColor();
+    async function fechData() {
+      // FIND ID FROM LIST ALL GALLERY
+      let listfoundergallery = await getGalleryFounderList();
 
-//         <Element name="test4" className="element" style={{ height: "1800px" }}>
-//           test 4 Giá USD trên thị trường tự do sáng nay tăng vài trăm đồng, lên
-//           24.300 đồng trong khi tỷ giá ngân hàng biến động nhẹ. Sáng 14/7, các
-//           điểm thu đổi ngoại tệ trên thị trường tự do đồng loạt nâng giá mua bán
-//           đôla Mỹ. Mỗi USD hiện giao dịch quanh 24.280 - 24.310 đồng, tăng 130
-//           đồng chiều mua và 60 đồng chiều bán so với hôm qua. Như vậy, chỉ trong
-//           vài ngày, mỗi USD trên thị trường tự do đã tăng giá khoảng 250 đồng.
-//           Tỷ giá trung tâm được Ngân hàng Nhà nước sáng nay công bố ở mức 23.201
-//           đồng, tăng 3 đồng so với hôm qua. Với biên độ 3%, các ngân hàng thương
-//           mại được phép giao dịch USD trong vùng 22.505 - 23.897 đồng. Trên thị
-//           trường liên ngân hàng, tỷ giá USD/VND biến động nhẹ. Giá đôla Mỹ tại
-//           Vietcombank đi ngang so với hôm qua, mua vào 23.220 đồng và bán ra
-//           23.530 đồng. Trong khi đó, giá USD tại Eximbank tăng nhẹ lên 23.270 -
-//           23.490 đồng, Techcombank là 23.249 - 23.534 đồng. Còn Sacombank giữ
-//           nguyên chiều mua 23.271 đồng nhưng bán ra tăng mạnh 100 đồng, lên
-//           23.826 đồng.
-//         </Element>
+      var findID = await Object.values(listfoundergallery.data).find(
+        (element) =>
+          //   element.acf.first_name == detailFounder.acf.first_name &&
+          //   element.acf.last_name == detailFounder.acf.last_name
+          element.acf.first_name == "Nathan" && element.acf.last_name == "Do"
+      );
 
-//         <a onClick={this.scrollToTop}>To the top!</a>
-//       </div>
-//     );
-//   }
-// }
-// export default Section;
+      // HAVE ID ==> TO GET API DETAIL GALLERY OF FOUNDER
+      let detailfoundergallery = await getGalleryFounderDetail(findID.id);
+
+      var array = [];
+
+      Object.values(detailfoundergallery.data.acf.image).map((item) => {
+        array.push(item);
+      });
+      setListGallery([...array]);
+    }
+    fechData();
+  }, []);
+
+  const itemsRef = useRef([]);
+  console.log("itemsRef:", itemsRef);
+  // you can access the elements with itemsRef.current[n]
+
+  useEffect(() => {
+    itemsRef.current = itemsRef.current.slice(0, listGallery.length);
+  }, [listGallery]);
+
+  return (
+    <div
+      style={{
+        backgroundColor: "#151515",
+        position: "relative",
+        paddingBottom: "18%",
+        paddingTop: "15%",
+      }}
+    >
+      <div className="categorydetailyear" ref={refCategory}>
+        <div className="frameyearcategory">
+          {Object.keys(listGallery).length > 0 &&
+            listGallery?.map((item) => (
+              <div>
+                <Link
+                  activeClass="active"
+                  className={item.year}
+                  to={item.year}
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  style={{ color: "white", background: "none" }}
+                >
+                  {item.year}
+                </Link>
+              </div>
+            ))}
+        </div>
+      </div>
+      <div style={{ display: "flex", flexDirection: "column", rowGap: "20vw" }}>
+        {Object.keys(listGallery).length > 1 &&
+          listGallery?.map((item, index) => (
+            <Element
+              name={item.year}
+              className="element"
+              ref={(el) => (itemsRef.current[index] = el)}
+            >
+              <div className="rootgallery">
+                <div key={item.year} className="carousel-gallery">
+                  <div
+                    className={
+                      item.year == "2014" ||
+                      item.year == "2018" ||
+                      item.year == "2020"
+                        ? "frameimgmain"
+                        : "frameimgmain2 "
+                    }
+                  >
+                    <div className="frameimgtop">
+                      <div className="frameimg1">
+                        <img
+                          style={{ filter: "grayscale(100%)" }}
+                          src={
+                            item.year == "2014" ||
+                            item.year == "2018" ||
+                            item.year == "2020"
+                              ? `${item.image[4].guid}
+                    `
+                              : `${item.image[0].guid}`
+                          }
+                        />
+                      </div>
+                      <div className="frameimg2">
+                        <img
+                          style={{ filter: "grayscale(100%)" }}
+                          src={
+                            item.year == "2014" ||
+                            item.year == "2018" ||
+                            item.year == "2020"
+                              ? `${item.image[5].guid}`
+                              : `${item.image[1].guid}`
+                          }
+                        />
+                      </div>
+                    </div>
+
+                    <div className="frameimgbot">
+                      <div className="frameimg3">
+                        <img
+                          style={{ filter: "grayscale(100%)" }}
+                          src={
+                            item.year == "2014" ||
+                            item.year == "2018" ||
+                            item.year == "2020"
+                              ? `${item.image[6].guid}
+                       `
+                              : `${item.image[2].guid}`
+                          }
+                        />
+                      </div>
+                      <div className="frameimg4">
+                        <img
+                          style={{ filter: "grayscale(100%)" }}
+                          src={
+                            (item.year == "2014" ||
+                              item.year == "2018" ||
+                              item.year == "2020") &&
+                            `${item.image[7].guid}`
+                          }
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="frametitleyear">
+                    <div className="titleyeardetail">{item.year}</div>
+                    <div className="detailtitle">
+                      <div>{item.title_top}</div>
+                      <div>{item.title_bottom}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Element>
+          ))}
+      </div>
+    </div>
+  );
+}
+export default Section2;

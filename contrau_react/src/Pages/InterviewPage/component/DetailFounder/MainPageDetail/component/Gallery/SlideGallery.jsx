@@ -73,24 +73,6 @@ function SlideGallery({ detailFounder }) {
     fechData();
   }, []);
 
-  // useEffect(() => {
-  //   // ADD NO COLOR
-  //   // CHANGE NO COLOR IMG1
-  //   let noColorImg1 = document.querySelectorAll(
-  //     ".slick-slide:not(.slick-active)"
-  //   );
-  //   for (var i = 0; i < noColorImg1.length; i++) {
-  //     noColorImg1[i].getElementsByTagName("img")[0].style.filter =
-  //       "grayscale(100%)";
-  //     noColorImg1[i].getElementsByTagName("img")[1].style.filter =
-  //       "grayscale(100%)";
-  //     noColorImg1[i].getElementsByTagName("img")[2].style.filter =
-  //       "grayscale(100%)";
-  //     noColorImg1[i].getElementsByTagName("img")[3].style.filter =
-  //       "grayscale(100%)";
-  //   }
-  // }, []);
-
   const bannerData =
     Object.keys(listGallery).length > 1 &&
     listGallery?.map((item) => (

@@ -14,7 +14,7 @@ HeaderFounder.propTypes = {
 function HeaderFounder({ detailFounder }) {
   const theme = useTheme();
 
-  const matchMobile = useMediaQuery("(max-width:640px)");
+  const matchMobile = useMediaQuery("(max-width:639px)");
   return (
     <div>
       <Box className="frameheaderfoundermain">
