@@ -18,7 +18,7 @@ function MainFounder(props) {
   //RESPONSIVE
   const theme = useTheme();
   const dispatch = useDispatch();
-  const matchMobile = useMediaQuery("(max-width:640px)");
+  const matchMobile = useMediaQuery("(max-width:639px)");
 
   const [listFounder2, setListFounder2] = useState([]);
 

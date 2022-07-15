@@ -38,16 +38,7 @@ export default function TemporaryDrawer() {
             </ListItemButton>
           </Link>
         </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemText primary={"About Us"} />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemText primary={"Portfolio"} />
-          </ListItemButton>
-        </ListItem>
+
         <ListItem disablePadding>
           <Link to="/story">
             <ListItemButton>
