@@ -41,11 +41,11 @@ export default function ValueAdd() {
               key={i}
             >
               <div className=" mt-[26px] lg:mt-[65px]">
-                <div className="lg:mx-0 block lg:flex items-center justify-star lg:space-x-4">
+                <div className="lg:mx-0 block lg:flex  lg:space-x-4">
                   <p className="popinsFont text-[18px] font-light  lg:text-[24px] italic text-red mb-0">
                     {i > 9 ? i + 1 : `0${i + 1}`}
                   </p>
-                  <p className="popinsFont text-[24px] lg:text-[40px] font-light mb-0 ">
+                  <p className="popinsFont text-[24px] lg:text-[40px] font-light mb-0 leading-[47px]">
                     {empower?.acf?.title}
                   </p>
                 </div>
@@ -56,7 +56,7 @@ export default function ValueAdd() {
                   alt={empower?.acf?.title}
                   className="w-full object-cover"
                 />
-                <p className=" popinsFont leading-[18px] font-light lg:leading-[32px] lg:font-normal lg:ml-[20px] lg:text-[20px]   text-[13px] mb-0">
+                <p className=" popinsFont leading-[18px] font-light lg:leading-[32px] lg:font-normal lg:ml-[40px] lg:text-[20px]   text-[13px] mb-0">
                   {empower?.acf?.content}
                 </p>
               </div>

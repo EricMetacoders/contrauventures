@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import GroupTextAnimation from "./GroupTextAnimation";
 import { getPartnersList } from "../../../../reducers/homeSlice";
 import "./group.css";
+import { PartnerLogo } from "./partnerLogo/partnerLgo";
 
 export default function Group() {
   const dispatch = useDispatch();
@@ -26,7 +27,7 @@ export default function Group() {
       <div className="bg-partnersContactBg overflow-hidden">
         <div className="mx-[34px] md:mx-[117px] 2xl:mx-[300px] pb-[65px] mt-[84px] md:mt-[318px]">
           {/* desktop animation */}
-          <div className="xl:block hidden md:w-[1320px] md:h-[498px]">
+          <div className="xl:block hidden md:w-[1030px] md:h-[498px]">
             {/* start animation */}
             {offset > 100 ? <GroupTextAnimation /> : <></>}
             {/* end animation */}
@@ -55,10 +56,14 @@ export default function Group() {
             <div className="right-left1 absolute flex justify-center items-center ">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
+                    }}
                     key={i}
                   />
                 );
@@ -67,10 +72,14 @@ export default function Group() {
             <div className=" right-left2 absolute flex justify-center items-center ">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
+                    }}
                     key={i}
                   />
                 );
@@ -79,10 +88,14 @@ export default function Group() {
             <div className=" right-left3 absolute flex justify-center items-center ">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
+                    }}
                     key={i}
                   />
                 );
@@ -93,10 +106,14 @@ export default function Group() {
             <div className="left-right1 absolute flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
+                    }}
                     key={i}
                   />
                 );
@@ -105,10 +122,14 @@ export default function Group() {
             <div className=" left-right2 absolute flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
+                    }}
                     key={i}
                   />
                 );
@@ -117,10 +138,14 @@ export default function Group() {
             <div className=" left-right3 absolute flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
+                    }}
                     key={i}
                   />
                 );
@@ -131,10 +156,14 @@ export default function Group() {
             <div className="absolute right-left1 flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100  ml-[10px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
+                    }}
                     key={i}
                   />
                 );
@@ -143,10 +172,14 @@ export default function Group() {
             <div className="absolute right-left2 flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100  ml-[10px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
+                    }}
                     key={i}
                   />
                 );
@@ -155,10 +188,14 @@ export default function Group() {
             <div className="absolute right-left3 flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[173px] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
+                    }}
                     key={i}
                   />
                 );
@@ -179,10 +216,14 @@ export default function Group() {
             <div className="right-left1 absolute flex justify-center items-center ">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[92px] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
+                    }}
                     key={i}
                   />
                 );
@@ -191,10 +232,14 @@ export default function Group() {
             <div className=" right-left2 absolute flex justify-center items-center ">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[92px]  h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
+                    }}
                     key={i}
                   />
                 );
@@ -203,10 +248,14 @@ export default function Group() {
             <div className=" right-left3 absolute flex justify-center items-center ">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[92px]  h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
+                    }}
                     key={i}
                   />
                 );
@@ -217,10 +266,14 @@ export default function Group() {
             <div className="left-right1 absolute flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[92px]  ] h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
+                    }}
                     key={i}
                   />
                 );
@@ -229,10 +282,14 @@ export default function Group() {
             <div className=" left-right2 absolute flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[92px]   h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
+                    }}
                     key={i}
                   />
                 );
@@ -241,10 +298,14 @@ export default function Group() {
             <div className=" left-right3 absolute flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[92px]  h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
+                    }}
                     key={i}
                   />
                 );
@@ -255,10 +316,14 @@ export default function Group() {
             <div className="absolute right-left1 flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[92px] h-[173px] object-contain opacity-80 hover:opacity-100  ml-[10px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
+                    }}
                     key={i}
                   />
                 );
@@ -267,10 +332,14 @@ export default function Group() {
             <div className="absolute right-left2 flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[92px]   h-[173px] object-contain opacity-80 hover:opacity-100  ml-[10px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
+                    }}
                     key={i}
                   />
                 );
@@ -279,10 +348,14 @@ export default function Group() {
             <div className="absolute right-left3 flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[92px]   h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
+                    }}
                     key={i}
                   />
                 );
@@ -304,10 +377,14 @@ export default function Group() {
             <div className="mobile-right-left1 absolute flex justify-center items-center ">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 ml-[5px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[80px]",
+                      wrapperHeight: "h-[80px]",
+                      marginLeft: "ml-[5px]",
+                    }}
                     key={i}
                   />
                 );
@@ -316,10 +393,14 @@ export default function Group() {
             <div className="mobile-right-left2 absolute flex justify-center items-center ">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 ml-[5px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[80px]",
+                      wrapperHeight: "h-[80px]",
+                      marginLeft: "ml-[5px]",
+                    }}
                     key={i}
                   />
                 );
@@ -330,10 +411,14 @@ export default function Group() {
             <div className="mobile-left-right1 absolute flex justify-center items-center ">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 ml-[5px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[80px]",
+                      wrapperHeight: "h-[80px]",
+                      marginLeft: "ml-[5px]",
+                    }}
                     key={i}
                   />
                 );
@@ -342,10 +427,14 @@ export default function Group() {
             <div className="mobile-left-right2 absolute flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 ml-[5px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[80px]",
+                      wrapperHeight: "h-[80px]",
+                      marginLeft: "ml-[5px]",
+                    }}
                     key={i}
                   />
                 );
@@ -356,10 +445,14 @@ export default function Group() {
             <div className="mobile-right-left1 absolute flex justify-center items-center ">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 ml-[5px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[80px]",
+                      wrapperHeight: "h-[80px]",
+                      marginLeft: "ml-[5px]",
+                    }}
                     key={i}
                   />
                 );
@@ -368,10 +461,14 @@ export default function Group() {
             <div className="mobile-right-left2 absolute flex justify-center items-center ">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[80px] h-[80px] object-contain opacity-80 hover:opacity-100 ml-[5px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[80px]",
+                      wrapperHeight: "h-[80px]",
+                      marginLeft: "ml-[5px]",
+                    }}
                     key={i}
                   />
                 );
@@ -380,7 +477,7 @@ export default function Group() {
           </div>
           {/* logo */}
           <div className="flex items-cener justify-center mt-[76px] mb-[76px]">
-            <button className="px-[50px] py-[15px] text-white border hover:bg-white hover:text-black transition-all">
+            <button className="px-[28px] py-[12px] font-semibold text-white border hover:bg-white hover:text-black transition-all">
               View All
             </button>
           </div>

@@ -33,7 +33,7 @@ export default function Components() {
         {showText2 ? (
           <FadeInUpDiv>
             <p className="popinsFont md:text-[70px]  xl:text-[110px]  font-thin mb-[5px] 2xl:mb-0">
-              We don’t go for Deal,
+              We don’t go for Deal's,
             </p>
           </FadeInUpDiv>
         ) : (
@@ -48,9 +48,8 @@ export default function Components() {
               </p>
               <div className="flex items-center justify-center">
                 <p className="md:text-[70px] lg:text-[90px] 2xl:text-[110px] popinsFont italic font-[900] text-red">
-                  Founders
+                  Founders.
                 </p>
-                <div className="bg-red w-[10px] h-[10px]   md:w-[23px] md:h-[23px] rounded-full  mt-[30px] md:mt-[27px]  xl:mt-[37px] 2xl:mt-[57px]"></div>
               </div>
             </div>
           </FadeInUpDiv>
@@ -64,7 +63,7 @@ export default function Components() {
         {showText2 ? (
           <FadeInUpDiv>
             <p className="popinsFont text-[64px]  font-thin  mb-0">
-              We don’t go for Deal,
+              We don’t go for Deal's,
             </p>
           </FadeInUpDiv>
         ) : (
@@ -78,9 +77,8 @@ export default function Components() {
             </p>
             <div className="flex items-center">
               <p className="leading-[110px] text-[80px] ] popinsFont italic font-[900]   text-red">
-                Founders
+                Founders.
               </p>
-              <div className="bg-red w-[20px] h-[20px]   md:w-[23px] md:h-[23px] rounded-full  mt-[30px] md:mt-[27px]  xl:mt-[-41px] 2xl:mt-[57px]"></div>
             </div>
           </FadeInUpDiv>
         ) : (

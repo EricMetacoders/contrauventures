@@ -1,6 +1,6 @@
 .ant-tabs-tab {
-  width: 290px !important;
-  height: 61px !important;
+  width: 331px !important;
+  height: 62px !important;
   color: white;
 }
 .ant-tabs-top > .ant-tabs-nav .ant-tabs-ink-bar,
@@ -66,7 +66,7 @@
   border-radius: none;
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1200px) {
+@media screen and (min-width: 1024px) and (max-width: 1340px) {
   .ant-tabs-tab {
     width: 200px !important;
     font-size: 10px;

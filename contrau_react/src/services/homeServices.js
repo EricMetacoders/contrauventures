@@ -4,7 +4,7 @@ import { BASE_URL } from "../constants/apiConstants";
 export const homeServices = {
   getFAQList() {
     return axios({
-      url: `${BASE_URL}faqs`,
+      url: `${BASE_URL}faqs?per_page=100&orderby=order&order=asc`,
       method: "GET",
     });
   },
@@ -42,6 +42,8 @@ export const homeServices = {
     return axios({
       url: `https://contrau.metacoders.dev/wp-json/contact-form-7/v1/contact-forms/325/feedback`,
       method: "POST",
+      withCredentials: true,
+      data: data,
       headers: {
         "Content-Type": "multipart/form-data",
       },

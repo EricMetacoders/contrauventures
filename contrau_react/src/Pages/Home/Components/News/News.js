@@ -44,13 +44,13 @@ export default function News() {
                     className="w-full h-[157px] sm:h-[240px] lg:w-[424px] lg:h-[178px]"
                   />
                   <div className="mt-[36px]">
-                    <p className="text-[14px] robotoFlexFont italic text-red mb-0">
+                    <p className="text-[14px] robotoFlexFont italic text-red mb-[10px] lgmb-[4%]">
                       {n.acf.categies}
                     </p>
                     <p className="text-break popinsFont lg:text-[24px] lg:font-normal text-[18px] font-light mb-0 hover:underline underline-offset-1">
                       {n.acf.title}
                     </p>
-                    <p className="break-all text-break lg-text[16px] lg:font-light lg:robotoFlex Font text-[13px] popinsFont font-light mb-0">
+                    <p className="break-all text-break lg-text[16px] lg:font-light lg:robotoFlex Font text-[16px] popinsFont font-light mb-0">
                       {n.acf.newscontent}
                     </p>
                   </div>

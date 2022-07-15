@@ -36,7 +36,7 @@ export default function NewPortfolio() {
   }, []);
 
   return (
-    <div className="bg-portfolioBg pt-[2px] mt-[171px] 2xl:mt-[300px] relative">
+    <div className="bg-portfolioBg pt-[2px] mt-[171px] lg:mt-[300px] relative">
       {/* image */}
       <div className="absolute">
         <img
@@ -46,7 +46,7 @@ export default function NewPortfolio() {
         />
       </div>
 
-      <div className="mt-[50%] 2xl:mt-[787px] bg-portfolioBg">
+      <div className="mt-[50%] lg:mt-[787px] bg-portfolioBg">
         {/* text content */}
         <div className="relative">
           {/* desktop animation */}
@@ -65,19 +65,19 @@ export default function NewPortfolio() {
         </div>
 
         {/* tabs */}
-        <div className="flex items-center justify-center pb-[87px] 2xl:pb-[200px] pt-[38px] lg:pt-[15%] 2xl:pt-[119px] bg-portfolioBg">
+        <div className="flex items-center justify-center pb-[87px] lg:pb-[200px] pt-[38px] lg:pt-[15%]  bg-portfolioBg">
           <div className="mx-[20px]">
             <div className="hidden lg:block">
               <Tabs defaultActiveKey="1">
                 <TabPane
                   tab={
-                    <div className="popinsFont text-[10px] 2xl:text-[20px] 2xl:font-semibold w-full h-full  flex items-center justify-center ">
+                    <div className="popinsFont text-[10px] lg:text-[15px] xl:text-[20px] lg:font-semibold w-full h-full  flex items-center justify-center ">
                       <p>View All</p>
                     </div>
                   }
                   key="1"
                 >
-                  <div className="grid grid-cols-4">
+                  <div className="grid grid-cols-4 lg:mx-[17.5%] gap-[5.25rem]">
                     {viewAll?.map((logo, i) => {
                       return (
                         <div
@@ -96,13 +96,13 @@ export default function NewPortfolio() {
                 </TabPane>
                 <TabPane
                   tab={
-                    <div className="popinsFont text-[10px] 2xl:text-[20px] 2xl:font-semibold w-full h-full   flex flex-col items-center justify-center">
+                    <div className="popinsFont text-[10px] lg:text-[15px] xl:text-[20px]  lg:font-semibold w-full h-full   flex flex-col items-center justify-center">
                       <p className="md:block hidden">SW Infrastructure</p>
                     </div>
                   }
                   key="2"
                 >
-                  <div className="grid grid-cols-4">
+                  <div className="grid grid-cols-4 lg:mx-[17.5%] gap-[5.25rem]">
                     {sWInfrastructure?.map((logo, i) => {
                       return (
                         <div
@@ -121,13 +121,13 @@ export default function NewPortfolio() {
                 </TabPane>
                 <TabPane
                   tab={
-                    <div className=" popinsFont 2xl:text-[20px] 2xl:font-semibold w-full h-full  flex flex-col items-center justify-center">
+                    <div className=" popinsFont lg:text-[15px] xl:text-[20px]  lg:font-semibold w-full h-full  flex flex-col items-center justify-center">
                       <p className="md:block hidden">Digital Supply Chainl</p>
                     </div>
                   }
                   key="3"
                 >
-                  <div className="grid grid-cols-4">
+                  <div className="grid grid-cols-4 lg:mx-[17.5%] gap-[5.25rem]">
                     {digitalSupplyChain?.map((logo, i) => {
                       return (
                         <div
@@ -146,13 +146,13 @@ export default function NewPortfolio() {
                 </TabPane>
                 <TabPane
                   tab={
-                    <div className="popinsFont text-[10px] 2xl:text-[20px] 2xl:font-semibold w-full h-full flex items-center justify-center">
+                    <div className="popinsFont text-[10px] lg:text-[15px] xl:text-[20px]  lg:font-semibold w-full h-full flex items-center justify-center">
                       <p className="hidden md:block">Sustainable Megacity</p>
                     </div>
                   }
                   key="4"
                 >
-                  <div className="grid grid-cols-4">
+                  <div className="grid grid-cols-4 lg:mx-[17.5%] gap-[5.25rem]">
                     {sustainableMegacity?.map((logo, i) => {
                       return (
                         <div
