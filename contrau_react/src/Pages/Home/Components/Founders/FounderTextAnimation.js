@@ -91,6 +91,9 @@ export default function Components() {
         {showText2 ? (
           <FadeInUpDiv>
             <p className="popinsFont text-[40px] font-thin mb-0">We don't</p>
+            <p className="popinsFont text-[40px] font-thin mb-0">
+              go for Deals,
+            </p>
           </FadeInUpDiv>
         ) : (
           <></>

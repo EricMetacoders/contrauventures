@@ -36,6 +36,7 @@ export default function PortfolioSlick() {
     dots: false,
     infinite: false,
     arrows: false,
+    centerMode: true,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
