@@ -60,11 +60,11 @@ export default function Group() {
                     {...{
                       logoUrl: logo?.acf?.image || "",
                       logoName: logo?.acf?.name || "",
-                      key: i,
-                      wrapperWidth: 173,
-                      wrapperHeight: 173,
-                      marginLeft: 10,
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
                     }}
+                    key={i}
                   />
                 );
               })}
@@ -76,11 +76,11 @@ export default function Group() {
                     {...{
                       logoUrl: logo?.acf?.image || "",
                       logoName: logo?.acf?.name || "",
-                      key: i,
-                      wrapperWidth: 173,
-                      wrapperHeight: 173,
-                      marginLeft: 10,
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
                     }}
+                    key={i}
                   />
                 );
               })}
@@ -92,11 +92,11 @@ export default function Group() {
                     {...{
                       logoUrl: logo?.acf?.image || "",
                       logoName: logo?.acf?.name || "",
-                      key: i,
-                      wrapperWidth: 173,
-                      wrapperHeight: 173,
-                      marginLeft: 10,
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
                     }}
+                    key={i}
                   />
                 );
               })}
@@ -110,11 +110,11 @@ export default function Group() {
                     {...{
                       logoUrl: logo?.acf?.image || "",
                       logoName: logo?.acf?.name || "",
-                      key: i,
-                      wrapperWidth: 173,
-                      wrapperHeight: 173,
-                      marginLeft: 10,
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
                     }}
+                    key={i}
                   />
                 );
               })}
@@ -126,11 +126,11 @@ export default function Group() {
                     {...{
                       logoUrl: logo?.acf?.image || "",
                       logoName: logo?.acf?.name || "",
-                      key: i,
-                      wrapperWidth: 173,
-                      wrapperHeight: 173,
-                      marginLeft: 10,
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
                     }}
+                    key={i}
                   />
                 );
               })}
@@ -142,11 +142,11 @@ export default function Group() {
                     {...{
                       logoUrl: logo?.acf?.image || "",
                       logoName: logo?.acf?.name || "",
-                      key: i,
-                      wrapperWidth: 173,
-                      wrapperHeight: 173,
-                      marginLeft: 10,
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
                     }}
+                    key={i}
                   />
                 );
               })}
@@ -160,11 +160,11 @@ export default function Group() {
                     {...{
                       logoUrl: logo?.acf?.image || "",
                       logoName: logo?.acf?.name || "",
-                      key: i,
-                      wrapperWidth: 173,
-                      wrapperHeight: 173,
-                      marginLeft: 10,
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
                     }}
+                    key={i}
                   />
                 );
               })}
@@ -176,11 +176,11 @@ export default function Group() {
                     {...{
                       logoUrl: logo?.acf?.image || "",
                       logoName: logo?.acf?.name || "",
-                      key: i,
-                      wrapperWidth: 173,
-                      wrapperHeight: 173,
-                      marginLeft: 10,
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
                     }}
+                    key={i}
                   />
                 );
               })}
@@ -192,11 +192,11 @@ export default function Group() {
                     {...{
                       logoUrl: logo?.acf?.image || "",
                       logoName: logo?.acf?.name || "",
-                      key: i,
-                      wrapperWidth: 173,
-                      wrapperHeight: 173,
-                      marginLeft: 10,
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
                     }}
+                    key={i}
                   />
                 );
               })}
@@ -220,11 +220,11 @@ export default function Group() {
                     {...{
                       logoUrl: logo?.acf?.image || "",
                       logoName: logo?.acf?.name || "",
-                      key: i,
-                      wrapperWidth: 173,
-                      wrapperHeight: 173,
-                      marginLeft: 10,
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
                     }}
+                    key={i}
                   />
                 );
               })}
@@ -236,11 +236,11 @@ export default function Group() {
                     {...{
                       logoUrl: logo?.acf?.image || "",
                       logoName: logo?.acf?.name || "",
-                      key: i,
-                      wrapperWidth: 173,
-                      wrapperHeight: 173,
-                      marginLeft: 10,
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
                     }}
+                    key={i}
                   />
                 );
               })}
@@ -252,11 +252,11 @@ export default function Group() {
                     {...{
                       logoUrl: logo?.acf?.image || "",
                       logoName: logo?.acf?.name || "",
-                      key: i,
-                      wrapperWidth: 173,
-                      wrapperHeight: 173,
-                      marginLeft: 10,
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
                     }}
+                    key={i}
                   />
                 );
               })}
@@ -270,11 +270,11 @@ export default function Group() {
                     {...{
                       logoUrl: logo?.acf?.image || "",
                       logoName: logo?.acf?.name || "",
-                      key: i,
-                      wrapperWidth: 173,
-                      wrapperHeight: 173,
-                      marginLeft: 10,
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
                     }}
+                    key={i}
                   />
                 );
               })}
@@ -286,11 +286,11 @@ export default function Group() {
                     {...{
                       logoUrl: logo?.acf?.image || "",
                       logoName: logo?.acf?.name || "",
-                      key: i,
-                      wrapperWidth: 173,
-                      wrapperHeight: 173,
-                      marginLeft: 10,
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
                     }}
+                    key={i}
                   />
                 );
               })}
@@ -302,11 +302,11 @@ export default function Group() {
                     {...{
                       logoUrl: logo?.acf?.image || "",
                       logoName: logo?.acf?.name || "",
-                      key: i,
-                      wrapperWidth: 173,
-                      wrapperHeight: 173,
-                      marginLeft: 10,
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
                     }}
+                    key={i}
                   />
                 );
               })}
@@ -320,11 +320,11 @@ export default function Group() {
                     {...{
                       logoUrl: logo?.acf?.image || "",
                       logoName: logo?.acf?.name || "",
-                      key: i,
-                      wrapperWidth: 173,
-                      wrapperHeight: 173,
-                      marginLeft: 10,
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
                     }}
+                    key={i}
                   />
                 );
               })}
@@ -336,11 +336,11 @@ export default function Group() {
                     {...{
                       logoUrl: logo?.acf?.image || "",
                       logoName: logo?.acf?.name || "",
-                      key: i,
-                      wrapperWidth: 173,
-                      wrapperHeight: 173,
-                      marginLeft: 10,
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
                     }}
+                    key={i}
                   />
                 );
               })}
@@ -348,10 +348,14 @@ export default function Group() {
             <div className="absolute right-left3 flex justify-center items-center">
               {partners?.map((logo, i) => {
                 return (
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.name}
-                    className="w-[92px]   h-[173px] object-contain opacity-80 hover:opacity-100 ml-[10px]"
+                  <PartnerLogo
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      wrapperWidth: "w-[173px]",
+                      wrapperHeight: "h-[173px]",
+                      marginLeft: "ml-[10px]",
+                    }}
                     key={i}
                   />
                 );
@@ -377,11 +381,11 @@ export default function Group() {
                     {...{
                       logoUrl: logo?.acf?.image || "",
                       logoName: logo?.acf?.name || "",
-                      key: i,
-                      wrapperWidth: 80,
-                      wrapperHeight: 80,
-                      marginLeft: 5,
+                      wrapperWidth: "w-[80px]",
+                      wrapperHeight: "h-[80px]",
+                      marginLeft: "ml-[5px]",
                     }}
+                    key={i}
                   />
                 );
               })}
@@ -393,11 +397,11 @@ export default function Group() {
                     {...{
                       logoUrl: logo?.acf?.image || "",
                       logoName: logo?.acf?.name || "",
-                      key: i,
-                      wrapperWidth: 80,
-                      wrapperHeight: 80,
-                      marginLeft: 5,
+                      wrapperWidth: "w-[80px]",
+                      wrapperHeight: "h-[80px]",
+                      marginLeft: "ml-[5px]",
                     }}
+                    key={i}
                   />
                 );
               })}
@@ -411,11 +415,11 @@ export default function Group() {
                     {...{
                       logoUrl: logo?.acf?.image || "",
                       logoName: logo?.acf?.name || "",
-                      key: i,
-                      wrapperWidth: 80,
-                      wrapperHeight: 80,
-                      marginLeft: 5,
+                      wrapperWidth: "w-[80px]",
+                      wrapperHeight: "h-[80px]",
+                      marginLeft: "ml-[5px]",
                     }}
+                    key={i}
                   />
                 );
               })}
@@ -427,11 +431,11 @@ export default function Group() {
                     {...{
                       logoUrl: logo?.acf?.image || "",
                       logoName: logo?.acf?.name || "",
-                      key: i,
-                      wrapperWidth: 80,
-                      wrapperHeight: 80,
-                      marginLeft: 5,
+                      wrapperWidth: "w-[80px]",
+                      wrapperHeight: "h-[80px]",
+                      marginLeft: "ml-[5px]",
                     }}
+                    key={i}
                   />
                 );
               })}
@@ -445,11 +449,11 @@ export default function Group() {
                     {...{
                       logoUrl: logo?.acf?.image || "",
                       logoName: logo?.acf?.name || "",
-                      key: i,
-                      wrapperWidth: 80,
-                      wrapperHeight: 80,
-                      marginLeft: 5,
+                      wrapperWidth: "w-[80px]",
+                      wrapperHeight: "h-[80px]",
+                      marginLeft: "ml-[5px]",
                     }}
+                    key={i}
                   />
                 );
               })}
@@ -461,11 +465,11 @@ export default function Group() {
                     {...{
                       logoUrl: logo?.acf?.image || "",
                       logoName: logo?.acf?.name || "",
-                      key: i,
-                      wrapperWidth: 80,
-                      wrapperHeight: 80,
-                      marginLeft: 5,
+                      wrapperWidth: "w-[80px]",
+                      wrapperHeight: "h-[80px]",
+                      marginLeft: "ml-[5px]",
                     }}
+                    key={i}
                   />
                 );
               })}
