@@ -36,7 +36,7 @@ export default function NewPortfolio() {
   }, []);
 
   return (
-    <div className="bg-portfolioBg pt-[2px] mt-[171px] lg:mt-[300px] relative">
+    <div className="bg-portfolioBg pt-[2px] mt-[171px] lg:mt-[401px] relative">
       {/* image */}
       <div className="absolute">
         <img
@@ -65,7 +65,7 @@ export default function NewPortfolio() {
         </div>
 
         {/* tabs */}
-        <div className="flex items-center justify-center pb-[87px] lg:pb-[200px] pt-[38px] lg:pt-[15%]  bg-portfolioBg">
+        <div className="flex items-center justify-center pb-[87px] lg:pb-[329px] pt-[38px] lg:pt-[6.6%]  bg-portfolioBg">
           <div className="mx-[20px]">
             <div className="hidden lg:block">
               <Tabs defaultActiveKey="1">
