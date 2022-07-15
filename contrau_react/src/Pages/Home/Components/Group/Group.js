@@ -14,7 +14,7 @@ const Group = forwardRef((props, ref) => {
     dispatch(getPartnersList());
   }, []);
 
-  const [offset, setOffset] = useState(null);
+  const [offset, setOffset] = useState(0);
   const handleScroll = () => setOffset(window.pageYOffset);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -376,105 +376,189 @@ const Group = forwardRef((props, ref) => {
         <div className="block sm:hidden mb-[123px] ">
           {/* logo */}
           <div className="overflow-hidden flex  relative h-[80px] items-center ">
-            <div className="mobile-right-left1 absolute flex justify-center items-center ">
-              {partners?.map((logo, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: logo?.acf?.image || "",
-                      logoName: logo?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
-                    }}
-                    key={i}
-                  />
-                );
-              })}
+            <div className="right-left1 absolute flex justify-center items-center ">
+              {
+                partners?.map((logo, i) => {
+                  return (
+                    <PartnerLogo
+                      {
+                        ...{
+                          logoUrl: logo?.acf?.image || "",
+                          logoName: logo?.acf?.name || "",
+                          wrapperWidth: "w-[80px]",
+                          wrapperHeight: "h-[80px]",
+                          marginLeft: "ml-[5px]",
+                        }
+                      }
+                      key={i}
+                    />
+                  );
+                })
+              }
             </div>
-            <div className="mobile-right-left2 absolute flex justify-center items-center ">
-              {partners?.map((logo, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: logo?.acf?.image || "",
-                      logoName: logo?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
-                    }}
-                    key={i}
-                  />
-                );
-              })}
+            <div className="right-left2 absolute flex justify-center items-center ">
+              {
+                partners?.map((logo, i) => {
+                  return (
+                    <PartnerLogo
+                      {
+                        ...{
+                          logoUrl: logo?.acf?.image || "",
+                          logoName: logo?.acf?.name || "",
+                          wrapperWidth: "w-[80px]",
+                          wrapperHeight: "h-[80px]",
+                          marginLeft: "ml-[5px]",
+                        }
+                      }
+                      key={i}
+                    />
+                  );
+                })
+              }
+            </div>
+            <div className="right-left3 absolute flex justify-center items-center ">
+              {
+                partners?.map((logo, i) => {
+                  return (
+                    <PartnerLogo
+                      {
+                        ...{
+                          logoUrl: logo?.acf?.image || "",
+                          logoName: logo?.acf?.name || "",
+                          wrapperWidth: "w-[80px]",
+                          wrapperHeight: "h-[80px]",
+                          marginLeft: "ml-[5px]",
+                        }
+                      }
+                      key={i}
+                    />
+                  );
+                })
+              }
             </div>
           </div>
           <div className="overflow-hidden flex  relative h-[80px] items-center my-[40px] ">
-            <div className="mobile-left-right1 absolute flex justify-center items-center ">
-              {partners?.map((logo, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: logo?.acf?.image || "",
-                      logoName: logo?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
-                    }}
-                    key={i}
-                  />
-                );
-              })}
+            <div className="left-right1 absolute flex justify-center items-center ">
+              {
+                partners?.map((logo, i) => {
+                  return (
+                    <PartnerLogo
+                      {
+                        ...{
+                          logoUrl: logo?.acf?.image || "",
+                          logoName: logo?.acf?.name || "",
+                          wrapperWidth: "w-[80px]",
+                          wrapperHeight: "h-[80px]",
+                          marginLeft: "ml-[5px]",
+                        }
+                      }
+                      key={i}
+                    />
+                  );
+                })
+              }
             </div>
-            <div className="mobile-left-right2 absolute flex justify-center items-center">
-              {partners?.map((logo, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: logo?.acf?.image || "",
-                      logoName: logo?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
-                    }}
-                    key={i}
-                  />
-                );
-              })}
+            <div className="left-right2 absolute flex justify-center items-center">
+              {
+                partners?.map((logo, i) => {
+                  return (
+                    <PartnerLogo
+                      {
+                        ...{
+                          logoUrl: logo?.acf?.image || "",
+                          logoName: logo?.acf?.name || "",
+                          wrapperWidth: "w-[80px]",
+                          wrapperHeight: "h-[80px]",
+                          marginLeft: "ml-[5px]",
+                        }
+                      }
+                      key={i}
+                    />
+                  );
+                })
+              }
+            </div>
+            <div className="left-right3 absolute flex justify-center items-center">
+              {
+                partners?.map((logo, i) => {
+                  return (
+                    <PartnerLogo
+                      {
+                        ...{
+                          logoUrl: logo?.acf?.image || "",
+                          logoName: logo?.acf?.name || "",
+                          wrapperWidth: "w-[80px]",
+                          wrapperHeight: "h-[80px]",
+                          marginLeft: "ml-[5px]",
+                        }
+                      }
+                      key={i}
+                    />
+                  );
+                })
+              }
             </div>
           </div>
           <div className="overflow-hidden flex  relative h-[80px] items-center ">
-            <div className="mobile-right-left1 absolute flex justify-center items-center ">
-              {partners?.map((logo, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: logo?.acf?.image || "",
-                      logoName: logo?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
-                    }}
-                    key={i}
-                  />
-                );
-              })}
+            <div className="right-left1 absolute flex justify-center items-center ">
+              {
+                partners?.map((logo, i) => {
+                  return (
+                    <PartnerLogo
+                      {
+                        ...{
+                          logoUrl: logo?.acf?.image || "",
+                          logoName: logo?.acf?.name || "",
+                          wrapperWidth: "w-[80px]",
+                          wrapperHeight: "h-[80px]",
+                          marginLeft: "ml-[5px]",
+                        }
+                      }
+                      key={i}
+                    />
+                  );
+                })
+              }
             </div>
-            <div className="mobile-right-left2 absolute flex justify-center items-center ">
-              {partners?.map((logo, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: logo?.acf?.image || "",
-                      logoName: logo?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
-                    }}
-                    key={i}
-                  />
-                );
-              })}
+            <div className="right-left2 absolute flex justify-center items-center ">
+              {
+                partners?.map((logo, i) => {
+                  return (
+                    <PartnerLogo
+                      {
+                        ...{
+                          logoUrl: logo?.acf?.image || "",
+                          logoName: logo?.acf?.name || "",
+                          wrapperWidth: "w-[80px]",
+                          wrapperHeight: "h-[80px]",
+                          marginLeft: "ml-[5px]",
+                        }
+                      }
+                      key={i}
+                    />
+                  );
+                })
+              }
+            </div>
+            <div className="right-left3 absolute flex justify-center items-center ">
+              {
+                partners?.map((logo, i) => {
+                  return (
+                    <PartnerLogo
+                      {
+                        ...{
+                          logoUrl: logo?.acf?.image || "",
+                          logoName: logo?.acf?.name || "",
+                          wrapperWidth: "w-[80px]",
+                          wrapperHeight: "h-[80px]",
+                          marginLeft: "ml-[5px]",
+                        }
+                      }
+                      key={i}
+                    />
+                  );
+                })
+              }
             </div>
           </div>
           {/* logo */}
