@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'bluehost/bluehost-wordpress-plugin',
-        'pretty_version' => '2.11',
-        'version' => '2.11.0.0',
-        'reference' => 'c8578469e9aa55dc532d58b535ae4c7abeb26802',
+        'pretty_version' => '2.11.1',
+        'version' => '2.11.1.0',
+        'reference' => '660787e69b15292ab73b71c9e6af4a3aa4119f47',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'bluehost/bluehost-wordpress-plugin' => array(
-            'pretty_version' => '2.11',
-            'version' => '2.11.0.0',
-            'reference' => 'c8578469e9aa55dc532d58b535ae4c7abeb26802',
+            'pretty_version' => '2.11.1',
+            'version' => '2.11.1.0',
+            'reference' => '660787e69b15292ab73b71c9e6af4a3aa4119f47',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -128,9 +128,9 @@
             'dev_requirement' => false,
         ),
         'wp-forge/container' => array(
-            'pretty_version' => '1.0',
-            'version' => '1.0.0.0',
-            'reference' => 'e76a208d048b163dcb23068b149e16bdcfabc901',
+            'pretty_version' => '1.1',
+            'version' => '1.1.0.0',
+            'reference' => '1c48853f79b6319e4e7f14b9f3e28c2142ec89b5',
             'type' => 'library',
             'install_path' => __DIR__ . '/../wp-forge/container',
             'aliases' => array(),
