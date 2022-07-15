@@ -46,12 +46,12 @@ export default function Footer() {
             <img
               src={fb}
               alt="fb"
-              className="opacity-80 hover:opacity-100 cursor-pointer"
+              className="opacity-40 hover:opacity-100 cursor-pointer"
             />
             <img
               src={li}
               alt="li"
-              className="opacity-80 hover:opacity-100 cursor-pointer"
+              className="opacity-40 hover:opacity-100 cursor-pointer"
             />
           </div>
         </div>

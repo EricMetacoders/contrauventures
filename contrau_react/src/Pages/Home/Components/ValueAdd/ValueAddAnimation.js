@@ -48,7 +48,7 @@ export default function Components() {
         {showText2 ? (
           <FadeInUpDiv>
             <p className="popinsFont text-[40px] md:text-[64px] lg:text-[80px] 2xl:text-[110px]  italic font-thin mb-0">
-              ourselve with
+              ourselves with
             </p>
           </FadeInUpDiv>
         ) : (

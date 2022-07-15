@@ -63,7 +63,7 @@ export default function Faq() {
                 key={index + 1}
               >
                 <div className="ml-[-3px] mr-[47px] pb-[40px] md:mx-[50px] ">
-                  <p className="break-all md:mt-[71px] mt-[40px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
+                  <p className="break-all md:mt-[-21px] mt-[40px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
                     {ques.acf.answer_part_1}
                   </p>
                   <p className="break-all mt-[20px] md:mt-[42px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">

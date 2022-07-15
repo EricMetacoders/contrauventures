@@ -58,7 +58,9 @@ export default function Components() {
                     <span className="popinsFont text-[110px] font-[900]">
                       FOUNDERS
                     </span>
-                    <div className="inline-block bg-red w-[23px] h-[23px] rounded-full mt-[70px]"></div>
+                    <span className="popinsFont text-red text-[110px] font-[900]">
+                      .
+                    </span>
                   </div>
                 </FadeInUpDiv>
               ) : (
@@ -93,7 +95,9 @@ export default function Components() {
                     <span className="popinsFont text-[63px] font-[900]">
                       FOUNDERS
                     </span>
-                    <div className="inline-block bg-red w-[23px] h-[23px] rounded-full mt-[31px]"></div>
+                    <span className="popinsFont text-red text-[63px] font-[900]">
+                      .
+                    </span>
                   </div>
                 </FadeInUpDiv>
               ) : (
