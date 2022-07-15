@@ -33,7 +33,7 @@ export default function Components() {
         {showText2 ? (
           <FadeInUpDiv>
             <p className="popinsFont md:text-[70px]  xl:text-[110px]  font-thin mb-[5px] 2xl:mb-0">
-              We don’t go for Deal's,
+              We don’t go for Deals,
             </p>
           </FadeInUpDiv>
         ) : (
@@ -63,7 +63,7 @@ export default function Components() {
         {showText2 ? (
           <FadeInUpDiv>
             <p className="popinsFont text-[64px]  font-thin  mb-0">
-              We don’t go for Deal's,
+              We don’t go for Deals,
             </p>
           </FadeInUpDiv>
         ) : (

@@ -49,10 +49,10 @@ export default function Faq() {
                     <div className="mt-[10px] xl:mt-[50px] 2xl:mx-[20px]">
                       <div className="flex items-center justify-between">
                         <div className="md:flex  space-center justify-center md:space-x-5">
-                          <p className="popinsFont md:mt-[8px] text-[18px] font-light  2xl:text-[24px] italic text-red mb-0">
+                          <p className="popinsFont md:mt-[8px] text-[18px] font-light  2xl:text-[24px] italic text-red mb-[2px] lg:mb-0">
                             Q{index + 1}
                           </p>
-                          <p className="break-all text-[18px] md:text-[32px] w-[299px] md:w-[522px] 2xl:w-[900px]  popinsFont 2xl:text-[32px] 2xl:font-normal font-light  mb-0 mText">
+                          <p className="break-all text-[18px] md:text-[32px] w-[273px] md:w-[522px] 2xl:w-[900px]  popinsFont 2xl:text-[32px] 2xl:font-normal font-light  mb-0 mText">
                             {ques.acf.question}
                           </p>
                         </div>
@@ -63,7 +63,7 @@ export default function Faq() {
                 key={index + 1}
               >
                 <div className="ml-[-3px] mr-[47px] pb-[40px] md:mx-[50px] ">
-                  <p className="break-all md:mt-[-21px] mt-[40px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
+                  <p className="break-all md:mt-[-21px] mt-[21px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
                     {ques.acf.answer_part_1}
                   </p>
                   <p className="break-all mt-[20px] md:mt-[42px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
@@ -78,6 +78,7 @@ export default function Faq() {
           })}
         </Collapse>
       </div>
+      <div className="border-t-[1px] border-black mb-[258px] 2xl:mb-[283px]"></div>
     </div>
   );
 }
