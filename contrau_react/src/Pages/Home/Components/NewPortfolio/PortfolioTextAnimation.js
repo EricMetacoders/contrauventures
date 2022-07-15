@@ -141,7 +141,7 @@ export default function Components() {
           <div className="mt-[30px]">
             {showText3 ? (
               <FadeInUpDiv>
-                <p className="popinsFont text-[13px] w-[243px] text-white leading-[20px] font-light">
+                <p className="popinsFont text-[13px] w-[243px] text-white leading-[20px] font-light mt-[45px] lg:mt-0">
                   We invest in areas that can increase Vietnam's growth
                   potential where Vietnam can become strong.
                 </p>
