@@ -23,7 +23,13 @@ export default function HeaderDropDown() {
 
   return (
     <>
-      <Button type="primary" onClick={showModal}>
+      <Button
+        type="primary"
+        onClick={showModal}
+        style={{
+          border: "none !important",
+        }}
+      >
         <img src={mobileMenu} alt="menu" />
       </Button>
       <Modal
