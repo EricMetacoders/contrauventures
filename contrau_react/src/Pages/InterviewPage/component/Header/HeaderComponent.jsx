@@ -14,7 +14,7 @@ function HeaderComponent({ pagecurrent }) {
   //RESPONSIVE
   const theme = useTheme();
 
-  const matchMobile = useMediaQuery("(max-width:640px)");
+  const matchMobile = useMediaQuery("(max-width:639px)");
   let navigate = useNavigate();
   const clickToScroll = () => {
     navigate("/", { state: { id: 1, name: "test" } });
@@ -43,11 +43,9 @@ function HeaderComponent({ pagecurrent }) {
           <TemporaryDrawer />
         ) : (
           <Box className="titledetaimainframeheader">
-            <Box className="titledetaiframeheader">HOME</Box>
-            <Box className="titledetaiframeheader">About Us</Box>
-            <Box className="titledetaiframeheader" onClick={clickToScroll}>
-              Portfolio
-            </Box>
+            <Link to="/">
+              <Box className="titledetaiframeheader">HOME</Box>
+            </Link>
 
             <Link to="/story">
               <Box className="titledetaiframeheader-active">Story</Box>

@@ -53,6 +53,7 @@
       display: none;
     }
     .framelogofb {
+      opacity: 0.4;
       cursor: pointer;
       /* Auto layout */
       margin-left: 20px;
@@ -63,7 +64,7 @@
     }
     .framelogolk {
       cursor: pointer;
-
+      opacity: 0.4;
       margin-left: 10px;
       width: 34px;
       height: 34px;
@@ -112,6 +113,7 @@
         }
 
         .framelogofb-mb {
+          opacity: 0.4;
           cursor: pointer;
           display: block;
           margin-top: 10px;
@@ -120,6 +122,7 @@
           height: 53px;
         }
         .framelogolk-mb {
+          opacity: 0.4;
           cursor: pointer;
           display: block;
           margin-top: 10px;

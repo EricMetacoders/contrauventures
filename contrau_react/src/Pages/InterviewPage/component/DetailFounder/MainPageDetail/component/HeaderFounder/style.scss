@@ -1,8 +1,8 @@
 .frameheaderfoundermain {
   display: flex;
   position: relative;
-  width: auto;
-  height: auto;
+  width: 100%;
+  // height: auto;
   .frameimglayout {
     position: relative;
     width: 100%;
@@ -12,9 +12,8 @@
   }
 
   .imglogotrauframe-header {
-    display: none;
     position: absolute;
-    left: 90px;
+    left: 5%;
     right: 0%;
     top: -0.07%;
     bottom: 17.85%;
@@ -23,17 +22,15 @@
     width: fit-content;
   }
   .titledetaimainframeheader {
-    display: none;
     position: absolute;
     display: flex;
     // left: 75.8%;
-    right: 90px;
+    right: 5%;
     top: 0%;
     bottom: 0%;
     padding-top: 28px;
     height: fit-content;
-    column-gap: 3rem;
-
+    column-gap: 2.6vw;
     .titledetaiframeheader {
       cursor: pointer;
       font-family: "Poppins", sans-serif;
@@ -74,7 +71,6 @@
     }
   }
   .framemaintilecenterheader {
-    display: none;
     position: absolute;
     width: auto;
     height: auto;
@@ -84,8 +80,9 @@
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 100;
-    font-size: 100px;
-    line-height: 100px;
+    font-size: 5.25vw;
+    // line-height: 100px;
+    line-height: 100%;
     /* or 117% */
     text-align: left;
     letter-spacing: -0.01em;
@@ -100,19 +97,18 @@
       display: block;
       width: 43px;
       height: 2px;
-      margin-top: 45px;
+      margin-top: 8.5%;
       margin-left: 5px;
       background: #fcfcfc;
     }
     .titlecompany {
-      width: 169px;
-      height: 32px;
-      margin-top: 40px;
+      width: 27vw;
+      margin-top: 7%;
       font-style: normal;
       font-weight: 600;
-      font-size: 20px;
+      font-size: 1vw;
       margin-left: 5px;
-      line-height: 32px;
+      line-height: 170%;
       /* identical to box height, or 160% */
       letter-spacing: -0.02em;
       color: #ffffff;
@@ -123,7 +119,7 @@
 // RESPONSIVE
 
 /* MOBILE WIDTH < 740px */
-@media screen and (max-width: 739px) {
+@media screen and (max-width: 639px) {
   .frameheaderfoundermain {
     position: relative;
     display: flex;
@@ -200,27 +196,109 @@
   }
 }
 
-/* TABLET WIDTH >=740px and width < 1024px*/
-@media only screen and (min-width: 740px) and (max-width: 1023px) {
-}
+// /* TABLET WIDTH >=640px and width < 767px*/
+// @media only screen and (min-width: 640px) and (max-width: 767px) {
+//   .frameheaderfoundermain {
+//     .imglogotrauframe-header {
+//       position: absolute;
+//       left: 50px;
+//       right: 0%;
+//       top: -0.07%;
+//       bottom: 17.85%;
+//       padding-top: 20px;
+//     }
+//     .titledetaimainframeheader {
+//       position: absolute;
+//       display: flex;
+//       // left: 75.8%;
+//       right: 50px;
+//       top: 0%;
+//       bottom: 0%;
+//       padding-top: 28px;
+//       height: fit-content;
+//       .titledetaiframeheader {
+//         cursor: pointer;
+//         margin-left: 30px;
+//         font-size: 16px;
+//         line-height: 24px;
+//       }
+//       .titledetaiframeheader-active {
+//         margin-left: 30px;
+//         font-size: 16px;
+//         line-height: 24px;
+//       }
+//       .titledetaiframeheader-active:hover {
+//         color: #828383;
+//       }
+//     }
+//     .framemaintilecenterheader {
+//       position: absolute;
+//       width: auto;
+//       height: auto;
+//       top: 53%;
+//       left: 10%;
+//       transform: 0;
+//       font-family: "Poppins", sans-serif;
+//       font-style: normal;
+//       font-weight: 100;
+//       font-size: 20px;
+//       line-height: 24px;
+//       /* or 117% */
+//       text-align: left;
+//       letter-spacing: -0.01em;
+//       /* WHITE */
+//       color: #ffffff;
+//       .framedetailtitlemain {
+//         font-style: normal;
+//         font-weight: 700;
+//       }
+//       .framedetailtitlemain::after {
+//         content: "";
+//         display: block;
+//         width: 32px;
+//         height: 2px;
+//         margin-top: 15px;
+//         margin-left: 5px;
+//         background: #fcfcfc;
+//       }
+//       .titlecompany {
+//         width: 119px;
+//         height: 20px;
+//         margin-top: 15px;
+//         font-style: normal;
+//         font-weight: 600;
+//         margin-left: 5px;
+//         font-size: 14px;
+//         line-height: 20px;
+//         /* identical to box height, or 160% */
+//         letter-spacing: -0.02em;
+//         color: #ffffff;
+//       }
+//     }
+//   }
+// }
+// /* TABLET WIDTH >=740px and width < 1024px*/
+// @media only screen and (min-width: 768px) and (max-width: 1023px) {
 
-/* PC WIDTH >=1200px and width < 1535px*/
-@media only screen and (min-width: 1200px) and (max-width: 1535px) {
-  .frameheaderfoundermain {
-    .framemaintilecenterheader {
-      // CHANGE FONT SIZE FOR RESOLUTION
-      font-size: 80px;
-      line-height: 80px;
-      .framedetailtitlemain {
-        font-style: normal;
-        font-weight: 700;
-      }
-      .framedetailtitlemain::after {
-        // CHANGE FONT SIZE FOR RESOLUTION
-        margin-top: 30px;
-        margin-left: 5px;
-        background: #fcfcfc;
-      }
-    }
-  }
-}
+// }
+
+// /* PC WIDTH >=1200px and width < 1535px*/
+// @media only screen and (min-width: 1200px) and (max-width: 1535px) {
+//   .frameheaderfoundermain {
+//     .framemaintilecenterheader {
+//       // CHANGE FONT SIZE FOR RESOLUTION
+//       font-size: 80px;
+//       line-height: 80px;
+//       .framedetailtitlemain {
+//         font-style: normal;
+//         font-weight: 700;
+//       }
+//       .framedetailtitlemain::after {
+//         // CHANGE FONT SIZE FOR RESOLUTION
+//         margin-top: 30px;
+//         margin-left: 5px;
+//         background: #fcfcfc;
+//       }
+//     }
+//   }
+// }
