@@ -4,7 +4,7 @@ import { BASE_URL } from "../constants/apiConstants";
 export const homeServices = {
   getFAQList() {
     return axios({
-      url: `${BASE_URL}faqs`,
+      url: `${BASE_URL}faqs?per_page=100&orderby=order&order=asc`,
       method: "GET",
     });
   },

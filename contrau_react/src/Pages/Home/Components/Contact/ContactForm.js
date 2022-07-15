@@ -19,6 +19,16 @@ export default function ContactForm() {
 
   const onSubmit = (data) => {
     const file = data.attachFile[0];
+
+    const dataInfor = {
+      title: data.title,
+      email: data.email,
+      message: data.message,
+      phone: data.phone,
+      yourName: data.yourName,
+      attachFile: data?.attachFile[0],
+    };
+
     if (file != undefined) {
       if (file?.type != "application/pdf") {
         setError("attachFile", {
@@ -29,7 +39,7 @@ export default function ContactForm() {
       } else {
         // call api
         homeServices
-          .postContactInfo(data)
+          .postContactInfo(dataInfor)
           .then((res) => {
             Swal.fire({
               icon: "success",
