@@ -1,3 +1,4 @@
+import { useMediaQuery } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
 import {
   animateScroll as scroll,
@@ -19,7 +20,7 @@ function Section2({ detailFounder }) {
     }
   }
   const [listGallery, setListGallery] = useState([{}]);
-
+  const matchMobile = useMediaQuery("(max-width:639px)");
   // GET LIST ALL GALLERY
   async function getGalleryFounderList() {
     try {
@@ -43,13 +44,23 @@ function Section2({ detailFounder }) {
   const refCategory = useRef(null);
   const onScroll = () => {
     const position = window.pageYOffset;
-
-    if (position >= 715) {
-      const myReference = refCategory.current;
-      myReference.style.display = "block";
-    } else if (position < 700) {
-      const myReference = refCategory.current;
-      myReference.style.display = "none";
+    console.log("position:", position);
+    if (!matchMobile) {
+      if (position >= 715) {
+        const myReference = refCategory.current;
+        myReference.style.display = "block";
+      } else if (position < 700) {
+        const myReference = refCategory.current;
+        myReference.style.display = "none";
+      }
+    } else {
+      if (position >= 100) {
+        const myReference = refCategory.current;
+        myReference.style.postion = "fixed";
+      } else if (position < 700) {
+        const myReference = refCategory.current;
+        myReference.style.postion = "relative";
+      }
     }
   };
 
