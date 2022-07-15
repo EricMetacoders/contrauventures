@@ -36,6 +36,7 @@ export default function PortfolioSlick() {
     dots: false,
     infinite: false,
     arrows: false,
+    centerMode: true,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -161,14 +162,14 @@ export default function PortfolioSlick() {
         </div>
       </Slider>
       {showViewAll ? (
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-4 gap-y-8 mt-[26px]">
           {viewAll?.map((logo, i) => {
             return (
               <div className="flex items-center justify-center" key={i}>
                 <img
                   src={logo?.acf?.image}
                   alt={logo?.acf?.category}
-                  className="opacity-80 hover:opacity-100 w-[180px] h-[103px] object-contain"
+                  className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
                 />
               </div>
             );
@@ -178,14 +179,14 @@ export default function PortfolioSlick() {
         <></>
       )}
       {showSWInfrastructure ? (
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-4 gap-y-8 mt-[26px]">
           {sWInfrastructure?.map((logo, i) => {
             return (
               <div className="flex items-center justify-center" key={i}>
                 <img
                   src={logo?.acf?.image}
                   alt={logo?.acf?.category}
-                  className="opacity-80 hover:opacity-100 w-[180px] h-[103px] object-contain"
+                  className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
                 />
               </div>
             );
@@ -195,14 +196,14 @@ export default function PortfolioSlick() {
         <></>
       )}
       {showDigitalSupplyChain ? (
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-4 gap-y-8 mt-[26px]">
           {digitalSupplyChain?.map((logo, i) => {
             return (
               <div className="flex items-center justify-center" key={i}>
                 <img
                   src={logo?.acf?.image}
                   alt={logo?.acf?.category}
-                  className="opacity-80 hover:opacity-100 w-[180px] h-[103px] object-contain"
+                  className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
                 />
               </div>
             );
@@ -212,14 +213,14 @@ export default function PortfolioSlick() {
         <></>
       )}
       {showSustainableMegacity ? (
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-4 gap-y-8 mt-[26px]">
           {sustainableMegacity?.map((logo, i) => {
             return (
               <div className="flex items-center justify-center" key={i}>
                 <img
                   src={logo?.acf?.image}
                   alt={logo?.acf?.category}
-                  className="opacity-80 hover:opacity-100 w-[180px] h-[103px] object-contain"
+                  className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
                 />
               </div>
             );
