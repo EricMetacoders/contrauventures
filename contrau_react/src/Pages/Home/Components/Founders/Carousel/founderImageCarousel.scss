@@ -53,18 +53,20 @@
 }
 
 .slick-prev:before {
-  content: url(../../../../../assets/homepage_img/prev_arrow.png);
+  content: url(../../../../../assets/homepage_img/prev_btn.svg);
   width: 100px;
   height: 100px;
   position: absolute;
-  transform: translateX(-175%);
+  transform: translateX(-206%);
+  top: -183%;
 }
 .slick-next:before {
-  content: url(../../../../../assets/homepage_img/next_arrow.png);
+  content: url(../../../../../assets/homepage_img/next_btn.svg);
   width: 100px;
   height: 100px;
   position: absolute;
-  transform: translateX(76%);
+  transform: translateX(107%);
+  top: -183%;
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1280px) {
@@ -133,4 +135,11 @@
   #divBtn:hover > .scaleImg {
     transform: none;
   }
+}
+
+.slick-slide > div {
+  margin: 0 11px;
+}
+.slick-list {
+  margin: 0 -11px;
 }

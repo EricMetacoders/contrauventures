@@ -43,7 +43,7 @@ export default function Components() {
               {showText2 ? (
                 <FadeInUpDiv>
                   <div className="flex items-center justify-center">
-                    <p className="popinsFont font-[900] italic text-[110px] mb-0">
+                    <p className="popinsFont font-[900] text-[110px] mb-0">
                       Vietnam's{" "}
                       <span className="popinsFont italic font-thin">
                         victory
@@ -58,8 +58,7 @@ export default function Components() {
                 <FadeInUpDiv>
                   <div className="flex items-center justify-center text-[110px] space-x-3">
                     <p className="popinsFont italic font-thin mb-0">is</p>
-                    <p className="font-[900] text-red  mb-0">Our victory</p>
-                    <div className=" w-[25px] h-[25px] rounded-full bg-red mt-[79px]"></div>
+                    <p className="font-[900] text-red  mb-0">Our victory.</p>
                   </div>
                 </FadeInUpDiv>
               ) : (
@@ -131,10 +130,8 @@ export default function Components() {
               <FadeInUpDiv>
                 <div className="flex items-center justify-start space-x-[1px]">
                   <p className="font-[900] text-red mb-0 popinsFont text-[40px]">
-                    Our victory
+                    Our victory.
                   </p>
-
-                  <div className="w-[13px] h-[13px] bg-red rounded-full mt-[35px]"></div>
                 </div>
               </FadeInUpDiv>
             ) : (

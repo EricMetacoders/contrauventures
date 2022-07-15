@@ -27,7 +27,7 @@ export default function Group() {
       <div className="bg-partnersContactBg overflow-hidden">
         <div className="mx-[34px] md:mx-[117px] 2xl:mx-[300px] pb-[65px] mt-[84px] md:mt-[318px]">
           {/* desktop animation */}
-          <div className="xl:block hidden md:w-[1320px] md:h-[498px]">
+          <div className="xl:block hidden md:w-[1030px] md:h-[498px]">
             {/* start animation */}
             {offset > 100 ? <GroupTextAnimation /> : <></>}
             {/* end animation */}
@@ -57,16 +57,14 @@ export default function Group() {
               {partners?.map((logo, i) => {
                 return (
                   <PartnerLogo
-                    {
-                      ...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        key: i,
-                        wrapperWidth: 173,
-                        wrapperHeight: 173,
-                        marginLeft: 10,
-                      }
-                    }
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      key: i,
+                      wrapperWidth: 173,
+                      wrapperHeight: 173,
+                      marginLeft: 10,
+                    }}
                   />
                 );
               })}
@@ -75,16 +73,14 @@ export default function Group() {
               {partners?.map((logo, i) => {
                 return (
                   <PartnerLogo
-                    {
-                      ...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        key: i,
-                        wrapperWidth: 173,
-                        wrapperHeight: 173,
-                        marginLeft: 10,
-                      }
-                    }
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      key: i,
+                      wrapperWidth: 173,
+                      wrapperHeight: 173,
+                      marginLeft: 10,
+                    }}
                   />
                 );
               })}
@@ -93,16 +89,14 @@ export default function Group() {
               {partners?.map((logo, i) => {
                 return (
                   <PartnerLogo
-                    {
-                      ...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        key: i,
-                        wrapperWidth: 173,
-                        wrapperHeight: 173,
-                        marginLeft: 10,
-                      }
-                    }
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      key: i,
+                      wrapperWidth: 173,
+                      wrapperHeight: 173,
+                      marginLeft: 10,
+                    }}
                   />
                 );
               })}
@@ -113,16 +107,14 @@ export default function Group() {
               {partners?.map((logo, i) => {
                 return (
                   <PartnerLogo
-                    {
-                      ...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        key: i,
-                        wrapperWidth: 173,
-                        wrapperHeight: 173,
-                        marginLeft: 10,
-                      }
-                    }
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      key: i,
+                      wrapperWidth: 173,
+                      wrapperHeight: 173,
+                      marginLeft: 10,
+                    }}
                   />
                 );
               })}
@@ -131,16 +123,14 @@ export default function Group() {
               {partners?.map((logo, i) => {
                 return (
                   <PartnerLogo
-                    {
-                      ...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        key: i,
-                        wrapperWidth: 173,
-                        wrapperHeight: 173,
-                        marginLeft: 10,
-                      }
-                    }
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      key: i,
+                      wrapperWidth: 173,
+                      wrapperHeight: 173,
+                      marginLeft: 10,
+                    }}
                   />
                 );
               })}
@@ -149,16 +139,14 @@ export default function Group() {
               {partners?.map((logo, i) => {
                 return (
                   <PartnerLogo
-                    {
-                      ...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        key: i,
-                        wrapperWidth: 173,
-                        wrapperHeight: 173,
-                        marginLeft: 10,
-                      }
-                    }
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      key: i,
+                      wrapperWidth: 173,
+                      wrapperHeight: 173,
+                      marginLeft: 10,
+                    }}
                   />
                 );
               })}
@@ -169,16 +157,14 @@ export default function Group() {
               {partners?.map((logo, i) => {
                 return (
                   <PartnerLogo
-                    {
-                      ...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        key: i,
-                        wrapperWidth: 173,
-                        wrapperHeight: 173,
-                        marginLeft: 10,
-                      }
-                    }
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      key: i,
+                      wrapperWidth: 173,
+                      wrapperHeight: 173,
+                      marginLeft: 10,
+                    }}
                   />
                 );
               })}
@@ -187,16 +173,14 @@ export default function Group() {
               {partners?.map((logo, i) => {
                 return (
                   <PartnerLogo
-                    {
-                      ...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        key: i,
-                        wrapperWidth: 173,
-                        wrapperHeight: 173,
-                        marginLeft: 10,
-                      }
-                    }
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      key: i,
+                      wrapperWidth: 173,
+                      wrapperHeight: 173,
+                      marginLeft: 10,
+                    }}
                   />
                 );
               })}
@@ -205,16 +189,14 @@ export default function Group() {
               {partners?.map((logo, i) => {
                 return (
                   <PartnerLogo
-                    {
-                      ...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        key: i,
-                        wrapperWidth: 173,
-                        wrapperHeight: 173,
-                        marginLeft: 10,
-                      }
-                    }
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      key: i,
+                      wrapperWidth: 173,
+                      wrapperHeight: 173,
+                      marginLeft: 10,
+                    }}
                   />
                 );
               })}
@@ -235,16 +217,14 @@ export default function Group() {
               {partners?.map((logo, i) => {
                 return (
                   <PartnerLogo
-                    {
-                      ...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        key: i,
-                        wrapperWidth: 173,
-                        wrapperHeight: 173,
-                        marginLeft: 10,
-                      }
-                    }
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      key: i,
+                      wrapperWidth: 173,
+                      wrapperHeight: 173,
+                      marginLeft: 10,
+                    }}
                   />
                 );
               })}
@@ -253,16 +233,14 @@ export default function Group() {
               {partners?.map((logo, i) => {
                 return (
                   <PartnerLogo
-                    {
-                      ...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        key: i,
-                        wrapperWidth: 173,
-                        wrapperHeight: 173,
-                        marginLeft: 10,
-                      }
-                    }
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      key: i,
+                      wrapperWidth: 173,
+                      wrapperHeight: 173,
+                      marginLeft: 10,
+                    }}
                   />
                 );
               })}
@@ -271,16 +249,14 @@ export default function Group() {
               {partners?.map((logo, i) => {
                 return (
                   <PartnerLogo
-                    {
-                      ...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        key: i,
-                        wrapperWidth: 173,
-                        wrapperHeight: 173,
-                        marginLeft: 10,
-                      }
-                    }
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      key: i,
+                      wrapperWidth: 173,
+                      wrapperHeight: 173,
+                      marginLeft: 10,
+                    }}
                   />
                 );
               })}
@@ -291,16 +267,14 @@ export default function Group() {
               {partners?.map((logo, i) => {
                 return (
                   <PartnerLogo
-                    {
-                      ...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        key: i,
-                        wrapperWidth: 173,
-                        wrapperHeight: 173,
-                        marginLeft: 10,
-                      }
-                    }
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      key: i,
+                      wrapperWidth: 173,
+                      wrapperHeight: 173,
+                      marginLeft: 10,
+                    }}
                   />
                 );
               })}
@@ -309,16 +283,14 @@ export default function Group() {
               {partners?.map((logo, i) => {
                 return (
                   <PartnerLogo
-                    {
-                      ...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        key: i,
-                        wrapperWidth: 173,
-                        wrapperHeight: 173,
-                        marginLeft: 10,
-                      }
-                    }
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      key: i,
+                      wrapperWidth: 173,
+                      wrapperHeight: 173,
+                      marginLeft: 10,
+                    }}
                   />
                 );
               })}
@@ -327,16 +299,14 @@ export default function Group() {
               {partners?.map((logo, i) => {
                 return (
                   <PartnerLogo
-                    {
-                      ...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        key: i,
-                        wrapperWidth: 173,
-                        wrapperHeight: 173,
-                        marginLeft: 10,
-                      }
-                    }
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      key: i,
+                      wrapperWidth: 173,
+                      wrapperHeight: 173,
+                      marginLeft: 10,
+                    }}
                   />
                 );
               })}
@@ -347,16 +317,14 @@ export default function Group() {
               {partners?.map((logo, i) => {
                 return (
                   <PartnerLogo
-                    {
-                      ...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        key: i,
-                        wrapperWidth: 173,
-                        wrapperHeight: 173,
-                        marginLeft: 10,
-                      }
-                    }
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      key: i,
+                      wrapperWidth: 173,
+                      wrapperHeight: 173,
+                      marginLeft: 10,
+                    }}
                   />
                 );
               })}
@@ -365,16 +333,14 @@ export default function Group() {
               {partners?.map((logo, i) => {
                 return (
                   <PartnerLogo
-                    {
-                      ...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        key: i,
-                        wrapperWidth: 173,
-                        wrapperHeight: 173,
-                        marginLeft: 10,
-                      }
-                    }
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      key: i,
+                      wrapperWidth: 173,
+                      wrapperHeight: 173,
+                      marginLeft: 10,
+                    }}
                   />
                 );
               })}
@@ -408,16 +374,14 @@ export default function Group() {
               {partners?.map((logo, i) => {
                 return (
                   <PartnerLogo
-                    {
-                      ...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        key: i,
-                        wrapperWidth: 80,
-                        wrapperHeight: 80,
-                        marginLeft: 5,
-                      }
-                    }
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      key: i,
+                      wrapperWidth: 80,
+                      wrapperHeight: 80,
+                      marginLeft: 5,
+                    }}
                   />
                 );
               })}
@@ -426,16 +390,14 @@ export default function Group() {
               {partners?.map((logo, i) => {
                 return (
                   <PartnerLogo
-                    {
-                      ...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        key: i,
-                        wrapperWidth: 80,
-                        wrapperHeight: 80,
-                        marginLeft: 5,
-                      }
-                    }
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      key: i,
+                      wrapperWidth: 80,
+                      wrapperHeight: 80,
+                      marginLeft: 5,
+                    }}
                   />
                 );
               })}
@@ -446,16 +408,14 @@ export default function Group() {
               {partners?.map((logo, i) => {
                 return (
                   <PartnerLogo
-                    {
-                      ...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        key: i,
-                        wrapperWidth: 80,
-                        wrapperHeight: 80,
-                        marginLeft: 5,
-                      }
-                    }
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      key: i,
+                      wrapperWidth: 80,
+                      wrapperHeight: 80,
+                      marginLeft: 5,
+                    }}
                   />
                 );
               })}
@@ -464,16 +424,14 @@ export default function Group() {
               {partners?.map((logo, i) => {
                 return (
                   <PartnerLogo
-                    {
-                      ...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        key: i,
-                        wrapperWidth: 80,
-                        wrapperHeight: 80,
-                        marginLeft: 5,
-                      }
-                    }
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      key: i,
+                      wrapperWidth: 80,
+                      wrapperHeight: 80,
+                      marginLeft: 5,
+                    }}
                   />
                 );
               })}
@@ -484,16 +442,14 @@ export default function Group() {
               {partners?.map((logo, i) => {
                 return (
                   <PartnerLogo
-                    {
-                      ...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        key: i,
-                        wrapperWidth: 80,
-                        wrapperHeight: 80,
-                        marginLeft: 5,
-                      }
-                    }
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      key: i,
+                      wrapperWidth: 80,
+                      wrapperHeight: 80,
+                      marginLeft: 5,
+                    }}
                   />
                 );
               })}
@@ -502,16 +458,14 @@ export default function Group() {
               {partners?.map((logo, i) => {
                 return (
                   <PartnerLogo
-                    {
-                      ...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        key: i,
-                        wrapperWidth: 80,
-                        wrapperHeight: 80,
-                        marginLeft: 5,
-                      }
-                    }
+                    {...{
+                      logoUrl: logo?.acf?.image || "",
+                      logoName: logo?.acf?.name || "",
+                      key: i,
+                      wrapperWidth: 80,
+                      wrapperHeight: 80,
+                      marginLeft: 5,
+                    }}
                   />
                 );
               })}
@@ -519,7 +473,7 @@ export default function Group() {
           </div>
           {/* logo */}
           <div className="flex items-cener justify-center mt-[76px] mb-[76px]">
-            <button className="px-[50px] py-[15px] text-white border hover:bg-white hover:text-black transition-all">
+            <button className="px-[28px] py-[12px] font-semibold text-white border hover:bg-white hover:text-black transition-all">
               View All
             </button>
           </div>

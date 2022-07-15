@@ -21,6 +21,12 @@ export default function ContactForm() {
     const file = data.attachFile[0];
 
     const dataInfor = {
+      _wpcf7: 325,
+      _wpcf7_version: 5.6,
+      _wpcf7_locale: "en_US",
+      _wpcf7_unit_tag: "wpcf7-f325-p326-o1",
+      _wpcf7_container_post: 326,
+      _wpcf7_posted_data_hash: "",
       title: data.title,
       email: data.email,
       message: data.message,
