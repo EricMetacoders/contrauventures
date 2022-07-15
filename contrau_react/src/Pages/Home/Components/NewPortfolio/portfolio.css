@@ -8,6 +8,10 @@
   display: none !important;
 }
 
+.slick-slider {
+  border-bottom: 1px solid white;
+}
+
 .ant-tabs-tab {
   border: 1px solid white !important;
   padding: 0 !important;

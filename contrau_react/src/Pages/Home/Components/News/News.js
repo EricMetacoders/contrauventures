@@ -14,7 +14,7 @@ export default function News() {
     <div>
       <div className=" mx-[34px] md:mx-[117px] xl:mx-[100px] 2xl:mx-[300px]">
         <div className="border-t-[1px] lg:mt-[2px]"></div>
-        <div className="flex items-center justify-between mt-[276px]">
+        <div className="flex items-center justify-between mt-[131px] lg:mt-[276px]">
           <div className="flex items-end justify-start">
             <p className="popinsFont italic text-[40px]  lg:text-[60px] font-[900]">
               NEWS
@@ -30,7 +30,7 @@ export default function News() {
           </div>
         </div>
 
-        <div className="mt-[109px]">
+        <div className="mt-[30px] lg:mt-[109px]">
           <div className="flex flex-col md:flex-row items-center justify-center md:space-x-6">
             {data?.map((n, index) => {
               return (

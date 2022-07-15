@@ -45,7 +45,7 @@ export default function ValueAdd() {
                   <p className="popinsFont text-[18px] font-light  lg:text-[24px] italic text-red mb-0">
                     {i > 9 ? i + 1 : `0${i + 1}`}
                   </p>
-                  <p className="popinsFont text-[24px] lg:text-[40px] font-light mb-0 leading-[47px]">
+                  <p className="popinsFont text-[24px] lg:text-[40px] font-light mb-[13px] lg:mb-0 leading-[47px]">
                     {empower?.acf?.title}
                   </p>
                 </div>

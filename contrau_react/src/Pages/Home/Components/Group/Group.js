@@ -50,7 +50,7 @@ export default function Group() {
       </div>
       <div className="bg-partnersContactBg overflow-hidden">
         {/* desktop */}
-        <div className="hidden xl:block mt-[172px] ">
+        <div className="hidden xl:block mt-[172px]  mb-[323px]">
           {/* logo */}
           <div className="overflow-hidden flex  relative h-[179px] items-center">
             <div className="right-left1 absolute flex justify-center items-center ">
@@ -203,11 +203,13 @@ export default function Group() {
             </div>
           </div>
           {/* logo */}
-          <div className="flex items-center justify-center mt-[20px] ">
+
+          {/* button */}
+          {/* <div className="flex items-center justify-center mt-[20px] ">
             <button className="mb-[129px] text-[24px] mt-[129px]  px-[40px] py-[15px] border border-white text-white hover:bg-white hover:text-black transition-all">
               View all 1000+ partners
             </button>
-          </div>
+          </div> */}
         </div>
 
         {/* tablet */}
@@ -371,7 +373,7 @@ export default function Group() {
         </div>
 
         {/* mobile */}
-        <div className="block sm:hidden ">
+        <div className="block sm:hidden mb-[123px] ">
           {/* logo */}
           <div className="overflow-hidden flex  relative h-[80px] items-center ">
             <div className="mobile-right-left1 absolute flex justify-center items-center ">
@@ -476,11 +478,13 @@ export default function Group() {
             </div>
           </div>
           {/* logo */}
-          <div className="flex items-cener justify-center mt-[76px] mb-[76px]">
+
+          {/* mobile button */}
+          {/* <div className="flex items-cener justify-center mt-[76px] mb-[76px]">
             <button className="px-[28px] py-[12px] font-semibold text-white border hover:bg-white hover:text-black transition-all">
               View All
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

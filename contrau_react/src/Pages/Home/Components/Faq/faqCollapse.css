@@ -7,7 +7,13 @@
 }
 .ant-collapse > .ant-collapse-item {
   border-bottom: none;
+  background-color: white;
 }
+.ant-collapse:hover > .ant-collapse-item {
+  border-bottom: none;
+  background-color: #f7f8f9;
+}
+
 .ant-collapse-header-text {
   width: 100%;
 }
@@ -24,7 +30,7 @@
 
 @media only screen and (min-width: 0) and (max-width: 425px) {
   .mText {
-    font-size: 12px !important;
+    font-size: 18px !important;
   }
   .ant-collapse-expand-icon {
     left: 91%;
