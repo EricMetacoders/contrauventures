@@ -98,7 +98,7 @@ export default function PortfolioSlick() {
   };
 
   return (
-    <div>
+    <div id="portfolioStick">
       <Slider {...settings}>
         <div
           className="h-[56px]"
