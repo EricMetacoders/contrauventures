@@ -177,10 +177,21 @@
 /* MOBILE WIDTH < 740px */
 @media screen and (max-width: 769px) {
   .categorydetailyear {
+    display: block;
+    width: fit-content;
+    position: relative;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 24px;
+    padding-left: 0%;
+    .frameyearcategory {
+      display: flex;
+      column-gap: 10px;
+    }
   }
   .element {
     // PC 1920

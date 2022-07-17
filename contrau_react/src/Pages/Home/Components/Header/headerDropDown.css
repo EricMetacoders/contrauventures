@@ -1,6 +1,6 @@
 .ant-btn-primary {
   color: #fff;
-  border: none;
+  border: none !important;
   background: transparent;
 }
 

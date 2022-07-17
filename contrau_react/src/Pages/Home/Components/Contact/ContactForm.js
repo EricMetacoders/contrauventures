@@ -106,7 +106,7 @@ export default function ContactForm() {
             {...register("title", { required: true })}
             type="text"
             placeholder="Title"
-            className=" lg:h-[75px]  w-full h-[40px] bg-inputBg pl-[26px] text-white"
+            className=" lg:h-[75px]  w-full h-[40px] bg-inputBg pl-[26px]   caret-[#DB2F33] opacity-60 active:cursor-text text-[#fff] hover:opacity-100 cursor-pointer "
             id="title"
             name="title"
           />
@@ -121,7 +121,7 @@ export default function ContactForm() {
             placeholder="Message"
             id="message"
             name="message"
-            className="w-full lg:h-[191px] h-[116px] lg:pb-[117px] bg-inputBg pl-[26px] text-white"
+            className="w-full lg:h-[191px] h-[116px] lg:pb-[117px] bg-inputBg pl-[26px] caret-[#DB2F33] opacity-60 active:cursor-text text-[#fff] hover:opacity-100 cursor-pointer "
           />
           {errors.title?.type === "required" && (
             <p className="errorText">Please write the message !</p>
@@ -133,7 +133,7 @@ export default function ContactForm() {
             type="file"
             id="file"
             name="attachFile"
-            className="w-full lgl:h-[75px] bg-inputBg pt-[30px] pl-[100px] text-white  custom-file-input cursor-pointer"
+            className="w-full lgl:h-[75px] bg-inputBg pt-[30px] pl-[100px] text-[#fff]  custom-file-input cursor-pointer"
           />
           <img
             src={ic_file}
@@ -155,7 +155,7 @@ export default function ContactForm() {
               id="yourName"
               name="yourName"
               placeholder="Your name"
-              className="w-full  h-[40px]  mt-[6px] lg:mt-0 lg:h-[77px] bg-inputBg text-white pl-[26px]"
+              className="w-full  h-[40px]  mt-[6px] lg:mt-0 lg:h-[77px] bg-inputBg text-[#fff]  pl-[26px]  caret-[#DB2F33] opacity-60 active:cursor-text text-[#fff]  hover:opacity-100 cursor-pointer "
             />
             {errors.yourName?.type === "required" && (
               <p className="errorText ">Please write your name !</p>
@@ -174,7 +174,7 @@ export default function ContactForm() {
               id="phone"
               name="phone"
               placeholder="Phone Number"
-              className="w-full  h-[40px]  mt-[6px] lg:mt-0  lg:h-[77px] bg-inputBg text-white pl-[26px]"
+              className="w-full  h-[40px]  mt-[6px] lg:mt-0  lg:h-[77px] bg-inputBg text-[#fff]  pl-[26px] caret-[#DB2F33] opacity-60 active:cursor-text text-[#fff]  hover:opacity-100 cursor-pointer "
             />
             {errors.phone?.type === "required" && (
               <p className="errorText ">Please write your phone number !</p>
@@ -193,7 +193,7 @@ export default function ContactForm() {
               id="email"
               name="email"
               placeholder="Your email"
-              className="w-full  h-[40px]  mt-[6px] lg:mt-0   lg:h-[77px] bg-inputBg text-white pl-[26px]"
+              className="w-full  h-[40px]  mt-[6px] lg:mt-0   lg:h-[77px] bg-inputBg text-[#fff] pl-[26px] caret-[#DB2F33] opacity-60 active:cursor-text text-[#fff]  hover:opacity-100 cursor-pointer "
             />
             {errors.email?.type === "required" && (
               <p className="errorText ">Please write your email !</p>

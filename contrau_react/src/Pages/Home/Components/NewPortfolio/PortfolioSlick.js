@@ -98,7 +98,7 @@ export default function PortfolioSlick() {
   };
 
   return (
-    <div>
+    <div id="portfolioStick">
       <Slider {...settings}>
         <div
           className="h-[56px]"
@@ -162,16 +162,22 @@ export default function PortfolioSlick() {
         </div>
       </Slider>
       {showViewAll ? (
-        <div className="grid grid-cols-4 gap-y-8 mt-[26px]">
+        <div className="flex flex-wrap col gap-x-[10px] justify-center mt-[26px]">
           {viewAll?.map((logo, i) => {
             return (
-              <div className="flex items-center justify-center" key={i}>
-                <img
-                  src={logo?.acf?.image}
-                  alt={logo?.acf?.category}
-                  className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
-                />
-              </div>
+              <>
+                <div className="flex items-center justify-center" key={i}>
+                  <img
+                    src={logo?.acf?.image}
+                    alt={logo?.acf?.category}
+                    className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
+                  />
+                </div>
+                {i === 3 ? <hr className="w-full bg-white" /> : <></>}
+                {i === 7 ? <hr className="w-full bg-white" /> : <></>}
+                {i === 11 ? <hr className="w-full bg-white" /> : <></>}
+                {i === 15 ? <hr className="w-full bg-white" /> : <></>}
+              </>
             );
           })}
         </div>
@@ -179,16 +185,22 @@ export default function PortfolioSlick() {
         <></>
       )}
       {showSWInfrastructure ? (
-        <div className="grid grid-cols-4 gap-y-8 mt-[26px]">
+        <div className="flex flex-wrap col gap-x-[10px] justify-center mt-[26px]">
           {sWInfrastructure?.map((logo, i) => {
             return (
-              <div className="flex items-center justify-center" key={i}>
-                <img
-                  src={logo?.acf?.image}
-                  alt={logo?.acf?.category}
-                  className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
-                />
-              </div>
+              <>
+                <div className="flex items-center justify-center" key={i}>
+                  <img
+                    src={logo?.acf?.image}
+                    alt={logo?.acf?.category}
+                    className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
+                  />
+                </div>
+                {i === 3 ? <hr className="w-full bg-white" /> : <></>}
+                {i === 7 ? <hr className="w-full bg-white" /> : <></>}
+                {i === 11 ? <hr className="w-full bg-white" /> : <></>}
+                {i === 15 ? <hr className="w-full bg-white" /> : <></>}
+              </>
             );
           })}
         </div>
@@ -196,16 +208,22 @@ export default function PortfolioSlick() {
         <></>
       )}
       {showDigitalSupplyChain ? (
-        <div className="grid grid-cols-4 gap-y-8 mt-[26px]">
+        <div className="flex flex-wrap col gap-x-[10px] justify-center mt-[26px]">
           {digitalSupplyChain?.map((logo, i) => {
             return (
-              <div className="flex items-center justify-center" key={i}>
-                <img
-                  src={logo?.acf?.image}
-                  alt={logo?.acf?.category}
-                  className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
-                />
-              </div>
+              <>
+                <div className="flex items-center justify-center" key={i}>
+                  <img
+                    src={logo?.acf?.image}
+                    alt={logo?.acf?.category}
+                    className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
+                  />
+                </div>
+                {i === 3 ? <hr className="w-full bg-white" /> : <></>}
+                {i === 7 ? <hr className="w-full bg-white" /> : <></>}
+                {i === 11 ? <hr className="w-full bg-white" /> : <></>}
+                {i === 15 ? <hr className="w-full bg-white" /> : <></>}
+              </>
             );
           })}
         </div>
@@ -213,16 +231,22 @@ export default function PortfolioSlick() {
         <></>
       )}
       {showSustainableMegacity ? (
-        <div className="grid grid-cols-4 gap-y-8 mt-[26px]">
+        <div className="flex flex-wrap col gap-x-[10px] justify-center mt-[26px]">
           {sustainableMegacity?.map((logo, i) => {
             return (
-              <div className="flex items-center justify-center" key={i}>
-                <img
-                  src={logo?.acf?.image}
-                  alt={logo?.acf?.category}
-                  className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
-                />
-              </div>
+              <>
+                <div className="flex items-center justify-center" key={i}>
+                  <img
+                    src={logo?.acf?.image}
+                    alt={logo?.acf?.category}
+                    className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
+                  />
+                </div>
+                {i === 3 ? <hr className="w-full bg-white" /> : <></>}
+                {i === 7 ? <hr className="w-full bg-white" /> : <></>}
+                {i === 11 ? <hr className="w-full bg-white" /> : <></>}
+                {i === 15 ? <hr className="w-full bg-white" /> : <></>}
+              </>
             );
           })}
         </div>

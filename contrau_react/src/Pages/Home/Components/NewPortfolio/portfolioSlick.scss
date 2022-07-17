@@ -22,3 +22,13 @@
     text-align: center;
   }
 }
+
+#portfolioHover:hover {
+  background-color: #2b2b2b;
+}
+
+#portfolioStick {
+  .slick-slider .slick-track {
+    transform: translate3d(0, 0, 0) !important;
+  }
+}
