@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit005db13c4284c3c1230a1e32d3604b77
+class ComposerStaticInit138d3c5e1141e3c726f19de5203f9d96
 {
     public static $files = array (
         '305f44d06b4b9b934b549f0b525c4bea' => __DIR__ . '/..' . '/newfold-labs/wp-module-data/bootstrap.php',
@@ -29,11 +29,6 @@ class ComposerStaticInit005db13c4284c3c1230a1e32d3604b77
             'WP_Forge\\Options\\' => 17,
             'WP_Forge\\Helpers\\' => 17,
             'WP_Forge\\Fluent\\' => 16,
-            'WP_Forge\\Container\\' => 19,
-        ),
-        'P' => 
-        array (
-            'Psr\\Container\\' => 14,
         ),
         'N' => 
         array (
@@ -41,6 +36,7 @@ class ComposerStaticInit005db13c4284c3c1230a1e32d3604b77
             'NewfoldLabs\\WP\\Module\\Marketplace\\' => 34,
             'NewfoldLabs\\WP\\Module\\Data\\' => 27,
             'NewfoldLabs\\WP\\ModuleLoader\\' => 28,
+            'NewfoldLabs\\Container\\' => 22,
             'NewFoldLabs\\WP\\Module\\SSO\\' => 26,
         ),
         'E' => 
@@ -77,14 +73,6 @@ class ComposerStaticInit005db13c4284c3c1230a1e32d3604b77
         array (
             0 => __DIR__ . '/..' . '/wp-forge/fluent/includes',
         ),
-        'WP_Forge\\Container\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/wp-forge/container/includes',
-        ),
-        'Psr\\Container\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/container/src',
-        ),
         'Newfold\\Plugin\\' => 
         array (
             0 => __DIR__ . '/../..' . '/inc',
@@ -100,6 +88,10 @@ class ComposerStaticInit005db13c4284c3c1230a1e32d3604b77
         'NewfoldLabs\\WP\\ModuleLoader\\' => 
         array (
             0 => __DIR__ . '/..' . '/newfold-labs/wp-module-loader/includes',
+        ),
+        'NewfoldLabs\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/newfold-labs/container/includes',
         ),
         'NewFoldLabs\\WP\\Module\\SSO\\' => 
         array (
@@ -124,16 +116,6 @@ class ComposerStaticInit005db13c4284c3c1230a1e32d3604b77
         'Bluehost\\' => 
         array (
             0 => __DIR__ . '/../..' . '/inc',
-        ),
-    );
-
-    public static $prefixesPsr0 = array (
-        'P' => 
-        array (
-            'Pimple' => 
-            array (
-                0 => __DIR__ . '/..' . '/pimple/pimple/src',
-            ),
         ),
     );
 
@@ -210,6 +192,12 @@ class ComposerStaticInit005db13c4284c3c1230a1e32d3604b77
         'NewFoldLabs\\WP\\Module\\SSO\\SSO_Helpers' => __DIR__ . '/..' . '/newfold-labs/wp-module-sso/includes/SSO_Helpers.php',
         'NewFoldLabs\\WP\\Module\\SSO\\SSO_Helpers_Legacy' => __DIR__ . '/..' . '/newfold-labs/wp-module-sso/includes/SSO_Helpers_Legacy.php',
         'NewFoldLabs\\WP\\Module\\SSO\\SSO_REST_Controller' => __DIR__ . '/..' . '/newfold-labs/wp-module-sso/includes/SSO_REST_Controller.php',
+        'NewfoldLabs\\Container\\Container' => __DIR__ . '/..' . '/newfold-labs/container/includes/Container.php',
+        'NewfoldLabs\\Container\\ContainerException' => __DIR__ . '/..' . '/newfold-labs/container/includes/ContainerException.php',
+        'NewfoldLabs\\Container\\ContainerExceptionInterface' => __DIR__ . '/..' . '/newfold-labs/container/includes/ContainerExceptionInterface.php',
+        'NewfoldLabs\\Container\\ContainerInterface' => __DIR__ . '/..' . '/newfold-labs/container/includes/ContainerInterface.php',
+        'NewfoldLabs\\Container\\NotFoundException' => __DIR__ . '/..' . '/newfold-labs/container/includes/NotFoundException.php',
+        'NewfoldLabs\\Container\\NotFoundExceptionInterface' => __DIR__ . '/..' . '/newfold-labs/container/includes/NotFoundExceptionInterface.php',
         'NewfoldLabs\\WP\\ModuleLoader\\Container' => __DIR__ . '/..' . '/newfold-labs/wp-module-loader/includes/Container.php',
         'NewfoldLabs\\WP\\ModuleLoader\\Module' => __DIR__ . '/..' . '/newfold-labs/wp-module-loader/includes/Module.php',
         'NewfoldLabs\\WP\\ModuleLoader\\ModuleRegistry' => __DIR__ . '/..' . '/newfold-labs/wp-module-loader/includes/ModuleRegistry.php',
@@ -242,30 +230,6 @@ class ComposerStaticInit005db13c4284c3c1230a1e32d3604b77
         'Newfold\\Plugin\\Tours\\BlockEditorRestController' => __DIR__ . '/../..' . '/inc/Tours/BlockEditorRestController.php',
         'Newfold\\Plugin\\Tours\\Customizer' => __DIR__ . '/../..' . '/inc/Tours/Customizer.php',
         'Newfold\\Plugin\\Tours\\Shared' => __DIR__ . '/../..' . '/inc/Tours/Shared.php',
-        'Pimple\\Container' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Container.php',
-        'Pimple\\Exception\\ExpectedInvokableException' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Exception/ExpectedInvokableException.php',
-        'Pimple\\Exception\\FrozenServiceException' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Exception/FrozenServiceException.php',
-        'Pimple\\Exception\\InvalidServiceIdentifierException' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Exception/InvalidServiceIdentifierException.php',
-        'Pimple\\Exception\\UnknownIdentifierException' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Exception/UnknownIdentifierException.php',
-        'Pimple\\Psr11\\Container' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Psr11/Container.php',
-        'Pimple\\Psr11\\ServiceLocator' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Psr11/ServiceLocator.php',
-        'Pimple\\ServiceIterator' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/ServiceIterator.php',
-        'Pimple\\ServiceProviderInterface' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/ServiceProviderInterface.php',
-        'Pimple\\Tests\\Fixtures\\Invokable' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/Fixtures/Invokable.php',
-        'Pimple\\Tests\\Fixtures\\NonInvokable' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/Fixtures/NonInvokable.php',
-        'Pimple\\Tests\\Fixtures\\PimpleServiceProvider' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/Fixtures/PimpleServiceProvider.php',
-        'Pimple\\Tests\\Fixtures\\Service' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/Fixtures/Service.php',
-        'Pimple\\Tests\\PimpleServiceProviderInterfaceTest' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/PimpleServiceProviderInterfaceTest.php',
-        'Pimple\\Tests\\PimpleTest' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/PimpleTest.php',
-        'Pimple\\Tests\\Psr11\\ContainerTest' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/Psr11/ContainerTest.php',
-        'Pimple\\Tests\\Psr11\\ServiceLocatorTest' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/Psr11/ServiceLocatorTest.php',
-        'Pimple\\Tests\\ServiceIteratorTest' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/ServiceIteratorTest.php',
-        'Psr\\Container\\ContainerExceptionInterface' => __DIR__ . '/..' . '/psr/container/src/ContainerExceptionInterface.php',
-        'Psr\\Container\\ContainerInterface' => __DIR__ . '/..' . '/psr/container/src/ContainerInterface.php',
-        'Psr\\Container\\NotFoundExceptionInterface' => __DIR__ . '/..' . '/psr/container/src/NotFoundExceptionInterface.php',
-        'WP_Forge\\Container\\Container' => __DIR__ . '/..' . '/wp-forge/container/includes/Container.php',
-        'WP_Forge\\Container\\ContainerException' => __DIR__ . '/..' . '/wp-forge/container/includes/ContainerException.php',
-        'WP_Forge\\Container\\NotFoundException' => __DIR__ . '/..' . '/wp-forge/container/includes/NotFoundException.php',
         'WP_Forge\\Fluent\\Fluent' => __DIR__ . '/..' . '/wp-forge/fluent/includes/Fluent.php',
         'WP_Forge\\Helpers\\Arr' => __DIR__ . '/..' . '/wp-forge/helpers/includes/Arr.php',
         'WP_Forge\\Helpers\\Pluralizer' => __DIR__ . '/..' . '/wp-forge/helpers/includes/Pluralizer.php',
@@ -278,10 +242,9 @@ class ComposerStaticInit005db13c4284c3c1230a1e32d3604b77
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit005db13c4284c3c1230a1e32d3604b77::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit005db13c4284c3c1230a1e32d3604b77::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit005db13c4284c3c1230a1e32d3604b77::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit005db13c4284c3c1230a1e32d3604b77::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit138d3c5e1141e3c726f19de5203f9d96::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit138d3c5e1141e3c726f19de5203f9d96::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit138d3c5e1141e3c726f19de5203f9d96::$classMap;
 
         }, null, ClassLoader::class);
     }
