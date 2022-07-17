@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4aa50350.css",
-    "main.js": "/static/js/main.d257e989.js",
+    "main.js": "/static/js/main.fc9390f7.js",
     "static/js/787.b7c36abc.chunk.js": "/static/js/787.b7c36abc.chunk.js",
     "static/media/porti_bg.png": "/static/media/porti_bg.187a7cf73ba66eb53156.png",
     "static/media/logobackgroundheader.png": "/static/media/logobackgroundheader.b0f1340bf07e2f7cdcd4.png",
@@ -17,11 +17,11 @@
     "static/media/prev_btn.svg": "/static/media/prev_btn.86da1ac2f095e2f609ab.svg",
     "static/media/minus.svg": "/static/media/minus.8b14b450a99e026fd574ccb2e1d23698.svg",
     "main.4aa50350.css.map": "/static/css/main.4aa50350.css.map",
-    "main.d257e989.js.map": "/static/js/main.d257e989.js.map",
+    "main.fc9390f7.js.map": "/static/js/main.fc9390f7.js.map",
     "787.b7c36abc.chunk.js.map": "/static/js/787.b7c36abc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4aa50350.css",
-    "static/js/main.d257e989.js"
+    "static/js/main.fc9390f7.js"
   ]
 }
