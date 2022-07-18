@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { ReactComponent as PlusImage } from "../../../../assets/homepage_img/plus.svg";
 import { ReactComponent as MinusImage } from "../../../../assets/homepage_img/minus.svg";
@@ -40,27 +40,36 @@ export default function Faq() {
             )
           }
         >
-          {faqList?.map((ques, index) => {
+          {faqList?.map((ques, i) => {
             return (
               <Panel
                 showArrow={true}
                 header={
-                  <div className="border-t-[1px] md:pb-[50px]">
-                    <div className="mt-[10px] xl:mt-[50px] 2xl:mx-[20px]">
-                      <div className="flex items-center justify-between">
-                        <div className="md:flex  space-center justify-center md:space-x-5">
-                          <p className="popinsFont md:mt-[8px] text-[18px] font-light  2xl:text-[24px] italic text-red mb-[2px] lg:mb-0">
-                            Q{index + 1}
-                          </p>
-                          <p className="break-all text-[18px] md:text-[32px] w-[273px] md:w-[522px] 2xl:w-[900px]  popinsFont 2xl:text-[32px] 2xl:font-normal font-light  mb-0 mText">
-                            {ques.acf.question}
-                          </p>
+                  <div
+                    onMouseOver={(e) => {
+                      e.target.classList.add("greyBg");
+                    }}
+                    onMouseOut={(e) => {
+                      e.target.classList.remove("greyBg");
+                    }}
+                  >
+                    <div className="border-t-[1px] md:pb-[50px] cursor-pointer">
+                      <div className="mt-[10px] xl:mt-[50px] 2xl:mx-[20px]">
+                        <div className="flex items-center justify-between">
+                          <div className="md:flex  space-center justify-center md:space-x-5">
+                            <p className="popinsFont md:mt-[8px] text-[18px] font-light  2xl:text-[24px] italic text-red mb-[2px] lg:mb-0">
+                              Q{i + 1}
+                            </p>
+                            <p className="break-all text-[18px] md:text-[32px] w-[273px] md:w-[522px] 2xl:w-[900px]  popinsFont 2xl:text-[32px] 2xl:font-normal font-light  mb-0 mText">
+                              {ques.acf.question}
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 }
-                key={index + 1}
+                key={i + 1}
               >
                 <div className="ml-[-3px] mr-[47px] pb-[40px] md:mx-[50px] ">
                   <p className="break-all md:mt-[-21px] mt-[21px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">

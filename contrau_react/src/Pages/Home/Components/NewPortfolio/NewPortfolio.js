@@ -4,9 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { getPortfolioList } from "../../../../reducers/homeSlice";
 import bg from "../../../../assets/homepage_img/porti_bg.png";
 import PortfolioTextAnimation from "./PortfolioTextAnimation";
-import PortfolioSlick from "./PortfolioSlick";
-import "./portfolioSlick.scss";
-import "./portfolio.css";
+import Slick from "./Slick";
+
+import "./portfolio.scss";
+
 export default function NewPortfolio() {
   const { TabPane } = Tabs;
   const viewAll = useSelector((state) => state.homeSlice.portfolios);
@@ -240,8 +241,9 @@ export default function NewPortfolio() {
               </Tabs>
             </div>
             <div className="block lg:hidden mt-[0] md:mt-[65%] lg:mt-[134px]">
-              <div className="w-[330px]">
-                <PortfolioSlick />
+              <div className="w-full">
+                {/* <PortfolioSlick /> */}
+                <Slick />
               </div>
             </div>
           </div>

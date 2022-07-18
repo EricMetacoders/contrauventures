@@ -2,6 +2,7 @@
   color: #fff;
   border: none !important;
   background: transparent;
+  box-shadow: none !important;
 }
 
 .ant-btn-primary:hover,
