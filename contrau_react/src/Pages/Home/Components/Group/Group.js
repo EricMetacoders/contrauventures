@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, forwardRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import GroupTextAnimation from "./GroupTextAnimation";
 import { getPartnersList } from "../../../../reducers/homeSlice";
 import "./group.css";
 import { PartnerLogo } from "./partnerLogo/partnerLgo";
 
-export default function Group() {
+const Group = forwardRef((props, ref) => {
   const dispatch = useDispatch();
 
   const partners = useSelector((state) => state.homeSlice.partners);
@@ -23,8 +23,8 @@ export default function Group() {
     };
   }, []);
   return (
-    <>
-      <div className="bg-partnersContactBg overflow-hidden">
+    <div ref={ref}>
+      <div className="bg-partnersContactBg overflow-hidden " ref={ref}>
         <div className="mx-[34px] md:mx-[117px] 2xl:mx-[300px] pb-[65px] mt-[84px] md:mt-[318px]">
           {/* desktop animation */}
           <div className="xl:block hidden md:w-[1030px] md:h-[498px]">
@@ -487,6 +487,8 @@ export default function Group() {
           </div> */}
         </div>
       </div>
-    </>
+    </div>
   );
-}
+});
+
+export default Group;

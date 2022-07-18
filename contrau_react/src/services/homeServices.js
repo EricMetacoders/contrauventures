@@ -1,5 +1,5 @@
 import axios from "axios";
-import { BASE_URL } from "../constants/apiConstants";
+import { BASE_URL, BASE_URL_CONTACT } from "../constants/apiConstants";
 
 export const homeServices = {
   getFAQList() {
@@ -40,7 +40,7 @@ export const homeServices = {
   },
   postContactInfo(data) {
     return axios({
-      url: `https://contrau.metacoders.dev/wp-json/contact-form-7/v1/contact-forms/325/feedback`,
+      url: BASE_URL_CONTACT,
       method: "POST",
       withCredentials: true,
       data: data,

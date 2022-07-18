@@ -37,7 +37,9 @@ export default function Components() {
         <div className="text-center w-full bg-transparent">
           <div>
             <FadeInUpDiv>
-              <p className="robotoFlexFont font-bold text-[24px] ">Portfolio</p>
+              <p className="robotoFlexFont font-bold text-[24px] ">
+                Portfolios
+              </p>
             </FadeInUpDiv>
             <div className="mt-[54px] leading-[1]">
               {showText2 ? (
@@ -106,7 +108,7 @@ export default function Components() {
         <div className="text-white relative">
           <FadeInUpDiv>
             <p className="robotoFlexFont text-[13px] font-bold mb-0">
-              Portfolio
+              Portfolios
             </p>
           </FadeInUpDiv>
           <div className="mt-[27px] text-[40px] leading-[1]">

@@ -1,11 +1,10 @@
+import Carousel from "nuka-carousel";
 import React, { useState } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "./portfolioSlick.scss";
 import { useSelector } from "react-redux";
 
-export default function PortfolioSlick() {
+import "./slick.scss";
+
+export default function Slick() {
   const viewAll = useSelector((state) => state.homeSlice.portfolios);
   // set data
   const digitalSupplyChain = viewAll?.filter((logo) => {
@@ -30,17 +29,6 @@ export default function PortfolioSlick() {
   const [sustainableMegacityActive, setSustainableMegacityActive] =
     useState(false);
   const [sWInfrastructureActive, setSWInfrastructureActive] = useState(false);
-
-  // carousel setting
-  let settings = {
-    dots: false,
-    infinite: false,
-    arrows: false,
-    centerMode: true,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-  };
 
   // handle show div
   const handleShowViewAll = () => {
@@ -98,8 +86,9 @@ export default function PortfolioSlick() {
   };
 
   return (
-    <div id="portfolioStick">
-      <Slider {...settings}>
+    <div id="slickId">
+      <Carousel slidesToShow={2.5}>
+        {/* View all button */}
         <div
           className="h-[56px]"
           onClick={() => {
@@ -115,8 +104,10 @@ export default function PortfolioSlick() {
             </div>
           </div>
         </div>
+
+        {/* SWInfrastructure Button */}
         <div
-          className="w-[129px] h-[56px]"
+          className=" h-[56px]"
           onClick={() => {
             handleShowSWInfrastructure();
             handleSWInfrastructureActive();
@@ -130,8 +121,10 @@ export default function PortfolioSlick() {
             </div>
           </div>
         </div>
+
+        {/* DigitalSupplyChain Button */}
         <div
-          className="w-[129px] h-[56px] "
+          className="h-[56px] "
           onClick={() => {
             handleShowDigitalSupplyChain();
             handleDigitalSupplyChainActive();
@@ -145,8 +138,10 @@ export default function PortfolioSlick() {
             </div>
           </div>
         </div>
+
+        {/* SustainableMegacity Button */}
         <div
-          className="w-[129px] h-[56px]"
+          className="h-[56px]"
           onClick={() => {
             handleShowSustainableMegacity();
             handleSustainableMegacityActive();
@@ -160,23 +155,23 @@ export default function PortfolioSlick() {
             </div>
           </div>
         </div>
-      </Slider>
+      </Carousel>
+      {/* showAll data */}
       {showViewAll ? (
-        <div className="flex flex-wrap col gap-x-[10px] justify-center mt-[26px]">
+        <div className="flex flex-wrap col gap-x-[10px] gap-y-[20px] justify-left mt-[26px] mx-auto w-[300px]">
           {viewAll?.map((logo, i) => {
             return (
               <>
-                <div className="flex items-center justify-center" key={i}>
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.category}
-                    className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
-                  />
+                <div key={i}>
+                  <div className="flex items-center justify-center">
+                    <img
+                      src={logo?.acf?.image}
+                      alt={logo?.acf?.category}
+                      className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
+                    />
+                  </div>
                 </div>
-                {i === 3 ? <hr className="w-full bg-white" /> : <></>}
-                {i === 7 ? <hr className="w-full bg-white" /> : <></>}
-                {i === 11 ? <hr className="w-full bg-white" /> : <></>}
-                {i === 15 ? <hr className="w-full bg-white" /> : <></>}
+                {(i + 1) % 4 === 0 ? <hr className="w-full bg-white" /> : <></>}
               </>
             );
           })}
@@ -184,22 +179,23 @@ export default function PortfolioSlick() {
       ) : (
         <></>
       )}
+
+      {/* SWInfrastructure data */}
       {showSWInfrastructure ? (
-        <div className="flex flex-wrap col gap-x-[10px] justify-center mt-[26px]">
+        <div className="flex flex-wrap col gap-x-[10px]  gap-y-[20px]   justify-left mt-[26px] mx-auto w-[300px]">
           {sWInfrastructure?.map((logo, i) => {
             return (
               <>
-                <div className="flex items-center justify-center" key={i}>
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.category}
-                    className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
-                  />
+                <div key={i}>
+                  <div className="flex items-center justify-center">
+                    <img
+                      src={logo?.acf?.image}
+                      alt={logo?.acf?.category}
+                      className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
+                    />
+                  </div>
                 </div>
-                {i === 3 ? <hr className="w-full bg-white" /> : <></>}
-                {i === 7 ? <hr className="w-full bg-white" /> : <></>}
-                {i === 11 ? <hr className="w-full bg-white" /> : <></>}
-                {i === 15 ? <hr className="w-full bg-white" /> : <></>}
+                {(i + 1) % 4 === 0 ? <hr className="w-full bg-white" /> : <></>}
               </>
             );
           })}
@@ -207,22 +203,23 @@ export default function PortfolioSlick() {
       ) : (
         <></>
       )}
+
+      {/* DigitalSupplyChain data */}
       {showDigitalSupplyChain ? (
-        <div className="flex flex-wrap col gap-x-[10px] justify-center mt-[26px]">
+        <div className="flex flex-wrap col gap-x-[10px]  gap-y-[20px]   justify-left mt-[26px] mx-auto w-[300px]">
           {digitalSupplyChain?.map((logo, i) => {
             return (
               <>
-                <div className="flex items-center justify-center" key={i}>
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.category}
-                    className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
-                  />
+                <div key={i}>
+                  <div className="flex items-center justify-center">
+                    <img
+                      src={logo?.acf?.image}
+                      alt={logo?.acf?.category}
+                      className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
+                    />
+                  </div>
                 </div>
-                {i === 3 ? <hr className="w-full bg-white" /> : <></>}
-                {i === 7 ? <hr className="w-full bg-white" /> : <></>}
-                {i === 11 ? <hr className="w-full bg-white" /> : <></>}
-                {i === 15 ? <hr className="w-full bg-white" /> : <></>}
+                {(i + 1) % 4 === 0 ? <hr className="w-full bg-white" /> : <></>}
               </>
             );
           })}
@@ -230,22 +227,23 @@ export default function PortfolioSlick() {
       ) : (
         <></>
       )}
+
+      {/* SustainableMegacity data */}
       {showSustainableMegacity ? (
-        <div className="flex flex-wrap col gap-x-[10px] justify-center mt-[26px]">
+        <div className="flex flex-wrap col gap-x-[10px]  gap-y-[20px]   justify-left mt-[26px] mx-auto w-[300px]">
           {sustainableMegacity?.map((logo, i) => {
             return (
               <>
-                <div className="flex items-center justify-center" key={i}>
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.category}
-                    className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
-                  />
+                <div key={i}>
+                  <div className="flex items-center justify-center">
+                    <img
+                      src={logo?.acf?.image}
+                      alt={logo?.acf?.category}
+                      className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
+                    />
+                  </div>
                 </div>
-                {i === 3 ? <hr className="w-full bg-white" /> : <></>}
-                {i === 7 ? <hr className="w-full bg-white" /> : <></>}
-                {i === 11 ? <hr className="w-full bg-white" /> : <></>}
-                {i === 15 ? <hr className="w-full bg-white" /> : <></>}
+                {(i + 1) % 4 === 0 ? <hr className="w-full bg-white" /> : <></>}
               </>
             );
           })}
