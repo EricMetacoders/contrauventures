@@ -4,6 +4,7 @@ import logobackgroundheader from "../../../../assets/interview-img/logobackgroun
 import logobackgroundheadermb from "../../../../assets/interview-img/logobackgroundheadermb.png";
 import logotraumb from "../../../../assets/interview-img/logotrauventure-mb.png";
 import logotrau from "../../../../assets/interview-img/logotrauventure.png";
+import logoheader from "../../../../assets/interview-img/logoheadertrau.svg";
 import "./style.scss";
 import TemporaryDrawer from "./TemporaryDrawer";
 HeaderComponent.propTypes = {};
@@ -33,7 +34,7 @@ function HeaderComponent({ pagecurrent }) {
         <Box className="imglogotrauframe-header">
           <Link to="/">
             <img
-              src={matchMobile ? logotraumb : logotrau}
+              src={matchMobile ? logoheader : logoheader}
               alt="logotrau"
               className="logotrau"
             />
