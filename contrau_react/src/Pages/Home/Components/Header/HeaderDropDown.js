@@ -6,8 +6,16 @@ import { Button, Modal } from "antd";
 import "./headerDropDown.css";
 import { Link } from "react-router-dom";
 
-export default function HeaderDropDown() {
+export default function HeaderDropDown({ resultRef, partnersRef }) {
   const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const handleScroll = () => {
+    resultRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleScrollPartners = () => {
+    partnersRef.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   const showModal = () => {
     setIsModalVisible(true);
@@ -47,15 +55,15 @@ export default function HeaderDropDown() {
               Home
             </p>
           </Link>
-          <p className="text-black popinsFont text-[1rem] ">About Us</p>
           <p
             className="text-black popinsFont text-[1rem] "
-            onClick={() => {
-              window.scrollTo({
-                top: 2825,
-                behavior: "smooth",
-              });
-            }}
+            onClick={handleScrollPartners}
+          >
+            About Us
+          </p>
+          <p
+            className="text-black popinsFont text-[1rem] "
+            onClick={handleScroll}
           >
             Portfolio
           </p>
