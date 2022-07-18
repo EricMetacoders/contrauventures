@@ -17,9 +17,10 @@ export default function ContactForm() {
     formState: { errors },
   } = useForm();
 
+  const [fileName, setFileName] = useState("Attach File");
+
   const onSubmit = (data) => {
     const file = data.attachFile[0];
-
     const dataInfor = {
       _wpcf7: 325,
       _wpcf7_version: 5.6,
@@ -52,6 +53,15 @@ export default function ContactForm() {
               title: "Success",
               text: "Your message has been sent successfully!",
             });
+            reset({
+              yourName: "",
+              phone: "",
+              message: "",
+              phone: "",
+              attachFile: "",
+              title: "",
+              email: "",
+            });
           })
           .catch((err) => {
             Swal.fire({
@@ -62,7 +72,6 @@ export default function ContactForm() {
           });
       }
     } else {
-      console.log("data", data);
       // call api
       homeServices
         .postContactInfo(data)
@@ -83,30 +92,15 @@ export default function ContactForm() {
     }
   };
 
-  // reset input fields
-  // useEffect(() => {
-  //   if (formState.isSubmitSuccessful) {
-  //     reset({
-  //       yourname: "",
-  //       phone: "",
-  //       message: "",
-  //       phone: "",
-  //       attachFile: "",
-  //       title: "",
-  //       email: "",
-  //     });
-  //   }
-  // }, [formState, reset]);
-
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
-          <input
+          <textarea
             {...register("title", { required: true })}
             type="text"
             placeholder="Title"
-            className=" lg:h-[75px]  w-full h-[40px] bg-inputBg pl-[26px]   caret-[#DB2F33] opacity-60 active:cursor-text text-[#fff] hover:opacity-100 cursor-pointer "
+            className="break-all lg:h-[75px]  w-full h-[40px] bg-inputBg pl-[26px]   caret-[#DB2F33] opacity-60 active:cursor-text text-[#fff] hover:opacity-100 cursor-pointer pt-[20px]"
             id="title"
             name="title"
           />
@@ -115,13 +109,13 @@ export default function ContactForm() {
           )}
         </div>
         <div className="lg:mt-[12px] mt-[6px]">
-          <input
+          <textarea
             {...register("message", { required: true })}
             type="text"
             placeholder="Message"
             id="message"
             name="message"
-            className="w-full lg:h-[191px] h-[116px] lg:pb-[117px] bg-inputBg pl-[26px] caret-[#DB2F33] opacity-60 active:cursor-text text-[#fff] hover:opacity-100 cursor-pointer "
+            className="w-full lg:h-[191px] h-[116px] pt-[20px] lg:pb-[117px] bg-inputBg pl-[26px] caret-[#DB2F33] opacity-60 active:cursor-text text-[#fff] hover:opacity-100 cursor-pointer "
           />
           {errors.title?.type === "required" && (
             <p className="errorText">Please write the message !</p>
@@ -133,13 +127,24 @@ export default function ContactForm() {
             type="file"
             id="file"
             name="attachFile"
-            className="w-full lgl:h-[75px] bg-inputBg pt-[30px] pl-[100px] text-[#fff]  custom-file-input cursor-pointer"
+            onChange={() => {
+              let fileName = document.getElementById("file").value.split("\\");
+              setFileName(fileName[2]);
+            }}
+            className="w-full lgl:h-[75px] bg-inputBg pt-[30px] pl-[100px] text-[#fff]  custom-file-input cursor-pointer hidden"
           />
-          <img
-            src={ic_file}
-            alt="file"
-            className="absolute top-5 left-[30px]"
-          />
+          <label
+            className="w-full lg:h-[75px] bg-inputBg  pt-[2.5%] pl-[100px] text-[#fff]   opacity-60 custom-file-input cursor-pointer inline-block"
+            for="file"
+          >
+            <img
+              src={ic_file}
+              alt="file"
+              className="absolute top-5 left-[50px]"
+            />{" "}
+            {fileName}
+          </label>
+
           {errors.attachFile && (
             <p className="errorText"> {errors.attachFile?.message}</p>
           )}
@@ -155,7 +160,7 @@ export default function ContactForm() {
               id="yourName"
               name="yourName"
               placeholder="Your name"
-              className="w-full  h-[40px]  mt-[6px] lg:mt-0 lg:h-[77px] bg-inputBg text-[#fff]  pl-[26px]  caret-[#DB2F33] opacity-60 active:cursor-text text-[#fff]  hover:opacity-100 cursor-pointer "
+              className="w-full  h-[40px]  mt-[6px] lg:mt-0 lg:h-[77px] bg-inputBg text-[#fff]  pl-[26px]  caret-[#DB2F33] opacity-60 active:cursor-text hover:opacity-100 cursor-pointer "
             />
             {errors.yourName?.type === "required" && (
               <p className="errorText ">Please write your name !</p>
@@ -174,7 +179,7 @@ export default function ContactForm() {
               id="phone"
               name="phone"
               placeholder="Phone Number"
-              className="w-full  h-[40px]  mt-[6px] lg:mt-0  lg:h-[77px] bg-inputBg text-[#fff]  pl-[26px] caret-[#DB2F33] opacity-60 active:cursor-text text-[#fff]  hover:opacity-100 cursor-pointer "
+              className="w-full  h-[40px]  mt-[6px] lg:mt-0  lg:h-[77px] bg-inputBg text-[#fff]  pl-[26px] caret-[#DB2F33] opacity-60 active:cursor-text  hover:opacity-100 cursor-pointer "
             />
             {errors.phone?.type === "required" && (
               <p className="errorText ">Please write your phone number !</p>
@@ -193,7 +198,7 @@ export default function ContactForm() {
               id="email"
               name="email"
               placeholder="Your email"
-              className="w-full  h-[40px]  mt-[6px] lg:mt-0   lg:h-[77px] bg-inputBg text-[#fff] pl-[26px] caret-[#DB2F33] opacity-60 active:cursor-text text-[#fff]  hover:opacity-100 cursor-pointer "
+              className="w-full  h-[40px]  mt-[6px] lg:mt-0   lg:h-[77px] bg-inputBg text-[#fff] pl-[26px] caret-[#DB2F33] opacity-60 active:cursor-text hover:opacity-100 cursor-pointer "
             />
             {errors.email?.type === "required" && (
               <p className="errorText ">Please write your email !</p>
