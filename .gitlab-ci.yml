@@ -31,7 +31,7 @@ before_script:
   ## with your own domain name. You can copy and repeat that command if you have
   ## more than one server to connect to.
   ##
-  - ssh-keyscan gitlab.com >> ~/.ssh/known_hosts
+  - ssh-keyscan 162.241.253.222 >> ~/.ssh/known_hosts
   - chmod 644 ~/.ssh/known_hosts
 deploy_new_dns:
   stage: deploy
