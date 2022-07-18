@@ -144,7 +144,7 @@ const NewPortfolio = forwardRef((props, ref) => {
                         id="portfolioHover"
                         className=" popinsFont lg:text-[15px] xl:text-[20px]  lg:font-semibold w-full h-full  flex flex-col items-center justify-center"
                       >
-                        <p className="sm:block hidden">Digital Supply Chainl</p>
+                        <p className="sm:block hidden">Digital Supply Chain</p>
                       </div>
                     }
                     key="3"
