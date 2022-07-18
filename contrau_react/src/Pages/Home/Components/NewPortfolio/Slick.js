@@ -158,18 +158,19 @@ export default function Slick() {
       </Carousel>
       {/* showAll data */}
       {showViewAll ? (
-        <div className="flex flex-wrap col gap-x-[10px] gap-y-[20px] justify-center mt-[26px]">
+        <div className="flex flex-wrap col gap-x-[10px] gap-y-[20px] justify-center mt-[26px] mx-auto w-[300px]">
           {viewAll?.map((logo, i) => {
             return (
               <>
-                <div className="flex items-center justify-center" key={i}>
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.category}
-                    className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
-                  />
+                <div key={i}>
+                  <div className="flex items-center justify-center">
+                    <img
+                      src={logo?.acf?.image}
+                      alt={logo?.acf?.category}
+                      className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
+                    />
+                  </div>
                 </div>
-
                 {(i + 1) % 4 === 0 ? <hr className="w-full bg-white" /> : <></>}
               </>
             );
@@ -181,16 +182,18 @@ export default function Slick() {
 
       {/* SWInfrastructure data */}
       {showSWInfrastructure ? (
-        <div className="flex flex-wrap col gap-x-[10px]  gap-y-[20px]  justify-center mt-[26px]">
+        <div className="flex flex-wrap col gap-x-[10px]  gap-y-[20px]  justify-center mt-[26px] mx-auto w-[300px]">
           {sWInfrastructure?.map((logo, i) => {
             return (
               <>
-                <div className="flex items-center justify-center" key={i}>
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.category}
-                    className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
-                  />
+                <div key={i}>
+                  <div className="flex items-center justify-center">
+                    <img
+                      src={logo?.acf?.image}
+                      alt={logo?.acf?.category}
+                      className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
+                    />
+                  </div>
                 </div>
                 {(i + 1) % 4 === 0 ? <hr className="w-full bg-white" /> : <></>}
               </>
@@ -203,16 +206,18 @@ export default function Slick() {
 
       {/* DigitalSupplyChain data */}
       {showDigitalSupplyChain ? (
-        <div className="flex flex-wrap col gap-x-[10px]  gap-y-[20px]  justify-center mt-[26px]">
+        <div className="flex flex-wrap col gap-x-[10px]  gap-y-[20px]  justify-center mt-[26px] mx-auto w-[300px]">
           {digitalSupplyChain?.map((logo, i) => {
             return (
               <>
-                <div className="flex items-center justify-center" key={i}>
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.category}
-                    className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
-                  />
+                <div key={i}>
+                  <div className="flex items-center justify-center">
+                    <img
+                      src={logo?.acf?.image}
+                      alt={logo?.acf?.category}
+                      className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
+                    />
+                  </div>
                 </div>
                 {(i + 1) % 4 === 0 ? <hr className="w-full bg-white" /> : <></>}
               </>
@@ -225,16 +230,18 @@ export default function Slick() {
 
       {/* SustainableMegacity data */}
       {showSustainableMegacity ? (
-        <div className="flex flex-wrap col gap-x-[10px]  gap-y-[20px]  justify-center mt-[26px]">
+        <div className="flex flex-wrap col gap-x-[10px]  gap-y-[20px]  justify-center mt-[26px] mx-auto w-[300px]">
           {sustainableMegacity?.map((logo, i) => {
             return (
               <>
-                <div className="flex items-center justify-center" key={i}>
-                  <img
-                    src={logo?.acf?.image}
-                    alt={logo?.acf?.category}
-                    className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
-                  />
+                <div key={i}>
+                  <div className="flex items-center justify-center">
+                    <img
+                      src={logo?.acf?.image}
+                      alt={logo?.acf?.category}
+                      className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
+                    />
+                  </div>
                 </div>
                 {(i + 1) % 4 === 0 ? <hr className="w-full bg-white" /> : <></>}
               </>

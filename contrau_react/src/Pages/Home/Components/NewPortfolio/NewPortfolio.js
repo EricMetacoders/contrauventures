@@ -51,7 +51,7 @@ const NewPortfolio = forwardRef((props, ref) => {
           {/* text content */}
           <div className="relative" ref={ref}>
             {/* desktop animation */}
-            <div className="hidden md:block h-[454px]">
+            <div className="hidden sm:block h-[454px]">
               {/* start animation */}
               {offset > 4100 ? <PortfolioTextAnimation /> : <></>}
               {/* end aimation */}
@@ -66,9 +66,9 @@ const NewPortfolio = forwardRef((props, ref) => {
           </div>
 
           {/* tabs */}
-          <div className="flex items-center justify-center pb-[87px] lg:pb-[329px] pt-[38px] lg:pt-[6.6%]  bg-portfolioBg">
+          <div className="flex items-center justify-center pb-[87px] lg:pb-[329px] pt-[38px] md:mt-[268px] lg:pt-[6.6%]  bg-portfolioBg">
             <div className="mx-[20px]">
-              <div className="hidden lg:block">
+              <div className="hidden sm:block">
                 <Tabs defaultActiveKey="1">
                   <TabPane
                     tab={
@@ -81,36 +81,20 @@ const NewPortfolio = forwardRef((props, ref) => {
                     }
                     key="1"
                   >
-                    <div className="flex flex-wrap justify-center gap-y-[30px] gap-x-[20px] mx-[12%] lg:mt-[40px]">
+                    <div className="flex flex-wrap justify-center gap-y-[30px] gap-x-[20px] mx-auto lg:w-[740px] xl:w-[900px] lg:mt-[40px]">
                       {viewAll?.map((logo, i) => {
                         return (
                           <>
-                            <div
-                              className="flex items-center justify-center"
-                              key={i}
-                            >
-                              <img
-                                src={logo?.acf?.image}
-                                alt={logo?.acf?.category}
-                                className="opacity-40 hover:opacity-100 w-[204px] h-[117px] object-contain"
-                              />
+                            <div key={i}>
+                              <div className="flex items-center justify-center">
+                                <img
+                                  src={logo?.acf?.image}
+                                  alt={logo?.acf?.category}
+                                  className="imgWidth opacity-40 hover:opacity-100 w-[204px] h-[117px] object-contain"
+                                />
+                              </div>
                             </div>
-                            {i === 3 ? (
-                              <hr className="w-full bg-white" />
-                            ) : (
-                              <></>
-                            )}
-                            {i === 7 ? (
-                              <hr className="w-full bg-white" />
-                            ) : (
-                              <></>
-                            )}
-                            {i === 11 ? (
-                              <hr className="w-full bg-white" />
-                            ) : (
-                              <></>
-                            )}
-                            {i === 15 ? (
+                            {(i + 1) % 4 === 0 ? (
                               <hr className="w-full bg-white" />
                             ) : (
                               <></>
@@ -126,41 +110,25 @@ const NewPortfolio = forwardRef((props, ref) => {
                         id="portfolioHover"
                         className="popinsFont text-[10px] lg:text-[15px] xl:text-[20px]  lg:font-semibold w-full h-full   flex flex-col items-center justify-center"
                       >
-                        <p className="md:block hidden">SW Infrastructure</p>
+                        <p className="sm:block hidden">SW Infrastructure</p>
                       </div>
                     }
                     key="2"
                   >
-                    <div className="flex flex-wrap justify-center gap-y-[30px] gap-x-[20px]  mx-[12%] lg:mt-[40px]">
+                    <div className="flex flex-wrap justify-center gap-y-[30px] gap-x-[20px]  mx-auto w-[80%]  lg:mt-[40px]">
                       {sWInfrastructure?.map((logo, i) => {
                         return (
                           <>
-                            <div
-                              className="flex items-center justify-center"
-                              key={i}
-                            >
-                              <img
-                                src={logo?.acf?.image}
-                                alt={logo?.acf?.category}
-                                className="opacity-40 hover:opacity-100  w-[204px] h-[117px] object-contain"
-                              />
+                            <div key={i}>
+                              <div className="flex items-center justify-center">
+                                <img
+                                  src={logo?.acf?.image}
+                                  alt={logo?.acf?.category}
+                                  className="imgWidth opacity-40 hover:opacity-100 w-[204px] h-[117px] object-contain"
+                                />
+                              </div>
                             </div>
-                            {i === 3 ? (
-                              <hr className="w-full bg-white" />
-                            ) : (
-                              <></>
-                            )}
-                            {i === 7 ? (
-                              <hr className="w-full bg-white" />
-                            ) : (
-                              <></>
-                            )}
-                            {i === 11 ? (
-                              <hr className="w-full bg-white" />
-                            ) : (
-                              <></>
-                            )}
-                            {i === 15 ? (
+                            {(i + 1) % 4 === 0 ? (
                               <hr className="w-full bg-white" />
                             ) : (
                               <></>
@@ -176,41 +144,25 @@ const NewPortfolio = forwardRef((props, ref) => {
                         id="portfolioHover"
                         className=" popinsFont lg:text-[15px] xl:text-[20px]  lg:font-semibold w-full h-full  flex flex-col items-center justify-center"
                       >
-                        <p className="md:block hidden">Digital Supply Chainl</p>
+                        <p className="sm:block hidden">Digital Supply Chainl</p>
                       </div>
                     }
                     key="3"
                   >
-                    <div className="flex flex-wrap justify-center gap-y-[30px] gap-x-[20px]  mx-[12%] lg:mt-[40px]">
+                    <div className="flex flex-wrap justify-center gap-y-[30px] gap-x-[20px]  mx-auto 2xl:w-[900px]  lg:mt-[40px]">
                       {digitalSupplyChain?.map((logo, i) => {
                         return (
                           <>
-                            <div
-                              className="flex items-center justify-center"
-                              key={i}
-                            >
-                              <img
-                                src={logo?.acf?.image}
-                                alt={logo?.acf?.category}
-                                className="opacity-40 hover:opacity-100  w-[204px] h-[117px] object-contain"
-                              />
+                            <div key={i}>
+                              <div className="flex items-center justify-center">
+                                <img
+                                  src={logo?.acf?.image}
+                                  alt={logo?.acf?.category}
+                                  className="imgWidth opacity-40 hover:opacity-100 w-[204px] h-[117px] object-contain"
+                                />
+                              </div>
                             </div>
-                            {i === 3 ? (
-                              <hr className="w-full bg-white" />
-                            ) : (
-                              <></>
-                            )}
-                            {i === 7 ? (
-                              <hr className="w-full bg-white" />
-                            ) : (
-                              <></>
-                            )}
-                            {i === 11 ? (
-                              <hr className="w-full bg-white" />
-                            ) : (
-                              <></>
-                            )}
-                            {i === 15 ? (
+                            {(i + 1) % 4 === 0 ? (
                               <hr className="w-full bg-white" />
                             ) : (
                               <></>
@@ -226,41 +178,25 @@ const NewPortfolio = forwardRef((props, ref) => {
                         id="portfolioHover"
                         className="popinsFont text-[10px] lg:text-[15px] xl:text-[20px]  lg:font-semibold w-full h-full flex items-center justify-center"
                       >
-                        <p className="hidden md:block">Sustainable Megacity</p>
+                        <p className="hidden sm:block">Sustainable Megacity</p>
                       </div>
                     }
                     key="4"
                   >
-                    <div className="flex flex-wrap justify-center gap-y-[30px] gap-x-[20px]  mx-[12%] lg:mt-[40px]">
+                    <div className="flex flex-wrap justify-center gap-y-[30px] gap-x-[20px]  mx-auto w-[80%]  lg:mt-[40px]">
                       {sustainableMegacity?.map((logo, i) => {
                         return (
                           <>
-                            <div
-                              className="flex items-center justify-center"
-                              key={i}
-                            >
-                              <img
-                                src={logo?.acf?.image}
-                                alt={logo?.acf?.category}
-                                className="opacity-40 hover:opacity-100  w-[200px] h-[117px] object-contain"
-                              />
+                            <div key={i}>
+                              <div className="flex items-center justify-center">
+                                <img
+                                  src={logo?.acf?.image}
+                                  alt={logo?.acf?.category}
+                                  className="imgWidth opacity-40 hover:opacity-100 w-[204px] h-[117px] object-contain"
+                                />
+                              </div>
                             </div>
-                            {i === 3 ? (
-                              <hr className="w-full bg-white" />
-                            ) : (
-                              <></>
-                            )}
-                            {i === 7 ? (
-                              <hr className="w-full bg-white" />
-                            ) : (
-                              <></>
-                            )}
-                            {i === 11 ? (
-                              <hr className="w-full bg-white" />
-                            ) : (
-                              <></>
-                            )}
-                            {i === 15 ? (
+                            {(i + 1) % 4 === 0 ? (
                               <hr className="w-full bg-white" />
                             ) : (
                               <></>
@@ -272,9 +208,8 @@ const NewPortfolio = forwardRef((props, ref) => {
                   </TabPane>
                 </Tabs>
               </div>
-              <div className="block lg:hidden mt-[0] md:mt-[65%] lg:mt-[134px]">
+              <div className="block sm:hidden mt-[0] md:mt-[65%] lg:mt-[134px]">
                 <div className="w-full">
-                  {/* <PortfolioSlick /> */}
                   <Slick />
                 </div>
               </div>
