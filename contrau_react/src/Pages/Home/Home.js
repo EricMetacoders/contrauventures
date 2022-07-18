@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef } from "react";
 import { useSelector } from "react-redux";
 import Header from "./Components/Header/Header";
 import Hero from "./Components/Hero/Hero";
@@ -16,25 +16,16 @@ import { useLocation } from "react-router-dom";
 export default function Home() {
   const location = useLocation();
   const loading = useSelector((state) => state.homeSlice.loading);
-  useEffect(() => {
-    location?.state?.name === "porfolio"
-      ? window.scrollTo({
-          top: 6343,
-          behavior: "smooth",
-        })
-      : window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-  }, []);
+  const resultRef = useRef(null);
+  const partnersRef = useRef(null);
 
   return (
     <>
-      <Header />
+      <Header resultRef={resultRef} partnersRef={partnersRef} />
       <Hero />
-      <Group />
+      <Group ref={partnersRef} />
       <Founders />
-      <NewPortfolio />
+      <NewPortfolio ref={resultRef} />
       <ValueAdd />
       <Faq />
       {/* <News /> */}
