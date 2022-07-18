@@ -36,7 +36,7 @@ export default function NewPortfolio() {
   }, []);
 
   return (
-    <div className="bg-portfolioBg pt-[2px] mt-[171px] lg:mt-[300px] relative">
+    <div className="bg-portfolioBg pt-[2px] mt-[171px] lg:mt-[401px] relative">
       {/* image */}
       <div className="absolute">
         <img
@@ -65,106 +65,174 @@ export default function NewPortfolio() {
         </div>
 
         {/* tabs */}
-        <div className="flex items-center justify-center pb-[87px] lg:pb-[200px] pt-[38px] lg:pt-[15%]  bg-portfolioBg">
+        <div className="flex items-center justify-center pb-[87px] lg:pb-[329px] pt-[38px] lg:pt-[6.6%]  bg-portfolioBg">
           <div className="mx-[20px]">
             <div className="hidden lg:block">
               <Tabs defaultActiveKey="1">
                 <TabPane
                   tab={
-                    <div className="popinsFont text-[10px] lg:text-[15px] xl:text-[20px] lg:font-semibold w-full h-full  flex items-center justify-center ">
+                    <div
+                      id="portfolioHover"
+                      className="popinsFont text-[10px] lg:text-[15px] xl:text-[20px] lg:font-semibold w-full h-full  flex items-center justify-center "
+                    >
                       <p>View All</p>
                     </div>
                   }
                   key="1"
                 >
-                  <div className="grid grid-cols-4 lg:mx-[17.5%] gap-[5.25rem]">
+                  <div className="flex flex-wrap justify-center gap-y-[30px] gap-x-[20px] mx-[12%] lg:mt-[40px]">
                     {viewAll?.map((logo, i) => {
                       return (
-                        <div
-                          className="flex items-center justify-center"
-                          key={i}
-                        >
-                          <img
-                            src={logo?.acf?.image}
-                            alt={logo?.acf?.category}
-                            className="opacity-40 hover:opacity-100 w-[204px] h-[117px] object-contain"
-                          />
-                        </div>
+                        <>
+                          <div
+                            className="flex items-center justify-center"
+                            key={i}
+                          >
+                            <img
+                              src={logo?.acf?.image}
+                              alt={logo?.acf?.category}
+                              className="opacity-40 hover:opacity-100 w-[204px] h-[117px] object-contain"
+                            />
+                          </div>
+                          {i === 3 ? <hr className="w-full bg-white" /> : <></>}
+                          {i === 7 ? <hr className="w-full bg-white" /> : <></>}
+                          {i === 11 ? (
+                            <hr className="w-full bg-white" />
+                          ) : (
+                            <></>
+                          )}
+                          {i === 15 ? (
+                            <hr className="w-full bg-white" />
+                          ) : (
+                            <></>
+                          )}
+                        </>
                       );
                     })}
                   </div>
                 </TabPane>
                 <TabPane
                   tab={
-                    <div className="popinsFont text-[10px] lg:text-[15px] xl:text-[20px]  lg:font-semibold w-full h-full   flex flex-col items-center justify-center">
+                    <div
+                      id="portfolioHover"
+                      className="popinsFont text-[10px] lg:text-[15px] xl:text-[20px]  lg:font-semibold w-full h-full   flex flex-col items-center justify-center"
+                    >
                       <p className="md:block hidden">SW Infrastructure</p>
                     </div>
                   }
                   key="2"
                 >
-                  <div className="grid grid-cols-4 lg:mx-[17.5%] gap-[5.25rem]">
+                  <div className="flex flex-wrap justify-center gap-y-[30px] gap-x-[20px]  mx-[12%] lg:mt-[40px]">
                     {sWInfrastructure?.map((logo, i) => {
                       return (
-                        <div
-                          className="flex items-center justify-center"
-                          key={i}
-                        >
-                          <img
-                            src={logo?.acf?.image}
-                            alt={logo?.acf?.category}
-                            className="opacity-40 hover:opacity-100  w-[204px] h-[117px] object-contain"
-                          />
-                        </div>
+                        <>
+                          <div
+                            className="flex items-center justify-center"
+                            key={i}
+                          >
+                            <img
+                              src={logo?.acf?.image}
+                              alt={logo?.acf?.category}
+                              className="opacity-40 hover:opacity-100  w-[204px] h-[117px] object-contain"
+                            />
+                          </div>
+                          {i === 3 ? <hr className="w-full bg-white" /> : <></>}
+                          {i === 7 ? <hr className="w-full bg-white" /> : <></>}
+                          {i === 11 ? (
+                            <hr className="w-full bg-white" />
+                          ) : (
+                            <></>
+                          )}
+                          {i === 15 ? (
+                            <hr className="w-full bg-white" />
+                          ) : (
+                            <></>
+                          )}
+                        </>
                       );
                     })}
                   </div>
                 </TabPane>
                 <TabPane
                   tab={
-                    <div className=" popinsFont lg:text-[15px] xl:text-[20px]  lg:font-semibold w-full h-full  flex flex-col items-center justify-center">
+                    <div
+                      id="portfolioHover"
+                      className=" popinsFont lg:text-[15px] xl:text-[20px]  lg:font-semibold w-full h-full  flex flex-col items-center justify-center"
+                    >
                       <p className="md:block hidden">Digital Supply Chainl</p>
                     </div>
                   }
                   key="3"
                 >
-                  <div className="grid grid-cols-4 lg:mx-[17.5%] gap-[5.25rem]">
+                  <div className="flex flex-wrap justify-center gap-y-[30px] gap-x-[20px]  mx-[12%] lg:mt-[40px]">
                     {digitalSupplyChain?.map((logo, i) => {
                       return (
-                        <div
-                          className="flex items-center justify-center"
-                          key={i}
-                        >
-                          <img
-                            src={logo?.acf?.image}
-                            alt={logo?.acf?.category}
-                            className="opacity-40 hover:opacity-100  w-[204px] h-[117px] object-contain"
-                          />
-                        </div>
+                        <>
+                          <div
+                            className="flex items-center justify-center"
+                            key={i}
+                          >
+                            <img
+                              src={logo?.acf?.image}
+                              alt={logo?.acf?.category}
+                              className="opacity-40 hover:opacity-100  w-[204px] h-[117px] object-contain"
+                            />
+                          </div>
+                          {i === 3 ? <hr className="w-full bg-white" /> : <></>}
+                          {i === 7 ? <hr className="w-full bg-white" /> : <></>}
+                          {i === 11 ? (
+                            <hr className="w-full bg-white" />
+                          ) : (
+                            <></>
+                          )}
+                          {i === 15 ? (
+                            <hr className="w-full bg-white" />
+                          ) : (
+                            <></>
+                          )}
+                        </>
                       );
                     })}
                   </div>
                 </TabPane>
                 <TabPane
                   tab={
-                    <div className="popinsFont text-[10px] lg:text-[15px] xl:text-[20px]  lg:font-semibold w-full h-full flex items-center justify-center">
+                    <div
+                      id="portfolioHover"
+                      className="popinsFont text-[10px] lg:text-[15px] xl:text-[20px]  lg:font-semibold w-full h-full flex items-center justify-center"
+                    >
                       <p className="hidden md:block">Sustainable Megacity</p>
                     </div>
                   }
                   key="4"
                 >
-                  <div className="grid grid-cols-4 lg:mx-[17.5%] gap-[5.25rem]">
+                  <div className="flex flex-wrap justify-center gap-y-[30px] gap-x-[20px]  mx-[12%] lg:mt-[40px]">
                     {sustainableMegacity?.map((logo, i) => {
                       return (
-                        <div
-                          className="flex items-center justify-center"
-                          key={i}
-                        >
-                          <img
-                            src={logo?.acf?.image}
-                            alt={logo?.acf?.category}
-                            className="opacity-40 hover:opacity-100  w-[200px] h-[117px] object-contain"
-                          />
-                        </div>
+                        <>
+                          <div
+                            className="flex items-center justify-center"
+                            key={i}
+                          >
+                            <img
+                              src={logo?.acf?.image}
+                              alt={logo?.acf?.category}
+                              className="opacity-40 hover:opacity-100  w-[200px] h-[117px] object-contain"
+                            />
+                          </div>
+                          {i === 3 ? <hr className="w-full bg-white" /> : <></>}
+                          {i === 7 ? <hr className="w-full bg-white" /> : <></>}
+                          {i === 11 ? (
+                            <hr className="w-full bg-white" />
+                          ) : (
+                            <></>
+                          )}
+                          {i === 15 ? (
+                            <hr className="w-full bg-white" />
+                          ) : (
+                            <></>
+                          )}
+                        </>
                       );
                     })}
                   </div>
