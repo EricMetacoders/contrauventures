@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, forwardRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import GroupTextAnimation from "./GroupTextAnimation";
 import { getPartnersList } from "../../../../reducers/homeSlice";
 import "./group.css";
 import { PartnerLogo } from "./partnerLogo/partnerLgo";
+import { GroupCarousel, WrapperGroupCarousel } from "./GroupStyle";
 
-export default function Group() {
+const Group = forwardRef((props, ref) => {
   const dispatch = useDispatch();
 
   const partners = useSelector((state) => state.homeSlice.partners);
@@ -14,7 +15,7 @@ export default function Group() {
     dispatch(getPartnersList());
   }, []);
 
-  const [offset, setOffset] = useState(null);
+  const [offset, setOffset] = useState(0);
   const handleScroll = () => setOffset(window.pageYOffset);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -23,8 +24,8 @@ export default function Group() {
     };
   }, []);
   return (
-    <>
-      <div className="bg-partnersContactBg overflow-hidden">
+    <div ref={ref}>
+      <div className="bg-partnersContactBg overflow-hidden " ref={ref}>
         <div className="mx-[34px] md:mx-[117px] 2xl:mx-[300px] pb-[65px] mt-[84px] md:mt-[318px]">
           {/* desktop animation */}
           <div className="xl:block hidden md:w-[1030px] md:h-[498px]">
@@ -373,120 +374,146 @@ export default function Group() {
         </div>
 
         {/* mobile */}
-        <div className="block sm:hidden mb-[123px] ">
-          {/* logo */}
-          <div className="overflow-hidden flex  relative h-[80px] items-center ">
-            <div className="mobile-right-left1 absolute flex justify-center items-center ">
-              {partners?.map((logo, i) => {
+        <WrapperGroupCarousel
+          className="block sm:hidden mb-[123px]"
+        >
+          <GroupCarousel
+            widthItemCarousel={80}
+            numberItemsCarousel={partners?.length}
+            className="overflow-hidden flex relative h-[80px] my-[40px]"
+          >
+            {
+              partners?.map((partner, i) => {
                 return (
                   <PartnerLogo
-                    {...{
-                      logoUrl: logo?.acf?.image || "",
-                      logoName: logo?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
-                    }}
+                    {
+                      ...{
+                        logoUrl: partner?.acf?.image || "",
+                        logoName: partner?.acf?.name || "",
+                        wrapperWidth: "w-[80px]",
+                        wrapperHeight: "h-[80px]",
+                        marginLeft: "ml-[5px]",
+                      }
+                    }
                     key={i}
                   />
-                );
-              })}
-            </div>
-            <div className="mobile-right-left2 absolute flex justify-center items-center ">
-              {partners?.map((logo, i) => {
+                )
+              })
+            }
+            {
+              partners?.map((partner, i) => {
                 return (
                   <PartnerLogo
-                    {...{
-                      logoUrl: logo?.acf?.image || "",
-                      logoName: logo?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
-                    }}
+                    {
+                      ...{
+                        logoUrl: partner?.acf?.image || "",
+                        logoName: partner?.acf?.name || "",
+                        wrapperWidth: "w-[80px]",
+                        wrapperHeight: "h-[80px]",
+                        marginLeft: "ml-[5px]",
+                      }
+                    }
                     key={i}
                   />
-                );
-              })}
-            </div>
-          </div>
-          <div className="overflow-hidden flex  relative h-[80px] items-center my-[40px] ">
-            <div className="mobile-left-right1 absolute flex justify-center items-center ">
-              {partners?.map((logo, i) => {
+                )
+              })
+            }
+          </GroupCarousel>
+          <GroupCarousel
+            widthItemCarousel={80}
+            numberItemsCarousel={partners?.length}
+            rightToLeft={true}
+            className="overflow-hidden flex relative h-[80px] my-[40px]"
+          >
+            {
+              partners?.map((partner, i) => {
                 return (
                   <PartnerLogo
-                    {...{
-                      logoUrl: logo?.acf?.image || "",
-                      logoName: logo?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
-                    }}
+                    {
+                      ...{
+                        logoUrl: partner?.acf?.image || "",
+                        logoName: partner?.acf?.name || "",
+                        wrapperWidth: "w-[80px]",
+                        wrapperHeight: "h-[80px]",
+                        marginLeft: "ml-[5px]",
+                      }
+                    }
                     key={i}
                   />
-                );
-              })}
-            </div>
-            <div className="mobile-left-right2 absolute flex justify-center items-center">
-              {partners?.map((logo, i) => {
+                )
+              })
+            }
+            {
+              partners?.map((partner, i) => {
                 return (
                   <PartnerLogo
-                    {...{
-                      logoUrl: logo?.acf?.image || "",
-                      logoName: logo?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
-                    }}
+                    {
+                      ...{
+                        logoUrl: partner?.acf?.image || "",
+                        logoName: partner?.acf?.name || "",
+                        wrapperWidth: "w-[80px]",
+                        wrapperHeight: "h-[80px]",
+                        marginLeft: "ml-[5px]",
+                      }
+                    }
                     key={i}
                   />
-                );
-              })}
-            </div>
-          </div>
-          <div className="overflow-hidden flex  relative h-[80px] items-center ">
-            <div className="mobile-right-left1 absolute flex justify-center items-center ">
-              {partners?.map((logo, i) => {
+                )
+              })
+            }
+          </GroupCarousel>
+          <GroupCarousel
+            widthItemCarousel={80}
+            numberItemsCarousel={partners?.length}
+            className="overflow-hidden flex relative h-[80px] my-[40px]"
+          >
+            {
+              partners?.map((partner, i) => {
                 return (
                   <PartnerLogo
-                    {...{
-                      logoUrl: logo?.acf?.image || "",
-                      logoName: logo?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
-                    }}
+                    {
+                      ...{
+                        logoUrl: partner?.acf?.image || "",
+                        logoName: partner?.acf?.name || "",
+                        wrapperWidth: "w-[80px]",
+                        wrapperHeight: "h-[80px]",
+                        marginLeft: "ml-[5px]",
+                      }
+                    }
                     key={i}
                   />
-                );
-              })}
-            </div>
-            <div className="mobile-right-left2 absolute flex justify-center items-center ">
-              {partners?.map((logo, i) => {
+                )
+              })
+            }
+            {
+              partners?.map((partner, i) => {
                 return (
                   <PartnerLogo
-                    {...{
-                      logoUrl: logo?.acf?.image || "",
-                      logoName: logo?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
-                    }}
+                    {
+                      ...{
+                        logoUrl: partner?.acf?.image || "",
+                        logoName: partner?.acf?.name || "",
+                        wrapperWidth: "w-[80px]",
+                        wrapperHeight: "h-[80px]",
+                        marginLeft: "ml-[5px]",
+                      }
+                    }
                     key={i}
                   />
-                );
-              })}
-            </div>
-          </div>
-          {/* logo */}
-
-          {/* mobile button */}
+                )
+              })
+            }
+          </GroupCarousel>
+          
           {/* <div className="flex items-cener justify-center mt-[76px] mb-[76px]">
             <button className="px-[28px] py-[12px] font-semibold text-white border hover:bg-white hover:text-black transition-all">
               View All
             </button>
           </div> */}
-        </div>
+        </WrapperGroupCarousel>
       </div>
-    </>
+    </div>
   );
-}
+});
+
+export default Group;
