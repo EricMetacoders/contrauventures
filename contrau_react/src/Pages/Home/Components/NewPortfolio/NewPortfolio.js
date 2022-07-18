@@ -66,7 +66,7 @@ const NewPortfolio = forwardRef((props, ref) => {
           </div>
 
           {/* tabs */}
-          <div className="flex items-center justify-center pb-[87px] lg:pb-[329px] pt-[38px] md:mt-[268px] lg:pt-[6.6%]  bg-portfolioBg">
+          <div className="flex items-center justify-center pb-[87px] lg:pb-[329px] pt-[38px] md:mt-[268px] lg:mt-0 lg:pt-[6.6%]  bg-portfolioBg">
             <div className="mx-[20px]">
               <div className="hidden sm:block">
                 <Tabs defaultActiveKey="1">
@@ -81,7 +81,7 @@ const NewPortfolio = forwardRef((props, ref) => {
                     }
                     key="1"
                   >
-                    <div className="flex flex-wrap justify-center gap-y-[30px] gap-x-[20px] mx-auto lg:w-[740px] xl:w-[900px] lg:mt-[40px]">
+                    <div className="flex flex-wrap justify-left gap-y-[30px] gap-x-[20px] mx-auto lg:w-[740px] xl:w-[900px] lg:mt-[40px]">
                       {viewAll?.map((logo, i) => {
                         return (
                           <>
@@ -115,7 +115,7 @@ const NewPortfolio = forwardRef((props, ref) => {
                     }
                     key="2"
                   >
-                    <div className="flex flex-wrap justify-center gap-y-[30px] gap-x-[20px]  mx-auto w-[80%]  lg:mt-[40px]">
+                    <div className="flex flex-wrap justify-left gap-y-[30px] gap-x-[20px]  mx-auto lg:w-[740px] xl:w-[900px]  lg:mt-[40px]">
                       {sWInfrastructure?.map((logo, i) => {
                         return (
                           <>
@@ -149,7 +149,7 @@ const NewPortfolio = forwardRef((props, ref) => {
                     }
                     key="3"
                   >
-                    <div className="flex flex-wrap justify-center gap-y-[30px] gap-x-[20px]  mx-auto 2xl:w-[900px]  lg:mt-[40px]">
+                    <div className="flex flex-wrap justify-left gap-y-[30px] gap-x-[20px]  mx-auto lg:w-[740px] xl:w-[900px]   lg:mt-[40px]">
                       {digitalSupplyChain?.map((logo, i) => {
                         return (
                           <>
@@ -183,7 +183,7 @@ const NewPortfolio = forwardRef((props, ref) => {
                     }
                     key="4"
                   >
-                    <div className="flex flex-wrap justify-center gap-y-[30px] gap-x-[20px]  mx-auto w-[80%]  lg:mt-[40px]">
+                    <div className="flex flex-wrap justify-left gap-y-[30px] gap-x-[20px]  mx-auto lg:w-[740px] xl:w-[900px]   lg:mt-[40px]">
                       {sustainableMegacity?.map((logo, i) => {
                         return (
                           <>
