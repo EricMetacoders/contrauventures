@@ -149,7 +149,7 @@ export default function Components() {
                   Different linguistic and cultural backgrounds don’t matter
                   when we look in the same direction.
                 </p>
-                <p className="popinsFont text-[13px] pt-[24px] 2xl:text-[20px]  leading-[20px] 2xl:leading-[32px]  font-[300] mr-[20px]">
+                <p className="popinsFont  text-[13px] 2xl:text-[20px] leading-[20px] 2xl:leading-[32px] font-[300]">
                   We take pride in being the pioneer in Korea's digital
                   transformation over the past decade.
                 </p>
