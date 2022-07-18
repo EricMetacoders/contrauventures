@@ -1,5 +1,5 @@
 deploy_new_dns:
-  type: deploy
+  stage: deploy
   environment:
     name: new_dns
     url: contrau.ventures
