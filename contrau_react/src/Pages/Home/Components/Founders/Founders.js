@@ -6,7 +6,6 @@ import FounderCarousel from "./Carousel/FounderCarousel";
 import "./Carousel/founderImageCarousel.scss";
 import TabletCarousel from "./Carousel/TabletCarousel";
 import MobileCarousel from "./Carousel/MobileCarousel";
-import LandspaceCaoursel from "./Carousel/LandspaceCaoursel";
 import "./founder.scss";
 export default function Founders() {
   const dispatch = useDispatch();
@@ -22,7 +21,7 @@ export default function Founders() {
     };
   }, []);
   return (
-    <div>
+    <div id="founderId">
       <div className="mx-[34px] md:mx-[117px] xl:mx-[100px] 2xl:mx-[300px]">
         <div className="mt-[80px] md:mt-[300px]">
           <div>

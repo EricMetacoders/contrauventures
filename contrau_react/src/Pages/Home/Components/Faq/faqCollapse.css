@@ -9,9 +9,10 @@
   border-bottom: none;
   background-color: white;
 }
-.ant-collapse:hover > .ant-collapse-item {
-  border-bottom: none;
+
+.greyBg {
   background-color: #f7f8f9;
+  /* background-color: red; */
 }
 
 .ant-collapse-header-text {
