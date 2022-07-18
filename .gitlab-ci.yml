@@ -1,0 +1,9 @@
+deploy_new_dns:
+  type: deploy
+  environment:
+    name: new_dns
+    url: contrau.ventures
+  script:
+    - ssh contrauv@162.241.253.222 "cd /home1/contrauv/public_html/contra_react_wordpress && git checkout new_dns && git pull origin new_dns && exit"
+  only:
+    - new_dns
