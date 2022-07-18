@@ -1,16 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../../assets/homepage_img/logo.png";
 import logoMobile from "../../../../assets/homepage_img/logo_mobile.png";
 import HeaderDropDown from "./HeaderDropDown";
-export default function Header() {
-  const handleClick = () => {
-    // window.scrollTo(0, 6343);
-    window.scrollTo({
-      top: 6343,
-      behavior: "smooth",
-    });
+export default function Header({ resultRef, partnersRef }) {
+  // scroll to Porfolio
+  const handleScroll = () => {
+    resultRef.current.scrollIntoView({ behavior: "smooth" });
   };
+  const handleScrollPartners = () => {
+    partnersRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="md:h-[80px] ">
       <div className="ml-[20px] mr-[10px] md:mx-[90px] h-full">
@@ -37,12 +38,15 @@ export default function Header() {
                 HOME
               </p>
             </Link>
-            <p className="popinsFont text-[16px] font-normal hover:text-hoverGrey transition-all cursor-pointer">
+            <p
+              className="popinsFont text-[16px] font-normal hover:text-hoverGrey transition-all cursor-pointer"
+              onClick={handleScrollPartners}
+            >
               About Us
             </p>
             <p
               className="popinsFont text-[16px] font-normal hover:text-hoverGrey transition-all cursor-pointer"
-              onClick={handleClick}
+              onClick={handleScroll}
             >
               Portfolio
             </p>
@@ -55,7 +59,7 @@ export default function Header() {
 
           {/* menu select mobile */}
           <div className="lg:hidden">
-            <HeaderDropDown />
+            <HeaderDropDown resultRef={resultRef} partnersRef={partnersRef} />
           </div>
         </div>
       </div>
