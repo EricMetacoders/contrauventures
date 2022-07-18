@@ -1,9 +1,9 @@
-import { Logo, Wrapper, WrapperLogo } from "./partnerLogoStyled";
+import { Logo, Wrapper, BackgroundLogo } from "./partnerLogoStyled";
 
 export const PartnerLogo = ({ logoUrl, logoName, wrapperWidth, wrapperHeight, marginLeft, }) => {
   return (
     <Wrapper className={`${wrapperWidth} ${wrapperHeight} ${marginLeft}`}>
-      <WrapperLogo className="w-full h-full"></WrapperLogo>
+      <BackgroundLogo className="w-full h-full"></BackgroundLogo>
       <Logo
         src={logoUrl}
         alt={logoName}

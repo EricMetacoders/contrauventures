@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   cursor: pointer;
 `;
 
-export const WrapperLogo = styled.div`
+export const BackgroundLogo = styled.div`
   background-color: #1c1c1c;
   opacity: 0.1;
   border-radius: 50%;
