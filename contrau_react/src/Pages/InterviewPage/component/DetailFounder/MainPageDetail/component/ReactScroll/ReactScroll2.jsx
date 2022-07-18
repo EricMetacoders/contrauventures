@@ -44,7 +44,6 @@ function Section2({ detailFounder }) {
   const refCategory = useRef(null);
   const onScroll = () => {
     const position = window.pageYOffset;
-    console.log("position:", position);
     if (!matchMobile) {
       if (position >= 715) {
         const myReference = refCategory.current;
@@ -154,6 +153,28 @@ function Section2({ detailFounder }) {
     itemsRef.current = itemsRef.current.slice(0, listGallery.length);
   }, [listGallery]);
 
+  const hiddenRef = useRef();
+
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHandler);
+
+    return () => window.removeEventListener("scroll", scrollHandler);
+  }, []);
+  const scrollHandler = () => {
+    let screenSize = window.pageYOffset + window.innerHeight;
+    console.log("screenSize:", screenSize);
+    if (
+      screenSize >= itemsRef.current[1].offsetTop &&
+      screenSize < itemsRef.current[2]
+    ) {
+      console.log("screen1", screenSize);
+      console.log(`Hidden element1 is now visible`);
+    } else if (screenSize >= itemsRef.current[2].offsetTop) {
+      console.log("screen2", screenSize);
+      console.log(`Hidden element2 is now visible`);
+    }
+  };
+
   return (
     <div
       style={{
@@ -172,6 +193,7 @@ function Section2({ detailFounder }) {
                   activeClass="active"
                   className={item.year}
                   to={item.year}
+                  key={item.year}
                   spy={true}
                   smooth={true}
                   duration={500}
@@ -186,12 +208,11 @@ function Section2({ detailFounder }) {
       <div style={{ display: "flex", flexDirection: "column", rowGap: "20vw" }}>
         {Object.keys(listGallery).length > 1 &&
           listGallery?.map((item, index) => (
-            <Element
-              name={item.year}
-              className="element"
-              ref={(el) => (itemsRef.current[index] = el)}
-            >
-              <div className="rootgallery">
+            <Element name={item.year} className="element" key={item.year}>
+              <div
+                className="rootgallery"
+                ref={(el) => (itemsRef.current[index] = el)}
+              >
                 <div key={item.year} className="carousel-gallery">
                   <div
                     className={
