@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../../../assets/homepage_img/logo.png";
+import logo from "../../../../assets/homepage_img/logo.svg";
 import logoMobile from "../../../../assets/homepage_img/logo_mobile.png";
 import HeaderDropDown from "./HeaderDropDown";
 export default function Header({ resultRef, partnersRef }) {
@@ -27,7 +27,7 @@ export default function Header({ resultRef, partnersRef }) {
           <div className="block sm:hidden">
             <Link to="/">
               {" "}
-              <img src={logoMobile} alt="logo" />
+              <img src={logo} alt="logo" />
             </Link>
           </div>
 

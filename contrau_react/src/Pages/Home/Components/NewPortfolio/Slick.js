@@ -158,7 +158,7 @@ export default function Slick() {
       </Carousel>
       {/* showAll data */}
       {showViewAll ? (
-        <div className="flex flex-wrap col gap-x-[10px] gap-y-[20px] justify-center mt-[26px] mx-auto w-[300px]">
+        <div className="flex flex-wrap col gap-x-[10px] gap-y-[20px] justify-left mt-[26px] mx-auto w-[300px]">
           {viewAll?.map((logo, i) => {
             return (
               <>
@@ -182,7 +182,7 @@ export default function Slick() {
 
       {/* SWInfrastructure data */}
       {showSWInfrastructure ? (
-        <div className="flex flex-wrap col gap-x-[10px]  gap-y-[20px]  justify-center mt-[26px] mx-auto w-[300px]">
+        <div className="flex flex-wrap col gap-x-[10px]  gap-y-[20px]   justify-left mt-[26px] mx-auto w-[300px]">
           {sWInfrastructure?.map((logo, i) => {
             return (
               <>
@@ -206,7 +206,7 @@ export default function Slick() {
 
       {/* DigitalSupplyChain data */}
       {showDigitalSupplyChain ? (
-        <div className="flex flex-wrap col gap-x-[10px]  gap-y-[20px]  justify-center mt-[26px] mx-auto w-[300px]">
+        <div className="flex flex-wrap col gap-x-[10px]  gap-y-[20px]   justify-left mt-[26px] mx-auto w-[300px]">
           {digitalSupplyChain?.map((logo, i) => {
             return (
               <>
@@ -230,7 +230,7 @@ export default function Slick() {
 
       {/* SustainableMegacity data */}
       {showSustainableMegacity ? (
-        <div className="flex flex-wrap col gap-x-[10px]  gap-y-[20px]  justify-center mt-[26px] mx-auto w-[300px]">
+        <div className="flex flex-wrap col gap-x-[10px]  gap-y-[20px]   justify-left mt-[26px] mx-auto w-[300px]">
           {sustainableMegacity?.map((logo, i) => {
             return (
               <>
