@@ -7,7 +7,7 @@ import fb from "../../../../assets/homepage_img/FB.png";
 export default function Footer() {
   return (
     <div className="relative">
-      <div className="absolute  top-[-69px] h-[228px] lg:h-auto  lg:top-[-276px] -z-40">
+      <div className="absolute w-full top-[-69px] h-[228px] lg:h-auto  lg:top-[-276px] -z-40">
         <img src={shadowBg} alt="shadow" className="w-full h-full" />
       </div>
       <div className="hidden 2xl:block 2xl:mt-[40px] 2xl:mx-[179px]">
