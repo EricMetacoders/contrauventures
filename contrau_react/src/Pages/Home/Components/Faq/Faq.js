@@ -55,21 +55,14 @@ export default function Faq() {
                     }}
                   >
                     <div
-                      className="border-t-[1px] md:pb-[50px] cursor-pointer"
-                      // onMouseOver={(e, i) => {
-                      //   console.log("index", i);
-                      //   const parentDiv = `parentDiv${i}`;
-                      //   document
-                      //     .getElementById(parentDiv)
-                      //     .classList.add("greyBg");
-                      // }}
-                      // onMouseOut={(e, i) => {
-                      //   console.log("index", i);
-                      //   const parentDiv = `parentDiv${i}`;
-                      //   document
-                      //     .getElementById(parentDiv)
-                      //     .classList.remove("greyBg");
-                      // }}
+                      id={`parentDiv${i}`}
+                      className="border-t-[1px] md:pb-[50px] cursor-pointer "
+                      onMouseOver={(e) => {
+                        console.log("id", e.target.id);
+                      }}
+                      onMouseOut={(e) => {
+                        // console.log("index", e);
+                      }}
                     >
                       <div className="mt-[10px] xl:mt-[50px] 2xl:mx-[20px]">
                         <div className="flex items-center justify-between">
