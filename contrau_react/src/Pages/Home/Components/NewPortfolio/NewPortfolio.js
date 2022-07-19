@@ -85,15 +85,17 @@ const NewPortfolio = forwardRef((props, ref) => {
                       {viewAll?.map((logo, i) => {
                         return (
                           <>
-                            <div key={i}>
-                              <div className="flex items-center justify-center">
-                                <img
-                                  src={logo?.acf?.image}
-                                  alt={logo?.acf?.category}
-                                  className="imgWidth opacity-40 hover:opacity-100 w-[204px] h-[117px] object-contain"
-                                />
+                            <a href={logo.linkWebsite} _blank>
+                              <div key={i}>
+                                <div className="flex items-center justify-center">
+                                  <img
+                                    src={logo?.acf?.image}
+                                    alt={logo?.acf?.category}
+                                    className="imgWidth opacity-40 hover:opacity-100 w-[204px] h-[117px] object-contain"
+                                  />
+                                </div>
                               </div>
-                            </div>
+                            </a>
                             {(i + 1) % 4 === 0 ? (
                               <hr className="w-full bg-white" />
                             ) : (
@@ -119,15 +121,17 @@ const NewPortfolio = forwardRef((props, ref) => {
                       {sWInfrastructure?.map((logo, i) => {
                         return (
                           <>
-                            <div key={i}>
-                              <div className="flex items-center justify-center">
-                                <img
-                                  src={logo?.acf?.image}
-                                  alt={logo?.acf?.category}
-                                  className="imgWidth opacity-40 hover:opacity-100 w-[204px] h-[117px] object-contain"
-                                />
+                            <a href={logo.linkWebsite} _blank>
+                              <div key={i}>
+                                <div className="flex items-center justify-center">
+                                  <img
+                                    src={logo?.acf?.image}
+                                    alt={logo?.acf?.category}
+                                    className="imgWidth opacity-40 hover:opacity-100 w-[204px] h-[117px] object-contain"
+                                  />
+                                </div>
                               </div>
-                            </div>
+                            </a>
                             {(i + 1) % 4 === 0 ? (
                               <hr className="w-full bg-white" />
                             ) : (
@@ -153,15 +157,17 @@ const NewPortfolio = forwardRef((props, ref) => {
                       {digitalSupplyChain?.map((logo, i) => {
                         return (
                           <>
-                            <div key={i}>
-                              <div className="flex items-center justify-center">
-                                <img
-                                  src={logo?.acf?.image}
-                                  alt={logo?.acf?.category}
-                                  className="imgWidth opacity-40 hover:opacity-100 w-[204px] h-[117px] object-contain"
-                                />
+                            <a href={logo.linkWebsite} _blank>
+                              <div>
+                                <div className="flex items-center justify-center">
+                                  <img
+                                    src={logo?.acf?.image}
+                                    alt={logo?.acf?.category}
+                                    className="imgWidth opacity-40 hover:opacity-100 w-[204px] h-[117px] object-contain"
+                                  />
+                                </div>
                               </div>
-                            </div>
+                            </a>
                             {(i + 1) % 4 === 0 ? (
                               <hr className="w-full bg-white" />
                             ) : (
@@ -187,15 +193,17 @@ const NewPortfolio = forwardRef((props, ref) => {
                       {sustainableMegacity?.map((logo, i) => {
                         return (
                           <>
-                            <div key={i}>
-                              <div className="flex items-center justify-center">
-                                <img
-                                  src={logo?.acf?.image}
-                                  alt={logo?.acf?.category}
-                                  className="imgWidth opacity-40 hover:opacity-100 w-[204px] h-[117px] object-contain"
-                                />
+                            <a href={logo.linkWebsite} _blank>
+                              <div key={i}>
+                                <div className="flex items-center justify-center">
+                                  <img
+                                    src={logo?.acf?.image}
+                                    alt={logo?.acf?.category}
+                                    className="imgWidth opacity-40 hover:opacity-100 w-[204px] h-[117px] object-contain"
+                                  />
+                                </div>
                               </div>
-                            </div>
+                            </a>
                             {(i + 1) % 4 === 0 ? (
                               <hr className="w-full bg-white" />
                             ) : (

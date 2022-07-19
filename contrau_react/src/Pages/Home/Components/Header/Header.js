@@ -16,15 +16,24 @@ export default function Header({ resultRef, partnersRef }) {
   const refHeader = useRef();
   // CHECK EVENT SCROLL DOWN
   const [y, setY] = useState(0);
+
   const handleNavigation = (e) => {
     const window = e.currentTarget;
-    if (y > window.scrollY) {
+
+    if (window.scrollY < 15) {
       document.getElementById("headerNav").style.display = "block";
-    } else if (y < window.scrollY) {
-      document.getElementById("headerNav").style.display = "none";
+    } else {
+      if (y > window.scrollY) {
+        document.getElementById("headerNav").style.display = "block";
+      } else if (y < window.scrollY) {
+        document.getElementById("headerNav").style.display = "none";
+      }
     }
+
     setY(window.scrollY);
   };
+
+  //
   useEffect(() => {
     setY(window.scrollY);
   }, []);
