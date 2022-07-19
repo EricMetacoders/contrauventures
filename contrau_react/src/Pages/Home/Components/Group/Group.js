@@ -358,7 +358,7 @@ const Group = forwardRef((props, ref) => {
                 })}
             </div>
           </div>
-          <div className="overflow-hidden flex  relative h-[179px] items-center ">
+          <div className="overflow-hidden flex relative h-[179px] items-center mb-[150px]">
             <div className="absolute right-left1 flex justify-center items-center">
               {partners
                 ?.filter((partner) => partner?.acf?.category === "partner 3")
@@ -418,11 +418,11 @@ const Group = forwardRef((props, ref) => {
             </div>
           </div>
           {/* logo */}
-          <div className="flex items-center justify-center mt-[20px] ">
+          {/* <div className="flex items-center justify-center mt-[20px] ">
             <button className="mb-[129px] text-[24px] mt-[129px]  px-[40px] py-[15px] border border-white text-white hover:bg-white hover:text-black transition-all">
               View all 1000+ partners
             </button>
-          </div>
+          </div> */}
         </div>
 
         {/* mobile */}
