@@ -353,13 +353,9 @@ function InterviewBody({ detailArticle }) {
               <img src={dot1} />
             </div>
             <div className="frametitleqoute">
-              <span className="title1">
-                {detailArticle?.qoute?.part_1 || ""}
-              </span>
+              <div className="title1">{detailArticle?.qoute?.part_1 || ""}</div>
               &nbsp;
-              <span className="title2">
-                {detailArticle?.qoute?.part_2 || ""}
-              </span>
+              <div className="title2">{detailArticle?.qoute?.part_2 || ""}</div>
             </div>
             <div className="framedot2">
               <img src={dot2} />

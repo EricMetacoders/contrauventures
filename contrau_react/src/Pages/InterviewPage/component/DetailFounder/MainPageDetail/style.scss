@@ -393,7 +393,7 @@
 
 // RESPONSIVE
 
-/* MOBILE WIDTH < 740px */
+/* MOBILE WIDTH < 769px */
 @media screen and (max-width: 769px) {
   .rootpagedetail {
     // height: 100%;
@@ -504,7 +504,7 @@
           font-style: normal;
           font-weight: 300;
           font-size: 14px;
-          line-height: 36px;
+          line-height: 24px;
           text-align: left;
           /* or 180% */
           letter-spacing: -0.02em;
@@ -857,6 +857,303 @@
             font-style: normal;
             font-size: 16px;
             line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+/* TABLET WIDTH >=770px and width <  1279px*/
+@media only screen and (min-width: 770px) and (max-width: 1279px) {
+  .rootpagedetail {
+    .framearticle {
+      .framehtmlinterview {
+        width: 100%;
+        margin: auto;
+        height: auto;
+        z-index: 100;
+        .framequote {
+          width: 100%;
+          height: auto; // RES ADD
+          margin: auto;
+          margin-top: 100px;
+          .framedot1 {
+            // RESPONSIVE
+            margin-left: 61px;
+            margin-top: 40px;
+          }
+          .frametitleqoute {
+            margin-left: 0x;
+            margin-right: 0px;
+            margin: auto;
+            width: 70%; //responsive
+            height: auto; //responsive
+            text-align: center; //responsive
+            .title1 {
+              width: 100%; //responsive add
+              font-weight: 100;
+            }
+            .title2 {
+              width: fit-content;
+              display: inline-block;
+              height: 58px;
+              font-weight: 800;
+              border-bottom: 18px solid rgba(219, 47, 51, 0.9294117647);
+            }
+          }
+          .framedot2 {
+            width: fit-content;
+            margin-left: auto;
+            margin-right: 61px;
+            margin-bottom: 0px;
+            margin-top: 10px;
+          }
+        }
+
+        .framearticle {
+          width: 75%;
+          margin: auto;
+          margin-top: 40px;
+          padding-left: 0px; // RES
+          padding-right: 0px; // RES
+        }
+        .frameimg {
+          width: 80%; //Res add
+          // height: 450px;
+          margin-left: 0px;
+          margin-right: 0px;
+          margin: auto;
+          margin-top: 90px;
+
+          img {
+          }
+          p {
+            font-family: "Roboto Flex", sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 22px;
+            /* identical to box height, or 157% */
+            text-align: left;
+            letter-spacing: -0.02em;
+
+            color: #999999;
+            /* Inside auto layout */
+
+            flex: none;
+            order: 1;
+            align-self: stretch;
+            flex-grow: 0;
+          }
+        }
+      }
+      .framequestionmain {
+        width: 100%;
+        margin-top: 50px;
+        .frametitle {
+          width: 100%;
+          height: auto;
+          background: #151515;
+          margin-top: 150px;
+          margin-bottom: 150px;
+          .detailtitle {
+            width: 80%;
+            height: auto; //res add
+            padding-top: 75px;
+            padding-bottom: 58px;
+          }
+        }
+        .framequestiontitle {
+          width: 100%;
+          margin: auto;
+          margin-top: 180px;
+          padding-left: 0px;
+          padding-right: 0px;
+          .questiontitle {
+            margin: auto;
+            width: 75%;
+            text-align: left;
+          }
+          .articlequestion {
+            margin: auto;
+            margin-top: 40px;
+            width: 75%;
+
+            .somecannot {
+              display: inline-block;
+              margin-top: 30px;
+            }
+
+            .detailarticle2 {
+              padding-top: 40px;
+            }
+          }
+        }
+        .framequestiontitle2 {
+          width: 100%;
+          margin: auto;
+          margin-top: 110px;
+          padding-left: 0px;
+          padding-right: 0px;
+          .questiontitle {
+            margin: auto;
+            width: 75%;
+            text-align: left;
+            .redcontent {
+              color: #db2f33;
+            }
+          }
+          .articlequestion {
+            margin: auto;
+            margin-top: 40px;
+            width: 75%;
+          }
+        }
+
+        .frameimgarticle {
+          width: 100%;
+          margin-top: 0px;
+          // margin-top: 165px;
+          // margin-bottom: 170px;
+          margin-bottom: 0px;
+          display: flex;
+          // background-color: brown;
+          align-items: center;
+          justify-content: center;
+          .frameimgarticle1 {
+            width: 39%;
+            margin-top: 205px;
+            margin-bottom: 25px;
+            img {
+              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle1.png");
+            }
+          }
+          .frameimgarticle2 {
+            width: 39%;
+            margin-top: 205px;
+            margin-bottom: 25px;
+            margin-left: 23px;
+            img {
+              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle2.png");
+            }
+          }
+          .frameimgarticle3 {
+            margin-top: 125px;
+            width: 80%;
+            img {
+              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle3.png");
+            }
+            p {
+              width: 100%;
+              height: 22px;
+
+              font-family: "Roboto Flex", sans-serif;
+              font-style: normal;
+              font-weight: 300;
+              font-size: 14px;
+              line-height: 22px;
+              /* identical to box height, or 157% */
+
+              letter-spacing: -0.02em;
+
+              color: #999999;
+              text-align: left;
+              /* Inside auto layout */
+            }
+          }
+          .frameimgarticle4 {
+            margin-top: 120px;
+            width: 80%;
+            img {
+              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle4.png");
+            }
+            p {
+              display: inline-block;
+              margin-bottom: 110px;
+              width: 100%;
+              height: 22px;
+
+              font-family: "Roboto Flex", sans-serif;
+              font-style: normal;
+              font-weight: 300;
+              font-size: 14px;
+              line-height: 22px;
+              /* identical to box height, or 157% */
+
+              letter-spacing: -0.02em;
+
+              color: #999999;
+              text-align: left;
+              /* Inside auto layout */
+            }
+          }
+        }
+      }
+    }
+
+    .framenew {
+      width: 100%;
+      margin: auto;
+      margin-top: 150px;
+      margin-bottom: 150px;
+      .framenewtitle {
+        width: auto;
+        height: 60px;
+        margin: auto;
+        text-align: center;
+        /* H2 */
+
+        .viewtitle {
+          display: none;
+        }
+      }
+      .framedetailnewmain {
+        display: flex;
+        margin: auto;
+        margin-top: 100px;
+        column-gap: 20px;
+        width: 80%;
+        .framedetail {
+          display: flex;
+
+          flex-direction: column;
+          width: 334px;
+          height: 355px;
+          text-align: left;
+          border-bottom: 1px solid #101010;
+
+          :nth-child(2) {
+            color: red;
+            margin-top: 15px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            /* identical to box height, or 171% */
+
+            color: #db2f33;
+            /* Inside auto layout */
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+          }
+          :nth-child(3) {
+            margin-top: 15px;
+
+            font-size: 24px;
+            line-height: 34px;
+          }
+          :nth-child(3):hover {
+            cursor: pointer;
+            text-decoration: underline black 2px;
+          }
+          :nth-child(4) {
+            margin-top: 15px;
+
+            font-size: 16px;
+            line-height: 24px;
+            /* or 150% */
+            /* BLACK */
           }
         }
       }
