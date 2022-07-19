@@ -34,6 +34,7 @@ function Section2({ detailFounder }) {
   }
 
   const refCategory = useRef(null);
+  // CHECK MOBILE OR PC TO CHANGE HIDE/SHOW CATEGORY YEAR
   const onScroll = () => {
     const position = window.pageYOffset;
     if (!matchMobile) {
