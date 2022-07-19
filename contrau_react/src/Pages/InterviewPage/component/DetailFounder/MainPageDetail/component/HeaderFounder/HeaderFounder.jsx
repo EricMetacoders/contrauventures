@@ -20,8 +20,15 @@ function HeaderFounder({ detailFounder }) {
 
   const handleNavigation = (e) => {
     const window = e.currentTarget;
+
     if (y > window.scrollY) {
-      refHeader.current.style.display = "block";
+      if (window.scrollY == 0) {
+        refHeader.current.style.backgroundColor = "transparent ";
+      } else {
+        refHeader.current.style.display = "block";
+        // refHeader.current.style.backgroundColor = "rgba(0,0,0,0.1)";
+        refHeader.current.style.backgroundColor = "rgba(0,0,0,0.1)";
+      }
     } else if (y < window.scrollY) {
       refHeader.current.style.display = "none";
     }
@@ -51,7 +58,6 @@ function HeaderFounder({ detailFounder }) {
             position: "fixed",
             zIndex: "1000",
             width: "100%",
-            backgroundColor: "rgba(0,0,0,0.1)",
           }}
           ref={refHeader}
         >
