@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     // column-gap: 10px;
-    border-bottom: 0.5px solid #d0d0d0;
+    border-bottom: 0.5px solid #000000;
     background: #ffffff;
     .detailcontent-active {
       width: 130px;
@@ -148,7 +148,7 @@
 
           color: #999999;
           /* Inside auto layout */
-
+          padding-top: 10px;
           flex: none;
           order: 1;
           align-self: stretch;
@@ -190,7 +190,6 @@
             font-style: italic;
             font-weight: 800;
             border-bottom: 18px solid #db2f33ed;
-            margin-left: -10px;
           }
           :nth-child(3) {
             font-weight: 100;

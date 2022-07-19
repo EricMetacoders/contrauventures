@@ -22,11 +22,15 @@
       text-decoration-line: underline;
       color: #ffffff;
     }
+    .yeartitle {
+      opacity: 0.4;
+    }
     .active {
       letter-spacing: 0.02em;
       text-decoration-line: underline;
       font-feature-settings: "tnum" on, "lnum" on;
       color: #ffffff;
+      opacity: 1;
     }
   }
 }
@@ -197,7 +201,7 @@
     // height: auto;
     width: fit-content;
     position: fixed;
-    top: 5%;
+    top: 8%;
     left: 50%;
     transform: translateX(-50%);
     font-style: normal;
@@ -210,6 +214,12 @@
       display: flex;
       flex-direction: row;
       column-gap: 25px;
+
+      .yeartitle:hover {
+        cursor: none;
+        text-decoration-line: none;
+        color: #ffffff;
+      }
     }
   }
   .element {

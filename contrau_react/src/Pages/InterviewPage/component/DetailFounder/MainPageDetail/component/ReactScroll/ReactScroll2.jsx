@@ -46,7 +46,7 @@ function Section2({ detailFounder }) {
         myReference.style.display = "none";
       }
     } else {
-      if (position >= 400) {
+      if (position >= 100) {
         const myReference = refCategory.current;
         myReference.style.display = "block";
       } else if (position < 600) {
@@ -61,22 +61,6 @@ function Section2({ detailFounder }) {
     Events.scrollEvent.register("begin", function () {
       // Remove animation add color of user scroll roller
       window.removeEventListener("scroll", scrollHandler);
-      var noColor =
-        arguments[1].children[0].children[0].children[0].children[0].children[0]
-          .children[0];
-      var noColor2 =
-        arguments[1].children[0].children[0].children[0].children[0].children[1]
-          .children[0];
-      var noColor3 =
-        arguments[1].children[0].children[0].children[0].children[1].children[0]
-          .children[0];
-      var noColor4 =
-        arguments[1].children[0].children[0].children[0].children[1].children[1]
-          .children[0];
-      noColor.style.filter = "grayscale(100%)";
-      noColor2.style.filter = "grayscale(100%)";
-      noColor3.style.filter = "grayscale(100%)";
-      noColor4.style.filter = "grayscale(100%)";
     });
 
     Events.scrollEvent.register("end", function () {
@@ -94,14 +78,40 @@ function Section2({ detailFounder }) {
       var addColor4 =
         arguments[1].children[0].children[0].children[0].children[1].children[1]
           .children[0];
+      console.log("end", arguments[0]);
       addColor.style.filter = "grayscale(0%)";
       addColor2.style.filter = "grayscale(0%)";
       addColor3.style.filter = "grayscale(0%)";
       addColor4.style.filter = "grayscale(0%)";
+      if (
+        arguments[0] == itemsRef.current[0].children[1].children[0].textContent
+      ) {
+        console.log("bang");
+      }
+      // }
+      for (var i = 0; i < itemsRef.current.length; i++) {
+        if (
+          arguments[0] !=
+          itemsRef.current[i].children[1].children[0].textContent
+        ) {
+          var addColor =
+            itemsRef.current[i].children[0].children[0].children[0].children[0];
+          var addColor2 =
+            itemsRef.current[i].children[0].children[0].children[1].children[0];
+          var addColor3 =
+            itemsRef.current[i].children[0].children[1].children[0].children[0];
+          var addColor4 =
+            itemsRef.current[i].children[0].children[1].children[1].children[0];
+
+          addColor.style.filter = "grayscale(100%)";
+          addColor2.style.filter = "grayscale(100%)";
+          addColor3.style.filter = "grayscale(100%)";
+          addColor4.style.filter = "grayscale(100%)";
+        }
+      }
     });
 
     window.addEventListener("scroll", onScroll);
-
     return () => {
       Events.scrollEvent.remove("begin");
       Events.scrollEvent.remove("end");
@@ -136,6 +146,7 @@ function Section2({ detailFounder }) {
   }, []);
 
   const itemsRef = useRef([]);
+  const itemsRefYear = useRef([]);
 
   useEffect(() => {
     itemsRef.current = itemsRef.current.slice(0, listGallery.length);
@@ -159,7 +170,7 @@ function Section2({ detailFounder }) {
 
     var getCenter;
     if (matchMobile) {
-      getCenter = 0;
+      getCenter = 250;
     } else {
       getCenter = 250;
     }
@@ -168,10 +179,6 @@ function Section2({ detailFounder }) {
       window.pageYOffset +
       window.innerHeight -
       (window.innerHeight + itemsRef.current[0].offsetTop + getCenter);
-    console.log(
-      "itemsRef.current[0].offsetTop:",
-      itemsRef.current[0].offsetTop
-    );
 
     var getId = -1;
     for (var i = 0; i < itemsRef.current.length; i++) {
@@ -222,10 +229,10 @@ function Section2({ detailFounder }) {
         var noColor4 =
           itemsRef.current[getId + 1].children[0].children[1].children[1]
             .children[0];
-        noColor.style.filter = "grayscale(100%)";
-        noColor2.style.filter = "grayscale(100%)";
-        noColor3.style.filter = "grayscale(100%)";
-        noColor4.style.filter = "grayscale(100%)";
+        // noColor.style.filter = "grayscale(100%)";
+        // noColor2.style.filter = "grayscale(100%)";
+        // noColor3.style.filter = "grayscale(100%)";
+        // noColor4.style.filter = "grayscale(100%)";
       }
       if (getId - 1 >= 0) {
         var noColor5 =
@@ -242,10 +249,10 @@ function Section2({ detailFounder }) {
           itemsRef.current[getId - 1].children[0].children[1].children[1]
             .children[0];
 
-        noColor5.style.filter = "grayscale(100%)";
-        noColor6.style.filter = "grayscale(100%)";
-        noColor7.style.filter = "grayscale(100%)";
-        noColor8.style.filter = "grayscale(100%)";
+        // noColor5.style.filter = "grayscale(100%)";
+        // noColor6.style.filter = "grayscale(100%)";
+        // noColor7.style.filter = "grayscale(100%)";
+        // noColor8.style.filter = "grayscale(100%)";
       }
     }
   };
@@ -262,8 +269,8 @@ function Section2({ detailFounder }) {
       <div className="categorydetailyear" ref={refCategory}>
         <div className="frameyearcategory">
           {Object.keys(listGallery).length > 0 &&
-            listGallery?.map((item) => (
-              <div>
+            listGallery?.map((item, index) => (
+              <div ref={(el) => (itemsRefYear.current[index] = el)}>
                 <Link
                   className="yeartitle"
                   to={item.year}

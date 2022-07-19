@@ -5,6 +5,8 @@ import { Box } from "@mui/material";
 import logotraufooter from "../../../../assets/interview-img/logotraufooter.png";
 import logofb from "../../../../assets/interview-img/FB.png";
 import logolk from "../../../../assets/interview-img/LI.png";
+import logofbsvg from "../../../../assets/interview-img/fb.svg";
+import logolisvg from "../../../../assets/interview-img/li.svg";
 FooterComponent.propTypes = {};
 
 function FooterComponent(props) {
@@ -22,19 +24,19 @@ function FooterComponent(props) {
             Chungdam-dong, Seoul, Korea
           </Box>
           <Box className="framelogofb-mb">
-            <img src={logofb} alt="logofb" />
+            <img src={logofbsvg} alt="logofbsvg" />
           </Box>
           <Box className="framelogolk-mb">
-            <img src={logolk} alt="logolk" />
+            <img src={logolisvg} alt="logolisvg" />
           </Box>
         </Box>
 
         <Box className="allrightframe">© All rights reserved.</Box>
         <Box className="framelogofb">
-          <img src={logofb} alt="logofb" />
+          <img src={logofbsvg} alt="logofbsvg" />
         </Box>
         <Box className="framelogolk">
-          <img src={logolk} alt="logolk" />
+          <img src={logolisvg} alt="logolisvg" />
         </Box>
       </Box>
     </Box>
