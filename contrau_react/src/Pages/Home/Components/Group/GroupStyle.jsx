@@ -23,7 +23,7 @@ const groupCarouselRightToLeft = (widthItemCarousel, numberItemsCarousel) => key
 `
 
 
-export const GroupCarousel = styled.div`
+export const GroupCarouselAnimation = styled.div`
   animation:
     ${
       (props) => props.rightToLeft

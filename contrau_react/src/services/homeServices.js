@@ -10,7 +10,7 @@ export const homeServices = {
   },
   getPartnersList() {
     return axios({
-      url: `${BASE_URL}partners`,
+      url: `${BASE_URL}partners?per_page=100&category=order&category=asc`,
       method: "GET",
     });
   },
