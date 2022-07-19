@@ -65,7 +65,7 @@ export default function HeaderDropDown({ resultRef, partnersRef }) {
             className="text-black popinsFont text-[1rem] "
             onClick={handleScroll}
           >
-            Portfolio
+            Portfolios
           </p>
           <Link to="/story">
             <p className="text-black popinsFont text-[1rem] ">Story</p>

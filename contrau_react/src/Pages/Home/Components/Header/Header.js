@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../../assets/homepage_img/logo.svg";
 import logoMobile from "../../../../assets/homepage_img/logo_mobile.png";
@@ -12,8 +12,36 @@ export default function Header({ resultRef, partnersRef }) {
     partnersRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
+  // handleShowHideHeader
+  const refHeader = useRef();
+  // CHECK EVENT SCROLL DOWN
+  const [y, setY] = useState(0);
+  const handleNavigation = (e) => {
+    const window = e.currentTarget;
+    if (y > window.scrollY) {
+      document.getElementById("headerNav").style.display = "block";
+    } else if (y < window.scrollY) {
+      document.getElementById("headerNav").style.display = "none";
+    }
+    setY(window.scrollY);
+  };
+  useEffect(() => {
+    setY(window.scrollY);
+  }, []);
+  useEffect(() => {
+    window.addEventListener("scroll", (e) => handleNavigation(e));
+    return () => {
+      // return a cleanup function to unregister our function since its gonna run multiple times
+      window.removeEventListener("scroll", (e) => handleNavigation(e));
+    };
+  }, [y]);
+
   return (
-    <div className="md:h-[80px] mt-[8px] sm:mt-0">
+    <div
+      ref={refHeader}
+      id="headerNav"
+      className="md:h-[80px]  sm:mt-0 fixed z-50 bg-white w-full"
+    >
       <div className="ml-[20px] mr-[10px] md:mx-[90px] h-full">
         <div className="flex items-center justify-between w-full h-full">
           {/* logo Desktop */}
@@ -48,7 +76,7 @@ export default function Header({ resultRef, partnersRef }) {
               className="popinsFont text-[16px] font-normal hover:text-hoverGrey transition-all cursor-pointer"
               onClick={handleScroll}
             >
-              Portfolio
+              Portfolios
             </p>
             <Link to="/story">
               <p className="popinsFont text-[16px] font-normal text-black hover:text-hoverGrey transition-all cursor-pointer">
