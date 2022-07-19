@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components";
 
 export const WrapperGroupCarousel = styled.div`
   width: 100%;
-  height: 120px;
+  height: 180px;
 	overflow:hidden;
 	position: relative;
 
