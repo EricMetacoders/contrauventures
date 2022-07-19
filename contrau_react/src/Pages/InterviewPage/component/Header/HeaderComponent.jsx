@@ -11,22 +11,26 @@ import { useEffect, useRef, useState } from "react";
 HeaderComponent.propTypes = {};
 
 function HeaderComponent({ pagecurrent }) {
-  const refHeader = useRef();
+  // const refHeader = useRef();
   // CHECK EVENT SCROLL DOWN
   const [y, setY] = useState(0);
 
   const handleNavigation = (e) => {
     const window = e.currentTarget;
-    if (y > window.scrollY) {
-      if (window.scrollY == 0) {
-        refHeader.current.style.backgroundColor = "transparent ";
-      } else {
-        refHeader.current.style.display = "block";
-        refHeader.current.style.backgroundColor = "rgba(0,0,0,0.1)";
+    if (document.getElementById("refHeader")) {
+      if (y > window.scrollY) {
+        if (window.scrollY == 0) {
+          document.getElementById("refHeader").style.backgroundColor =
+            "transparent ";
+        } else {
+          document.getElementById("refHeader").style.display = "block";
+          document.getElementById("refHeader").style.backgroundColor =
+            "rgba(0,0,0,0.1)";
+        }
+      } else if (y < window.scrollY) {
+        document.getElementById("refHeader").style.display = "none";
+        document.getElementById("refHeader").style.backgroundColor = "none";
       }
-    } else if (y < window.scrollY) {
-      refHeader.current.style.display = "none";
-      refHeader.current.style.backgroundColor = "none";
     }
     setY(window.scrollY);
   };
@@ -63,7 +67,7 @@ function HeaderComponent({ pagecurrent }) {
             zIndex: "1000",
             width: "100%",
           }}
-          ref={refHeader}
+          id="refHeader"
         >
           <Box className="imglogotrauframe-header">
             <Link to="/">

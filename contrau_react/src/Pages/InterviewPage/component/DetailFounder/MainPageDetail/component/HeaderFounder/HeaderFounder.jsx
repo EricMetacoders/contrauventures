@@ -14,24 +14,26 @@ HeaderFounder.propTypes = {
 
 function HeaderFounder({ detailFounder }) {
   const theme = useTheme();
-  const refHeader = useRef();
+
   // CHECK EVENT SCROLL DOWN
   const [y, setY] = useState(0);
 
   const handleNavigation = (e) => {
     const window = e.currentTarget;
-
-    if (y > window.scrollY) {
-      if (window.scrollY == 0) {
-        refHeader.current.style.backgroundColor = "transparent ";
-      } else {
-        refHeader.current.style.display = "block";
-        // refHeader.current.style.backgroundColor = "rgba(0,0,0,0.1)";
-        refHeader.current.style.backgroundColor = "rgba(0,0,0,0.1)";
-      }
-    } else if (y < window.scrollY) {
-      refHeader.current.style.display = "none";
+    if (window.scrollY <= 15) {
+      document.getElementById("refHeader2").style.display = "block";
+      document.getElementById("refHeader2").style.backgroundColor =
+        "transparent ";
+      return true;
     }
+    if (y > window.scrollY) {
+      document.getElementById("refHeader2").style.display = "block";
+      document.getElementById("refHeader2").style.backgroundColor =
+        "rgba(0,0,0,0.5)";
+    } else if (y < window.scrollY) {
+      document.getElementById("refHeader2").style.display = "none";
+    }
+
     setY(window.scrollY);
   };
 
@@ -59,7 +61,7 @@ function HeaderFounder({ detailFounder }) {
             zIndex: "1000",
             width: "100%",
           }}
-          ref={refHeader}
+          id="refHeader2"
         >
           <Box className="imglogotrauframe-header">
             <Link to="/">

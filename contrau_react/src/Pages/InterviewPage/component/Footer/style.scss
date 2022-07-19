@@ -53,13 +53,16 @@
       display: none;
     }
     .framelogofb {
-      cursor: pointer;
       /* Auto layout */
       margin-left: 20px;
       width: 34px;
       height: 34px;
-      background: rgba(0, 0, 0, 0.12);
       border-radius: 100px;
+      opacity: 0.12;
+    }
+    .framelogofb:hover {
+      cursor: pointer;
+      opacity: 0.4;
     }
     .framelogolk {
       cursor: pointer;
@@ -68,8 +71,11 @@
       width: 34px;
       height: 34px;
 
-      background: rgba(0, 0, 0, 0.12);
       border-radius: 100px;
+      opacity: 0.3;
+    }
+    .framelogolk:hover {
+      cursor: pointer;
     }
   }
 }
@@ -118,6 +124,8 @@
           margin-left: 0px;
           width: 53px;
           height: 53px;
+
+          opacity: 0.4;
         }
         .framelogolk-mb {
           cursor: pointer;
@@ -126,6 +134,7 @@
           margin-left: 12px;
           width: 53px;
           height: 53px;
+          opacity: 0.4;
         }
       }
       .allrightframe {

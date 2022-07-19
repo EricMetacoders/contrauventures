@@ -68,7 +68,7 @@ function ListFounder({ listDataFounder }) {
           // className={styles.gridItem}
           sx={{
             columnGap: [
-              "5px", //0
+              "15px", //0
               "20px", //xs 640
               "15px", //sm 768
               "15px", //md 1024
@@ -76,7 +76,7 @@ function ListFounder({ listDataFounder }) {
               "25px", //xl 1536
             ],
             rowGap: [
-              "20px", //0
+              "15px", //0
               "20px", //xs 640
               "20px", //sm 768
               "5px", //md 1024
