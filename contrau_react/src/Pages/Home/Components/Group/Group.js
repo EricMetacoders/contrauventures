@@ -375,7 +375,7 @@ const Group = forwardRef((props, ref) => {
         >
           <GroupCarouselAnimation
             widthItemCarousel={80}
-            numberItemsCarousel={16}
+            numberItemsCarousel={partners?.length}
             className="overflow-hidden flex relative h-[80px] my-[40px]"
           >
             {
@@ -511,12 +511,102 @@ const Group = forwardRef((props, ref) => {
                 )
               })
             }
+            {
+              partners?.filter((partner) => partner?.acf?.category === "partner 2").map((partner, i) => {
+                return (
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: partner?.acf?.image || "",
+                        logoName: partner?.acf?.name || "",
+                        wrapperWidth: "w-[80px]",
+                        wrapperHeight: "h-[80px]",
+                        marginLeft: "ml-[5px]",
+                      }
+                    }
+                    key={i}
+                  />
+                )
+              })
+            }
           </GroupCarouselAnimation>
           <GroupCarouselAnimation
             widthItemCarousel={80}
             numberItemsCarousel={partners?.length}
             className="overflow-hidden flex relative h-[80px] my-[40px]"
           >
+            {
+              partners?.filter((partner) => partner?.acf?.category === "partner 3").map((partner, i) => {
+                return (
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: partner?.acf?.image || "",
+                        logoName: partner?.acf?.name || "",
+                        wrapperWidth: "w-[80px]",
+                        wrapperHeight: "h-[80px]",
+                        marginLeft: "ml-[5px]",
+                      }
+                    }
+                    key={i}
+                  />
+                )
+              })
+            }
+            {
+              partners?.filter((partner) => partner?.acf?.category === "partner 3").map((partner, i) => {
+                return (
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: partner?.acf?.image || "",
+                        logoName: partner?.acf?.name || "",
+                        wrapperWidth: "w-[80px]",
+                        wrapperHeight: "h-[80px]",
+                        marginLeft: "ml-[5px]",
+                      }
+                    }
+                    key={i}
+                  />
+                )
+              })
+            }
+            {
+              partners?.filter((partner) => partner?.acf?.category === "partner 3").map((partner, i) => {
+                return (
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: partner?.acf?.image || "",
+                        logoName: partner?.acf?.name || "",
+                        wrapperWidth: "w-[80px]",
+                        wrapperHeight: "h-[80px]",
+                        marginLeft: "ml-[5px]",
+                      }
+                    }
+                    key={i}
+                  />
+                )
+              })
+            }
+            {
+              partners?.filter((partner) => partner?.acf?.category === "partner 3").map((partner, i) => {
+                return (
+                  <PartnerLogo
+                    {
+                      ...{
+                        logoUrl: partner?.acf?.image || "",
+                        logoName: partner?.acf?.name || "",
+                        wrapperWidth: "w-[80px]",
+                        wrapperHeight: "h-[80px]",
+                        marginLeft: "ml-[5px]",
+                      }
+                    }
+                    key={i}
+                  />
+                )
+              })
+            }
             {
               partners?.filter((partner) => partner?.acf?.category === "partner 3").map((partner, i) => {
                 return (
