@@ -381,10 +381,11 @@
       line-height: 24px;
       /* identical to box height, or 150% */
       letter-spacing: -0.5px;
-      padding-left: 35px;
+      // padding-left: 35px;
       .slick-list {
         width: 100%;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding-left: 35px;
       }
       .slick-slide {
         width: fit-content !important;

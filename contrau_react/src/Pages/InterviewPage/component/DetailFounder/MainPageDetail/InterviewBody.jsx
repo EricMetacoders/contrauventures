@@ -407,7 +407,7 @@ function InterviewBody({ detailArticle }) {
         </div>
       </div>
       {/* FRAME NEW */}
-      <News />
+      {/* <News /> */}
     </Box>
   );
 }

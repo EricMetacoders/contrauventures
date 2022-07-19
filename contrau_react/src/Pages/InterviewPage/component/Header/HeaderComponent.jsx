@@ -2,8 +2,7 @@ import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import logobackgroundheader from "../../../../assets/interview-img/logobackgroundheader.png";
 import logobackgroundheadermb from "../../../../assets/interview-img/logobackgroundheadermb.png";
-import logotraumb from "../../../../assets/interview-img/logotrauventure-mb.png";
-import logotrau from "../../../../assets/interview-img/logotrauventure.png";
+
 import logoheader from "../../../../assets/interview-img/logoheadertrau.svg";
 import "./style.scss";
 import TemporaryDrawer from "./TemporaryDrawer";
@@ -71,11 +70,7 @@ function HeaderComponent({ pagecurrent }) {
         >
           <Box className="imglogotrauframe-header">
             <Link to="/">
-              <img
-                src={matchMobile ? logoheader : logoheader}
-                alt="logotrau"
-                className="logotrau"
-              />
+              <img src={logoheader} alt="logotrau" className="logotrau" />
             </Link>
           </Box>
           {matchMobile ? (

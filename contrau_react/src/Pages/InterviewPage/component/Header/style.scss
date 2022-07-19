@@ -130,15 +130,17 @@
       bottom: 0%;
       padding-top: 16.98px;
       padding-left: 16.76px;
+      img {
+        width: 90px;
+      }
     }
     .titledetaimainframeheader {
       position: absolute;
       left: 85%;
-      height: auto;
+      height: 50px;
+      transform: translateY(-5px);
     }
-    .titleframekoreanheader {
-      display: none;
-    }
+
     .framemaintilecenterheader {
       position: absolute;
       width: 284px;

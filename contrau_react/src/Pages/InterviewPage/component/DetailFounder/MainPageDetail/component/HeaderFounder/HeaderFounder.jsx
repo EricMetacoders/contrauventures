@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import PropTypes from "prop-types";
 import { Box, useMediaQuery, useTheme } from "@mui/material";
-import logotrau from "../../../../../../../assets/interview-img/logotrauventure.png";
-import logotraumb from "../../../../../../../assets/interview-img/logotrauventure-mb.png";
+
+import logoheader from "../../../../../../../assets/interview-img/logoheadertrau.svg";
 import "./style.scss";
 import { Link } from "react-router-dom";
 import TemporaryDrawer from "./TemporaryDrawer";
@@ -65,11 +65,7 @@ function HeaderFounder({ detailFounder }) {
         >
           <Box className="imglogotrauframe-header">
             <Link to="/">
-              <img
-                src={matchMobile ? logotraumb : logotrau}
-                alt="logotrau"
-                className="logotrau"
-              />
+              <img src={logoheader} alt="logotrau" className="logotrau" />
             </Link>
           </Box>
           {matchMobile ? (
