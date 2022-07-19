@@ -144,7 +144,7 @@ export default function ContactForm() {
               alt="file"
               className="absolute top-5 left-[50px]"
             />{" "}
-            <p className="text-[12px] sm:text-[18px] text-hoverGrey">
+            <p className="text-[12px] sm:text-[18px] text-white opacity-60">
               {fileName}
             </p>
           </label>
