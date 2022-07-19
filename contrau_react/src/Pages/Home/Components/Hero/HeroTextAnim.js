@@ -25,17 +25,17 @@ export default function Components() {
     <>
       <div id="heroDiv" className=" leading-[1]">
         <FadeInUpDiv>
-          <p className="mb-[4px] xl:mb-0 text-black font-extrabold text-[40px] sm:text-[70px] sm:leading-[60px] lg:leading-[63px] xl:leading-[46px] 2xl:text-[110px] 2xl:leading-[37px] italic w-[252px] lg:w-[400px] sm:w-[368px] xl:w-[1000px] popinsFont">
+          <p className="mb-[4px] xl:mb-0 text-black font-extrabold text-[40px] sm:text-[70px] sm:leading-[60px] lg:leading-[63px] xl:leading-[46px] xl:text-[110px] 2xl:leading-[37px] italic w-[252px] lg:w-[400px] sm:w-[368px] xl:w-[1000px] popinsFont">
             We bet on
           </p>
         </FadeInUpDiv>
 
         {showText2 ? (
           <FadeInUpDiv>
-            <p className=" text-black w-[500px] xl:mb-0 text-[40px] sm:text-[49px] xl:leading-[100px] 2xl:leading-[190px] 2xl:text-[110px] font-thin sm:italic popinsFont 2xl:w-[708px]">
+            <p className=" text-black w-[700px] xl:my-[30px] text-[40px] sm:text-[63px] xl:leading-[100px] 2xl:leading-[190px] xl:text-[110px] font-thin sm:italic popinsFont 2xl:w-[708px]">
               the future of
             </p>
-            <p className="text-red font-extrabold text-[40px] sm:text-[49px] 2xl:leading-[37px] sm:leading-[60px]  lg:leading-[63px] xl:leading-[45px] 2xl:text-[110px] popinsFont">
+            <p className="text-red font-extrabold text-[40px] sm:text-[63px] 2xl:leading-[37px] sm:leading-[60px]  lg:leading-[63px] xl:leading-[45px] xl:text-[110px] popinsFont">
               Vietnam.
             </p>
           </FadeInUpDiv>

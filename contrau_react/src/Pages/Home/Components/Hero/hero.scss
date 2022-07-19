@@ -2,4 +2,25 @@
   #heroDiv {
     padding-left: 32px !important;
   }
+  #heroImg {
+    --tw-translate-x: -24% !important;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+  #textDiv {
+    margin-left: 264px !important;
+  }
+}
+
+@media screen and (min-width: 1601px) {
+  #heroDiv {
+    padding-left: 32px !important;
+  }
+  #heroImg {
+    --tw-translate-x: -39% !important;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
 }

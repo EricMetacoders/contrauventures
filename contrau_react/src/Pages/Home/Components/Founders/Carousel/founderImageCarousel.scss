@@ -12,6 +12,25 @@
     transform: translateY(12px);
   }
 
+  #divBtn {
+    --tw-translate-x: unset !important;
+    --tw-translate-y: unset !important;
+  }
+
+  #divBtn:hover {
+    --tw-translate-x: unset !important;
+    --tw-translate-y: unset !important;
+  }
+
+  #divBtn::after {
+    --tw-translate-x: unset !important;
+    --tw-translate-y: unset !important;
+  }
+  #divBtn::before {
+    --tw-translate-x: unset !important;
+    --tw-translate-y: unset !important;
+  }
+
   #divBtn:hover > .bgBlur {
     transform: translateY(-75%);
     transition-property: all;

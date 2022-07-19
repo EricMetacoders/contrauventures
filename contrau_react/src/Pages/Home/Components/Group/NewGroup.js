@@ -8,10 +8,11 @@ import { GroupCarouselAnimation, WrapperGroupCarousel } from "./GroupStyle";
 import "./group.css";
 import "./newGroupAnimation.scss";
 
-const Group = forwardRef((props, ref) => {
+const NewGroup = forwardRef((props, ref) => {
   const dispatch = useDispatch();
 
   const partners = useSelector((state) => state.homeSlice.partners);
+  console.log("partnets", partners);
 
   useEffect(() => {
     dispatch(getPartnersList());
@@ -55,59 +56,84 @@ const Group = forwardRef((props, ref) => {
         {/* desktop */}
         <div className="hidden xl:block mt-[172px]  mb-[323px]">
           <div className="overflow-hidden flex  relative h-[179px] items-center">
-            <div className="right-left1 absolute flex justify-center items-center ">
-              {partners
-                ?.filter((partner) => partner?.acf?.category === "partner 1")
-                .map((logo, i) => {
-                  return (
-                    <PartnerLogo
-                      {...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        wrapperWidth: "w-[173px]",
-                        wrapperHeight: "h-[173px]",
-                        marginLeft: "ml-[10px]",
-                      }}
-                      key={i}
-                    />
-                  );
-                })}
-            </div>
-            <div className=" right-left2 absolute flex justify-center items-center ">
-              {partners
-                ?.filter((partner) => partner?.acf?.category === "partner 1")
-                .map((logo, i) => {
-                  return (
-                    <PartnerLogo
-                      {...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        wrapperWidth: "w-[173px]",
-                        wrapperHeight: "h-[173px]",
-                        marginLeft: "ml-[10px]",
-                      }}
-                      key={i}
-                    />
-                  );
-                })}
-            </div>
-            <div className=" right-left3 absolute flex justify-center items-center ">
-              {partners
-                ?.filter((partner) => partner?.acf?.category === "partner 1")
-                .map((logo, i) => {
-                  return (
-                    <PartnerLogo
-                      {...{
-                        logoUrl: logo?.acf?.image || "",
-                        logoName: logo?.acf?.name || "",
-                        wrapperWidth: "w-[173px]",
-                        wrapperHeight: "h-[173px]",
-                        marginLeft: "ml-[10px]",
-                      }}
-                      key={i}
-                    />
-                  );
-                })}
+            <div className="slider">
+              <div class="slide-track">
+                {partners
+                  ?.filter((partner) => partner?.acf?.category === "partner 1")
+                  .map((logo, i) => {
+                    return (
+                      <div className="slide">
+                        <div className="w-[173px] h-[173px] rounded-full">
+                          <img
+                            src={logo?.acf?.image}
+                            alt={logo?.acf?.name}
+                            className="w-[86px] h-[86px]"
+                          />
+                        </div>
+                      </div>
+                    );
+                  })}
+                {partners
+                  ?.filter((partner) => partner?.acf?.category === "partner 1")
+                  .map((logo, i) => {
+                    return (
+                      <div className="slide">
+                        <div className="w-[173px] h-[173px] rounded-full">
+                          <img
+                            src={logo?.acf?.image}
+                            alt={logo?.acf?.name}
+                            className="w-[86px] h-[86px]"
+                          />
+                        </div>
+                      </div>
+                    );
+                  })}
+                {partners
+                  ?.filter((partner) => partner?.acf?.category === "partner 1")
+                  .map((logo, i) => {
+                    return (
+                      <div className="slide">
+                        <div className="w-[173px] h-[173px] rounded-full">
+                          <img
+                            src={logo?.acf?.image}
+                            alt={logo?.acf?.name}
+                            className="w-[86px] h-[86px]"
+                          />
+                        </div>
+                      </div>
+                    );
+                  })}
+                {partners
+                  ?.filter((partner) => partner?.acf?.category === "partner 1")
+                  .map((logo, i) => {
+                    return (
+                      <div className="slide">
+                        <div className="w-[173px] h-[173px] rounded-full">
+                          <img
+                            src={logo?.acf?.image}
+                            alt={logo?.acf?.name}
+                            className="w-[86px] h-[86px]"
+                          />
+                        </div>
+                      </div>
+                    );
+                  })}
+                {partners
+                  ?.filter((partner) => partner?.acf?.category === "partner 1")
+                  .map((logo, i) => {
+                    return (
+                      <div className="slide">
+                        <div className="w-[173px] h-[173px] rounded-full">
+                          <img
+                            src={logo?.acf?.image}
+                            alt={logo?.acf?.name}
+                            className="w-[86px] h-[86px]"
+                          />
+                        </div>
+                      </div>
+                    );
+                  })}
+              </div>
             </div>
           </div>
 
@@ -686,4 +712,4 @@ const Group = forwardRef((props, ref) => {
   );
 });
 
-export default Group;
+export default NewGroup;
