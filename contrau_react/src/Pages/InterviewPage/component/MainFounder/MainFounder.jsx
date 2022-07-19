@@ -121,7 +121,7 @@ function MainFounder(props) {
                 className={
                   clicked == item.name
                     ? "frame-icon-main tab-active"
-                    : "frame-icon-main"
+                    : "frame-icon-main tab-notactive"
                 }
                 onClick={() => dealClick(item)}
               >

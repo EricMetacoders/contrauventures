@@ -85,8 +85,8 @@
     width: auto;
     height: auto;
     left: 50%;
-    top: 70%;
-    transform: translateX(-50%) translateY(-70%);
+    top: 55%;
+    transform: translateX(-50%) translateY(-55%);
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -130,15 +130,17 @@
       bottom: 0%;
       padding-top: 16.98px;
       padding-left: 16.76px;
+      img {
+        width: 90px;
+      }
     }
     .titledetaimainframeheader {
       position: absolute;
       left: 85%;
-      height: auto;
+      height: 50px;
+      transform: translateY(-5px);
     }
-    .titleframekoreanheader {
-      display: none;
-    }
+
     .framemaintilecenterheader {
       position: absolute;
       width: 284px;

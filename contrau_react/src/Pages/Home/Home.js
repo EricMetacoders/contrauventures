@@ -11,7 +11,6 @@ import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import "./index.css";
 import NewPortfolio from "./Components/NewPortfolio/NewPortfolio";
-import NewGroup from "./Components/Group/NewGroup";
 import Loading from "../../Components/Loading/Loading";
 import { useLocation } from "react-router-dom";
 export default function Home() {
@@ -24,8 +23,7 @@ export default function Home() {
     <>
       <Header resultRef={resultRef} partnersRef={partnersRef} />
       <Hero />
-      {/* <Group ref={partnersRef} /> */}
-      <NewGroup ref={partnersRef} />
+      <Group ref={partnersRef} />
       <Founders />
       <NewPortfolio ref={resultRef} />
       <ValueAdd />

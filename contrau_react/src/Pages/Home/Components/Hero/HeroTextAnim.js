@@ -32,7 +32,7 @@ export default function Components() {
 
         {showText2 ? (
           <FadeInUpDiv>
-            <p className=" text-black w-[700px] xl:my-[30px] text-[40px] sm:text-[63px] xl:leading-[100px] 2xl:leading-[190px] xl:text-[110px] font-thin sm:italic popinsFont 2xl:w-[708px]">
+            <p className=" text-black w-[700px] xl:my-[30px] 2xl:my-0 text-[40px] sm:text-[63px] xl:leading-[100px] 2xl:leading-[190px] xl:text-[110px] font-thin sm:italic popinsFont 2xl:w-[708px]">
               the future of
             </p>
             <p className="text-red font-extrabold text-[40px] sm:text-[63px] 2xl:leading-[37px] sm:leading-[60px]  lg:leading-[63px] xl:leading-[45px] xl:text-[110px] popinsFont">
