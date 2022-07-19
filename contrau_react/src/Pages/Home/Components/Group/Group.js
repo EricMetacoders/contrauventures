@@ -236,9 +236,7 @@ const Group = forwardRef((props, ref) => {
           </div>
         </div> */}
         <WrapperGroupCarousel className="overflow-hidden hidden xl:block mt-[172px]">
-          <GroupCarouselAnimation
-            className="flex relative h-[173px]"
-          >
+          <GroupCarouselAnimation className="flex relative h-[173px]">
             {partners
               ?.filter((partner) => partner?.acf?.category === "partner 1")
               .map((partner, i) => {
@@ -307,7 +305,7 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 1")
               .map((partner, i) => {
                 return (
@@ -324,7 +322,7 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 1")
               .map((partner, i) => {
                 return (
@@ -416,7 +414,7 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 2")
               .map((partner, i) => {
                 return (
@@ -433,7 +431,7 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 2")
               .map((partner, i) => {
                 return (
@@ -453,9 +451,7 @@ const Group = forwardRef((props, ref) => {
           </GroupCarouselAnimation>
         </WrapperGroupCarousel>
         <WrapperGroupCarousel className="overflow-hidden hidden xl:block mt-[50px] mb-[323px]">
-          <GroupCarouselAnimation
-            className="flex relative h-[173px]"
-          >
+          <GroupCarouselAnimation className="flex relative h-[173px]">
             {partners
               ?.filter((partner) => partner?.acf?.category === "partner 3")
               .map((partner, i) => {
@@ -524,7 +520,7 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 3")
               .map((partner, i) => {
                 return (
@@ -541,7 +537,7 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 3")
               .map((partner, i) => {
                 return (
@@ -558,7 +554,7 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 3")
               .map((partner, i) => {
                 return (
@@ -575,7 +571,7 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 3")
               .map((partner, i) => {
                 return (
@@ -603,9 +599,7 @@ const Group = forwardRef((props, ref) => {
 
         {/* tablet */}
         <WrapperGroupCarousel className="overflow-hidden hidden sm:block xl:hidden mt-[172px]">
-          <GroupCarouselAnimation
-            className="flex relative h-[173px]"
-          >
+          <GroupCarouselAnimation className="flex relative h-[173px]">
             {partners
               ?.filter((partner) => partner?.acf?.category === "partner 1")
               .map((partner, i) => {
@@ -674,7 +668,7 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 1")
               .map((partner, i) => {
                 return (
@@ -691,7 +685,7 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 1")
               .map((partner, i) => {
                 return (
@@ -783,7 +777,7 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 2")
               .map((partner, i) => {
                 return (
@@ -800,7 +794,7 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 2")
               .map((partner, i) => {
                 return (
@@ -820,9 +814,7 @@ const Group = forwardRef((props, ref) => {
           </GroupCarouselAnimation>
         </WrapperGroupCarousel>
         <WrapperGroupCarousel className="overflow-hidden hidden sm:block xl:hidden mt-[50px] mb-[323px]">
-          <GroupCarouselAnimation
-            className="flex relative h-[173px]"
-          >
+          <GroupCarouselAnimation className="flex relative h-[173px]">
             {partners
               ?.filter((partner) => partner?.acf?.category === "partner 3")
               .map((partner, i) => {
@@ -891,7 +883,7 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 3")
               .map((partner, i) => {
                 return (
@@ -908,7 +900,7 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 3")
               .map((partner, i) => {
                 return (
@@ -925,7 +917,7 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 3")
               .map((partner, i) => {
                 return (
@@ -942,7 +934,7 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 3")
               .map((partner, i) => {
                 return (
@@ -970,9 +962,7 @@ const Group = forwardRef((props, ref) => {
 
         {/* mobile */}
         <WrapperGroupCarousel className="overflow-hidden block sm:hidden">
-          <GroupCarouselAnimation
-            className="flex relative h-[80px]"
-          >
+          <GroupCarouselAnimation className="flex relative h-[80px]">
             {partners
               ?.filter((partner) => partner?.acf?.category === "partner 1")
               .map((partner, i) => {
@@ -1041,7 +1031,7 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 1")
               .map((partner, i) => {
                 return (
@@ -1058,7 +1048,7 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 1")
               .map((partner, i) => {
                 return (
@@ -1150,7 +1140,7 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 2")
               .map((partner, i) => {
                 return (
@@ -1167,7 +1157,7 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 2")
               .map((partner, i) => {
                 return (
@@ -1187,9 +1177,7 @@ const Group = forwardRef((props, ref) => {
           </GroupCarouselAnimation>
         </WrapperGroupCarousel>
         <WrapperGroupCarousel className="overflow-hidden block sm:hidden mb-[123px]">
-          <GroupCarouselAnimation
-            className="flex relative h-[80px]"
-          >
+          <GroupCarouselAnimation className="flex relative h-[80px]">
             {partners
               ?.filter((partner) => partner?.acf?.category === "partner 3")
               .map((partner, i) => {
@@ -1258,7 +1246,7 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 3")
               .map((partner, i) => {
                 return (
@@ -1275,7 +1263,7 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 3")
               .map((partner, i) => {
                 return (
@@ -1292,7 +1280,7 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 3")
               .map((partner, i) => {
                 return (
@@ -1309,7 +1297,7 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 3")
               .map((partner, i) => {
                 return (

@@ -85,7 +85,7 @@ const NewPortfolio = forwardRef((props, ref) => {
                       {viewAll?.map((logo, i) => {
                         return (
                           <>
-                            <a href={logo.linkWebsite} _blank>
+                            <a href={logo.acf.linkWebsite} target="_blank">
                               <div key={i}>
                                 <div className="flex items-center justify-center">
                                   <img
@@ -121,7 +121,7 @@ const NewPortfolio = forwardRef((props, ref) => {
                       {sWInfrastructure?.map((logo, i) => {
                         return (
                           <>
-                            <a href={logo.linkWebsite} _blank>
+                            <a href={logo.acf.linkWebsite} target="_blank">
                               <div key={i}>
                                 <div className="flex items-center justify-center">
                                   <img
@@ -157,7 +157,7 @@ const NewPortfolio = forwardRef((props, ref) => {
                       {digitalSupplyChain?.map((logo, i) => {
                         return (
                           <>
-                            <a href={logo.linkWebsite} _blank>
+                            <a href={logo.acf.linkWebsite} target="_blank">
                               <div>
                                 <div className="flex items-center justify-center">
                                   <img
@@ -193,7 +193,7 @@ const NewPortfolio = forwardRef((props, ref) => {
                       {sustainableMegacity?.map((logo, i) => {
                         return (
                           <>
-                            <a href={logo.linkWebsite} _blank>
+                            <a href={logo.acf.linkWebsite} target="_blank">
                               <div key={i}>
                                 <div className="flex items-center justify-center">
                                   <img
