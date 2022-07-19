@@ -46,7 +46,7 @@ export default function Faq() {
                 showArrow={true}
                 header={
                   <div
-                    id="parentDiv"
+                    id={`parentDiv${i}`}
                     onMouseOver={(e) => {
                       e.target.classList.add("greyBg");
                     }}
@@ -56,16 +56,20 @@ export default function Faq() {
                   >
                     <div
                       className="border-t-[1px] md:pb-[50px] cursor-pointer"
-                      onMouseOver={() => {
-                        document
-                          .getElementById("parentDiv")
-                          .classList.add("greyBg");
-                      }}
-                      onMouseOut={(e) => {
-                        document
-                          .getElementById("parentDiv")
-                          .classList.remove("greyBg");
-                      }}
+                      // onMouseOver={(e, i) => {
+                      //   console.log("index", i);
+                      //   const parentDiv = `parentDiv${i}`;
+                      //   document
+                      //     .getElementById(parentDiv)
+                      //     .classList.add("greyBg");
+                      // }}
+                      // onMouseOut={(e, i) => {
+                      //   console.log("index", i);
+                      //   const parentDiv = `parentDiv${i}`;
+                      //   document
+                      //     .getElementById(parentDiv)
+                      //     .classList.remove("greyBg");
+                      // }}
                     >
                       <div className="mt-[10px] xl:mt-[50px] 2xl:mx-[20px]">
                         <div className="flex items-center justify-between">
@@ -87,16 +91,16 @@ export default function Faq() {
                             </p>
                             <p
                               className="break-all text-[18px] md:text-[32px] w-[273px] md:w-[522px] 2xl:w-[900px]  popinsFont 2xl:text-[32px] 2xl:font-normal font-light  mb-0 mText"
-                              onMouseOver={() => {
-                                document
-                                  .getElementById("parentDiv")
-                                  .classList.add("greyBg");
-                              }}
-                              onMouseOut={(e) => {
-                                document
-                                  .getElementById("parentDiv")
-                                  .classList.remove("greyBg");
-                              }}
+                              // onMouseOver={() => {
+                              //   document
+                              //     .getElementById("parentDiv")
+                              //     .classList.add("greyBg");
+                              // }}
+                              // onMouseOut={(e) => {
+                              //   document
+                              //     .getElementById("parentDiv")
+                              //     .classList.remove("greyBg");
+                              // }}
                             >
                               {ques.acf.question}
                             </p>

@@ -31,7 +31,9 @@ function DetailFounder({ currentFounder }) {
       const interviewHtmlGetByFounderId = await getAPIDetailFounder(founderId);
       setDetailFounder(interviewHtmlGetByFounderId.data);
     })();
+  }, []);
 
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 

@@ -19,9 +19,6 @@ function MainPageDetail({ detailArticle }) {
   const dealClick = (item) => {
     setClicked(item.name);
   };
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <div className="rootpagedetail">

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../../../assets/homepage_img/logo.png";
+import logo from "../../../../assets/homepage_img/logo.svg";
 import logoMobile from "../../../../assets/homepage_img/logo_mobile.png";
 import HeaderDropDown from "./HeaderDropDown";
 export default function Header({ resultRef, partnersRef }) {
@@ -13,7 +13,7 @@ export default function Header({ resultRef, partnersRef }) {
   };
 
   return (
-    <div className="md:h-[80px] ">
+    <div className="md:h-[80px] mt-[8px] sm:mt-0">
       <div className="ml-[20px] mr-[10px] md:mx-[90px] h-full">
         <div className="flex items-center justify-between w-full h-full">
           {/* logo Desktop */}
@@ -27,7 +27,7 @@ export default function Header({ resultRef, partnersRef }) {
           <div className="block sm:hidden">
             <Link to="/">
               {" "}
-              <img src={logoMobile} alt="logo" />
+              <img src={logo} alt="logo" className="w-[100px] h-[30px]" />
             </Link>
           </div>
 

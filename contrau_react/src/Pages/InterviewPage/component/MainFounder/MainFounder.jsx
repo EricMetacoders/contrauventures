@@ -60,14 +60,14 @@ function MainFounder(props) {
       {
         breakpoint: 426,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2.5,
         },
       },
 
       {
         breakpoint: 769,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2.5,
         },
       },
       {

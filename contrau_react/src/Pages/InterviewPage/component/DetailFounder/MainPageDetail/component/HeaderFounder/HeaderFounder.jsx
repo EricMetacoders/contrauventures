@@ -25,7 +25,6 @@ function HeaderFounder({ detailFounder }) {
                 ? detailFounder?.acf?.header_thumbnail
                 : detailFounder?.acf?.header_image
             }
-            alt="logotrau"
             className="logobackgroundheader"
           />
         </Box>
