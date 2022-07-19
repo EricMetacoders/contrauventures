@@ -13,6 +13,22 @@
   color: #ffffff;
   width: fit-content;
   padding-left: 5%;
+  .frameyearcategory {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    .yeartitle:hover {
+      cursor: pointer;
+      text-decoration-line: underline;
+      color: #ffffff;
+    }
+    .active {
+      letter-spacing: 0.02em;
+      text-decoration-line: underline;
+      font-feature-settings: "tnum" on, "lnum" on;
+      color: #ffffff;
+    }
+  }
 }
 
 .element {
@@ -177,10 +193,11 @@
 /* MOBILE WIDTH < 740px */
 @media screen and (max-width: 769px) {
   .categorydetailyear {
-    display: block;
+    display: none;
+    // height: auto;
     width: fit-content;
-    position: relative;
-    top: 55%;
+    position: fixed;
+    top: 5%;
     left: 50%;
     transform: translateX(-50%);
     font-style: normal;
@@ -188,9 +205,11 @@
     font-size: 14px;
     line-height: 24px;
     padding-left: 0%;
+    z-index: 2000;
     .frameyearcategory {
       display: flex;
-      column-gap: 10px;
+      flex-direction: row;
+      column-gap: 25px;
     }
   }
   .element {

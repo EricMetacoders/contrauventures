@@ -45,12 +45,12 @@ function Section2({ detailFounder }) {
         myReference.style.display = "none";
       }
     } else {
-      if (position >= 100) {
+      if (position >= 400) {
         const myReference = refCategory.current;
-        myReference.style.postion = "fixed";
-      } else if (position < 700) {
+        myReference.style.display = "block";
+      } else if (position < 600) {
         const myReference = refCategory.current;
-        myReference.style.postion = "relative";
+        myReference.style.display = "none";
       }
     }
   };
@@ -258,27 +258,25 @@ function Section2({ detailFounder }) {
         paddingTop: "15%",
       }}
     >
-      {/* <div className="categorydetailyear" ref={refCategory}>
+      <div className="categorydetailyear" ref={refCategory}>
         <div className="frameyearcategory">
           {Object.keys(listGallery).length > 0 &&
             listGallery?.map((item) => (
               <div>
                 <Link
-                  activeClass="active"
-                  className={item.year}
+                  className="yeartitle"
                   to={item.year}
                   key={item.year}
                   spy={true}
                   smooth={true}
                   duration={500}
-                  style={{ color: "white", background: "none" }}
                 >
                   {item.year}
                 </Link>
               </div>
             ))}
         </div>
-      </div> */}
+      </div>
       <div style={{ display: "flex", flexDirection: "column", rowGap: "20vw" }}>
         {Object.keys(listGallery).length > 1 &&
           listGallery?.map((item, index) => (
