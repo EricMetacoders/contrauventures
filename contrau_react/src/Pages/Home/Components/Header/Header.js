@@ -19,18 +19,18 @@ export default function Header({ resultRef, partnersRef }) {
 
   const handleNavigation = (e) => {
     const window = e.currentTarget;
-
-    if (window.scrollY < 15) {
-      document.getElementById("headerNav").style.display = "block";
-    } else {
-      if (y > window.scrollY) {
-        document.getElementById("headerNav").style.display = "block";
-      } else if (y < window.scrollY) {
-        document.getElementById("headerNav").style.display = "none";
-      }
+    if (document.getElementById("headerNav")) {
+          if (window.scrollY < 15) {
+            document.getElementById("headerNav").style.display = "block";
+          } else {
+            if (y > window.scrollY) {
+              document.getElementById("headerNav").style.display = "block";
+            } else if (y < window.scrollY) {
+              document.getElementById("headerNav").style.display = "none";
+            }
+          }
+          setY(window.scrollY);
     }
-
-    setY(window.scrollY);
   };
 
   //
