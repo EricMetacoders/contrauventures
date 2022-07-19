@@ -62,9 +62,10 @@ const Group = forwardRef((props, ref) => {
                       {...{
                         logoUrl: logo?.acf?.image || "",
                         logoName: logo?.acf?.name || "",
-                        wrapperWidth: "w-[173px]",
-                        wrapperHeight: "h-[173px]",
-                        marginLeft: "ml-[10px]",
+                        wrapperWidth: "173px",
+                        wrapperHeight: "173px",
+                        paddingLeft: "20px",
+                        linkWebsite: logo?.acf?.linkWebsite,
                       }}
                       key={i}
                     />
@@ -80,9 +81,10 @@ const Group = forwardRef((props, ref) => {
                       {...{
                         logoUrl: logo?.acf?.image || "",
                         logoName: logo?.acf?.name || "",
-                        wrapperWidth: "w-[173px]",
-                        wrapperHeight: "h-[173px]",
-                        marginLeft: "ml-[10px]",
+                        wrapperWidth: "173px",
+                        wrapperHeight: "173px",
+                        paddingLeft: "20px",
+                        linkWebsite: logo?.acf?.linkWebsite,
                       }}
                       key={i}
                     />
@@ -98,9 +100,10 @@ const Group = forwardRef((props, ref) => {
                       {...{
                         logoUrl: logo?.acf?.image || "",
                         logoName: logo?.acf?.name || "",
-                        wrapperWidth: "w-[173px]",
-                        wrapperHeight: "h-[173px]",
-                        marginLeft: "ml-[10px]",
+                        wrapperWidth: "173px",
+                        wrapperHeight: "173px",
+                        paddingLeft: "20px",
+                        linkWebsite: logo?.acf?.linkWebsite,
                       }}
                       key={i}
                     />
@@ -118,9 +121,10 @@ const Group = forwardRef((props, ref) => {
                       {...{
                         logoUrl: logo?.acf?.image || "",
                         logoName: logo?.acf?.name || "",
-                        wrapperWidth: "w-[173px]",
-                        wrapperHeight: "h-[173px]",
-                        marginLeft: "ml-[10px]",
+                        wrapperWidth: "173px",
+                        wrapperHeight: "173px",
+                        paddingLeft: "20px",
+                        linkWebsite: logo?.acf?.linkWebsite,
                       }}
                       key={i}
                     />
@@ -136,9 +140,10 @@ const Group = forwardRef((props, ref) => {
                       {...{
                         logoUrl: logo?.acf?.image || "",
                         logoName: logo?.acf?.name || "",
-                        wrapperWidth: "w-[173px]",
-                        wrapperHeight: "h-[173px]",
-                        marginLeft: "ml-[10px]",
+                        wrapperWidth: "173px",
+                        wrapperHeight: "173px",
+                        paddingLeft: "20px",
+                        linkWebsite: logo?.acf?.linkWebsite,
                       }}
                       key={i}
                     />
@@ -154,9 +159,10 @@ const Group = forwardRef((props, ref) => {
                       {...{
                         logoUrl: logo?.acf?.image || "",
                         logoName: logo?.acf?.name || "",
-                        wrapperWidth: "w-[173px]",
-                        wrapperHeight: "h-[173px]",
-                        marginLeft: "ml-[10px]",
+                        wrapperWidth: "173px",
+                        wrapperHeight: "173px",
+                        paddingLeft: "20px",
+                        linkWebsite: logo?.acf?.linkWebsite,
                       }}
                       key={i}
                     />
@@ -174,9 +180,10 @@ const Group = forwardRef((props, ref) => {
                       {...{
                         logoUrl: logo?.acf?.image || "",
                         logoName: logo?.acf?.name || "",
-                        wrapperWidth: "w-[173px]",
-                        wrapperHeight: "h-[173px]",
-                        marginLeft: "ml-[10px]",
+                        wrapperWidth: "173px",
+                        wrapperHeight: "173px",
+                        paddingLeft: "20px",
+                        linkWebsite: logo?.acf?.linkWebsite,
                       }}
                       key={i}
                     />
@@ -192,9 +199,10 @@ const Group = forwardRef((props, ref) => {
                       {...{
                         logoUrl: logo?.acf?.image || "",
                         logoName: logo?.acf?.name || "",
-                        wrapperWidth: "w-[173px]",
-                        wrapperHeight: "h-[173px]",
-                        marginLeft: "ml-[10px]",
+                        wrapperWidth: "173px",
+                        wrapperHeight: "173px",
+                        paddingLeft: "20px",
+                        linkWebsite: logo?.acf?.linkWebsite,
                       }}
                       key={i}
                     />
@@ -210,9 +218,10 @@ const Group = forwardRef((props, ref) => {
                       {...{
                         logoUrl: logo?.acf?.image || "",
                         logoName: logo?.acf?.name || "",
-                        wrapperWidth: "w-[173px]",
-                        wrapperHeight: "h-[173px]",
-                        marginLeft: "ml-[10px]",
+                        wrapperWidth: "173px",
+                        wrapperHeight: "173px",
+                        paddingLeft: "20px",
+                        linkWebsite: logo?.acf?.linkWebsite,
                       }}
                       key={i}
                     />
@@ -241,9 +250,10 @@ const Group = forwardRef((props, ref) => {
                       {...{
                         logoUrl: logo?.acf?.image || "",
                         logoName: logo?.acf?.name || "",
-                        wrapperWidth: "w-[173px]",
-                        wrapperHeight: "h-[173px]",
-                        marginLeft: "ml-[10px]",
+                        wrapperWidth: "173px",
+                        wrapperHeight: "173px",
+                        paddingLeft: "20px",
+                        linkWebsite: logo?.acf?.linkWebsite,
                       }}
                       key={i}
                     />
@@ -259,9 +269,10 @@ const Group = forwardRef((props, ref) => {
                       {...{
                         logoUrl: logo?.acf?.image || "",
                         logoName: logo?.acf?.name || "",
-                        wrapperWidth: "w-[173px]",
-                        wrapperHeight: "h-[173px]",
-                        marginLeft: "ml-[10px]",
+                        wrapperWidth: "173px",
+                        wrapperHeight: "173px",
+                        paddingLeft: "20px",
+                        linkWebsite: logo?.acf?.linkWebsite,
                       }}
                       key={i}
                     />
@@ -277,9 +288,10 @@ const Group = forwardRef((props, ref) => {
                       {...{
                         logoUrl: logo?.acf?.image || "",
                         logoName: logo?.acf?.name || "",
-                        wrapperWidth: "w-[173px]",
-                        wrapperHeight: "h-[173px]",
-                        marginLeft: "ml-[10px]",
+                        wrapperWidth: "173px",
+                        wrapperHeight: "173px",
+                        paddingLeft: "20px",
+                        linkWebsite: logo?.acf?.linkWebsite,
                       }}
                       key={i}
                     />
@@ -297,9 +309,10 @@ const Group = forwardRef((props, ref) => {
                       {...{
                         logoUrl: logo?.acf?.image || "",
                         logoName: logo?.acf?.name || "",
-                        wrapperWidth: "w-[173px]",
-                        wrapperHeight: "h-[173px]",
-                        marginLeft: "ml-[10px]",
+                        wrapperWidth: "173px",
+                        wrapperHeight: "173px",
+                        paddingLeft: "20px",
+                        linkWebsite: logo?.acf?.linkWebsite,
                       }}
                       key={i}
                     />
@@ -315,9 +328,10 @@ const Group = forwardRef((props, ref) => {
                       {...{
                         logoUrl: logo?.acf?.image || "",
                         logoName: logo?.acf?.name || "",
-                        wrapperWidth: "w-[173px]",
-                        wrapperHeight: "h-[173px]",
-                        marginLeft: "ml-[10px]",
+                        wrapperWidth: "173px",
+                        wrapperHeight: "173px",
+                        paddingLeft: "20px",
+                        linkWebsite: logo?.acf?.linkWebsite,
                       }}
                       key={i}
                     />
@@ -333,9 +347,10 @@ const Group = forwardRef((props, ref) => {
                       {...{
                         logoUrl: logo?.acf?.image || "",
                         logoName: logo?.acf?.name || "",
-                        wrapperWidth: "w-[173px]",
-                        wrapperHeight: "h-[173px]",
-                        marginLeft: "ml-[10px]",
+                        wrapperWidth: "173px",
+                        wrapperHeight: "173px",
+                        paddingLeft: "20px",
+                        linkWebsite: logo?.acf?.linkWebsite,
                       }}
                       key={i}
                     />
@@ -353,9 +368,10 @@ const Group = forwardRef((props, ref) => {
                       {...{
                         logoUrl: logo?.acf?.image || "",
                         logoName: logo?.acf?.name || "",
-                        wrapperWidth: "w-[173px]",
-                        wrapperHeight: "h-[173px]",
-                        marginLeft: "ml-[10px]",
+                        wrapperWidth: "173px",
+                        wrapperHeight: "173px",
+                        paddingLeft: "20px",
+                        linkWebsite: logo?.acf?.linkWebsite,
                       }}
                       key={i}
                     />
@@ -371,9 +387,10 @@ const Group = forwardRef((props, ref) => {
                       {...{
                         logoUrl: logo?.acf?.image || "",
                         logoName: logo?.acf?.name || "",
-                        wrapperWidth: "w-[173px]",
-                        wrapperHeight: "h-[173px]",
-                        marginLeft: "ml-[10px]",
+                        wrapperWidth: "173px",
+                        wrapperHeight: "173px",
+                        paddingLeft: "20px",
+                        linkWebsite: logo?.acf?.linkWebsite,
                       }}
                       key={i}
                     />
@@ -389,9 +406,10 @@ const Group = forwardRef((props, ref) => {
                       {...{
                         logoUrl: logo?.acf?.image || "",
                         logoName: logo?.acf?.name || "",
-                        wrapperWidth: "w-[173px]",
-                        wrapperHeight: "h-[173px]",
-                        marginLeft: "ml-[10px]",
+                        wrapperWidth: "173px",
+                        wrapperHeight: "173px",
+                        paddingLeft: "20px",
+                        linkWebsite: logo?.acf?.linkWebsite,
                       }}
                       key={i}
                     />
@@ -408,11 +426,9 @@ const Group = forwardRef((props, ref) => {
         </div>
 
         {/* mobile */}
-        <WrapperGroupCarousel className="block sm:hidden mb-[123px]">
+        <WrapperGroupCarousel className="overflow-hidden block sm:hidden">
           <GroupCarouselAnimation
-            widthItemCarousel={80}
-            numberItemsCarousel={partners?.length}
-            className="overflow-hidden flex relative h-[80px] my-[40px]"
+            className="flex relative h-[80px]"
           >
             {partners
               ?.filter((partner) => partner?.acf?.category === "partner 1")
@@ -422,9 +438,10 @@ const Group = forwardRef((props, ref) => {
                     {...{
                       logoUrl: partner?.acf?.image || "",
                       logoName: partner?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
+                      wrapperWidth: "80px",
+                      wrapperHeight: "80px",
+                      paddingLeft: "20px",
+                      linkWebsite: partner?.acf?.linkWebsite,
                     }}
                     key={i}
                   />
@@ -438,9 +455,10 @@ const Group = forwardRef((props, ref) => {
                     {...{
                       logoUrl: partner?.acf?.image || "",
                       logoName: partner?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
+                      wrapperWidth: "80px",
+                      wrapperHeight: "80px",
+                      paddingLeft: "20px",
+                      linkWebsite: partner?.acf?.linkWebsite,
                     }}
                     key={i}
                   />
@@ -454,9 +472,10 @@ const Group = forwardRef((props, ref) => {
                     {...{
                       logoUrl: partner?.acf?.image || "",
                       logoName: partner?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
+                      wrapperWidth: "80px",
+                      wrapperHeight: "80px",
+                      paddingLeft: "20px",
+                      linkWebsite: partner?.acf?.linkWebsite,
                     }}
                     key={i}
                   />
@@ -470,20 +489,55 @@ const Group = forwardRef((props, ref) => {
                     {...{
                       logoUrl: partner?.acf?.image || "",
                       logoName: partner?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
+                      wrapperWidth: "80px",
+                      wrapperHeight: "80px",
+                      paddingLeft: "20px",
+                      linkWebsite: partner?.acf?.linkWebsite,
+                    }}
+                    key={i}
+                  />
+                );
+              })}
+              {partners
+              ?.filter((partner) => partner?.acf?.category === "partner 1")
+              .map((partner, i) => {
+                return (
+                  <PartnerLogo
+                    {...{
+                      logoUrl: partner?.acf?.image || "",
+                      logoName: partner?.acf?.name || "",
+                      wrapperWidth: "80px",
+                      wrapperHeight: "80px",
+                      paddingLeft: "20px",
+                      linkWebsite: partner?.acf?.linkWebsite,
+                    }}
+                    key={i}
+                  />
+                );
+              })}
+              {partners
+              ?.filter((partner) => partner?.acf?.category === "partner 1")
+              .map((partner, i) => {
+                return (
+                  <PartnerLogo
+                    {...{
+                      logoUrl: partner?.acf?.image || "",
+                      logoName: partner?.acf?.name || "",
+                      wrapperWidth: "80px",
+                      wrapperHeight: "80px",
+                      paddingLeft: "20px",
+                      linkWebsite: partner?.acf?.linkWebsite,
                     }}
                     key={i}
                   />
                 );
               })}
           </GroupCarouselAnimation>
+        </WrapperGroupCarousel>
+        <WrapperGroupCarousel className="overflow-hidden block sm:hidden">
           <GroupCarouselAnimation
-            widthItemCarousel={80}
-            numberItemsCarousel={partners?.length}
             rightToLeft={true}
-            className="overflow-hidden flex relative h-[80px] my-[40px]"
+            className="flex relative h-[80px]"
           >
             {partners
               ?.filter((partner) => partner?.acf?.category === "partner 2")
@@ -493,9 +547,10 @@ const Group = forwardRef((props, ref) => {
                     {...{
                       logoUrl: partner?.acf?.image || "",
                       logoName: partner?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
+                      wrapperWidth: "80px",
+                      wrapperHeight: "80px",
+                      paddingLeft: "20px",
+                      linkWebsite: partner?.acf?.linkWebsite,
                     }}
                     key={i}
                   />
@@ -509,9 +564,10 @@ const Group = forwardRef((props, ref) => {
                     {...{
                       logoUrl: partner?.acf?.image || "",
                       logoName: partner?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
+                      wrapperWidth: "80px",
+                      wrapperHeight: "80px",
+                      paddingLeft: "20px",
+                      linkWebsite: partner?.acf?.linkWebsite,
                     }}
                     key={i}
                   />
@@ -525,9 +581,10 @@ const Group = forwardRef((props, ref) => {
                     {...{
                       logoUrl: partner?.acf?.image || "",
                       logoName: partner?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
+                      wrapperWidth: "80px",
+                      wrapperHeight: "80px",
+                      paddingLeft: "20px",
+                      linkWebsite: partner?.acf?.linkWebsite,
                     }}
                     key={i}
                   />
@@ -541,19 +598,54 @@ const Group = forwardRef((props, ref) => {
                     {...{
                       logoUrl: partner?.acf?.image || "",
                       logoName: partner?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
+                      wrapperWidth: "80px",
+                      wrapperHeight: "80px",
+                      paddingLeft: "20px",
+                      linkWebsite: partner?.acf?.linkWebsite,
+                    }}
+                    key={i}
+                  />
+                );
+              })}
+              {partners
+              ?.filter((partner) => partner?.acf?.category === "partner 2")
+              .map((partner, i) => {
+                return (
+                  <PartnerLogo
+                    {...{
+                      logoUrl: partner?.acf?.image || "",
+                      logoName: partner?.acf?.name || "",
+                      wrapperWidth: "80px",
+                      wrapperHeight: "80px",
+                      paddingLeft: "20px",
+                      linkWebsite: partner?.acf?.linkWebsite,
+                    }}
+                    key={i}
+                  />
+                );
+              })}
+              {partners
+              ?.filter((partner) => partner?.acf?.category === "partner 2")
+              .map((partner, i) => {
+                return (
+                  <PartnerLogo
+                    {...{
+                      logoUrl: partner?.acf?.image || "",
+                      logoName: partner?.acf?.name || "",
+                      wrapperWidth: "80px",
+                      wrapperHeight: "80px",
+                      paddingLeft: "20px",
+                      linkWebsite: partner?.acf?.linkWebsite,
                     }}
                     key={i}
                   />
                 );
               })}
           </GroupCarouselAnimation>
+        </WrapperGroupCarousel>
+        <WrapperGroupCarousel className="overflow-hidden block sm:hidden mb-[123px]">
           <GroupCarouselAnimation
-            widthItemCarousel={80}
-            numberItemsCarousel={partners?.length}
-            className="overflow-hidden flex relative h-[80px] my-[40px]"
+            className="flex relative h-[80px]"
           >
             {partners
               ?.filter((partner) => partner?.acf?.category === "partner 3")
@@ -563,9 +655,10 @@ const Group = forwardRef((props, ref) => {
                     {...{
                       logoUrl: partner?.acf?.image || "",
                       logoName: partner?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
+                      wrapperWidth: "80px",
+                      wrapperHeight: "80px",
+                      paddingLeft: "20px",
+                      linkWebsite: partner?.acf?.linkWebsite,
                     }}
                     key={i}
                   />
@@ -579,9 +672,10 @@ const Group = forwardRef((props, ref) => {
                     {...{
                       logoUrl: partner?.acf?.image || "",
                       logoName: partner?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
+                      wrapperWidth: "80px",
+                      wrapperHeight: "80px",
+                      paddingLeft: "20px",
+                      linkWebsite: partner?.acf?.linkWebsite,
                     }}
                     key={i}
                   />
@@ -595,9 +689,10 @@ const Group = forwardRef((props, ref) => {
                     {...{
                       logoUrl: partner?.acf?.image || "",
                       logoName: partner?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
+                      wrapperWidth: "80px",
+                      wrapperHeight: "80px",
+                      paddingLeft: "20px",
+                      linkWebsite: partner?.acf?.linkWebsite,
                     }}
                     key={i}
                   />
@@ -611,15 +706,16 @@ const Group = forwardRef((props, ref) => {
                     {...{
                       logoUrl: partner?.acf?.image || "",
                       logoName: partner?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
+                      wrapperWidth: "80px",
+                      wrapperHeight: "80px",
+                      paddingLeft: "20px",
+                      linkWebsite: partner?.acf?.linkWebsite,
                     }}
                     key={i}
                   />
                 );
               })}
-            {partners
+              {partners
               ?.filter((partner) => partner?.acf?.category === "partner 3")
               .map((partner, i) => {
                 return (
@@ -627,15 +723,16 @@ const Group = forwardRef((props, ref) => {
                     {...{
                       logoUrl: partner?.acf?.image || "",
                       logoName: partner?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
+                      wrapperWidth: "80px",
+                      wrapperHeight: "80px",
+                      paddingLeft: "20px",
+                      linkWebsite: partner?.acf?.linkWebsite,
                     }}
                     key={i}
                   />
                 );
               })}
-            {partners
+              {partners
               ?.filter((partner) => partner?.acf?.category === "partner 3")
               .map((partner, i) => {
                 return (
@@ -643,15 +740,16 @@ const Group = forwardRef((props, ref) => {
                     {...{
                       logoUrl: partner?.acf?.image || "",
                       logoName: partner?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
+                      wrapperWidth: "80px",
+                      wrapperHeight: "80px",
+                      paddingLeft: "20px",
+                      linkWebsite: partner?.acf?.linkWebsite,
                     }}
                     key={i}
                   />
                 );
               })}
-            {partners
+              {partners
               ?.filter((partner) => partner?.acf?.category === "partner 3")
               .map((partner, i) => {
                 return (
@@ -659,9 +757,27 @@ const Group = forwardRef((props, ref) => {
                     {...{
                       logoUrl: partner?.acf?.image || "",
                       logoName: partner?.acf?.name || "",
-                      wrapperWidth: "w-[80px]",
-                      wrapperHeight: "h-[80px]",
-                      marginLeft: "ml-[5px]",
+                      wrapperWidth: "80px",
+                      wrapperHeight: "80px",
+                      paddingLeft: "20px",
+                      linkWebsite: partner?.acf?.linkWebsite,
+                    }}
+                    key={i}
+                  />
+                );
+              })}
+              {partners
+              ?.filter((partner) => partner?.acf?.category === "partner 3")
+              .map((partner, i) => {
+                return (
+                  <PartnerLogo
+                    {...{
+                      logoUrl: partner?.acf?.image || "",
+                      logoName: partner?.acf?.name || "",
+                      wrapperWidth: "80px",
+                      wrapperHeight: "80px",
+                      paddingLeft: "20px",
+                      linkWebsite: partner?.acf?.linkWebsite,
                     }}
                     key={i}
                   />
