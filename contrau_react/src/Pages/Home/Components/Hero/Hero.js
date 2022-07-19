@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <div className=" overflow-hidden">
       <div className="lg:grid grid-cols-2">
-        <div className=" mx-[34px] md:mb-0 lg:mb-[218px]  md:mx-[117px] xl:mx-[100px] 2xl:mx-[300px] mt-[64px]  md:mt-[100px] lg:mt-[24%]   xl:mb-[259px] 2xl:mb-[245px]">
+        <div className=" mx-[34px] md:mb-0 lg:mb-[218px]  md:mx-[117px] xl:mx-[100px] 2xl:mx-[300px] mt-[110px]  md:mt-[173px] lg:mt-[31%]   xl:mb-[259px] 2xl:mb-[245px]">
           <div className="h-[235px] 2xl:h-[542px]">
             {/* start text animation */}
             <HeroTextAnim />

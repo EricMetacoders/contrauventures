@@ -103,6 +103,7 @@ export default function ContactForm() {
             className="break-all lg:h-[75px]  w-full h-[40px] bg-inputBg pl-[26px]   caret-[#DB2F33] opacity-60 active:cursor-text text-[#fff] hover:opacity-100 cursor-pointer pt-[20px]"
             id="title"
             name="title"
+            style={{ resize: "none" }}
           />
           {errors.title?.type === "required" && (
             <p className="errorText">Please write the title !</p>
@@ -116,6 +117,7 @@ export default function ContactForm() {
             id="message"
             name="message"
             className="w-full lg:h-[191px] h-[116px] pt-[20px] lg:pb-[117px] bg-inputBg pl-[26px] caret-[#DB2F33] opacity-60 active:cursor-text text-[#fff] hover:opacity-100 cursor-pointer "
+            style={{ resize: "none" }}
           />
           {errors.title?.type === "required" && (
             <p className="errorText">Please write the message !</p>
@@ -142,7 +144,9 @@ export default function ContactForm() {
               alt="file"
               className="absolute top-5 left-[50px]"
             />{" "}
-            {fileName}
+            <p className="text-[12px] sm:text-[18px] text-white opacity-60">
+              {fileName}
+            </p>
           </label>
 
           {errors.attachFile && (
