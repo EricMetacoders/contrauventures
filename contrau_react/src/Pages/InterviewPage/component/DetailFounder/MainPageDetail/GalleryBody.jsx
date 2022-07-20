@@ -1,14 +1,12 @@
 import React from "react";
 import "./component/ReactScroll/gallerystyle.scss";
-import Section2 from "./component/ReactScroll/ReactScroll2";
+import ReactScroll from "./component/ReactScroll/ReactScroll";
 GalleryBody.propTypes = {};
 
 function GalleryBody({ detailFounder }) {
   return (
     <div>
-      {/* <Section /> */}
-      <Section2 />
-      {/* <SlideGallery detailFounder={detailFounder} /> */}
+      <ReactScroll />
     </div>
   );
 }
