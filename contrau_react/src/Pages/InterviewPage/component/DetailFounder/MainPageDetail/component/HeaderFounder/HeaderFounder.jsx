@@ -21,18 +21,18 @@ function HeaderFounder({ detailFounder }) {
   const handleNavigation = (e) => {
     const window = e.currentTarget;
     if (document.getElementById("refHeader2")) {
-      if (window.scrollY <= 15) {
+      if (window.scrollY < 15) {
         document.getElementById("refHeader2").style.display = "block";
         document.getElementById("refHeader2").style.backgroundColor =
           "transparent ";
-        return true;
-      }
-      if (y > window.scrollY) {
-        document.getElementById("refHeader2").style.display = "block";
-        document.getElementById("refHeader2").style.backgroundColor =
-          "rgba(0,0,0,0.5)";
-      } else if (y < window.scrollY) {
-        document.getElementById("refHeader2").style.display = "none";
+      } else {
+        if (y > window.scrollY) {
+          document.getElementById("refHeader2").style.display = "block";
+          document.getElementById("refHeader2").style.backgroundColor =
+            "rgba(0,0,0,0.5)";
+        } else if (y < window.scrollY) {
+          document.getElementById("refHeader2").style.display = "none";
+        }
       }
 
       setY(window.scrollY);
