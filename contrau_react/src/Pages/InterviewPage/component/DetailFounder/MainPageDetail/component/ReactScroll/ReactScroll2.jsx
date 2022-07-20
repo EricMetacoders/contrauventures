@@ -1,5 +1,7 @@
 import { useMediaQuery } from "@mui/material";
+
 import React, { useEffect, useRef, useState } from "react";
+
 import {
   animateScroll as scroll,
   Element,
@@ -60,12 +62,12 @@ function Section2({ detailFounder }) {
   useEffect(() => {
     Events.scrollEvent.register("begin", function () {
       // Remove animation add color of user scroll roller
-      window.removeEventListener("scroll", scrollHandler);
+      // window.removeEventListener("scroll", scrollHandler);
     });
 
     Events.scrollEvent.register("end", function () {
       // Add again animation add color of user scroll roller
-      window.addEventListener("scroll", scrollHandler);
+      // window.addEventListener("scroll", scrollHandler);
       var addColor =
         arguments[1].children[0].children[0].children[0].children[0].children[0]
           .children[0];
@@ -83,11 +85,11 @@ function Section2({ detailFounder }) {
       addColor2.style.filter = "grayscale(0%)";
       addColor3.style.filter = "grayscale(0%)";
       addColor4.style.filter = "grayscale(0%)";
-      if (
-        arguments[0] == itemsRef.current[0].children[1].children[0].textContent
-      ) {
-        console.log("bang");
-      }
+      // if (
+      //   arguments[0] == itemsRef.current[0].children[1].children[0].textContent
+      // ) {
+      //   console.log("bang");
+      // }
       // }
       for (var i = 0; i < itemsRef.current.length; i++) {
         if (
@@ -153,9 +155,9 @@ function Section2({ detailFounder }) {
   }, [listGallery]);
 
   useEffect(() => {
-    window.addEventListener("scroll", scrollHandler);
+    // window.addEventListener("scroll", scrollHandler);
     return () => {
-      window.removeEventListener("scroll", scrollHandler);
+      // window.removeEventListener("scroll", scrollHandler);
     };
   }, []);
   const isBottom = (el) => {
@@ -174,7 +176,7 @@ function Section2({ detailFounder }) {
     } else {
       getCenter = 250;
     }
-    console.log(" window.innerHeight:", window.innerHeight);
+
     let screenSize =
       window.pageYOffset +
       window.innerHeight -
@@ -257,6 +259,47 @@ function Section2({ detailFounder }) {
     }
   };
 
+  const handleSetActive = (to) => {
+    var test1 = document.getElementsByClassName("yeartitle active")[0];
+
+    for (var i = 0; i < itemsRef.current.length; i++) {
+      if (to == itemsRef.current[i].children[1].children[0].textContent) {
+        var addColor =
+          itemsRef.current[i].children[0].children[0].children[0].children[0];
+        var addColor2 =
+          itemsRef.current[i].children[0].children[0].children[1].children[0];
+        var addColor3 =
+          itemsRef.current[i].children[0].children[1].children[0].children[0];
+        var addColor4 =
+          itemsRef.current[i].children[0].children[1].children[1].children[0];
+
+        addColor.style.filter = "grayscale(0%)";
+        addColor2.style.filter = "grayscale(0%)";
+        addColor3.style.filter = "grayscale(0%)";
+        addColor4.style.filter = "grayscale(0%)";
+      }
+    }
+  };
+
+  const handleSetInactive = (to) => {
+    for (var i = 0; i < itemsRef.current.length; i++) {
+      if (to == itemsRef.current[i].children[1].children[0].textContent) {
+        var noColor =
+          itemsRef.current[i].children[0].children[0].children[0].children[0];
+        var noColor2 =
+          itemsRef.current[i].children[0].children[0].children[1].children[0];
+        var noColor3 =
+          itemsRef.current[i].children[0].children[1].children[0].children[0];
+        var noColor4 =
+          itemsRef.current[i].children[0].children[1].children[1].children[0];
+        noColor.style.filter = "grayscale(100%)";
+        noColor2.style.filter = "grayscale(100%)";
+        noColor3.style.filter = "grayscale(100%)";
+        noColor4.style.filter = "grayscale(100%)";
+      }
+    }
+  };
+
   return (
     <div
       style={{
@@ -278,6 +321,8 @@ function Section2({ detailFounder }) {
                   spy={true}
                   smooth={true}
                   duration={500}
+                  onSetActive={handleSetActive}
+                  onSetInactive={handleSetInactive}
                 >
                   {item.year}
                 </Link>
