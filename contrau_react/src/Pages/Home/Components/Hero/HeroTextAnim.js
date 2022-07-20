@@ -25,7 +25,7 @@ export default function Components() {
     <>
       <div id="heroDiv" className=" leading-[1]">
         <FadeInUpDiv>
-          <p className="mb-[4px] xl:mb-0 text-black font-extrabold text-[40px] sm:text-[70px] sm:leading-[60px] lg:leading-[63px] xl:leading-[46px] xl:text-[110px] 2xl:leading-[37px] italic w-[252px] lg:w-[400px] sm:w-[368px] xl:w-[1000px] popinsFont">
+          <p className="mb-[4px] xl:mb-0 text-black font-extrabold text-[40px] sm:text-[63px] sm:leading-[60px] lg:leading-[63px] xl:leading-[46px] xl:text-[110px] 2xl:leading-[37px] italic w-[252px] lg:w-[400px] sm:w-[368px] xl:w-[1000px] popinsFont">
             We bet on
           </p>
         </FadeInUpDiv>
