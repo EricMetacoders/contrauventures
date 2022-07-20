@@ -155,13 +155,45 @@ function Section2({ detailFounder }) {
   }, [listGallery]);
 
   useEffect(() => {
-    // window.addEventListener("scroll", scrollHandler);
+    window.addEventListener("scroll", scrollHandler2);
     return () => {
-      // window.removeEventListener("scroll", scrollHandler);
+      window.removeEventListener("scroll", scrollHandler2);
     };
   }, []);
-  const isBottom = (el) => {
-    return el.getBoundingClientRect().bottom <= window.innerHeight;
+  const scrollHandler2 = () => {
+    // if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+
+    //   alert("you're at the bottom of the page");
+    // }
+    var docHeight = document.body.offsetHeight;
+
+    docHeight =
+      docHeight == undefined
+        ? window.document.documentElement.scrollHeight
+        : docHeight;
+
+    var winheight = window.innerHeight;
+
+    winheight =
+      winheight == undefined
+        ? document.documentElement.clientHeight
+        : winheight;
+
+    var scrollpoint = window.scrollY;
+
+    scrollpoint =
+      scrollpoint == undefined
+        ? window.document.documentElement.scrollTop
+        : scrollpoint;
+
+    // console.log("windowYoffset:", window.pageYOffset);
+
+    // console.log("window.innerHeight:", window.innerHeight);
+    // console.log(
+    //   "window.innerHeight + window.scrollY :",
+    //   window.innerHeight + window.scrollY
+    // );
+    // console.log("document.body.offsetHeight:", document.body.offsetHeight);
   };
 
   const scrollHandler = () => {
@@ -336,7 +368,6 @@ function Section2({ detailFounder }) {
             <Element name={item.year} className="element" key={item.year}>
               <div
                 className="rootgallery"
-
                 // onScroll={() => onScroll2(index)}
               >
                 <div

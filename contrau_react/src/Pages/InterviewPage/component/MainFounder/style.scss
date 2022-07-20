@@ -99,10 +99,15 @@
       position: relative;
       // margin-left: 12px;
       // margin-top: 10px;
-      //   width: 400px;
+      // width: 35%;
+      max-height: 664px;
+
       border-radius: 40px;
       cursor: pointer;
       overflow: hidden;
+      img {
+        height: 664px;
+      }
       .imgfounder {
         // box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
         border-radius: 40px;
@@ -902,9 +907,10 @@
         border-radius: 40px;
         cursor: pointer;
         overflow: hidden;
-        .imgfounder {
-          // box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
-          border-radius: 40px;
+        max-height: 664px;
+
+        img {
+          max-height: 664px;
         }
 
         .framemaintile {
@@ -1041,9 +1047,10 @@
         border-radius: 40px;
         cursor: pointer;
         overflow: hidden;
-        .imgfounder {
-          // box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
-          border-radius: 40px;
+        max-height: 664px;
+
+        img {
+          max-height: 664px;
         }
 
         .framemaintile {
@@ -1132,11 +1139,11 @@
         border-radius: 40px;
         cursor: pointer;
         overflow: hidden;
-        .imgfounder {
-          // box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
-          border-radius: 40px;
-        }
+        max-height: 664px;
 
+        img {
+          max-height: 664px;
+        }
         .framemaintile {
           position: absolute;
           top: 60%;
