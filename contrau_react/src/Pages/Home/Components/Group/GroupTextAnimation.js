@@ -137,19 +137,19 @@ export default function Components() {
           {showText3 ? (
             <FadeInUpDiv>
               <div className="2xl:mr-[-70px]">
-                <p className="popinsFont  text-[13px] md:text-[13px] lg:text-[13px] leading-[20px] 2xl:leading-[32px] font-[300]">
+                <p className="popinsFont  text-[13px] md:text-[13px] lg:text-[13px] xl:text-[20px] leading-[20px] 2xl:leading-[32px] font-[300]">
                   We once encountered the challenges facing many startup-ers
                   these days.
                 </p>
-                <p className="popinsFont  text-[13px] md:text-[13px] lg:text-[13px] leading-[20px] 2xl:leading-[32px] font-[300]">
+                <p className="popinsFont  text-[13px] md:text-[13px] lg:text-[13px] xl:text-[20px] leading-[20px] 2xl:leading-[32px] font-[300]">
                   We are here to accompany them on this arduous yet exciting
                   journey.
                 </p>
-                <p className="popinsFont  text-[13px] md:text-[13px] lg:text-[13px] leading-[20px] 2xl:leading-[32px] font-[300]">
+                <p className="popinsFont  text-[13px] md:text-[13px] xl:text-[20px] lg:text-[13px] leading-[20px] 2xl:leading-[32px] font-[300]">
                   Different linguistic and cultural backgrounds don’t matter
                   when we look in the same direction.
                 </p>
-                <p className="popinsFont  text-[13px] md:text-[13px] lg:text-[13px] leading-[20px] 2xl:leading-[32px] font-[300]">
+                <p className="popinsFont  text-[13px] md:text-[13px] lg:text-[13px] xl:text-[20px] leading-[20px] 2xl:leading-[32px] font-[300]">
                   We take pride in being the pioneer in Korea's digital
                   transformation over the past decade.
                 </p>
