@@ -23,20 +23,24 @@ function FooterComponent(props) {
             <span style={{ fontWeight: "700" }}>&nbsp;Address</span> 36-1
             Chungdam-dong, Seoul, Korea
           </Box>
-          <Box className="framelogofb-mb">
-            <img src={logofbsvg} alt="logofbsvg" />
-          </Box>
-          <Box className="framelogolk-mb">
-            <img src={logolisvg} alt="logolisvg" />
+          <Box className="framelogomb">
+            <Box className="framelogofb-mb">
+              <img src={logofbsvg} alt="logofbsvg" />
+            </Box>
+            <Box className="framelogolk-mb">
+              <img src={logolisvg} alt="logolisvg" />
+            </Box>
           </Box>
         </Box>
 
         <Box className="allrightframe">© All rights reserved.</Box>
-        <Box className="framelogofb">
-          <img src={logofbsvg} alt="logofbsvg" />
-        </Box>
-        <Box className="framelogolk">
-          <img src={logolisvg} alt="logolisvg" />
+        <Box className="framelogopc">
+          <Box className="framelogofb">
+            <img src={logofbsvg} alt="logofbsvg" />
+          </Box>
+          <Box className="framelogolk">
+            <img src={logolisvg} alt="logolisvg" />
+          </Box>
         </Box>
       </Box>
     </Box>

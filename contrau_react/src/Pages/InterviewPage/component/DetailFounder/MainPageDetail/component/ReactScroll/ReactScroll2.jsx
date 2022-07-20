@@ -46,7 +46,7 @@ function Section2({ detailFounder }) {
         myReference.style.display = "none";
       }
     } else {
-      if (position >= 100) {
+      if (position >= 500) {
         const myReference = refCategory.current;
         myReference.style.display = "block";
       } else if (position < 600) {
@@ -170,11 +170,11 @@ function Section2({ detailFounder }) {
 
     var getCenter;
     if (matchMobile) {
-      getCenter = 250;
+      getCenter = window.innerHeight - 350; // 360x740 => 450
     } else {
       getCenter = 250;
     }
-
+    console.log(" window.innerHeight:", window.innerHeight);
     let screenSize =
       window.pageYOffset +
       window.innerHeight -
@@ -229,10 +229,10 @@ function Section2({ detailFounder }) {
         var noColor4 =
           itemsRef.current[getId + 1].children[0].children[1].children[1]
             .children[0];
-        // noColor.style.filter = "grayscale(100%)";
-        // noColor2.style.filter = "grayscale(100%)";
-        // noColor3.style.filter = "grayscale(100%)";
-        // noColor4.style.filter = "grayscale(100%)";
+        noColor.style.filter = "grayscale(100%)";
+        noColor2.style.filter = "grayscale(100%)";
+        noColor3.style.filter = "grayscale(100%)";
+        noColor4.style.filter = "grayscale(100%)";
       }
       if (getId - 1 >= 0) {
         var noColor5 =
@@ -249,10 +249,10 @@ function Section2({ detailFounder }) {
           itemsRef.current[getId - 1].children[0].children[1].children[1]
             .children[0];
 
-        // noColor5.style.filter = "grayscale(100%)";
-        // noColor6.style.filter = "grayscale(100%)";
-        // noColor7.style.filter = "grayscale(100%)";
-        // noColor8.style.filter = "grayscale(100%)";
+        noColor5.style.filter = "grayscale(100%)";
+        noColor6.style.filter = "grayscale(100%)";
+        noColor7.style.filter = "grayscale(100%)";
+        noColor8.style.filter = "grayscale(100%)";
       }
     }
   };
@@ -262,7 +262,7 @@ function Section2({ detailFounder }) {
       style={{
         backgroundColor: "#151515",
         position: "relative",
-        paddingBottom: "18%",
+        paddingBottom: "50%",
         paddingTop: "15%",
       }}
     >
