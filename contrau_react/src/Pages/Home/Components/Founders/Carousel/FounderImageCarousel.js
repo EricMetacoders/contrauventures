@@ -13,12 +13,12 @@ export default function FounderImageCarousel({ data }) {
   return (
     <div
       id="divBtn"
-      className=" relative imgCarousel  w-[100%] rounded-3xl overflow-hidden mx-auto smooth"
+      className=" relative imgCarousel  w-[100%] h-full rounded-3xl overflow-hidden mx-auto smooth"
     >
       <img
         src={data?.acf?.image}
         alt={data?.acf?.name}
-        className="rounded-3xl  scaleImg mx-auto smooth"
+        className="rounded-3xl  scaleImg mx-auto smooth  object-cover h-full w-full"
       />
 
       {/* Desktop */}

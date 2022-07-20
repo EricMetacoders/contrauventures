@@ -62,7 +62,7 @@ export default function Founders() {
       {/* Tablet */}
       <div
         id="tabletSlick"
-        className="hidden md:block lg:hidden mt-[20%] md:mt-[35%] lg:mt-[18%]  "
+        className="hidden md:block lg:hidden mt-[20%] md:mt-[20%] lg:mt-[18%]  "
       >
         <TabletCarousel />
       </div>
