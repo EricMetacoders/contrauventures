@@ -6,6 +6,8 @@ import FounderImageCarousel from "./FounderImageCarousel";
 import MobileImageCarousel from "./MobileImgCarousel";
 import { useSelector } from "react-redux";
 
+import "./divImageSize.scss";
+
 export default function MobileCarousel() {
   const data = useSelector((state) => state.homeSlice.founders);
   const settings = {
@@ -19,7 +21,11 @@ export default function MobileCarousel() {
   return (
     <Slider {...settings}>
       {data?.map((img, index) => {
-        return <FounderImageCarousel key={index} data={img} />;
+        return (
+          <div className="divImgSize">
+            <FounderImageCarousel key={index} data={img} />
+          </div>
+        );
       })}
     </Slider>
   );
