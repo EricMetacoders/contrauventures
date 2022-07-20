@@ -13,6 +13,27 @@
   color: #ffffff;
   width: fit-content;
   padding-left: 5%;
+
+  .frameyearcategory {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    .yeartitle:hover {
+      cursor: pointer;
+      text-decoration-line: underline;
+      color: #ffffff;
+    }
+    .yeartitle {
+      opacity: 0.4;
+    }
+    .active {
+      letter-spacing: 0.02em;
+      text-decoration-line: underline;
+      font-feature-settings: "tnum" on, "lnum" on;
+      color: #ffffff;
+      opacity: 1;
+    }
+  }
 }
 
 .element {
@@ -177,10 +198,11 @@
 /* MOBILE WIDTH < 740px */
 @media screen and (max-width: 769px) {
   .categorydetailyear {
-    display: block;
+    display: none;
+    // height: auto;
     width: fit-content;
-    position: relative;
-    top: 55%;
+    position: fixed;
+    top: 8%;
     left: 50%;
     transform: translateX(-50%);
     font-style: normal;
@@ -188,9 +210,17 @@
     font-size: 14px;
     line-height: 24px;
     padding-left: 0%;
+    z-index: 2000;
     .frameyearcategory {
       display: flex;
-      column-gap: 10px;
+      flex-direction: row;
+      column-gap: 25px;
+
+      .yeartitle:hover {
+        cursor: none;
+        text-decoration-line: none;
+        color: #ffffff;
+      }
     }
   }
   .element {
@@ -203,7 +233,7 @@
         position: relative;
         padding-top: 0px;
         color: #ffffff;
-        width: 73%;
+        width: 77%;
         height: auto;
         margin: auto;
         .frameimgmain {
@@ -299,7 +329,7 @@
         .frametitleyear {
           position: absolute;
           left: 50%;
-          top: 35%;
+          top: 27%;
           transform: translateX(-50%);
           display: flex;
           flex-direction: column;
@@ -325,15 +355,15 @@
             width: 43px;
             height: 2px;
             margin: auto;
-            margin-top: 5%;
+            margin-top: 8%;
             background: #fcfcfc;
           }
           .detailtitle {
             /* Body 20 Poppins */
             font-family: "Poppins", sans-serif;
             margin: auto;
-            margin-top: 5%;
-            width: auto;
+            margin-top: 7%;
+            width: 288px;
             font-style: normal;
             font-weight: 400;
             font-size: 14px;

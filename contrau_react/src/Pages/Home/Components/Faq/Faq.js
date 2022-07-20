@@ -46,58 +46,26 @@ export default function Faq() {
                 showArrow={true}
                 header={
                   <div
-                    id="parentDiv"
-                    onMouseOver={(e) => {
-                      e.target.classList.add("greyBg");
+                    id={`parentDiv${i}`}
+                    onMouseOver={() => {
+                      document
+                        .getElementById(`parentDiv${i}`)
+                        .classList.add("greyBg");
                     }}
                     onMouseOut={(e) => {
-                      e.target.classList.remove("greyBg");
+                      document
+                        .getElementById(`parentDiv${i}`)
+                        .classList.remove("greyBg");
                     }}
                   >
-                    <div
-                      className="border-t-[1px] md:pb-[50px] cursor-pointer"
-                      onMouseOver={() => {
-                        document
-                          .getElementById("parentDiv")
-                          .classList.add("greyBg");
-                      }}
-                      onMouseOut={(e) => {
-                        document
-                          .getElementById("parentDiv")
-                          .classList.remove("greyBg");
-                      }}
-                    >
+                    <div className="border-t-[1px] md:pb-[50px] cursor-pointer ">
                       <div className="mt-[10px] xl:mt-[50px] 2xl:mx-[20px]">
                         <div className="flex items-center justify-between">
                           <div className="md:flex  space-center justify-center md:space-x-5">
-                            <p
-                              className="popinsFont md:mt-[8px] text-[18px] font-light  2xl:text-[24px] italic text-red mb-[2px] lg:mb-0"
-                              onMouseOver={() => {
-                                document
-                                  .getElementById("parentDiv")
-                                  .classList.add("greyBg");
-                              }}
-                              onMouseOut={(e) => {
-                                document
-                                  .getElementById("parentDiv")
-                                  .classList.remove("greyBg");
-                              }}
-                            >
+                            <p className="popinsFont md:mt-[8px] text-[18px] font-light  2xl:text-[24px] italic text-red mb-[2px] lg:mb-0">
                               Q{i + 1}
                             </p>
-                            <p
-                              className="break-all text-[18px] md:text-[32px] w-[273px] md:w-[522px] 2xl:w-[900px]  popinsFont 2xl:text-[32px] 2xl:font-normal font-light  mb-0 mText"
-                              onMouseOver={() => {
-                                document
-                                  .getElementById("parentDiv")
-                                  .classList.add("greyBg");
-                              }}
-                              onMouseOut={(e) => {
-                                document
-                                  .getElementById("parentDiv")
-                                  .classList.remove("greyBg");
-                              }}
-                            >
+                            <p className="break-all text-[18px] md:text-[32px] w-[273px] md:w-[522px] 2xl:w-[900px]  popinsFont 2xl:text-[32px] 2xl:font-normal font-light  mb-0 mText">
                               {ques.acf.question}
                             </p>
                           </div>
@@ -108,7 +76,7 @@ export default function Faq() {
                 }
                 key={i + 1}
               >
-                <div className="ml-[-3px] mr-[47px] pb-[40px] md:mx-[50px] ">
+                <div className="ml-[-3px] md:mt-[40px] mr-[47px] pb-[40px] md:mx-[50px] ">
                   <p className="break-all md:mt-[-21px] mt-[21px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
                     {ques.acf.answer_part_1}
                   </p>

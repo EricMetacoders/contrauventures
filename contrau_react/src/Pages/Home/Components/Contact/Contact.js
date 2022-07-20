@@ -16,7 +16,7 @@ export default function Contact() {
               </p>
             </div>
             <div className="block">
-              <p className="text-[13px] lg:font-normal popinsFont font-light  lg:text-[20px] text-white lg:text-hoverGrey mb-0  mt-[33px] lg:mt-[30px] w-full break-all lg:pr-[62px]">
+              <p className="text-[13px] lg:font-normal popinsFont font-light  lg:text-[20px] text-white lg:opacity-50 mb-0  mt-[33px] lg:mt-[30px] w-full break-all lg:pr-[62px]">
                 We will plant seeds for Vietnam’s Startup ecosystem more than 10
                 years.
               </p>
