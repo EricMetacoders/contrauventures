@@ -400,7 +400,16 @@ function InterviewBody({ detailArticle }) {
           ) : (
             <div
               dangerouslySetInnerHTML={{
-                __html: detailArticle.content_part_2?.detail_content || "",
+                __html: detailArticle.content_part_3?.detail_content || "",
+              }}
+            />
+          )}
+          {!detailArticle ? (
+            <div />
+          ) : (
+            <div
+              dangerouslySetInnerHTML={{
+                __html: detailArticle.content_part_4?.detail_content || "",
               }}
             />
           )}
