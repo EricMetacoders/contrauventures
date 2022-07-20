@@ -162,7 +162,7 @@ export default function Slick() {
           {viewAll?.map((logo, i) => {
             return (
               <>
-                <a href={logo.linkWebsite} _blank>
+                <a href={logo.acf.linkWebsite} target="_blank">
                   <div key={i}>
                     <div className="flex items-center justify-center">
                       <img
@@ -188,7 +188,7 @@ export default function Slick() {
           {sWInfrastructure?.map((logo, i) => {
             return (
               <>
-                <a href={logo.linkWebsite} _blank>
+                <a href={logo.acf.linkWebsite} target="_blank">
                   <div key={i}>
                     <div className="flex items-center justify-center">
                       <img
@@ -214,7 +214,7 @@ export default function Slick() {
           {digitalSupplyChain?.map((logo, i) => {
             return (
               <>
-                <a href={logo.linkWebsite} _blank>
+                <a href={logo.acf.linkWebsite} target="_blank">
                   <div key={i}>
                     <div className="flex items-center justify-center">
                       <img
@@ -240,7 +240,7 @@ export default function Slick() {
           {sustainableMegacity?.map((logo, i) => {
             return (
               <>
-                <a href={logo.linkWebsite} _blank>
+                <a href={logo.acf.linkWebsite} target="_blank">
                   <div key={i}>
                     <div className="flex items-center justify-center">
                       <img

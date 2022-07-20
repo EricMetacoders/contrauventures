@@ -136,15 +136,15 @@ export default function ContactForm() {
             className="w-full lgl:h-[75px] bg-inputBg pt-[30px] pl-[100px] text-[#fff]  custom-file-input cursor-pointer hidden"
           />
           <label
-            className="w-full lg:h-[75px] bg-inputBg  pt-[2.5%] pl-[100px] text-[#fff]   opacity-60 custom-file-input cursor-pointer inline-block"
+            className="w-full lg:h-[75px] bg-inputBg  pt-[30px] pl-[59px] text-[#fff]   opacity-60 hover custom-file-input cursor-pointer inline-block"
             for="file"
           >
             <img
               src={ic_file}
               alt="file"
-              className="absolute top-5 left-[50px]"
+              className="absolute top-5 left-[15px]"
             />{" "}
-            <p className="text-[12px] sm:text-[18px] text-white opacity-60">
+            <p className="text-[12px] popinsFont sm:text-[18px] text-white opacity-60">
               {fileName}
             </p>
           </label>

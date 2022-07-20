@@ -2,8 +2,8 @@ import React from "react";
 import footerLogo from "../../../../assets/homepage_img/footer_logo.png";
 import shadowBg from "../../../../assets/homepage_img/shadowBg.png";
 import reserved from "../../../../assets/homepage_img/reserved.png";
-import li from "../../../../assets/homepage_img/LI.png";
-import fb from "../../../../assets/homepage_img/FB.png";
+import li from "../../../../assets/homepage_img/li.svg";
+import fb from "../../../../assets/homepage_img/fb.svg";
 export default function Footer() {
   return (
     <div className="relative">
@@ -43,16 +43,12 @@ export default function Footer() {
           </div>
           <div className="flex items-center justify-center space-x-4 ">
             <img src={reserved} alt="reserved" />
-            <img
-              src={fb}
-              alt="fb"
-              className="opacity-40 hover:opacity-100 cursor-pointer"
-            />
-            <img
-              src={li}
-              alt="li"
-              className="opacity-40 hover:opacity-100 cursor-pointer"
-            />
+            <div className="flex items-center justify-center rounded-full bg-[#dddedf] hover:bg-[#cccdcf] transition-all w-[34px] h-[34px] cursor-pointer">
+              <img src={fb} alt="fb" className="opacity-40 " />
+            </div>
+            <div className="flex items-center justify-center rounded-full bg-[#dddedf] hover:bg-[#cccdcf] transition-all w-[34px] h-[34px] cursor-pointer">
+              <img src={li} alt="li" className="opacity-40 " />
+            </div>
           </div>
         </div>
       </div>
@@ -85,16 +81,13 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex space-x-3">
-            <img
-              src={fb}
-              alt="facebook"
-              className="opacity-80 hover:opacity-100 cursor-pointer"
-            />
-            <img
-              src={li}
-              alt="li"
-              className="opacity-80 hover:opacity-100 cursor-pointer"
-            />
+            <div className="flex items-center justify-center rounded-full bg-[#dddedf] hover:bg-[#cccdcf] transition-all w-[30px] h-[30px] cursor-pointer">
+              <img src={fb} alt="facebook" className="opacity-40" />
+            </div>
+            <div className="flex items-center justify-center rounded-full bg-[#dddedf] hover:bg-[#cccdcf] transition-all w-[30px] h-[30px] cursor-pointer">
+              {" "}
+              <img src={li} alt="li" className="opacity-40" />
+            </div>
           </div>
         </div>
         <div className="mt-[25px] mb-[37px]">
