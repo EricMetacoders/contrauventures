@@ -56,24 +56,15 @@ function MainFounder(props) {
     // initialSlide: 3,
     infinite: false,
     arrows: false,
+
     responsive: [
       {
-        breakpoint: 426,
+        breakpoint: 639,
         settings: {
           slidesToShow: 2.5,
-        },
-      },
-
-      {
-        breakpoint: 769,
-        settings: {
-          slidesToShow: 2.5,
-        },
-      },
-      {
-        breakpoint: 1025,
-        settings: {
-          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: false,
+          arrows: false,
         },
       },
     ],

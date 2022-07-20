@@ -110,7 +110,12 @@ function ListFounder({ listDataFounder }) {
                       clickDetailFounder(item);
                     }}
                   />
-                  <div className="framemaintile">
+                  <div
+                    className="framemaintile"
+                    onClick={() => {
+                      clickDetailFounder(item);
+                    }}
+                  >
                     <Box className="framedetailfoundername">
                       <Box className="detailfoundername">
                         FOUNDER

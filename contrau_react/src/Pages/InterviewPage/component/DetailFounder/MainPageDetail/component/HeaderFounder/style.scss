@@ -24,14 +24,15 @@
   .titledetaimainframeheader {
     position: absolute;
     display: flex;
-    display: -webkit-flex;
+    // display: -webkit-flex;
     // left: 75.8%;
     right: 5%;
     top: 0%;
     bottom: 0%;
     padding-top: 28px;
-    height: fit-content;
+    height: auto;
     column-gap: 2.6vw;
+    // -webkit-column-gap: 2.6vw;
     .titledetaiframeheader {
       cursor: pointer;
       font-family: "Poppins", sans-serif;
@@ -140,15 +141,19 @@
       position: absolute;
       left: 0%;
       right: 81.74%;
-      top: 1%;
+      top: 0%;
       bottom: 17.85%;
-      // padding-top: 16.98px;
+      padding-top: 16.98px;
       padding-left: 16.76px;
+      img {
+        width: 95px;
+      }
     }
     .titledetaimainframeheader {
       position: absolute;
       left: 85%;
-      height: auto;
+      font-size: 30px;
+      padding-top: 15px;
     }
     .framemaintilecenterheader {
       position: absolute;
