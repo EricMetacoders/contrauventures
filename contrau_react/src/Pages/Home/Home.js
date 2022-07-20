@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import Header from "./Components/Header/Header";
 import Hero from "./Components/Hero/Hero";
@@ -18,6 +18,10 @@ export default function Home() {
   const loading = useSelector((state) => state.homeSlice.loading);
   const resultRef = useRef(null);
   const partnersRef = useRef(null);
+
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
 
   return (
     <>
