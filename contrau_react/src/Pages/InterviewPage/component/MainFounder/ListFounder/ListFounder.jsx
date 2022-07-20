@@ -103,7 +103,8 @@ function ListFounder({ listDataFounder }) {
                   }}
                 >
                   <img
-                    src={matchMobile ? item.acf.thumbnail : item.acf.image}
+                    // src={matchMobile ? item.acf.thumbnail : item.acf.image}
+                    src={matchMobile ? item.acf.image : item.acf.image}
                     alt=""
                     className="imgfounder"
                     onClick={() => {
