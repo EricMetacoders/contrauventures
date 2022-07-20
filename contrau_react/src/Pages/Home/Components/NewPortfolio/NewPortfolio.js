@@ -66,7 +66,10 @@ const NewPortfolio = forwardRef((props, ref) => {
           </div>
 
           {/* tabs */}
-          <div className="flex items-center justify-center pb-[87px] lg:pb-[329px] pt-[38px] md:mt-[268px] lg:mt-0 lg:pt-[6.6%]  bg-portfolioBg">
+          <div
+            id="tabsID"
+            className="flex items-center justify-center pb-[87px]  lg:pb-[329px] pt-[38px] md:mt-0 lg:mt-0 lg:pt-0 xl:pt-[6.6%]  bg-portfolioBg"
+          >
             <div className="mx-[20px]">
               <div className="hidden sm:block">
                 <Tabs defaultActiveKey="1">
@@ -81,7 +84,7 @@ const NewPortfolio = forwardRef((props, ref) => {
                     }
                     key="1"
                   >
-                    <div className="flex flex-wrap justify-left gap-y-[30px] gap-x-[20px] mx-auto lg:w-[740px] xl:w-[900px] lg:mt-[40px]">
+                    <div className="flex flex-wrap justify-left gap-y-[30px] gap-x-[20px] mx-auto sm:w-[504px] xl:w-[877px] 2xl:w-[900px] lg:mt-[40px]">
                       {viewAll?.map((logo, i) => {
                         return (
                           <>
@@ -91,7 +94,7 @@ const NewPortfolio = forwardRef((props, ref) => {
                                   <img
                                     src={logo?.acf?.image}
                                     alt={logo?.acf?.category}
-                                    className="imgWidth opacity-40 hover:opacity-100 w-[204px] h-[117px] object-contain"
+                                    className="imgWidth opacity-40 hover:opacity-100  w-[204px] h-[117px] object-contain"
                                   />
                                 </div>
                               </div>
@@ -146,7 +149,7 @@ const NewPortfolio = forwardRef((props, ref) => {
                     tab={
                       <div
                         id="portfolioHover"
-                        className=" popinsFont lg:text-[15px] xl:text-[20px]  lg:font-semibold w-full h-full  flex flex-col items-center justify-center"
+                        className=" popinsFont lg:text-[15px] text-[10px] xl:text-[20px]  lg:font-semibold w-full h-full  flex flex-col items-center justify-center"
                       >
                         <p className="sm:block hidden">Digital Supply Chain</p>
                       </div>

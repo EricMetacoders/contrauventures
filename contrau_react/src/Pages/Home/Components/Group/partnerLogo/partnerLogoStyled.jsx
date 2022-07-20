@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
   cursor: pointer;
@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
 `;
 
 export const WrapperLogo = styled.div`
-  padding-left: ${props => props.paddingLeft};
+  padding-left: ${(props) => props.paddingLeft};
 `;
 
 export const BackgroundLogo = styled.div`
@@ -16,8 +16,8 @@ export const BackgroundLogo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: ${props => props.wrapperWidth};
-  height: ${props => props.wrapperHeight};
+  width: ${(props) => props.wrapperWidth};
+  height: ${(props) => props.wrapperHeight};
 `;
 
 export const LinkLogo = styled.a`
@@ -25,6 +25,9 @@ export const LinkLogo = styled.a`
   height: 50%;
   object-fit: contain;
   opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     opacity: 1;

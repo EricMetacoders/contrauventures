@@ -13,16 +13,16 @@ export default function FounderImageCarousel({ data }) {
   return (
     <div
       id="divBtn"
-      className=" relative imgCarousel  w-[100%] rounded-3xl overflow-hidden mx-auto"
+      className=" relative imgCarousel  w-[100%] rounded-3xl overflow-hidden mx-auto smooth"
     >
       <img
         src={data?.acf?.image}
         alt={data?.acf?.name}
-        className="rounded-3xl  scaleImg mx-auto "
+        className="rounded-3xl  scaleImg mx-auto smooth"
       />
 
       {/* Desktop */}
-      <div className="hidden 2xl:block absolute bottom-[9%] w-full imgText z-50 ">
+      <div className="hidden 2xl:block absolute bottom-[9%] w-full imgText z-50 smooth">
         <div className="flex flex-col items-center justify-center space-y-5">
           <div className="flex flex-col items-center justify-center leading-[1]">
             <p className="text-white text-[32px] 2xl:text-[50px] font-thin popinsFont">
@@ -46,7 +46,7 @@ export default function FounderImageCarousel({ data }) {
 
       {/* Small Desktop Screen */}
 
-      <div className="hidden lg:block 2xl:hidden absolute bottom-[9%] w-full imgText z-50 ">
+      <div className="hidden lg:block 2xl:hidden absolute bottom-[9%] w-full imgText z-50 smooth ">
         <div className="flex flex-col items-center justify-center space-y-5">
           <div className="flex flex-col items-center justify-center leading-[1]">
             <p className="text-white text-[32px] 2xl:text-[50px] font-thin popinsFont">
@@ -140,12 +140,12 @@ export default function FounderImageCarousel({ data }) {
 
       {/* Blur Background */}
       <div
-        className="hidden lg:block  w-full h-full absolute bgBlur -translate-y-[43%]"
+        className="hidden lg:block  w-full h-full absolute bgBlur -translate-y-[43%] smooth"
         style={{
           background: `linear-gradient(0deg,${data.acf.gradient_color} 49%, ${data.acf.background_color}75%)`,
         }}
       ></div>
-      <div className="btnInterview flex justify-center w-full ">
+      <div className="btnInterview flex justify-center w-full smooth">
         <div className="hidden lg:block w-[200px] h-[60px] bg-white  cursor-pointer z-50">
           <div
             id="seeF"

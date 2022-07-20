@@ -18,7 +18,7 @@ export default function FounderImageCarousel({ data }) {
       <img
         src={data?.acf?.image}
         alt={data?.acf?.name}
-        className="rounded-3xl w-full h-full scaleImg"
+        className="rounded-3xl w-full h-full scaleImg "
       />
       <div className="hidden lg:block absolute bottom-[63px] w-full imgText z-50">
         <div className="flex flex-col items-center justify-center space-y-5">

@@ -19,7 +19,7 @@ export default function Hero() {
         </div>
         <div
           id="heroImg"
-          className="md:flex items-end justify-end overflow-visible relative left-[50%] translate-x-[-21%] lg:translate-x-[-39%] lg:translate-y-[20.9%]"
+          className="md:flex items-end justify-end overflow-visible relative left-[50%] translate-x-[-21%] lg:translate-x-[-37%] lg:translate-y-[20.9%]"
         >
           <div className="w-full h-full mt-[33%] sm:mt-[10%]">
             <img

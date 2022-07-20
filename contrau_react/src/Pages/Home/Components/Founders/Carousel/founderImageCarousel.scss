@@ -13,39 +13,24 @@
   }
 
   #divBtn {
-    --tw-translate-x: unset !important;
-    --tw-translate-y: unset !important;
-  }
-
-  #divBtn:hover {
-    --tw-translate-x: unset !important;
-    --tw-translate-y: unset !important;
-  }
-
-  #divBtn::after {
-    --tw-translate-x: unset !important;
-    --tw-translate-y: unset !important;
-  }
-  #divBtn::before {
-    --tw-translate-x: unset !important;
-    --tw-translate-y: unset !important;
+    transform: translateZ(0);
   }
 
   #divBtn:hover > .bgBlur {
     transform: translateY(-75%);
     transition-property: all;
-    transition-duration: 200ms;
+    transition-duration: 500ms;
   }
   #divBtn:hover > .btnInterview {
     transform: translateY(-178%);
     transition-property: all;
-    transition-duration: 200ms;
+    transition-duration: 500ms;
   }
 
   #divBtn:hover > .imgText {
     transform: translateY(-56%);
     transition-property: all;
-    transition-duration: 200ms;
+    transition-duration: 500ms;
   }
 
   #divBtn:hover > .scaleImg {
@@ -55,7 +40,14 @@
       rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
       scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     transition-property: all;
-    transition-duration: 200ms;
+    transition-duration: 500ms;
+  }
+
+  // Smooth
+  .smooth {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
   }
 
   /* Cousel Arrow Css */
@@ -97,7 +89,7 @@
     #divBtn:hover > .bgBlur {
       transform: translateY(-86%);
       transition-property: all;
-      transition-duration: 200ms;
+      transition-duration: 500ms;
     }
     .slick-slider {
       padding-left: -4%;
@@ -110,7 +102,7 @@
     #divBtn:hover > .bgBlur {
       transform: translateY(-84%);
       transition-property: all;
-      transition-duration: 200ms;
+      transition-duration: 500ms;
     }
   }
 }

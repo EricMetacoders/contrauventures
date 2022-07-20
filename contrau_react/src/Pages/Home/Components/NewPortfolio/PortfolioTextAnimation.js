@@ -45,7 +45,7 @@ export default function Components() {
               {showText2 ? (
                 <FadeInUpDiv>
                   <div className="flex items-center justify-center">
-                    <p className="popinsFont font-[900] text-[110px] mb-0">
+                    <p className="popinsFont font-[900] sm:text-[63px] xl:text-[110px] mb-0">
                       Vietnam's{" "}
                       <span className="popinsFont italic font-thin">
                         victory
@@ -58,7 +58,7 @@ export default function Components() {
               )}
               {showText2 ? (
                 <FadeInUpDiv>
-                  <div className="flex items-center justify-center text-[110px] space-x-3">
+                  <div className="flex items-center justify-center sm:text-[63px] xl:text-[110px] space-x-3">
                     <p className="popinsFont italic font-thin mb-0">is</p>
                     <p className="font-[900] text-red  mb-0">Our victory.</p>
                   </div>
@@ -71,7 +71,7 @@ export default function Components() {
             <div className="mt-[54px]">
               {showText3 ? (
                 <FadeInUpDiv>
-                  <p className="text-[20px] popinsFont font-normal text-hoverGrey mb-0">
+                  <p className="text-[13px] xl:text-[20px] popinsFont font-normal text-hoverGrey mb-0">
                     Our investments focus on the fields that could help boost
                     Vietnam's growth and lift the country up.
                   </p>
@@ -81,7 +81,7 @@ export default function Components() {
               )}
               {showText3 ? (
                 <FadeInUpDiv>
-                  <p className="text-[20px] popinsFont font-normal text-hoverGrey mb-0">
+                  <p className="text-[13px] xl:text-[20px] popinsFont font-normal text-hoverGrey mb-0">
                     We will lay the groundwork and sow the seeds for Vietnam's
                     startup ecosystem, seeing it grow into a dense forest.
                   </p>
@@ -91,7 +91,7 @@ export default function Components() {
               )}
               {showText3 ? (
                 <FadeInUpDiv>
-                  <p className="text-[20px] popinsFont font-normal text-hoverGrey mb-0">
+                  <p className="text-[13px] xl:text-[20px]  popinsFont font-normal text-hoverGrey mb-0">
                     Rather than a fund with the highest profit, we aim to be
                     remembered as a vital contributor to Vietnam's startup
                     ecosystem.
