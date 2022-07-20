@@ -13,22 +13,7 @@
   }
 
   #divBtn {
-    --tw-translate-x: unset !important;
-    --tw-translate-y: unset !important;
-  }
-
-  #divBtn:hover {
-    --tw-translate-x: unset !important;
-    --tw-translate-y: unset !important;
-  }
-
-  #divBtn::after {
-    --tw-translate-x: unset !important;
-    --tw-translate-y: unset !important;
-  }
-  #divBtn::before {
-    --tw-translate-x: unset !important;
-    --tw-translate-y: unset !important;
+    transform: translateZ(0);
   }
 
   #divBtn:hover > .bgBlur {
