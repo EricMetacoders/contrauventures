@@ -17,21 +17,36 @@ function HeaderComponent({ pagecurrent }) {
   const handleNavigation = (e) => {
     const window = e.currentTarget;
     if (document.getElementById("refHeader")) {
-      if (y > window.scrollY) {
-        if (window.scrollY == 0) {
-          document.getElementById("refHeader").style.backgroundColor =
-            "transparent ";
-        } else {
+      if (window.scrollY < 15) {
+        document.getElementById("refHeader").style.display = "block";
+        document.getElementById("refHeader").style.backgroundColor =
+          "transparent ";
+      } else {
+        if (y > window.scrollY) {
           document.getElementById("refHeader").style.display = "block";
           document.getElementById("refHeader").style.backgroundColor =
-            "rgba(0,0,0,0.1)";
+            "rgba(0,0,0,0.5)";
+        } else if (y < window.scrollY) {
+          document.getElementById("refHeader").style.display = "none";
         }
-      } else if (y < window.scrollY) {
-        document.getElementById("refHeader").style.display = "none";
-        document.getElementById("refHeader").style.backgroundColor = "none";
       }
+
+      //
+      // if (y > window.scrollY) {
+      //   if (window.scrollY == 0) {
+      //     document.getElementById("refHeader").style.backgroundColor =
+      //       "transparent ";
+      //   } else {
+      //     document.getElementById("refHeader").style.display = "block";
+      //     document.getElementById("refHeader").style.backgroundColor =
+      //       "rgba(0,0,0,0.1)";
+      //   }
+      // } else if (y < window.scrollY) {
+      //   document.getElementById("refHeader").style.display = "none";
+      //   document.getElementById("refHeader").style.backgroundColor = "none";
+      // }
+      setY(window.scrollY);
     }
-    setY(window.scrollY);
   };
 
   useEffect(() => {
