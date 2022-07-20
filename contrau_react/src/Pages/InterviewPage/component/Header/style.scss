@@ -126,19 +126,21 @@
       position: absolute;
       left: -0.24%;
       right: 81.74%;
-      top: 1%;
+      top: 0%;
       bottom: 0%;
       padding-top: 16.98px;
       padding-left: 16.76px;
       img {
-        width: 90px;
+        width: 95px;
       }
     }
     .titledetaimainframeheader {
       position: absolute;
       left: 85%;
-      height: 50px;
-      transform: translateY(-5px);
+      font-size: 30px;
+      padding-top: 15px;
+
+      // background-color: red;
     }
 
     .framemaintilecenterheader {
