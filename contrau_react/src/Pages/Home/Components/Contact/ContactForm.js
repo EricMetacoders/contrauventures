@@ -131,7 +131,11 @@ export default function ContactForm() {
             name="attachFile"
             onChange={() => {
               let fileName = document.getElementById("file").value.split("\\");
-              setFileName(fileName[2]);
+              if (fileName[2] !== undefined) {
+                setFileName(fileName[2]);
+              } else {
+                setFileName("Attach File");
+              }
             }}
             className="w-full lgl:h-[75px] bg-inputBg pt-[30px] pl-[100px] text-[#fff]  custom-file-input cursor-pointer hidden"
           />
