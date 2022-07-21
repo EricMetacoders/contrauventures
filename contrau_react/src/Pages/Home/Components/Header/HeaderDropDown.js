@@ -1,10 +1,10 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import mobileMenu from "../../../../assets/homepage_img/mobile_menu.png";
 import "antd/dist/antd.css";
 import { Button, Modal } from "antd";
 
 import "./headerDropDown.css";
-import { Link } from "react-router-dom";
 
 export default function HeaderDropDown({ resultRef, partnersRef }) {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -57,13 +57,19 @@ export default function HeaderDropDown({ resultRef, partnersRef }) {
           </Link>
           <p
             className="text-black popinsFont text-[1rem] "
-            onClick={handleScrollPartners}
+            onClick={() => {
+              handleScrollPartners();
+              setIsModalVisible(false);
+            }}
           >
             About Us
           </p>
           <p
             className="text-black popinsFont text-[1rem] "
-            onClick={handleScroll}
+            onClick={() => {
+              handleScroll();
+              setIsModalVisible(false);
+            }}
           >
             Portfolios
           </p>
