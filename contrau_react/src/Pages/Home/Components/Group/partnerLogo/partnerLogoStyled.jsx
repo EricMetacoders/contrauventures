@@ -13,14 +13,9 @@ export const LinkLogo = styled.a`
   width: ${(props) => props.wrapperWidth};
   height: ${(props) => props.wrapperHeight};
   object-fit: contain;
-  opacity: 0.8;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  &:hover {
-    opacity: 1;
-  }
 `;
 
 export const BackgroundLogo = styled.div`
@@ -33,15 +28,9 @@ export const BackgroundLogo = styled.div`
   height: 100%;
 `;
 
-
 export const Logo = styled.img`
   z-index: 999;
   max-width: 50%;
   max-height: 50%;
   object-fit: contain;
-  opacity: 0.8;
-
-  &:hover {
-    opacity: 1;
-  }
 `;
