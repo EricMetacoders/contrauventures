@@ -415,7 +415,7 @@ function ReactScroll({ detailFounder }) {
                             item.year == "2014" ||
                             item.year == "2018" ||
                             item.year == "2020"
-                              ? `${item.image[4].guid}
+                              ? `${item.image[0].guid}
                             `
                               : `${item.image[0].guid}`
                           }
@@ -428,7 +428,7 @@ function ReactScroll({ detailFounder }) {
                             item.year == "2014" ||
                             item.year == "2018" ||
                             item.year == "2020"
-                              ? `${item.image[5].guid}`
+                              ? `${item.image[1].guid}`
                               : `${item.image[1].guid}`
                           }
                         />
@@ -443,7 +443,7 @@ function ReactScroll({ detailFounder }) {
                             item.year == "2014" ||
                             item.year == "2018" ||
                             item.year == "2020"
-                              ? `${item.image[6].guid}
+                              ? `${item.image[2].guid}
                             `
                               : `${item.image[2].guid}`
                           }
@@ -456,7 +456,7 @@ function ReactScroll({ detailFounder }) {
                             (item.year == "2014" ||
                               item.year == "2018" ||
                               item.year == "2020") &&
-                            `${item.image[7].guid}`
+                            `${item.image[3].guid}`
                           }
                         />
                       </div>
