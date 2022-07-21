@@ -55,22 +55,19 @@ export default function Founders() {
         </div>
 
         {/* Desktop Small Screen */}
-        <div className="hidden lg:block 2xl:hidden mt-[20%] md:mt-[43%] lg:mt-[18%] ">
+        <div className="hidden lg:block 2xl:hidden mt-[11%] md:mt-[43%] lg:mt-[18%] ">
           <FounderCarousel />
         </div>
       </div>
 
       {/* Tablet */}
-      <div
-        id="tabletSlick"
-        className="hidden md:block lg:hidden mt-[20%] md:mt-[20%] lg:mt-[18%]  "
-      >
+      <div id="tabletSlick" className="hidden md:block lg:hidden  md:mt-[14%] ">
         <TabletCarousel />
       </div>
 
       {/* Small Tablet */}
 
-      <div className="hidden  sm:block md:hidden mt-[20%] md:mt-[43%] lg:mt-[18%]">
+      <div className="hidden  sm:block md:hidden mt-[10%] lg:mt-[14%]">
         <SmallTabletCarousel />
       </div>
       {/* Mobile */}
