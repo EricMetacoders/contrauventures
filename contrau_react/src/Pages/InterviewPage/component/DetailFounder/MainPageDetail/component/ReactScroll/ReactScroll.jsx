@@ -250,8 +250,6 @@ function ReactScroll({ detailFounder }) {
   };
 
   const handleSetActive = (to) => {
-    var test1 = document.getElementsByClassName("yeartitle active")[0];
-
     for (var i = 0; i < itemsRef.current.length; i++) {
       if (to == itemsRef.current[i].children[1].children[0].textContent) {
         var addColor =
@@ -338,12 +336,18 @@ function ReactScroll({ detailFounder }) {
         itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
           .children[1].children[0];
 
-      if (addColor.style.filter == "grayscale(100%)") {
-        addColor.style.filter = "grayscale(100%)";
-        addColor2.style.filter = "grayscale(100%)";
-        addColor3.style.filter = "grayscale(100%)";
-        addColor4.style.filter = "grayscale(100%)";
-      }
+      // if (
+      //   itemsRef.current[itemsRef.current.length - 1].children[1].children[0]
+      //     .textContent
+      // ) {
+      //   // var test1 =
+      //   //   document.getElementsByClassName("yeartitle active").innerHTML;
+      //   // console.log("test1:", test1);
+      //   // console.log(
+      //   //   "1",
+      //   //   itemsRef.current[itemsRef.current.length - 1].children[1].children[0]
+      //   // );
+      // }
     }
   };
 
