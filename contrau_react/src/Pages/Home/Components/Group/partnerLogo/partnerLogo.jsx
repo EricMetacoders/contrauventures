@@ -1,18 +1,18 @@
-import { Logo, Wrapper, BackgroundLogo, WrapperLogo, LinkLogo } from "./partnerLogoStyled";
+import { Logo, Wrapper, BackgroundLogo, LinkLogo } from "./partnerLogoStyled";
 
 export const PartnerLogo = ({ logoUrl, logoName, wrapperWidth, wrapperHeight, paddingLeft, linkWebsite }) => {
   return (
     <Wrapper>
-      <WrapperLogo paddingLeft={paddingLeft}>
-        <BackgroundLogo {...{ wrapperWidth, wrapperHeight }} >
-          <LinkLogo href={linkWebsite} target="_blank">
+      <div className="pl-[90px]">
+        <LinkLogo {...{ wrapperWidth, wrapperHeight, paddingLeft }} href={linkWebsite} target="_blank">
+          <BackgroundLogo >
             <Logo
               src={logoUrl}
               alt={logoName}
             />
-          </LinkLogo>
-        </BackgroundLogo>
-      </WrapperLogo>
+          </BackgroundLogo>
+        </LinkLogo>
+      </div>
     </Wrapper>
   )
 } 

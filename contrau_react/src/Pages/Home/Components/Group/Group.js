@@ -51,9 +51,10 @@ const Group = forwardRef((props, ref) => {
       </div>
       <div className="bg-partnersContactBg overflow-hidden">
         {/* desktop */}
-        <WrapperGroupCarousel className="overflow-hidden hidden xl:block mt-[172px]">
-          <GroupCarouselAnimation className="flex relative h-[173px]">
-            {partners
+        <WrapperGroupCarousel className="hidden xl:block mt-[172px]">
+          <GroupCarouselAnimation>
+            {
+            partners
               ?.filter((partner) => partner?.acf?.category === "partner 1")
               .map((partner, i) => {
                 return (
@@ -63,7 +64,7 @@ const Group = forwardRef((props, ref) => {
                       logoName: partner?.acf?.name || "",
                       wrapperWidth: "173px",
                       wrapperHeight: "173px",
-                      paddingLeft: "20px",
+                      paddingLeft: "90px",
                       linkWebsite: partner?.acf?.linkWebsite,
                     }}
                     key={i}
@@ -80,7 +81,7 @@ const Group = forwardRef((props, ref) => {
                       logoName: partner?.acf?.name || "",
                       wrapperWidth: "173px",
                       wrapperHeight: "173px",
-                      paddingLeft: "20px",
+                      paddingLeft: "90px",
                       linkWebsite: partner?.acf?.linkWebsite,
                     }}
                     key={i}
@@ -97,7 +98,7 @@ const Group = forwardRef((props, ref) => {
                       logoName: partner?.acf?.name || "",
                       wrapperWidth: "173px",
                       wrapperHeight: "173px",
-                      paddingLeft: "20px",
+                      paddingLeft: "90px",
                       linkWebsite: partner?.acf?.linkWebsite,
                     }}
                     key={i}
@@ -114,14 +115,14 @@ const Group = forwardRef((props, ref) => {
                       logoName: partner?.acf?.name || "",
                       wrapperWidth: "173px",
                       wrapperHeight: "173px",
-                      paddingLeft: "20px",
+                      paddingLeft: "90px",
                       linkWebsite: partner?.acf?.linkWebsite,
                     }}
                     key={i}
                   />
                 );
               })}
-            {partners
+              {partners
               ?.filter((partner) => partner?.acf?.category === "partner 1")
               .map((partner, i) => {
                 return (
@@ -131,24 +132,7 @@ const Group = forwardRef((props, ref) => {
                       logoName: partner?.acf?.name || "",
                       wrapperWidth: "173px",
                       wrapperHeight: "173px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 1")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "20px",
+                      paddingLeft: "90px",
                       linkWebsite: partner?.acf?.linkWebsite,
                     }}
                     key={i}
@@ -157,7 +141,7 @@ const Group = forwardRef((props, ref) => {
               })}
           </GroupCarouselAnimation>
         </WrapperGroupCarousel>
-        <WrapperGroupCarousel className="overflow-hidden hidden xl:block mt-[50px]">
+        {/* <WrapperGroupCarousel className="overflow-hidden hidden xl:block mt-[50px]">
           <GroupCarouselAnimation
             rightToLeft={true}
             className="flex relative h-[173px]"
@@ -265,8 +249,8 @@ const Group = forwardRef((props, ref) => {
                 );
               })}
           </GroupCarouselAnimation>
-        </WrapperGroupCarousel>
-        <WrapperGroupCarousel className="overflow-hidden hidden xl:block mt-[50px] mb-[323px]">
+        </WrapperGroupCarousel> */}
+        {/* <WrapperGroupCarousel className="overflow-hidden hidden xl:block mt-[50px] mb-[323px]">
           <GroupCarouselAnimation className="flex relative h-[173px]">
             {partners
               ?.filter((partner) => partner?.acf?.category === "partner 3")
@@ -406,12 +390,12 @@ const Group = forwardRef((props, ref) => {
               })}
           </GroupCarouselAnimation>
 
-          {/* <div className="flex items-cener justify-center mt-[76px] mb-[76px]">
+          <div className="flex items-cener justify-center mt-[76px] mb-[76px]">
             <button className="px-[28px] py-[12px] font-semibold text-white border hover:bg-white hover:text-black transition-all">
               View All
             </button>
-          </div> */}
-        </WrapperGroupCarousel>
+          </div>
+        </WrapperGroupCarousel> */}
 
         {/* tablet */}
         <WrapperGroupCarousel className="overflow-hidden hidden sm:block xl:hidden mt-[172px]">

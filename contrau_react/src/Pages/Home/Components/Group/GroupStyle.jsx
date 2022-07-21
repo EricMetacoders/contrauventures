@@ -10,9 +10,9 @@ export const WrapperGroupCarousel = styled.div`
 	&:after {
 		@include white-gradient;
 		content: "";
-		height: 120px;
+		height: 180px;
 		position: absolute;
-		width: 200px;
+		width: 0px;
 		z-index: 2;
 	}
 	
@@ -54,9 +54,9 @@ export const GroupCarouselAnimation = styled.div`
                   ? groupCarouselRightToLeft
                   : groupCarouselLeftToRight
     }
-    40s 
+    40s
     linear
     infinite;
-    width: calc(250px * 14);
+    width: 200%;
     display: flex;
 `;
