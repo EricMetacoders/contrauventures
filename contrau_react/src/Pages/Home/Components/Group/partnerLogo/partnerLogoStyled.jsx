@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  cursor: pointer;
   height: 180px;
   width: 250px;
   display: flex;
@@ -16,6 +15,7 @@ export const LinkLogo = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 `;
 
 export const BackgroundLogo = styled.div`
