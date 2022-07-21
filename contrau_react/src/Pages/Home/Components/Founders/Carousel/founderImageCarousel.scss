@@ -17,9 +17,7 @@
   }
 
   #divBtn:hover > .bgBlur {
-    transform: translateY(-56%);
-    transition-property: all;
-    transition-duration: 500ms;
+    transform: translateY(-100%);
   }
   #divBtn:hover > .btnInterview {
     transform: translateY(-178%);
