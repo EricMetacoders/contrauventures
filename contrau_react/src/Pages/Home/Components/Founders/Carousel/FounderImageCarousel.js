@@ -140,9 +140,9 @@ export default function FounderImageCarousel({ data }) {
 
       {/* Blur Background */}
       <div
-        className="hidden lg:block  w-full h-full absolute bgBlur -translate-y-[43%] smooth"
+        className="hidden lg:block  w-full h-full absolute bgBlur smooth"
         style={{
-          background: `linear-gradient(0deg,${data.acf.gradient_color} 49%, ${data.acf.background_color}75%)`,
+          background: `linear-gradient(to top, #191C21 0, rgba(25, 28, 33, 0.5) 66%, rgba(25, 28, 33, 0) 90%) center no-repeat`,
         }}
       ></div>
       <div className="btnInterview flex justify-center w-full smooth">
