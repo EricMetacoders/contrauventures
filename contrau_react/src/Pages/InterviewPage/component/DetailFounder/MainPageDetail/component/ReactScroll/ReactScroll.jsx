@@ -338,10 +338,12 @@ function ReactScroll({ detailFounder }) {
         itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
           .children[1].children[0];
 
-      addColor.style.filter = "grayscale(100%)";
-      addColor2.style.filter = "grayscale(100%)";
-      addColor3.style.filter = "grayscale(100%)";
-      addColor4.style.filter = "grayscale(100%)";
+      if (addColor.style.filter == "grayscale(100%)") {
+        addColor.style.filter = "grayscale(100%)";
+        addColor2.style.filter = "grayscale(100%)";
+        addColor3.style.filter = "grayscale(100%)";
+        addColor4.style.filter = "grayscale(100%)";
+      }
     }
   };
 

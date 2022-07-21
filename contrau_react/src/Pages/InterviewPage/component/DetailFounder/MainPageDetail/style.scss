@@ -197,7 +197,7 @@
             font-weight: 800;
             border-bottom: 18px solid #db2f33ed;
           }
-          :nth-child(3) {
+          span {
             font-weight: 100;
           }
         }
@@ -578,8 +578,8 @@
               font-weight: 800;
               border-bottom: 7px solid red;
             }
-            :nth-child(3) {
-              font-weight: 200;
+            span {
+              font-weight: 100;
             }
           }
         }
@@ -1624,7 +1624,7 @@
             margin-top: 125px;
 
             img {
-              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle3.png");
+              content: url("https://i1-kinhdoanh.vnecdn.net/2022/07/20/CG2A5588-jpeg-9823-1658310029.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=PVihFJpE6-YuPwIgmOwEzw");
             }
             p {
               width: 1320px;
