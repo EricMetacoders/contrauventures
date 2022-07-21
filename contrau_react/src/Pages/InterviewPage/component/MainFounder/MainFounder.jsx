@@ -31,6 +31,15 @@ function MainFounder(props) {
     }
   }
 
+  // const listFounderRedux = useSelector(
+  //   (state) => state.interviewServices.faqList
+  // );
+  // console.log("listFounderRedux:", listFounderRedux);
+
+  // useEffect(() => {
+  //   dispatch(getListFounder());
+  // }, []);
+
   useEffect(() => {
     async function fetchData() {
       var _listFounder = await getListFounder();
@@ -49,8 +58,6 @@ function MainFounder(props) {
   ];
 
   const [clicked, setClicked] = useState(contentdatacategory[0].name);
-
-  const history = useNavigate();
 
   const carouselProperties = {
     // initialSlide: 3,
@@ -93,11 +100,6 @@ function MainFounder(props) {
       console.log("Failed to fetch", error);
     }
   }
-
-  const clickDetailFounder = async (item) => {
-    const founderId = item.acf.interview[0];
-    history(`/detailfounder/${founderId}`);
-  };
 
   return (
     <div className="rootmainfounder">

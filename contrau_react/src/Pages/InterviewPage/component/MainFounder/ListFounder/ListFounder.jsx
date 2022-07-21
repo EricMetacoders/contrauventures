@@ -7,23 +7,6 @@ import { createTheme, makeStyles, ThemeProvider } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 ListFounder.propTypes = {};
 
-// const useStyles = makeStyles((theme) => ({
-//   gridItem: {
-//     [theme.breakpoints.up("xs")]: {
-//       columnGap: "20px",
-//       rowGap: "20px",
-//     },
-//     [theme.breakpoints.up("lg")]: {
-//       columnGap: "25px",
-//       rowGap: "40px",
-//     },
-//     [theme.breakpoints.up("xl")]: {
-//       columnGap: "25px",
-//       rowGap: "40px",
-//     },
-//   },
-// }));
-
 const theme = createTheme({
   breakpoints: {
     values: {
