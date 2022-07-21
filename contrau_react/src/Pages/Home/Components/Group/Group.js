@@ -2,19 +2,21 @@ import React, { useEffect, useState, forwardRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import GroupTextAnimation from "./GroupTextAnimation";
 import { getPartnersList } from "../../../../reducers/homeSlice";
-import "./group.css";
 import { PartnerLogo } from "./partnerLogo/partnerLogo";
 import { GroupCarouselAnimation, WrapperGroupCarousel } from "./GroupStyle";
 
 const Group = forwardRef((props, ref) => {
   const dispatch = useDispatch();
 
+  // get data from homeSlice
   const partners = useSelector((state) => state.homeSlice.partners);
 
   useEffect(() => {
+    // call api from homeSlice
     dispatch(getPartnersList());
   }, []);
 
+  // Scroll to ref
   const [offset, setOffset] = useState(0);
   const handleScroll = () => setOffset(window.pageYOffset);
   useEffect(() => {
@@ -53,24 +55,6 @@ const Group = forwardRef((props, ref) => {
         {/* desktop */}
         <WrapperGroupCarousel className="hidden xl:block mt-[172px]">
           <GroupCarouselAnimation>
-            {
-            partners
-              ?.filter((partner) => partner?.acf?.category === "partner 1")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
             {partners
               ?.filter((partner) => partner?.acf?.category === "partner 1")
               .map((partner, i) => {
@@ -122,7 +106,24 @@ const Group = forwardRef((props, ref) => {
                   />
                 );
               })}
-              {partners
+            {partners
+              ?.filter((partner) => partner?.acf?.category === "partner 1")
+              .map((partner, i) => {
+                return (
+                  <PartnerLogo
+                    {...{
+                      logoUrl: partner?.acf?.image || "",
+                      logoName: partner?.acf?.name || "",
+                      wrapperWidth: "173px",
+                      wrapperHeight: "173px",
+                      paddingLeft: "90px",
+                      linkWebsite: partner?.acf?.linkWebsite,
+                    }}
+                    key={i}
+                  />
+                );
+              })}
+            {partners
               ?.filter((partner) => partner?.acf?.category === "partner 1")
               .map((partner, i) => {
                 return (

@@ -12,13 +12,14 @@ import Footer from "./Components/Footer/Footer";
 import "./index.css";
 import NewPortfolio from "./Components/NewPortfolio/NewPortfolio";
 import Loading from "../../Components/Loading/Loading";
-import { useLocation } from "react-router-dom";
 export default function Home() {
-  const location = useLocation();
   const loading = useSelector((state) => state.homeSlice.loading);
+
+  // Ref of scroll to Partners Component and About Us Component
   const resultRef = useRef(null);
   const partnersRef = useRef(null);
 
+  // scroll to top
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   };
@@ -32,7 +33,7 @@ export default function Home() {
       <NewPortfolio ref={resultRef} />
       <ValueAdd />
       <Faq />
-      {/* <News /> */}
+      <News />
       <Contact />
       <Footer />
     </>

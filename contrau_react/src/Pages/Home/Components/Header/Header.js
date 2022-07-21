@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../../assets/homepage_img/logo.svg";
-import logoMobile from "../../../../assets/homepage_img/logo_mobile.png";
 import HeaderDropDown from "./HeaderDropDown";
 export default function Header({ resultRef, partnersRef }) {
   // scroll to Porfolio

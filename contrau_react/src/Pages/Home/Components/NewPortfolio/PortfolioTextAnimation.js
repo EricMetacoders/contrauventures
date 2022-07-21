@@ -10,9 +10,6 @@ const FadeInUpDiv = styled.div`
 export default function Components() {
   const [showText2, setShowText2] = useState(false);
   const [showText3, setShowText3] = useState(false);
-  const [showText4, setShowText4] = useState(false);
-  const [showText5, setShowText5] = useState(false);
-  const [showText6, setShowText6] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -21,15 +18,6 @@ export default function Components() {
     setTimeout(() => {
       setShowText3(true);
     }, 1000);
-    setTimeout(() => {
-      setShowText4(true);
-    }, 1500);
-    setTimeout(() => {
-      setShowText5(true);
-    }, 2000);
-    setTimeout(() => {
-      setShowText6(true);
-    }, 2500);
   }, []);
   return (
     <>
@@ -60,7 +48,9 @@ export default function Components() {
                 <FadeInUpDiv>
                   <div className="flex items-center justify-center sm:text-[63px] xl:text-[110px] space-x-3">
                     <p className="popinsFont italic font-thin mb-0">is</p>
-                    <p className="font-[900] text-red  mb-0">Our victory.</p>
+                    <p className="popinsFont font-[900] text-red  mb-0">
+                      Our victory.
+                    </p>
                   </div>
                 </FadeInUpDiv>
               ) : (
