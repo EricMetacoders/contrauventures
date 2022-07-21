@@ -333,14 +333,7 @@ function ReactScroll({ detailFounder }) {
   };
 
   return (
-    <div
-      style={{
-        backgroundColor: "#151515",
-        position: "relative",
-        paddingBottom: "80%",
-        paddingTop: "15%",
-      }}
-    >
+    <div className="framemaingallery">
       <div className="categorydetailyear" ref={refCategory}>
         <div className="frameyearcategory">
           {Object.keys(listGallery).length > 0 &&
@@ -384,6 +377,10 @@ function ReactScroll({ detailFounder }) {
                         : "frameimgmain2"
                     }
                   >
+                    {/* ${item.image[4].guid} */}
+                    {/* https://i1-kinhdoanh.vnecdn.net/2022/07/19/dsc-1886-1658197922-9714-1658198035.jpg?w=680&h=0&q=100&dpr=1&fit=crop&s=1ZlG9EqgOhvTsQKjsx9Qcg */}
+                    {/* https://i1-kinhdoanh.vnecdn.net/2022/07/20/CG2A5588-jpeg-9823-1658310029.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=PVihFJpE6-YuPwIgmOwEzw */}
+                    {/* https://i1-kinhdoanh.vnecdn.net/2022/07/20/294441261-414743160609747-4005-2006-2959-1658305214.jpg?w=300&h=180&q=100&dpr=1&fit=crop&s=xsopxkjkL7hWYyyqAiBrTQ */}
                     <div className="frameimgtop">
                       <div className="frameimg1">
                         <img
@@ -393,7 +390,7 @@ function ReactScroll({ detailFounder }) {
                             item.year == "2018" ||
                             item.year == "2020"
                               ? `${item.image[4].guid}
-                    `
+                            `
                               : `${item.image[0].guid}`
                           }
                         />
@@ -421,7 +418,7 @@ function ReactScroll({ detailFounder }) {
                             item.year == "2018" ||
                             item.year == "2020"
                               ? `${item.image[6].guid}
-                       `
+                            `
                               : `${item.image[2].guid}`
                           }
                         />
@@ -442,10 +439,6 @@ function ReactScroll({ detailFounder }) {
 
                   <div className="frametitleyear">
                     <div className="titleyeardetail">{item.year}</div>
-                    <div className="detailtitle">
-                      <div>{item.title_top}</div>
-                      <div>{item.title_bottom}</div>
-                    </div>
                   </div>
                 </div>
               </div>
