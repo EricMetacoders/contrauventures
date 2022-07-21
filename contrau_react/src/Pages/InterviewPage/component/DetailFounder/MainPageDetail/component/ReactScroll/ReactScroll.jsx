@@ -154,48 +154,6 @@ function ReactScroll({ detailFounder }) {
     itemsRef.current = itemsRef.current.slice(0, listGallery.length);
   }, [listGallery]);
 
-  useEffect(() => {
-    window.addEventListener("scroll", scrollHandler2);
-    return () => {
-      window.removeEventListener("scroll", scrollHandler2);
-    };
-  }, []);
-  const scrollHandler2 = () => {
-    // if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-
-    //   alert("you're at the bottom of the page");
-    // }
-    var docHeight = document.body.offsetHeight;
-
-    docHeight =
-      docHeight == undefined
-        ? window.document.documentElement.scrollHeight
-        : docHeight;
-
-    var winheight = window.innerHeight;
-
-    winheight =
-      winheight == undefined
-        ? document.documentElement.clientHeight
-        : winheight;
-
-    var scrollpoint = window.scrollY;
-
-    scrollpoint =
-      scrollpoint == undefined
-        ? window.document.documentElement.scrollTop
-        : scrollpoint;
-
-    // console.log("windowYoffset:", window.pageYOffset);
-
-    // console.log("window.innerHeight:", window.innerHeight);
-    // console.log(
-    //   "window.innerHeight + window.scrollY :",
-    //   window.innerHeight + window.scrollY
-    // );
-    // console.log("document.body.offsetHeight:", document.body.offsetHeight);
-  };
-
   const scrollHandler = () => {
     const between = (x, min, max) => {
       return x >= min && x <= max;
@@ -337,12 +295,56 @@ function ReactScroll({ detailFounder }) {
     const bottom =
       Math.ceil(window.innerHeight + window.scrollY) >=
       document.documentElement.scrollHeight;
+    console.log("bottom:", bottom);
 
     if (bottom) {
+      // HIDE CATEGORY YEAR
       const myReference = refCategory.current;
       myReference.style.display = "none";
+      // ADD COLOR LAST IMGAGES YEAR
+      var addColor =
+        itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
+          .children[0].children[0];
+      var addColor2 =
+        itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
+          .children[1].children[0];
+      var addColor3 =
+        itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
+          .children[0].children[0];
+      var addColor4 =
+        itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
+          .children[1].children[0];
+
+      addColor.style.filter = "grayscale(0%)";
+      addColor2.style.filter = "grayscale(0%)";
+      addColor3.style.filter = "grayscale(0%)";
+      addColor4.style.filter = "grayscale(0%)";
+
+      // noColor.style.filter = "grayscale(100%)";
+      // noColor2.style.filter = "grayscale(100%)";
+      // noColor3.style.filter = "grayscale(100%)";
+      // noColor4.style.filter = "grayscale(100%)";
+    } else {
+      var addColor =
+        itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
+          .children[0].children[0];
+      var addColor2 =
+        itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
+          .children[1].children[0];
+      var addColor3 =
+        itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
+          .children[0].children[0];
+      var addColor4 =
+        itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
+          .children[1].children[0];
+
+      addColor.style.filter = "grayscale(100%)";
+      addColor2.style.filter = "grayscale(100%)";
+      addColor3.style.filter = "grayscale(100%)";
+      addColor4.style.filter = "grayscale(100%)";
     }
   };
+
   // ADD SCROLL EVENT FOR CHECK BOTTOM
   useEffect(() => {
     window.addEventListener("scroll", handleScroll3, {
@@ -399,10 +401,6 @@ function ReactScroll({ detailFounder }) {
                         : "frameimgmain2"
                     }
                   >
-                    {/* ${item.image[4].guid} */}
-                    {/* https://i1-kinhdoanh.vnecdn.net/2022/07/19/dsc-1886-1658197922-9714-1658198035.jpg?w=680&h=0&q=100&dpr=1&fit=crop&s=1ZlG9EqgOhvTsQKjsx9Qcg */}
-                    {/* https://i1-kinhdoanh.vnecdn.net/2022/07/20/CG2A5588-jpeg-9823-1658310029.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=PVihFJpE6-YuPwIgmOwEzw */}
-                    {/* https://i1-kinhdoanh.vnecdn.net/2022/07/20/294441261-414743160609747-4005-2006-2959-1658305214.jpg?w=300&h=180&q=100&dpr=1&fit=crop&s=xsopxkjkL7hWYyyqAiBrTQ */}
                     <div className="frameimgtop">
                       <div className="frameimg1">
                         <img
