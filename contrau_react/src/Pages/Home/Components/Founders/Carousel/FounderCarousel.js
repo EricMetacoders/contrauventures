@@ -9,6 +9,7 @@ import "./divImageSize.scss";
 
 export default function FounderCarousel() {
   const data = useSelector((state) => state.homeSlice.founders);
+
   const settings = {
     slidesToShow: 3,
     slidesToScroll: 1,

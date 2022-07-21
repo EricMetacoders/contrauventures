@@ -10,9 +10,13 @@ import MobileCarousel from "./Carousel/MobileCarousel";
 import "./founder.scss";
 export default function Founders() {
   const dispatch = useDispatch();
+
+  // call api from homeSlice
   useEffect(() => {
     dispatch(getFounderList());
   }, []);
+
+  // handle enable animation location
   const [offset, setOffset] = useState(null);
   const handleScroll = () => setOffset(window.pageYOffset);
   useEffect(() => {
