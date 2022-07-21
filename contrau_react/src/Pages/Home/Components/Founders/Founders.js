@@ -72,7 +72,7 @@ export default function Founders() {
       </div>
       {/* Mobile */}
 
-      <div className="block  sm:hidden mt-[20%] md:mt-[43%] lg:mt-[18%]">
+      <div className="block  sm:hidden mt-[30%] md:mt-[43%] lg:mt-[18%]">
         <MobileCarousel />
       </div>
     </div>

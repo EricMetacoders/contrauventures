@@ -20,20 +20,19 @@ export default function Header({ resultRef, partnersRef }) {
   const handleNavigation = (e) => {
     const window = e.currentTarget;
     if (document.getElementById("headerNav")) {
-          if (window.scrollY < 15) {
-            document.getElementById("headerNav").style.display = "block";
-          } else {
-            if (y > window.scrollY) {
-              document.getElementById("headerNav").style.display = "block";
-            } else if (y < window.scrollY) {
-              document.getElementById("headerNav").style.display = "none";
-            }
-          }
-          setY(window.scrollY);
+      if (window.scrollY < 15) {
+        document.getElementById("headerNav").style.display = "block";
+      } else {
+        if (y > window.scrollY) {
+          document.getElementById("headerNav").style.display = "block";
+        } else if (y < window.scrollY) {
+          document.getElementById("headerNav").style.display = "none";
+        }
+      }
+      setY(window.scrollY);
     }
   };
 
-  //
   useEffect(() => {
     setY(window.scrollY);
   }, []);
@@ -45,6 +44,11 @@ export default function Header({ resultRef, partnersRef }) {
     };
   }, [y]);
 
+  // scroll to top
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div
       ref={refHeader}
@@ -54,14 +58,14 @@ export default function Header({ resultRef, partnersRef }) {
       <div className="ml-[20px] mr-[10px] md:mx-[90px] h-full">
         <div className="flex items-center justify-between w-full h-full">
           {/* logo Desktop */}
-          <div className="hidden sm:block">
+          <div className="hidden sm:block" onClick={scrollTop}>
             <Link to="/">
               <img src={logo} alt="logo" />
             </Link>
           </div>
 
           {/* logo Mobile */}
-          <div className="block sm:hidden">
+          <div className="block sm:hidden" onClick={scrollTop}>
             <Link to="/">
               {" "}
               <img src={logo} alt="logo" className="w-[100px] h-[30px]" />
