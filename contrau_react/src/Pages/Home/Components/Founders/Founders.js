@@ -5,6 +5,7 @@ import { getFounderList } from "../../../../reducers/homeSlice";
 import FounderCarousel from "./Carousel/FounderCarousel";
 import "./Carousel/founderImageCarousel.scss";
 import TabletCarousel from "./Carousel/TabletCarousel";
+import SmallTabletCarousel from "./Carousel/SmallTabletCarousel";
 import MobileCarousel from "./Carousel/MobileCarousel";
 import "./founder.scss";
 export default function Founders() {
@@ -67,9 +68,14 @@ export default function Founders() {
         <TabletCarousel />
       </div>
 
+      {/* Small Tablet */}
+
+      <div className="hidden  sm:block md:hidden mt-[20%] md:mt-[43%] lg:mt-[18%]">
+        <SmallTabletCarousel />
+      </div>
       {/* Mobile */}
 
-      <div className="block  md:hidden mt-[20%] md:mt-[43%] lg:mt-[18%]">
+      <div className="block  sm:hidden mt-[20%] md:mt-[43%] lg:mt-[18%]">
         <MobileCarousel />
       </div>
     </div>
