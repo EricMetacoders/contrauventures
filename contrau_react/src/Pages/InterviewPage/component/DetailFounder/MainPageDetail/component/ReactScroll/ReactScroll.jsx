@@ -332,6 +332,28 @@ function ReactScroll({ detailFounder }) {
     }
   };
 
+  // CHECK AT BOTTOM
+  const handleScroll3 = () => {
+    const bottom =
+      Math.ceil(window.innerHeight + window.scrollY) >=
+      document.documentElement.scrollHeight;
+
+    if (bottom) {
+      const myReference = refCategory.current;
+      myReference.style.display = "none";
+    }
+  };
+  // ADD SCROLL EVENT FOR CHECK BOTTOM
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll3, {
+      passive: true,
+    });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll3);
+    };
+  }, []);
+
   return (
     <div className="framemaingallery">
       <div className="categorydetailyear" ref={refCategory}>
