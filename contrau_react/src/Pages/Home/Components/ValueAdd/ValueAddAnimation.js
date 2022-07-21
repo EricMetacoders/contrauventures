@@ -38,7 +38,7 @@ export default function Components() {
       <div className="mt-[30px] 2xl:mt-[74px]  border-black pb-[40px] 2xl:pb-[80px] leading-[1]">
         {showText2 ? (
           <FadeInUpDiv>
-            <p className="popinsFont text-[40px] 2xl:font-bold  font-[900]  md:text-[63px] 2xl:text-[110px]  sm:italic mb-0">
+            <p className="popinsFont text-[40px] font-[900]  md:text-[63px] 2xl:text-[110px]  sm:italic mb-0">
               We{" "}
               <span className="popinsFont text-[40px]   md:text-[63px] 2xl:text-[110px]   mb-0 font-[900]">
                 empower
@@ -64,7 +64,7 @@ export default function Components() {
               <p className="popinsFont text-[40px]   md:text-[63px] 2xl:text-[110px]   italic font-thin mb-0">
                 various
               </p>
-              <p className="popinsFonttext-[40px]   md:text-[63px] 2xl:text-[110px]  font-[900] text-red italic mb-0">
+              <p className="popinsFont text-[40px]   md:text-[63px] 2xl:text-[110px]  font-[900] text-red italic mb-0">
                 potentials.
               </p>
             </div>
