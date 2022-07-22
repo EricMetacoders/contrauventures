@@ -118,31 +118,18 @@
       }
 
       .framemaintile {
-        position: absolute;
-        top: 60%;
-
         width: 100%;
         .framedetailfoundername {
           display: flex;
           flex-direction: column;
-
-          // margin-bottom: 25px;
+          bottom: 5%;
           width: 100%;
-
-          // padding-left: 70px;
-          // padding-right: 70px;
-          // background-color: #101010;
-          // opacity: 0.2;
-
           transition-property: all;
           transition-duration: 500ms;
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
+          row-gap: 80px;
+          z-index: 100;
           .detailfoundername {
-            // height: auto;
-            /* or 100% */
-            background-color: #999999;
-            margin-bottom: 1%;
             .titlename {
               font-family: "Poppins", sans-serif;
               font-style: normal;
@@ -155,12 +142,23 @@
               // margin: auto;
             }
           }
+          .detailfoundername::after {
+            content: "";
+            display: block;
+            width: 20%;
+            height: 1px;
+            background-color: white;
+            position: relative;
+            bottom: -29px;
+            margin: auto;
+          }
           .titledetail {
             /* Body 20 Poppins */
             // position: absolute;
             // top: 20;
 
             // background-color: red;
+
             width: 360px;
             height: 100px;
             margin: auto;
@@ -186,7 +184,7 @@
             display: -webkit-box;
             -webkit-box-orient: vertical;
             /* Inside auto layout */
-            z-index: 50;
+            z-index: 60;
             transition-property: all;
             transition-duration: 500ms;
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -212,6 +210,7 @@
         transition-property: all;
         transition-duration: 500ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 100;
       }
     }
 
@@ -235,7 +234,7 @@
       //   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       // }
       .btnInterviewfounder {
-        transform: translateY(-200%);
+        transform: translateY(-140%);
         transition-property: all;
         transition-duration: 500ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

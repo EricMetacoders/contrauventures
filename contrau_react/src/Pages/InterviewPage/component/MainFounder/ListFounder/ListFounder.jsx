@@ -101,9 +101,10 @@ function ListFounder({ listDataFounder }) {
                       clickDetailFounder(item);
                     }}
                   >
-                    <div className="framedetailfoundername">
-                      <div className="mb-[1%]">
-                        <p className="text-white text-[32px] xl:text-[50px] font-[900] popinsFont text-center">
+                    {/* <div className="hidden 2xl:block absolute bottom-[9%] w-full imgText z-50 smooth"> */}
+                    <div className="framedetailfoundername absolute">
+                      <div className="detailfoundername">
+                        <p className="titlename">
                           {item.acf.first_name.toUpperCase()} &nbsp;
                           {item.acf.last_name.toUpperCase()}
                         </p>
