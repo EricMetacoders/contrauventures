@@ -149,7 +149,7 @@
             height: 1px;
             background-color: white;
             position: relative;
-            bottom: -29px;
+            bottom: -40px;
             margin: auto;
           }
           .titledetail {
@@ -234,7 +234,7 @@
       //   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       // }
       .btnInterviewfounder {
-        transform: translateY(-140%);
+        transform: translateY(-180%);
         transition-property: all;
         transition-duration: 500ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1197,13 +1197,13 @@
           justify-content: center;
           flex-direction: column;
           width: 100%;
-
+          bottom: 5%;
           .framedetailfoundername {
             font-size: 50px;
             line-height: 50px;
             color: #ffffff;
             text-align: center;
-            margin-bottom: 25px;
+
             width: 100%;
 
             .detailfoundername {

@@ -28,7 +28,7 @@ const Group = forwardRef((props, ref) => {
   return (
     <div ref={ref}>
       <div className="bg-partnersContactBg overflow-hidden " ref={ref}>
-        <div className="mx-[34px] md:mx-[117px] 2xl:mx-[300px] pb-[65px] mt-[84px] md:mt-[318px]">
+        <div className="mx-[34px] md:mx-[117px] 2xl:mx-[300px] 2xl:pb-[65px] mt-[84px] md:mt-[318px]">
           {/* desktop animation */}
           <div className="xl:block hidden md:w-[1030px] md:h-[498px]">
             {/* start animation */}
@@ -53,7 +53,7 @@ const Group = forwardRef((props, ref) => {
       </div>
       <div className="bg-partnersContactBg overflow-hidden">
         {/* desktop */}
-        <WrapperGroupCarousel className="hidden xl:block mt-[172px]">
+        <WrapperGroupCarousel className="hidden xl:block mt-[64px]">
           <GroupCarouselAnimation>
             {partners
               ?.filter((partner) => partner?.acf?.category === "partner 1")
@@ -399,7 +399,7 @@ const Group = forwardRef((props, ref) => {
         </WrapperGroupCarousel>
 
         {/* tablet */}
-        <WrapperGroupCarousel className="overflow-hidden hidden sm:block xl:hidden mt-[172px]">
+        <WrapperGroupCarousel className="overflow-hidden hidden sm:block xl:hidden">
           <GroupCarouselAnimation className="flex relative h-[173px]">
             {partners
               ?.filter((partner) => partner?.acf?.category === "partner 1")

@@ -85,7 +85,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex space-x-3">
-            <a link="https://www.facebook.com/contrauventures" target="_blank">
+            <a href="https://www.facebook.com/contrauventures" target="_blank">
               <div className="flex items-center justify-center rounded-full bg-[#dddedf] hover:bg-[#cccdcf] transition-all w-[30px] h-[30px] cursor-pointer">
                 <img src={fb} alt="facebook" className="opacity-40" />
               </div>

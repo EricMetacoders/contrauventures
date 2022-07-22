@@ -134,7 +134,7 @@ export default function FounderImageCarousel({ data }) {
       <div
         className="hidden lg:block  w-full h-full absolute bgBlur smooth"
         style={{
-          background: `linear-gradient(to top, #191C21 0, rgba(25, 28, 33, 0.1) 66%, rgba(25, 28, 33, 0) 90%) center no-repeat`,
+          background: `linear-gradient(to top, #191C21 0, rgba(25, 28, 33, 0.3) 66%, rgba(25, 28, 33, 0) 90%) center no-repeat`,
         }}
       ></div>
       <div className="btnInterview flex justify-center w-full smooth z-[100]">
