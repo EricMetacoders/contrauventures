@@ -327,26 +327,41 @@
         // margin-bottom: 170px;
         margin-bottom: 0px;
         display: flex;
+        height: auto;
         .frameimgarticle1 {
           margin-top: 205px;
           margin-bottom: 25px;
+
+          // 637x359
+          width: 50%;
           img {
-            content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle1.png");
+            width: 100%;
+            height: 100%;
+            max-width: 637px;
+            max-height: 359px;
+            // content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle1.png");
+            // content: url("https://i1-kinhdoanh.vnecdn.net/2022/07/20/CG2A5588-jpeg-9823-1658310029.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=PVihFJpE6-YuPwIgmOwEzw");
           }
         }
         .frameimgarticle2 {
           margin-top: 205px;
           margin-bottom: 25px;
-          margin-left: 23px;
+          margin-left: 4%;
+          // height: auto;
+          width: 50%;
           img {
-            content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle2.png");
+            width: 100%;
+            height: 100%;
+            max-width: 637px;
+            max-height: 359px;
+            // content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle2.png");
           }
         }
         .frameimgarticle3 {
           margin-top: 125px;
 
           img {
-            content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle3.png");
+            // content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle3.png");
           }
           p {
             width: 1320px;
@@ -711,7 +726,7 @@
             margin-bottom: 0px;
             img {
               width: 100%;
-              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle1mb.png");
+              // content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle1mb.png");
             }
           }
           .frameimgarticle2 {
@@ -720,7 +735,7 @@
             margin-bottom: 0px;
             img {
               width: 100%;
-              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle2mb.png");
+              // content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle2mb.png");
             }
           }
           .frameimgarticle3 {
@@ -728,7 +743,7 @@
             img {
               width: 100%;
               // URL WRONGNAME ==> img3
-              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle4-mb.png");
+              // content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle4-mb.png");
             }
             p {
               width: auto;
@@ -744,7 +759,7 @@
             margin-top: 30px;
             img {
               width: 100%;
-              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle3-mb.png");
+              // content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle3-mb.png");
             }
             p {
               display: inline-block;
@@ -1016,7 +1031,7 @@
         }
 
         .frameimgarticle {
-          width: 100%;
+          width: 80%;
           margin-top: 0px;
           // margin-top: 165px;
           // margin-bottom: 170px;
@@ -1025,28 +1040,38 @@
           // background-color: brown;
           align-items: center;
           justify-content: center;
+
           .frameimgarticle1 {
-            width: 39%;
+            width: 50%;
+            height: 300px;
             margin-top: 205px;
             margin-bottom: 25px;
+
             img {
-              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle1.png");
+              width: 100%;
+              height: 100%;
+              // max-height: 200px;
+              // content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle1.png");
             }
           }
           .frameimgarticle2 {
-            width: 39%;
+            width: 50%;
+            height: 300px;
             margin-top: 205px;
             margin-bottom: 25px;
             margin-left: 23px;
             img {
-              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle2.png");
+              width: 100%;
+              height: 100%;
+              // max-height: 200px;
+              // content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle2.png");
             }
           }
           .frameimgarticle3 {
             margin-top: 125px;
             width: 80%;
             img {
-              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle3.png");
+              // content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle3.png");
             }
             p {
               width: 100%;
@@ -1070,7 +1095,7 @@
             margin-top: 120px;
             width: 80%;
             img {
-              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle4.png");
+              // content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle4.png");
             }
             p {
               display: inline-block;
@@ -1323,12 +1348,20 @@
           // background-color: brown;
           align-items: center;
           justify-content: center;
+
           .frameimgarticle1 {
             width: 39%;
             margin-top: 205px;
             margin-bottom: 25px;
+
             img {
-              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle1.png");
+              width: 100%;
+              height: auto;
+              max-width: 499px;
+              max-height: 351px;
+              content: url("https://i1-kinhdoanh.vnecdn.net/2022/07/20/CG2A5588-jpeg-9823-1658310029.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=PVihFJpE6-YuPwIgmOwEzw");
+
+              // content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle1.png");
             }
           }
           .frameimgarticle2 {
@@ -1337,14 +1370,20 @@
             margin-bottom: 25px;
             margin-left: 23px;
             img {
-              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle2.png");
+              width: 100%;
+              height: auto;
+              max-width: 499px;
+              max-height: 351px;
+              content: url("https://i1-kinhdoanh.vnecdn.net/2022/07/20/CG2A5588-jpeg-9823-1658310029.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=PVihFJpE6-YuPwIgmOwEzw");
+
+              // content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle2.png");
             }
           }
           .frameimgarticle3 {
             margin-top: 125px;
             width: 80%;
             img {
-              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle3.png");
+              // content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle3.png");
             }
             p {
               width: 100%;
@@ -1368,7 +1407,7 @@
             margin-top: 120px;
             width: 80%;
             img {
-              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle4.png");
+              // content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle4.png");
             }
             p {
               display: inline-block;
@@ -1605,11 +1644,13 @@
           // margin-bottom: 170px;
           margin-bottom: 0px;
           display: flex;
+
           .frameimgarticle1 {
             margin-top: 205px;
             margin-bottom: 25px;
+            // width: 0%;
             img {
-              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle1.png");
+              // content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle1.png");
             }
           }
           .frameimgarticle2 {
@@ -1617,14 +1658,14 @@
             margin-bottom: 25px;
             margin-left: 23px;
             img {
-              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle2.png");
+              // content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle2.png");
             }
           }
           .frameimgarticle3 {
             margin-top: 125px;
 
             img {
-              content: url("https://i1-kinhdoanh.vnecdn.net/2022/07/20/CG2A5588-jpeg-9823-1658310029.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=PVihFJpE6-YuPwIgmOwEzw");
+              // content: url("https://i1-kinhdoanh.vnecdn.net/2022/07/20/CG2A5588-jpeg-9823-1658310029.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=PVihFJpE6-YuPwIgmOwEzw");
             }
             p {
               width: 1320px;
@@ -1634,7 +1675,7 @@
           .frameimgarticle4 {
             margin-top: 120px;
             img {
-              content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle4.png");
+              // content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imgarticle4.png");
             }
             p {
               display: inline-block;

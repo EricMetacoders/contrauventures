@@ -28,6 +28,7 @@ function ListFounder({ listDataFounder }) {
     const founderId = item.acf.interview[0];
     history(`/detailfounder/${founderId}`);
   };
+  console.log(listDataFounder);
 
   return (
     <ThemeProvider theme={theme}>
@@ -100,29 +101,23 @@ function ListFounder({ listDataFounder }) {
                       clickDetailFounder(item);
                     }}
                   >
-                    <Box className="framedetailfoundername">
-                      <Box className="detailfoundername">
-                        FOUNDER
-                        <Box className="titlename ">
+                    <div className="framedetailfoundername">
+                      <div className="mb-[1%]">
+                        <p className="text-white text-[32px] xl:text-[50px] font-[900] popinsFont text-center">
                           {item.acf.first_name.toUpperCase()} &nbsp;
                           {item.acf.last_name.toUpperCase()}
-                        </Box>
-                      </Box>
-                    </Box>
-                    <Box className="titledetail">
-                      Lorem ipsum dolor sit amet, cons ectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip
-                    </Box>
+                        </p>
+                      </div>
+                      <Box className="titledetail">{item.acf.title}</Box>
+                    </div>
                   </div>
-
                   <div
                     className="hidden lg:block  w-full h-full absolute bgBlur2"
                     style={{
                       background: `linear-gradient(to top, #191C21 0, rgba(25, 28, 33, 0.5) 66%, rgba(25, 28, 33, 0) 90%) center no-repeat`,
                     }}
                   ></div>
+
                   <div className="btnInterviewfounder">
                     <div className="hidden lg:block w-[200px] h-[60px] bg-white  cursor-pointer z-50">
                       <div className="flex items-center justify-center w-full h-full">
