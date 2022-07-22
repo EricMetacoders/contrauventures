@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { ReactComponent as PlusImage } from "../../../../assets/homepage_img/plus.svg";
 import { ReactComponent as MinusImage } from "../../../../assets/homepage_img/minus.svg";
