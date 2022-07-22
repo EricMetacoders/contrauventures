@@ -19,7 +19,7 @@ export default function Footer() {
                 Tell
               </p>
               <p className="popinsFont  text-[11px] text-hoverGrey">
-                1234-5678-910
+                (+84) (0)961-806-406
               </p>
               <p className="popinsFont text-[11px] text-hoverGrey">|</p>
             </div>
@@ -28,7 +28,7 @@ export default function Footer() {
                 E-mail
               </p>
               <p className="popinsFont text-[11px] text-hoverGrey">
-                abcd@gmail.com
+                update@contrau.ventures
               </p>
               <p className="popinsFont text-[11px] text-hoverGrey">|</p>
             </div>
@@ -37,15 +37,18 @@ export default function Footer() {
                 Address
               </p>
               <p className="popinsFont text-[11px] text-hoverGrey">
-                36-1 Chungdam-dong, Seoul, Korea
+                94 Xuan Thuy Street, Thao Dien Ward, District 2, Thu Duc City,
+                Ho Chi Minh City
               </p>
             </div>
           </div>
           <div className="flex items-center justify-center space-x-4 ">
             <img src={reserved} alt="reserved" />
-            <div className="flex items-center justify-center rounded-full bg-[#dddedf] hover:bg-[#cccdcf] transition-all w-[34px] h-[34px] cursor-pointer">
-              <img src={fb} alt="fb" className="opacity-40 " />
-            </div>
+            <a href="https://www.facebook.com/contrauventures" target="_blank">
+              <div className="flex items-center justify-center rounded-full bg-[#dddedf] hover:bg-[#cccdcf] transition-all w-[34px] h-[34px] cursor-pointer">
+                <img src={fb} alt="fb" className="opacity-40 " />
+              </div>
+            </a>
             <div className="flex items-center justify-center rounded-full bg-[#dddedf] hover:bg-[#cccdcf] transition-all w-[34px] h-[34px] cursor-pointer">
               <img src={li} alt="li" className="opacity-40 " />
             </div>
@@ -56,19 +59,19 @@ export default function Footer() {
         <img src={footerLogo} alt="logo" />
         <div className="flex justify-between items-center">
           <div>
-            <div className="flex space-x-3">
+            <div className="flex space-x-3 flex-wrap">
               <p className="popinsFont text-[9px] font-bold text-hoverGrey">
                 Tell
               </p>
               <p className="popinsFont text-[9px] text-hoverGrey">
-                1234-5678-910
+                (+84) (0)961-806-406
               </p>
               <p className="popinsFont text-[9px] text-hoverGrey">|</p>
               <p className="popinsFont text-[9px] font-bold text-hoverGrey">
                 E-mail
               </p>
               <p className="popinsFont text-[9px] text-hoverGrey">
-                abcd@gmail.com
+                update@contrau.ventures
               </p>
             </div>
             <div className="flex space-x-3">
@@ -76,14 +79,17 @@ export default function Footer() {
                 Address
               </p>
               <p className="popinsFont text-[9px] text-hoverGrey">
-                36-1 Chungdam-dong, Seoul, Korea
+                94 Xuan Thuy Street, Thao Dien Ward, District 2, Thu Duc City,
+                Ho Chi Minh City
               </p>
             </div>
           </div>
           <div className="flex space-x-3">
-            <div className="flex items-center justify-center rounded-full bg-[#dddedf] hover:bg-[#cccdcf] transition-all w-[30px] h-[30px] cursor-pointer">
-              <img src={fb} alt="facebook" className="opacity-40" />
-            </div>
+            <a link="https://www.facebook.com/contrauventures" target="_blank">
+              <div className="flex items-center justify-center rounded-full bg-[#dddedf] hover:bg-[#cccdcf] transition-all w-[30px] h-[30px] cursor-pointer">
+                <img src={fb} alt="facebook" className="opacity-40" />
+              </div>
+            </a>
             <div className="flex items-center justify-center rounded-full bg-[#dddedf] hover:bg-[#cccdcf] transition-all w-[30px] h-[30px] cursor-pointer">
               {" "}
               <img src={li} alt="li" className="opacity-40" />

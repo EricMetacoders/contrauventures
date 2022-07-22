@@ -4,7 +4,11 @@ export const PartnerLogo = ({ logoUrl, logoName, wrapperWidth, wrapperHeight, pa
   return (
     <Wrapper>
       <div className="pl-[90px]">
-        <LinkLogo {...{ wrapperWidth, wrapperHeight, paddingLeft }} href={linkWebsite} target="_blank">
+        <LinkLogo
+          {...{ wrapperWidth, wrapperHeight, paddingLeft }}
+          href={linkWebsite || undefined}
+          target={linkWebsite ? "_blank" : undefined}
+        >
           <BackgroundLogo >
             <Logo
               src={logoUrl}
