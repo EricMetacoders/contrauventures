@@ -33,7 +33,7 @@ export default function Home() {
       <NewPortfolio ref={resultRef} />
       <ValueAdd />
       <Faq />
-      <News />
+      {/* <News /> */}
       <Contact />
       <Footer />
     </>

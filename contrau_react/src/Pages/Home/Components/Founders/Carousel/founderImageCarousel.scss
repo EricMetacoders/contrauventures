@@ -3,6 +3,8 @@
   .bgBlur {
     left: 0;
     border-bottom: 1.5rem;
+    height: 70%;
+    top: 54%;
   }
 
   .btnInterview {
@@ -16,25 +18,10 @@
     transform: translateZ(0);
   }
 
-  #divBtn::before {
-    content: "";
-    height: 30%;
-    width: 100%;
-    bottom: 0;
-    position: absolute;
-    display: block;
-    background: linear-gradient(
-        to top,
-        #191c21 0,
-        rgba(25, 28, 33, 0.5) 50%,
-        rgba(25, 28, 33, 0) 100%
-      )
-      center no-repeat;
-    z-index: 5;
-  }
-
   #divBtn:hover > .bgBlur {
-    transform: translateY(-100%);
+    transform: translateY(-21%);
+    transition-property: all;
+    transition-duration: 500ms;
   }
   #divBtn:hover > .btnInterview {
     transform: translateY(-178%);
@@ -95,14 +82,52 @@
     transform: translateX(107%);
     top: -183%;
   }
+  .lineDiv::after {
+    content: "";
+    display: block;
+    width: 20%;
+    height: 1px;
+    background-color: white;
+    position: relative;
+    bottom: -29px;
+  }
+}
 
-  @media only screen and (min-width: 769px) and (max-width: 1280px) {
+@media only screen and (min-width: 640px) and (max-width: 1023px) {
+  #founderId {
+    .lineDiv::after {
+      content: "";
+      display: block;
+      width: 20%;
+      height: 1px;
+      background-color: white;
+      position: relative;
+      bottom: -19px;
+    }
+  }
+}
+@media only screen and (max-width: 639px) {
+  #founderId {
+    .lineDiv::after {
+      content: "";
+      display: block;
+      width: 20%;
+      height: 1px;
+      background-color: white;
+      position: relative;
+      bottom: -14px;
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1280px) {
+  #founderId {
     .btnInterview {
       bottom: -14%;
     }
 
     #divBtn:hover > .bgBlur {
-      transform: translateY(-70%);
+      transform: translateY(-28%);
       transition-property: all;
       transition-duration: 500ms;
     }
@@ -145,7 +170,9 @@
     }
 
     #divBtn:hover > .bgBlur {
-      transform: translateY(-99%);
+      transform: translateY(-29%);
+      transition-property: all;
+      transition-duration: 500ms;
     }
   }
   #btnSize {
@@ -185,4 +212,19 @@
 .slick-slide > div {
   margin: 0 12px;
   height: 100%;
+}
+
+@media screen and (min-width: 1536px) and (max-width: 1800px) {
+  #founderId {
+    #nameText {
+      p {
+        font-size: 40px;
+      }
+    }
+    #titleText {
+      p {
+        font-size: 15px;
+      }
+    }
+  }
 }
