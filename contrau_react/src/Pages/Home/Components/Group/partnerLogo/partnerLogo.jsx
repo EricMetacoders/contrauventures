@@ -1,4 +1,4 @@
-import { Logo, Wrapper, BackgroundLogo, LinkLogo } from "./partnerLogoStyled";
+import { Logo, Wrapper, BackgroundLogo, LinkLogo } from "./PartnerLogoStyled";
 
 export const PartnerLogo = ({ logoUrl, logoName, wrapperWidth, wrapperHeight, paddingLeft, linkWebsite }) => {
   return (
