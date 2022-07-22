@@ -40,6 +40,7 @@ export default function LandSpaceImage({ data }) {
               </p>
             </div>
           </div>
+          
           <div
             id="pText"
             className="flex items-center justify-center mx-[20px]"
@@ -47,6 +48,7 @@ export default function LandSpaceImage({ data }) {
             <p className="text-white popinsFont w-[70%]  font-light text-[12px] text-center pt-[3%] mb-[26px]">
               {data?.acf?.title.slice(0, 64).concat("...")}
             </p>
+
           </div>
         </div>
       </div>
