@@ -335,15 +335,12 @@ function ReactScroll({ detailFounder }) {
         itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
           .children[1].children[0];
 
-      // var Color5 =
-      //   itemsRef.current[itemsRef.current.length].children[0].children[1]
-      //     .children[1].children[0];
-      // if (Color5.style.filter == "grayscale(0%)") {
-      //   noColor.style.filter = "grayscale(100%)";
-      //   noColor2.style.filter = "grayscale(100%)";
-      //   noColor3.style.filter = "grayscale(100%)";
-      //   noColor4.style.filter = "grayscale(100%)";
-      // }
+      if (matchMobile) {
+        noColor.style.filter = "grayscale(100%)";
+        noColor2.style.filter = "grayscale(100%)";
+        noColor3.style.filter = "grayscale(100%)";
+        noColor4.style.filter = "grayscale(100%)";
+      }
     }
   };
 
@@ -372,6 +369,7 @@ function ReactScroll({ detailFounder }) {
                   spy={true}
                   smooth={true}
                   duration={500}
+                  offset={matchMobile ? -250 : -150}
                   onSetActive={handleSetActive}
                   onSetInactive={handleSetInactive}
                 >
@@ -399,7 +397,7 @@ function ReactScroll({ detailFounder }) {
                       item.year == "2014" ||
                       item.year == "2018" ||
                       item.year == "2020"
-                        ? "frameimgmain3"
+                        ? "frameimgmain"
                         : "frameimgmain2"
                     }
                   >
