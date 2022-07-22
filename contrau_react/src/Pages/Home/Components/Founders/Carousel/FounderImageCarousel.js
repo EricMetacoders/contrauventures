@@ -106,7 +106,7 @@ export default function FounderImageCarousel({ data }) {
               FOUNDER
             </p>
             <div>
-              <p className="text-white text-[30px]  font-[900] popinsFont break-all">
+              <p className="text-white text-[30px]  font-[900] popinsFont break-all text-center">
                 {data?.acf?.first_name.toUpperCase()}
                 &nbsp;
                 {data?.acf?.last_name.toUpperCase()}
