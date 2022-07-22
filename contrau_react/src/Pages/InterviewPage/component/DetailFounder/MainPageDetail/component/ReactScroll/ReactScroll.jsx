@@ -12,15 +12,15 @@ import {
 import styled from "styled-components";
 import { interviewServices } from "../../../../../../../services/interviewService";
 
-function ReactScroll({ detailFounder }) {
+function ReactScroll({ founderID }) {
   const [listGallery, setListGallery] = useState([{}]);
   const matchMobile = useMediaQuery("(max-width:639px)");
-  // GET LIST ALL GALLERY
-  async function getGalleryFounderList() {
+  // GET FOUNDER BY FOUNDER ID
+  async function getFounderID(id) {
     try {
-      let listGalleryFounder = await interviewServices.getAllGallery();
+      let detailgallery = await interviewServices.getFounderByFounderID(id);
 
-      return listGalleryFounder;
+      return detailgallery;
     } catch (error) {
       console.log("Failed to fetch", error);
     }
@@ -29,6 +29,7 @@ function ReactScroll({ detailFounder }) {
   async function getGalleryFounderDetail(id) {
     try {
       let detailgallery = await interviewServices.getGalleryFounder(id);
+
       return detailgallery;
     } catch (error) {
       console.log("Failed to fetch", error);
@@ -80,7 +81,6 @@ function ReactScroll({ detailFounder }) {
       var addColor4 =
         arguments[1].children[0].children[0].children[0].children[1].children[1]
           .children[0];
-      console.log("end", arguments[0]);
       addColor.style.filter = "grayscale(0%)";
       addColor2.style.filter = "grayscale(0%)";
       addColor3.style.filter = "grayscale(0%)";
@@ -125,17 +125,8 @@ function ReactScroll({ detailFounder }) {
     // changeColor();
     async function fechData() {
       // FIND ID FROM LIST ALL GALLERY
-      let listfoundergallery = await getGalleryFounderList();
 
-      var findID = await Object.values(listfoundergallery.data).find(
-        (element) =>
-          //   element.acf.first_name == detailFounder.acf.first_name &&
-          //   element.acf.last_name == detailFounder.acf.last_name
-          element.acf.first_name == "Nathan" && element.acf.last_name == "Do"
-      );
-
-      // HAVE ID ==> TO GET API DETAIL GALLERY OF FOUNDER
-      let detailfoundergallery = await getGalleryFounderDetail(findID.id);
+      let detailfoundergallery = await getGalleryFounderDetail(founderID);
 
       var array = [];
 
@@ -355,6 +346,18 @@ function ReactScroll({ detailFounder }) {
     };
   }, []);
 
+  // CHECK LENGTH FOR YEAR
+  const checkLength = (numberImage) => {
+    if (numberImage == 4) {
+      return "frameimgmain4";
+    } else if (numberImage == 3) {
+      return "frameimgmain3";
+    } else if (numberImage == 1) {
+      return "frameimgmain1";
+    } else if (numberImage == 2) {
+      return "frameimgmain2";
+    }
+  };
   return (
     <div className="framemaingallery">
       <div className="categorydetailyear" ref={refCategory}>
@@ -369,7 +372,7 @@ function ReactScroll({ detailFounder }) {
                   spy={true}
                   smooth={true}
                   duration={500}
-                  offset={matchMobile ? -250 : -150}
+                  // offset={matchMobile ? -250 : -150}
                   onSetActive={handleSetActive}
                   onSetInactive={handleSetInactive}
                 >
@@ -392,39 +395,18 @@ function ReactScroll({ detailFounder }) {
                   className="carousel-gallery"
                   ref={(el) => (itemsRef.current[index] = el)}
                 >
-                  <div
-                    className={
-                      item.year == "2014" ||
-                      item.year == "2018" ||
-                      item.year == "2020"
-                        ? "frameimgmain"
-                        : "frameimgmain2"
-                    }
-                  >
+                  <div className={checkLength(item.image.length)}>
                     <div className="frameimgtop">
                       <div className="frameimg1">
                         <img
                           style={{ filter: "grayscale(100%)" }}
-                          src={
-                            item.year == "2014" ||
-                            item.year == "2018" ||
-                            item.year == "2020"
-                              ? `${item.image[0].guid}
-                            `
-                              : `${item.image[0].guid}`
-                          }
+                          src={item.image[0]?.guid}
                         />
                       </div>
                       <div className="frameimg2">
                         <img
                           style={{ filter: "grayscale(100%)" }}
-                          src={
-                            item.year == "2014" ||
-                            item.year == "2018" ||
-                            item.year == "2020"
-                              ? `${item.image[1].guid}`
-                              : `${item.image[1].guid}`
-                          }
+                          src={item.image[1]?.guid}
                         />
                       </div>
                     </div>
@@ -432,25 +414,13 @@ function ReactScroll({ detailFounder }) {
                       <div className="frameimg3">
                         <img
                           style={{ filter: "grayscale(100%)" }}
-                          src={
-                            item.year == "2014" ||
-                            item.year == "2018" ||
-                            item.year == "2020"
-                              ? `${item.image[2].guid}
-                            `
-                              : `${item.image[2].guid}`
-                          }
+                          src={item.image[2]?.guid}
                         />
                       </div>
                       <div className="frameimg4">
                         <img
                           style={{ filter: "grayscale(100%)" }}
-                          src={
-                            (item.year == "2014" ||
-                              item.year == "2018" ||
-                              item.year == "2020") &&
-                            `${item.image[3].guid}`
-                          }
+                          src={item.image[3]?.guid}
                         />
                       </div>
                     </div>

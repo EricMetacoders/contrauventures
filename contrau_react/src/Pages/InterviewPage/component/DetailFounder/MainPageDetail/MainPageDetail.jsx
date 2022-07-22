@@ -9,7 +9,7 @@ MainPageDetail.propTypes = {
   detailArticle: PropTypes.object,
 };
 
-function MainPageDetail({ detailArticle }) {
+function MainPageDetail({ detailArticle, founderID }) {
   const contenttitle = [
     { id: 1, name: "Interview" },
     { id: 2, name: "Gallery" },
@@ -38,7 +38,7 @@ function MainPageDetail({ detailArticle }) {
       {clicked == "Interview" ? (
         <InterviewBody detailArticle={detailArticle?.acf?.content || {}} />
       ) : (
-        <GalleryBody detailFounder={detailArticle} />
+        <GalleryBody founderID={founderID} />
       )}
     </div>
   );
