@@ -106,7 +106,7 @@ export default function FounderImageCarousel({ data }) {
               FOUNDER
             </p>
             <div>
-              <p className="text-white text-[30px]  font-[900] popinsFont break-all">
+              <p className="text-white text-[30px]  font-[900] popinsFont break-all text-center">
                 {data?.acf?.first_name.toUpperCase()}
                 &nbsp;
                 {data?.acf?.last_name.toUpperCase()}
@@ -123,7 +123,7 @@ export default function FounderImageCarousel({ data }) {
           </div>
         </div>
       </div>
-      <div className="absolute  bottom-[6%]  lg:hidden w-full flex justify-center ">
+      <div className="absolute  bottom-[6%]  lg:hidden w-full flex justify-center z-[100] ">
         <div className=" w-[192px] h-[44px] bg-white  cursor-pointer">
           <div className="flex items-center justify-center w-full h-full">
             <p
@@ -152,7 +152,10 @@ export default function FounderImageCarousel({ data }) {
         }}
       ></div>
       <div className="btnInterview flex justify-center w-full smooth z-[100]">
-        <div className="hidden lg:block w-[200px] h-[60px] bg-white  cursor-pointer z-50">
+        <div
+          id="btnSize"
+          className="hidden lg:block w-[200px] h-[60px] bg-white  cursor-pointer z-50"
+        >
           <div
             id="seeF"
             className="flex items-center justify-center w-full h-full"
