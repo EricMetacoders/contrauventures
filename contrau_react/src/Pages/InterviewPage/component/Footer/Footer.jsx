@@ -18,14 +18,18 @@ function FooterComponent(props) {
         </Box>
         <Box className="frameaddress">
           <Box className="addressdetailfooter">
-            <span style={{ fontWeight: "700" }}>Tell</span>&nbsp; 1234-5678-910
-            | <span style={{ fontWeight: "700" }}>E-mail</span> abcd@gmail.com |
-            <span style={{ fontWeight: "700" }}>&nbsp;Address</span> 36-1
-            Chungdam-dong, Seoul, Korea
+            <span style={{ fontWeight: "700" }}>Tell</span>&nbsp; (+84)
+            (0)961-806-406 | <span style={{ fontWeight: "700" }}>E-mail</span>
+            update@contrau.ventures |
+            <span style={{ fontWeight: "700" }}>&nbsp;Address</span> 94 Xuan
+            Thuy Street, Thao Dien Ward, District 2, Thu Duc City, Ho Chi Minh
+            City
           </Box>
           <Box className="framelogomb">
             <Box className="framelogofb-mb">
-              <img src={logofbsvg} alt="logofbsvg" />
+              <a href="https://www.facebook.com/contrauventures">
+                <img src={logofbsvg} alt="logofbsvg" />
+              </a>
             </Box>
             <Box className="framelogolk-mb">
               <img src={logolisvg} alt="logolisvg" />
@@ -36,7 +40,9 @@ function FooterComponent(props) {
         <Box className="allrightframe">© All rights reserved.</Box>
         <Box className="framelogopc">
           <Box className="framelogofb">
-            <img src={logofbsvg} alt="logofbsvg" />
+            <a href="https://www.facebook.com/contrauventures">
+              <img src={logofbsvg} alt="logofbsvg" />
+            </a>
           </Box>
           <Box className="framelogolk">
             <img src={logolisvg} alt="logolisvg" />
