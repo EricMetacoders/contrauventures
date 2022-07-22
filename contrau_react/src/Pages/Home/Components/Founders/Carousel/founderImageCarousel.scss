@@ -148,6 +148,15 @@
       transform: translateY(-99%);
     }
   }
+  #btnSize {
+    width: 178px;
+    height: 52px;
+    #seeF {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
 }
 
 .carousel.carousel-slider {
