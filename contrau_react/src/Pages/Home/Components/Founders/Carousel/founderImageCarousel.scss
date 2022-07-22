@@ -16,10 +16,25 @@
     transform: translateZ(0);
   }
 
+  #divBtn::before {
+    content: "";
+    height: 30%;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    display: block;
+    background: linear-gradient(
+        to top,
+        #191c21 0,
+        rgba(25, 28, 33, 0.5) 50%,
+        rgba(25, 28, 33, 0) 100%
+      )
+      center no-repeat;
+    z-index: 5;
+  }
+
   #divBtn:hover > .bgBlur {
-    transform: translateY(-56%);
-    transition-property: all;
-    transition-duration: 500ms;
+    transform: translateY(-100%);
   }
   #divBtn:hover > .btnInterview {
     transform: translateY(-178%);
