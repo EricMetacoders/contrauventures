@@ -59,13 +59,13 @@ export default function Faq() {
                     }}
                   >
                     <div className="border-t-[1px] md:pb-[50px] cursor-pointer ">
-                      <div className="mt-[10px] xl:mt-[50px] 2xl:mx-[20px]">
+                      <div className="mt-[10px] sm:mt-[20px] md:mt-[50px] xl:mt-[50px] 2xl:mx-[20px]">
                         <div className="flex items-center justify-between">
-                          <div className="md:flex  space-center justify-center md:space-x-5">
+                          <div className="md:flex items-center  space-center justify-center md:space-x-5">
                             <p className="popinsFont text-[18px] font-light  lg:text-[24px] italic text-red mb-[2px] ">
                               Q{i + 1}
                             </p>
-                            <p className="break-all text-[18px] md:text-[20px]  w-auto  lg:text-[25px]   popinsFont 2xl:text-[32px] lg:font-normal font-light  mb-0 mText">
+                            <p className="break-all text-[18px] md:text-[20px]  w-auto  lg:text-[25px]   popinsFont 2xl:text-[32px] sm:font-normal font-light  mb-0 mText">
                               {ques.acf.question}
                             </p>
                           </div>
