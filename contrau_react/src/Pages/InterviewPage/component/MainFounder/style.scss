@@ -158,7 +158,6 @@
             // top: 20;
 
             // background-color: red;
-
             width: 360px;
             height: 100px;
             margin: auto;
@@ -222,19 +221,14 @@
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       }
       .framedetailfoundername {
-        transform: translateY(-50%);
+        transform: translateY(-35%);
         transition-property: all;
         transition-duration: 500ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       }
-      // .titledetail {
-      //   transform: translateY(-100%);
-      //   transition-property: all;
-      //   transition-duration: 500ms;
-      //   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      // }
+
       .btnInterviewfounder {
-        transform: translateY(-180%);
+        transform: translateY(-160%);
         transition-property: all;
         transition-duration: 500ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -957,38 +951,6 @@
           object-fit: cover;
         }
 
-        .framemaintile {
-          position: absolute;
-          top: 60%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          width: 100%;
-
-          .framedetailfoundername {
-            font-size: 50px;
-            line-height: 50px;
-            color: #ffffff;
-            text-align: center;
-            margin-bottom: 25px;
-            width: 100%;
-
-            .detailfoundername {
-              height: 100px;
-              /* or 100% */
-              .titlename {
-                font-weight: 900;
-                margin: auto;
-              }
-            }
-          }
-          .titledetail {
-            width: 360px;
-            height: 100px;
-          }
-        }
-
         .bgBlur2 {
           width: 100%;
           top: 71%;
@@ -997,33 +959,6 @@
           border-bottom-right-radius: 20px;
 
           // transform: translateY(-100%);
-        }
-      }
-      .frameimgfounder:hover {
-        .bgBlur2 {
-          transform: translateY(-44%);
-          transition-property: all;
-          transition-duration: 200ms;
-        }
-        .framedetailfoundername {
-          transform: translateY(-140%);
-          transition-property: all;
-          transition-duration: 200ms;
-        }
-        .titledetail {
-          transform: translateY(-140%);
-          transition-property: all;
-          transition-duration: 200ms;
-        }
-        .btnInterviewfounder {
-          transform: translateY(-200%);
-          transition-property: all;
-          transition-duration: 200ms;
-        }
-        img {
-          transform: scale(110%, 110%);
-          transition-property: all;
-          transition-duration: 150ms;
         }
       }
     }
@@ -1097,37 +1032,6 @@
           height: 100%;
           object-fit: cover;
         }
-        .framemaintile {
-          position: absolute;
-          top: 60%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          width: 100%;
-
-          .framedetailfoundername {
-            font-size: 50px;
-            line-height: 50px;
-            color: #ffffff;
-            text-align: center;
-            margin-bottom: 25px;
-            width: 100%;
-
-            .detailfoundername {
-              height: 100px;
-              /* or 100% */
-              .titlename {
-                font-weight: 900;
-                margin: auto;
-              }
-            }
-          }
-          .titledetail {
-            width: 360px;
-            height: 100px;
-          }
-        }
 
         .bgBlur2 {
           width: 100%;
@@ -1188,37 +1092,6 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
-        }
-        .framemaintile {
-          position: absolute;
-          top: 60%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          width: 100%;
-          bottom: 5%;
-          .framedetailfoundername {
-            font-size: 50px;
-            line-height: 50px;
-            color: #ffffff;
-            text-align: center;
-
-            width: 100%;
-
-            .detailfoundername {
-              height: 100px;
-              /* or 100% */
-              .titlename {
-                font-weight: 900;
-                margin: auto;
-              }
-            }
-          }
-          .titledetail {
-            width: 360px;
-            height: 100px;
-          }
         }
 
         .bgBlur2 {

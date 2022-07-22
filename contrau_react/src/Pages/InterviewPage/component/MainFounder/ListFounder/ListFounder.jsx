@@ -25,10 +25,11 @@ function ListFounder({ listDataFounder }) {
   const history = useNavigate();
 
   const clickDetailFounder = async (item) => {
-    const founderId = item.acf.interview[0];
+    console.log("item:", item);
+    // const founderId = item.acf.interview[0];
+    const founderId = item.id;
     history(`/detailfounder/${founderId}`);
   };
-  console.log(listDataFounder);
 
   return (
     <ThemeProvider theme={theme}>

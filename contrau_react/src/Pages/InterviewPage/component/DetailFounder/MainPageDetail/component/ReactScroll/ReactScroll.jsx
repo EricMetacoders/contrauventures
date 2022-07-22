@@ -81,7 +81,6 @@ function ReactScroll({ founderID }) {
       var addColor4 =
         arguments[1].children[0].children[0].children[0].children[1].children[1]
           .children[0];
-      console.log("end", arguments[0]);
       addColor.style.filter = "grayscale(0%)";
       addColor2.style.filter = "grayscale(0%)";
       addColor3.style.filter = "grayscale(0%)";
@@ -126,12 +125,8 @@ function ReactScroll({ founderID }) {
     // changeColor();
     async function fechData() {
       // FIND ID FROM LIST ALL GALLERY
-      let listfoundergallery = await getFounderID(founderID);
-      console.log("listfoundergallery:", listfoundergallery);
 
-      // HAVE ID ==> TO GET API DETAIL GALLERY OF FOUNDER
-
-      let detailfoundergallery = await getGalleryFounderDetail(563);
+      let detailfoundergallery = await getGalleryFounderDetail(founderID);
 
       var array = [];
 
