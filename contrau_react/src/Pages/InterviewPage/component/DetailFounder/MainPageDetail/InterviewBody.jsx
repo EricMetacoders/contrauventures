@@ -353,9 +353,14 @@ function InterviewBody({ detailArticle }) {
               <img src={dot1} />
             </div>
             <div className="frametitleqoute">
-              <div className="title1">{detailArticle?.qoute?.part_1 || ""}</div>
+              <div
+                className="title1"
+                dangerouslySetInnerHTML={{
+                  __html: detailArticle?.qoute?.part_1 || "",
+                }}
+              />
               &nbsp;
-              <div className="title2">{detailArticle?.qoute?.part_2 || ""}</div>
+              {/* <div className="title2">{detailArticle?.qoute?.part_2 || ""}</div> */}
             </div>
             <div className="framedot2">
               <img src={dot2} />
