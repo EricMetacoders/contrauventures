@@ -16,7 +16,7 @@ export const homeServices = {
   },
   getFounderList() {
     return axios({
-      url: `${BASE_URL}founders`,
+      url: `${BASE_URL}founders?per_page=10&order=id&id=asc`,
       method: "GET",
     });
   },
