@@ -349,12 +349,12 @@ function ReactScroll({ detailFounder }) {
 
   // ADD SCROLL EVENT FOR CHECK BOTTOM
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll3, {
-      passive: true,
-    });
+    // window.addEventListener("scroll", handleScroll3, {
+    //   passive: true,
+    // });
 
     return () => {
-      window.removeEventListener("scroll", handleScroll3);
+      // window.removeEventListener("scroll", handleScroll3);
     };
   }, []);
 
@@ -372,6 +372,7 @@ function ReactScroll({ detailFounder }) {
                   spy={true}
                   smooth={true}
                   duration={500}
+                  offset={matchMobile ? -250 : -150}
                   onSetActive={handleSetActive}
                   onSetInactive={handleSetInactive}
                 >
