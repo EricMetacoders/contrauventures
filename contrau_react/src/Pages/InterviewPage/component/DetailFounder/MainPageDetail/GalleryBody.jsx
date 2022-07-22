@@ -3,10 +3,10 @@ import "./component/ReactScroll/gallerystyle.scss";
 import ReactScroll from "./component/ReactScroll/ReactScroll";
 GalleryBody.propTypes = {};
 
-function GalleryBody({ detailFounder }) {
+function GalleryBody({ founderID }) {
   return (
     <div>
-      <ReactScroll />
+      <ReactScroll founderID={founderID} />
     </div>
   );
 }

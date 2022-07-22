@@ -40,7 +40,7 @@ function DetailFounder({ currentFounder }) {
   return (
     <div>
       <HeaderFounder detailFounder={detailFounder} />
-      <MainPageDetail detailArticle={detailFounder} />
+      <MainPageDetail founderID={founderId} detailArticle={detailFounder} />
       <FooterComponent />
     </div>
   );
