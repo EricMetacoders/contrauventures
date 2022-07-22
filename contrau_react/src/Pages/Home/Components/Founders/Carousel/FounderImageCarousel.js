@@ -151,7 +151,7 @@ export default function FounderImageCarousel({ data }) {
           background: `linear-gradient(to top, #191C21 0, rgba(25, 28, 33, 0.5) 50%, rgba(25, 28, 33, 0) 100%) center no-repeat`,
         }}
       ></div>
-      <div className="btnInterview flex justify-center w-full smooth z-100">
+      <div className="btnInterview flex justify-center w-full smooth z-[100]">
         <div className="hidden lg:block w-[200px] h-[60px] bg-white  cursor-pointer z-50">
           <div
             id="seeF"
