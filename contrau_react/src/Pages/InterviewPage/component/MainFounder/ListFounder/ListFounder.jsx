@@ -120,7 +120,7 @@ function ListFounder({ listDataFounder }) {
                   <div
                     className="hidden lg:block  w-full h-full absolute bgBlur2"
                     style={{
-                      background: `linear-gradient(0deg,${item.acf.gradient_color} 49%, ${item?.acf.background_color}75%)`,
+                      background: `linear-gradient(to top, #191C21 0, rgba(25, 28, 33, 0.5) 66%, rgba(25, 28, 33, 0) 90%) center no-repeat`,
                     }}
                   ></div>
                   <div className="btnInterviewfounder">

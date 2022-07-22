@@ -293,7 +293,6 @@ function ReactScroll({ detailFounder }) {
     const bottom =
       Math.ceil(window.innerHeight + window.scrollY) >=
       document.documentElement.scrollHeight;
-    console.log("bottom:", bottom);
 
     if (bottom) {
       // HIDE CATEGORY YEAR
@@ -323,31 +322,28 @@ function ReactScroll({ detailFounder }) {
       // noColor3.style.filter = "grayscale(100%)";
       // noColor4.style.filter = "grayscale(100%)";
     } else {
-      var addColor =
+      var noColor =
         itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
           .children[0].children[0];
-      var addColor2 =
+      var noColor2 =
         itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
           .children[1].children[0];
-      var addColor3 =
+      var noColor3 =
         itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
           .children[0].children[0];
-      var addColor4 =
+      var noColor4 =
         itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
           .children[1].children[0];
 
-      // if (
-      //   itemsRef.current[itemsRef.current.length - 1].children[1].children[0]
-      //     .textContent
-      // ) {
-      //   // var test1 =
-      //   //   document.getElementsByClassName("yeartitle active").innerHTML;
-      //   // console.log("test1:", test1);
-      //   // console.log(
-      //   //   "1",
-      //   //   itemsRef.current[itemsRef.current.length - 1].children[1].children[0]
-      //   // );
-      // }
+      var Color5 =
+        itemsRef.current[itemsRef.current.length].children[0].children[1]
+          .children[1].children[0];
+      if (Color5.style.filter == "grayscale(0%)") {
+        noColor.style.filter = "grayscale(100%)";
+        noColor2.style.filter = "grayscale(100%)";
+        noColor3.style.filter = "grayscale(100%)";
+        noColor4.style.filter = "grayscale(100%)";
+      }
     }
   };
 
