@@ -26,7 +26,10 @@ function FooterComponent(props) {
           </Box>
           <Box className="framelogomb">
             <Box className="framelogofb-mb">
-              <a href="https://www.facebook.com/contrauventures">
+              <a
+                href="https://www.facebook.com/contrauventures"
+                target="_blank"
+              >
                 <img src={logofbsvg} alt="logofbsvg" />
               </a>
             </Box>
@@ -39,7 +42,7 @@ function FooterComponent(props) {
         <Box className="allrightframe">© All rights reserved.</Box>
         <Box className="framelogopc">
           <Box className="framelogofb">
-            <a href="https://www.facebook.com/contrauventures">
+            <a href="https://www.facebook.com/contrauventures" target="_blank">
               <img src={logofbsvg} alt="logofbsvg" />
             </a>
           </Box>
