@@ -124,6 +124,7 @@
             }
           }
         }
+
         .frameimgmain2 {
           height: auto;
           // padding-top: 60px;
@@ -171,6 +172,40 @@
             }
           }
         }
+
+        .frameimgmain3 {
+          height: auto;
+          // padding-top: 60px;
+          // margin-bottom: 19%;
+          .frameimgtop {
+            display: flex;
+            column-gap: 11%;
+            height: auto;
+            margin-left: 7%;
+            .frameimg1 {
+              margin-top: 14%;
+              img {
+                width: 100%;
+                height: auto;
+                max-width: 496px;
+                max-height: 269px;
+              }
+            }
+            .frameimg2 {
+              display: none;
+            }
+          }
+          .frameimgbot {
+            display: none;
+            .frameimg3 {
+              display: none;
+            }
+            .frameimg4 {
+              display: none;
+            }
+          }
+        }
+
         .frametitleyear {
           position: absolute;
           left: 50%;

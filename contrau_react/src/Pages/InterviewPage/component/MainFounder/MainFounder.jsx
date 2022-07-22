@@ -31,15 +31,6 @@ function MainFounder(props) {
     }
   }
 
-  // const listFounderRedux = useSelector(
-  //   (state) => state.interviewServices.faqList
-  // );
-  // console.log("listFounderRedux:", listFounderRedux);
-
-  // useEffect(() => {
-  //   dispatch(getListFounder());
-  // }, []);
-
   useEffect(() => {
     async function fetchData() {
       var _listFounder = await getListFounder();
@@ -92,6 +83,7 @@ function MainFounder(props) {
       setListFounder2(_listFounder.data);
     }
   };
+
   async function getIdFounderFromAPI() {
     try {
       let listFounderInteview = await interviewServices.getFounderIDByName();
