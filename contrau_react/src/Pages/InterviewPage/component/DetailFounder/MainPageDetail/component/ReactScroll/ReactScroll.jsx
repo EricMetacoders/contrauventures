@@ -350,7 +350,7 @@ function ReactScroll({ founderID }) {
   const checkLength = (numberImage) => {
     if (numberImage && numberImage > 0) {
       if (numberImage == 4) {
-        return "frameimgmain2";
+        return "frameimgmain4";
       } else if (numberImage == 3) {
         return "frameimgmain3";
       } else if (numberImage == 1) {
