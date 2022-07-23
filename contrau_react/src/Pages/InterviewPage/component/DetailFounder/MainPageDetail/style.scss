@@ -514,14 +514,14 @@
             text-align: center;
             .title1 {
               font-weight: 100;
-            }
-            .title2 {
-              width: fit-content;
-              display: inline-block;
-              height: 23px;
-              font-style: italic;
-              font-weight: 800;
-              border-bottom: 8px solid rgba(219, 47, 51, 0.9294117647);
+              span {
+                width: fit-content;
+                display: inline-block;
+                height: 23px;
+                font-style: italic;
+                font-weight: 800;
+                border-bottom: 8px solid rgba(219, 47, 51, 0.9294117647);
+              }
             }
           }
           .framedot2 {
@@ -966,13 +966,13 @@
             .title1 {
               width: 100%; //responsive add
               font-weight: 100;
-            }
-            .title2 {
-              width: fit-content;
-              display: inline-block;
-              height: 58px;
-              font-weight: 800;
-              border-bottom: 18px solid rgba(219, 47, 51, 0.9294117647);
+              span {
+                width: fit-content;
+                display: inline-block;
+                height: 58px;
+                font-weight: 800;
+                border-bottom: 18px solid rgba(219, 47, 51, 0.9294117647);
+              }
             }
           }
           .framedot2 {
@@ -1287,13 +1287,13 @@
             .title1 {
               width: 100%; //responsive add
               font-weight: 100;
-            }
-            .title2 {
-              width: fit-content;
-              display: inline-block;
-              height: 58px;
-              font-weight: 800;
-              border-bottom: 18px solid rgba(219, 47, 51, 0.9294117647);
+              span {
+                width: fit-content;
+                display: inline-block;
+                height: 58px;
+                font-weight: 800;
+                border-bottom: 18px solid rgba(219, 47, 51, 0.9294117647);
+              }
             }
           }
           .framedot2 {
