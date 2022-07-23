@@ -110,6 +110,7 @@ function ReactScroll({ founderID }) {
           addColor3.style.filter = "grayscale(100%)";
           addColor4.style.filter = "grayscale(100%)";
         }
+        setoff(0);
       }
     });
 
@@ -239,8 +240,10 @@ function ReactScroll({ founderID }) {
       }
     }
   };
-
+  const [off, setoff] = useState(-150);
+  console.log("off:", off);
   const handleSetActive = (to) => {
+    setoff(-150);
     for (var i = 0; i < itemsRef.current.length; i++) {
       if (to == itemsRef.current[i].children[1].children[0].textContent) {
         var addColor =
@@ -278,13 +281,11 @@ function ReactScroll({ founderID }) {
       }
     }
   };
-
   // CHECK AT BOTTOM
   const handleScroll3 = () => {
     const bottom =
       Math.ceil(window.innerHeight + window.scrollY) >=
       document.documentElement.scrollHeight;
-
     if (bottom) {
       // HIDE CATEGORY YEAR
       const myReference = refCategory.current;
@@ -373,6 +374,7 @@ function ReactScroll({ founderID }) {
                   smooth={true}
                   duration={500}
                   // offset={matchMobile ? -250 : -150}
+                  offset={off}
                   onSetActive={handleSetActive}
                   onSetInactive={handleSetInactive}
                 >
