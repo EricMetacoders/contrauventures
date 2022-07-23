@@ -361,27 +361,7 @@ function ReactScroll({ founderID }) {
     }
     return;
   };
-  // if (listGallery[0].image && listGallery[0].image.length > 0) {
-  //   console.log(listGallery[0].image);
-  //   console.log("    item.image[0].guid:", listGallery[0].image[0].guid);
-  //   console.log("co");
-  // }
-  // if (listGallery[0].image && listGallery[0].image.length > 0) {
-  //   console.log(listGallery[0].image);
-  //   console.log("    item.image[0].guid:", listGallery[0].image[0].guid);
-  //   console.log("co");
 
-  //   listGallery?.map((item) => {
-  //     console.log(item);
-  //   });
-  // }
-  console.log("listGallery 2:", listGallery[2]);
-  if (listGallery[0].image) {
-    console.log("ko null");
-  }
-  listGallery?.map((item) => {
-    console.log(item);
-  });
   return (
     <div className="framemaingallery">
       <div className="categorydetailyear" ref={refCategory}>
@@ -422,14 +402,7 @@ function ReactScroll({ founderID }) {
                   className="carousel-gallery"
                   ref={(el) => (itemsRef.current[index] = el)}
                 >
-                  <div
-                    // className={checkLength(
-                    //   item?.image?.length && item.image.length > 0
-                    //     ? item.image.length
-                    //     : 0
-                    // )}
-                    className={checkLength(item?.image?.length)}
-                  >
+                  <div className={checkLength(item?.image?.length)}>
                     <div className="frameimgtop">
                       <div className="frameimg1">
                         <img
@@ -440,8 +413,6 @@ function ReactScroll({ founderID }) {
                               ? item?.image[0]?.guid
                               : ""
                           }
-                          // src={item.image[0].guid}
-                          // src="https://source.unsplash.com/random"
                         />
                       </div>
                       <div className="frameimg2">

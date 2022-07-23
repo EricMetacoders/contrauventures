@@ -346,10 +346,11 @@
           position: relative;
           padding-top: 0px;
           color: #ffffff;
-          width: 77%;
+          width: 88%;
           height: auto;
           margin: auto;
           // show 4 img
+
           .frameimgmain4 {
             height: auto;
             padding-top: 60px;
@@ -358,9 +359,10 @@
               display: flex;
               width: 100%;
               height: auto;
-              margin-left: 11.4%;
+              margin-left: 9.4%;
               column-gap: 14%;
               .frameimg1 {
+                width: 38%;
                 img {
                   width: 100%;
                   height: 100%;
@@ -372,6 +374,8 @@
               .frameimg2 {
                 // height: auto;
                 margin-top: auto;
+                width: 30vw;
+                background-color: red;
                 img {
                   width: 100%;
                   height: 100%;
