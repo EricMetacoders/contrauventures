@@ -396,7 +396,7 @@ function ReactScroll({ founderID }) {
                   spy={true}
                   smooth={true}
                   duration={500}
-                  // offset={matchMobile ? -250 : -150}
+                  offset={matchMobile ? -250 : -150}
                   // offset={off}
                   onSetActive={handleSetActive}
                   onSetInactive={handleSetInactive}
