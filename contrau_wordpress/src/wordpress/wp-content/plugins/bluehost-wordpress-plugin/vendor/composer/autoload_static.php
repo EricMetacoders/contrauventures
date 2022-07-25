@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit138d3c5e1141e3c726f19de5203f9d96
+class ComposerStaticInit850a153cd93b3f285753d245f1014a6f
 {
     public static $files = array (
         '305f44d06b4b9b934b549f0b525c4bea' => __DIR__ . '/..' . '/newfold-labs/wp-module-data/bootstrap.php',
@@ -242,9 +242,9 @@ class ComposerStaticInit138d3c5e1141e3c726f19de5203f9d96
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit138d3c5e1141e3c726f19de5203f9d96::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit138d3c5e1141e3c726f19de5203f9d96::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit138d3c5e1141e3c726f19de5203f9d96::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit850a153cd93b3f285753d245f1014a6f::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit850a153cd93b3f285753d245f1014a6f::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit850a153cd93b3f285753d245f1014a6f::$classMap;
 
         }, null, ClassLoader::class);
     }
