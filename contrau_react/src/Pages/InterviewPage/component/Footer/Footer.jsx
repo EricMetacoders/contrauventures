@@ -5,6 +5,8 @@ import { Box } from "@mui/material";
 import logotraufooter from "../../../../assets/interview-img/logotraufooter.png";
 import logofb from "../../../../assets/interview-img/FB.png";
 import logolk from "../../../../assets/interview-img/LI.png";
+import logofbsvg from "../../../../assets/interview-img/fb.svg";
+import logolisvg from "../../../../assets/interview-img/li.svg";
 FooterComponent.propTypes = {};
 
 function FooterComponent(props) {
@@ -16,25 +18,37 @@ function FooterComponent(props) {
         </Box>
         <Box className="frameaddress">
           <Box className="addressdetailfooter">
-            <span style={{ fontWeight: "700" }}>Tell</span>&nbsp; 1234-5678-910
-            | <span style={{ fontWeight: "700" }}>E-mail</span> abcd@gmail.com |
-            <span style={{ fontWeight: "700" }}>&nbsp;Address</span> 36-1
-            Chungdam-dong, Seoul, Korea
+            <span style={{ fontWeight: "700" }}>Tell</span> (+84) (0)961-806-406
+            | <span style={{ fontWeight: "700" }}>E-mail </span>
+            update@contrau.ventures |
+            <span style={{ fontWeight: "700" }}> Address</span> 94 Xuan Thuy
+            Street, Thao Dien Ward, District 2, Thu Duc City, Ho Chi Minh City
           </Box>
-          <Box className="framelogofb-mb">
-            <img src={logofb} alt="logofb" />
-          </Box>
-          <Box className="framelogolk-mb">
-            <img src={logolk} alt="logolk" />
+          <Box className="framelogomb">
+            <Box className="framelogofb-mb">
+              <a
+                href="https://www.facebook.com/contrauventures"
+                target="_blank"
+              >
+                <img src={logofbsvg} alt="logofbsvg" />
+              </a>
+            </Box>
+            <Box className="framelogolk-mb">
+              <img src={logolisvg} alt="logolisvg" />
+            </Box>
           </Box>
         </Box>
 
         <Box className="allrightframe">© All rights reserved.</Box>
-        <Box className="framelogofb">
-          <img src={logofb} alt="logofb" />
-        </Box>
-        <Box className="framelogolk">
-          <img src={logolk} alt="logolk" />
+        <Box className="framelogopc">
+          <Box className="framelogofb">
+            <a href="https://www.facebook.com/contrauventures" target="_blank">
+              <img src={logofbsvg} alt="logofbsvg" />
+            </a>
+          </Box>
+          <Box className="framelogolk">
+            <img src={logolisvg} alt="logolisvg" />
+          </Box>
         </Box>
       </Box>
     </Box>

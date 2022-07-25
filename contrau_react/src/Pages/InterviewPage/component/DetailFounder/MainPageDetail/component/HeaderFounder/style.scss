@@ -2,12 +2,16 @@
   display: flex;
   position: relative;
   width: 100%;
-  // height: auto;
   .frameimglayout {
     position: relative;
     width: 100%;
+    // max-height: 554px;
+    // height: 50vh;
+
     .logobackgroundheader {
       width: 100%;
+      max-height: 640px;
+      object-fit: cover;
     }
   }
 
@@ -24,13 +28,15 @@
   .titledetaimainframeheader {
     position: absolute;
     display: flex;
+    // display: -webkit-flex;
     // left: 75.8%;
     right: 5%;
     top: 0%;
     bottom: 0%;
     padding-top: 28px;
-    height: fit-content;
+    height: auto;
     column-gap: 2.6vw;
+    // -webkit-column-gap: 2.6vw;
     .titledetaiframeheader {
       cursor: pointer;
       font-family: "Poppins", sans-serif;
@@ -80,9 +86,11 @@
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 100;
-    font-size: 5.25vw;
+    // font-size: 5.25vw;
+    // font-size: 5.25vw;
+    font-size: 100px;
     // line-height: 100px;
-    line-height: 100%;
+    line-height: 100px;
     /* or 117% */
     text-align: left;
     letter-spacing: -0.01em;
@@ -102,13 +110,15 @@
       background: #fcfcfc;
     }
     .titlecompany {
-      width: 27vw;
+      width: 500px;
       margin-top: 7%;
       font-style: normal;
       font-weight: 600;
-      font-size: 1vw;
+      // font-size: 1vw;
+      font-size: 20px;
       margin-left: 5px;
-      line-height: 170%;
+      line-height: 32%;
+      // line-height: 170%;
       /* identical to box height, or 160% */
       letter-spacing: -0.02em;
       color: #ffffff;
@@ -139,15 +149,19 @@
       position: absolute;
       left: 0%;
       right: 81.74%;
-      top: 1%;
+      top: 0%;
       bottom: 17.85%;
-      // padding-top: 16.98px;
+      padding-top: 16.98px;
       padding-left: 16.76px;
+      img {
+        width: 95px;
+      }
     }
     .titledetaimainframeheader {
       position: absolute;
       left: 85%;
-      height: auto;
+      font-size: 30px;
+      padding-top: 15px;
     }
     .framemaintilecenterheader {
       position: absolute;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { ReactComponent as PlusImage } from "../../../../assets/homepage_img/plus.svg";
 import { ReactComponent as MinusImage } from "../../../../assets/homepage_img/minus.svg";
@@ -22,9 +22,8 @@ export default function Faq() {
       <div className="  pb-[10px] md:pb-[90px]">
         <div className="flex items-end justify-start">
           <p className="popinsFont italic text-[40px]  2xl:text-[60px] font-[900]">
-            FAQ
+            FAQ <span className="text-red">.</span>
           </p>
-          <div className="w-[10px] h-[10px] 2xl:w-[15px] 2xl:h-[15px] rounded-full bg-red mb-[11px] 2xl:mb-[21px]"></div>
         </div>
       </div>
       <div>
@@ -46,58 +45,26 @@ export default function Faq() {
                 showArrow={true}
                 header={
                   <div
-                    id="parentDiv"
-                    onMouseOver={(e) => {
-                      e.target.classList.add("greyBg");
+                    id={`parentDiv${i}`}
+                    onMouseOver={() => {
+                      document
+                        .getElementById(`parentDiv${i}`)
+                        .classList.add("greyBg");
                     }}
                     onMouseOut={(e) => {
-                      e.target.classList.remove("greyBg");
+                      document
+                        .getElementById(`parentDiv${i}`)
+                        .classList.remove("greyBg");
                     }}
                   >
-                    <div
-                      className="border-t-[1px] md:pb-[50px] cursor-pointer"
-                      onMouseOver={() => {
-                        document
-                          .getElementById("parentDiv")
-                          .classList.add("greyBg");
-                      }}
-                      onMouseOut={(e) => {
-                        document
-                          .getElementById("parentDiv")
-                          .classList.remove("greyBg");
-                      }}
-                    >
-                      <div className="mt-[10px] xl:mt-[50px] 2xl:mx-[20px]">
+                    <div className="border-t-[1px] md:pb-[50px] cursor-pointer ">
+                      <div className="mt-[10px] sm:mt-[20px] md:mt-[50px] xl:mt-[50px] 2xl:mx-[20px]">
                         <div className="flex items-center justify-between">
-                          <div className="md:flex  space-center justify-center md:space-x-5">
-                            <p
-                              className="popinsFont md:mt-[8px] text-[18px] font-light  2xl:text-[24px] italic text-red mb-[2px] lg:mb-0"
-                              onMouseOver={() => {
-                                document
-                                  .getElementById("parentDiv")
-                                  .classList.add("greyBg");
-                              }}
-                              onMouseOut={(e) => {
-                                document
-                                  .getElementById("parentDiv")
-                                  .classList.remove("greyBg");
-                              }}
-                            >
+                          <div className="md:flex items-center  space-center justify-center md:space-x-5">
+                            <p className="popinsFont text-[18px] font-light  lg:text-[24px] italic text-red mb-[2px] ">
                               Q{i + 1}
                             </p>
-                            <p
-                              className="break-all text-[18px] md:text-[32px] w-[273px] md:w-[522px] 2xl:w-[900px]  popinsFont 2xl:text-[32px] 2xl:font-normal font-light  mb-0 mText"
-                              onMouseOver={() => {
-                                document
-                                  .getElementById("parentDiv")
-                                  .classList.add("greyBg");
-                              }}
-                              onMouseOut={(e) => {
-                                document
-                                  .getElementById("parentDiv")
-                                  .classList.remove("greyBg");
-                              }}
-                            >
+                            <p className="break-all text-[18px] md:text-[20px]  w-auto  lg:text-[25px]   popinsFont 2xl:text-[32px] sm:font-normal font-light  mb-0 mText">
                               {ques.acf.question}
                             </p>
                           </div>
@@ -108,7 +75,7 @@ export default function Faq() {
                 }
                 key={i + 1}
               >
-                <div className="ml-[-3px] mr-[47px] pb-[40px] md:mx-[50px] ">
+                <div className="ml-[-3px] md:mt-[40px] mr-[47px] pb-[40px] md:mx-[50px] ">
                   <p className="break-all md:mt-[-21px] mt-[21px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
                     {ques.acf.answer_part_1}
                   </p>

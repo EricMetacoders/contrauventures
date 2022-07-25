@@ -5,8 +5,11 @@ import Slider from "react-slick";
 import FounderImageCarousel from "./FounderImageCarousel";
 import { useSelector } from "react-redux";
 
+import "./divImageSize.scss";
+
 export default function FounderCarousel() {
   const data = useSelector((state) => state.homeSlice.founders);
+
   const settings = {
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -17,7 +20,11 @@ export default function FounderCarousel() {
   return (
     <Slider {...settings}>
       {data?.map((img, index) => {
-        return <FounderImageCarousel key={index} data={img} />;
+        return (
+          <div className="divImgSize">
+            <FounderImageCarousel key={index} data={img} />
+          </div>
+        );
       })}
     </Slider>
   );

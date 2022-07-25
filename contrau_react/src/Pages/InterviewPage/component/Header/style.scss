@@ -85,8 +85,8 @@
     width: auto;
     height: auto;
     left: 50%;
-    top: 70%;
-    transform: translateX(-50%) translateY(-70%);
+    top: 55%;
+    transform: translateX(-50%) translateY(-55%);
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -126,19 +126,23 @@
       position: absolute;
       left: -0.24%;
       right: 81.74%;
-      top: 1%;
+      top: 0%;
       bottom: 0%;
       padding-top: 16.98px;
       padding-left: 16.76px;
+      img {
+        width: 95px;
+      }
     }
     .titledetaimainframeheader {
       position: absolute;
       left: 85%;
-      height: auto;
+      font-size: 30px;
+      padding-top: 15px;
+
+      // background-color: red;
     }
-    .titleframekoreanheader {
-      display: none;
-    }
+
     .framemaintilecenterheader {
       position: absolute;
       width: 284px;

@@ -1,19 +1,36 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  position: relative;
-  cursor: pointer;
+  height: 180px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const LinkLogo = styled.a`
+  width: ${(props) => props.wrapperWidth};
+  height: ${(props) => props.wrapperHeight};
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: ${(props) => props.cursor ? props.cursor : "pointer"};
 `;
 
 export const BackgroundLogo = styled.div`
   background-color: #1c1c1c;
-  opacity: 0.1;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 `;
 
 export const Logo = styled.img`
-  position: absolute;
-  top:0;
-  left: 0;
   z-index: 999;
+  max-width: 50%;
+  max-height: 50%;
+  object-fit: contain;
 `;

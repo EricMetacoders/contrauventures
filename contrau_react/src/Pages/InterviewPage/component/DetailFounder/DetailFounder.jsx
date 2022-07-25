@@ -21,25 +21,60 @@ async function getAPIDetailFounder(founderId) {
   }
 }
 
+async function getFounderData(founderId) {
+  try {
+    let detailFounder = await interviewServices.getFounderByFounderID(
+      founderId
+    );
+
+    return detailFounder;
+  } catch (error) {
+    console.log("Failed to fetch", error);
+  }
+}
+
 function DetailFounder({ currentFounder }) {
   var { founderId } = useParams();
 
   const [detailFounder, setDetailFounder] = useState({});
-
+  const [detailFounder2, setDetailFounder2] = useState([]);
   useEffect(() => {
     (async function () {
-      const interviewHtmlGetByFounderId = await getAPIDetailFounder(founderId);
-      setDetailFounder(interviewHtmlGetByFounderId.data);
+      const dataFounder = await getFounderData(founderId);
+      setDetailFounder2(dataFounder.data);
     })();
-
-    window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    // GET ID FOR HEADER
+    (async function () {
+      if (Object.values(detailFounder2).length > 0) {
+        const interviewHtmlGetByFounderId = await getAPIDetailFounder(
+          detailFounder2?.acf?.interview[0]
+        );
+        setDetailFounder(interviewHtmlGetByFounderId.data);
+      }
+    })();
+    window.scrollTo(0, 0);
+  }, [detailFounder2]);
 
   return (
     <div>
       <HeaderFounder detailFounder={detailFounder} />
-      <MainPageDetail detailArticle={detailFounder} />
+      <MainPageDetail
+        detailArticle={detailFounder}
+        founderID={
+          Object.values(detailFounder2).length > 0
+            ? detailFounder2?.acf?.gallery[0]
+            : ""
+        }
+      />
       <FooterComponent />
+      {/* {` ${
+        Object.values(detailFounder2).length > 0
+          ? detailFounder2?.acf?.gallery[0]
+          : ""
+      }detailFounder2?.acf?.gallery[0]`} */}
     </div>
   );
 }

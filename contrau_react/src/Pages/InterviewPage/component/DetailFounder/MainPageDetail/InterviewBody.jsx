@@ -353,13 +353,14 @@ function InterviewBody({ detailArticle }) {
               <img src={dot1} />
             </div>
             <div className="frametitleqoute">
-              <span className="title1">
-                {detailArticle?.qoute?.part_1 || ""}
-              </span>
+              <div
+                className="title1"
+                dangerouslySetInnerHTML={{
+                  __html: detailArticle?.qoute?.part_1 || "",
+                }}
+              />
               &nbsp;
-              <span className="title2">
-                {detailArticle?.qoute?.part_2 || ""}
-              </span>
+              {/* <div className="title2">{detailArticle?.qoute?.part_2 || ""}</div> */}
             </div>
             <div className="framedot2">
               <img src={dot2} />
@@ -404,14 +405,23 @@ function InterviewBody({ detailArticle }) {
           ) : (
             <div
               dangerouslySetInnerHTML={{
-                __html: detailArticle.content_part_2?.detail_content || "",
+                __html: detailArticle.content_part_3?.detail_content || "",
+              }}
+            />
+          )}
+          {!detailArticle ? (
+            <div />
+          ) : (
+            <div
+              dangerouslySetInnerHTML={{
+                __html: detailArticle.content_part_4?.detail_content || "",
               }}
             />
           )}
         </div>
       </div>
       {/* FRAME NEW */}
-      <News />
+      {/* <News /> */}
     </Box>
   );
 }

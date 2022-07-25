@@ -43,4 +43,10 @@ export const interviewServices = {
       method: "GET",
     });
   },
+  getFounderByFounderID(founderId) {
+    return axios({
+      url : `${BASE_URL}founders/${founderId}`,
+      method: "GET",
+    });
+  },
 };

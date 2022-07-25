@@ -162,15 +162,17 @@ export default function Slick() {
           {viewAll?.map((logo, i) => {
             return (
               <>
-                <div key={i}>
-                  <div className="flex items-center justify-center">
-                    <img
-                      src={logo?.acf?.image}
-                      alt={logo?.acf?.category}
-                      className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
-                    />
+                <a href={logo.acf.linkWebsite} target="_blank">
+                  <div key={i}>
+                    <div className="flex items-center justify-center">
+                      <img
+                        src={logo?.acf?.image}
+                        alt={logo?.acf?.category}
+                        className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
+                      />
+                    </div>
                   </div>
-                </div>
+                </a>
                 {(i + 1) % 4 === 0 ? <hr className="w-full bg-white" /> : <></>}
               </>
             );
@@ -186,15 +188,17 @@ export default function Slick() {
           {sWInfrastructure?.map((logo, i) => {
             return (
               <>
-                <div key={i}>
-                  <div className="flex items-center justify-center">
-                    <img
-                      src={logo?.acf?.image}
-                      alt={logo?.acf?.category}
-                      className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
-                    />
+                <a href={logo.acf.linkWebsite} target="_blank">
+                  <div key={i}>
+                    <div className="flex items-center justify-center">
+                      <img
+                        src={logo?.acf?.image}
+                        alt={logo?.acf?.category}
+                        className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
+                      />
+                    </div>
                   </div>
-                </div>
+                </a>
                 {(i + 1) % 4 === 0 ? <hr className="w-full bg-white" /> : <></>}
               </>
             );
@@ -210,15 +214,17 @@ export default function Slick() {
           {digitalSupplyChain?.map((logo, i) => {
             return (
               <>
-                <div key={i}>
-                  <div className="flex items-center justify-center">
-                    <img
-                      src={logo?.acf?.image}
-                      alt={logo?.acf?.category}
-                      className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
-                    />
+                <a href={logo.acf.linkWebsite} target="_blank">
+                  <div key={i}>
+                    <div className="flex items-center justify-center">
+                      <img
+                        src={logo?.acf?.image}
+                        alt={logo?.acf?.category}
+                        className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
+                      />
+                    </div>
                   </div>
-                </div>
+                </a>
                 {(i + 1) % 4 === 0 ? <hr className="w-full bg-white" /> : <></>}
               </>
             );
@@ -234,15 +240,17 @@ export default function Slick() {
           {sustainableMegacity?.map((logo, i) => {
             return (
               <>
-                <div key={i}>
-                  <div className="flex items-center justify-center">
-                    <img
-                      src={logo?.acf?.image}
-                      alt={logo?.acf?.category}
-                      className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
-                    />
+                <a href={logo.acf.linkWebsite} target="_blank">
+                  <div key={i}>
+                    <div className="flex items-center justify-center">
+                      <img
+                        src={logo?.acf?.image}
+                        alt={logo?.acf?.category}
+                        className="opacity-80 hover:opacity-100 w-[63px] h-[36px] object-contain"
+                      />
+                    </div>
                   </div>
-                </div>
+                </a>
                 {(i + 1) % 4 === 0 ? <hr className="w-full bg-white" /> : <></>}
               </>
             );

@@ -27,11 +27,101 @@
   color: red;
 }
 
+::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 18px !important;
+  font-family: "Poppins", sans-serif !important;
+  resize: none;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 18px !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 18px !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+#contactD {
+  ::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 16px !important;
+    font-family: "Poppins", sans-serif !important;
+    resize: none;
+  }
+
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 16px !important;
+    font-family: "Poppins", sans-serif !important;
+  }
+
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 16px !important;
+    font-family: "Poppins", sans-serif !important;
+  }
+}
+
 @media screen and (min-width: 1536px) and (max-width: 1600px) {
   #contactD {
     input {
       width: 202px;
       height: 77px;
+    }
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 640px) {
+  ::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 12px !important;
+    font-family: "Poppins", sans-serif !important;
+    resize: none;
+  }
+
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 12px !important;
+    font-family: "Poppins", sans-serif !important;
+  }
+
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 12px !important;
+    font-family: "Poppins", sans-serif !important;
+  }
+
+  #contactD {
+    ::placeholder {
+      color: rgba(255, 255, 255, 0.6) !important;
+      font-size: 12px !important;
+      font-family: "Poppins", sans-serif !important;
+      resize: none;
+    }
+
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: rgba(255, 255, 255, 0.6) !important;
+      font-size: 12px !important;
+      font-family: "Poppins", sans-serif !important;
+    }
+
+    ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: rgba(255, 255, 255, 0.6) !important;
+      font-size: 12px !important;
+      font-family: "Poppins", sans-serif !important;
     }
   }
 }

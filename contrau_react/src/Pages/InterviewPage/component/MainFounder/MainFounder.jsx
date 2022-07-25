@@ -50,30 +50,19 @@ function MainFounder(props) {
 
   const [clicked, setClicked] = useState(contentdatacategory[0].name);
 
-  const history = useNavigate();
-
   const carouselProperties = {
     // initialSlide: 3,
     infinite: false,
     arrows: false,
+
     responsive: [
       {
-        breakpoint: 426,
+        breakpoint: 639,
         settings: {
-          slidesToShow: 3,
-        },
-      },
-
-      {
-        breakpoint: 769,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 1025,
-        settings: {
-          slidesToShow: 1,
+          slidesToShow: 2.5,
+          slidesToScroll: 1,
+          infinite: false,
+          arrows: false,
         },
       },
     ],
@@ -94,6 +83,7 @@ function MainFounder(props) {
       setListFounder2(_listFounder.data);
     }
   };
+
   async function getIdFounderFromAPI() {
     try {
       let listFounderInteview = await interviewServices.getFounderIDByName();
@@ -102,11 +92,6 @@ function MainFounder(props) {
       console.log("Failed to fetch", error);
     }
   }
-
-  const clickDetailFounder = async (item) => {
-    const founderId = item.acf.interview[0];
-    history(`/detailfounder/${founderId}`);
-  };
 
   return (
     <div className="rootmainfounder">
@@ -121,7 +106,7 @@ function MainFounder(props) {
                 className={
                   clicked == item.name
                     ? "frame-icon-main tab-active"
-                    : "frame-icon-main"
+                    : "frame-icon-main tab-notactive"
                 }
                 onClick={() => dealClick(item)}
               >

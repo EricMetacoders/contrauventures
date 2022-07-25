@@ -10,13 +10,13 @@ export const homeServices = {
   },
   getPartnersList() {
     return axios({
-      url: `${BASE_URL}partners`,
+      url: `${BASE_URL}partners?per_page=100&order=order&order=asc`,
       method: "GET",
     });
   },
   getFounderList() {
     return axios({
-      url: `${BASE_URL}founders`,
+      url: `${BASE_URL}founders?per_page=10&order=id&id=asc`,
       method: "GET",
     });
   },

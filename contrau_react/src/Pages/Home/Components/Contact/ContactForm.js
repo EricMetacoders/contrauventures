@@ -100,9 +100,10 @@ export default function ContactForm() {
             {...register("title", { required: true })}
             type="text"
             placeholder="Title"
-            className="break-all lg:h-[75px]  w-full h-[40px] bg-inputBg pl-[26px]   caret-[#DB2F33] opacity-60 active:cursor-text text-[#fff] hover:opacity-100 cursor-pointer pt-[20px]"
+            className="break-all lg:h-[75px]  w-full h-[40px] bg-inputBg pl-[26px]   caret-[#DB2F33] opacity-60 active:cursor-text text-[#fff] hover:opacity-100 cursor-pointer pt-[26px]"
             id="title"
             name="title"
+            style={{ resize: "none" }}
           />
           {errors.title?.type === "required" && (
             <p className="errorText">Please write the title !</p>
@@ -116,6 +117,7 @@ export default function ContactForm() {
             id="message"
             name="message"
             className="w-full lg:h-[191px] h-[116px] pt-[20px] lg:pb-[117px] bg-inputBg pl-[26px] caret-[#DB2F33] opacity-60 active:cursor-text text-[#fff] hover:opacity-100 cursor-pointer "
+            style={{ resize: "none" }}
           />
           {errors.title?.type === "required" && (
             <p className="errorText">Please write the message !</p>
@@ -129,20 +131,22 @@ export default function ContactForm() {
             name="attachFile"
             onChange={() => {
               let fileName = document.getElementById("file").value.split("\\");
-              setFileName(fileName[2]);
+              if (fileName[2] !== undefined) {
+                setFileName(fileName[2]);
+              } else {
+                setFileName("Attach File");
+              }
             }}
             className="w-full lgl:h-[75px] bg-inputBg pt-[30px] pl-[100px] text-[#fff]  custom-file-input cursor-pointer hidden"
           />
           <label
-            className="w-full lg:h-[75px] bg-inputBg  pt-[2.5%] pl-[100px] text-[#fff]   opacity-60 custom-file-input cursor-pointer inline-block"
+            className="w-full lg:h-[75px] bg-inputBg flex items-center pl-[59px] text-[#fff]   opacity-60 hover:opacity-100 custom-file-input cursor-pointer"
             for="file"
           >
-            <img
-              src={ic_file}
-              alt="file"
-              className="absolute top-5 left-[50px]"
-            />{" "}
-            {fileName}
+            <img src={ic_file} alt="file" className="absolute left-[15px]" />{" "}
+            <p className="text-[12px] popinsFont sm:text-[18px] text-white opacity-60">
+              {fileName}
+            </p>
           </label>
 
           {errors.attachFile && (
