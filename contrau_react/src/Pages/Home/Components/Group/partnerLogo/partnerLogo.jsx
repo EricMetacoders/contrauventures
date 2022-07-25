@@ -12,7 +12,7 @@ export const PartnerLogo = ({
     <Wrapper>
       <div className="pl-[90px]">
         <LinkLogo
-          {...{ wrapperWidth, wrapperHeight, paddingLeft }}
+          {...{ wrapperWidth, wrapperHeight, paddingLeft, cursor: linkWebsite ? "pointer" : "unset" }}
           href={linkWebsite || undefined}
           target={linkWebsite ? "_blank" : undefined}
         >
