@@ -14,6 +14,8 @@ import { interviewServices } from "../../../../../../../services/interviewServic
 
 function ReactScroll({ founderID }) {
   const [listGallery, setListGallery] = useState([{}]);
+  const [keyGallery, setkeyGallery] = useState([{}]);
+  console.log("keyGallery:", keyGallery);
   const matchMobile = useMediaQuery("(max-width:639px)");
   // GET FOUNDER BY FOUNDER ID
   async function getFounderID(id) {
@@ -130,10 +132,14 @@ function ReactScroll({ founderID }) {
       let detailfoundergallery = await getGalleryFounderDetail(founderID);
 
       var array = [];
-
+      var arrayKey = [];
       Object.values(detailfoundergallery.data.acf.image).map((item) => {
         array.push(item);
       });
+      Object.keys(detailfoundergallery.data.acf.image).map((item) => {
+        arrayKey.push(item);
+      });
+      setkeyGallery([...arrayKey]);
       setListGallery([...array]);
     }
     fechData();
@@ -264,19 +270,21 @@ function ReactScroll({ founderID }) {
 
   const handleSetInactive = (to) => {
     for (var i = 0; i < itemsRef.current.length; i++) {
-      if (to == itemsRef.current[i].children[1].children[0].textContent) {
-        var noColor =
-          itemsRef.current[i].children[0].children[0].children[0].children[0];
-        var noColor2 =
-          itemsRef.current[i].children[0].children[0].children[1].children[0];
-        var noColor3 =
-          itemsRef.current[i].children[0].children[1].children[0].children[0];
-        var noColor4 =
-          itemsRef.current[i].children[0].children[1].children[1].children[0];
-        noColor.style.filter = "grayscale(100%)";
-        noColor2.style.filter = "grayscale(100%)";
-        noColor3.style.filter = "grayscale(100%)";
-        noColor4.style.filter = "grayscale(100%)";
+      if (itemsRef.current[i].children[1].children[0].textContent !== "") {
+        if (to == itemsRef.current[i].children[1].children[0].textContent) {
+          var noColor =
+            itemsRef.current[i].children[0].children[0].children[0].children[0];
+          var noColor2 =
+            itemsRef.current[i].children[0].children[0].children[1].children[0];
+          var noColor3 =
+            itemsRef.current[i].children[0].children[1].children[0].children[0];
+          var noColor4 =
+            itemsRef.current[i].children[0].children[1].children[1].children[0];
+          noColor.style.filter = "grayscale(100%)";
+          noColor2.style.filter = "grayscale(100%)";
+          noColor3.style.filter = "grayscale(100%)";
+          noColor4.style.filter = "grayscale(100%)";
+        }
       }
     }
   };
@@ -360,13 +368,22 @@ function ReactScroll({ founderID }) {
   return (
     <div className="framemaingallery">
       <div className="categorydetailyear" ref={refCategory}>
-        <div className="frameyearcategory">
+        <div
+          className="frameyearcategory"
+          style={
+            Object.keys(listGallery).length > 6
+              ? {
+                  columnGap: "5px ",
+                }
+              : {}
+          }
+        >
           {Object.keys(listGallery).length > 1 &&
             listGallery?.map((item, index) => (
               <div ref={(el) => (itemsRefYear.current[index] = el)}>
                 <Link
                   className="yeartitle"
-                  to={item.year}
+                  to={item.year == "" ? item.year : keyGallery[index]}
                   key={item.year}
                   spy={true}
                   smooth={true}
@@ -376,7 +393,11 @@ function ReactScroll({ founderID }) {
                   onSetActive={handleSetActive}
                   onSetInactive={handleSetInactive}
                 >
-                  {item.year}
+                  {item.year ? (
+                    <div className="titleyeardetail">{item.year}</div>
+                  ) : (
+                    <div className="titleyeardetail">{keyGallery[index]}</div>
+                  )}
                 </Link>
               </div>
             ))}
@@ -404,7 +425,7 @@ function ReactScroll({ founderID }) {
                           style={{ filter: "grayscale(100%)" }}
                           // src={item?.image[1]?.guid}
                           src={
-                            item.image && item.image.length > 0 && item.image
+                            item.image && item.image.length > 0
                               ? item?.image[0]?.guid
                               : ""
                           }
@@ -414,7 +435,7 @@ function ReactScroll({ founderID }) {
                         <img
                           style={{ filter: "grayscale(100%)" }}
                           src={
-                            item.image && item.image.length > 0 && item.image
+                            item.image && item.image.length > 0
                               ? item.image[1]?.guid
                               : ""
                           }
@@ -426,7 +447,7 @@ function ReactScroll({ founderID }) {
                         <img
                           style={{ filter: "grayscale(100%)" }}
                           src={
-                            item.image && item.image.length > 0 && item.image
+                            item.image && item.image.length > 0
                               ? item.image[2]?.guid
                               : ""
                           }
@@ -436,7 +457,7 @@ function ReactScroll({ founderID }) {
                         <img
                           style={{ filter: "grayscale(100%)" }}
                           src={
-                            item.image && item.image.length > 0 && item.image
+                            item.image && item.image.length > 0
                               ? item.image[3]?.guid
                               : ""
                           }
@@ -445,9 +466,18 @@ function ReactScroll({ founderID }) {
                     </div>
                   </div>
 
-                  <div className="frametitleyear">
-                    {item.year && (
+                  <div
+                    className="frametitleyear"
+                    style={
+                      checkLength(item?.image?.length) == "frameimgmain1"
+                        ? { top: "35%" }
+                        : {}
+                    }
+                  >
+                    {item.year !== "" ? (
                       <div className="titleyeardetail">{item.year}</div>
+                    ) : (
+                      <div className="titleyeardetail">{keyGallery[index]}</div>
                     )}
                   </div>
                 </div>
