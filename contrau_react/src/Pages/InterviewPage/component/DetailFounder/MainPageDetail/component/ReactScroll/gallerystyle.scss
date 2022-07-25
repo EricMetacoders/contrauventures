@@ -185,6 +185,7 @@
           .frameimgtop {
             .frameimg1 {
               margin-top: 0%;
+              height: 50vw;
               img {
                 margin: auto;
                 width: 100%;
@@ -255,6 +256,7 @@
           position: absolute;
           left: 50%;
           top: 27%;
+          // top: 35%;
           // top: 35%;
           transform: translateX(-50%);
           display: flex;
