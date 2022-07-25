@@ -5,7 +5,7 @@
  * Description: OptinMonster is the best WordPress popup builder plugin that helps you grow your email newsletter list and sales with email popups, exit intent popups, floating bars and more!
  * Author:      OptinMonster Popup Builder Team
  * Author URI:  https://optinmonster.com
- * Version:     2.7.0
+ * Version:     2.8.1
  * Text Domain: optin-monster-api
  * Domain Path: languages
  *
@@ -13,7 +13,7 @@
  * WC tested up to:      6.2.0
  * Requires at least:    4.7.0
  * Requires PHP:         5.3
- * Tested up to:         5.9.3
+ * Tested up to:         6.0
  *
  * OptinMonster is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -66,7 +66,7 @@ class OMAPI {
 	 *
 	 * @var string
 	 */
-	public $version = '2.7.0';
+	public $version = '2.8.1';
 
 	/**
 	 * The name of the plugin.
@@ -136,6 +136,13 @@ class OMAPI {
 	 * @var OMAPI_WooCommerce
 	 */
 	public $woocommerce;
+
+	/**
+	 * OMAPI_EasyDigitalDownloads object.
+	 *
+	 * @var OMAPI_EasyDigitalDownloads
+	 */
+	public $edd;
 
 	/**
 	 * OMAPI_Elementor object.
@@ -724,10 +731,14 @@ class OMAPI {
 	 *
 	 * @since 1.1.9
 	 *
+	 * @deprecated 2.8.0 Use `OMAPI_WooCommerce::is_active` instead.
+	 *
 	 * @return bool
 	 */
 	public static function is_woocommerce_active() {
-		return class_exists( 'WooCommerce', true );
+		_deprecated_function( __FUNCTION__, '2.8.0', 'OMAPI_WooCommerce::is_active' );
+
+		return OMAPI_WooCommerce::is_active();
 	}
 
 	/**

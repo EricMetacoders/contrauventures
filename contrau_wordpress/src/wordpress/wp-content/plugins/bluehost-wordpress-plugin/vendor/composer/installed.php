@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'bluehost/bluehost-wordpress-plugin',
-        'pretty_version' => '2.11.4',
-        'version' => '2.11.4.0',
-        'reference' => 'a27336f0f7534e409f8298a514908d29ca7f3b03',
+        'pretty_version' => '2.11.5',
+        'version' => '2.11.5.0',
+        'reference' => '7fbc95e7f15709e9aa171070547621daa83a078c',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'bluehost/bluehost-wordpress-plugin' => array(
-            'pretty_version' => '2.11.4',
-            'version' => '2.11.4.0',
-            'reference' => 'a27336f0f7534e409f8298a514908d29ca7f3b03',
+            'pretty_version' => '2.11.5',
+            'version' => '2.11.5.0',
+            'reference' => '7fbc95e7f15709e9aa171070547621daa83a078c',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

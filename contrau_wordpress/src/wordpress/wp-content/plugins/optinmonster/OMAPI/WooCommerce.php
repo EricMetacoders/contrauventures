@@ -57,6 +57,24 @@ class OMAPI_WooCommerce {
 	const MINIMUM_VERSION = '3.2.0';
 
 	/**
+	 * Holds the cart class object.
+	 *
+	 * @since 2.8.0
+	 *
+	 * @var array
+	 */
+	protected $cart;
+
+	/**
+	 * OMAPI_WooCommerce_Save object
+	 *
+	 * @since 2.8.0
+	 *
+	 * @var OMAPI_WooCommerce_Save
+	 */
+	public $save;
+
+	/**
 	 * Primary class constructor.
 	 *
 	 * @since 1.7.0
@@ -87,6 +105,7 @@ class OMAPI_WooCommerce {
 	public function set() {
 		self::$instance = $this;
 		$this->base     = OMAPI::get_instance();
+		$this->save     = new OMAPI_WooCommerce_Save();
 	}
 
 	/**
@@ -386,6 +405,12 @@ class OMAPI_WooCommerce {
 	 * @return boolean
 	 */
 	public static function is_connected() {
+
+		// If not active, then it is not connected as well.
+		if ( ! self::is_active() ) {
+			return false;
+		}
+
 		// Get current site details.
 		$site = OMAPI_Utils::parse_url( site_url() );
 		$host = isset( $site['host'] ) ? $site['host'] : '';
@@ -692,5 +717,83 @@ class OMAPI_WooCommerce {
 
 		// Maybe store the revenue attribution data.
 		return $this->maybe_store_revenue_attribution( $order_id, true );
+	}
+
+	/**
+	 * Retrieve the cart from Woocommerce
+	 *
+	 * @since 2.8.0 Moved from OMAPI_Output->woocommerce_cart.
+	 *
+	 * @return array An array of WooCommerce cart data.
+	 */
+	public function get_cart() {
+		if ( ! empty( $this->cart ) ) {
+			return $this->cart;
+		}
+
+		// Bail if WooCommerce isn't currently active.
+		if ( ! self::is_active() ) {
+			return array();
+		}
+
+		// Check if WooCommerce is the minimum version.
+		if ( ! self::is_minimum_version() ) {
+			return array();
+		}
+
+		// Bail if we don't have a cart object.
+		if ( ! isset( WC()->cart ) || '' === WC()->cart ) {
+			return array();
+		}
+
+		// Calculate the cart totals.
+		WC()->cart->calculate_totals();
+
+		// Get initial cart data.
+		$cart               = WC()->cart->get_totals();
+		$cart['cart_items'] = WC()->cart->get_cart();
+
+		// Set the currency data.
+		$currencies       = get_woocommerce_currencies();
+		$currency_code    = get_woocommerce_currency();
+		$cart['currency'] = array(
+			'code'   => $currency_code,
+			'symbol' => get_woocommerce_currency_symbol( $currency_code ),
+			'name'   => isset( $currencies[ $currency_code ] ) ? $currencies[ $currency_code ] : '',
+		);
+
+		// Add in some extra data to the cart item.
+		foreach ( $cart['cart_items'] as $key => $item ) {
+			$item_details = array(
+				'type'              => $item['data']->get_type(),
+				'sku'               => $item['data']->get_sku(),
+				'categories'        => $item['data']->get_category_ids(),
+				'tags'              => $item['data']->get_tag_ids(),
+				'regular_price'     => $item['data']->get_regular_price(),
+				'sale_price'        => $item['data']->get_sale_price() ? $item['data']->get_sale_price() : $item['data']->get_regular_price(),
+				'virtual'           => $item['data']->is_virtual(),
+				'downloadable'      => $item['data']->is_downloadable(),
+				'sold_individually' => $item['data']->is_sold_individually(),
+			);
+			unset( $item['data'] );
+			$cart['cart_items'][ $key ] = array_merge( $item, $item_details );
+		}
+
+		// Save for later use if necessary
+		$this->cart = $cart;
+
+		// Send back a response.
+		return $this->cart;
+	}
+
+	/**
+	 * Check if the Woocommerce plugin is active.
+	 *
+	 * @since 2.8.0 Moved from OMAPI class
+	 *
+	 * @return bool
+	 */
+	public static function is_active() {
+		return class_exists( 'WooCommerce', true );
 	}
 }

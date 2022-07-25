@@ -215,7 +215,7 @@ class OMAPI_Refresh {
 		$args['restUrl'] = esc_url_raw( get_rest_url() );
 		$args['homeUrl'] = esc_url_raw( home_url() );
 
-		if ( OMAPI::is_woocommerce_active() ) {
+		if ( OMAPI_WooCommerce::is_active() ) {
 			$args['wc'] = OMAPI_WooCommerce::version();
 		}
 
