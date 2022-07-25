@@ -10,6 +10,8 @@ import "./portfolio.scss";
 
 const NewPortfolio = forwardRef((props, ref) => {
   const { TabPane } = Tabs;
+
+  // get Data from homeSlice
   const viewAll = useSelector((state) => state.homeSlice.portfolios);
 
   const dispatch = useDispatch();
@@ -17,12 +19,17 @@ const NewPortfolio = forwardRef((props, ref) => {
     dispatch(getPortfolioList());
   }, []);
 
+  // filter Digital Supply Chain data
   const digitalSupplyChain = viewAll?.filter((logo) => {
     return logo.acf.category === "Digital Supply Chain";
   });
+
+  // filter Sustainable Megacity data
   const sustainableMegacity = viewAll?.filter((logo) => {
     return logo.acf.category === "Sustainable Megacity";
   });
+
+  // filter SW Infrastructure data
   const sWInfrastructure = viewAll?.filter((logo) => {
     return logo.acf.category === "SW Infrastructure";
   });
