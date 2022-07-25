@@ -47,7 +47,13 @@ export default function TemporaryDrawer() {
         <ListItem disablePadding>
           <Link to="/story">
             <ListItemButton>
-              <ListItemText primary={"Story"} />
+              <ListItemText
+                primary={"Story"}
+                primaryTypographyProps={{
+                  fontWeight: "bold",
+                  color: "black",
+                }}
+              />
             </ListItemButton>
           </Link>
         </ListItem>

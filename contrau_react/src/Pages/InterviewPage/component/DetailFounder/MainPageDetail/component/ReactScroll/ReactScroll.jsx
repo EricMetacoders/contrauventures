@@ -360,7 +360,16 @@ function ReactScroll({ founderID }) {
   return (
     <div className="framemaingallery">
       <div className="categorydetailyear" ref={refCategory}>
-        <div className="frameyearcategory">
+        <div
+          className="frameyearcategory"
+          style={
+            Object.keys(listGallery).length > 6
+              ? {
+                  columnGap: "5px ",
+                }
+              : {}
+          }
+        >
           {Object.keys(listGallery).length > 1 &&
             listGallery?.map((item, index) => (
               <div ref={(el) => (itemsRefYear.current[index] = el)}>

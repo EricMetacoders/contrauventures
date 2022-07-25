@@ -11,6 +11,7 @@ function App() {
         <Route  path="/story" element={<InterviewPage />} />
         <Route  path="/detailfounder/:founderId" element={<DetailFounder />} />
         <Route path="*"  element={<NotFound />} />
+        <Route path="/detailfounder/*"  element={<NotFound />} />
       </Routes >
     </BrowserRouter>
   );
