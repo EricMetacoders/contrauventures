@@ -110,12 +110,16 @@ function ReactScroll({ founderID }) {
 
       var array = [];
       var arrayKey = [];
-      Object.values(detailfoundergallery.data.acf.image).map((item) => {
-        array.push(item);
-      });
       Object.keys(detailfoundergallery.data.acf.image).map((item) => {
         arrayKey.push(item);
       });
+      Object.values(detailfoundergallery.data.acf.image).map((item, index) => {
+        if (item.year == "") {
+          item.year = arrayKey[index];
+        }
+        array.push(item);
+      });
+
       setkeyGallery([...arrayKey]);
       setListGallery([...array]);
     }
@@ -266,7 +270,8 @@ function ReactScroll({ founderID }) {
               <div ref={(el) => (itemsRefYear.current[index] = el)}>
                 <Link
                   className="yeartitle"
-                  to={item.year == "" ? item.year : keyGallery[index]}
+                  // to={item.year == "" ? item.year : keyGallery[index]}
+                  to={item.year}
                   key={item.year}
                   spy={true}
                   smooth={true}
@@ -275,10 +280,8 @@ function ReactScroll({ founderID }) {
                   onSetActive={handleSetActive}
                   onSetInactive={handleSetInactive}
                 >
-                  {item.year ? (
+                  {item.year != "" && (
                     <div className="titleyeardetail">{item.year}</div>
-                  ) : (
-                    <div className="titleyeardetail">{keyGallery[index]}</div>
                   )}
                 </Link>
               </div>
@@ -356,10 +359,8 @@ function ReactScroll({ founderID }) {
                         : {}
                     }
                   >
-                    {item.year !== "" ? (
+                    {item.year !== "" && (
                       <div className="titleyeardetail">{item.year}</div>
-                    ) : (
-                      <div className="titleyeardetail">{keyGallery[index]}</div>
                     )}
                   </div>
                 </div>
