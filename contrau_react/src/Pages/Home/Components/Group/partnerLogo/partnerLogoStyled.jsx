@@ -15,7 +15,7 @@ export const LinkLogo = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  cursor: ${(props) => props.cursor ? props.cursor : "pointer"};
 `;
 
 export const BackgroundLogo = styled.div`
