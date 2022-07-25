@@ -7,7 +7,7 @@ export default function FounderImageCarousel({ data }) {
   const [founderList, setFounderList] = useState(null);
 
   const handleSeeFull = (data) => {
-    const founderId = data.acf.interview[0];
+    const founderId = data.id;
     history(`/detailfounder/${founderId}`);
   };
   return (
