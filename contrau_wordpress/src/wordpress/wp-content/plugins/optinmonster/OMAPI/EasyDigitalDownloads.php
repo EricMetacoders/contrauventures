@@ -42,9 +42,27 @@ class OMAPI_EasyDigitalDownloads {
 	 *
 	 * @since 2.6.13
 	 *
-	 * @var object
+	 * @var OMAPI
 	 */
 	public $base;
+
+	/**
+	 * The minimum EDD version required.
+	 *
+	 * @since 2.8.0
+	 *
+	 * @var string
+	 */
+	const MINIMUM_VERSION = '2.1.0';
+
+	/**
+	 * OMAPI_EasyDigitalDownloads_Save object
+	 *
+	 * @since 2.8.0
+	 *
+	 * @var OMAPI_EasyDigitalDownloads_Save
+	 */
+	public $save;
 
 	/**
 	 * Primary class constructor.
@@ -71,6 +89,7 @@ class OMAPI_EasyDigitalDownloads {
 	public function set() {
 		self::$instance = $this;
 		$this->base     = OMAPI::get_instance();
+		$this->save     = new OMAPI_EasyDigitalDownloads_Save();
 	}
 
 	/**
@@ -168,7 +187,6 @@ class OMAPI_EasyDigitalDownloads {
 	 *
 	 * @param int    $payment_id The EDD payment ID.
 	 * @param string $new_status The new payment status.
-	 * @param string $old_status The old payment status.
 	 *
 	 * @return void
 	 */
@@ -180,5 +198,189 @@ class OMAPI_EasyDigitalDownloads {
 
 		// Maybe store the revenue attribution data.
 		return $this->maybe_store_revenue_attribution( $payment_id, true );
+	}
+
+	/**
+	 * Connects EDD to OptinMonster.
+	 *
+	 * @param array $data The array of key / token.
+	 *
+	 * @since 2.8.0
+	 *
+	 * @return WP_Error|bool True if success, or WP_Error if any error was encountered.
+	 */
+	public function connect( $data ) {
+		if ( empty( $data['public_key'] ) || empty( $data['token'] ) ) {
+			return new WP_Error(
+				'omapi-invalid-edd-keys',
+				esc_html__( 'The EDD key or token appears to be invalid. Try again.', 'optin-monster-api' )
+			);
+		}
+
+		// Setup the request payload.
+		$payload = array(
+			'key'     => $data['public_key'],
+			'token'   => $data['token'],
+			'shop'    => $data['url'],
+			'name'    => esc_html( get_bloginfo( 'name' ) ),
+			'restUrl' => esc_url_raw( get_rest_url() ),
+			'homeUrl' => esc_url_raw( home_url() ),
+		);
+
+		// Get the OptinMonster API credentials.
+		$creds = $this->base->get_api_credentials();
+
+		// Initialize the API class.
+		$api = new OMAPI_Api( 'edd/shop', $creds, 'POST', 'v2' );
+
+		$body = $api->request( $payload );
+
+		if ( is_wp_error( $body ) ) {
+			$message = isset( $body->message )
+				? $body->message
+				: esc_html__( 'EDD could not be connected to OptinMonster. The OptinMonster API returned with the following response: ', 'optin-monster-api' ) . $body->get_error_message();
+
+			return new WP_Error( 'omapi-error-edd-api-connect', $message );
+		}
+
+		return $body;
+	}
+
+	/**
+	 * Disconnects EDD from OptinMonster.
+	 *
+	 * @since 2.8.0
+	 *
+	 * @return WP_Error|string Empty string if success, or WP_Error if any error was encountered.
+	 */
+	public function disconnect() {
+
+		// Get the OptinMonster API credentials.
+		$creds = $this->base->get_api_credentials();
+
+		// Get the shop.
+		$shop = esc_attr( $this->base->get_option( 'edd', 'shop' ) );
+
+		if ( empty( $shop ) ) {
+			return true;
+		}
+
+		// Initialize the API class.
+		$api = new OMAPI_Api( 'edd/shop/' . rawurlencode( $shop ), $creds, 'DELETE', 'v2' );
+
+		$body = $api->request();
+
+		if ( is_wp_error( $body ) ) {
+			$message = isset( $body->message )
+				? $body->message
+				: esc_html__( 'EDD could not be disconnected to OptinMonster. The OptinMonster API returned with the following response: ', 'optin-monster-api' ) . $body->get_error_message();
+
+			return new WP_Error( 'omapi-error-api-disconnect', $message );
+		}
+
+		return empty( $body ) ? true : $body;
+	}
+
+	/**
+	 * Checks if current user can manage the shop
+	 *
+	 * @since 2.8.0
+	 *
+	 * @return bool True if it can, false if not.
+	 */
+	public static function can_manage_shop() {
+		return current_user_can( 'manage_shop_settings' );
+	}
+
+	/**
+	 * Return the EDD Plugin version string.
+	 *
+	 * @since 2.8.0
+	 *
+	 * @return string
+	 */
+	public static function version() {
+		return defined( 'EDD_VERSION' ) ? EDD_VERSION : '0.0.0';
+	}
+
+	/**
+	 * Check if the EDD plugin is active.
+	 *
+	 * @since 2.8.0
+	 *
+	 * @return bool
+	 */
+	public static function is_active() {
+		return class_exists( 'Easy_Digital_Downloads', true ) && function_exists( 'EDD' );
+	}
+
+	/**
+	 * Check if the EDD plugin is connected.
+	 *
+	 * @since 2.8.0
+	 *
+	 * @return bool If it is currently connected.
+	 */
+	public static function is_connected() {
+		// If not active, then it is not connected as well.
+		if ( ! self::is_active() ) {
+			return false;
+		}
+
+		// Get any options we have stored.
+		$option = OMAPI::get_instance()->get_option( 'edd' );
+
+		// If the option is empty, then it was never connected or it was disconnected.
+		if ( empty( $option ) ) {
+			return false;
+		}
+
+		$shop = isset( $option['shop'] ) ? $option['shop'] : '';
+
+		if ( empty( $shop ) ) {
+			return false;
+		}
+
+		// Check if the saved key and token are not empty.
+		$key = isset( $option['key'] ) ? $option['key'] : '';
+
+		if ( empty( $key ) ) {
+			return false;
+		}
+
+		// Finally, check if the public_key is still active in user
+		$user_id = EDD()->api->get_user( $key );
+
+		return ! empty( $user_id );
+	}
+
+	/**
+	 * Determines if the passed version string passes the operator compare
+	 * against the currently installed version of EDD.
+	 *
+	 * Defaults to checking if the current EDD version is greater than
+	 * the passed version.
+	 *
+	 * @since 2.8.0
+	 *
+	 * @param string $version  The version to check.
+	 * @param string $operator The operator to use for comparison.
+	 *
+	 * @return string
+	 */
+	public static function version_compare( $version = '', $operator = '>=' ) {
+		return version_compare( self::version(), $version, $operator );
+	}
+
+	/**
+	 * Determines if the current EDD version meets the minimum version
+	 * requirement.
+	 *
+	 * @since 2.8.0
+	 *
+	 * @return boolean
+	 */
+	public static function is_minimum_version() {
+		return self::version_compare( self::MINIMUM_VERSION );
 	}
 }

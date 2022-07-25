@@ -226,32 +226,34 @@ class OMAPI_Blocks {
 
 			$campaigns = $this->get_campaign_options();
 			$site_ids  = $this->base->get_site_ids();
+			$post      = get_post();
 
 			$this->data_for_js = array(
-				'logoUrl'           => $this->base->url . 'assets/css/images/icons/archie-icon.svg',
-				'i18n'              => $i18n,
-				'campaigns'         => array(
+				'logoUrl'               => $this->base->url . 'assets/css/images/icons/archie-icon.svg',
+				'i18n'                  => $i18n,
+				'campaigns'             => array(
 					'inline' => ! empty( $campaigns['inline'] ) ? $campaigns['inline'] : array(),
 					'other'  => ! empty( $campaigns['other'] ) ? $campaigns['other'] : array(),
 				),
-				'site_ids'          => ! empty( $site_ids ) ? $site_ids : array(),
-				'post'              => get_post(),
-				'omEnv'             => defined( 'OPTINMONSTER_ENV' ) ? OPTINMONSTER_ENV : '',
-				'canMonsterlink'    => $this->base->has_rule_type( 'monster-link' ),
-				'templatesUri'      => OMAPI_Urls::templates(),
-				'campaignsUri'      => OMAPI_Urls::campaigns(),
-				'settingsUri'       => OMAPI_Urls::settings(),
-				'wizardUri'         => OMAPI_Urls::wizard(),
-				'upgradeUri'        => OMAPI_Urls::upgrade( 'gutenberg', '--FEATURE--' ),
-				'apiUrl'            => esc_url_raw( OPTINMONSTER_APIJS_URL ),
-				'omUserId'          => $this->base->get_option( 'userId' ),
-				'outputSettingsUrl' => OMAPI_Urls::campaign_output_settings( '%s' ),
-				'editUrl'           => OMAPI_Urls::om_app(
+				'site_ids'              => ! empty( $site_ids ) ? $site_ids : array(),
+				'post'                  => $post,
+				'omEnv'                 => defined( 'OPTINMONSTER_ENV' ) ? OPTINMONSTER_ENV : '',
+				'canMonsterlink'        => $this->base->has_rule_type( 'monster-link' ),
+				'templatesUri'          => OMAPI_Urls::templates(),
+				'campaignsUri'          => OMAPI_Urls::campaigns(),
+				'settingsUri'           => OMAPI_Urls::settings(),
+				'wizardUri'             => OMAPI_Urls::wizard(),
+				'upgradeUri'            => OMAPI_Urls::upgrade( 'gutenberg', '--FEATURE--' ),
+				'apiUrl'                => esc_url_raw( OPTINMONSTER_APIJS_URL ),
+				'omUserId'              => $this->base->get_option( 'userId' ),
+				'outputSettingsUrl'     => OMAPI_Urls::campaign_output_settings( '%s' ),
+				'editUrl'               => OMAPI_Urls::om_app(
 					'campaigns/--CAMPAIGN_SLUG--/edit/',
 					rawurlencode( OMAPI_Urls::campaign_output_settings( '--CAMPAIGN_SLUG--' ) )
 				),
-				'monsterlink'       => esc_url_raw( OPTINMONSTER_SHAREABLE_LINK ) . '/c/',
-				'wpVersion'         => $GLOBALS['wp_version'],
+				'monsterlink'           => esc_url_raw( OPTINMONSTER_SHAREABLE_LINK ) . '/c/',
+				'wpVersion'             => $GLOBALS['wp_version'],
+				'customFieldsSupported' => post_type_supports( get_post_type( $post ), 'custom-fields' ),
 			);
 		}
 
