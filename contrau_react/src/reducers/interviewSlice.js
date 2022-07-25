@@ -21,7 +21,9 @@ export default interviewSlice.reducer;
 
 export const getListFounder = createAsyncThunk("getListFounder", async () => {
   const response = await interviewServices.getListFounder();
+  console.log('response:', response)
   return response.data;
+
 });
 
 // export const { ccc } = interviewSlice.actions;
