@@ -351,18 +351,18 @@ function ReactScroll({ founderID }) {
 
   // CHECK LENGTH FOR YEAR
   const checkLength = (numberImage) => {
-    if (numberImage && numberImage > 0) {
-      if (numberImage == 4) {
-        return "frameimgmain4";
-      } else if (numberImage == 3) {
-        return "frameimgmain3";
-      } else if (numberImage == 1) {
-        return "frameimgmain1";
-      } else if (numberImage == 2) {
-        return "frameimgmain2";
-      }
+    if (!numberImage) {
+      return;
     }
-    return;
+
+    const frameImage = {
+      1: "frameimgmain1",
+      2: "frameimgmain2",
+      3: "frameimgmain3",
+      4: "frameimgmain4",
+    };
+
+    return frameImage[numberImage];
   };
 
   return (
