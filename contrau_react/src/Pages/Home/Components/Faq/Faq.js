@@ -22,9 +22,8 @@ export default function Faq() {
       <div className="  pb-[10px] md:pb-[90px]">
         <div className="flex items-end justify-start">
           <p className="popinsFont italic text-[40px]  2xl:text-[60px] font-[900]">
-            FAQ
+            FAQ <span className="text-red">.</span>
           </p>
-          <div className="w-[10px] h-[10px] 2xl:w-[15px] 2xl:h-[15px] rounded-full bg-red mb-[11px] 2xl:mb-[21px]"></div>
         </div>
       </div>
       <div>
