@@ -7,10 +7,24 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import * as React from "react";
 import { Link } from "react-router-dom";
-export default function TemporaryDrawer() {
+export default function NewHeaderDropDown({ resultRef, partnersRef }) {
   const [state, setState] = React.useState({
     right: false,
   });
+
+  // handleScrollTo
+  const handleScrollPartners = () => {
+    window.scrollTo({
+      top: 700,
+      behavior: "smooth",
+    });
+  };
+  const handleScrollPortfolios = () => {
+    window.scrollTo({
+      top: 3100,
+      behavior: "smooth",
+    });
+  };
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (
@@ -34,21 +48,35 @@ export default function TemporaryDrawer() {
         <ListItem disablePadding>
           <Link to="/">
             <ListItemButton>
-              <ListItemText primary={"Home"} />
+              <ListItemText
+                primary={"Home"}
+                primaryTypographyProps={{
+                  fontWeight: "bold",
+                }}
+              />
             </ListItemButton>
           </Link>
         </ListItem>
 
         <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemText primary={"About Us"} onClick={handleScrollPartners} />
+          </ListItemButton>
+        </ListItem>
+
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemText
+              primary={"Portfolios"}
+              onClick={handleScrollPortfolios}
+            />
+          </ListItemButton>
+        </ListItem>
+
+        <ListItem disablePadding>
           <Link to="/story">
             <ListItemButton>
-              <ListItemText
-                primary={"Story"}
-                primaryTypographyProps={{
-                  fontWeight: "bold",
-                  color: "black",
-                }}
-              />
+              <ListItemText primary={"Story"} />
             </ListItemButton>
           </Link>
         </ListItem>
@@ -60,9 +88,8 @@ export default function TemporaryDrawer() {
     <div>
       <React.Fragment key="right">
         <MenuIcon
-          style={{ color: "white" }}
+          style={{ color: "black", fontSize: "1.9rem" }}
           onClick={toggleDrawer("right", true)}
-          className="titledetaimainframeheader"
         />
         <Drawer
           anchor={"right"}

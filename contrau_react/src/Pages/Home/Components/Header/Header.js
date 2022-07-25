@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../../assets/homepage_img/logo.svg";
+import TemporaryDrawer from "../../../InterviewPage/component/Header/TemporaryDrawer";
 import HeaderDropDown from "./HeaderDropDown";
+import NewHeaderDropDown from "./NewHeaderDropDown";
 export default function Header({ resultRef, partnersRef }) {
   // scroll to Porfolio
   const handleScroll = () => {
@@ -52,9 +54,9 @@ export default function Header({ resultRef, partnersRef }) {
     <div
       ref={refHeader}
       id="headerNav"
-      className="md:h-[80px]  sm:mt-0 fixed z-50 bg-white w-full"
+      className="sm:h-[80px]  sm:mt-0 fixed z-50 bg-white w-full"
     >
-      <div className="ml-[20px] mr-[10px] md:mx-[90px] h-full">
+      <div className="ml-[20px] mr-[34px] mt-[17px] sm:mt-[2px] md:mx-[90px] h-full">
         <div className="flex items-center justify-between w-full h-full">
           {/* logo Desktop */}
           <div className="hidden sm:block" onClick={scrollTop}>
@@ -64,7 +66,7 @@ export default function Header({ resultRef, partnersRef }) {
           </div>
 
           {/* logo Mobile */}
-          <div className="block sm:hidden" onClick={scrollTop}>
+          <div className="block sm:hidden mb-[17px]" onClick={scrollTop}>
             <Link to="/">
               {" "}
               <img src={logo} alt="logo" className="w-[100px] h-[30px]" />
@@ -99,7 +101,10 @@ export default function Header({ resultRef, partnersRef }) {
 
           {/* menu select mobile */}
           <div className="sm:hidden">
-            <HeaderDropDown resultRef={resultRef} partnersRef={partnersRef} />
+            {/* <HeaderDropDown resultRef={resultRef} partnersRef={partnersRef} /> */}
+            <div className="mt-[3px] mb-[19px]">
+              <NewHeaderDropDown />
+            </div>
           </div>
         </div>
       </div>
