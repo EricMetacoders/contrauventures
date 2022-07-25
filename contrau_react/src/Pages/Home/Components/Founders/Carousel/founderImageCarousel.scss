@@ -3,7 +3,7 @@
   .bgBlur {
     left: 0;
     border-bottom: 1.5rem;
-    height: 70%;
+    height: 55%;
     top: 54%;
   }
 
@@ -19,7 +19,7 @@
   }
 
   #divBtn:hover > .bgBlur {
-    transform: translateY(-34%);
+    transform: translateY(-14%);
     transition-property: all;
     transition-duration: 500ms;
   }
@@ -127,7 +127,7 @@
     }
 
     #divBtn:hover > .bgBlur {
-      transform: translateY(-28%);
+      transform: translateY(-13%);
       transition-property: all;
       transition-duration: 500ms;
     }
@@ -170,7 +170,7 @@
     }
 
     #divBtn:hover > .bgBlur {
-      transform: translateY(-29%);
+      transform: translateY(-15%);
       transition-property: all;
       transition-duration: 500ms;
     }
