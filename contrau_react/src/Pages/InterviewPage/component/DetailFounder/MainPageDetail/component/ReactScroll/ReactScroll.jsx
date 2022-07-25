@@ -109,18 +109,16 @@ function ReactScroll({ founderID }) {
       let detailfoundergallery = await getGalleryFounderDetail(founderID);
 
       var array = [];
-      var arrayKey = [];
-      Object.keys(detailfoundergallery.data.acf.image).map((item) => {
-        arrayKey.push(item);
-      });
+      // var arrayKey = [];
+      // Object.keys(detailfoundergallery.data.acf.image).map((item) => {
+      //   arrayKey.push(item);
+      // });
       Object.values(detailfoundergallery.data.acf.image).map((item, index) => {
-        if (item.year == "") {
-          item.year = arrayKey[index];
+        if (item.year != "") {
+          array.push(item);
         }
-        array.push(item);
       });
 
-      setkeyGallery([...arrayKey]);
       setListGallery([...array]);
     }
     fechData();
@@ -280,9 +278,7 @@ function ReactScroll({ founderID }) {
                   onSetActive={handleSetActive}
                   onSetInactive={handleSetInactive}
                 >
-                  {item.year != "" && (
-                    <div className="titleyeardetail">{item.year}</div>
-                  )}
+                  <div className="titleyeardetail">{item.year}</div>
                 </Link>
               </div>
             ))}
@@ -359,9 +355,7 @@ function ReactScroll({ founderID }) {
                         : {}
                     }
                   >
-                    {item.year !== "" && (
-                      <div className="titleyeardetail">{item.year}</div>
-                    )}
+                    <div className="titleyeardetail">{item.year}</div>
                   </div>
                 </div>
               </div>
