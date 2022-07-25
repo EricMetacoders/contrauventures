@@ -307,11 +307,6 @@ function ReactScroll({ founderID }) {
       addColor2.style.filter = "grayscale(0%)";
       addColor3.style.filter = "grayscale(0%)";
       addColor4.style.filter = "grayscale(0%)";
-
-      // noColor.style.filter = "grayscale(100%)";
-      // noColor2.style.filter = "grayscale(100%)";
-      // noColor3.style.filter = "grayscale(100%)";
-      // noColor4.style.filter = "grayscale(100%)";
     } else {
       var noColor =
         itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
