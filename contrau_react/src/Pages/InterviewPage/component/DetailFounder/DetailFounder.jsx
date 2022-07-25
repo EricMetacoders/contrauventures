@@ -70,11 +70,6 @@ function DetailFounder({ currentFounder }) {
         }
       />
       <FooterComponent />
-      {/* {` ${
-        Object.values(detailFounder2).length > 0
-          ? detailFounder2?.acf?.gallery[0]
-          : ""
-      }detailFounder2?.acf?.gallery[0]`} */}
     </div>
   );
 }

@@ -2,9 +2,9 @@
 Contributors: optinmonster, griffinjt, smub
 Tags: popup, popups, optin, conversion, marketing, newsletter, popup builder, popup maker, email marketing, exit popup, ecommerce, woocommerce, lightbox
 Requires at least: 4.7.0
-Tested up to: 5.9.3
+Tested up to: 6.0
 Requires PHP: 5.3
-Stable tag: 2.7.0
+Stable tag: 2.8.1
 License: GNU General Public License v2.0 or later
 
 🤩 Make popups & optin forms to get more email newsletter subscribers, leads, and sales - #1 most popular popup builder plugin! 🚀
@@ -163,7 +163,7 @@ Other Powerful Popup Features:
 = Email Marketing and CRM Integrations =
 
 * <a href="https://optinmonster.com/integrations/constant-contact/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">Constant Contact</a> - Create Constant Contact popups and newsletter sign up forms.
-* <a href="https://optinmonster.com/integrations/mailchimp/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">Mailchimp</a> - Easily create MailChimp popup and email opt-in forms.
+* <a href="https://optinmonster.com/integrations/mailchimp/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">Mailchimp</a> - Easily create Mailchimp popup and email opt-in forms.
 * <a href="https://optinmonster.com/integrations/aweber/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">AWeber</a>- Make AWeber popups and email marketing forms.
 * <a href="https://optinmonster.com/integrations/aweber/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">Infusionsoft (Keap)</a> - Create advanced Infusionsoft popups and lead generation forms.
 * <a href="https://optinmonster.com/integrations/active-campaign/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">ActiveCampaign</a> - Create ActiveCampaign popup and newsletter signup form.
@@ -303,7 +303,7 @@ You can easily send data from your campaign to your favorite CRM, email newslett
 
 Here is a list of our popular marketing integrations:
 
-* MailChimp popup forms
+* Mailchimp popup forms
 * AWeber popup forms
 * Constant Contact popup forms
 * ActiveCampagin popup forms
@@ -311,7 +311,7 @@ Here is a list of our popular marketing integrations:
 * HubSpot popup forms
 * Campaign Monitor popup forms
 * GetResponse popup forms
-* SendinBlue popup forms
+* Sendinblue popup forms
 * Infusionsoft (Keap) popup forms
 * Salesforce Pardot popup forms
 * Drip popup forms
@@ -458,6 +458,19 @@ Syed Balkhi
 
 **Most Recent Changes:**
 
+= Popup Builder 2.8.1 =
+* Fix issue with Ecommerce Output rules being applied even when the Ecommerce was not connected anymore.
+* Fix issue with `optin-monster-inline` shortcode not working in many cases.
+* Fix issue in built JS files which caused them to be falsely-flagged in virus software.
+* Updated build script to keep file-names consistent when possible.
+
+= Popup Builder 2.8.0 =
+* Introduce integration support with Easy Digital Downloads!
+* Fix issue with the OptinMonster "Disable All" setting in block editor when custom fields not supported for the post-type.
+* Fix issue where "This account does not have any campaigns to retrieve" error would show incorrectly.
+* Fix issue with output settings link having an incorrect trailing slash sometimes causing 404s.
+* Code refactor and function/method deprecations.
+
 = Popup Builder 2.7.0 =
 * Introduce revenue attribution support for EDD and WooCommerce, and add revenue attribution settings
 * Format dates for subscriber information according to the WordPress site timezone
@@ -482,11 +495,5 @@ Syed Balkhi
 
 = Popup Builder v2.6.9 =
 * Fixes a scenario where non-inline campaigns could be prevented from showing if inline campaigns are present.
-
-= Popup Builder v2.6.8 =
-* Security hardening.
-* Fixed some output settings not working properly for shortcodes.
-* Address some confusion by updating shortcode output to have the `followrules` attribute on by default for new shortcodes, or to use the `optin-monster-inline` shortcode.
-* Fixed display of redundant errors in the OptinMonster settings pages.
 
 **[View entire popup builder changelog](https://plugins.svn.wordpress.org/optinmonster/trunk/CHANGELOG.md)**
