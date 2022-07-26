@@ -26,11 +26,19 @@ function ReactScroll({ founderID }) {
   // CHECK MOBILE OR PC TO CHANGE HIDE/SHOW CATEGORY YEAR
   const onScroll = () => {
     const position = window.pageYOffset;
+    const bottom =
+      Math.ceil(window.innerHeight + window.scrollY) >=
+      document.documentElement.scrollHeight;
+    console.log("position:", position);
     if (!matchMobile) {
       if (position >= 715) {
         const myReference = refCategory.current;
         myReference.style.display = "block";
-      } else if (position < 700) {
+      } else if (position < 720) {
+        const myReference = refCategory.current;
+        myReference.style.display = "none";
+      }
+      if (bottom) {
         const myReference = refCategory.current;
         myReference.style.display = "none";
       }
@@ -39,6 +47,10 @@ function ReactScroll({ founderID }) {
         const myReference = refCategory.current;
         myReference.style.display = "block";
       } else if (position < 600) {
+        const myReference = refCategory.current;
+        myReference.style.display = "none";
+      }
+      if (bottom) {
         const myReference = refCategory.current;
         myReference.style.display = "none";
       }
@@ -178,41 +190,43 @@ function ReactScroll({ founderID }) {
 
     if (bottom) {
       // HIDE CATEGORY YEAR
-      const myReference = refCategory.current;
-      myReference.style.display = "none";
-      // ADD COLOR LAST IMAGES YEAR
-      var addColor =
-        itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
-          .children[0].children[0];
-      var addColor2 =
-        itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
-          .children[1].children[0];
-      var addColor3 =
-        itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
-          .children[0].children[0];
-      var addColor4 =
-        itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
-          .children[1].children[0];
       if (matchMobileTablet) {
+        const myReference = refCategory.current;
+        myReference.style.display = "none";
+        // ADD COLOR LAST IMAGES YEAR
+        var addColor =
+          itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
+            .children[0].children[0];
+        var addColor2 =
+          itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
+            .children[1].children[0];
+        var addColor3 =
+          itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
+            .children[0].children[0];
+        var addColor4 =
+          itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
+            .children[1].children[0];
+
         addColor.style.filter = "grayscale(0%)";
         addColor2.style.filter = "grayscale(0%)";
         addColor3.style.filter = "grayscale(0%)";
         addColor4.style.filter = "grayscale(0%)";
       }
     } else {
-      var noColor =
-        itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
-          .children[0].children[0];
-      var noColor2 =
-        itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
-          .children[1].children[0];
-      var noColor3 =
-        itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
-          .children[0].children[0];
-      var noColor4 =
-        itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
-          .children[1].children[0];
       if (matchMobileTablet) {
+        var noColor =
+          itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
+            .children[0].children[0];
+        var noColor2 =
+          itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
+            .children[1].children[0];
+        var noColor3 =
+          itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
+            .children[0].children[0];
+        var noColor4 =
+          itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
+            .children[1].children[0];
+
         noColor.style.filter = "grayscale(100%)";
         noColor2.style.filter = "grayscale(100%)";
         noColor3.style.filter = "grayscale(100%)";
