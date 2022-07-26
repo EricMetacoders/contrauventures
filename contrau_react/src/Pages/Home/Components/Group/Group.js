@@ -26,28 +26,33 @@ const Group = forwardRef((props, ref) => {
     };
   }, []);
   return (
-    <div ref={ref}>
-      <div className="bg-partnersContactBg overflow-hidden " ref={ref}>
-        <div className="mx-[34px] md:mx-[117px] 2xl:mx-[300px] 2xl:pb-[65px] mt-[84px] md:mt-[318px]">
-          {/* desktop animation */}
-          <div className="xl:block hidden md:w-[1030px] md:h-[498px]">
-            {/* start animation */}
-            {offset > 100 ? <GroupTextAnimation /> : <></>}
-            {/* end animation */}
-          </div>
+    <div>
+      <div className="bg-partnersContactBg overflow-hidden ">
+        <div
+          ref={ref}
+          className="pb-[84px] md:pb-0 lg:pb-[318px] md:mt-[106px] mt-[10px]"
+        >
+          <div className="mx-[34px] md:mx-[117px] 2xl:mx-[300px] 2xl:pb-[65px]  pt-[70px]">
+            {/* desktop animation */}
+            <div className="xl:block hidden md:w-[1030px] md:h-[498px]">
+              {/* start animation */}
+              {offset > 100 ? <GroupTextAnimation /> : <></>}
+              {/* end animation */}
+            </div>
 
-          {/* tablet animation */}
-          <div className="hidden sm:block xl:hidden md:w-[1320px] md:h-[498px]">
-            {/* start animation */}
-            {offset > 100 ? <GroupTextAnimation /> : <></>}
-            {/* end animation */}
-          </div>
+            {/* tablet animation */}
+            <div className="hidden sm:block xl:hidden md:w-[1320px] md:h-[498px]">
+              {/* start animation */}
+              {offset > 100 ? <GroupTextAnimation /> : <></>}
+              {/* end animation */}
+            </div>
 
-          {/* mobile animation */}
-          <div className="sm:hidden block w-[292px] h-[474.5px]">
-            {/* start animation */}
-            {offset > 100 ? <GroupTextAnimation /> : <></>}
-            {/* end animation */}
+            {/* mobile animation */}
+            <div className="sm:hidden block w-[292px] h-[474.5px]">
+              {/* start animation */}
+              {offset > 100 ? <GroupTextAnimation /> : <></>}
+              {/* end animation */}
+            </div>
           </div>
         </div>
       </div>
