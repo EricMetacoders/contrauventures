@@ -9,6 +9,7 @@ function ReactScroll({ founderID }) {
   const [listGallery, setListGallery] = useState([{}]);
   const [keyGallery, setkeyGallery] = useState([{}]);
   const matchMobile = useMediaQuery("(max-width:639px)");
+  const matchMobileTablet = useMediaQuery("(max-width:1279px)");
 
   // GET DETAIL GALLERY
   async function getGalleryFounderDetail(id) {
@@ -109,23 +110,26 @@ function ReactScroll({ founderID }) {
       let detailfoundergallery = await getGalleryFounderDetail(founderID);
 
       var array = [];
-      var arrayKey = [];
-      Object.keys(detailfoundergallery.data.acf.image).map((item) => {
-        arrayKey.push(item);
-      });
+      // var arrayKey = [];
+      // Object.keys(detailfoundergallery.data.acf.image).map((item) => {
+      //   arrayKey.push(item);
+      // });
       Object.values(detailfoundergallery.data.acf.image).map((item, index) => {
-        if (item.year == "") {
-          item.year = arrayKey[index];
+        if (item.year != "") {
+          array.push(item);
         }
-        array.push(item);
       });
-
-      setkeyGallery([...arrayKey]);
+      array.at(-1).image = [
+        {
+          ID: 556,
+          guid: "https://contrau.metacoders.dev/wp-content/uploads/2022/07/Copy-of-IMG_6976-1.jpg",
+        },
+      ];
       setListGallery([...array]);
     }
     fechData();
   }, []);
-
+  console.log(listGallery);
   const itemsRef = useRef([]);
   const itemsRefYear = useRef([]);
 
@@ -180,6 +184,7 @@ function ReactScroll({ founderID }) {
     const bottom =
       Math.ceil(window.innerHeight + window.scrollY) >=
       document.documentElement.scrollHeight;
+
     if (bottom) {
       // HIDE CATEGORY YEAR
       const myReference = refCategory.current;
@@ -197,11 +202,13 @@ function ReactScroll({ founderID }) {
       var addColor4 =
         itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
           .children[1].children[0];
-
-      addColor.style.filter = "grayscale(0%)";
-      addColor2.style.filter = "grayscale(0%)";
-      addColor3.style.filter = "grayscale(0%)";
-      addColor4.style.filter = "grayscale(0%)";
+      if (matchMobileTablet) {
+        console.log("co1");
+        addColor.style.filter = "grayscale(0%)";
+        addColor2.style.filter = "grayscale(0%)";
+        addColor3.style.filter = "grayscale(0%)";
+        addColor4.style.filter = "grayscale(0%)";
+      }
     } else {
       var noColor =
         itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
@@ -215,14 +222,16 @@ function ReactScroll({ founderID }) {
       var noColor4 =
         itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
           .children[1].children[0];
+      if (matchMobileTablet) {
+        console.log("co2");
 
-      if (matchMobile) {
         noColor.style.filter = "grayscale(100%)";
         noColor2.style.filter = "grayscale(100%)";
         noColor3.style.filter = "grayscale(100%)";
         noColor4.style.filter = "grayscale(100%)";
       }
     }
+    // }
   };
 
   // ADD SCROLL EVENT FOR CHECK BOTTOM
@@ -280,9 +289,7 @@ function ReactScroll({ founderID }) {
                   onSetActive={handleSetActive}
                   onSetInactive={handleSetInactive}
                 >
-                  {item.year != "" && (
-                    <div className="titleyeardetail">{item.year}</div>
-                  )}
+                  <div className="titleyeardetail">{item.year}</div>
                 </Link>
               </div>
             ))}
@@ -359,9 +366,7 @@ function ReactScroll({ founderID }) {
                         : {}
                     }
                   >
-                    {item.year !== "" && (
-                      <div className="titleyeardetail">{item.year}</div>
-                    )}
+                    <div className="titleyeardetail">{item.year}</div>
                   </div>
                 </div>
               </div>
