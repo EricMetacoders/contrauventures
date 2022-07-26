@@ -16,6 +16,7 @@ function ReactScroll({ founderID }) {
   async function getGalleryFounderDetail(id) {
     try {
       let detailgallery = await interviewServices.getGalleryFounder(id);
+
       return detailgallery;
     } catch (error) {
       console.log("Failed to fetch", error);
