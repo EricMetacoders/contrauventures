@@ -119,17 +119,12 @@ function ReactScroll({ founderID }) {
           array.push(item);
         }
       });
-      array.at(-1).image = [
-        {
-          ID: 556,
-          guid: "https://contrau.metacoders.dev/wp-content/uploads/2022/07/Copy-of-IMG_6976-1.jpg",
-        },
-      ];
+
       setListGallery([...array]);
     }
     fechData();
   }, []);
-  console.log(listGallery);
+
   const itemsRef = useRef([]);
   const itemsRefYear = useRef([]);
 
@@ -203,7 +198,6 @@ function ReactScroll({ founderID }) {
         itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
           .children[1].children[0];
       if (matchMobileTablet) {
-        console.log("co1");
         addColor.style.filter = "grayscale(0%)";
         addColor2.style.filter = "grayscale(0%)";
         addColor3.style.filter = "grayscale(0%)";
@@ -223,8 +217,6 @@ function ReactScroll({ founderID }) {
         itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
           .children[1].children[0];
       if (matchMobileTablet) {
-        console.log("co2");
-
         noColor.style.filter = "grayscale(100%)";
         noColor2.style.filter = "grayscale(100%)";
         noColor3.style.filter = "grayscale(100%)";
