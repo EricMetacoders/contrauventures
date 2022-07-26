@@ -31,20 +31,6 @@ function HeaderComponent({ pagecurrent }) {
         }
       }
 
-      //
-      // if (y > window.scrollY) {
-      //   if (window.scrollY == 0) {
-      //     document.getElementById("refHeader").style.backgroundColor =
-      //       "transparent ";
-      //   } else {
-      //     document.getElementById("refHeader").style.display = "block";
-      //     document.getElementById("refHeader").style.backgroundColor =
-      //       "rgba(0,0,0,0.1)";
-      //   }
-      // } else if (y < window.scrollY) {
-      //   document.getElementById("refHeader").style.display = "none";
-      //   document.getElementById("refHeader").style.backgroundColor = "none";
-      // }
       setY(window.scrollY);
     }
   };

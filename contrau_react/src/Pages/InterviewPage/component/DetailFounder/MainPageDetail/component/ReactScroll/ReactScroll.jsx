@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 import { Element, Events, Link } from "react-scroll";
 import { interviewServices } from "../../../../../../../services/interviewService";
+import ListImage from "./ListImage";
 
 function ReactScroll({ founderID }) {
   const [listGallery, setListGallery] = useState([{}]);
@@ -25,11 +26,19 @@ function ReactScroll({ founderID }) {
   // CHECK MOBILE OR PC TO CHANGE HIDE/SHOW CATEGORY YEAR
   const onScroll = () => {
     const position = window.pageYOffset;
+    const bottom =
+      Math.ceil(window.innerHeight + window.scrollY) >=
+      document.documentElement.scrollHeight;
+
     if (!matchMobile) {
       if (position >= 715) {
         const myReference = refCategory.current;
         myReference.style.display = "block";
-      } else if (position < 700) {
+      } else if (position < 720) {
+        const myReference = refCategory.current;
+        myReference.style.display = "none";
+      }
+      if (bottom) {
         const myReference = refCategory.current;
         myReference.style.display = "none";
       }
@@ -38,6 +47,10 @@ function ReactScroll({ founderID }) {
         const myReference = refCategory.current;
         myReference.style.display = "block";
       } else if (position < 600) {
+        const myReference = refCategory.current;
+        myReference.style.display = "none";
+      }
+      if (bottom) {
         const myReference = refCategory.current;
         myReference.style.display = "none";
       }
@@ -110,26 +123,18 @@ function ReactScroll({ founderID }) {
       let detailfoundergallery = await getGalleryFounderDetail(founderID);
 
       var array = [];
-      // var arrayKey = [];
-      // Object.keys(detailfoundergallery.data.acf.image).map((item) => {
-      //   arrayKey.push(item);
-      // });
+
       Object.values(detailfoundergallery.data.acf.image).map((item, index) => {
         if (item.year != "") {
           array.push(item);
         }
       });
-      array.at(-1).image = [
-        {
-          ID: 556,
-          guid: "https://contrau.metacoders.dev/wp-content/uploads/2022/07/Copy-of-IMG_6976-1.jpg",
-        },
-      ];
+
       setListGallery([...array]);
     }
     fechData();
   }, []);
-  console.log(listGallery);
+
   const itemsRef = useRef([]);
   const itemsRefYear = useRef([]);
 
@@ -137,9 +142,7 @@ function ReactScroll({ founderID }) {
     itemsRef.current = itemsRef.current.slice(0, listGallery.length);
   }, [listGallery]);
 
-  // const [off, setoff] = useState(-150);
   const handleSetActive = (to) => {
-    // setoff(-150);
     for (var i = 0; i < itemsRef.current.length; i++) {
       if (to == itemsRef.current[i].children[1].children[0].textContent) {
         var addColor =
@@ -187,48 +190,58 @@ function ReactScroll({ founderID }) {
 
     if (bottom) {
       // HIDE CATEGORY YEAR
-      const myReference = refCategory.current;
-      myReference.style.display = "none";
-      // ADD COLOR LAST IMAGES YEAR
-      var addColor =
-        itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
-          .children[0].children[0];
-      var addColor2 =
-        itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
-          .children[1].children[0];
-      var addColor3 =
-        itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
-          .children[0].children[0];
-      var addColor4 =
-        itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
-          .children[1].children[0];
       if (matchMobileTablet) {
-        console.log("co1");
+        const myReference = refCategory.current;
+        myReference.style.display = "none";
+        // ADD COLOR LAST IMAGES YEAR
+        var addColor =
+          itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
+            .children[0].children[0];
+        var addColor2 =
+          itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
+            .children[1].children[0];
+        var addColor3 =
+          itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
+            .children[0].children[0];
+        var addColor4 =
+          itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
+            .children[1].children[0];
+
         addColor.style.filter = "grayscale(0%)";
         addColor2.style.filter = "grayscale(0%)";
         addColor3.style.filter = "grayscale(0%)";
         addColor4.style.filter = "grayscale(0%)";
       }
     } else {
-      var noColor =
-        itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
-          .children[0].children[0];
-      var noColor2 =
-        itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
-          .children[1].children[0];
-      var noColor3 =
-        itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
-          .children[0].children[0];
-      var noColor4 =
-        itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
-          .children[1].children[0];
       if (matchMobileTablet) {
-        console.log("co2");
+        var noColor =
+          itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
+            .children[0].children[0];
 
-        noColor.style.filter = "grayscale(100%)";
-        noColor2.style.filter = "grayscale(100%)";
-        noColor3.style.filter = "grayscale(100%)";
-        noColor4.style.filter = "grayscale(100%)";
+        var noColor2 =
+          itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
+            .children[1].children[0];
+
+        var noColor3 =
+          itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
+            .children[0].children[0];
+
+        var noColor4 =
+          itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
+            .children[1].children[0];
+
+        if (noColor.src !== "") {
+          noColor.style.filter = "grayscale(100%)";
+        }
+        if (noColor2.src !== "") {
+          noColor2.style.filter = "grayscale(100%)";
+        }
+        if (noColor3.src !== "") {
+          noColor3.style.filter = "grayscale(100%)";
+        }
+        if (noColor3.src !== "") {
+          noColor4.style.filter = "grayscale(100%)";
+        }
       }
     }
     // }
@@ -295,6 +308,7 @@ function ReactScroll({ founderID }) {
             ))}
         </div>
       </div>
+      {/* LIST IMAGE */}
       <div style={{ display: "flex", flexDirection: "column", rowGap: "20vw" }}>
         {Object.keys(listGallery).length > 1 &&
           listGallery[0].image &&
@@ -374,7 +388,6 @@ function ReactScroll({ founderID }) {
           ))}
       </div>
     </div>
-    // <div>hi</div>
   );
 }
 export default ReactScroll;
