@@ -29,7 +29,7 @@ function ReactScroll({ founderID }) {
     const bottom =
       Math.ceil(window.innerHeight + window.scrollY) >=
       document.documentElement.scrollHeight;
-    console.log("position:", position);
+
     if (!matchMobile) {
       if (position >= 715) {
         const myReference = refCategory.current;
@@ -217,20 +217,31 @@ function ReactScroll({ founderID }) {
         var noColor =
           itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
             .children[0].children[0];
+
         var noColor2 =
           itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
             .children[1].children[0];
+
         var noColor3 =
           itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
             .children[0].children[0];
+
         var noColor4 =
           itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
             .children[1].children[0];
 
-        noColor.style.filter = "grayscale(100%)";
-        noColor2.style.filter = "grayscale(100%)";
-        noColor3.style.filter = "grayscale(100%)";
-        noColor4.style.filter = "grayscale(100%)";
+        if (noColor.src !== "") {
+          noColor.style.filter = "grayscale(100%)";
+        }
+        if (noColor2.src !== "") {
+          noColor2.style.filter = "grayscale(100%)";
+        }
+        if (noColor3.src !== "") {
+          noColor3.style.filter = "grayscale(100%)";
+        }
+        if (noColor3.src !== "") {
+          noColor4.style.filter = "grayscale(100%)";
+        }
       }
     }
     // }
