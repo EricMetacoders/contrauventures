@@ -1,15 +1,12 @@
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
 import "./style.scss";
-import { Box, Button, useMediaQuery, useTheme } from "@mui/material";
 
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { useNavigate } from "react-router-dom";
-import { interviewServices } from "../../../../services/interviewService";
 import { useDispatch, useSelector } from "react-redux";
-import { getListFounder } from "../../../../reducers/interviewSlice";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import { interviewServices } from "../../../../services/interviewService";
 import ListFounder from "./ListFounder/ListFounder";
 
 MainFounder.propTypes = {};
@@ -17,7 +14,7 @@ MainFounder.propTypes = {};
 function MainFounder(props) {
   //RESPONSIVE
   const theme = useTheme();
-  const dispatch = useDispatch();
+
   const matchMobile = useMediaQuery("(max-width:639px)");
 
   const [listFounder2, setListFounder2] = useState([]);
@@ -92,6 +89,13 @@ function MainFounder(props) {
       console.log("Failed to fetch", error);
     }
   }
+
+  // const founderList = useSelector((state) => state.interviewSlice.listFounder);
+  // console.log("founderList:", founderList);
+  // const dispatch = useDispatch();
+  // useEffect(() => {
+  //   dispatch(getListFounder());
+  // }, []);
 
   return (
     <div className="rootmainfounder">

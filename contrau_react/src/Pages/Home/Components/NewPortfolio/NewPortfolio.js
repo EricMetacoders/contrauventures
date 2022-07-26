@@ -34,6 +34,7 @@ const NewPortfolio = forwardRef((props, ref) => {
     return logo.acf.category === "SW Infrastructure";
   });
 
+  // set Offset of scroll position
   const [offset, setOffset] = useState(null);
   const handleScroll = () => setOffset(window.pageYOffset);
   useEffect(() => {
