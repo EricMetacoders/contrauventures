@@ -4,9 +4,6 @@ import { Element, Events, Link } from "react-scroll";
 ListImage.propTypes = {};
 
 function ListImage(listGallery, itemsRef) {
-  console.log("listGallery:", listGallery);
-  console.log("itemsRef:", itemsRef);
-
   // CHECK LENGTH FOR YEAR
   const checkLength = (numberImage) => {
     if (!numberImage) {
