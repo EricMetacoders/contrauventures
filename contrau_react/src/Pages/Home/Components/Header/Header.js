@@ -8,9 +8,18 @@ export default function Header({ resultRef, partnersRef }) {
   // scroll to Porfolio
   const handleScroll = () => {
     resultRef.current.scrollIntoView({ behavior: "smooth" });
+
+    // window.scrollTo({
+    //   top: 5500,
+    //   behavior: "smooth",
+    // });
   };
   const handleScrollPartners = () => {
     partnersRef.current.scrollIntoView({ behavior: "smooth" });
+    // window.scrollTo({
+    //   top: 1220,
+    //   behavior: "smooth",
+    // });
   };
 
   // handleShowHideHeader
