@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 import { Element, Events, Link } from "react-scroll";
 import { interviewServices } from "../../../../../../../services/interviewService";
+import ListImage from "./ListImage";
 
 function ReactScroll({ founderID }) {
   const [listGallery, setListGallery] = useState([{}]);
@@ -110,10 +111,7 @@ function ReactScroll({ founderID }) {
       let detailfoundergallery = await getGalleryFounderDetail(founderID);
 
       var array = [];
-      // var arrayKey = [];
-      // Object.keys(detailfoundergallery.data.acf.image).map((item) => {
-      //   arrayKey.push(item);
-      // });
+
       Object.values(detailfoundergallery.data.acf.image).map((item, index) => {
         if (item.year != "") {
           array.push(item);
@@ -132,9 +130,7 @@ function ReactScroll({ founderID }) {
     itemsRef.current = itemsRef.current.slice(0, listGallery.length);
   }, [listGallery]);
 
-  // const [off, setoff] = useState(-150);
   const handleSetActive = (to) => {
-    // setoff(-150);
     for (var i = 0; i < itemsRef.current.length; i++) {
       if (to == itemsRef.current[i].children[1].children[0].textContent) {
         var addColor =
@@ -287,6 +283,7 @@ function ReactScroll({ founderID }) {
             ))}
         </div>
       </div>
+      {/* LIST IMAGE */}
       <div style={{ display: "flex", flexDirection: "column", rowGap: "20vw" }}>
         {Object.keys(listGallery).length > 1 &&
           listGallery[0].image &&
@@ -366,7 +363,6 @@ function ReactScroll({ founderID }) {
           ))}
       </div>
     </div>
-    // <div>hi</div>
   );
 }
 export default ReactScroll;

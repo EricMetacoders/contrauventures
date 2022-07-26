@@ -48,7 +48,6 @@ function MainFounder(props) {
   const [clicked, setClicked] = useState(contentdatacategory[0].name);
 
   const carouselProperties = {
-    // initialSlide: 3,
     infinite: false,
     arrows: false,
 
