@@ -21,7 +21,7 @@ export default function NewHeaderDropDown({ resultRef, partnersRef }) {
   };
   const handleScrollPortfolios = () => {
     window.scrollTo({
-      top: 3215,
+      top: 3220,
       behavior: "smooth",
     });
   };
