@@ -873,7 +873,7 @@ const Group = forwardRef((props, ref) => {
               })}
           </GroupCarouselAnimation>
         </WrapperGroupCarousel>
-        <WrapperGroupCarousel className="overflow-hidden block sm:hidden">
+        <WrapperGroupCarousel className="overflow-hidden block sm:hidden mt-[25px]">
           <GroupCarouselAnimation
             rightToLeft={true}
             className="flex relative h-[80px]"
@@ -982,7 +982,7 @@ const Group = forwardRef((props, ref) => {
               })}
           </GroupCarouselAnimation>
         </WrapperGroupCarousel>
-        <WrapperGroupCarousel className="overflow-hidden block sm:hidden mb-[123px]">
+        <WrapperGroupCarousel className="overflow-hidden block sm:hidden mt-[25px] mb-[123px]">
           <GroupCarouselAnimation className="flex relative h-[80px]">
             {partners
               ?.filter((partner) => partner?.acf?.category === "partner 3")
