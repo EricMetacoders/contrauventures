@@ -30,9 +30,9 @@ const Group = forwardRef((props, ref) => {
       <div className="bg-partnersContactBg overflow-hidden ">
         <div
           ref={ref}
-          className="pb-[84px] md:pb-0 lg:pb-0 xl:pb-[13px]  md:mt-[106px] mt-[10px]"
+          className="pb-[84px] md:pb-0 lg:pb-0 xl:pb-[13px]  md:mt-[187px] mt-[10px]"
         >
-          <div className="mx-[34px] md:mx-[117px] 2xl:mx-[300px] 2xl:pb-[65px]  pt-[70px]">
+          <div className="mx-[34px] md:mx-[117px] 2xl:mx-[300px] 2xl:pb-[65px]  pt-[108px]">
             {/* desktop animation */}
             <div className="xl:block hidden md:w-[1030px] md:h-[498px]">
               {/* start animation */}

@@ -15,13 +15,13 @@ export default function NewHeaderDropDown({ resultRef, partnersRef }) {
   // handleScrollTo
   const handleScrollPartners = () => {
     window.scrollTo({
-      top: 700,
+      top: 800,
       behavior: "smooth",
     });
   };
   const handleScrollPortfolios = () => {
     window.scrollTo({
-      top: 3300,
+      top: 3215,
       behavior: "smooth",
     });
   };
