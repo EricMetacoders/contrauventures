@@ -5,26 +5,13 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import * as React from "react";
 import { Link } from "react-router-dom";
-export default function NewHeaderDropDown({ resultRef, partnersRef }) {
+export default function NewHeaderDropDown() {
   const [state, setState] = React.useState({
     right: false,
   });
-
-  // handleScrollTo
-  const handleScrollPartners = () => {
-    window.scrollTo({
-      top: 800,
-      behavior: "smooth",
-    });
-  };
-  const handleScrollPortfolios = () => {
-    window.scrollTo({
-      top: 3220,
-      behavior: "smooth",
-    });
-  };
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (
@@ -59,18 +46,19 @@ export default function NewHeaderDropDown({ resultRef, partnersRef }) {
         </ListItem>
 
         <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemText primary={"About Us"} onClick={handleScrollPartners} />
-          </ListItemButton>
+          <AnchorLink href="#aboutUs">
+            <ListItemButton>
+              <ListItemText primary={"About Us"} />
+            </ListItemButton>
+          </AnchorLink>
         </ListItem>
 
         <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemText
-              primary={"Portfolios"}
-              onClick={handleScrollPortfolios}
-            />
-          </ListItemButton>
+          <AnchorLink href="#mobilePortfolios">
+            <ListItemButton>
+              <ListItemText primary={"Portfolios"} />
+            </ListItemButton>
+          </AnchorLink>
         </ListItem>
 
         <ListItem disablePadding>

@@ -27,7 +27,7 @@ export default function ValueAdd() {
       </div>
 
       {/* mobile animation*/}
-      <div className="block md:hidden h-[249.5px]">
+      <div className="block md:hidden h-[249.5px] sm:h-[328px]">
         {/* start animation */}
         {offset > 2926 ? <ValueAddAnimation /> : <></>}
         {/* end animation */}
