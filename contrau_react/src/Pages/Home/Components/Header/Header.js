@@ -4,24 +4,8 @@ import logo from "../../../../assets/homepage_img/logo.svg";
 import TemporaryDrawer from "../../../InterviewPage/component/Header/TemporaryDrawer";
 import HeaderDropDown from "./HeaderDropDown";
 import NewHeaderDropDown from "./NewHeaderDropDown";
-export default function Header({ resultRef, partnersRef }) {
-  // scroll to Porfolio
-  const handleScroll = () => {
-    resultRef.current.scrollIntoView({ behavior: "smooth" });
-
-    // window.scrollTo({
-    //   top: 5500,
-    //   behavior: "smooth",
-    // });
-  };
-  const handleScrollPartners = () => {
-    partnersRef.current.scrollIntoView({ behavior: "smooth" });
-    // window.scrollTo({
-    //   top: 1220,
-    //   behavior: "smooth",
-    // });
-  };
-
+import AnchorLink from "react-anchor-link-smooth-scroll";
+export default function Header() {
   // handleShowHideHeader
   const refHeader = useRef();
   // CHECK EVENT SCROLL DOWN
@@ -89,18 +73,16 @@ export default function Header({ resultRef, partnersRef }) {
                 HOME
               </p>
             </Link>
-            <p
-              className="popinsFont text-[16px] font-normal hover:text-hoverGrey transition-all cursor-pointer"
-              onClick={handleScrollPartners}
-            >
-              About Us
-            </p>
-            <p
-              className="popinsFont text-[16px] font-normal hover:text-hoverGrey transition-all cursor-pointer"
-              onClick={handleScroll}
-            >
-              Portfolios
-            </p>
+            <AnchorLink href="#aboutUs">
+              <p className="popinsFont text-[16px] font-normal hover:text-hoverGrey transition-all cursor-pointer">
+                About Us
+              </p>
+            </AnchorLink>
+            <AnchorLink href="#portfolios">
+              <p className="popinsFont text-[16px] font-normal hover:text-hoverGrey transition-all cursor-pointer">
+                Portfolios
+              </p>
+            </AnchorLink>
             <Link to="/story">
               <p className="popinsFont text-[16px] font-normal text-black hover:text-hoverGrey transition-all cursor-pointer">
                 Story
