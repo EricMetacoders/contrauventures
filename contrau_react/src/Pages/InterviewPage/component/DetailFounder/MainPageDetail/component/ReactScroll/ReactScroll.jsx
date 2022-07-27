@@ -16,6 +16,7 @@ function ReactScroll({ founderID }) {
   async function getGalleryFounderDetail(id) {
     try {
       let detailgallery = await interviewServices.getGalleryFounder(id);
+
       return detailgallery;
     } catch (error) {
       console.log("Failed to fetch", error);
@@ -311,8 +312,6 @@ function ReactScroll({ founderID }) {
       {/* LIST IMAGE */}
       <div style={{ display: "flex", flexDirection: "column", rowGap: "20vw" }}>
         {Object.keys(listGallery).length > 1 &&
-          listGallery[0].image &&
-          listGallery[0].image.length > 0 &&
           listGallery?.map((item, index) => (
             <Element name={item.year} className="element" key={item.year}>
               <div
