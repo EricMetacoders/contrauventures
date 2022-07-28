@@ -98,6 +98,7 @@
             --underline-padding-x: 0em;
             span {
               font-weight: 800;
+              font-style: italic;
               display: inline;
               --underline-width-scale: calc(
                 var(--underline-width) / var(--underline-intrinsic-width)
@@ -1159,6 +1160,7 @@
 
               --underline-padding-x: 0em;
               span {
+                font-style: italic;
                 // width: fit-content;
                 // display: inline-block;
                 // height: 58px;
@@ -1527,6 +1529,7 @@
 
               --underline-padding-x: 0em;
               span {
+                font-style: italic;
                 // width: fit-content;
                 // display: inline-block;
                 // height: 58px;
