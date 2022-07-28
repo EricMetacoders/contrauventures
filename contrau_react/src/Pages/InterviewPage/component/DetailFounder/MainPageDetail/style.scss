@@ -86,12 +86,12 @@
           .title1 {
             font-weight: 100;
             span {
-              // width: fit-content;
-              // display: inline-block;
-              // height: 58px;
-              // font-style: italic;
-              // font-weight: 800;
-              // border-bottom: 18px solid rgba(219, 47, 51, 0.9294117647);
+              width: fit-content;
+              display: inline-block;
+              height: 58px;
+              font-style: italic;
+              font-weight: 800;
+              border-bottom: 18px solid rgba(219, 47, 51, 0.9294117647);
             }
           }
           // .title2 {
@@ -506,22 +506,20 @@
             margin-right: 0px;
             margin: auto;
             font-size: 24px;
-            // line-height: 100%;
+            line-height: 100%;
             letter-spacing: 0.02em;
             color: #000000;
             width: 259px;
-            // height: 48px;
+            height: 48px;
             text-align: center;
             .title1 {
               font-weight: 100;
               span {
                 // width: ;
-                display: inline;
-                // height: 23px;
-                height: auto;
+                display: inline-block;
+                height: 23px;
                 font-style: italic;
                 font-weight: 800;
-                // background-color: #999999;
                 border-bottom: 8px solid rgba(219, 47, 51, 0.9294117647);
               }
             }
