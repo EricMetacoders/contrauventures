@@ -85,11 +85,7 @@ function HeaderFounder({ detailFounder }) {
         </div>
         <Box className="frameimglayout">
           <img
-            src={
-              matchMobile
-                ? detailFounder?.acf?.header_thumbnail
-                : detailFounder?.acf?.header_image
-            }
+            src={detailFounder?.acf?.header_image}
             className="logobackgroundheader"
           />
         </Box>
