@@ -6,6 +6,7 @@ GalleryBody.propTypes = {};
 function GalleryBody({ founderID }) {
   return (
     <div>
+      {/* style={{ height: "1500px", background: "red" }} */}
       <ReactScroll founderID={founderID} />
     </div>
   );
