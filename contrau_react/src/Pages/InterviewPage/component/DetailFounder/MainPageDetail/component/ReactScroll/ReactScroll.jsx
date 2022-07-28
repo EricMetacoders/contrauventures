@@ -26,36 +26,35 @@ function ReactScroll({ founderID }) {
   const refCategory = useRef(null);
   // CHECK MOBILE OR PC TO CHANGE HIDE/SHOW CATEGORY YEAR
   const onScroll = () => {
-    const position = window.pageYOffset;
-    const bottom =
-      Math.ceil(window.innerHeight + window.scrollY) >=
-      document.documentElement.scrollHeight;
-
-    if (!matchMobile) {
-      if (position >= 715) {
-        const myReference = refCategory.current;
-        myReference.style.display = "block";
-      } else if (position < 720) {
-        const myReference = refCategory.current;
-        myReference.style.display = "none";
-      }
-      if (bottom) {
-        const myReference = refCategory.current;
-        myReference.style.display = "none";
-      }
-    } else {
-      if (position >= 500) {
-        const myReference = refCategory.current;
-        myReference.style.display = "block";
-      } else if (position < 600) {
-        const myReference = refCategory.current;
-        myReference.style.display = "none";
-      }
-      if (bottom) {
-        const myReference = refCategory.current;
-        myReference.style.display = "none";
-      }
-    }
+    // const position = window.pageYOffset;
+    // const bottom =
+    //   Math.ceil(window.innerHeight + window.scrollY) >=
+    //   document.documentElement.scrollHeight;
+    // if (!matchMobile) {
+    //   if (position >= 715) {
+    //     const myReference = refCategory.current;
+    //     myReference.style.display = "block";
+    //   } else if (position < 720) {
+    //     const myReference = refCategory.current;
+    //     myReference.style.display = "none";
+    //   }
+    //   if (bottom) {
+    //     const myReference = refCategory.current;
+    //     myReference.style.display = "none";
+    //   }
+    // } else {
+    //   if (position >= 500) {
+    //     const myReference = refCategory.current;
+    //     myReference.style.display = "block";
+    //   } else if (position < 600) {
+    //     const myReference = refCategory.current;
+    //     myReference.style.display = "none";
+    //   }
+    //   if (bottom) {
+    //     const myReference = refCategory.current;
+    //     myReference.style.display = "none";
+    //   }
+    // }
   };
 
   // USE EFFECT TO APPLY LIBRARY AND HIDE AND SHOW YEAR CATEGORY
@@ -135,7 +134,6 @@ function ReactScroll({ founderID }) {
     }
     fechData();
   }, []);
-
   const itemsRef = useRef([]);
   const itemsRefYear = useRef([]);
 

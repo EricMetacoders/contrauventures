@@ -4,10 +4,10 @@
   padding-bottom: 18%;
   padding-top: 15%;
   .categorydetailyear {
-    display: none;
+    display: block;
     // background: "black",
     width: 10%;
-    position: fixed;
+    position: sticky;
     top: 50%;
     transform: translateY(-50%);
     z-index: 5;
@@ -312,11 +312,12 @@
 /* MOBILE WIDTH < 740px */
 @media screen and (max-width: 769px) {
   .framemaingallery {
+    position: relative;
     .categorydetailyear {
-      display: none;
+      display: block;
       // height: auto;
       width: fit-content;
-      position: fixed;
+      position: sticky;
       top: 8%;
       left: 50%;
       transform: translateX(-50%);
