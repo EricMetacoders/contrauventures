@@ -20,7 +20,7 @@ export default function ValueAdd() {
   return (
     <div className="mx-[34px]  md:mx-[117px] xl:mx-[100px] 2xl:mx-[300px] mt-[61px]  2xl:mt-[294px]">
       {/* desktop animation */}
-      <div className="hidden md:block sm:h-[] md:h-[330px]  2xl:h-[520px]">
+      <div className="hidden md:block md:h-[330px]  2xl:h-[520px]">
         {/* start animation */}
         {offset > 5700 ? <ValueAddAnimation /> : <></>}
         {/* end animation */}
