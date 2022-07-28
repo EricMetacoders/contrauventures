@@ -313,12 +313,13 @@
 @media screen and (max-width: 769px) {
   .framemaingallery {
     position: relative;
+    padding-top: 0px;
     .categorydetailyear {
       display: block;
       // height: auto;
       width: fit-content;
       position: sticky;
-      top: 8%;
+      // top: -5%;
       left: 50%;
       transform: translateX(-50%);
       font-style: normal;
@@ -327,6 +328,8 @@
       line-height: 24px;
       padding-left: 0%;
       z-index: 2000;
+      padding-top: 15px;
+      padding-bottom: 70px;
       .frameyearcategory {
         display: flex;
         flex-direction: row;
