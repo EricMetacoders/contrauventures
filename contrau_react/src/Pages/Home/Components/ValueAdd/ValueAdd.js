@@ -20,14 +20,14 @@ export default function ValueAdd() {
   return (
     <div className="mx-[34px]  md:mx-[117px] xl:mx-[100px] 2xl:mx-[300px] mt-[61px]  2xl:mt-[294px]">
       {/* desktop animation */}
-      <div className="hidden md:block h-[520px]">
+      <div className="hidden md:block sm:h-[] md:h-[330px]  2xl:h-[520px]">
         {/* start animation */}
         {offset > 5700 ? <ValueAddAnimation /> : <></>}
         {/* end animation */}
       </div>
 
       {/* mobile animation*/}
-      <div className="block md:hidden h-[249.5px] sm:h-[328px]">
+      <div className="block md:hidden h-[249.5px] sm:h-[368px]">
         {/* start animation */}
         {offset > 2926 ? <ValueAddAnimation /> : <></>}
         {/* end animation */}

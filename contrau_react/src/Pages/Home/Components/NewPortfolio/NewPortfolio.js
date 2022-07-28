@@ -56,8 +56,8 @@ const NewPortfolio = forwardRef((props, ref) => {
           />
         </div>
 
-        <div id="portfolios" className="mt-[43%] lg:mt-[37%]">
-          <div id="mobilePortfolios" class="pt-[7rem] md:mt-0">
+        <div id="portfolios" className="mt-[43%] lg:mt-[33%]">
+          <div id="mobilePortfolios" class="pt-[7rem] md:pt-[7rem] md:mt-0">
             <div className="bg-portfolioBg pt-[2px]">
               {/* text content */}
               <div className="relative">
