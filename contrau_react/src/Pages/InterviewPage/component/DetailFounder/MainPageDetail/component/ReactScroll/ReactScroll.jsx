@@ -160,7 +160,7 @@ function ReactScroll({ founderID }) {
     if (bottom) {
       const myReference = refCategory.current;
       // myReference.style.display = "none";
-      // myReference.style.top = "-5%";
+      myReference.style.top = "-5%";
       // HIDE CATEGORY YEAR
       if (matchMobileTablet) {
         // ADD COLOR LAST IMAGES YEAR
