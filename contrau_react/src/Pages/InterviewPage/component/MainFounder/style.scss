@@ -482,10 +482,9 @@
 
             border-radius: 40px;
             background-color: transparent;
+            width: 100%;
+
             .detailfoundername {
-              flex: none;
-              order: 0;
-              flex-grow: 0;
               .titlename {
                 font-family: "Poppins", sans-serif;
                 font-style: normal;

@@ -159,7 +159,8 @@ function ReactScroll({ founderID }) {
 
     if (bottom) {
       const myReference = refCategory.current;
-      myReference.style.display = "none";
+      // myReference.style.display = "none";
+      myReference.style.top = "-5%";
       // HIDE CATEGORY YEAR
       if (matchMobileTablet) {
         // ADD COLOR LAST IMAGES YEAR
@@ -184,6 +185,7 @@ function ReactScroll({ founderID }) {
     } else {
       const myReference = refCategory.current;
       myReference.style.display = "block";
+      myReference.style.top = "8%";
       if (matchMobileTablet) {
         var noColor =
           itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
@@ -280,7 +282,13 @@ function ReactScroll({ founderID }) {
         </div>
       </div>
       {/* LIST IMAGE */}
-      <div style={{ display: "flex", flexDirection: "column", rowGap: "20vw" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          rowGap: "20vw",
+        }}
+      >
         {Object.keys(listGallery).length > 1 &&
           listGallery?.map((item, index) => (
             <Element name={item.year} className="element" key={item.year}>

@@ -315,19 +315,21 @@
     position: relative;
     padding-top: 0px;
     .categorydetailyear {
-      display: block;
+      // display: block;
+      display: none;
       // height: auto;
       width: fit-content;
       position: sticky;
-      // top: -5%;
+      top: 10%;
       left: 50%;
+
       transform: translateX(-50%);
       font-style: normal;
       font-weight: 600;
       font-size: 14px;
       line-height: 24px;
       padding-left: 0%;
-      z-index: 2000;
+      // z-index: 2000;
       padding-top: 15px;
       padding-bottom: 70px;
       .frameyearcategory {
@@ -363,10 +365,11 @@
             padding-bottom: 19%;
             .frameimgtop {
               display: flex;
-              width: 100%;
+              width: 90%;
               height: auto;
               margin-left: 9.4%;
               column-gap: 14%;
+
               .frameimg1 {
                 width: 38%;
                 img {
@@ -380,7 +383,9 @@
               .frameimg2 {
                 // height: auto;
                 margin-top: auto;
-                width: 30vw;
+                // width: 30vw;
+                // width: 28%;
+                width: 35%;
 
                 img {
                   width: 100%;
