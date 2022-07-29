@@ -238,6 +238,7 @@
 
           color: #ffffff;
           .detailtitlered {
+            overflow-wrap: break-word;
             // display: inline-block;
             // height: 52px;
 
@@ -759,7 +760,7 @@
             .detailtitlered {
               // display: inline-block;
               // height: 26px;
-
+              overflow-wrap: break-word;
               font-weight: 800;
               --underline-intrinsic-width: 8;
 
