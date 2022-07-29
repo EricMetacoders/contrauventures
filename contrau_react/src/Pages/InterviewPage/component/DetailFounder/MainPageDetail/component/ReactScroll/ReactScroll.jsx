@@ -159,10 +159,11 @@ function ReactScroll({ founderID }) {
 
     if (bottom) {
       const myReference = refCategory.current;
-      // myReference.style.display = "none";
-      myReference.style.top = "-5%";
+      myReference.style.display = "none";
       // HIDE CATEGORY YEAR
       if (matchMobileTablet) {
+        myReference.style.top = "-5%";
+
         // ADD COLOR LAST IMAGES YEAR
         var addColor =
           itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
@@ -185,8 +186,8 @@ function ReactScroll({ founderID }) {
     } else {
       const myReference = refCategory.current;
       myReference.style.display = "block";
-      myReference.style.top = "8%";
       if (matchMobileTablet) {
+        myReference.style.top = "8%";
         var noColor =
           itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
             .children[0].children[0];

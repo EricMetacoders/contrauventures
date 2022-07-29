@@ -84,7 +84,6 @@
           // height: 54px;
           text-align: center;
           .title1 {
-            overflow-wrap: break-word;
             font-weight: 100;
             --underline-intrinsic-width: 8;
 
@@ -97,6 +96,7 @@
             --underline-offset-y: -7px;
 
             --underline-padding-x: 0em;
+            overflow-wrap: break-word;
             span {
               font-weight: 800;
               font-style: italic;
@@ -143,7 +143,7 @@
           margin-left: auto;
           margin-right: 86px;
           margin-bottom: 31px;
-          margin-top: 10px;
+          margin-top: 15px;
         }
       }
 
@@ -238,9 +238,10 @@
 
           color: #ffffff;
           .detailtitlered {
+            overflow-wrap: break-word;
             // display: inline-block;
             // height: 52px;
-            overflow-wrap: break-word;
+
             font-weight: 800;
             // font-weight: 100;
             --underline-intrinsic-width: 8;
@@ -593,11 +594,11 @@
             line-height: 30px;
             letter-spacing: 0.02em;
             color: #000000;
-            width: 259px;
+            // width: 259px;
+            width: 70%;
             // height: 48px;
             text-align: center;
             .title1 {
-              overflow-wrap: break-word;
               font-weight: 100;
               --underline-intrinsic-width: 8;
 
@@ -611,6 +612,7 @@
 
               --underline-padding-x: 0em;
               font-size: 30px;
+              overflow-wrap: break-word;
               span {
                 // width: fit-content;
                 // display: inline-block;
@@ -759,7 +761,6 @@
               // display: inline-block;
               // height: 26px;
               overflow-wrap: break-word;
-
               font-weight: 800;
               --underline-intrinsic-width: 8;
 
@@ -1148,7 +1149,6 @@
             height: auto; //responsive
             text-align: center; //responsive
             .title1 {
-              overflow-wrap: break-word;
               font-weight: 100;
               --underline-intrinsic-width: 8;
 
@@ -1161,6 +1161,7 @@
               --underline-offset-y: -7px;
 
               --underline-padding-x: 0em;
+              overflow-wrap: break-word;
               span {
                 font-style: italic;
                 // width: fit-content;
@@ -1213,7 +1214,7 @@
             margin-left: auto;
             margin-right: 61px;
             margin-bottom: 0px;
-            margin-top: 10px;
+            margin-top: 15px;
           }
         }
 
@@ -1518,7 +1519,6 @@
             height: auto; //responsive
             text-align: center; //responsive
             .title1 {
-              overflow-wrap: break-word;
               font-weight: 100;
               --underline-intrinsic-width: 8;
 
@@ -1531,6 +1531,7 @@
               --underline-offset-y: -7px;
 
               --underline-padding-x: 0em;
+              overflow-wrap: break-word;
               span {
                 font-style: italic;
                 // width: fit-content;
@@ -1583,7 +1584,7 @@
             margin-left: auto;
             margin-right: 61px;
             margin-bottom: 0px;
-            margin-top: 10px;
+            margin-top: 15px;
           }
         }
 
