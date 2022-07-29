@@ -6,6 +6,11 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 640px) {
+    height: 80px;
+    width: 100px;
+  }
 `;
 
 export const LinkLogo = styled.a`
@@ -30,7 +35,7 @@ export const BackgroundLogo = styled.div`
 
 export const Logo = styled.img`
   z-index: 999;
-  max-width: 50%;
-  max-height: 50%;
+  max-width: 40%;
+  max-height: 40%;
   object-fit: contain;
 `;

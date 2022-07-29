@@ -359,7 +359,7 @@ function InterviewBody({ detailArticle }) {
                   __html: detailArticle?.qoute?.part_1 || "",
                 }}
               />
-              &nbsp;
+
               {/* <div className="title2">{detailArticle?.qoute?.part_2 || ""}</div> */}
             </div>
             <div className="framedot2">

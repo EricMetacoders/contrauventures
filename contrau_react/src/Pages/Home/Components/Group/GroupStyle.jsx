@@ -26,6 +26,10 @@ export const WrapperGroupCarousel = styled.div`
 		left: 0;
 		top: 0;
 	}
+
+  @media (max-width: 640px) {
+    height: 80px;
+  }
 `
 
 const groupCarouselLeftToRight = keyframes`
