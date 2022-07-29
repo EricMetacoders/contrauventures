@@ -206,7 +206,6 @@
           order: 1;
           align-self: stretch;
           flex-grow: 0;
-          overflow-wrap: break-word;
         }
       }
     }
@@ -249,7 +248,7 @@
 
             --underline-color: rgba(219, 47, 51, 0.929);
 
-            --underline-cap-width: 4px;
+            --underline-cap-width: 1px;
 
             --underline-offset-y: -12px;
 
@@ -660,7 +659,7 @@
             margin-left: auto;
             margin-right: 12px;
             margin-bottom: 0px;
-            margin-top: 10px;
+            margin-top: 0px;
           }
         }
 
@@ -710,7 +709,6 @@
           p {
             font-size: 13px;
             text-align: center;
-            overflow-wrap: break-word;
           }
         }
       }
@@ -755,7 +753,7 @@
 
               --underline-color: rgba(219, 47, 51, 0.929);
 
-              --underline-cap-width: 4px;
+              --underline-cap-width: 1px;
 
               --underline-offset-y: -4px;
 
@@ -1243,7 +1241,6 @@
             order: 1;
             align-self: stretch;
             flex-grow: 0;
-            overflow-wrap: break-word;
           }
         }
       }
@@ -1613,7 +1610,6 @@
             order: 1;
             align-self: stretch;
             flex-grow: 0;
-            overflow-wrap: break-word;
           }
         }
       }
