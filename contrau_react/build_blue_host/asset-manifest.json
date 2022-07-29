@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.13a4f8e8.css",
-    "main.js": "/static/js/main.f535dc2b.js",
+    "main.css": "/static/css/main.686c7ee8.css",
+    "main.js": "/static/js/main.dd0af7ca.js",
     "static/js/787.b7c36abc.chunk.js": "/static/js/787.b7c36abc.chunk.js",
     "static/media/porti_bg.png": "/static/media/porti_bg.187a7cf73ba66eb53156.png",
     "static/media/logobackgroundheader.png": "/static/media/logobackgroundheader.b0f1340bf07e2f7cdcd4.png",
     "static/media/img_hero.png": "/static/media/img_hero.bd4c9512ef429ea13252.png",
     "static/media/logobackgroundheadermb.png": "/static/media/logobackgroundheadermb.69b79a109c69e556fc60.png",
+    "static/media/footerlogo.svg": "/static/media/footerlogo.dc21e1805e251d1fc7a411887f107d8a.svg",
     "static/media/logo.svg": "/static/media/logo.6398d8b2ac8a61e72898b59913b9cfec.svg",
     "static/media/logoheadertrau.svg": "/static/media/logoheadertrau.1c8a271dd0c0ab10da4b62974dd92e53.svg",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -20,12 +21,12 @@
     "static/media/plus.svg": "/static/media/plus.cbaac5f01c5d00f6fd67c4fac4860813.svg",
     "static/media/prev_btn.svg": "/static/media/prev_btn.86da1ac2f095e2f609ab.svg",
     "static/media/minus.svg": "/static/media/minus.8b14b450a99e026fd574ccb2e1d23698.svg",
-    "main.13a4f8e8.css.map": "/static/css/main.13a4f8e8.css.map",
-    "main.f535dc2b.js.map": "/static/js/main.f535dc2b.js.map",
+    "main.686c7ee8.css.map": "/static/css/main.686c7ee8.css.map",
+    "main.dd0af7ca.js.map": "/static/js/main.dd0af7ca.js.map",
     "787.b7c36abc.chunk.js.map": "/static/js/787.b7c36abc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.13a4f8e8.css",
-    "static/js/main.f535dc2b.js"
+    "static/css/main.686c7ee8.css",
+    "static/js/main.dd0af7ca.js"
   ]
 }
