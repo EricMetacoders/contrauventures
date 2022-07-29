@@ -84,6 +84,7 @@
           // height: 54px;
           text-align: center;
           .title1 {
+            overflow-wrap: break-word;
             font-weight: 100;
             --underline-intrinsic-width: 8;
 
@@ -239,7 +240,7 @@
           .detailtitlered {
             // display: inline-block;
             // height: 52px;
-
+            overflow-wrap: break-word;
             font-weight: 800;
             // font-weight: 100;
             --underline-intrinsic-width: 8;
@@ -596,6 +597,7 @@
             // height: 48px;
             text-align: center;
             .title1 {
+              overflow-wrap: break-word;
               font-weight: 100;
               --underline-intrinsic-width: 8;
 
@@ -756,6 +758,7 @@
             .detailtitlered {
               // display: inline-block;
               // height: 26px;
+              overflow-wrap: break-word;
 
               font-weight: 800;
               --underline-intrinsic-width: 8;
@@ -1145,6 +1148,7 @@
             height: auto; //responsive
             text-align: center; //responsive
             .title1 {
+              overflow-wrap: break-word;
               font-weight: 100;
               --underline-intrinsic-width: 8;
 
@@ -1514,6 +1518,7 @@
             height: auto; //responsive
             text-align: center; //responsive
             .title1 {
+              overflow-wrap: break-word;
               font-weight: 100;
               --underline-intrinsic-width: 8;
 
