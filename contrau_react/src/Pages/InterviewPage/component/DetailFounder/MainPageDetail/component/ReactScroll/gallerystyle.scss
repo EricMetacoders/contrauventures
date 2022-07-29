@@ -18,7 +18,7 @@
     line-height: 32px;
     color: #ffffff;
     width: fit-content;
-    padding-left: 5%;
+    padding-left: 8%;
 
     .frameyearcategory {
       display: flex;
@@ -57,7 +57,7 @@
         position: relative;
         padding-top: 0px;
         color: #ffffff;
-        width: 73%;
+        width: 74%;
         height: auto;
         margin: auto;
         // show 4 img
@@ -66,11 +66,11 @@
           .frameimgtop {
             display: flex;
             // flex-direction: row;
-            width: 100%;
-            column-gap: 14%;
+            width: 82.5%;
+            column-gap: 15%;
             height: auto;
-            margin-left: 11.4%;
-            // align-items: stretch;
+            margin-left: 13.4%;
+
             .frameimg1 {
               height: auto;
 
@@ -78,7 +78,7 @@
                 width: 100%;
                 height: 100%;
                 max-width: 581px;
-                max-height: 389px;
+                max-height: 569px;
                 object-fit: contain;
               }
             }
@@ -91,24 +91,26 @@
                 width: 100%;
                 height: 100%;
                 max-width: 496px;
-                max-height: 269px;
+                max-height: 569px;
               }
             }
           }
           .frameimgbot {
-            width: 100%;
+            width: 82.5%;
             display: flex;
+            margin: auto;
+
             margin-top: 10.5%;
-            margin-left: 0px;
+            margin-left: 2%;
             height: 100%;
-            column-gap: 14%;
+            column-gap: 15%;
             .frameimg3 {
               height: auto;
               img {
                 width: 100%;
                 height: 100%;
                 max-width: 542px;
-                max-height: 360px;
+                max-height: 569px;
                 object-fit: contain;
               }
             }
@@ -116,11 +118,12 @@
               height: auto;
               margin-left: 0px;
               margin-top: 9.5%;
+
               img {
                 width: 100%;
                 height: 100%;
                 max-width: 519px;
-                max-height: 292px;
+                max-height: 569px;
                 object-fit: contain;
               }
             }
@@ -136,39 +139,41 @@
             column-gap: 11%;
             height: auto;
             margin-left: 7%;
+            width: 80%;
             .frameimg1 {
               margin-top: 14%;
               img {
                 width: 100%;
                 height: auto;
                 max-width: 496px;
-                max-height: 269px;
+                max-height: 596px;
                 object-fit: contain;
               }
             }
             .frameimg2 {
-              margin-left: 0px;
+              margin-left: auto;
               img {
                 width: 100%;
                 height: auto;
                 max-width: 475px;
-                max-height: 317px;
+                max-height: 596px;
                 object-fit: contain;
               }
             }
           }
           .frameimgbot {
-            width: 36%;
+            width: 34%;
             display: flex;
             margin: auto;
             margin-top: 10%;
             height: auto;
             .frameimg3 {
+              width: 100%;
               img {
                 width: 100%;
-                height: auto;
+                height: 100%;
                 max-width: 475px;
-                max-height: 310px;
+                max-height: 596px;
                 object-fit: contain;
               }
             }
@@ -219,24 +224,25 @@
             .frameimg1 {
               width: 43%;
               height: 100%;
+              margin-left: 2%;
               img {
                 width: 100%;
                 height: 100%;
                 max-width: 596px;
-                max-height: 369px;
+                max-height: 596px;
                 object-fit: contain;
               }
             }
             .frameimg2 {
-              max-height: 369px;
-              width: 43%;
+              // max-height: 369px;
               margin-left: auto;
-              height: 20.7vw;
+              width: 43%;
+              // height: 20.7vw;
               img {
                 width: 100%;
                 height: 100%;
                 max-width: 596px;
-                max-height: 369px;
+                max-height: 596px;
                 object-fit: contain;
               }
             }
@@ -375,7 +381,7 @@
                   width: 100%;
                   height: 100%;
                   max-width: 232px;
-                  max-height: 155px;
+                  max-height: 138px;
                   object-fit: contain;
                 }
               }
@@ -390,7 +396,7 @@
                   width: 100%;
                   height: 100%;
                   max-width: 198px;
-                  max-height: 107px;
+                  max-height: 138px;
                   object-fit: contain;
                 }
               }
@@ -401,16 +407,16 @@
               margin-top: 10.5%;
               margin-left: 0px;
               height: auto;
-              column-gap: 14%;
+              column-gap: 12%;
               .frameimg3 {
                 // width: 70%;
                 width: 39%;
-                height: 19vw;
+                // height: 19vw;
                 img {
                   width: 100%;
                   height: 100%;
                   max-width: 220px;
-                  max-height: 146px;
+                  max-height: 138px;
                   object-fit: contain;
                   // 220 146
                 }
@@ -418,14 +424,15 @@
               .frameimg4 {
                 width: 37%;
                 margin-left: 0px;
-                margin-top: 7vw;
-                height: 16vw;
+                // margin-top: 9vw;
+                // height: 16vw;
                 img {
                   // 210 118
+                  margin-top: 8px;
                   width: 100%;
                   height: 100%;
                   max-width: 210px;
-                  max-height: 118px;
+                  max-height: 138px;
                   object-fit: contain;
                 }
               }
@@ -442,27 +449,27 @@
               margin-left: 7%;
               .frameimg1 {
                 width: 70%;
+                margin-top: 70px;
 
-                margin-top: 15vw;
                 img {
                   width: 100%;
                   height: 100%;
                   max-width: 244px;
-                  max-height: 132px;
+                  max-height: 138px;
                   object-fit: contain;
                 }
               }
               .frameimg2 {
                 width: 70%;
                 margin-left: 0px;
-                height: 19vw;
-                max-height: 136px;
+                // height: 19vw;
+                // max-height: 136px;
                 img {
                   // 234 x156
                   width: 100%;
                   height: 100%;
                   max-width: 244px;
-                  max-height: 136px;
+                  max-height: 138px;
                   object-fit: contain;
                 }
               }
@@ -478,7 +485,7 @@
                   width: 100%;
                   height: 100%;
                   max-width: 208px;
-                  max-height: 136px;
+                  max-height: 138px;
                   object-fit: contain;
                 }
               }
@@ -528,27 +535,26 @@
 
               .frameimg1 {
                 width: 50%;
-
                 img {
                   width: 100%;
                   height: 100%;
                   max-width: 244px;
-                  max-height: 132px;
+                  max-height: 136px;
                   object-fit: contain;
                 }
               }
               .frameimg2 {
-                height: 18vw;
-                max-height: 369px;
+                // height: 18vw;
+                // max-height: 369px;
                 width: 50%;
                 margin-left: auto;
-                height: 20.7vw;
+                // height: 20.7vw;
                 img {
                   margin-left: auto;
                   width: 100%;
                   height: 100%;
                   max-width: 244px;
-                  max-height: 132px;
+                  max-height: 136px;
                   object-fit: contain;
                 }
               }
@@ -613,6 +619,16 @@
           }
         }
       }
+    }
+  }
+}
+
+/* MOBILE WIDTH < 740px */
+/* TABLET WIDTH >=770px and width <  1279px*/
+@media only screen and (min-width: 770px) and (max-width: 1279px) {
+  .framemaingallery {
+    .categorydetailyear {
+      padding-left: 5%;
     }
   }
 }
