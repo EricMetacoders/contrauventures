@@ -206,6 +206,7 @@
           order: 1;
           align-self: stretch;
           flex-grow: 0;
+          overflow-wrap: break-word;
         }
       }
     }
@@ -709,6 +710,7 @@
           p {
             font-size: 13px;
             text-align: center;
+            overflow-wrap: break-word;
           }
         }
       }
@@ -1241,6 +1243,7 @@
             order: 1;
             align-self: stretch;
             flex-grow: 0;
+            overflow-wrap: break-word;
           }
         }
       }
@@ -1610,6 +1613,7 @@
             order: 1;
             align-self: stretch;
             flex-grow: 0;
+            overflow-wrap: break-word;
           }
         }
       }
