@@ -233,9 +233,7 @@
           /* or 54px */
           text-align: left;
           letter-spacing: 0.02em;
-
-          /* WHITE */
-
+          overflow-wrap: break-word;
           color: #ffffff;
           .detailtitlered {
             overflow-wrap: break-word;
@@ -614,12 +612,8 @@
               font-size: 30px;
               overflow-wrap: break-word;
               span {
-                // width: fit-content;
-                // display: inline-block;
-                // height: 58px;
                 font-style: italic;
                 font-weight: 800;
-                // border-bottom: 18px solid rgba(219, 47, 51, 0.9294117647);
                 display: inline;
                 --underline-width-scale: calc(
                   var(--underline-width) / var(--underline-intrinsic-width)
@@ -665,19 +659,10 @@
             margin-left: auto;
             margin-right: 12px;
             margin-bottom: 0px;
-            // margin-top: 40px;
+            margin-top: 0px;
           }
         }
-        .frameimagequote {
-          width: 100%;
-          padding-left: 27px;
-          padding-right: 12px;
-          margin: auto;
-          margin-top: 40px;
-          img {
-            content: url("https://contrau.metacoders.dev/wp-content/uploads/2022/07/imagequote-mb.png");
-          }
-        }
+
         .framearticle {
           width: 100%;
           margin: auto;
@@ -755,7 +740,7 @@
             letter-spacing: 0.02em;
 
             /* WHITE */
-
+            overflow-wrap: break-word;
             color: #ffffff;
             .detailtitlered {
               // display: inline-block;
