@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./style.scss";
 import { Box } from "@mui/material";
-import logotraufooter from "../../../../assets/interview-img/logotraufooter.png";
+import logotraufooter from "../../../../assets/interview-img/footerlogo.svg";
 import logofb from "../../../../assets/interview-img/FB.png";
 import logolk from "../../../../assets/interview-img/LI.png";
 import logofbsvg from "../../../../assets/interview-img/fb.svg";
