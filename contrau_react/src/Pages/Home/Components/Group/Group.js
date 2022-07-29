@@ -29,19 +29,20 @@ const Group = forwardRef((props, ref) => {
     <div>
       <div className="bg-partnersContactBg overflow-hidden ">
         <div
-          ref={ref}
-          className="pb-[84px] md:pb-0 lg:pb-0 xl:pb-[13px]  md:mt-[106px] mt-[10px]"
+          // ref={ref}
+          id="aboutUs"
+          className="pb-[84px] md:pb-0 lg:pb-0 xl:pb-[13px]  md:mt-[187px] mt-[10px]"
         >
-          <div className="mx-[34px] md:mx-[117px] 2xl:mx-[300px] 2xl:pb-[65px]  pt-[70px]">
+          <div className="mx-[34px] md:mx-[117px] 2xl:mx-[300px] 2xl:pb-[65px]  pt-[108px]">
             {/* desktop animation */}
-            <div className="xl:block hidden md:w-[1030px] md:h-[498px]">
+            <div className="xl:block hidden w-[1030px] h-[498px]">
               {/* start animation */}
               {offset > 100 ? <GroupTextAnimation /> : <></>}
               {/* end animation */}
             </div>
 
             {/* tablet animation */}
-            <div className="hidden sm:block xl:hidden md:w-[1320px] md:h-[498px]">
+            <div className="hidden sm:block xl:hidden w-[1320px] h-[498px]">
               {/* start animation */}
               {offset > 100 ? <GroupTextAnimation /> : <></>}
               {/* end animation */}
@@ -873,7 +874,7 @@ const Group = forwardRef((props, ref) => {
               })}
           </GroupCarouselAnimation>
         </WrapperGroupCarousel>
-        <WrapperGroupCarousel className="overflow-hidden block sm:hidden">
+        <WrapperGroupCarousel className="overflow-hidden block sm:hidden mt-[25px]">
           <GroupCarouselAnimation
             rightToLeft={true}
             className="flex relative h-[80px]"
@@ -982,7 +983,7 @@ const Group = forwardRef((props, ref) => {
               })}
           </GroupCarouselAnimation>
         </WrapperGroupCarousel>
-        <WrapperGroupCarousel className="overflow-hidden block sm:hidden mb-[123px]">
+        <WrapperGroupCarousel className="overflow-hidden block sm:hidden mt-[25px] mb-[123px]">
           <GroupCarouselAnimation className="flex relative h-[80px]">
             {partners
               ?.filter((partner) => partner?.acf?.category === "partner 3")

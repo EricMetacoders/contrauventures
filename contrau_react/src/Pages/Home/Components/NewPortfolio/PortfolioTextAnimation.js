@@ -97,11 +97,11 @@ export default function Components() {
       <div className="md:hidden ml-[36px] bg-portfolioBg">
         <div className="text-white relative">
           <FadeInUpDiv>
-            <p className="robotoFlexFont text-[13px] font-bold mb-0">
+            <p className="robotoFlexFont text-[13px] sm:text-[24px] font-bold mb-0">
               Portfolios
             </p>
           </FadeInUpDiv>
-          <div className="mt-[27px] text-[40px] leading-[1]">
+          <div className="mt-[27px] text-[40px] sm:text-[63px] leading-[1]">
             {showText2 ? (
               <FadeInUpDiv>
                 <p className="font-[900]  popinsFont mb-0">Vietnam's</p>
@@ -111,7 +111,7 @@ export default function Components() {
             )}
             {showText2 ? (
               <FadeInUpDiv>
-                <p className="italic font-thin text-[40px] popinsFont mb-0">
+                <p className="italic font-thin text-[40px] sm:text-[63px] popinsFont mb-0">
                   victory is
                 </p>
               </FadeInUpDiv>
@@ -121,7 +121,7 @@ export default function Components() {
             {showText2 ? (
               <FadeInUpDiv>
                 <div className="flex items-center justify-start space-x-[1px]">
-                  <p className="font-[900] text-red mb-0 popinsFont text-[40px]">
+                  <p className="font-[900] text-red mb-0 popinsFont text-[40px] sm:text-[63px]">
                     Our victory.
                   </p>
                 </div>

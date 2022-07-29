@@ -23,7 +23,7 @@ export default function Components() {
   return (
     <>
       <FadeInUpDiv>
-        <p className="font-bold robotoFlexFont  text-[13px]  md:text-[24px]">
+        <p className="font-bold robotoFlexFont  text-[13px] sm:text-[24px]  md:text-[24px]">
           Founders
         </p>
       </FadeInUpDiv>
