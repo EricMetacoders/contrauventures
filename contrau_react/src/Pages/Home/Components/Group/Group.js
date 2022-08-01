@@ -32,22 +32,7 @@ export default function Group() {
           className="pb-[84px] md:pb-0 lg:pb-0 xl:pb-[13px]  md:mt-[187px] mt-[10px]"
         >
           <div className="mx-[34px] md:mx-[117px] 2xl:mx-[300px] 2xl:pb-[65px]  pt-[108px]">
-            {/* desktop animation */}
-            <div className="xl:block hidden w-[1030px] h-[498px]">
-              {/* start animation */}
-              {offset > 100 ? <GroupTextAnimation /> : <></>}
-              {/* end animation */}
-            </div>
-
-            {/* tablet animation */}
-            <div className="hidden sm:block xl:hidden w-[1320px] h-[498px]">
-              {/* start animation */}
-              {offset > 100 ? <GroupTextAnimation /> : <></>}
-              {/* end animation */}
-            </div>
-
-            {/* mobile animation */}
-            <div className="sm:hidden block w-[292px] h-[474.5px]">
+            <div className=" w-[292px] h-[474.5px]  sm:w-[1320px] sm:h-[498px] xl:w-[1030px] xl:h-[498px]">
               {/* start animation */}
               {offset > 100 ? <GroupTextAnimation /> : <></>}
               {/* end animation */}
