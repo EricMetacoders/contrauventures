@@ -62,7 +62,7 @@ export default function Faq() {
                             <p className="popinsFont text-[18px] font-light  lg:text-[24px] italic text-red mb-[2px] ">
                               Q{i + 1}
                             </p>
-                            <p className="break-all text-[18px] md:text-[20px]  w-auto  lg:text-[25px]   popinsFont 2xl:text-[32px] sm:font-normal font-light  mb-0 mText">
+                            <p className=" text-[18px] md:text-[20px]  w-auto  lg:text-[25px]   popinsFont 2xl:text-[32px] sm:font-normal font-light  mb-0 mText">
                               {ques.acf.question}
                             </p>
                           </div>

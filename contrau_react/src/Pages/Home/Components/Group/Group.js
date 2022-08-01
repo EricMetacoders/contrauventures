@@ -1,11 +1,11 @@
-import React, { useEffect, useState, forwardRef } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import GroupTextAnimation from "./GroupTextAnimation";
 import { getPartnersList } from "../../../../reducers/homeSlice";
 import { PartnerLogo } from "./PartnerLogo/PartnerLogo";
 import { GroupCarouselAnimation, WrapperGroupCarousel } from "./GroupStyle";
 
-const Group = forwardRef((props, ref) => {
+export default function Group() {
   const dispatch = useDispatch();
 
   // get data from homeSlice
@@ -16,7 +16,6 @@ const Group = forwardRef((props, ref) => {
     dispatch(getPartnersList());
   }, []);
 
-  // Scroll to ref
   const [offset, setOffset] = useState(0);
   const handleScroll = () => setOffset(window.pageYOffset);
   useEffect(() => {
@@ -29,7 +28,6 @@ const Group = forwardRef((props, ref) => {
     <div>
       <div className="bg-partnersContactBg overflow-hidden ">
         <div
-          // ref={ref}
           id="aboutUs"
           className="pb-[84px] md:pb-0 lg:pb-0 xl:pb-[13px]  md:mt-[187px] mt-[10px]"
         >
@@ -1132,6 +1130,4 @@ const Group = forwardRef((props, ref) => {
       </div>
     </div>
   );
-});
-
-export default Group;
+}
