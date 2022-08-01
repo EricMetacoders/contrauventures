@@ -139,6 +139,7 @@
               line-height: 50px;
               color: #ffffff;
               text-align: center;
+              overflow-wrap: break-word;
               // margin: auto;
             }
           }
@@ -248,7 +249,7 @@
 
 // LANDSCAPE
 
-@media screen and (max-width: 768px) and (orientation: landscape) {
+@media screen and (max-width: 1279px) and (orientation: landscape) {
   .rootmainfounder {
     width: auto;
 
@@ -352,6 +353,8 @@
                 font-size: 24px;
                 line-height: 24px;
                 font-weight: 900;
+                overflow-wrap: break-word;
+                width: 120px;
               }
             }
             .detailfoundername::after {
@@ -482,10 +485,9 @@
 
             border-radius: 40px;
             background-color: transparent;
+            width: 100%;
+
             .detailfoundername {
-              flex: none;
-              order: 0;
-              flex-grow: 0;
               .titlename {
                 font-family: "Poppins", sans-serif;
                 font-style: normal;
@@ -494,6 +496,8 @@
                 font-size: 24px;
                 line-height: 24px;
                 font-weight: 900;
+                overflow-wrap: break-word;
+                width: 120px;
               }
             }
             .detailfoundername::after {
@@ -605,6 +609,8 @@
                 font-size: 24px;
                 line-height: 24px;
                 font-weight: 900;
+                overflow-wrap: break-word;
+                width: 120px;
               }
             }
             .detailfoundername::after {
@@ -715,6 +721,8 @@
                 font-size: 24px;
                 line-height: 24px;
                 font-weight: 900;
+                overflow-wrap: break-word;
+                width: 120px;
               }
             }
             .detailfoundername::after {
@@ -825,6 +833,7 @@
                 font-size: 24px;
                 line-height: 24px;
                 font-weight: 900;
+                overflow-wrap: break-word;
               }
             }
             .detailfoundername::after {

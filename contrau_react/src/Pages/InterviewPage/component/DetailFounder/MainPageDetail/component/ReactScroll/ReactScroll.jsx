@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from "react";
 
 import { Element, Events, Link } from "react-scroll";
 import { interviewServices } from "../../../../../../../services/interviewService";
-import ListImage from "./ListImage";
 
 function ReactScroll({ founderID }) {
   const [listGallery, setListGallery] = useState([{}]);
@@ -25,38 +24,7 @@ function ReactScroll({ founderID }) {
 
   const refCategory = useRef(null);
   // CHECK MOBILE OR PC TO CHANGE HIDE/SHOW CATEGORY YEAR
-  const onScroll = () => {
-    const position = window.pageYOffset;
-    const bottom =
-      Math.ceil(window.innerHeight + window.scrollY) >=
-      document.documentElement.scrollHeight;
-
-    if (!matchMobile) {
-      if (position >= 715) {
-        const myReference = refCategory.current;
-        myReference.style.display = "block";
-      } else if (position < 720) {
-        const myReference = refCategory.current;
-        myReference.style.display = "none";
-      }
-      if (bottom) {
-        const myReference = refCategory.current;
-        myReference.style.display = "none";
-      }
-    } else {
-      if (position >= 500) {
-        const myReference = refCategory.current;
-        myReference.style.display = "block";
-      } else if (position < 600) {
-        const myReference = refCategory.current;
-        myReference.style.display = "none";
-      }
-      if (bottom) {
-        const myReference = refCategory.current;
-        myReference.style.display = "none";
-      }
-    }
-  };
+  const onScroll = () => {};
 
   // USE EFFECT TO APPLY LIBRARY AND HIDE AND SHOW YEAR CATEGORY
   useEffect(() => {
@@ -135,7 +103,6 @@ function ReactScroll({ founderID }) {
     }
     fechData();
   }, []);
-
   const itemsRef = useRef([]);
   const itemsRefYear = useRef([]);
 
@@ -190,10 +157,12 @@ function ReactScroll({ founderID }) {
       document.documentElement.scrollHeight;
 
     if (bottom) {
+      const myReference = refCategory.current;
+      myReference.style.display = "none";
       // HIDE CATEGORY YEAR
       if (matchMobileTablet) {
-        const myReference = refCategory.current;
-        myReference.style.display = "none";
+        myReference.style.top = "-5%";
+
         // ADD COLOR LAST IMAGES YEAR
         var addColor =
           itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
@@ -214,7 +183,10 @@ function ReactScroll({ founderID }) {
         addColor4.style.filter = "grayscale(0%)";
       }
     } else {
+      const myReference = refCategory.current;
+      myReference.style.display = "block";
       if (matchMobileTablet) {
+        myReference.style.top = "8%";
         var noColor =
           itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
             .children[0].children[0];
@@ -310,7 +282,13 @@ function ReactScroll({ founderID }) {
         </div>
       </div>
       {/* LIST IMAGE */}
-      <div style={{ display: "flex", flexDirection: "column", rowGap: "20vw" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          rowGap: "20vw",
+        }}
+      >
         {Object.keys(listGallery).length > 1 &&
           listGallery?.map((item, index) => (
             <Element name={item.year} className="element" key={item.year}>
