@@ -31,10 +31,8 @@ export default function Faq() {
           accordion
           expandIcon={({ isActive }) =>
             isActive ? (
-              // <AiOutlineMinus size={30} color="#101010" />
               <MinusImage className="scale-75 2xl:scale-100" />
             ) : (
-              // <AiOutlinePlus size={30} color="#101010" />
               <PlusImage className="scale-75 2xl:scale-100" />
             )
           }
