@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from "react";
 
 import { Element, Events, Link } from "react-scroll";
 import { interviewServices } from "../../../../../../../services/interviewService";
-import ListImage from "./ListImage";
 
 function ReactScroll({ founderID }) {
   const [listGallery, setListGallery] = useState([{}]);
