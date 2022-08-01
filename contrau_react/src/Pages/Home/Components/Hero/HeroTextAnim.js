@@ -43,10 +43,10 @@ export default function Components() {
           <></>
         )}
 
-        <div className="hidden xl:block xl:mt-[75px] 2xl:mt-[89px]">
+        <div className=" mt-[50px]  xl:mt-[75px] 2xl:mt-[89px]">
           {showText3 ? (
             <FadeInUpDiv>
-              <p className="text-black mr-[91px leading-[20px]  xl:w-[670px] text-[13px]  xl:text-[20px] xl:font-[400] xl:leading-[32px] popinsFont">
+              <p className="text-black  xl:mr-[91px] leading-[20px]  xl:w-[670px] text-[13px]  xl:text-[20px] 2xl:font-[400] 2xl:leading-[32px] popinsFont">
                 The unyielding spirit, the youthful energy, and the thirst for
                 knowledge of Vietnamese founders amaze us completely.
                 <br />
@@ -59,7 +59,7 @@ export default function Components() {
           )}
         </div>
 
-        <div className="block xl:hidden mt-[50px]">
+        {/* <div className="block xl:hidden mt-[50px]">
           {showText3 ? (
             <FadeInUpDiv>
               <p className="text-black leading-[20px]  xl:mb-0 xl:w-[670px] text-[13px]  2xl:text-[20px] 2xl:font-[400] 2xl:leading-[32px] popinsFont">
@@ -73,7 +73,7 @@ export default function Components() {
           ) : (
             <></>
           )}
-        </div>
+        </div> */}
       </div>
     </>
   );
