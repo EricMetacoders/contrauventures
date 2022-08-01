@@ -98,7 +98,7 @@ function ReactScroll({ founderID }) {
       var array = [];
       Object.values(detailfoundergallery.data.acf.image).map((item, index) => {
         if (item.year != "") {
-          array.push(item);
+          // array.push(item);
         }
       });
 
@@ -188,6 +188,8 @@ function ReactScroll({ founderID }) {
 
     return frameImage[numberImage];
   };
+  console.log(listGallery);
+  console.log(Object.keys(listGallery).length);
 
   return (
     <div className="framemaingallery">
@@ -202,24 +204,23 @@ function ReactScroll({ founderID }) {
               : {}
           }
         >
-          {Object.keys(listGallery).length > 1 &&
-            listGallery?.map((item, index) => (
-              <div ref={(el) => (itemsRefYear.current[index] = el)}>
-                <Link
-                  className="yeartitle"
-                  to={item.year}
-                  key={item.year}
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  offset={matchMobile ? -250 : -150}
-                  onSetActive={handleSetActive}
-                  onSetInactive={handleSetInactive}
-                >
-                  <div className="titleyeardetail">{item.year}</div>
-                </Link>
-              </div>
-            ))}
+          {listGallery?.map((item, index) => (
+            <div ref={(el) => (itemsRefYear.current[index] = el)}>
+              <Link
+                className="yeartitle"
+                to={item.year}
+                key={item.year}
+                spy={true}
+                smooth={true}
+                duration={500}
+                offset={matchMobile ? -250 : -150}
+                onSetActive={handleSetActive}
+                onSetInactive={handleSetInactive}
+              >
+                <div className="titleyeardetail">{item.year}</div>
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
       {/* LIST IMAGE */}
@@ -230,80 +231,79 @@ function ReactScroll({ founderID }) {
           rowGap: "20vw",
         }}
       >
-        {Object.keys(listGallery).length > 1 &&
-          listGallery?.map((item, index) => (
-            <Element name={item.year} className="element" key={item.year}>
+        {listGallery?.map((item, index) => (
+          <Element name={item.year} className="element" key={item.year}>
+            <div
+              className="rootgallery"
+              // onScroll={() => onScroll2(index)}
+            >
               <div
-                className="rootgallery"
-                // onScroll={() => onScroll2(index)}
+                key={item.year}
+                className="carousel-gallery"
+                ref={(el) => (itemsRef.current[index] = el)}
               >
-                <div
-                  key={item.year}
-                  className="carousel-gallery"
-                  ref={(el) => (itemsRef.current[index] = el)}
-                >
-                  <div className={checkLength(item?.image?.length)}>
-                    <div className="frameimgtop">
-                      <div className="frameimg1">
-                        <img
-                          style={{ filter: "grayscale(100%)" }}
-                          // src={item?.image[1]?.guid}
-                          src={
-                            item.image && item.image.length > 0
-                              ? item?.image[0]?.guid
-                              : ""
-                          }
-                        />
-                      </div>
-                      <div className="frameimg2">
-                        <img
-                          style={{ filter: "grayscale(100%)" }}
-                          src={
-                            item.image && item.image.length > 0
-                              ? item.image[1]?.guid
-                              : ""
-                          }
-                        />
-                      </div>
+                <div className={checkLength(item?.image?.length)}>
+                  <div className="frameimgtop">
+                    <div className="frameimg1">
+                      <img
+                        style={{ filter: "grayscale(100%)" }}
+                        // src={item?.image[1]?.guid}
+                        src={
+                          item.image && item.image.length > 0
+                            ? item?.image[0]?.guid
+                            : ""
+                        }
+                      />
                     </div>
-                    <div className="frameimgbot">
-                      <div className="frameimg3">
-                        <img
-                          style={{ filter: "grayscale(100%)" }}
-                          src={
-                            item.image && item.image.length > 0
-                              ? item.image[2]?.guid
-                              : ""
-                          }
-                        />
-                      </div>
-                      <div className="frameimg4">
-                        <img
-                          style={{ filter: "grayscale(100%)" }}
-                          src={
-                            item.image && item.image.length > 0
-                              ? item.image[3]?.guid
-                              : ""
-                          }
-                        />
-                      </div>
+                    <div className="frameimg2">
+                      <img
+                        style={{ filter: "grayscale(100%)" }}
+                        src={
+                          item.image && item.image.length > 0
+                            ? item.image[1]?.guid
+                            : ""
+                        }
+                      />
                     </div>
                   </div>
-
-                  <div
-                    className="frametitleyear"
-                    style={
-                      checkLength(item?.image?.length) == "frameimgmain1"
-                        ? { top: "35%" }
-                        : {}
-                    }
-                  >
-                    <div className="titleyeardetail">{item.year}</div>
+                  <div className="frameimgbot">
+                    <div className="frameimg3">
+                      <img
+                        style={{ filter: "grayscale(100%)" }}
+                        src={
+                          item.image && item.image.length > 0
+                            ? item.image[2]?.guid
+                            : ""
+                        }
+                      />
+                    </div>
+                    <div className="frameimg4">
+                      <img
+                        style={{ filter: "grayscale(100%)" }}
+                        src={
+                          item.image && item.image.length > 0
+                            ? item.image[3]?.guid
+                            : ""
+                        }
+                      />
+                    </div>
                   </div>
                 </div>
+
+                <div
+                  className="frametitleyear"
+                  style={
+                    checkLength(item?.image?.length) == "frameimgmain1"
+                      ? { top: "35%" }
+                      : {}
+                  }
+                >
+                  <div className="titleyeardetail">{item.year}</div>
+                </div>
               </div>
-            </Element>
-          ))}
+            </div>
+          </Element>
+        ))}
       </div>
     </div>
   );

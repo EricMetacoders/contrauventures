@@ -41,7 +41,9 @@ function DetailFounder({ currentFounder }) {
   useEffect(() => {
     (async function () {
       const dataFounder = await getFounderData(founderId);
-      setDetailFounder2(dataFounder.data);
+      if (dataFounder) {
+        setDetailFounder2(dataFounder.data);
+      }
     })();
   }, []);
 
