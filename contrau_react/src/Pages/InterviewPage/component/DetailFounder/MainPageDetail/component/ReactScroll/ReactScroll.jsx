@@ -4,11 +4,9 @@ import React, { useEffect, useRef, useState } from "react";
 
 import { Element, Events, Link } from "react-scroll";
 import { interviewServices } from "../../../../../../../services/interviewService";
-import ListImage from "./ListImage";
 
 function ReactScroll({ founderID }) {
   const [listGallery, setListGallery] = useState([{}]);
-  const [keyGallery, setkeyGallery] = useState([{}]);
   const matchMobile = useMediaQuery("(max-width:639px)");
   const matchMobileTablet = useMediaQuery("(max-width:1279px)");
 
@@ -24,15 +22,10 @@ function ReactScroll({ founderID }) {
   }
 
   const refCategory = useRef(null);
-  // CHECK MOBILE OR PC TO CHANGE HIDE/SHOW CATEGORY YEAR
-  const onScroll = () => {};
 
   // USE EFFECT TO APPLY LIBRARY AND HIDE AND SHOW YEAR CATEGORY
   useEffect(() => {
-    Events.scrollEvent.register("begin", function () {
-      // Remove animation add color of user scroll roller
-      // window.removeEventListener("scroll", scrollHandler);
-    });
+    Events.scrollEvent.register("begin", function () {});
 
     Events.scrollEvent.register("end", function () {
       // Add again animation add color of user scroll roller
@@ -77,13 +70,12 @@ function ReactScroll({ founderID }) {
       }
     });
 
-    window.addEventListener("scroll", onScroll);
     return () => {
       Events.scrollEvent.remove("begin");
       Events.scrollEvent.remove("end");
-      window.removeEventListener("scroll", onScroll);
     };
   }, []);
+
   // GET DATA TO RENDER FIRST TIME
   useEffect(() => {
     // changeColor();
@@ -93,7 +85,6 @@ function ReactScroll({ founderID }) {
       let detailfoundergallery = await getGalleryFounderDetail(founderID);
 
       var array = [];
-
       Object.values(detailfoundergallery.data.acf.image).map((item, index) => {
         if (item.year != "") {
           array.push(item);
@@ -104,6 +95,7 @@ function ReactScroll({ founderID }) {
     }
     fechData();
   }, []);
+
   const itemsRef = useRef([]);
   const itemsRefYear = useRef([]);
 
