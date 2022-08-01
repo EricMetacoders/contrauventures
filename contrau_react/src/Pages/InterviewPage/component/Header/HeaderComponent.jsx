@@ -27,6 +27,8 @@ function HeaderComponent({ pagecurrent }) {
           document.getElementById("refHeader").style.backgroundColor =
             "rgba(0,0,0,0.5)";
         } else if (y < window.scrollY) {
+          // HIDE HEADER WHEN SCROLL DOWN
+
           document.getElementById("refHeader").style.display = "none";
         }
       }

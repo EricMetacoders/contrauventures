@@ -50,6 +50,7 @@ function ReactScroll({ founderID }) {
   useEffect(() => {
     Events.scrollEvent.register("begin", function () {});
 
+    // ACTIVE YEAR WHEN CLICK
     Events.scrollEvent.register("end", function () {
       // Add again animation add color of user scroll roller
 
@@ -70,6 +71,7 @@ function ReactScroll({ founderID }) {
       addColor3.style.filter = "grayscale(0%)";
       addColor4.style.filter = "grayscale(0%)";
 
+      // ACTIVE YEAR WHEN NOT CLICK
       for (var i = 0; i < itemsRef.current.length; i++) {
         if (
           arguments[0] !=
@@ -92,9 +94,7 @@ function ReactScroll({ founderID }) {
     // changeColor();
     async function fechData() {
       // FIND ID FROM LIST ALL GALLERY
-
       let detailfoundergallery = await getGalleryFounderDetail(founderID);
-
       var array = [];
       Object.values(detailfoundergallery.data.acf.image).map((item, index) => {
         if (item.year != "") {
@@ -114,6 +114,7 @@ function ReactScroll({ founderID }) {
     itemsRef.current = itemsRef.current.slice(0, listGallery.length);
   }, [listGallery]);
 
+  // ACTIVE YEAR WHEN SCROLLL
   const handleSetActive = (to) => {
     for (var i = 0; i < itemsRef.current.length; i++) {
       if (to == itemsRef.current[i].children[1].children[0].textContent) {
@@ -122,7 +123,7 @@ function ReactScroll({ founderID }) {
       }
     }
   };
-
+  // INACTIVE YEAR WHEN SCROLLL
   const handleSetInactive = (to) => {
     for (var i = 0; i < itemsRef.current.length; i++) {
       if (itemsRef.current[i].children[1].children[0].textContent !== "") {
