@@ -98,7 +98,7 @@ function ReactScroll({ founderID }) {
       var array = [];
       Object.values(detailfoundergallery.data.acf.image).map((item, index) => {
         if (item.year != "") {
-          // array.push(item);
+          array.push(item);
         }
       });
 
@@ -167,7 +167,6 @@ function ReactScroll({ founderID }) {
     window.addEventListener("scroll", handleScroll3, {
       passive: true,
     });
-
     return () => {
       window.removeEventListener("scroll", handleScroll3);
     };
