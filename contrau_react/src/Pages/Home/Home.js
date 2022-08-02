@@ -15,10 +15,6 @@ import Loading from "../../Components/Loading/Loading";
 export default function Home() {
   const loading = useSelector((state) => state.homeSlice.loading);
 
-  // Ref of scroll to Partners Component and About Us Component
-  const resultRef = useRef(null);
-  const partnersRef = useRef(null);
-
   // scroll to top
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
@@ -26,11 +22,11 @@ export default function Home() {
 
   return (
     <>
-      <Header resultRef={resultRef} partnersRef={partnersRef} />
+      <Header />
       <Hero />
-      <Group ref={partnersRef} />
+      <Group />
       <Founders />
-      <NewPortfolio ref={resultRef} />
+      <NewPortfolio />
       <ValueAdd />
       <Faq />
       {/* <News /> */}

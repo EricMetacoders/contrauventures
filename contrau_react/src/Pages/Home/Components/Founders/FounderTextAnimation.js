@@ -110,7 +110,7 @@ export default function Components() {
         )}
         {showText2 ? (
           <FadeInUpDiv>
-            <p className=" font-extrabold italic text-[40px] text-red">
+            <p className=" popinsFont   font-extrabold italic text-[40px] text-red">
               Founders
             </p>
           </FadeInUpDiv>
@@ -119,7 +119,7 @@ export default function Components() {
         )}
       </div>
 
-      <div className="popinsFont text-[13px] 2xl:text-[20px]  md:text-[13px] mt-[-16px] md:mt-0 lg:mt-0 xl:mt-[4%] 2xl:mt-[76px] pt-[67px]  xl:pt-0 mr-[30px] ">
+      <div className="popinsFont text-[13px] xl:text-[20px]   mt-[-16px] md:mt-0 lg:mt-0 xl:mt-[4%] 2xl:mt-[76px] pt-[67px]  xl:pt-0 mr-[30px] ">
         {showText3 ? (
           <FadeInUpDiv>
             <p className="mb-0">

@@ -9,7 +9,7 @@
     width: 10%;
     position: sticky;
     top: 50%;
-    transform: translateY(-50%);
+    // transform: translateY(-50%);
     z-index: 5;
     font-family: "Inter", sans-serif;
     font-style: normal;
@@ -24,13 +24,16 @@
       display: flex;
       flex-direction: column;
       row-gap: 20px;
+      color: #ffffff;
 
-      .yeartitle:hover {
+      .titleyeardetail:hover {
         cursor: pointer;
         text-decoration-line: underline;
         color: #ffffff;
+        opacity: 1;
       }
       .yeartitle {
+        color: #ffffff;
         opacity: 0.4;
       }
       .active {
@@ -38,7 +41,7 @@
         text-decoration-line: underline;
         font-feature-settings: "tnum" on, "lnum" on;
         color: #ffffff;
-        opacity: 1;
+        opacity: 1 !important;
       }
     }
   }
@@ -342,10 +345,22 @@
         flex-direction: row;
         column-gap: 25px;
 
-        .yeartitle:hover {
-          cursor: none;
+        .titleyeardetail:hover {
+          cursor: pointer;
           text-decoration-line: none;
           color: #ffffff;
+          opacity: 1;
+        }
+        .yeartitle {
+          color: #ffffff;
+          opacity: 0.4;
+        }
+        .active {
+          letter-spacing: 0.02em;
+          text-decoration-line: underline;
+          font-feature-settings: "tnum" on, "lnum" on;
+          color: #ffffff;
+          opacity: 1 !important;
         }
       }
     }
