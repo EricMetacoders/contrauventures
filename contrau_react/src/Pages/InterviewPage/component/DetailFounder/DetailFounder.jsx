@@ -9,21 +9,21 @@ DetailFounder.propTypes = {
   currentFounder: PropTypes.string,
 };
 
-async function getAPIDetailFounder(founderId) {
+// GET FOUNDER ID
+async function getFounderData(founderId) {
   try {
-    let detailFounder = await interviewServices.getInterviewHtmlByFounderId(
+    let detailFounder = await interviewServices.getFounderByFounderID(
       founderId
     );
-
     return detailFounder;
   } catch (error) {
     console.log("Failed to fetch", error);
   }
 }
-
-async function getFounderData(founderId) {
+// HAVE FOUNDER ID ==> GET INTERVIEW ID OF FOUNDER
+async function getAPIDetailFounder(founderId) {
   try {
-    let detailFounder = await interviewServices.getFounderByFounderID(
+    let detailFounder = await interviewServices.getInterviewHtmlByFounderId(
       founderId
     );
 

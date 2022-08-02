@@ -92,19 +92,18 @@ function ReactScroll({ founderID }) {
   // GET DATA TO RENDER FIRST TIME
   useEffect(() => {
     // changeColor();
-    async function fechData() {
+    (async function () {
       // FIND ID FROM LIST ALL GALLERY
       let detailfoundergallery = await getGalleryFounderDetail(founderID);
       var array = [];
       Object.values(detailfoundergallery.data.acf.image).map((item, index) => {
+        console.log(item);
         if (item.year != "") {
           array.push(item);
         }
       });
-
       setListGallery([...array]);
-    }
-    fechData();
+    })();
   }, []);
 
   const itemsRef = useRef([]);
@@ -187,8 +186,6 @@ function ReactScroll({ founderID }) {
 
     return frameImage[numberImage];
   };
-  console.log(listGallery);
-  console.log(Object.keys(listGallery).length);
 
   return (
     <div className="framemaingallery">
@@ -204,11 +201,14 @@ function ReactScroll({ founderID }) {
           }
         >
           {listGallery?.map((item, index) => (
-            <div ref={(el) => (itemsRefYear.current[index] = el)}>
+            <div
+              ref={(el) => (itemsRefYear.current[index] = el)}
+              key={item.year ? item.year : ""}
+            >
               <Link
                 className="yeartitle"
-                to={item.year}
-                key={item.year}
+                to={item.year ? item.year : ""}
+                // key={item.year}
                 spy={true}
                 smooth={true}
                 duration={500}
@@ -231,7 +231,11 @@ function ReactScroll({ founderID }) {
         }}
       >
         {listGallery?.map((item, index) => (
-          <Element name={item.year} className="element" key={item.year}>
+          <Element
+            name={item.year}
+            className="element"
+            key={item.year ? item.year : ""}
+          >
             <div
               className="rootgallery"
               // onScroll={() => onScroll2(index)}
