@@ -10,9 +10,9 @@ export default function Contact() {
             <div className="flex items-center">
               <p className="popinsFont italic text-[40px]  text-white lg:text-[60px] font-[900]">
                 Contact{" "}
-                <span className="absolute text-red popinsFont italic text-[40px] lg:text-[60px] font-[900]">
-                  .
-                </span>
+              </p>
+              <p className="text-red popinsFont italic text-[40px] lg:text-[60px] font-[900]">
+                .
               </p>
             </div>
             <div className="block">
