@@ -22,7 +22,10 @@ export default function Faq() {
       <div className="  pb-[10px] md:pb-[90px]">
         <div className="flex items-end justify-start">
           <p className="popinsFont italic text-[40px]  2xl:text-[60px] font-[900]">
-            FAQ <span className="absolute text-red">.</span>
+            FAQ
+          </p>
+          <p className="text-red popinsFont italic text-[40px]  2xl:text-[60px] font-[900]">
+            .
           </p>
         </div>
       </div>
@@ -56,7 +59,7 @@ export default function Faq() {
                     }}
                   >
                     <div className="border-t-[1px] md:pb-[50px] cursor-pointer ">
-                      <div className="mt-[10px] sm:mt-[20px] md:mt-[50px] xl:mt-[50px] 2xl:mx-[20px]">
+                      <div className="py-[30px] md:py-0  md:mt-[50px] xl:mt-[50px] 2xl:mx-[20px]">
                         <div className="flex items-center justify-between">
                           <div className="md:flex items-center  space-center justify-center md:space-x-5">
                             <p className="popinsFont text-[18px] font-light  lg:text-[24px] italic text-red mb-[2px] ">
