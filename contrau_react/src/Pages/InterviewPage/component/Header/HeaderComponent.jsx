@@ -18,15 +18,18 @@ function HeaderComponent({ pagecurrent }) {
     const window = e.currentTarget;
     if (document.getElementById("refHeader")) {
       if (window.scrollY < 15) {
+        // NO BACKGROUND HEADER WHEN FIRST LOAD
         document.getElementById("refHeader").style.display = "block";
         document.getElementById("refHeader").style.backgroundColor =
           "transparent ";
       } else {
         if (y > window.scrollY) {
+          // ADD BACKGROUND HEADER WHEN SCROLL UP
           document.getElementById("refHeader").style.display = "block";
           document.getElementById("refHeader").style.backgroundColor =
             "rgba(0,0,0,0.5)";
         } else if (y < window.scrollY) {
+          // HIDE HEADER WHEN SCROLL DOWN
           document.getElementById("refHeader").style.display = "none";
         }
       }
@@ -52,10 +55,7 @@ function HeaderComponent({ pagecurrent }) {
   const theme = useTheme();
 
   const matchMobile = useMediaQuery("(max-width:639px)");
-  let navigate = useNavigate();
-  const clickToScroll = () => {
-    navigate("/", { state: { id: 1, name: "test" } });
-  };
+
   //END RESPONSIVE
   return (
     <div>

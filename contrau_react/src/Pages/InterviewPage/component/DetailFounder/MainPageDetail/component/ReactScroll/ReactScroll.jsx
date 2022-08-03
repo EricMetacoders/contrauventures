@@ -23,6 +23,15 @@ function ReactScroll({ founderID }) {
 
   const refCategory = useRef(null);
 
+  // CONVERT GRAY SCALE
+  const convertGrayScale = (item, grayScale) => {
+    if (grayScale == 0) {
+      item.style.filter = "grayscale(0%)";
+    } else {
+      item.style.filter = "grayscale(100%)";
+    }
+  };
+
   // CHANGE GRAYSCALE WHEN ACTIVE/NOT ACTIVE
   const changeGrayScale = (index, grayScale) => {
     var addColor =
@@ -33,23 +42,17 @@ function ReactScroll({ founderID }) {
       itemsRef.current[index].children[0].children[1].children[0].children[0];
     var addColor4 =
       itemsRef.current[index].children[0].children[1].children[1].children[0];
-    if (grayScale == 0) {
-      addColor.style.filter = "grayscale(0%)";
-      addColor2.style.filter = "grayscale(0%)";
-      addColor3.style.filter = "grayscale(0%)";
-      addColor4.style.filter = "grayscale(0%)";
-    } else {
-      addColor.style.filter = "grayscale(100%)";
-      addColor2.style.filter = "grayscale(100%)";
-      addColor3.style.filter = "grayscale(100%)";
-      addColor4.style.filter = "grayscale(100%)";
-    }
+    convertGrayScale(addColor, grayScale);
+    convertGrayScale(addColor2, grayScale);
+    convertGrayScale(addColor3, grayScale);
+    convertGrayScale(addColor4, grayScale);
   };
 
   // USE EFFECT TO APPLY LIBRARY AND HIDE AND SHOW YEAR CATEGORY
   useEffect(() => {
     Events.scrollEvent.register("begin", function () {});
 
+    // ACTIVE YEAR WHEN CLICK
     Events.scrollEvent.register("end", function () {
       // Add again animation add color of user scroll roller
 
@@ -65,11 +68,12 @@ function ReactScroll({ founderID }) {
       var addColor4 =
         arguments[1].children[0].children[0].children[0].children[1].children[1]
           .children[0];
-      addColor.style.filter = "grayscale(0%)";
-      addColor2.style.filter = "grayscale(0%)";
-      addColor3.style.filter = "grayscale(0%)";
-      addColor4.style.filter = "grayscale(0%)";
+      convertGrayScale(addColor, 0);
+      convertGrayScale(addColor2, 0);
+      convertGrayScale(addColor3, 0);
+      convertGrayScale(addColor4, 0);
 
+      // ACTIVE YEAR WHEN NOT CLICK
       for (var i = 0; i < itemsRef.current.length; i++) {
         if (
           arguments[0] !=
@@ -90,21 +94,17 @@ function ReactScroll({ founderID }) {
   // GET DATA TO RENDER FIRST TIME
   useEffect(() => {
     // changeColor();
-    async function fechData() {
+    (async function () {
       // FIND ID FROM LIST ALL GALLERY
-
       let detailfoundergallery = await getGalleryFounderDetail(founderID);
-
       var array = [];
       Object.values(detailfoundergallery.data.acf.image).map((item, index) => {
         if (item.year != "") {
           array.push(item);
         }
       });
-
       setListGallery([...array]);
-    }
-    fechData();
+    })();
   }, []);
 
   const itemsRef = useRef([]);
@@ -114,6 +114,7 @@ function ReactScroll({ founderID }) {
     itemsRef.current = itemsRef.current.slice(0, listGallery.length);
   }, [listGallery]);
 
+  // ACTIVE YEAR WHEN SCROLLL
   const handleSetActive = (to) => {
     for (var i = 0; i < itemsRef.current.length; i++) {
       if (to == itemsRef.current[i].children[1].children[0].textContent) {
@@ -122,7 +123,7 @@ function ReactScroll({ founderID }) {
       }
     }
   };
-
+  // INACTIVE YEAR WHEN SCROLLL
   const handleSetInactive = (to) => {
     for (var i = 0; i < itemsRef.current.length; i++) {
       if (itemsRef.current[i].children[1].children[0].textContent !== "") {
@@ -135,23 +136,26 @@ function ReactScroll({ founderID }) {
   };
 
   // CHECK AT BOTTOM
-  const handleScroll3 = () => {
+  const handleScrollAtBottom = () => {
     const bottom =
       Math.ceil(window.innerHeight + window.scrollY) >=
       document.documentElement.scrollHeight;
 
     if (bottom) {
+      // HIDE CATEGORY YEAR IN PC
       const myReference = refCategory.current;
       myReference.style.display = "none";
-      // HIDE CATEGORY YEAR
+      // HIDE CATEGORY YEAR IN MOBILE
       if (matchMobileTablet) {
         myReference.style.top = "-5%";
         // ADD COLOR LAST IMAGES YEAR
         changeGrayScale(itemsRef.current.length - 1, 0);
       }
     } else {
+      // SHOW CATEGORY YEAR IN PIN
       const myReference = refCategory.current;
       myReference.style.display = "block";
+      // SHOW CATEGORY YEAR IN MOBILE
       if (matchMobileTablet) {
         myReference.style.top = "8%";
         // NO COLOR WHEN NOT LAST IMAGE YEAR
@@ -163,12 +167,11 @@ function ReactScroll({ founderID }) {
 
   // ADD SCROLL EVENT FOR CHECK BOTTOM
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll3, {
+    window.addEventListener("scroll", handleScrollAtBottom, {
       passive: true,
     });
-
     return () => {
-      window.removeEventListener("scroll", handleScroll3);
+      window.removeEventListener("scroll", handleScrollAtBottom);
     };
   }, []);
 
@@ -201,24 +204,26 @@ function ReactScroll({ founderID }) {
               : {}
           }
         >
-          {Object.keys(listGallery).length > 1 &&
-            listGallery?.map((item, index) => (
-              <div ref={(el) => (itemsRefYear.current[index] = el)}>
-                <Link
-                  className="yeartitle"
-                  to={item.year}
-                  key={item.year}
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  offset={matchMobile ? -250 : -150}
-                  onSetActive={handleSetActive}
-                  onSetInactive={handleSetInactive}
-                >
-                  <div className="titleyeardetail">{item.year}</div>
-                </Link>
-              </div>
-            ))}
+          {listGallery?.map((item, index) => (
+            <div
+              ref={(el) => (itemsRefYear.current[index] = el)}
+              key={item.year ? item.year : ""}
+            >
+              <Link
+                className="yeartitle"
+                to={item.year ? item.year : ""}
+                // key={item.year}
+                spy={true}
+                smooth={true}
+                duration={500}
+                offset={matchMobile ? -250 : -150}
+                onSetActive={handleSetActive}
+                onSetInactive={handleSetInactive}
+              >
+                <div className="titleyeardetail">{item.year}</div>
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
       {/* LIST IMAGE */}
@@ -229,80 +234,83 @@ function ReactScroll({ founderID }) {
           rowGap: "20vw",
         }}
       >
-        {Object.keys(listGallery).length > 1 &&
-          listGallery?.map((item, index) => (
-            <Element name={item.year} className="element" key={item.year}>
+        {listGallery?.map((item, index) => (
+          <Element
+            name={item.year}
+            className="element"
+            key={item.year ? item.year : ""}
+          >
+            <div
+              className="rootgallery"
+              // onScroll={() => onScroll2(index)}
+            >
               <div
-                className="rootgallery"
-                // onScroll={() => onScroll2(index)}
+                key={item.year}
+                className="carousel-gallery"
+                ref={(el) => (itemsRef.current[index] = el)}
               >
-                <div
-                  key={item.year}
-                  className="carousel-gallery"
-                  ref={(el) => (itemsRef.current[index] = el)}
-                >
-                  <div className={checkLength(item?.image?.length)}>
-                    <div className="frameimgtop">
-                      <div className="frameimg1">
-                        <img
-                          style={{ filter: "grayscale(100%)" }}
-                          // src={item?.image[1]?.guid}
-                          src={
-                            item.image && item.image.length > 0
-                              ? item?.image[0]?.guid
-                              : ""
-                          }
-                        />
-                      </div>
-                      <div className="frameimg2">
-                        <img
-                          style={{ filter: "grayscale(100%)" }}
-                          src={
-                            item.image && item.image.length > 0
-                              ? item.image[1]?.guid
-                              : ""
-                          }
-                        />
-                      </div>
+                <div className={checkLength(item?.image?.length)}>
+                  <div className="frameimgtop">
+                    <div className="frameimg1">
+                      <img
+                        style={{ filter: "grayscale(100%)" }}
+                        // src={item?.image[1]?.guid}
+                        src={
+                          item.image && item.image.length > 0
+                            ? item?.image[0]?.guid
+                            : ""
+                        }
+                      />
                     </div>
-                    <div className="frameimgbot">
-                      <div className="frameimg3">
-                        <img
-                          style={{ filter: "grayscale(100%)" }}
-                          src={
-                            item.image && item.image.length > 0
-                              ? item.image[2]?.guid
-                              : ""
-                          }
-                        />
-                      </div>
-                      <div className="frameimg4">
-                        <img
-                          style={{ filter: "grayscale(100%)" }}
-                          src={
-                            item.image && item.image.length > 0
-                              ? item.image[3]?.guid
-                              : ""
-                          }
-                        />
-                      </div>
+                    <div className="frameimg2">
+                      <img
+                        style={{ filter: "grayscale(100%)" }}
+                        src={
+                          item.image && item.image.length > 0
+                            ? item.image[1]?.guid
+                            : ""
+                        }
+                      />
                     </div>
                   </div>
-
-                  <div
-                    className="frametitleyear"
-                    style={
-                      checkLength(item?.image?.length) == "frameimgmain1"
-                        ? { top: "35%" }
-                        : {}
-                    }
-                  >
-                    <div className="titleyeardetail">{item.year}</div>
+                  <div className="frameimgbot">
+                    <div className="frameimg3">
+                      <img
+                        style={{ filter: "grayscale(100%)" }}
+                        src={
+                          item.image && item.image.length > 0
+                            ? item.image[2]?.guid
+                            : ""
+                        }
+                      />
+                    </div>
+                    <div className="frameimg4">
+                      <img
+                        style={{ filter: "grayscale(100%)" }}
+                        src={
+                          item.image && item.image.length > 0
+                            ? item.image[3]?.guid
+                            : ""
+                        }
+                      />
+                    </div>
                   </div>
                 </div>
+
+                <div
+                  className="frametitleyear"
+                  style={
+                    checkLength(item?.image?.length) == "frameimgmain1"
+                      ? { top: "35%" }
+                      : {}
+                  }
+                >
+                  <div className="titleyeardetail">{item.year}</div>
+                </div>
               </div>
-            </Element>
-          ))}
+            </div>
+          </Element>
+        ))}
       </div>
     </div>
   );
