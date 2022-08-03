@@ -19,6 +19,7 @@ function MainFounder(props) {
 
   const [listFounder2, setListFounder2] = useState([]);
 
+  // GET LIST FOUNDER FROM API
   async function getListFounder() {
     try {
       let listFounder = await interviewServices.getListFounder();
@@ -80,14 +81,14 @@ function MainFounder(props) {
     }
   };
 
-  async function getIdFounderFromAPI() {
-    try {
-      let listFounderInteview = await interviewServices.getFounderIDByName();
-      return listFounderInteview;
-    } catch (error) {
-      console.log("Failed to fetch", error);
-    }
-  }
+  // async function getIdFounderFromAPI() {
+  //   try {
+  //     let listFounderInteview = await interviewServices.getFounderIDByName();
+  //     return listFounderInteview;
+  //   } catch (error) {
+  //     console.log("Failed to fetch", error);
+  //   }
+  // }
 
   // const founderList = useSelector((state) => state.interviewSlice.listFounder);
   // console.log("founderList:", founderList);

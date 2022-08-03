@@ -1,11 +1,11 @@
-import React, { useEffect, useState, forwardRef } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import GroupTextAnimation from "./GroupTextAnimation";
 import { getPartnersList } from "../../../../reducers/homeSlice";
 import { PartnerLogo } from "./PartnerLogo/PartnerLogo";
 import { GroupCarouselAnimation, WrapperGroupCarousel } from "./GroupStyle";
 
-const Group = forwardRef((props, ref) => {
+export default function Group() {
   const dispatch = useDispatch();
 
   // get data from homeSlice
@@ -16,7 +16,6 @@ const Group = forwardRef((props, ref) => {
     dispatch(getPartnersList());
   }, []);
 
-  // Scroll to ref
   const [offset, setOffset] = useState(0);
   const handleScroll = () => setOffset(window.pageYOffset);
   useEffect(() => {
@@ -29,27 +28,11 @@ const Group = forwardRef((props, ref) => {
     <div>
       <div className="bg-partnersContactBg overflow-hidden ">
         <div
-          // ref={ref}
           id="aboutUs"
           className="pb-[84px] md:pb-0 lg:pb-0 xl:pb-[13px]  md:mt-[187px] mt-[10px]"
         >
           <div className="mx-[34px] md:mx-[117px] 2xl:mx-[300px] 2xl:pb-[65px]  pt-[108px]">
-            {/* desktop animation */}
-            <div className="xl:block hidden w-[1030px] h-[498px]">
-              {/* start animation */}
-              {offset > 100 ? <GroupTextAnimation /> : <></>}
-              {/* end animation */}
-            </div>
-
-            {/* tablet animation */}
-            <div className="hidden sm:block xl:hidden w-[1320px] h-[498px]">
-              {/* start animation */}
-              {offset > 100 ? <GroupTextAnimation /> : <></>}
-              {/* end animation */}
-            </div>
-
-            {/* mobile animation */}
-            <div className="sm:hidden block w-[292px] h-[474.5px]">
+            <div className=" w-[292px] h-[474.5px]  sm:w-[1320px] sm:h-[498px] xl:w-[1030px] xl:h-[498px]">
               {/* start animation */}
               {offset > 100 ? <GroupTextAnimation /> : <></>}
               {/* end animation */}
@@ -1132,6 +1115,4 @@ const Group = forwardRef((props, ref) => {
       </div>
     </div>
   );
-});
-
-export default Group;
+}

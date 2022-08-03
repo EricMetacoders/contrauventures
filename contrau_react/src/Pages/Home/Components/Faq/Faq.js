@@ -22,7 +22,10 @@ export default function Faq() {
       <div className="  pb-[10px] md:pb-[90px]">
         <div className="flex items-end justify-start">
           <p className="popinsFont italic text-[40px]  2xl:text-[60px] font-[900]">
-            FAQ <span className="text-red">.</span>
+            FAQ
+          </p>
+          <p className="text-red popinsFont italic text-[40px]  2xl:text-[60px] font-[900]">
+            .
           </p>
         </div>
       </div>
@@ -31,10 +34,8 @@ export default function Faq() {
           accordion
           expandIcon={({ isActive }) =>
             isActive ? (
-              // <AiOutlineMinus size={30} color="#101010" />
               <MinusImage className="scale-75 2xl:scale-100" />
             ) : (
-              // <AiOutlinePlus size={30} color="#101010" />
               <PlusImage className="scale-75 2xl:scale-100" />
             )
           }
@@ -58,13 +59,13 @@ export default function Faq() {
                     }}
                   >
                     <div className="border-t-[1px] md:pb-[50px] cursor-pointer ">
-                      <div className="mt-[10px] sm:mt-[20px] md:mt-[50px] xl:mt-[50px] 2xl:mx-[20px]">
+                      <div className="py-[30px] md:py-0  md:mt-[50px] xl:mt-[50px] 2xl:mx-[20px]">
                         <div className="flex items-center justify-between">
                           <div className="md:flex items-center  space-center justify-center md:space-x-5">
                             <p className="popinsFont text-[18px] font-light  lg:text-[24px] italic text-red mb-[2px] ">
                               Q{i + 1}
                             </p>
-                            <p className="break-all text-[18px] md:text-[20px]  w-auto  lg:text-[25px]   popinsFont 2xl:text-[32px] sm:font-normal font-light  mb-0 mText">
+                            <p className=" text-[18px] md:text-[20px]  w-auto  xl:text-[25px]   popinsFont 2xl:text-[32px] sm:font-normal font-light  mb-0 mText">
                               {ques.acf.question}
                             </p>
                           </div>
@@ -75,14 +76,14 @@ export default function Faq() {
                 }
                 key={i + 1}
               >
-                <div className="ml-[-3px] md:mt-[40px] mr-[47px] pb-[40px] md:mx-[50px] ">
-                  <p className="break-all md:mt-[-21px] mt-[21px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
+                <div className="ml-[-3px] md:mt-[40px]  pb-[40px] md:mx-[50px] ">
+                  <p className="break-words md:mt-[-21px] mt-[21px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
                     {ques.acf.answer_part_1}
                   </p>
-                  <p className="break-all mt-[20px] md:mt-[42px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
+                  <p className="break-words mt-[20px] md:mt-[42px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
                     {ques.acf.answer_part_2}
                   </p>
-                  <p className="break-all mt-[20px] md:mt-[42px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
+                  <p className="break-words mt-[20px] md:mt-[42px] text-[13px] md:text-[20px] popinsFont font-light 2xl:font-normal">
                     {ques.acf.answer_part_3}
                   </p>
                 </div>

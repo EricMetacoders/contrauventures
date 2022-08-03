@@ -24,6 +24,7 @@ function ListFounder({ listDataFounder }) {
   const matchMobile = useMediaQuery("(max-width:1279px)");
   const history = useNavigate();
 
+  // CLICK TO DIRECT DETAIL FOUNDER
   const clickDetailFounder = async (item) => {
     // const founderId = item.acf.interview[0];
     const founderId = item.id;
@@ -47,9 +48,7 @@ function ListFounder({ listDataFounder }) {
       >
         <Grid
           container
-          // columns={{ xs: 12, sm: 2, md: 12, lg: 12, xl: 12 }}
           columns={{ xss: 1, xs: 1, sm: 1, md: 5, lg: 12, xl: 4 }}
-          // className={styles.gridItem}
           sx={{
             columnGap: [
               "15px", //0
@@ -87,8 +86,7 @@ function ListFounder({ listDataFounder }) {
                   }}
                 >
                   <img
-                    // src={matchMobile ? item.acf.thumbnail : item.acf.image}
-                    src={matchMobile ? item.acf.image : item.acf.image}
+                    src={item.acf.image}
                     alt=""
                     className="imgfounder"
                     onClick={() => {
