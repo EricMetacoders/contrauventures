@@ -111,7 +111,7 @@ export default function Components() {
         {showText2 ? (
           <FadeInUpDiv>
             <p className=" popinsFont   font-extrabold italic text-[40px] text-red">
-              Founders
+              Founders.
             </p>
           </FadeInUpDiv>
         ) : (
