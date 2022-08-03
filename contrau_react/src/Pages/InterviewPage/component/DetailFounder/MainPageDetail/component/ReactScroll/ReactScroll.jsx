@@ -99,7 +99,6 @@ function ReactScroll({ founderID }) {
       let detailfoundergallery = await getGalleryFounderDetail(founderID);
       var array = [];
       Object.values(detailfoundergallery.data.acf.image).map((item, index) => {
-        console.log(item);
         if (item.year != "") {
           array.push(item);
         }
@@ -137,23 +136,26 @@ function ReactScroll({ founderID }) {
   };
 
   // CHECK AT BOTTOM
-  const handleScroll3 = () => {
+  const handleScrollAtBottom = () => {
     const bottom =
       Math.ceil(window.innerHeight + window.scrollY) >=
       document.documentElement.scrollHeight;
 
     if (bottom) {
+      // HIDE CATEGORY YEAR IN PC
       const myReference = refCategory.current;
       myReference.style.display = "none";
-      // HIDE CATEGORY YEAR
+      // HIDE CATEGORY YEAR IN MOBILE
       if (matchMobileTablet) {
         myReference.style.top = "-5%";
         // ADD COLOR LAST IMAGES YEAR
         changeGrayScale(itemsRef.current.length - 1, 0);
       }
     } else {
+      // SHOW CATEGORY YEAR IN PIN
       const myReference = refCategory.current;
       myReference.style.display = "block";
+      // SHOW CATEGORY YEAR IN MOBILE
       if (matchMobileTablet) {
         myReference.style.top = "8%";
         // NO COLOR WHEN NOT LAST IMAGE YEAR
@@ -165,11 +167,11 @@ function ReactScroll({ founderID }) {
 
   // ADD SCROLL EVENT FOR CHECK BOTTOM
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll3, {
+    window.addEventListener("scroll", handleScrollAtBottom, {
       passive: true,
     });
     return () => {
-      window.removeEventListener("scroll", handleScroll3);
+      window.removeEventListener("scroll", handleScrollAtBottom);
     };
   }, []);
 
