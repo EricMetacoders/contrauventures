@@ -2,8 +2,8 @@ import React, { Component, useEffect } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import FounderImageCarousel from "./FounderImageCarousel";
-import MobileImageCarousel from "./MobileImgCarousel";
+import FounderImageCarousel from "../FounderImage/FounderImageCarousel";
+import MobileImageCarousel from "../FounderImage/MobileImgCarousel";
 import { useSelector } from "react-redux";
 
 import "./divImageSize.scss";

@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import FounderTextAnimation from "./FounderTextAnimation";
 import { getFounderList } from "../../../../reducers/homeSlice";
 import FounderCarousel from "./Carousel/FounderCarousel";
-import "./Carousel/founderImageCarousel.scss";
+import "./FounderImage/founderImageCarousel.scss";
 import TabletCarousel from "./Carousel/TabletCarousel";
 import SmallTabletCarousel from "./Carousel/SmallTabletCarousel";
 import MobileCarousel from "./Carousel/MobileCarousel";
@@ -35,13 +35,6 @@ export default function Founders() {
               {/* start animation */}
               {offset > 2300 ? <FounderTextAnimation /> : <></>}
             </div>
-            {/* end animation */}
-
-            {/* tablet animation */}
-            {/* <div className="hidden sm:block xl:hidden   xl:w-[1119px] 2xl:w-[1127px] h-[442px]"> */}
-            {/* start animation */}
-            {/* {offset > 2300 ? <FounderTextAnimation /> : <></>} */}
-            {/* </div> */}
             {/* end animation */}
 
             {/* mobile animation */}
