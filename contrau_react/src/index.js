@@ -13,13 +13,13 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 const store = configureStore({
   reducer: {
     homeSlice,
-    interviewSlice
+    interviewSlice,
   },
   middleware: [thunk],
 });
 
 root.render(
-  <Provider store={store} r>
+  <Provider store={store}>
     <App />
   </Provider>
 );

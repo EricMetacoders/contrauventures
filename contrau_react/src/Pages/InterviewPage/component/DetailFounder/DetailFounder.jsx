@@ -5,10 +5,23 @@ import FooterComponent from "../Footer/Footer";
 import { useParams } from "react-router-dom";
 import { interviewServices } from "../../../../services/interviewService.js";
 import HeaderFounder from "./MainPageDetail/component/HeaderFounder/HeaderFounder";
+import NotFound from "../../../NotFound/NotFound";
 DetailFounder.propTypes = {
   currentFounder: PropTypes.string,
 };
 
+// GET FOUNDER ID
+async function getFounderData(founderId) {
+  try {
+    let detailFounder = await interviewServices.getFounderByFounderID(
+      founderId
+    );
+    return detailFounder;
+  } catch (error) {
+    console.log("Failed to fetch", error);
+  }
+}
+// HAVE FOUNDER ID ==> GET INTERVIEW ID OF FOUNDER
 async function getAPIDetailFounder(founderId) {
   try {
     let detailFounder = await interviewServices.getInterviewHtmlByFounderId(
@@ -21,38 +34,31 @@ async function getAPIDetailFounder(founderId) {
   }
 }
 
-async function getFounderData(founderId) {
-  try {
-    let detailFounder = await interviewServices.getFounderByFounderID(
-      founderId
-    );
-
-    return detailFounder;
-  } catch (error) {
-    console.log("Failed to fetch", error);
-  }
-}
-
 function DetailFounder({ currentFounder }) {
   var { founderId } = useParams();
 
-  const [detailFounder, setDetailFounder] = useState({});
+  const [detailInterviewFounder, setDetailInterviewFounder] = useState({});
   const [detailFounder2, setDetailFounder2] = useState([]);
   useEffect(() => {
     (async function () {
       const dataFounder = await getFounderData(founderId);
-      setDetailFounder2(dataFounder.data);
+      if (dataFounder.data.acf.length == 0) {
+        setDetailFounder2(null);
+      } else {
+        setDetailFounder2(dataFounder.data);
+      }
     })();
   }, []);
 
   useEffect(() => {
-    // GET ID FOR HEADER
+    // GET ID INTERVIEW FROM DETAIL FOUNDER
     (async function () {
       if (Object.values(detailFounder2).length > 0) {
         const interviewHtmlGetByFounderId = await getAPIDetailFounder(
           detailFounder2?.acf?.interview[0]
         );
-        setDetailFounder(interviewHtmlGetByFounderId.data);
+
+        setDetailInterviewFounder(interviewHtmlGetByFounderId.data);
       }
     })();
     window.scrollTo(0, 0);
@@ -60,16 +66,22 @@ function DetailFounder({ currentFounder }) {
 
   return (
     <div>
-      <HeaderFounder detailFounder={detailFounder} />
-      <MainPageDetail
-        detailArticle={detailFounder}
-        founderID={
-          Object.values(detailFounder2).length > 0
-            ? detailFounder2?.acf?.gallery[0]
-            : ""
-        }
-      />
-      <FooterComponent />
+      {detailFounder2 ? (
+        <>
+          <HeaderFounder detailFounder={detailInterviewFounder} />
+          <MainPageDetail
+            detailArticle={detailInterviewFounder}
+            founderID={
+              Object.values(detailFounder2).length > 0
+                ? detailFounder2?.acf?.gallery[0]
+                : ""
+            }
+          />
+          <FooterComponent />
+        </>
+      ) : (
+        <NotFound />
+      )}
     </div>
   );
 }

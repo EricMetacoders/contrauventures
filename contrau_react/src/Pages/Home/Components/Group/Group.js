@@ -44,91 +44,32 @@ export default function Group() {
         {/* desktop */}
         <WrapperGroupCarousel className="hidden xl:block mt-[64px]">
           <GroupCarouselAnimation>
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 1")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 1")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 1")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 1")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 1")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
+            {
+              (() => {
+                let partnerLogos = [];
+                for (let i = 1; i <= 5; i++) {
+                  const logo = partners
+                    ?.filter((partner) => partner?.acf?.category === "partner 1")
+                    .map((partner, i) => {
+                      return (
+                        <PartnerLogo
+                          {...{
+                            logoUrl: partner?.acf?.image || "",
+                            logoName: partner?.acf?.name || "",
+                            wrapperWidth: "173px",
+                            wrapperHeight: "173px",
+                            paddingLeft: "90px",
+                            linkWebsite: partner?.acf?.linkWebsite,
+                          }}
+                          key={i}
+                        />
+                      );
+                    });
+                  partnerLogos.push(logo);
+                }
+                return partnerLogos;
+              })()
+            }
           </GroupCarouselAnimation>
         </WrapperGroupCarousel>
         <WrapperGroupCarousel className="overflow-hidden hidden xl:block mt-[50px]">
@@ -136,248 +77,62 @@ export default function Group() {
             rightToLeft={true}
             className="flex relative h-[173px]"
           >
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 2")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 2")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 2")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 2")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 2")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 2")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
+            {
+              (() => {
+                let partnerLogos = [];
+                for (let i = 1; i <= 6; i++) {
+                  const logo = partners
+                    ?.filter((partner) => partner?.acf?.category === "partner 2")
+                    .map((partner, i) => {
+                      return (
+                        <PartnerLogo
+                          {...{
+                            logoUrl: partner?.acf?.image || "",
+                            logoName: partner?.acf?.name || "",
+                            wrapperWidth: "173px",
+                            wrapperHeight: "173px",
+                            paddingLeft: "90px",
+                            linkWebsite: partner?.acf?.linkWebsite,
+                          }}
+                          key={i}
+                        />
+                      );
+                    });
+                  partnerLogos.push(logo);
+                }
+                return partnerLogos;
+              })()
+            }
           </GroupCarouselAnimation>
         </WrapperGroupCarousel>
         <WrapperGroupCarousel className="overflow-hidden hidden xl:block mt-[50px] mb-[323px]">
           <GroupCarouselAnimation className="flex relative h-[173px]">
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 3")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 3")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 3")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 3")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 3")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 3")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 3")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 3")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
+          {
+              (() => {
+                let partnerLogos = [];
+                for (let i = 1; i <= 8; i++) {
+                  const logo = partners
+                    ?.filter((partner) => partner?.acf?.category === "partner 3")
+                    .map((partner, i) => {
+                      return (
+                        <PartnerLogo
+                          {...{
+                            logoUrl: partner?.acf?.image || "",
+                            logoName: partner?.acf?.name || "",
+                            wrapperWidth: "173px",
+                            wrapperHeight: "173px",
+                            paddingLeft: "90px",
+                            linkWebsite: partner?.acf?.linkWebsite,
+                          }}
+                          key={i}
+                        />
+                      );
+                    });
+                  partnerLogos.push(logo);
+                }
+                return partnerLogos;
+              })()
+            }
           </GroupCarouselAnimation>
 
           <div className="flex items-cener justify-center mt-[76px] mb-[76px]">
@@ -390,108 +145,32 @@ export default function Group() {
         {/* tablet */}
         <WrapperGroupCarousel className="overflow-hidden hidden sm:block xl:hidden">
           <GroupCarouselAnimation className="flex relative h-[173px]">
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 1")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 1")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 1")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 1")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 1")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 1")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
+            {
+              (() => {
+                let partnerLogos = [];
+                for (let i = 1; i <= 6; i++) {
+                  const logo = partners
+                    ?.filter((partner) => partner?.acf?.category === "partner 1")
+                    .map((partner, i) => {
+                      return (
+                        <PartnerLogo
+                          {...{
+                            logoUrl: partner?.acf?.image || "",
+                            logoName: partner?.acf?.name || "",
+                            wrapperWidth: "173px",
+                            wrapperHeight: "173px",
+                            paddingLeft: "90px",
+                            linkWebsite: partner?.acf?.linkWebsite,
+                          }}
+                          key={i}
+                        />
+                      );
+                    });
+                  partnerLogos.push(logo);
+                }
+                return partnerLogos;
+              })()
+            }
           </GroupCarouselAnimation>
         </WrapperGroupCarousel>
         <WrapperGroupCarousel className="overflow-hidden hidden sm:block xl:hidden mt-[50px]">
@@ -499,248 +178,62 @@ export default function Group() {
             rightToLeft={true}
             className="flex relative h-[173px]"
           >
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 2")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 2")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 2")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 2")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 2")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 2")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "90px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
+            {
+              (() => {
+                let partnerLogos = [];
+                for (let i = 1; i <= 6; i++) {
+                  const logo = partners
+                    ?.filter((partner) => partner?.acf?.category === "partner 2")
+                    .map((partner, i) => {
+                      return (
+                        <PartnerLogo
+                          {...{
+                            logoUrl: partner?.acf?.image || "",
+                            logoName: partner?.acf?.name || "",
+                            wrapperWidth: "173px",
+                            wrapperHeight: "173px",
+                            paddingLeft: "90px",
+                            linkWebsite: partner?.acf?.linkWebsite,
+                          }}
+                          key={i}
+                        />
+                      );
+                    });
+                  partnerLogos.push(logo);
+                }
+                return partnerLogos;
+              })()
+            }
           </GroupCarouselAnimation>
         </WrapperGroupCarousel>
         <WrapperGroupCarousel className="overflow-hidden hidden sm:block xl:hidden mt-[50px] mb-[323px]">
           <GroupCarouselAnimation className="flex relative h-[173px]">
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 3")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 3")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 3")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 3")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 3")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 3")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 3")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 3")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "173px",
-                      wrapperHeight: "173px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
+            {
+              (() => {
+                let partnerLogos = [];
+                for (let i = 1; i <= 8; i++) {
+                  const logo = partners
+                    ?.filter((partner) => partner?.acf?.category === "partner 3")
+                    .map((partner, i) => {
+                      return (
+                        <PartnerLogo
+                          {...{
+                            logoUrl: partner?.acf?.image || "",
+                            logoName: partner?.acf?.name || "",
+                            wrapperWidth: "173px",
+                            wrapperHeight: "173px",
+                            paddingLeft: "90px",
+                            linkWebsite: partner?.acf?.linkWebsite,
+                          }}
+                          key={i}
+                        />
+                      );
+                    });
+                  partnerLogos.push(logo);
+                }
+                return partnerLogos;
+              })()
+            }
           </GroupCarouselAnimation>
 
           {/* <div className="flex items-cener justify-center mt-[76px] mb-[76px]">
@@ -753,108 +246,32 @@ export default function Group() {
         {/* mobile */}
         <WrapperGroupCarousel className="overflow-hidden block sm:hidden">
           <GroupCarouselAnimation className="flex relative h-[80px]">
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 1")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "80px",
-                      wrapperHeight: "80px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 1")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "80px",
-                      wrapperHeight: "80px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 1")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "80px",
-                      wrapperHeight: "80px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 1")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "80px",
-                      wrapperHeight: "80px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 1")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "80px",
-                      wrapperHeight: "80px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 1")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "80px",
-                      wrapperHeight: "80px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
+            {
+              (() => {
+                let partnerLogos = [];
+                for (let i = 1; i <= 6; i++) {
+                  const logo = partners
+                    ?.filter((partner) => partner?.acf?.category === "partner 1")
+                    .map((partner, i) => {
+                      return (
+                        <PartnerLogo
+                          {...{
+                            logoUrl: partner?.acf?.image || "",
+                            logoName: partner?.acf?.name || "",
+                            wrapperWidth: "80px",
+                            wrapperHeight: "80px",
+                            paddingLeft: "20px",
+                            linkWebsite: partner?.acf?.linkWebsite,
+                          }}
+                          key={i}
+                        />
+                      );
+                    });
+                  partnerLogos.push(logo);
+                }
+                return partnerLogos;
+              })()
+            }
           </GroupCarouselAnimation>
         </WrapperGroupCarousel>
         <WrapperGroupCarousel className="overflow-hidden block sm:hidden mt-[25px]">
@@ -862,248 +279,62 @@ export default function Group() {
             rightToLeft={true}
             className="flex relative h-[80px]"
           >
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 2")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "80px",
-                      wrapperHeight: "80px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 2")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "80px",
-                      wrapperHeight: "80px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 2")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "80px",
-                      wrapperHeight: "80px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 2")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "80px",
-                      wrapperHeight: "80px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 2")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "80px",
-                      wrapperHeight: "80px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 2")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "80px",
-                      wrapperHeight: "80px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
+            {
+              (() => {
+                let partnerLogos = [];
+                for (let i = 1; i <= 6; i++) {
+                  const logo = partners
+                    ?.filter((partner) => partner?.acf?.category === "partner 2")
+                    .map((partner, i) => {
+                      return (
+                        <PartnerLogo
+                          {...{
+                            logoUrl: partner?.acf?.image || "",
+                            logoName: partner?.acf?.name || "",
+                            wrapperWidth: "80px",
+                            wrapperHeight: "80px",
+                            paddingLeft: "20px",
+                            linkWebsite: partner?.acf?.linkWebsite,
+                          }}
+                          key={i}
+                        />
+                      );
+                    });
+                  partnerLogos.push(logo);
+                }
+                return partnerLogos;
+              })()
+            }
           </GroupCarouselAnimation>
         </WrapperGroupCarousel>
         <WrapperGroupCarousel className="overflow-hidden block sm:hidden mt-[25px] mb-[123px]">
           <GroupCarouselAnimation className="flex relative h-[80px]">
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 3")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "80px",
-                      wrapperHeight: "80px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 3")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "80px",
-                      wrapperHeight: "80px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 3")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "80px",
-                      wrapperHeight: "80px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 3")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "80px",
-                      wrapperHeight: "80px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 3")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "80px",
-                      wrapperHeight: "80px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 3")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "80px",
-                      wrapperHeight: "80px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 3")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "80px",
-                      wrapperHeight: "80px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
-            {partners
-              ?.filter((partner) => partner?.acf?.category === "partner 3")
-              .map((partner, i) => {
-                return (
-                  <PartnerLogo
-                    {...{
-                      logoUrl: partner?.acf?.image || "",
-                      logoName: partner?.acf?.name || "",
-                      wrapperWidth: "80px",
-                      wrapperHeight: "80px",
-                      paddingLeft: "20px",
-                      linkWebsite: partner?.acf?.linkWebsite,
-                    }}
-                    key={i}
-                  />
-                );
-              })}
+            {
+              (() => {
+                let partnerLogos = [];
+                for (let i = 1; i <= 8; i++) {
+                  const logo = partners
+                    ?.filter((partner) => partner?.acf?.category === "partner 3")
+                    .map((partner, i) => {
+                      return (
+                        <PartnerLogo
+                          {...{
+                            logoUrl: partner?.acf?.image || "",
+                            logoName: partner?.acf?.name || "",
+                            wrapperWidth: "80px",
+                            wrapperHeight: "80px",
+                            paddingLeft: "20px",
+                            linkWebsite: partner?.acf?.linkWebsite,
+                          }}
+                          key={i}
+                        />
+                      );
+                    });
+                  partnerLogos.push(logo);
+                }
+                return partnerLogos;
+              })()
+            }
           </GroupCarouselAnimation>
 
           {/* <div className="flex items-cener justify-center mt-[76px] mb-[76px]">

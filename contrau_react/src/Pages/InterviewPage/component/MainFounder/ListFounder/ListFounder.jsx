@@ -26,7 +26,6 @@ function ListFounder({ listDataFounder }) {
 
   // CLICK TO DIRECT DETAIL FOUNDER
   const clickDetailFounder = async (item) => {
-    // const founderId = item.acf.interview[0];
     const founderId = item.id;
     history(`/detailfounder/${founderId}`);
   };

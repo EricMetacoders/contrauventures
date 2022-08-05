@@ -22,15 +22,18 @@ function HeaderFounder({ detailFounder }) {
     const window = e.currentTarget;
     if (document.getElementById("refHeader2")) {
       if (window.scrollY < 15) {
+        // HEADER WHEN FIRST LOAD
         document.getElementById("refHeader2").style.display = "block";
         document.getElementById("refHeader2").style.backgroundColor =
           "transparent ";
       } else {
         if (y > window.scrollY) {
+          // HEADER WHEN SCROLL UP
           document.getElementById("refHeader2").style.display = "block";
           document.getElementById("refHeader2").style.backgroundColor =
             "rgba(0,0,0,0.5)";
         } else if (y < window.scrollY) {
+          // HIDE HEADER WHEN SCROLL DOWN
           document.getElementById("refHeader2").style.display = "none";
         }
       }

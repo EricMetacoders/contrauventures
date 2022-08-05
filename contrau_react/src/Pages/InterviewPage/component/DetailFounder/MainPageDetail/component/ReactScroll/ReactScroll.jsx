@@ -26,6 +26,31 @@ function ReactScroll({ founderID }) {
   // CHECK MOBILE OR PC TO CHANGE HIDE/SHOW CATEGORY YEAR
   const onScroll = () => {};
 
+  // CONVERT GRAY SCALE
+  const convertGrayScale = (item, grayScale) => {
+    if (grayScale == 0) {
+      item.style.filter = "grayscale(0%)";
+    } else {
+      item.style.filter = "grayscale(100%)";
+    }
+  };
+
+  // CHANGE GRAYSCALE WHEN ACTIVE/NOT ACTIVE
+  const changeGrayScale = (index, grayScale) => {
+    var addColor =
+      itemsRef.current[index].children[0].children[0].children[0].children[0];
+    var addColor2 =
+      itemsRef.current[index].children[0].children[0].children[1].children[0];
+    var addColor3 =
+      itemsRef.current[index].children[0].children[1].children[0].children[0];
+    var addColor4 =
+      itemsRef.current[index].children[0].children[1].children[1].children[0];
+    convertGrayScale(addColor, grayScale);
+    convertGrayScale(addColor2, grayScale);
+    convertGrayScale(addColor3, grayScale);
+    convertGrayScale(addColor4, grayScale);
+  };
+
   // USE EFFECT TO APPLY LIBRARY AND HIDE AND SHOW YEAR CATEGORY
   useEffect(() => {
     Events.scrollEvent.register("begin", function () {
@@ -33,9 +58,10 @@ function ReactScroll({ founderID }) {
       // window.removeEventListener("scroll", scrollHandler);
     });
 
+    // ACTIVE YEAR WHEN CLICK
     Events.scrollEvent.register("end", function () {
       // Add again animation add color of user scroll roller
-      // window.addEventListener("scroll", scrollHandler);
+
       var addColor =
         arguments[1].children[0].children[0].children[0].children[0].children[0]
           .children[0];
@@ -48,29 +74,18 @@ function ReactScroll({ founderID }) {
       var addColor4 =
         arguments[1].children[0].children[0].children[0].children[1].children[1]
           .children[0];
-      addColor.style.filter = "grayscale(0%)";
-      addColor2.style.filter = "grayscale(0%)";
-      addColor3.style.filter = "grayscale(0%)";
-      addColor4.style.filter = "grayscale(0%)";
+      convertGrayScale(addColor, 0);
+      convertGrayScale(addColor2, 0);
+      convertGrayScale(addColor3, 0);
+      convertGrayScale(addColor4, 0);
 
+      // ACTIVE YEAR WHEN NOT CLICK
       for (var i = 0; i < itemsRef.current.length; i++) {
         if (
           arguments[0] !=
           itemsRef.current[i].children[1].children[0].textContent
         ) {
-          var addColor =
-            itemsRef.current[i].children[0].children[0].children[0].children[0];
-          var addColor2 =
-            itemsRef.current[i].children[0].children[0].children[1].children[0];
-          var addColor3 =
-            itemsRef.current[i].children[0].children[1].children[0].children[0];
-          var addColor4 =
-            itemsRef.current[i].children[0].children[1].children[1].children[0];
-
-          addColor.style.filter = "grayscale(100%)";
-          addColor2.style.filter = "grayscale(100%)";
-          addColor3.style.filter = "grayscale(100%)";
-          addColor4.style.filter = "grayscale(100%)";
+          changeGrayScale(i, 1);
         }
         // setoff(0);
       }
@@ -86,11 +101,9 @@ function ReactScroll({ founderID }) {
   // GET DATA TO RENDER FIRST TIME
   useEffect(() => {
     // changeColor();
-    async function fechData() {
+    (async function () {
       // FIND ID FROM LIST ALL GALLERY
-
       let detailfoundergallery = await getGalleryFounderDetail(founderID);
-
       var array = [];
 
       Object.values(detailfoundergallery.data.acf.image).map((item, index) => {
@@ -98,10 +111,8 @@ function ReactScroll({ founderID }) {
           array.push(item);
         }
       });
-
       setListGallery([...array]);
-    }
-    fechData();
+    })();
   }, []);
   const itemsRef = useRef([]);
   const itemsRefYear = useRef([]);
@@ -110,111 +121,52 @@ function ReactScroll({ founderID }) {
     itemsRef.current = itemsRef.current.slice(0, listGallery.length);
   }, [listGallery]);
 
+  // ACTIVE YEAR WHEN SCROLLL
   const handleSetActive = (to) => {
     for (var i = 0; i < itemsRef.current.length; i++) {
       if (to == itemsRef.current[i].children[1].children[0].textContent) {
-        var addColor =
-          itemsRef.current[i].children[0].children[0].children[0].children[0];
-        var addColor2 =
-          itemsRef.current[i].children[0].children[0].children[1].children[0];
-        var addColor3 =
-          itemsRef.current[i].children[0].children[1].children[0].children[0];
-        var addColor4 =
-          itemsRef.current[i].children[0].children[1].children[1].children[0];
-
-        addColor.style.filter = "grayscale(0%)";
-        addColor2.style.filter = "grayscale(0%)";
-        addColor3.style.filter = "grayscale(0%)";
-        addColor4.style.filter = "grayscale(0%)";
+        // ADD COLOR WHEN SCROLL ACTIVE YEAR
+        changeGrayScale(i, 0);
       }
     }
   };
-
+  // INACTIVE YEAR WHEN SCROLLL
   const handleSetInactive = (to) => {
     for (var i = 0; i < itemsRef.current.length; i++) {
       if (itemsRef.current[i].children[1].children[0].textContent !== "") {
         if (to == itemsRef.current[i].children[1].children[0].textContent) {
-          var noColor =
-            itemsRef.current[i].children[0].children[0].children[0].children[0];
-          var noColor2 =
-            itemsRef.current[i].children[0].children[0].children[1].children[0];
-          var noColor3 =
-            itemsRef.current[i].children[0].children[1].children[0].children[0];
-          var noColor4 =
-            itemsRef.current[i].children[0].children[1].children[1].children[0];
-          noColor.style.filter = "grayscale(100%)";
-          noColor2.style.filter = "grayscale(100%)";
-          noColor3.style.filter = "grayscale(100%)";
-          noColor4.style.filter = "grayscale(100%)";
+          // NO COLOR WHEN SCROLL NOT ACTIVE YEAR
+          changeGrayScale(i, 1);
         }
       }
     }
   };
+
   // CHECK AT BOTTOM
-  const handleScroll3 = () => {
+  const handleScrollAtBottom = () => {
     const bottom =
       Math.ceil(window.innerHeight + window.scrollY) >=
       document.documentElement.scrollHeight;
 
     if (bottom) {
+      // HIDE CATEGORY YEAR IN PC
       const myReference = refCategory.current;
       myReference.style.display = "none";
-      // HIDE CATEGORY YEAR
+      // HIDE CATEGORY YEAR IN MOBILE
       if (matchMobileTablet) {
         myReference.style.top = "-5%";
-
         // ADD COLOR LAST IMAGES YEAR
-        var addColor =
-          itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
-            .children[0].children[0];
-        var addColor2 =
-          itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
-            .children[1].children[0];
-        var addColor3 =
-          itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
-            .children[0].children[0];
-        var addColor4 =
-          itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
-            .children[1].children[0];
-
-        addColor.style.filter = "grayscale(0%)";
-        addColor2.style.filter = "grayscale(0%)";
-        addColor3.style.filter = "grayscale(0%)";
-        addColor4.style.filter = "grayscale(0%)";
+        changeGrayScale(itemsRef.current.length - 1, 0);
       }
     } else {
+      // SHOW CATEGORY YEAR IN PIN
       const myReference = refCategory.current;
       myReference.style.display = "block";
+      // SHOW CATEGORY YEAR IN MOBILE
       if (matchMobileTablet) {
         myReference.style.top = "8%";
-        var noColor =
-          itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
-            .children[0].children[0];
-
-        var noColor2 =
-          itemsRef.current[itemsRef.current.length - 1].children[0].children[0]
-            .children[1].children[0];
-
-        var noColor3 =
-          itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
-            .children[0].children[0];
-
-        var noColor4 =
-          itemsRef.current[itemsRef.current.length - 1].children[0].children[1]
-            .children[1].children[0];
-
-        if (noColor.src !== "") {
-          noColor.style.filter = "grayscale(100%)";
-        }
-        if (noColor2.src !== "") {
-          noColor2.style.filter = "grayscale(100%)";
-        }
-        if (noColor3.src !== "") {
-          noColor3.style.filter = "grayscale(100%)";
-        }
-        if (noColor3.src !== "") {
-          noColor4.style.filter = "grayscale(100%)";
-        }
+        // NO COLOR WHEN NOT LAST IMAGE YEAR
+        changeGrayScale(itemsRef.current.length - 1, 1);
       }
     }
     // }
@@ -222,12 +174,11 @@ function ReactScroll({ founderID }) {
 
   // ADD SCROLL EVENT FOR CHECK BOTTOM
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll3, {
+    window.addEventListener("scroll", handleScrollAtBottom, {
       passive: true,
     });
-
     return () => {
-      window.removeEventListener("scroll", handleScroll3);
+      window.removeEventListener("scroll", handleScrollAtBottom);
     };
   }, []);
 
@@ -261,12 +212,14 @@ function ReactScroll({ founderID }) {
           }
         >
           {listGallery?.map((item, index) => (
-            <div ref={(el) => (itemsRefYear.current[index] = el)}>
+            <div
+              ref={(el) => (itemsRefYear.current[index] = el)}
+              key={item.year ? item.year : ""}
+            >
               <Link
                 className="yeartitle"
-                // to={item.year == "" ? item.year : keyGallery[index]}
-                to={item.year}
-                key={item.year}
+                to={item.year ? item.year : ""}
+                // key={item.year}
                 spy={true}
                 smooth={true}
                 duration={500}
@@ -289,7 +242,11 @@ function ReactScroll({ founderID }) {
         }}
       >
         {listGallery?.map((item, index) => (
-          <Element name={item.year} className="element" key={item.year}>
+          <Element
+            name={item.year}
+            className="element"
+            key={item.year ? item.year : ""}
+          >
             <div
               className="rootgallery"
               // onScroll={() => onScroll2(index)}
