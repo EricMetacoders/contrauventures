@@ -11,14 +11,15 @@ export default function ContactForm() {
     register,
     handleSubmit,
     reset,
-    formState,
     formState: { isSubmitSuccessful },
     setError,
     formState: { errors },
   } = useForm();
 
+  // attachFile name
   const [fileName, setFileName] = useState("Attach File");
 
+  // handle Submit
   const onSubmit = (data) => {
     const file = data.attachFile[0];
     const dataInfor = {
@@ -35,8 +36,8 @@ export default function ContactForm() {
       yourName: data.yourName,
       attachFile: data?.attachFile[0],
     };
-
     if (file != undefined) {
+      // check file type
       if (file?.type != "application/pdf") {
         setError("attachFile", {
           type: "filetype",
@@ -91,7 +92,6 @@ export default function ContactForm() {
         });
     }
   };
-
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -100,7 +100,7 @@ export default function ContactForm() {
             {...register("title", { required: true })}
             type="text"
             placeholder="Title"
-            className="break-all lg:h-[75px]  w-full h-[40px] bg-inputBg pl-[26px]   caret-[#DB2F33] opacity-60 active:cursor-text text-[#fff] hover:opacity-100 cursor-pointer pt-[26px]"
+            className="break-all lg:h-[75px]  w-full h-[40px] bg-inputBg pl-[26px]   caret-[#DB2F33] opacity-60 active:cursor-text text-[#fff] hover:opacity-100 cursor-pointer pt-[8px] lg:pt-[26px]"
             id="title"
             name="title"
             style={{ resize: "none" }}

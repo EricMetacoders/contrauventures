@@ -10,23 +10,11 @@ const FadeInUpDiv = styled.div`
 
 export default function Components() {
   const [showText2, setShowText2] = useState(false);
-  const [showText3, setShowText3] = useState(false);
-  const [showText4, setShowText4] = useState(false);
-  const [showText5, setShowText5] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
       setShowText2(true);
     }, 500);
-    setTimeout(() => {
-      setShowText3(true);
-    }, 1000);
-    setTimeout(() => {
-      setShowText4(true);
-    }, 1500);
-    setTimeout(() => {
-      setShowText5(true);
-    }, 2000);
   }, []);
   return (
     <div>
@@ -38,9 +26,9 @@ export default function Components() {
       <div className="mt-[30px] 2xl:mt-[74px]  border-black pb-[40px] 2xl:pb-[80px] leading-[1]">
         {showText2 ? (
           <FadeInUpDiv>
-            <p className="popinsFont text-[40px] font-[900]  sm:text-[63px] 2xl:text-[110px]  sm:italic mb-0">
+            <p className="popinsFont text-[40px] font-[900]  sm:text-[63px] xl:text-[110px]  sm:italic mb-0">
               We{" "}
-              <span className="popinsFont text-[40px]   sm:text-[63px] 2xl:text-[110px]   mb-0 font-[900]">
+              <span className="popinsFont text-[40px]   sm:text-[63px] xl:text-[110px]   mb-0 font-[900]">
                 empower
               </span>
             </p>
@@ -50,7 +38,7 @@ export default function Components() {
         )}
         {showText2 ? (
           <FadeInUpDiv>
-            <p className="popinsFont text-[40px]  sm:text-[63px] 2xl:text-[110px]   italic font-thin mb-0">
+            <p className="popinsFont text-[40px]  sm:text-[63px] xl:text-[110px]   italic font-thin mb-0">
               ourselves with
             </p>
           </FadeInUpDiv>
@@ -61,10 +49,10 @@ export default function Components() {
         {showText2 ? (
           <FadeInUpDiv>
             <div className="hidden md:flex items-center justify-start space-x-5">
-              <p className="popinsFont text-[40px]   sm:text-[63px] 2xl:text-[110px]   italic font-thin mb-0">
+              <p className="popinsFont text-[40px]   sm:text-[63px] xl:text-[110px]   italic font-thin mb-0">
                 various
               </p>
-              <p className="popinsFont text-[40px]   sm:text-[63px] 2xl:text-[110px]  font-[900] text-red italic mb-0">
+              <p className="popinsFont text-[40px]   sm:text-[63px] xl:text-[110px]  font-[900] text-red italic mb-0">
                 potentials.
               </p>
             </div>
@@ -76,7 +64,7 @@ export default function Components() {
         <div className="block md:hidden items-center justify-start ">
           {showText2 ? (
             <FadeInUpDiv>
-              <p className="popinsFont text-[40px] sm:text-[63px] 2xl:text-[110px]  italic font-thin mb-0">
+              <p className="popinsFont text-[40px] sm:text-[63px] xl:text-[110px]  italic font-thin mb-0">
                 various
               </p>
             </FadeInUpDiv>
@@ -86,7 +74,7 @@ export default function Components() {
 
           {showText2 ? (
             <FadeInUpDiv>
-              <p className="popinsFont text-[40px] sm:text-[63px] 2xl:text-[110px] font-[900] text-red italic mb-0">
+              <p className="popinsFont text-[40px] sm:text-[63px] xl:text-[110px] font-[900] text-red italic mb-0">
                 potentials.
               </p>
             </FadeInUpDiv>
