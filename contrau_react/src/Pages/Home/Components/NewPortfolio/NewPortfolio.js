@@ -29,7 +29,7 @@ const NewPortfolio = forwardRef((props, ref) => {
 
 
   const [clicked, setClicked] = useState(contentdatacategory[0].name);
-
+  
 
   useEffect(() => {
     setCategoryFounder(viewAll);
