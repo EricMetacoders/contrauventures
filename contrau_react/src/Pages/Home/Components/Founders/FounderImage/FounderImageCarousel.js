@@ -115,7 +115,7 @@ export default function FounderImageCarousel({ data }) {
       </div>
 
       {/* button */}
-      <div className="absolute  bottom-[6%]  lg:hidden w-full flex justify-center z-[100] ">
+      <div id="butttonfoundermb360" className="absolute  bottom-[6%]  lg:hidden w-full flex justify-center z-[100] ">
         <div className=" w-[192px] h-[44px] bg-white  cursor-pointer">
           <div className="flex items-center justify-center w-full h-full">
             <p

@@ -93,6 +93,12 @@
   }
 }
 
+@media only screen and (min-width: 0px) and (max-width: 360px) {
+  #butttonfoundermb360 {
+    bottom: 3%;
+  }
+}
+
 @media only screen and (min-width: 640px) and (max-width: 1023px) {
   #founderId {
     .lineDiv::after {
