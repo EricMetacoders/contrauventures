@@ -1,9 +1,8 @@
-import React, { Component, useEffect } from "react";
+import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import FounderImageCarousel from "../FounderImage/FounderImageCarousel";
-import MobileImageCarousel from "../FounderImage/MobileImgCarousel";
 import { useSelector } from "react-redux";
 
 import "./divImageSize.scss";
@@ -35,7 +34,7 @@ export default function MobileCarousel() {
     <Slider {...settings}>
       {data?.map((img, index) => {
         return (
-          <div className="divImgSize">
+          <div className="divImgSize" key={index}>
             <FounderImageCarousel key={index} data={img} />
           </div>
         );
