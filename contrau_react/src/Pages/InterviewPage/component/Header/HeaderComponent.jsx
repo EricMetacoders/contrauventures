@@ -6,7 +6,7 @@ import logobackgroundheadermb from "assets/interview-img/logobackgroundheadermb.
 import logoheader from "assets/interview-img/logoheadertrau.svg";
 import "./style.scss";
 import TemporaryDrawer from "./TemporaryDrawer";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 HeaderComponent.propTypes = {};
 
 function HeaderComponent({ pagecurrent }) {
@@ -49,10 +49,9 @@ function HeaderComponent({ pagecurrent }) {
       // return a cleanup function to unregister our function since its gonna run multiple times
       window.removeEventListener("scroll", (e) => handleNavigation(e));
     };
-  }, [y]);
+  });
 
   //RESPONSIVE
-  const theme = useTheme();
 
   const matchMobile = useMediaQuery("(max-width:639px)");
 

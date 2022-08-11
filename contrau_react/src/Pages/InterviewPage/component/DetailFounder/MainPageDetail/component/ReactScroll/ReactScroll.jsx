@@ -1,20 +1,17 @@
 import { useMediaQuery } from "@mui/material";
-
 import React, { useEffect, useRef, useState } from "react";
-
 import { Element, Events, Link } from "react-scroll";
 import { interviewServices } from "services/interviewService";
 
 function ReactScroll({ founderID }) {
   const [listGallery, setListGallery] = useState([{}]);
-  const [keyGallery, setkeyGallery] = useState([{}]);
   const matchMobile = useMediaQuery("(max-width:639px)");
   const matchMobileTablet = useMediaQuery("(max-width:1279px)");
 
   // GET DETAIL GALLERY
   async function getGalleryFounderDetail(id) {
     try {
-      let detailgallery = await interviewServices.getGalleryFounder(id);
+      const detailgallery = await interviewServices.getGalleryFounder(id);
 
       return detailgallery;
     } catch (error) {
@@ -24,11 +21,10 @@ function ReactScroll({ founderID }) {
 
   const refCategory = useRef(null);
   // CHECK MOBILE OR PC TO CHANGE HIDE/SHOW CATEGORY YEAR
-  const onScroll = () => {};
 
   // CONVERT GRAY SCALE
   const convertGrayScale = (item, grayScale) => {
-    if (grayScale == 0) {
+    if (grayScale === 0) {
       item.style.filter = "grayscale(0%)";
     } else {
       item.style.filter = "grayscale(100%)";
@@ -82,7 +78,7 @@ function ReactScroll({ founderID }) {
       // ACTIVE YEAR WHEN NOT CLICK
       for (var i = 0; i < itemsRef.current.length; i++) {
         if (
-          arguments[0] !=
+          arguments[0] !==
           itemsRef.current[i].children[1].children[0].textContent
         ) {
           changeGrayScale(i, 1);
@@ -91,13 +87,11 @@ function ReactScroll({ founderID }) {
       }
     });
 
-    window.addEventListener("scroll", onScroll);
     return () => {
       Events.scrollEvent.remove("begin");
       Events.scrollEvent.remove("end");
-      window.removeEventListener("scroll", onScroll);
     };
-  }, []);
+  });
   // GET DATA TO RENDER FIRST TIME
   useEffect(() => {
     // changeColor();
@@ -106,14 +100,14 @@ function ReactScroll({ founderID }) {
       let detailfoundergallery = await getGalleryFounderDetail(founderID);
       var array = [];
 
-      Object.values(detailfoundergallery.data.acf.image).map((item, index) => {
-        if (item.year != "") {
+      Object.values(detailfoundergallery.data.acf.image).forEach((item) => {
+        if (item.year !== "") {
           array.push(item);
         }
       });
       setListGallery([...array]);
     })();
-  }, []);
+  });
   const itemsRef = useRef([]);
   const itemsRefYear = useRef([]);
 
@@ -124,7 +118,7 @@ function ReactScroll({ founderID }) {
   // ACTIVE YEAR WHEN SCROLLL
   const handleSetActive = (to) => {
     for (var i = 0; i < itemsRef.current.length; i++) {
-      if (to == itemsRef.current[i].children[1].children[0].textContent) {
+      if (to === itemsRef.current[i].children[1].children[0].textContent) {
         // ADD COLOR WHEN SCROLL ACTIVE YEAR
         changeGrayScale(i, 0);
       }
@@ -134,7 +128,7 @@ function ReactScroll({ founderID }) {
   const handleSetInactive = (to) => {
     for (var i = 0; i < itemsRef.current.length; i++) {
       if (itemsRef.current[i].children[1].children[0].textContent !== "") {
-        if (to == itemsRef.current[i].children[1].children[0].textContent) {
+        if (to === itemsRef.current[i].children[1].children[0].textContent) {
           // NO COLOR WHEN SCROLL NOT ACTIVE YEAR
           changeGrayScale(i, 1);
         }
@@ -180,7 +174,7 @@ function ReactScroll({ founderID }) {
     return () => {
       window.removeEventListener("scroll", handleScrollAtBottom);
     };
-  }, []);
+  });
 
   // CHECK LENGTH FOR YEAR
   const checkLength = (numberImage) => {
@@ -194,7 +188,6 @@ function ReactScroll({ founderID }) {
       3: "frameimgmain3",
       4: "frameimgmain4",
     };
-
     return frameImage[numberImage];
   };
 
@@ -267,6 +260,7 @@ function ReactScroll({ founderID }) {
                             ? item?.image[0]?.guid
                             : ""
                         }
+                        alt={`${item.year}`}
                       />
                     </div>
                     <div className="frameimg2">
@@ -277,6 +271,7 @@ function ReactScroll({ founderID }) {
                             ? item.image[1]?.guid
                             : ""
                         }
+                        alt={`${item.year}`}
                       />
                     </div>
                   </div>
@@ -289,6 +284,7 @@ function ReactScroll({ founderID }) {
                             ? item.image[2]?.guid
                             : ""
                         }
+                        alt={`${item.year}`}
                       />
                     </div>
                     <div className="frameimg4">
@@ -299,6 +295,7 @@ function ReactScroll({ founderID }) {
                             ? item.image[3]?.guid
                             : ""
                         }
+                        alt={`${item.year}`}
                       />
                     </div>
                   </div>
@@ -307,7 +304,7 @@ function ReactScroll({ founderID }) {
                 <div
                   className="frametitleyear"
                   style={
-                    checkLength(item?.image?.length) == "frameimgmain1"
+                    checkLength(item?.image?.length) === "frameimgmain1"
                       ? { top: "35%" }
                       : {}
                   }

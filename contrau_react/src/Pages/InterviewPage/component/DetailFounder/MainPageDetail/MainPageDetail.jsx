@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Box } from "@mui/material";
 import "./style.scss";
@@ -27,7 +27,7 @@ function MainPageDetail({ detailArticle, founderID }) {
           <Box
             key={item.id}
             className={
-              clicked == item.name ? "detailcontent-active" : "detailcontent"
+              clicked === item.name ? "detailcontent-active" : "detailcontent"
             }
             onClick={() => dealClick(item)}
           >
@@ -35,7 +35,7 @@ function MainPageDetail({ detailArticle, founderID }) {
           </Box>
         ))}
       </Box>
-      {clicked == "Interview" ? (
+      {clicked === "Interview" ? (
         <InterviewBody detailArticle={detailArticle?.acf?.content || {}} />
       ) : (
         <GalleryBody founderID={founderID} />
