@@ -260,7 +260,7 @@ function ReactScroll({ founderID }) {
                             ? item?.image[0]?.guid
                             : ""
                         }
-                        alt={`${item.year}`}
+                        alt=""
                       />
                     </div>
                     <div className="frameimg2">
@@ -271,7 +271,7 @@ function ReactScroll({ founderID }) {
                             ? item.image[1]?.guid
                             : ""
                         }
-                        alt={`${item.year}`}
+                        alt=""
                       />
                     </div>
                   </div>
@@ -284,7 +284,7 @@ function ReactScroll({ founderID }) {
                             ? item.image[2]?.guid
                             : ""
                         }
-                        alt={`${item.year}`}
+                        alt=""
                       />
                     </div>
                     <div className="frameimg4">
@@ -295,7 +295,7 @@ function ReactScroll({ founderID }) {
                             ? item.image[3]?.guid
                             : ""
                         }
-                        alt={`${item.year}`}
+                        alt=""
                       />
                     </div>
                   </div>

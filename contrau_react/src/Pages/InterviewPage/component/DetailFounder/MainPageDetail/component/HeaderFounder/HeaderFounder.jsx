@@ -1,6 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { Box, useMediaQuery, useTheme } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 
 import logoheader from "assets/interview-img/logoheadertrau.svg";
 import "./style.scss";
@@ -13,8 +13,6 @@ HeaderFounder.propTypes = {
 };
 
 function HeaderFounder({ detailFounder }) {
-  const theme = useTheme();
-
   // CHECK EVENT SCROLL DOWN
   const [y, setY] = useState(0);
 
@@ -90,6 +88,7 @@ function HeaderFounder({ detailFounder }) {
           <img
             src={detailFounder?.acf?.header_image}
             className="logobackgroundheader"
+            alt="Header"
           />
         </Box>
 
