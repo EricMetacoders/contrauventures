@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { pulse } from "react-animations";
 
+
 const PulseAnimation = keyframes`${pulse}`;
 
 const PulseDiv = styled.div`

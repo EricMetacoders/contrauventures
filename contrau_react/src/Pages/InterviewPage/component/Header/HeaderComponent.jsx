@@ -61,11 +61,13 @@ function HeaderComponent({ pagecurrent }) {
       id: 1,
       url: "",
       content: "Home",
+      active: false,
     },
     {
       id: 2,
       url: "story",
       content: "Story",
+      active: true,
     },
   ];
 
@@ -91,18 +93,19 @@ function HeaderComponent({ pagecurrent }) {
             <TemporaryDrawer />
           ) : (
             <Box className="titledetaimainframeheader" style={{ opacity: "1" }}>
-              {datacontentHeader.map((item, index) => (
+              {datacontentHeader?.map((item, index) => (
                 <Link to={`/${item.url}`} key={index}>
-                  <Box className="titledetaiframeheader">{item.content}</Box>
+                  <Box
+                    className={
+                      item.active
+                        ? "titledetaiframeheader-active"
+                        : "titledetaiframeheader"
+                    }
+                  >
+                    {item.content}
+                  </Box>
                 </Link>
               ))}
-              {/* <Link to="/">
-                <Box className="titledetaiframeheader">HOME</Box>
-              </Link>
-
-              <Link to="/story">
-                <Box className="titledetaiframeheader-active">Story</Box>
-              </Link> */}
             </Box>
           )}
         </div>

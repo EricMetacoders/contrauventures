@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import PropTypes from "prop-types";
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 
-import logoheader from "../../../../../../../assets/interview-img/logoheadertrau.svg";
+import logoheader from "assets/interview-img/logoheadertrau.svg";
 import "./style.scss";
 import { Link } from "react-router-dom";
 import TemporaryDrawer from "./TemporaryDrawer";

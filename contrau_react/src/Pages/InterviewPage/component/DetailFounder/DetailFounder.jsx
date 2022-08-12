@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import { useEffect, useState } from "react";
 import MainPageDetail from "./MainPageDetail/MainPageDetail";
-import FooterComponent from "../Footer/Footer";
+// import FooterComponent from "../Footer/Footer";
 import { useParams } from "react-router-dom";
-import { interviewServices } from "../../../../services/interviewService.js";
+import NotFound from "Pages/NotFound/NotFound";
+import { interviewServices } from "services/interviewService";
+import FooterComponent from "../Footer/Footer";
 import HeaderFounder from "./MainPageDetail/component/HeaderFounder/HeaderFounder";
-import NotFound from "../../../NotFound/NotFound";
 DetailFounder.propTypes = {
   currentFounder: PropTypes.string,
 };
