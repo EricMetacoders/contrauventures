@@ -27,7 +27,7 @@ export default function Home() {
       <Group />
       <Founders />
       <NewPortfolio />
-      <ValueAdd />
+      {/* <ValueAdd /> */}
       <Faq />
       {/* <News /> */}
       <Contact />
