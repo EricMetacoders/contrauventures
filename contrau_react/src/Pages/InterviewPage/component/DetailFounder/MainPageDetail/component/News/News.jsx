@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { Box, useMediaQuery, useTheme } from "@mui/material";
-import { interviewServices } from "../../../../../../../services/interviewService";
+import { interviewServices } from "services/interviewService";
 import { Theme } from "@mui/material/styles";
 import "./style.scss";
 News.propTypes = {};
@@ -11,7 +11,7 @@ async function getAPINew() {
     const listNew = await interviewServices.getNew();
     return listNew;
   } catch (error) {
-    console.log("Failed to fetch", error);
+    console.log("getAPINew => listNew", error);
   }
 }
 

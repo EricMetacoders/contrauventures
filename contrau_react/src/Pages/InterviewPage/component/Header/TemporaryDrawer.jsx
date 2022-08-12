@@ -23,6 +23,21 @@ export default function TemporaryDrawer() {
     setState({ ...state, [anchor]: open });
   };
 
+  const datacontentHeader = [
+    {
+      id: 1,
+      url: "",
+      content: "Home",
+      active: false,
+    },
+    {
+      id: 2,
+      url: "story",
+      content: "Story",
+      active: true,
+    },
+  ];
+
   const list = (anchor) => (
     <Box
       sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
@@ -31,27 +46,25 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        <ListItem disablePadding>
-          <Link to="/">
-            <ListItemButton>
-              <ListItemText primary={"Home"} />
-            </ListItemButton>
-          </Link>
-        </ListItem>
-
-        <ListItem disablePadding>
-          <Link to="/story">
-            <ListItemButton>
-              <ListItemText
-                primary={"Story"}
-                primaryTypographyProps={{
-                  fontWeight: "bold",
-                  color: "black",
-                }}
-              />
-            </ListItemButton>
-          </Link>
-        </ListItem>
+        {datacontentHeader?.map((item, index) => (
+          <ListItem disablePadding>
+            <Link to={`/${item.url}`} key={index}>
+              <ListItemButton>
+                <ListItemText
+                  primary={item.content}
+                  primaryTypographyProps={
+                    item.active
+                      ? {
+                          fontWeight: "bold",
+                          color: "black",
+                        }
+                      : {}
+                  }
+                />
+              </ListItemButton>
+            </Link>
+          </ListItem>
+        ))}
       </List>
     </Box>
   );

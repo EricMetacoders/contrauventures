@@ -1,6 +1,7 @@
 import React from "react";
 import RingLoader from "react-spinners/RingLoader";
 import LoadingTextAimation from "./LoadingTextAnimation";
+
 export default function Loading() {
   return (
     <div className="h-screen w-screen">

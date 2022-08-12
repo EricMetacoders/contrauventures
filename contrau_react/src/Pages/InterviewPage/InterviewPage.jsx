@@ -1,10 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import HeaderComponent from "../InterviewPage/component/Header/HeaderComponent";
-import MainFounder from "../InterviewPage/component/MainFounder/MainFounder";
-import FooterComponent from "../InterviewPage/component/Footer/Footer";
-import { useEffect } from "react";
 import { createTheme, ThemeProvider } from "@mui/material";
+import { useEffect } from "react";
+import FooterComponent from "./component/Footer/Footer";
+import HeaderComponent from "./component/Header/HeaderComponent";
+import MainFounder from "./component/MainFounder/MainFounder";
 
 InterviewPage.propTypes = {};
 
