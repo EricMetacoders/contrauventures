@@ -3,7 +3,20 @@ import { Link } from "react-router-dom";
 import logo from "../../../../assets/homepage_img/logo.svg";
 import NewHeaderDropDown from "./NewHeaderDropDown";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+
 export default function Header() {
+  // headerNav
+  const headerNav = [
+    {
+      href: "",
+      link: "/",
+    },
+    {
+      href: "#aboutUs",
+      link: "",
+    },
+  ];
+
   // handleShowHideHeader
   const refHeader = useRef();
   // CHECK EVENT SCROLL DOWN
@@ -59,7 +72,6 @@ export default function Header() {
           {/* logo Mobile */}
           <div className="block sm:hidden mb-[17px]" onClick={scrollTop}>
             <Link to="/">
-              {" "}
               <img src={logo} alt="logo" className="w-[100px] h-[30px]" />
             </Link>
           </div>

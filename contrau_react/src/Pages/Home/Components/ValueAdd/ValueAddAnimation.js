@@ -10,23 +10,11 @@ const FadeInUpDiv = styled.div`
 
 export default function Components() {
   const [showText2, setShowText2] = useState(false);
-  const [showText3, setShowText3] = useState(false);
-  const [showText4, setShowText4] = useState(false);
-  const [showText5, setShowText5] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
       setShowText2(true);
     }, 500);
-    setTimeout(() => {
-      setShowText3(true);
-    }, 1000);
-    setTimeout(() => {
-      setShowText4(true);
-    }, 1500);
-    setTimeout(() => {
-      setShowText5(true);
-    }, 2000);
   }, []);
   return (
     <div>

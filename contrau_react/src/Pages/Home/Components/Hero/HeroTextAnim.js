@@ -58,22 +58,6 @@ export default function Components() {
             <></>
           )}
         </div>
-
-        {/* <div className="block xl:hidden mt-[50px]">
-          {showText3 ? (
-            <FadeInUpDiv>
-              <p className="text-black leading-[20px]  xl:mb-0 xl:w-[670px] text-[13px]  2xl:text-[20px] 2xl:font-[400] 2xl:leading-[32px] popinsFont">
-                The unyielding spirit, the youthful energy, and the thirst for
-                knowledge of Vietnamese founders amaze us completely.
-                <br />
-                Their remarkable qualities have strengthened our belief in the
-                bright future of the country.
-              </p>
-            </FadeInUpDiv>
-          ) : (
-            <></>
-          )}
-        </div> */}
       </div>
     </>
   );
