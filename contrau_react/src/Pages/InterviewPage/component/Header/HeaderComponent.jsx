@@ -92,7 +92,7 @@ function HeaderComponent({ pagecurrent }) {
           ) : (
             <Box className="titledetaimainframeheader" style={{ opacity: "1" }}>
               {datacontentHeader.map((item, index) => (
-                <Link to={`/${item.url}`}>
+                <Link to={`/${item.url}`} key={index}>
                   <Box className="titledetaiframeheader">{item.content}</Box>
                 </Link>
               ))}
