@@ -5,18 +5,6 @@ import NewHeaderDropDown from "./NewHeaderDropDown";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 export default function Header() {
-  // headerNav
-  const headerNav = [
-    {
-      href: "",
-      link: "/",
-    },
-    {
-      href: "#aboutUs",
-      link: "",
-    },
-  ];
-
   // handleShowHideHeader
   const refHeader = useRef();
   // CHECK EVENT SCROLL DOWN
@@ -102,7 +90,6 @@ export default function Header() {
 
           {/* menu select mobile */}
           <div className="sm:hidden">
-            {/* <HeaderDropDown resultRef={resultRef} partnersRef={partnersRef} /> */}
             <div className="mt-[3px] mb-[19px]">
               <NewHeaderDropDown />
             </div>

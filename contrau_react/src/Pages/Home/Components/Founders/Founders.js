@@ -8,7 +8,6 @@ import SmallTabletCarousel from "./Carousel/SmallTabletCarousel";
 import MobileCarousel from "./Carousel/MobileCarousel";
 
 import "./ImageCarousel/founderImageCarousel.scss";
-import "./founder.scss";
 
 export default function Founders() {
   const dispatch = useDispatch();

@@ -8,8 +8,6 @@ const initialState = {
   portfolios: null,
   news: null,
   empower: null,
-  loading: false,
-  count: 0,
 };
 
 const homeSlice = createSlice({
@@ -22,37 +20,37 @@ const homeSlice = createSlice({
         state.faqList = action.payload;
       })
       .addCase(getFAQList.rejected, (state, action) => {
-        console.log(action.error);
+        console.log("getFAQList", action.error);
       })
       .addCase(getPartnersList.fulfilled, (state, action) => {
         state.partners = action.payload;
       })
       .addCase(getPartnersList.rejected, (state, action) => {
-        console.log(action.error);
+        console.log("getPartnersList", action.error);
       })
       .addCase(getFounderList.fulfilled, (state, action) => {
         state.founders = action.payload;
       })
       .addCase(getFounderList.rejected, (state, action) => {
-        console.log(action.error);
+        console.log("getFounderList", action.error);
       })
       .addCase(getPortfolioList.fulfilled, (state, action) => {
         state.portfolios = action.payload;
       })
       .addCase(getPortfolioList.rejected, (state, action) => {
-        console.log(action.error);
+        console.log("getPortfolioList", action.error);
       })
       .addCase(getNewsList.fulfilled, (state, action) => {
         state.news = action.payload;
       })
       .addCase(getNewsList.rejected, (state, action) => {
-        console.log(action.error);
+        console.log("getNewsList", action.error);
       })
       .addCase(getEmpowerList.fulfilled, (state, action) => {
         state.empower = action.payload;
       })
       .addCase(getEmpowerList.rejected, (state, action) => {
-        console.log(action.error);
+        console.log("getEmpowerList", action.error);
       });
   },
 });

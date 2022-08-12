@@ -54,7 +54,7 @@ export default function FounderImageCarousel({ data }) {
         </div>
         <div
           id="titleText"
-          className="flex items-center justify-center mx-[20px] h-[100px] pt-[26%]"
+          className="flex items-center justify-center mx-[20px] h-[100px] pt-[17%]"
         >
           <p className="text-white popinsFont  font-light text-[13px] lg:text-[18px] lg:font-normal text-center">
             {data?.acf?.title.slice(0, 50).concat("...")}
@@ -113,10 +113,7 @@ export default function FounderImageCarousel({ data }) {
       </div>
 
       {/* button */}
-      <div
-        id="btnPosition"
-        className="absolute  bottom-[10px]  lg:hidden w-full flex justify-center z-[100] "
-      >
+      <div className="absolute  bottom-[6%]  lg:hidden w-full flex justify-center z-[100] ">
         <div className=" w-[192px] h-[44px] bg-white  cursor-pointer">
           <div className="flex items-center justify-center w-full h-full">
             <p

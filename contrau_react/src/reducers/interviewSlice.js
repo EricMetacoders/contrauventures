@@ -13,7 +13,7 @@ const interviewSlice = createSlice({
         state.listFounder = action.payload;
       })
       .addCase(getListFounder.rejected, (state, action) => {
-        console.log("error");
+        console.log("getListFounder", action.error);
       });
   },
 });
