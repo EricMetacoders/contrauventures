@@ -26,7 +26,7 @@ function ReactScroll({ founderID }) {
     (
       async () => {
         const detailfoundergallery = await getGalleryFounderDetail(founderID);
-        const getListGallery = Object.values(detailfoundergallery.data.acf.image).filter((item) => !!item.year);
+        const getListGallery = Object.values(detailfoundergallery.data.acf.image).filter((item) => item.year);
         setListGallery([...getListGallery]);
       }
     )(); 
