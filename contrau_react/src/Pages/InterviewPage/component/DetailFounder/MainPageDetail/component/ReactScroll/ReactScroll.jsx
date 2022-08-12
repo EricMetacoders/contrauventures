@@ -7,6 +7,9 @@ function ReactScroll({ founderID }) {
   const [listGallery, setListGallery] = useState([{}]);
   const matchMobile = useMediaQuery("(max-width:639px)");
   const matchMobileTablet = useMediaQuery("(max-width:1279px)");
+  const itemsRef = useRef([]);
+  const itemsRefYear = useRef([]);
+  const refCategory = useRef(null);
 
   // GET DETAIL GALLERY
   async function getGalleryFounderDetail(id) {
@@ -19,105 +22,70 @@ function ReactScroll({ founderID }) {
     }
   }
 
-  const refCategory = useRef(null);
-  // CHECK MOBILE OR PC TO CHANGE HIDE/SHOW CATEGORY YEAR
+  useEffect(() => {
+    (
+      async () => {
+        const detailfoundergallery = await getGalleryFounderDetail(founderID);
+        const getListGallery = Object.values(detailfoundergallery.data.acf.image).filter((item) => !!item.year);
+        setListGallery([...getListGallery]);
+      }
+    )(); 
+  }, [founderID]);
 
+  useEffect(() => {
+    itemsRef.current = itemsRef.current.slice(0, listGallery.length);
+  }, [listGallery]);
+
+  // CHECK MOBILE OR PC TO CHANGE HIDE/SHOW CATEGORY YEAR
   // CONVERT GRAY SCALE
-  const convertGrayScale = (item, grayScale) => {
-    if (grayScale === 0) {
-      item.style.filter = "grayscale(0%)";
-    } else {
-      item.style.filter = "grayscale(100%)";
-    }
+  const convertGrayScale = (grayScale) => {
+    return grayScale === 0 ? "grayscale(0%)" : "grayscale(100%)";
   };
 
   // CHANGE GRAYSCALE WHEN ACTIVE/NOT ACTIVE
   const changeGrayScale = (index, grayScale) => {
-    var addColor =
-      itemsRef.current[index].children[0].children[0].children[0].children[0];
-    var addColor2 =
-      itemsRef.current[index].children[0].children[0].children[1].children[0];
-    var addColor3 =
-      itemsRef.current[index].children[0].children[1].children[0].children[0];
-    var addColor4 =
-      itemsRef.current[index].children[0].children[1].children[1].children[0];
-    convertGrayScale(addColor, grayScale);
-    convertGrayScale(addColor2, grayScale);
-    convertGrayScale(addColor3, grayScale);
-    convertGrayScale(addColor4, grayScale);
+    itemsRef.current[index].children[0].children[0].children[0].children[0].style.filter =
+      convertGrayScale(grayScale);
+    itemsRef.current[index].children[0].children[0].children[1].children[0].style.filter =
+      convertGrayScale(grayScale);
+    itemsRef.current[index].children[0].children[1].children[0].children[0].style.filter =
+      convertGrayScale(grayScale);
+    itemsRef.current[index].children[0].children[1].children[1].children[0].style.filter =
+      convertGrayScale(grayScale);
   };
 
   // USE EFFECT TO APPLY LIBRARY AND HIDE AND SHOW YEAR CATEGORY
   useEffect(() => {
-    Events.scrollEvent.register("begin", function () {
-      // Remove animation add color of user scroll roller
-      // window.removeEventListener("scroll", scrollHandler);
-    });
-
     // ACTIVE YEAR WHEN CLICK
     Events.scrollEvent.register("end", function () {
-      // Add again animation add color of user scroll roller
-
-      var addColor =
-        arguments[1].children[0].children[0].children[0].children[0].children[0]
-          .children[0];
-      var addColor2 =
-        arguments[1].children[0].children[0].children[0].children[0].children[1]
-          .children[0];
-      var addColor3 =
-        arguments[1].children[0].children[0].children[0].children[1].children[0]
-          .children[0];
-      var addColor4 =
-        arguments[1].children[0].children[0].children[0].children[1].children[1]
-          .children[0];
-      convertGrayScale(addColor, 0);
-      convertGrayScale(addColor2, 0);
-      convertGrayScale(addColor3, 0);
-      convertGrayScale(addColor4, 0);
+      arguments[1].children[0].children[0].children[0].children[0].children[0].children[0].style.filter =
+        convertGrayScale(0);
+      arguments[1].children[0].children[0].children[0].children[0].children[1].children[0].style.filter =
+        convertGrayScale(0);
+      arguments[1].children[0].children[0].children[0].children[1].children[0].children[0].style.filter =
+        convertGrayScale(0);
+      arguments[1].children[0].children[0].children[0].children[1].children[1].children[0].style.filter =
+        convertGrayScale(0);
 
       // ACTIVE YEAR WHEN NOT CLICK
-      for (var i = 0; i < itemsRef.current.length; i++) {
+      for (let i = 0; i < itemsRef.current.length; i++) {
         if (
           arguments[0] !==
           itemsRef.current[i].children[1].children[0].textContent
         ) {
           changeGrayScale(i, 1);
         }
-        // setoff(0);
       }
     });
 
     return () => {
-      Events.scrollEvent.remove("begin");
       Events.scrollEvent.remove("end");
     };
-  });
-  // GET DATA TO RENDER FIRST TIME
-  useEffect(() => {
-    // changeColor();
-    (async function () {
-      // FIND ID FROM LIST ALL GALLERY
-      let detailfoundergallery = await getGalleryFounderDetail(founderID);
-      var array = [];
-
-      Object.values(detailfoundergallery.data.acf.image).forEach((item) => {
-        if (item.year !== "") {
-          array.push(item);
-        }
-      });
-      setListGallery([...array]);
-    })();
-  });
-  const itemsRef = useRef([]);
-  const itemsRefYear = useRef([]);
-
-  useEffect(() => {
-    itemsRef.current = itemsRef.current.slice(0, listGallery.length);
-  }, [listGallery]);
+  }, []);
 
   // ACTIVE YEAR WHEN SCROLLL
   const handleSetActive = (to) => {
-    for (var i = 0; i < itemsRef.current.length; i++) {
+    for (let i = 0; i < itemsRef.current.length; i++) {
       if (to === itemsRef.current[i].children[1].children[0].textContent) {
         // ADD COLOR WHEN SCROLL ACTIVE YEAR
         changeGrayScale(i, 0);
@@ -125,8 +93,8 @@ function ReactScroll({ founderID }) {
     }
   };
   // INACTIVE YEAR WHEN SCROLLL
-  const handleSetInactive = (to) => {
-    for (var i = 0; i < itemsRef.current.length; i++) {
+  const handleSetInActive = (to) => {
+    for (let i = 0; i < itemsRef.current.length; i++) {
       if (itemsRef.current[i].children[1].children[0].textContent !== "") {
         if (to === itemsRef.current[i].children[1].children[0].textContent) {
           // NO COLOR WHEN SCROLL NOT ACTIVE YEAR
@@ -163,7 +131,6 @@ function ReactScroll({ founderID }) {
         changeGrayScale(itemsRef.current.length - 1, 1);
       }
     }
-    // }
   };
 
   // ADD SCROLL EVENT FOR CHECK BOTTOM
@@ -174,7 +141,7 @@ function ReactScroll({ founderID }) {
     return () => {
       window.removeEventListener("scroll", handleScrollAtBottom);
     };
-  });
+  }, []);
 
   // CHECK LENGTH FOR YEAR
   const checkLength = (numberImage) => {
@@ -218,7 +185,7 @@ function ReactScroll({ founderID }) {
                 duration={500}
                 offset={matchMobile ? -250 : -150}
                 onSetActive={handleSetActive}
-                onSetInactive={handleSetInactive}
+                onSetInactive={handleSetInActive}
               >
                 <div className="titleyeardetail">{item.year}</div>
               </Link>
