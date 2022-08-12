@@ -1,3 +1,5 @@
+@import "/src/root.scss";
+
 .rootmainfounder {
   width: auto;
   margin-bottom: 100px;
@@ -21,10 +23,10 @@
       height: 62px;
       /* BLACK 101010 */
       cursor: pointer;
-      background: #101010;
+      background: $color-black;
       /* BLACK 101010 */
 
-      border: 1px solid #101010;
+      border: 1px solid $color-black;
 
       /* Inside auto layout */
       transition-duration: 550ms;
@@ -35,7 +37,7 @@
         width: auto;
         height: 30px;
 
-        font-family: "Poppins", sans-serif;
+        font-family: $font-poppin;
         font-style: normal;
         font-weight: 600;
         font-size: 20px;
@@ -65,12 +67,12 @@
       background: white;
       /* BLACK 101010 */
 
-      border: 1px solid #101010;
+      border: 1px solid $color-black;
 
       .detailtitlebutton {
         width: auto;
         height: 30px;
-        font-family: "Poppins", sans-serif;
+        font-family: $font-poppin;
         font-style: normal;
         font-weight: 400;
         font-size: 20px;
@@ -81,7 +83,7 @@
 
         /* BLACK 101010 */
 
-        color: #101010;
+        color: $color-black;
 
         /* Inside auto layout */
 
@@ -125,13 +127,13 @@
           bottom: 5%;
           width: 100%;
           transition-property: all;
-          transition-duration: 500ms;
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: $trans-dura;
+          transition-timing-function: $trans-time;
           row-gap: 80px;
           z-index: 100;
           .detailfoundername {
             .titlename {
-              font-family: "Poppins", sans-serif;
+              font-family: $font-poppin;
               font-style: normal;
               font-weight: 100;
               font-size: 50px;
@@ -165,7 +167,7 @@
             // margin-top: 5%;
             // bottom: 5%;
             // left: 8%;
-            font-family: "Poppins", sans-serif;
+            font-family: $font-poppin;
             font-style: normal;
             font-weight: 300;
             font-size: 20px;
@@ -186,8 +188,8 @@
             /* Inside auto layout */
             z-index: 60;
             transition-property: all;
-            transition-duration: 500ms;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: $trans-dura;
+            transition-timing-function: $trans-time;
           }
         }
       }
@@ -201,15 +203,15 @@
 
         // transform: translateY(-100%);
         transition-property: all;
-        transition-duration: 500ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: $trans-dura;
+        transition-timing-function: $trans-time;
       }
       .btnInterviewfounder {
         position: absolute;
         left: 25%;
         transition-property: all;
-        transition-duration: 500ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: $trans-dura;
+        transition-timing-function: $trans-time;
         z-index: 100;
       }
     }
@@ -218,28 +220,28 @@
       .bgBlur2 {
         transform: translateY(-44%);
         transition-property: all;
-        transition-duration: 500ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: $trans-dura;
+        transition-timing-function: $trans-time;
       }
       .framedetailfoundername {
         transform: translateY(-35%);
         transition-property: all;
-        transition-duration: 500ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: $trans-dura;
+        transition-timing-function: $trans-time;
       }
 
       .btnInterviewfounder {
         transform: translateY(-160%);
         transition-property: all;
-        transition-duration: 500ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: $trans-dura;
+        transition-timing-function: $trans-time;
       }
       img {
         transform: scale(110%, 110%);
         transition-property: all;
-        transition-duration: 500ms;
+        transition-duration: $trans-dura;
 
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-timing-function: $trans-time;
       }
     }
   }
@@ -258,7 +260,7 @@
       // width: 100%;
       height: 24px;
       margin: auto;
-      font-family: "Poppins", sans-serif;
+      font-family: $font-poppin;
       font-style: normal;
       font-weight: 600;
       font-size: 16px;
@@ -346,7 +348,7 @@
               order: 0;
               flex-grow: 0;
               .titlename {
-                font-family: "Poppins", sans-serif;
+                font-family: $font-poppin;
                 font-style: normal;
                 color: #ffffff;
                 text-align: center;
@@ -405,7 +407,7 @@
 
       // margin: auto;
 
-      font-family: "Poppins", sans-serif;
+      font-family: $font-poppin;
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
@@ -489,7 +491,7 @@
 
             .detailfoundername {
               .titlename {
-                font-family: "Poppins", sans-serif;
+                font-family: $font-poppin;
                 font-style: normal;
                 color: #ffffff;
                 text-align: center;
@@ -602,7 +604,7 @@
               order: 0;
               flex-grow: 0;
               .titlename {
-                font-family: "Poppins", sans-serif;
+                font-family: $font-poppin;
                 font-style: normal;
                 color: #ffffff;
                 text-align: center;
@@ -714,7 +716,7 @@
               order: 0;
               flex-grow: 0;
               .titlename {
-                font-family: "Poppins", sans-serif;
+                font-family: $font-poppin;
                 font-style: normal;
                 color: #ffffff;
                 text-align: center;
@@ -896,10 +898,10 @@
         height: 62px;
         /* BLACK 101010 */
         cursor: pointer;
-        background: #101010;
+        background: $color-black;
         /* BLACK 101010 */
 
-        border: 1px solid #101010;
+        border: 1px solid $color-black;
 
         /* Inside auto layout */
         transition-duration: 550ms;
@@ -978,10 +980,10 @@
         height: 62px;
         /* BLACK 101010 */
         cursor: pointer;
-        background: #101010;
+        background: $color-black;
         /* BLACK 101010 */
 
-        border: 1px solid #101010;
+        border: 1px solid $color-black;
 
         /* Inside auto layout */
         transition-duration: 550ms;
