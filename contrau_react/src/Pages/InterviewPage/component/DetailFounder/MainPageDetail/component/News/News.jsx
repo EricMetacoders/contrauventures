@@ -11,7 +11,7 @@ async function getAPINew() {
     const listNew = await interviewServices.getNew();
     return listNew;
   } catch (error) {
-    console.log("Failed to fetch", error);
+    console.log("getAPINew => listNew", error);
   }
 }
 

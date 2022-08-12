@@ -18,7 +18,7 @@ function ReactScroll({ founderID }) {
 
       return detailgallery;
     } catch (error) {
-      console.log("Failed to fetch", error);
+      console.log("getGalleryFounderDetail => detailgallery", error);
     }
   }
 

@@ -24,7 +24,7 @@ function MainFounder(props) {
       let listFounder = await interviewServices.getListFounder();
       return listFounder;
     } catch (error) {
-      console.log("Failed to fetch", error);
+      console.log("getListFounder => listFounder", error);
     }
   }
 

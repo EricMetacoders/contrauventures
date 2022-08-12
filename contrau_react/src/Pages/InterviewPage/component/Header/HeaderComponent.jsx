@@ -56,6 +56,19 @@ function HeaderComponent({ pagecurrent }) {
 
   const matchMobile = useMediaQuery("(max-width:639px)");
 
+  const datacontentHeader = [
+    {
+      id: 1,
+      url: "",
+      content: "Home",
+    },
+    {
+      id: 2,
+      url: "story",
+      content: "Story",
+    },
+  ];
+
   //END RESPONSIVE
   return (
     <div>
@@ -78,13 +91,18 @@ function HeaderComponent({ pagecurrent }) {
             <TemporaryDrawer />
           ) : (
             <Box className="titledetaimainframeheader" style={{ opacity: "1" }}>
-              <Link to="/">
+              {datacontentHeader.map((item, index) => (
+                <Link to={`/${item.url}`}>
+                  <Box className="titledetaiframeheader">{item.content}</Box>
+                </Link>
+              ))}
+              {/* <Link to="/">
                 <Box className="titledetaiframeheader">HOME</Box>
               </Link>
 
               <Link to="/story">
                 <Box className="titledetaiframeheader-active">Story</Box>
-              </Link>
+              </Link> */}
             </Box>
           )}
         </div>

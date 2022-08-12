@@ -18,7 +18,7 @@ async function getFounderData(founderId) {
     );
     return detailFounder;
   } catch (error) {
-    console.log("Failed to fetch", error);
+    console.log("getFounderData => detailFounder", error);
   }
 }
 // HAVE FOUNDER ID ==> GET INTERVIEW ID OF FOUNDER
@@ -30,7 +30,7 @@ async function getAPIDetailFounder(founderId) {
 
     return detailFounder;
   } catch (error) {
-    console.log("Failed to fetch", error);
+    console.log("getAPIDetailFounder => detailFounder", error);
   }
 }
 
