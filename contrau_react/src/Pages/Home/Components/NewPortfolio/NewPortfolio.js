@@ -130,7 +130,7 @@ const NewPortfolio = forwardRef((props, ref) => {
                         }
                         key="2"
                       >
-                        <div className="flex flex-wrap justify-left gap-y-[30px] gap-x-[20px]  mx-auto lg:w-[740px] xl:w-[900px]  lg:mt-[40px]">
+                        <div className="flex flex-wrap justify-left gap-y-[30px] gap-x-[20px] mx-auto sm:w-[504px] xl:w-[877px] 2xl:w-[900px] lg:mt-[40px]">
                           {sWInfrastructure?.map((logo, i) => {
                             return (
                               <>
@@ -168,7 +168,7 @@ const NewPortfolio = forwardRef((props, ref) => {
                         }
                         key="3"
                       >
-                        <div className="flex flex-wrap justify-left gap-y-[30px] gap-x-[20px]  mx-auto lg:w-[740px] xl:w-[900px]   lg:mt-[40px]">
+                        <div className="flex flex-wrap justify-left gap-y-[30px] gap-x-[20px] mx-auto sm:w-[504px] xl:w-[877px] 2xl:w-[900px] lg:mt-[40px]">
                           {digitalSupplyChain?.map((logo, i) => {
                             return (
                               <>
@@ -206,7 +206,7 @@ const NewPortfolio = forwardRef((props, ref) => {
                         }
                         key="4"
                       >
-                        <div className="flex flex-wrap justify-left gap-y-[30px] gap-x-[20px]  mx-auto lg:w-[740px] xl:w-[900px]   lg:mt-[40px]">
+                        <div className="flex flex-wrap justify-left gap-y-[30px] gap-x-[20px] mx-auto sm:w-[504px] xl:w-[877px] 2xl:w-[900px] lg:mt-[40px]">
                           {sustainableMegacity?.map((logo, i) => {
                             return (
                               <>

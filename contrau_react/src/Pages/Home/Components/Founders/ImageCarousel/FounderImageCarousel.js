@@ -34,7 +34,7 @@ export default function FounderImageCarousel({ data }) {
           id="titleText"
           className="flex items-center justify-center mx-[20px]"
         >
-          <p className="h-[100px] text-white popinsFont  font-light text-[13px] 2xl:text-[20px] 2xl:font-normal text-center pt-[17%]">
+          <p className="h-[100px] text-white popinsFont  font-light text-[13px] lg:text-[18px] lg:font-normal text-center pt-[17%]">
             {data?.acf?.title.slice(0, 50).concat("...")}
           </p>
         </div>
@@ -56,8 +56,8 @@ export default function FounderImageCarousel({ data }) {
           id="titleText"
           className="flex items-center justify-center mx-[20px] h-[100px] pt-[17%]"
         >
-          <p className="text-white popinsFont  font-light text-[13px] 2xl:text-[20px] 2xl:font-normal text-center">
-            {data?.acf?.title.slice(0, 80).concat("...")}
+          <p className="text-white popinsFont  font-light text-[13px] lg:text-[18px] lg:font-normal text-center">
+            {data?.acf?.title.slice(0, 50).concat("...")}
           </p>
         </div>
       </div>
@@ -75,7 +75,7 @@ export default function FounderImageCarousel({ data }) {
         </div>
         <div
           id="titleText"
-          className="flex items-center justify-center mx-[20px] h-[40px] relative bottom-[-38px] "
+          className="flex items-center justify-center mx-[20px] h-[40px] relative bottom-[-31px] "
         >
           <p className="text-white popinsFont  font-light text-[14px] text-center">
             {data?.acf?.title.slice(0, 50).concat("...")}
@@ -104,8 +104,8 @@ export default function FounderImageCarousel({ data }) {
             className="flex items-center justify-center mx-[20px] h-[47px] relative bottom-[-25px]"
           >
             <div id="titleText">
-              <p className="text-white popinsFont  font-light text-[12px] text-center pt-[3%] mb-[26px]">
-                {data?.acf?.title.slice(0, 40).concat("...")}
+              <p className="text-white popinsFont  font-light text-[12px] text-center pt-[6%] ">
+                {data?.acf?.title.slice(0, 50).concat("...")}
               </p>
             </div>
           </div>

@@ -110,7 +110,7 @@ export default function ContactForm() {
             {...register("title", { required: true })}
             type="text"
             placeholder="Title"
-            className="break-all lg:h-[75px]  w-full h-[40px] bg-inputBg pl-[26px]   caret-[#DB2F33] opacity-60 active:cursor-text text-[#fff] hover:opacity-100 cursor-pointer pt-[26px]"
+            className="break-all lg:h-[75px]  w-full h-[40px] bg-inputBg pl-[26px]   caret-[#DB2F33] opacity-60 active:cursor-text text-[#fff] hover:opacity-100 cursor-pointer pt-[8px] lg:pt-[26px]"
             id="title"
             name="title"
             style={{ resize: "none" }}

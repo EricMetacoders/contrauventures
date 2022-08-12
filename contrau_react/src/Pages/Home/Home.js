@@ -23,11 +23,11 @@ export default function Home() {
 
   return (
     <>
-      <Header resultRef={resultRef} partnersRef={partnersRef} />
+      <Header />
       <Hero />
-      <Group ref={partnersRef} />
+      <Group />
       <Founders />
-      <NewPortfolio ref={resultRef} />
+      <NewPortfolio />
       <ValueAdd />
       <Faq />
       {/* <News /> */}

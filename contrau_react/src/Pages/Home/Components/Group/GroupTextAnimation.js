@@ -33,15 +33,15 @@ export default function Components() {
           </FadeInUpDiv>
 
           {/* Desktop */}
-          <div className="hidden xl:block">
+          <div className="hidden sm:block">
             <div className="text-white  leading-[1] ">
               {showText2 ? (
                 <FadeInUpDiv>
                   <div className="flex space-x-7">
-                    <p className="popinsFont  text-[110px] font-[900] mb-0">
+                    <p className="popinsFont  sm:text-[63px] xl:text-[110px] font-[900] mb-0">
                       We are{" "}
                     </p>
-                    <p className="popinsFont italic text-[110px] font-thin mb-0">
+                    <p className="popinsFont italic sm:text-[63px] xl:text-[110px] font-thin mb-0">
                       a Fund of
                     </p>
                   </div>
@@ -52,50 +52,13 @@ export default function Components() {
               {showText2 ? (
                 <FadeInUpDiv>
                   <div className="flex space-x-1 justify-start">
-                    <p className="italic popinsFont font-thin text-[110px] mr-[16px]">
+                    <p className="italic popinsFont font-thin text-[63px] xl:text-[110px] mr-[16px]">
                       Korean
                     </p>
-                    <span className="popinsFont text-[110px] font-[900]">
+                    <span className="popinsFont text-[63px] xl:text-[110px] font-[900]">
                       FOUNDERS
                     </span>
-                    <span className="popinsFont text-red text-[110px] font-[900]">
-                      .
-                    </span>
-                  </div>
-                </FadeInUpDiv>
-              ) : (
-                <></>
-              )}
-            </div>
-          </div>
-
-          {/* Tablet*/}
-          <div className="hidden sm:block xl:hidden">
-            <div className="text-white  leading-[1] ">
-              {showText2 ? (
-                <FadeInUpDiv>
-                  <div className="flex space-x-7">
-                    <p className="popinsFont  text-[63px] font-[900] mb-0">
-                      We are{" "}
-                    </p>
-                    <p className="popinsFont italic text-[63px] font-thin mb-0">
-                      a Fund of
-                    </p>
-                  </div>
-                </FadeInUpDiv>
-              ) : (
-                <></>
-              )}
-              {showText2 ? (
-                <FadeInUpDiv>
-                  <div className="flex space-x-1 justify-start">
-                    <p className="italic popinsFont font-thin text-[63px] mr-[16px]">
-                      Korean
-                    </p>
-                    <span className="popinsFont text-[63px] font-[900]">
-                      FOUNDERS
-                    </span>
-                    <span className="popinsFont text-red text-[63px] font-[900]">
+                    <span className="popinsFont text-red  text-[63px] xl:text-[110px] font-[900]">
                       .
                     </span>
                   </div>
@@ -137,19 +100,19 @@ export default function Components() {
           {showText3 ? (
             <FadeInUpDiv>
               <div className="2xl:mr-[-70px]">
-                <p className="popinsFont  text-[13px] md:text-[13px] lg:text-[13px] xl:text-[20px] leading-[20px] 2xl:leading-[32px] font-[300]">
+                <p className="popinsFont  text-[13px] md:text-[13px] lg:text-[13px] xl:text-[20px] leading-[20px] xl:leading-[32px] font-[300]">
                   We once encountered the challenges facing many startup-ers
                   these days.
                 </p>
-                <p className="popinsFont  text-[13px] md:text-[13px] lg:text-[13px] xl:text-[20px] leading-[20px] 2xl:leading-[32px] font-[300]">
+                <p className="popinsFont  text-[13px] md:text-[13px] lg:text-[13px] xl:text-[20px] leading-[20px] xl:leading-[32px] font-[300]">
                   We are here to accompany them on this arduous yet exciting
                   journey.
                 </p>
-                <p className="popinsFont  text-[13px] md:text-[13px] xl:text-[20px] lg:text-[13px] leading-[20px] 2xl:leading-[32px] font-[300]">
+                <p className="popinsFont  text-[13px] md:text-[13px] xl:text-[20px] lg:text-[13px] leading-[20px] xl:leading-[32px] font-[300]">
                   Different linguistic and cultural backgrounds don’t matter
                   when we look in the same direction.
                 </p>
-                <p className="popinsFont  text-[13px] md:text-[13px] lg:text-[13px] xl:text-[20px] leading-[20px] 2xl:leading-[32px] font-[300]">
+                <p className="popinsFont  text-[13px] md:text-[13px] lg:text-[13px] xl:text-[20px] leading-[20px] xl:leading-[32px] font-[300]">
                   We take pride in being the pioneer in Korea's digital
                   transformation over the past decade.
                 </p>

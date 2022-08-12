@@ -33,17 +33,17 @@ export default function Founders() {
         <div className="mt-[80px] md:mt-[300px]">
           <div>
             {/* desktop animation */}
-            <div className="hidden xl:block xl:w-[1174px] 2xl:w-[1194px] h-[442px]">
+            <div className="hidden sm:block xl:w-[1174px] 2xl:w-[1194px] h-[442px]">
               {/* start animation */}
               {offset > 2300 ? <FounderTextAnimation /> : <></>}
             </div>
             {/* end animation */}
 
             {/* tablet animation */}
-            <div className="hidden sm:block xl:hidden   xl:w-[1119px] 2xl:w-[1127px] h-[442px]">
-              {/* start animation */}
-              {offset > 2300 ? <FounderTextAnimation /> : <></>}
-            </div>
+            {/* <div className="hidden sm:block xl:hidden   xl:w-[1119px] 2xl:w-[1127px] h-[442px]"> */}
+            {/* start animation */}
+            {/* {offset > 2300 ? <FounderTextAnimation /> : <></>} */}
+            {/* </div> */}
             {/* end animation */}
 
             {/* mobile animation */}

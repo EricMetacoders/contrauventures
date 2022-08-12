@@ -89,7 +89,7 @@
     height: 1px;
     background-color: white;
     position: relative;
-    bottom: -29px;
+    bottom: -25px;
   }
 }
 
@@ -106,7 +106,7 @@
     }
   }
 }
-@media only screen and (max-width: 639px) {
+@media only screen and (max-width: 500px) {
   #founderId {
     .lineDiv::after {
       content: "";
@@ -115,7 +115,22 @@
       height: 1px;
       background-color: white;
       position: relative;
-      bottom: -14px;
+      bottom: -20px;
+    }
+  }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 639px) {
+  #founderId {
+    .lineDiv::after {
+      bottom: -24px;
+    }
+  }
+}
+@media only screen and (min-width: 640px) and (max-width: 768px) {
+  #founderId {
+    .lineDiv::after {
+      bottom: -16px;
     }
   }
 }
