@@ -54,6 +54,22 @@ function HeaderFounder({ detailFounder }) {
   }, [y]);
 
   const matchMobile = useMediaQuery("(max-width:639px)");
+
+  const datacontentHeader = [
+    {
+      id: 1,
+      url: "",
+      content: "Home",
+      active: false,
+    },
+    {
+      id: 2,
+      url: "story",
+      content: "Story",
+      active: true,
+    },
+  ];
+
   return (
     <div>
       <Box className="frameheaderfoundermain">
@@ -75,12 +91,19 @@ function HeaderFounder({ detailFounder }) {
             <TemporaryDrawer />
           ) : (
             <Box className="titledetaimainframeheader" style={{ opacity: "1" }}>
-              <Link to="/">
-                <Box className="titledetaiframeheader">HOME</Box>
-              </Link>
-              <Link to="/story">
-                <Box className="titledetaiframeheader-active">Story</Box>
-              </Link>
+              {datacontentHeader?.map((item, index) => (
+                <Link to={`/${item.url}`} key={index}>
+                  <Box
+                    className={
+                      item.active
+                        ? "titledetaiframeheader-active"
+                        : "titledetaiframeheader"
+                    }
+                  >
+                    {item.content}
+                  </Box>
+                </Link>
+              ))}
             </Box>
           )}
         </div>

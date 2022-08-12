@@ -79,22 +79,6 @@ function MainFounder(props) {
     }
   };
 
-  // async function getIdFounderFromAPI() {
-  //   try {
-  //     let listFounderInteview = await interviewServices.getFounderIDByName();
-  //     return listFounderInteview;
-  //   } catch (error) {
-  //     console.log("Failed to fetch", error);
-  //   }
-  // }
-
-  // const founderList = useSelector((state) => state.interviewSlice.listFounder);
-  // console.log("founderList:", founderList);
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(getListFounder());
-  // }, []);
-
   return (
     <div className="rootmainfounder">
       {/* FRAME BUTTON */}
