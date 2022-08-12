@@ -10,6 +10,7 @@ import homeSlice from "./reducers/homeSlice";
 import interviewSlice from "./reducers/interviewSlice";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 const store = configureStore({
   reducer: {
     homeSlice,
@@ -20,7 +21,7 @@ const store = configureStore({
 });
 
 root.render(
-  <Provider store={store} r>
+  <Provider store={store}>
     <App />
   </Provider>
 );

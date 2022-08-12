@@ -5,8 +5,12 @@ import "./news.scss";
 
 export default function News() {
   const dispatch = useDispatch();
+
+  // get data from homeSlice
   const data = useSelector((state) => state.homeSlice.news);
+
   useEffect(() => {
+    // call api
     dispatch(getNewsList());
   }, []);
 

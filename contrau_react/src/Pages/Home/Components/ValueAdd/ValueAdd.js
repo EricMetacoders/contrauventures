@@ -10,6 +10,7 @@ export default function ValueAdd() {
     dispatch(getEmpowerList());
   }, []);
 
+  // handle enable animation location
   const [offset, setOffset] = useState(null);
   const handleScroll = () => setOffset(window.pageYOffset);
   useEffect(() => {
@@ -57,6 +58,7 @@ export default function ValueAdd() {
                   alt={empower?.acf?.title}
                   className="object-cover  w-full min-h-[200px] max-h-[200px]  sm:min-h-[351px] sm:max-h-[351px] lg:min-w-[370px] lg:min-h-[205px] lg:max-w-[370px] lg:max-h-[205px]"
                 />
+
                 <p className=" popinsFont leading-[18px] font-light lg:leading-[32px] lg:font-normal lg:ml-[40px] lg:text-[20px]   text-[13px] mb-0">
                   {empower?.acf?.content}
                 </p>

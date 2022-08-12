@@ -3,7 +3,7 @@ import { useMediaQuery } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
 
 import { Element, Events, Link } from "react-scroll";
-import { interviewServices } from "../../../../../../../services/interviewService";
+import { interviewServices } from "services/interviewService";
 
 function ReactScroll({ founderID }) {
   const [listGallery, setListGallery] = useState([{}]);
@@ -18,7 +18,7 @@ function ReactScroll({ founderID }) {
 
       return detailgallery;
     } catch (error) {
-      console.log("Failed to fetch", error);
+      console.log("getGalleryFounderDetail => detailgallery", error);
     }
   }
 

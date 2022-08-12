@@ -15,9 +15,11 @@ export default function ContactForm() {
     formState: { errors },
   } = useForm();
 
+  // attachFile name
   const [fileName, setFileName] = useState("Attach File");
   const [file, setFile] = useState(null);
 
+  // handle Submit
   const onSubmit = (data) => {
     const fileData = file;
     const dataInfor = {
@@ -34,8 +36,8 @@ export default function ContactForm() {
       yourName: data.yourName,
       attachFile: fileData,
     };
-
     if (file != undefined) {
+      // check file type
       if (file?.type != "application/pdf") {
         setError("attachFile", {
           type: "filetype",
@@ -101,7 +103,6 @@ export default function ContactForm() {
         });
     }
   };
-
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>

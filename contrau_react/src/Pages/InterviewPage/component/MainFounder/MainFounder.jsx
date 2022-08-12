@@ -2,11 +2,10 @@ import { Box, useMediaQuery, useTheme } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import "./style.scss";
 
-import { useDispatch, useSelector } from "react-redux";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import { interviewServices } from "../../../../services/interviewService";
+import { interviewServices } from "services/interviewService";
 import ListFounder from "./ListFounder/ListFounder";
 
 MainFounder.propTypes = {};
@@ -25,7 +24,7 @@ function MainFounder(props) {
       let listFounder = await interviewServices.getListFounder();
       return listFounder;
     } catch (error) {
-      console.log("Failed to fetch", error);
+      console.log("getListFounder => listFounder", error);
     }
   }
 

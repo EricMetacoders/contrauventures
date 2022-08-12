@@ -9,9 +9,11 @@ import "./faqCollapse.css";
 export default function Faq() {
   const dispatch = useDispatch();
 
+  // get data from homeSlice
   const faqList = useSelector((state) => state.homeSlice.faqList);
 
   useEffect(() => {
+    // call api
     dispatch(getFAQList());
   }, []);
 
@@ -52,7 +54,7 @@ export default function Faq() {
                         .getElementById(`parentDiv${i}`)
                         .classList.add("greyBg");
                     }}
-                    onMouseOut={(e) => {
+                    onMouseOut={() => {
                       document
                         .getElementById(`parentDiv${i}`)
                         .classList.remove("greyBg");
