@@ -92,6 +92,19 @@
     bottom: -25px;
   }
 }
+@media only screen and (min-width: 0) and (max-width: 639px) {
+  #founderId {
+    .lineDiv::after {
+      content: "";
+      display: none;
+      width: 20%;
+      height: 1px;
+      background-color: white;
+      position: relative;
+      bottom: -19px;
+    }
+  }
+}
 
 @media only screen and (min-width: 640px) and (max-width: 1023px) {
   #founderId {
