@@ -11,16 +11,15 @@ export default function ContactForm() {
     register,
     handleSubmit,
     reset,
-    formState,
-    formState: { isSubmitSuccessful },
     setError,
     formState: { errors },
   } = useForm();
 
   const [fileName, setFileName] = useState("Attach File");
+  const [file, setFile] = useState(null);
 
   const onSubmit = (data) => {
-    const file = data.attachFile[0];
+    const fileData = file;
     const dataInfor = {
       _wpcf7: 325,
       _wpcf7_version: 5.6,
@@ -33,7 +32,7 @@ export default function ContactForm() {
       message: data.message,
       phone: data.phone,
       yourName: data.yourName,
-      attachFile: data?.attachFile[0],
+      attachFile: fileData,
     };
 
     if (file != undefined) {
@@ -62,6 +61,7 @@ export default function ContactForm() {
               title: "",
               email: "",
             });
+            setFile(null);
           })
           .catch((err) => {
             Swal.fire({
@@ -81,6 +81,16 @@ export default function ContactForm() {
             title: "Success",
             text: "Your message has been sent successfully!",
           });
+          reset({
+            yourName: "",
+            phone: "",
+            message: "",
+            phone: "",
+            attachFile: "",
+            title: "",
+            email: "",
+          });
+          setFile(null);
         })
         .catch((err) => {
           Swal.fire({
@@ -129,13 +139,15 @@ export default function ContactForm() {
             type="file"
             id="file"
             name="attachFile"
-            onChange={() => {
+            onChange={(e) => {
               let fileName = document.getElementById("file").value.split("\\");
+              console.log("fileName:", fileName);
               if (fileName[2] !== undefined) {
                 setFileName(fileName[2]);
               } else {
                 setFileName("Attach File");
               }
+              setFile(e.target.files[0]);
             }}
             className="w-full lgl:h-[75px] bg-inputBg pt-[30px] pl-[100px] text-[#fff]  custom-file-input cursor-pointer hidden"
           />

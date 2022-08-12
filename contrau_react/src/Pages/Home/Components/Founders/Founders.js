@@ -3,11 +3,13 @@ import { useDispatch } from "react-redux";
 import FounderTextAnimation from "./FounderTextAnimation";
 import { getFounderList } from "../../../../reducers/homeSlice";
 import FounderCarousel from "./Carousel/FounderCarousel";
-import "./Carousel/founderImageCarousel.scss";
 import TabletCarousel from "./Carousel/TabletCarousel";
 import SmallTabletCarousel from "./Carousel/SmallTabletCarousel";
 import MobileCarousel from "./Carousel/MobileCarousel";
+
+import "./ImageCarousel/founderImageCarousel.scss";
 import "./founder.scss";
+
 export default function Founders() {
   const dispatch = useDispatch();
 

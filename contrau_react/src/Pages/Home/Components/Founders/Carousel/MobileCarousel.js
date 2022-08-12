@@ -2,11 +2,11 @@ import React, { Component, useEffect } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import FounderImageCarousel from "./FounderImageCarousel";
-import MobileImageCarousel from "./MobileImgCarousel";
+import FounderImageCarousel from "../ImageCarousel/FounderImageCarousel";
+import MobileImageCarousel from "../ImageCarousel/MobileImgCarousel";
 import { useSelector } from "react-redux";
 
-import "./divImageSize.scss";
+import "../ImageCarousel/divImageSize.scss";
 
 export default function MobileCarousel() {
   const data = useSelector((state) => state.homeSlice.founders);

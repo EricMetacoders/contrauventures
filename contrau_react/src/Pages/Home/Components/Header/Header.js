@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../../assets/homepage_img/logo.svg";
-import TemporaryDrawer from "../../../InterviewPage/component/Header/TemporaryDrawer";
-import HeaderDropDown from "./HeaderDropDown";
 import NewHeaderDropDown from "./NewHeaderDropDown";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 export default function Header() {

@@ -18,7 +18,6 @@ const NewPortfolio = forwardRef((props, ref) => {
   useEffect(() => {
     dispatch(getPortfolioList());
   }, []);
-
   // filter Digital Supply Chain data
   const digitalSupplyChain = viewAll?.filter((logo) => {
     return logo.acf.category === "Digital Supply Chain";

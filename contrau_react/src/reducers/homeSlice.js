@@ -22,41 +22,40 @@ const homeSlice = createSlice({
         state.faqList = action.payload;
       })
       .addCase(getFAQList.rejected, (state, action) => {
-        console.log("error");
+        console.log(action.error);
       })
       .addCase(getPartnersList.fulfilled, (state, action) => {
         state.partners = action.payload;
       })
       .addCase(getPartnersList.rejected, (state, action) => {
-        console.log("error");
+        console.log(action.error);
       })
       .addCase(getFounderList.fulfilled, (state, action) => {
         state.founders = action.payload;
       })
       .addCase(getFounderList.rejected, (state, action) => {
-        console.log("error");
+        console.log(action.error);
       })
       .addCase(getPortfolioList.fulfilled, (state, action) => {
         state.portfolios = action.payload;
       })
       .addCase(getPortfolioList.rejected, (state, action) => {
-        console.log("error");
+        console.log(action.error);
       })
       .addCase(getNewsList.fulfilled, (state, action) => {
         state.news = action.payload;
       })
       .addCase(getNewsList.rejected, (state, action) => {
-        console.log("error");
+        console.log(action.error);
       })
       .addCase(getEmpowerList.fulfilled, (state, action) => {
-        state.empowers = action.payload;
+        state.empower = action.payload;
       })
       .addCase(getEmpowerList.rejected, (state, action) => {
-        console.log("error");
+        console.log(action.error);
       });
   },
 });
-// export const { getList } = homeSlice.actions;
 export default homeSlice.reducer;
 
 export const getFAQList = createAsyncThunk("getFAQList", async () => {

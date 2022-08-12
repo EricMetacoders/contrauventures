@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import { interviewServices } from "../../../../../services/interviewService";
 import "./founderImageCarousel.scss";
 export default function FounderImageCarousel({ data }) {
   const history = useNavigate();
-  const [founderList, setFounderList] = useState(null);
 
   const handleSeeFull = (data) => {
     const founderId = data.id;
