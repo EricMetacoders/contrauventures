@@ -1,4 +1,4 @@
-import React, { useEffect, useState, forwardRef } from "react";
+import React, { useEffect, useState } from "react";
 import { Tabs } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { getPortfolioList } from "../../../../reducers/homeSlice";
@@ -9,6 +9,8 @@ import Slick from "./Slick";
 import "./portfolio.scss";
 
 const NewPortfolio = () => {
+  const [test, setTest] = useState("HELLO");
+
   const { TabPane } = Tabs;
 
   // get Data from homeSlice
