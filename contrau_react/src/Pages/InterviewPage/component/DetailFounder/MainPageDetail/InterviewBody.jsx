@@ -1,5 +1,6 @@
-import { Box, useTheme } from "@mui/material";
+import React from "react";
 import PropTypes from "prop-types";
+import { Box } from "@mui/material";
 import dot1 from "assets/interview-img/dot1.png";
 import dot2 from "assets/interview-img/dot2.png";
 
@@ -8,7 +9,6 @@ InterviewBody.propTypes = {
 };
 
 function InterviewBody({ detailArticle }) {
-  const theme = useTheme();
 
   return (
     <Box>
@@ -17,7 +17,7 @@ function InterviewBody({ detailArticle }) {
         <div className="framehtmlinterview">
           <div className="framequote">
             <div className="framedot1">
-              <img src={dot1} />
+              <img src={dot1} alt="quote-dot1" />
             </div>
             <div className="frametitleqoute">
               <div
@@ -29,7 +29,7 @@ function InterviewBody({ detailArticle }) {
               />
             </div>
             <div className="framedot2">
-              <img src={dot2} />
+              <img src={dot2} alt="quote-dot2" />
             </div>
           </div>
 

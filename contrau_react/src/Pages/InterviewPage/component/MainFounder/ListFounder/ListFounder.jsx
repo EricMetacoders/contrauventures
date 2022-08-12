@@ -1,9 +1,7 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-import { useMediaQuery } from "@mui/material";
-import { createTheme, makeStyles, ThemeProvider } from "@mui/material/styles";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 ListFounder.propTypes = {};
 
@@ -21,7 +19,6 @@ const theme = createTheme({
 });
 
 function ListFounder({ listDataFounder }) {
-  const matchMobile = useMediaQuery("(max-width:1279px)");
   const history = useNavigate();
 
   // CLICK TO DIRECT DETAIL FOUNDER

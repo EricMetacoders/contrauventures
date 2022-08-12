@@ -1,3 +1,4 @@
+@import "/src/root.scss";
 .framemaingallery {
   background-color: #151515;
   position: relative;
@@ -11,12 +12,12 @@
     top: 50%;
     // transform: translateY(-50%);
     z-index: 5;
-    font-family: "Inter", sans-serif;
+    font-family: $font-inter;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
     line-height: 32px;
-    color: #ffffff;
+    color: $color-white-gallery;
     width: fit-content;
     padding-left: 8%;
 
@@ -24,23 +25,23 @@
       display: flex;
       flex-direction: column;
       row-gap: 20px;
-      color: #ffffff;
+      color: $color-white-gallery;
 
       .titleyeardetail:hover {
         cursor: pointer;
         text-decoration-line: underline;
-        color: #ffffff;
+        color: $color-white-gallery;
         opacity: 1;
       }
       .yeartitle {
-        color: #ffffff;
+        color: $color-white-gallery;
         opacity: 0.4;
       }
       .active {
         letter-spacing: 0.02em;
         text-decoration-line: underline;
         font-feature-settings: "tnum" on, "lnum" on;
-        color: #ffffff;
+        color: $color-white-gallery;
         opacity: 1 !important;
       }
     }
@@ -59,7 +60,7 @@
       .carousel-gallery {
         position: relative;
         padding-top: 0px;
-        color: #ffffff;
+        color: $color-white-gallery;
         width: 74%;
         height: auto;
         margin: auto;
@@ -275,7 +276,7 @@
           .titleyeardetail {
             width: auto;
             height: auto;
-            font-family: "Inter", sans-serif;
+            font-family: $font-inter;
             font-style: normal;
             font-weight: 800;
             // font-size: 200px;
@@ -297,7 +298,7 @@
           }
           .detailtitle {
             /* Body 20 Poppins */
-            font-family: "Poppins", sans-serif;
+            font-family: $font-poppin;
             margin: auto;
             margin-top: 5%;
             width: auto;
@@ -348,18 +349,18 @@
         .titleyeardetail:hover {
           cursor: pointer;
           text-decoration-line: none;
-          color: #ffffff;
+          color: $color-white-gallery;
           opacity: 1;
         }
         .yeartitle {
-          color: #ffffff;
+          color: $color-white-gallery;
           opacity: 0.4;
         }
         .active {
           letter-spacing: 0.02em;
           text-decoration-line: underline;
           font-feature-settings: "tnum" on, "lnum" on;
-          color: #ffffff;
+          color: $color-white-gallery;
           opacity: 1 !important;
         }
       }
@@ -373,7 +374,7 @@
         .carousel-gallery {
           position: relative;
           padding-top: 0px;
-          color: #ffffff;
+          color: $color-white-gallery;
           width: 88%;
           height: auto;
           margin: auto;
@@ -597,7 +598,7 @@
             .titleyeardetail {
               width: auto;
               height: auto;
-              font-family: "Inter", sans-serif;
+              font-family: $font-inter;
               font-style: normal;
               font-weight: 800;
               // font-size: 200px;
@@ -619,7 +620,7 @@
             }
             .detailtitle {
               /* Body 20 Poppins */
-              font-family: "Poppins", sans-serif;
+              font-family: $font-poppin;
               margin: auto;
               margin-top: 7%;
               width: 288px;
