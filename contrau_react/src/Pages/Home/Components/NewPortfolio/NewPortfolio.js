@@ -57,7 +57,7 @@ const NewPortfolio = forwardRef((props, ref) => {
         </div>
 
         <div id="portfolios" className="mt-[43%] lg:mt-[33%]">
-          <div id="mobilePortfolios" class="pt-[7rem] md:pt-[7rem] md:mt-0">
+          <div id="mobilePortfolios" className="pt-[7rem] md:pt-[7rem] md:mt-0">
             <div className="bg-portfolioBg pt-[2px]">
               {/* text content */}
               <div className="relative">
@@ -98,7 +98,7 @@ const NewPortfolio = forwardRef((props, ref) => {
                         <div className="flex flex-wrap justify-left gap-y-[30px] gap-x-[20px] mx-auto sm:w-[504px] xl:w-[877px] 2xl:w-[900px] lg:mt-[40px]">
                           {viewAll?.map((logo, i) => {
                             return (
-                              <>
+                              <div key={i}>
                                 <a href={logo.acf.linkWebsite} target="_blank">
                                   <div key={i}>
                                     <div className="flex items-center justify-center">
@@ -115,7 +115,7 @@ const NewPortfolio = forwardRef((props, ref) => {
                                 ) : (
                                   <></>
                                 )}
-                              </>
+                              </div>
                             );
                           })}
                         </div>
@@ -134,7 +134,7 @@ const NewPortfolio = forwardRef((props, ref) => {
                         <div className="flex flex-wrap justify-left gap-y-[30px] gap-x-[20px] mx-auto sm:w-[504px] xl:w-[877px] 2xl:w-[900px] lg:mt-[40px]">
                           {sWInfrastructure?.map((logo, i) => {
                             return (
-                              <>
+                              <div key={i}>
                                 <a href={logo.acf.linkWebsite} target="_blank">
                                   <div key={i}>
                                     <div className="flex items-center justify-center">
@@ -151,7 +151,7 @@ const NewPortfolio = forwardRef((props, ref) => {
                                 ) : (
                                   <></>
                                 )}
-                              </>
+                              </div>
                             );
                           })}
                         </div>
@@ -172,7 +172,7 @@ const NewPortfolio = forwardRef((props, ref) => {
                         <div className="flex flex-wrap justify-left gap-y-[30px] gap-x-[20px] mx-auto sm:w-[504px] xl:w-[877px] 2xl:w-[900px] lg:mt-[40px]">
                           {digitalSupplyChain?.map((logo, i) => {
                             return (
-                              <>
+                              <div key={i}>
                                 <a href={logo.acf.linkWebsite} target="_blank">
                                   <div>
                                     <div className="flex items-center justify-center">
@@ -189,7 +189,7 @@ const NewPortfolio = forwardRef((props, ref) => {
                                 ) : (
                                   <></>
                                 )}
-                              </>
+                              </div>
                             );
                           })}
                         </div>
@@ -210,7 +210,7 @@ const NewPortfolio = forwardRef((props, ref) => {
                         <div className="flex flex-wrap justify-left gap-y-[30px] gap-x-[20px] mx-auto sm:w-[504px] xl:w-[877px] 2xl:w-[900px] lg:mt-[40px]">
                           {sustainableMegacity?.map((logo, i) => {
                             return (
-                              <>
+                              <div key={i}>
                                 <a href={logo.acf.linkWebsite} target="_blank">
                                   <div key={i}>
                                     <div className="flex items-center justify-center">
@@ -227,7 +227,7 @@ const NewPortfolio = forwardRef((props, ref) => {
                                 ) : (
                                   <></>
                                 )}
-                              </>
+                              </div>
                             );
                           })}
                         </div>

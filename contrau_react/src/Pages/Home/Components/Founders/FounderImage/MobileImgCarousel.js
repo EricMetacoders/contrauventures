@@ -4,7 +4,6 @@ import { interviewServices } from "../../../../../services/interviewService";
 
 export default function MobileImgCarousel({ data }) {
   const history = useNavigate();
-  const [founderList, setFounderList] = useState(null);
 
   const handleSeeFull = (data) => {
     const founderId = data.acf.interview[0];
@@ -31,7 +30,7 @@ export default function MobileImgCarousel({ data }) {
               <div>
                 <p className="text-white text-[32px] 2xl:text-[50px] font-[900] popinsFont">
                   {data?.acf?.first_name.toUpperCase()}
-                  &nbsp
+                  &nbsp;
                   {data?.acf?.last_name.toUpperCase()}
                 </p>
               </div>

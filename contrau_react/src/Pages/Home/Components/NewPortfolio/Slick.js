@@ -150,7 +150,7 @@ export default function Slick() {
         <div className="flex flex-wrap col gap-x-[10px] gap-y-[20px] justify-left mt-[26px] mx-auto w-[300px]">
           {data?.map((logo, i) => {
             return (
-              <>
+              <div key={i}>
                 <a href={logo.acf.linkWebsite} target="_blank">
                   <div key={i}>
                     <div className="flex items-center justify-center">
@@ -163,7 +163,7 @@ export default function Slick() {
                   </div>
                 </a>
                 {(i + 1) % 4 === 0 ? <hr className="w-full bg-white" /> : <></>}
-              </>
+              </div>
             );
           })}
         </div>

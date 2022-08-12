@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 
@@ -11,7 +11,6 @@ export default function ContactForm() {
     register,
     handleSubmit,
     reset,
-    formState: { isSubmitSuccessful },
     setError,
     formState: { errors },
   } = useForm();
@@ -36,9 +35,9 @@ export default function ContactForm() {
       yourName: data.yourName,
       attachFile: data?.attachFile[0],
     };
-    if (file != undefined) {
+    if (file !== undefined) {
       // check file type
-      if (file?.type != "application/pdf") {
+      if (file?.type !== "application/pdf") {
         setError("attachFile", {
           type: "filetype",
           message: "Please upload pdf file only.",
@@ -58,7 +57,6 @@ export default function ContactForm() {
               yourName: "",
               phone: "",
               message: "",
-              phone: "",
               attachFile: "",
               title: "",
               email: "",
@@ -141,7 +139,7 @@ export default function ContactForm() {
           />
           <label
             className="w-full lg:h-[75px] bg-inputBg flex items-center pl-[59px] text-[#fff]   opacity-60 hover:opacity-100 custom-file-input cursor-pointer"
-            for="file"
+            htmlFor="file"
           >
             <img src={ic_file} alt="file" className="absolute left-[15px]" />{" "}
             <p className="text-[12px] popinsFont sm:text-[18px] text-white opacity-60">
