@@ -1,3 +1,4 @@
+@import "/src/root.scss";
 .framemaingallery {
   background-color: #151515;
   position: relative;
@@ -5,18 +6,16 @@
   padding-top: 15%;
   .categorydetailyear {
     display: block;
-    // background: "black",
     width: 10%;
     position: sticky;
     top: 50%;
-    // transform: translateY(-50%);
     z-index: 5;
-    font-family: "Inter", sans-serif;
+    font-family: $font-inter;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
     line-height: 32px;
-    color: #ffffff;
+    color: $color-white-gallery;
     width: fit-content;
     padding-left: 8%;
 
@@ -24,23 +23,23 @@
       display: flex;
       flex-direction: column;
       row-gap: 20px;
-      color: #ffffff;
+      color: $color-white-gallery;
 
       .titleyeardetail:hover {
         cursor: pointer;
         text-decoration-line: underline;
-        color: #ffffff;
+        color: $color-white-gallery;
         opacity: 1;
       }
       .yeartitle {
-        color: #ffffff;
+        color: $color-white-gallery;
         opacity: 0.4;
       }
       .active {
         letter-spacing: 0.02em;
         text-decoration-line: underline;
         font-feature-settings: "tnum" on, "lnum" on;
-        color: #ffffff;
+        color: $color-white-gallery;
         opacity: 1 !important;
       }
     }
@@ -49,7 +48,6 @@
   .element {
     // PC 1920
     width: auto;
-    // padding-bottom: 18%;
     background-color: #151515;
 
     .rootgallery {
@@ -59,7 +57,7 @@
       .carousel-gallery {
         position: relative;
         padding-top: 0px;
-        color: #ffffff;
+        color: $color-white-gallery;
         width: 74%;
         height: auto;
         margin: auto;
@@ -68,7 +66,6 @@
           height: auto;
           .frameimgtop {
             display: flex;
-            // flex-direction: row;
             width: 82.5%;
             column-gap: 15%;
             height: auto;
@@ -76,7 +73,6 @@
 
             .frameimg1 {
               height: auto;
-
               img {
                 width: 100%;
                 height: 100%;
@@ -86,8 +82,6 @@
               }
             }
             .frameimg2 {
-              // 496x269
-              // 1366x912 => 390x211
               height: auto;
               margin-top: auto;
               img {
@@ -135,8 +129,6 @@
         // show 3 img
         .frameimgmain3 {
           height: auto;
-          // padding-top: 60px;
-          // margin-bottom: 19%;
           .frameimgtop {
             display: flex;
             column-gap: 11%;
@@ -187,9 +179,6 @@
         }
         // show 1 img
         .frameimgmain1 {
-          // height: auto;
-          // padding-top: 60px;
-          // margin-bottom: 19%;
           .frameimgtop {
             .frameimg1 {
               margin-top: 0%;
@@ -237,10 +226,8 @@
               }
             }
             .frameimg2 {
-              // max-height: 369px;
               margin-left: auto;
               width: 43%;
-              // height: 20.7vw;
               img {
                 width: 100%;
                 height: 100%;
@@ -265,8 +252,6 @@
           position: absolute;
           left: 50%;
           top: 27%;
-          // top: 35%;
-          // top: 35%;
           transform: translateX(-50%);
           display: flex;
           flex-direction: column;
@@ -275,7 +260,7 @@
           .titleyeardetail {
             width: auto;
             height: auto;
-            font-family: "Inter", sans-serif;
+            font-family: $font-inter;
             font-style: normal;
             font-weight: 800;
             // font-size: 200px;
@@ -297,14 +282,13 @@
           }
           .detailtitle {
             /* Body 20 Poppins */
-            font-family: "Poppins", sans-serif;
+            font-family: $font-poppin;
             margin: auto;
             margin-top: 5%;
             width: auto;
             font-style: normal;
             font-weight: 400;
             font-size: 1vw;
-            // line-height: 32px;
             line-height: 1.7vw;
             /* or 160% */
             text-align: center;
@@ -348,18 +332,18 @@
         .titleyeardetail:hover {
           cursor: pointer;
           text-decoration-line: none;
-          color: #ffffff;
+          color: $color-white-gallery;
           opacity: 1;
         }
         .yeartitle {
-          color: #ffffff;
+          color: $color-white-gallery;
           opacity: 0.4;
         }
         .active {
           letter-spacing: 0.02em;
           text-decoration-line: underline;
           font-feature-settings: "tnum" on, "lnum" on;
-          color: #ffffff;
+          color: $color-white-gallery;
           opacity: 1 !important;
         }
       }
@@ -373,7 +357,7 @@
         .carousel-gallery {
           position: relative;
           padding-top: 0px;
-          color: #ffffff;
+          color: $color-white-gallery;
           width: 88%;
           height: auto;
           margin: auto;
@@ -401,10 +385,7 @@
                 }
               }
               .frameimg2 {
-                // height: auto;
                 margin-top: auto;
-                // width: 30vw;
-                // width: 28%;
                 width: 35%;
 
                 img {
@@ -424,25 +405,19 @@
               height: auto;
               column-gap: 12%;
               .frameimg3 {
-                // width: 70%;
                 width: 39%;
-                // height: 19vw;
                 img {
                   width: 100%;
                   height: 100%;
                   max-width: 220px;
                   max-height: 138px;
                   object-fit: contain;
-                  // 220 146
                 }
               }
               .frameimg4 {
                 width: 37%;
                 margin-left: 0px;
-                // margin-top: 9vw;
-                // height: 16vw;
                 img {
-                  // 210 118
                   margin-top: 8px;
                   width: 100%;
                   height: 100%;
@@ -455,8 +430,6 @@
           }
           .frameimgmain3 {
             height: auto;
-            // padding-top: 60px;
-            // margin-bottom: 19%;
             .frameimgtop {
               display: flex;
               column-gap: 11%;
@@ -477,10 +450,7 @@
               .frameimg2 {
                 width: 70%;
                 margin-left: 0px;
-                // height: 19vw;
-                // max-height: 136px;
                 img {
-                  // 234 x156
                   width: 100%;
                   height: 100%;
                   max-width: 244px;
@@ -511,9 +481,6 @@
           }
 
           .frameimgmain1 {
-            // height: auto;
-            // padding-top: 60px;
-            // margin-bottom: 19%;
             .frameimgtop {
               .frameimg1 {
                 margin-top: 0%;
@@ -559,11 +526,8 @@
                 }
               }
               .frameimg2 {
-                // height: 18vw;
-                // max-height: 369px;
                 width: 50%;
                 margin-left: auto;
-                // height: 20.7vw;
                 img {
                   margin-left: auto;
                   width: 100%;
@@ -597,10 +561,9 @@
             .titleyeardetail {
               width: auto;
               height: auto;
-              font-family: "Inter", sans-serif;
+              font-family: $font-inter;
               font-style: normal;
               font-weight: 800;
-              // font-size: 200px;
               font-size: 60px;
               line-height: 100%;
               /* identical to box height, or 200px */
@@ -619,7 +582,7 @@
             }
             .detailtitle {
               /* Body 20 Poppins */
-              font-family: "Poppins", sans-serif;
+              font-family: $font-poppin;
               margin: auto;
               margin-top: 7%;
               width: 288px;
