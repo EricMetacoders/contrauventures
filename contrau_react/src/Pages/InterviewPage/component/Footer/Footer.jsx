@@ -1,9 +1,9 @@
 import React from "react";
 import "./style.scss";
 import { Box } from "@mui/material";
-import logotraufooter from "../../../../assets/interview-img/footerlogo.svg";
-import logofbsvg from "../../../../assets/interview-img/fb.svg";
-import logolisvg from "../../../../assets/interview-img/li.svg";
+import logotraufooter from "assets/interview-img/footerlogo.svg";
+import logofbsvg from "assets/interview-img/fb.svg";
+import logolisvg from "assets/interview-img/li.svg";
 FooterComponent.propTypes = {};
 
 function FooterComponent(props) {

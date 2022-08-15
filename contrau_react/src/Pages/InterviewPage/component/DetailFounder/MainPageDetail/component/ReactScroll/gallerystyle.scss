@@ -66,7 +66,6 @@
           height: auto;
           .frameimgtop {
             display: flex;
-            // flex-direction: row;
             width: 82.5%;
             column-gap: 15%;
             height: auto;
@@ -74,7 +73,6 @@
 
             .frameimg1 {
               height: auto;
-
               img {
                 width: 100%;
                 height: 100%;
@@ -84,8 +82,6 @@
               }
             }
             .frameimg2 {
-              // 496x269
-              // 1366x912 => 390x211
               height: auto;
               margin-top: auto;
               img {
@@ -416,7 +412,6 @@
                   max-width: 220px;
                   max-height: 138px;
                   object-fit: contain;
-                  // 220 146
                 }
               }
               .frameimg4 {
