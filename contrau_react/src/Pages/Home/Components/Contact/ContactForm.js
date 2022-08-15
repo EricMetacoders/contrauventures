@@ -36,9 +36,9 @@ export default function ContactForm() {
       yourName: data.yourName,
       attachFile: fileData,
     };
-    if (file != undefined) {
+    if (file !== undefined) {
       // check file type
-      if (file?.type != "application/pdf") {
+      if (file?.type !== "application/pdf") {
         setError("attachFile", {
           type: "filetype",
           message: "Please upload pdf file only.",
@@ -58,7 +58,6 @@ export default function ContactForm() {
               yourName: "",
               phone: "",
               message: "",
-              phone: "",
               attachFile: "",
               title: "",
               email: "",

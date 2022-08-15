@@ -21,7 +21,7 @@ export default function TabletCarousel() {
     <Slider {...settings}>
       {data?.map((img, index) => {
         return (
-          <div className="divImgSize">
+          <div className="divImgSize" key={index}>
             <FounderImageCarousel key={index} data={img} />
           </div>
         );

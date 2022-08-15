@@ -29,7 +29,7 @@ export default function MobileImgCarousel({ data }) {
               <div>
                 <p className="text-white text-[32px] 2xl:text-[50px] font-[900] popinsFont">
                   {data?.acf?.first_name.toUpperCase()}
-                  &nbsp
+                  &nbsp;
                   {data?.acf?.last_name.toUpperCase()}
                 </p>
               </div>

@@ -1,4 +1,4 @@
-import { Box, useMediaQuery, useTheme } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import "./style.scss";
 
@@ -12,7 +12,6 @@ MainFounder.propTypes = {};
 
 function MainFounder(props) {
   //RESPONSIVE
-  const theme = useTheme();
 
   const matchMobile = useMediaQuery("(max-width:639px)");
 
@@ -21,7 +20,7 @@ function MainFounder(props) {
   // GET LIST FOUNDER FROM API
   async function getListFounder() {
     try {
-      let listFounder = await interviewServices.getListFounder();
+      const listFounder = await interviewServices.getListFounder();
       return listFounder;
     } catch (error) {
       console.log("getListFounder => listFounder", error);
@@ -30,7 +29,7 @@ function MainFounder(props) {
 
   useEffect(() => {
     async function fetchData() {
-      var _listFounder = await getListFounder();
+      const _listFounder = await getListFounder();
 
       setListFounder2(_listFounder.data);
     }
@@ -68,33 +67,17 @@ function MainFounder(props) {
     setClicked(item.name);
 
     if (item.name !== "View All") {
-      var _listFounder = await getListFounder();
+      const _listFounder = await getListFounder();
 
       const filtercategory = _listFounder.data.filter((founder) => {
-        return founder.acf.category == item.name;
+        return founder.acf.category === item.name;
       });
       setListFounder2(filtercategory);
     } else {
-      var _listFounder = await getListFounder();
+      const _listFounder = await getListFounder();
       setListFounder2(_listFounder.data);
     }
   };
-
-  // async function getIdFounderFromAPI() {
-  //   try {
-  //     let listFounderInteview = await interviewServices.getFounderIDByName();
-  //     return listFounderInteview;
-  //   } catch (error) {
-  //     console.log("Failed to fetch", error);
-  //   }
-  // }
-
-  // const founderList = useSelector((state) => state.interviewSlice.listFounder);
-  // console.log("founderList:", founderList);
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(getListFounder());
-  // }, []);
 
   return (
     <div className="rootmainfounder">
@@ -107,7 +90,7 @@ function MainFounder(props) {
               <Box
                 key={item.id}
                 className={
-                  clicked == item.name
+                  clicked === item.name
                     ? "frame-icon-main tab-active"
                     : "frame-icon-main tab-notactive"
                 }
@@ -124,7 +107,7 @@ function MainFounder(props) {
             <div
               key={item.id}
               className={
-                clicked == item.name
+                clicked === item.name
                   ? "buttoncategory-active"
                   : "buttoncategory"
               }
@@ -136,7 +119,7 @@ function MainFounder(props) {
         </div>
       )}
       {/* FRAME FOUNDER */}
-      {Object.values(listFounder2).length != 0 && (
+      {Object.values(listFounder2).length !== 0 && (
         <ListFounder listDataFounder={listFounder2} />
       )}
     </div>

@@ -1,6 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { Box, useMediaQuery, useTheme } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 
 import logoheader from "assets/interview-img/logoheadertrau.svg";
 import "./style.scss";
@@ -13,8 +13,6 @@ HeaderFounder.propTypes = {
 };
 
 function HeaderFounder({ detailFounder }) {
-  const theme = useTheme();
-
   // CHECK EVENT SCROLL DOWN
   const [y, setY] = useState(0);
 
@@ -56,6 +54,22 @@ function HeaderFounder({ detailFounder }) {
   }, [y]);
 
   const matchMobile = useMediaQuery("(max-width:639px)");
+
+  const datacontentHeader = [
+    {
+      id: 1,
+      url: "",
+      content: "Home",
+      active: false,
+    },
+    {
+      id: 2,
+      url: "story",
+      content: "Story",
+      active: true,
+    },
+  ];
+
   return (
     <div>
       <Box className="frameheaderfoundermain">
@@ -77,12 +91,19 @@ function HeaderFounder({ detailFounder }) {
             <TemporaryDrawer />
           ) : (
             <Box className="titledetaimainframeheader" style={{ opacity: "1" }}>
-              <Link to="/">
-                <Box className="titledetaiframeheader">HOME</Box>
-              </Link>
-              <Link to="/story">
-                <Box className="titledetaiframeheader-active">Story</Box>
-              </Link>
+              {datacontentHeader?.map((item, index) => (
+                <Link to={`/${item.url}`} key={index}>
+                  <Box
+                    className={
+                      item.active
+                        ? "titledetaiframeheader-active"
+                        : "titledetaiframeheader"
+                    }
+                  >
+                    {item.content}
+                  </Box>
+                </Link>
+              ))}
             </Box>
           )}
         </div>
@@ -90,6 +111,7 @@ function HeaderFounder({ detailFounder }) {
           <img
             src={detailFounder?.acf?.header_image}
             className="logobackgroundheader"
+            alt="Header"
           />
         </Box>
 

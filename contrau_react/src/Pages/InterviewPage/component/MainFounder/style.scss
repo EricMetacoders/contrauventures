@@ -1,3 +1,5 @@
+@import "/src/root.scss";
+
 .rootmainfounder {
   width: auto;
   margin-bottom: 100px;
@@ -19,34 +21,25 @@
       gap: 10px;
       width: 330px;
       height: 62px;
-      /* BLACK 101010 */
       cursor: pointer;
-      background: #101010;
-      /* BLACK 101010 */
-
-      border: 1px solid #101010;
-
+      background: $color-black;
+      border: 1px solid $color-black;
       /* Inside auto layout */
       transition-duration: 550ms;
       transition-property: all;
 
       .detailtitlebutton {
-        // width: 80px;
         width: auto;
         height: 30px;
-
-        font-family: "Poppins", sans-serif;
+        font-family: $font-poppin;
         font-style: normal;
         font-weight: 600;
         font-size: 20px;
         line-height: 30px;
         /* identical to box height */
-
         text-align: center;
-
         /* WHITE */
-
-        color: #ffffff;
+        color: $color-white-gallery;
       }
     }
     .buttoncategory {
@@ -60,31 +53,21 @@
       gap: 10px;
       width: 330px;
       height: 62px;
-      /* BLACK 101010 */
       cursor: pointer;
       background: white;
-      /* BLACK 101010 */
-
-      border: 1px solid #101010;
-
+      border: 1px solid $color-black;
       .detailtitlebutton {
         width: auto;
         height: 30px;
-        font-family: "Poppins", sans-serif;
+        font-family: $font-poppin;
         font-style: normal;
         font-weight: 400;
         font-size: 20px;
         line-height: 30px;
         /* identical to box height */
-
         text-align: center;
-
-        /* BLACK 101010 */
-
-        color: #101010;
-
+        color: $color-black;
         /* Inside auto layout */
-
         flex: none;
         order: 0;
         flex-grow: 0;
@@ -98,10 +81,6 @@
     .frameimgfounder {
       transform: translateZ(0);
       position: relative;
-      // margin-left: 12px;
-      // margin-top: 10px;
-      // width: 35%;
-
       border-radius: 40px;
       cursor: pointer;
       overflow: hidden;
@@ -113,7 +92,6 @@
         object-fit: cover;
       }
       .imgfounder {
-        // box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
         border-radius: 40px;
       }
 
@@ -125,22 +103,21 @@
           bottom: 5%;
           width: 100%;
           transition-property: all;
-          transition-duration: 500ms;
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: $trans-dura;
+          transition-timing-function: $trans-time;
           row-gap: 80px;
           z-index: 100;
           .detailfoundername {
             .titlename {
-              font-family: "Poppins", sans-serif;
+              font-family: $font-poppin;
               font-style: normal;
               font-weight: 100;
               font-size: 50px;
               font-weight: 900;
               line-height: 50px;
-              color: #ffffff;
+              color: $color-white-gallery;
               text-align: center;
               overflow-wrap: break-word;
-              // margin: auto;
             }
           }
           .detailfoundername::after {
@@ -155,29 +132,19 @@
           }
           .titledetail {
             /* Body 20 Poppins */
-            // position: absolute;
-            // top: 20;
-
-            // background-color: red;
             width: 360px;
             height: 100px;
             margin: auto;
-            // margin-top: 5%;
-            // bottom: 5%;
-            // left: 8%;
-            font-family: "Poppins", sans-serif;
+            font-family: $font-poppin;
             font-style: normal;
             font-weight: 300;
             font-size: 20px;
             line-height: 32px;
             /* or 160% */
-
             text-align: center;
             letter-spacing: -0.02em;
-
             /* WHITE */
-            color: #ffffff;
-
+            color: $color-white-gallery;
             overflow: hidden;
             text-overflow: ellipsis;
             -webkit-line-clamp: 3;
@@ -186,8 +153,8 @@
             /* Inside auto layout */
             z-index: 60;
             transition-property: all;
-            transition-duration: 500ms;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: $trans-dura;
+            transition-timing-function: $trans-time;
           }
         }
       }
@@ -198,18 +165,16 @@
         height: 55%;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
-
-        // transform: translateY(-100%);
         transition-property: all;
-        transition-duration: 500ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: $trans-dura;
+        transition-timing-function: $trans-time;
       }
       .btnInterviewfounder {
         position: absolute;
         left: 25%;
         transition-property: all;
-        transition-duration: 500ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: $trans-dura;
+        transition-timing-function: $trans-time;
         z-index: 100;
       }
     }
@@ -218,28 +183,27 @@
       .bgBlur2 {
         transform: translateY(-44%);
         transition-property: all;
-        transition-duration: 500ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: $trans-dura;
+        transition-timing-function: $trans-time;
       }
       .framedetailfoundername {
         transform: translateY(-35%);
         transition-property: all;
-        transition-duration: 500ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: $trans-dura;
+        transition-timing-function: $trans-time;
       }
 
       .btnInterviewfounder {
         transform: translateY(-160%);
         transition-property: all;
-        transition-duration: 500ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: $trans-dura;
+        transition-timing-function: $trans-time;
       }
       img {
         transform: scale(110%, 110%);
         transition-property: all;
-        transition-duration: 500ms;
-
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: $trans-dura;
+        transition-timing-function: $trans-time;
       }
     }
   }
@@ -254,11 +218,9 @@
     width: auto;
 
     .carouselcategory {
-      // height: auto;
-      // width: 100%;
       height: 24px;
       margin: auto;
-      font-family: "Poppins", sans-serif;
+      font-family: $font-poppin;
       font-style: normal;
       font-weight: 600;
       font-size: 16px;
@@ -266,17 +228,11 @@
       /* identical to box height, or 150% */
       padding-left: 35px;
       letter-spacing: -0.5px;
-
-      /* Gray/800 */
-
       /* Inside auto layout */
-
       flex: none;
       order: 0;
       flex-grow: 0;
-
       .slick-list {
-        // width: 522px;
         width: 100%;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       }
@@ -286,7 +242,7 @@
       .tab-active {
         .itemslide {
           font-weight: 600;
-          background: #ffffff;
+          background: $color-white-gallery;
           width: max-content;
           padding-top: 17px;
           color: #222222;
@@ -304,7 +260,7 @@
       }
       .itemslide {
         color: #999999;
-        background: #ffffff;
+        background: $color-white-gallery;
         width: max-content;
         padding-top: 17px;
         text-align: center;
@@ -321,7 +277,6 @@
         position: relative;
         cursor: pointer;
         margin-top: 10px;
-        // margin-left: 20px;
         border-radius: 18px;
         max-height: auto;
         img {
@@ -338,7 +293,6 @@
             justify-content: center;
             flex-direction: column;
             bottom: 7%;
-
             border-radius: 40px;
             background-color: transparent;
             .detailfoundername {
@@ -346,9 +300,9 @@
               order: 0;
               flex-grow: 0;
               .titlename {
-                font-family: "Poppins", sans-serif;
+                font-family: $font-poppin;
                 font-style: normal;
-                color: #ffffff;
+                color: $color-white-gallery;
                 text-align: center;
                 font-size: 24px;
                 line-height: 24px;
@@ -400,25 +354,18 @@
   .rootmainfounder {
     width: auto;
     .carouselcategory {
-      // height: auto;
       height: 24px;
-
-      // margin: auto;
-
-      font-family: "Poppins", sans-serif;
+      font-family: $font-poppin;
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
       line-height: 24px;
       /* identical to box height, or 150% */
       letter-spacing: -0.5px;
-      // padding-left: 35px;
-      // background-color: red;
       .slick-list {
         width: 100%;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         padding-left: 35px;
-        // background-color: aqua;
       }
       .slick-slide {
         width: fit-content !important;
@@ -426,7 +373,6 @@
       .tab-active {
         .itemslide {
           font-weight: 600;
-          // background: #ffffff;
           width: max-content;
           padding-top: 17px;
           color: #222222;
@@ -444,7 +390,7 @@
       }
       .itemslide {
         color: #999999;
-        background: #ffffff;
+        background: $color-white-gallery;
         width: max-content;
         padding-top: 17px;
         text-align: center;
@@ -462,7 +408,6 @@
         position: relative;
         cursor: pointer;
         margin-top: 10px;
-        // margin-left: 20px;
         border-radius: 18px;
         max-height: 225.5px;
         .imgfounder {
@@ -482,16 +427,14 @@
             justify-content: center;
             flex-direction: column;
             bottom: 7%;
-
             border-radius: 40px;
             background-color: transparent;
             width: 100%;
-
             .detailfoundername {
               .titlename {
-                font-family: "Poppins", sans-serif;
+                font-family: $font-poppin;
                 font-style: normal;
-                color: #ffffff;
+                color: $color-white-gallery;
                 text-align: center;
                 font-size: 24px;
                 line-height: 24px;
@@ -547,7 +490,6 @@
         width: 150px;
         height: 62px;
         .detailtitlebutton {
-          // width: 80px;
           width: auto;
           height: 30px;
           font-weight: 600;
@@ -571,7 +513,6 @@
         position: relative;
         cursor: pointer;
         margin-top: 10px;
-        // margin-left: 20px;
         border-radius: 18px;
         max-height: 225.5px;
         .imgfounder {
@@ -602,9 +543,9 @@
               order: 0;
               flex-grow: 0;
               .titlename {
-                font-family: "Poppins", sans-serif;
+                font-family: $font-poppin;
                 font-style: normal;
-                color: #ffffff;
+                color: $color-white-gallery;
                 text-align: center;
                 font-size: 24px;
                 line-height: 24px;
@@ -683,7 +624,6 @@
         position: relative;
         cursor: pointer;
         margin-top: 10px;
-        // margin-left: 20px;
         border-radius: 18px;
         max-height: 225.5px;
         .imgfounder {
@@ -714,9 +654,9 @@
               order: 0;
               flex-grow: 0;
               .titlename {
-                font-family: "Poppins", sans-serif;
+                font-family: $font-poppin;
                 font-style: normal;
-                color: #ffffff;
+                color: $color-white-gallery;
                 text-align: center;
                 font-size: 24px;
                 line-height: 24px;
@@ -771,7 +711,6 @@
         width: 250px;
         height: 62px;
         .detailtitlebutton {
-          // width: 80px;
           width: auto;
           height: 30px;
           font-weight: 600;
@@ -795,7 +734,6 @@
         position: relative;
         cursor: pointer;
         margin-top: 10px;
-        // margin-left: 20px;
         border-radius: 18px;
         max-height: 225.5px;
         .imgfounder {
@@ -828,7 +766,7 @@
               .titlename {
                 font-family: "Poppins", sans-serif;
                 font-style: normal;
-                color: #ffffff;
+                color: $color-white-gallery;
                 text-align: center;
                 font-size: 24px;
                 line-height: 24px;
@@ -894,19 +832,13 @@
         gap: 10px;
         width: 250px;
         height: 62px;
-        /* BLACK 101010 */
         cursor: pointer;
-        background: #101010;
-        /* BLACK 101010 */
-
-        border: 1px solid #101010;
-
+        background: $color-black;
+        border: 1px solid $color-black;
         /* Inside auto layout */
         transition-duration: 550ms;
         transition-property: all;
-
         .detailtitlebutton {
-          // width: 80px;
           width: auto;
           height: 30px;
         }
@@ -929,9 +861,6 @@
     .framefounder {
       .frameimgfounder {
         position: relative;
-        // margin-left: 12px;
-        // margin-top: 10px;
-        //   width: 400px;
         border-radius: 40px;
         cursor: pointer;
         overflow: hidden;
@@ -948,8 +877,6 @@
           height: 55%;
           border-bottom-left-radius: 20px;
           border-bottom-right-radius: 20px;
-
-          // transform: translateY(-100%);
         }
       }
     }
@@ -976,19 +903,13 @@
         gap: 10px;
         width: 330px;
         height: 62px;
-        /* BLACK 101010 */
         cursor: pointer;
-        background: #101010;
-        /* BLACK 101010 */
-
-        border: 1px solid #101010;
-
+        background: $color-black;
+        border: 1px solid $color-black;
         /* Inside auto layout */
         transition-duration: 550ms;
         transition-property: all;
-
         .detailtitlebutton {
-          // width: 80px;
           width: auto;
           height: 30px;
         }
@@ -1011,9 +932,6 @@
     .framefounder {
       .frameimgfounder {
         position: relative;
-        // margin-left: 12px;
-        // margin-top: 10px;
-        //   width: 400px;
         border-radius: 40px;
         cursor: pointer;
         overflow: hidden;
@@ -1030,8 +948,6 @@
           height: 55%;
           border-bottom-left-radius: 20px;
           border-bottom-right-radius: 20px;
-
-          // transform: translateY(-100%);
         }
       }
       .btnInterviewfounder:hover {
@@ -1072,9 +988,6 @@
     .framefounder {
       .frameimgfounder {
         position: relative;
-        // margin-left: 12px;
-        // margin-top: 10px;
-        //   width: 400px;
         border-radius: 40px;
         cursor: pointer;
         overflow: hidden;
@@ -1084,15 +997,12 @@
           height: 100%;
           object-fit: cover;
         }
-
         .bgBlur2 {
           width: 100%;
           top: 71%;
           height: 55%;
           border-bottom-left-radius: 20px;
           border-bottom-right-radius: 20px;
-
-          // transform: translateY(-100%);
         }
       }
     }
