@@ -48,16 +48,6 @@ const NewPortfolio = () => {
     setClicked(itemName);
   };
 
-  // set Offset of scroll position
-  const [offset, setOffset] = useState(null);
-  const handleScroll = () => setOffset(window.pageYOffset);
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <>
       <div className="bg-portfolioBg pt-[2px] sm:pt-[7rem] md:pt-[2px] mt-[171px] lg:mt-[401px] relative">
