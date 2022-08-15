@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ValueAddAnimation from "./ValueAddAnimation";
-import { getEmpowerList } from "../../../../reducers/homeSlice";
+import { getEmpowerList } from "reducers/homeSlice";
 
 export default function ValueAdd() {
   const dispatch = useDispatch();

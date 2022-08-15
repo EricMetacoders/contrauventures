@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
+import { InView } from "react-intersection-observer";
 import FounderTextAnimation from "./FounderTextAnimation";
-import { getFounderList } from "../../../../reducers/homeSlice";
+import { getFounderList } from "reducers/homeSlice";
 import FounderCarousel from "./Carousel/FounderCarousel";
 import TabletCarousel from "./Carousel/TabletCarousel";
 import SmallTabletCarousel from "./Carousel/SmallTabletCarousel";
@@ -12,38 +13,41 @@ import "./ImageCarousel/founderImageCarousel.scss";
 export default function Founders() {
   const dispatch = useDispatch();
 
+  const [inView, setInView] = useState(false);
+
   // call api from homeSlice
   useEffect(() => {
     dispatch(getFounderList());
   }, []);
 
   // handle enable animation location
-  const [offset, setOffset] = useState(null);
-  const handleScroll = () => setOffset(window.pageYOffset);
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+
   return (
     <div id="founderId">
       <div className="mx-[34px] md:mx-[117px] xl:mx-[100px] 2xl:mx-[300px]">
         <div className="mt-[80px] md:mt-[300px]">
-          <div>
-            {/* desktop animation */}
-            <div className="hidden sm:block xl:w-[1174px] 2xl:w-[1194px] h-[442px]">
-              {/* start animation */}
+          <div className="xl:w-[1174px] 2xl:w-[1194px] h-[442px]">
+            <div inView={inView}>
+              <InView onChange={setInView} triggerOnce>
+                {({ ref, inView }) => (
+                  <div ref={ref}>
+                    {inView ? <FounderTextAnimation /> : <></>}
+                  </div>
+                )}
+              </InView>
+            </div>
+
+            {/* <div className="hidden sm:block xl:w-[1174px] 2xl:w-[1194px] h-[442px]">
+
               {offset > 2300 ? <FounderTextAnimation /> : <></>}
             </div>
-            {/* end animation */}
 
-            {/* mobile animation */}
+
+
             <div className="block sm:hidden w-[305px] h-[315px]">
-              {/* start animation */}
+
               {offset > 1100 ? <FounderTextAnimation /> : <></>}
-            </div>
-            {/* end animation */}
+            </div> */}
           </div>
         </div>
 

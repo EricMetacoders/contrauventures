@@ -1,9 +1,9 @@
 import React from "react";
 import { Box } from "@mui/material";
-import shadowBg from "../../../../assets/homepage_img/shadowBg.png";
-import logofbsvg from "../../../../assets/interview-img/fb.svg";
-import logolisvg from "../../../../assets/interview-img/li.svg";
-import logotraufooter from "../../../../assets/interview-img/footerlogo.svg";
+import shadowBg from "assets/homepage_img/shadowBg.png";
+import logofbsvg from "assets/interview-img/fb.svg";
+import logolisvg from "assets/interview-img/li.svg";
+import logotraufooter from "assets/interview-img/footerlogo.svg";
 
 import "./footer.scss";
 

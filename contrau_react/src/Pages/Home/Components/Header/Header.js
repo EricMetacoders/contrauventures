@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../../../assets/homepage_img/logo.svg";
+import logo from "assets/homepage_img/logo.svg";
 import NewHeaderDropDown from "./NewHeaderDropDown";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Tabs } from "antd";
 import { useDispatch, useSelector } from "react-redux";
-import { getPortfolioList } from "../../../../reducers/homeSlice";
-import bg from "../../../../assets/homepage_img/porti_bg.png";
+import { getPortfolioList } from "reducers/homeSlice";
+import bg from "assets/homepage_img/porti_bg.png";
 import PortfolioTextAnimation from "./PortfolioTextAnimation";
 import Slick from "./Slick";
 

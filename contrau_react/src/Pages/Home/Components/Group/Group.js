@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import GroupTextAnimation from "./GroupTextAnimation";
-import { getPartnersList } from "../../../../reducers/homeSlice";
+import { getPartnersList } from "reducers/homeSlice";
 import { PartnerLogo } from "./PartnerLogo/PartnerLogo";
 import { GroupCarouselAnimation, WrapperGroupCarousel } from "./GroupStyle";
 
