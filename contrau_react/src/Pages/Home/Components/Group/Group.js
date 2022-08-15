@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { InView } from "react-intersection-observer";
 import { useDispatch, useSelector } from "react-redux";
 import GroupTextAnimation from "./GroupTextAnimation";
 import { getPartnersList } from "reducers/homeSlice";
@@ -8,6 +9,8 @@ import { GroupCarouselAnimation, WrapperGroupCarousel } from "./GroupStyle";
 export default function Group() {
   const dispatch = useDispatch();
 
+  const [inView, setInView] = useState(false);
+
   // get data from homeSlice
   const partners = useSelector((state) => state.homeSlice.partners);
 
@@ -16,14 +19,6 @@ export default function Group() {
     dispatch(getPartnersList());
   }, []);
 
-  const [offset, setOffset] = useState(0);
-  const handleScroll = () => setOffset(window.pageYOffset);
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   return (
     <div>
       <div className="bg-partnersContactBg overflow-hidden ">
@@ -34,7 +29,15 @@ export default function Group() {
           <div className="mx-[34px] md:mx-[117px] 2xl:mx-[300px] 2xl:pb-[65px]  pt-[108px]">
             <div className=" w-[292px] h-[474.5px]  sm:w-[1320px] sm:h-[498px] xl:w-[1030px] xl:h-[498px]">
               {/* start animation */}
-              {offset > 100 ? <GroupTextAnimation /> : <></>}
+              <div inView={inView}>
+                <InView onChange={setInView}>
+                  {({ ref, inView }) => (
+                    <div ref={ref}>
+                      {inView ? <GroupTextAnimation /> : <></>}
+                    </div>
+                  )}
+                </InView>
+              </div>
               {/* end animation */}
             </div>
           </div>

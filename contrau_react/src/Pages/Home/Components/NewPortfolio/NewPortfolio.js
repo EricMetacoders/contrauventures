@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { InView } from "react-intersection-observer";
 import { Tabs } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { getPortfolioList } from "reducers/homeSlice";
@@ -9,7 +10,7 @@ import Slick from "./Slick";
 import "./portfolio.scss";
 
 const NewPortfolio = () => {
-  const [test, setTest] = useState("HELLO");
+  const [inView, setInView] = useState(false);
 
   const { TabPane } = Tabs;
 
@@ -74,18 +75,16 @@ const NewPortfolio = () => {
             <div className="bg-portfolioBg pt-[2px]">
               {/* text content */}
               <div className="relative">
-                {/* desktop animation */}
-                <div className="hidden md:block h-[454px] mt-[107px] sm:mt-0">
-                  {/* start animation */}
-                  {offset > 4100 ? <PortfolioTextAnimation /> : <></>}
-                  {/* end aimation */}
-                </div>
-
-                {/* mobile animation */}
-                <div className="block md:hidden h-[264px]">
-                  {/* start animation */}
-                  {offset > 2300 ? <PortfolioTextAnimation /> : <></>}
-                  {/* end aimation */}
+                <div className="h-[264px] md:h-[454px] md:mt-[107px] sm:mt-0">
+                  <div inView={inView}>
+                    <InView onChange={setInView}>
+                      {({ ref, inView }) => (
+                        <div ref={ref}>
+                          {inView ? <PortfolioTextAnimation /> : <></>}
+                        </div>
+                      )}
+                    </InView>
+                  </div>
                 </div>
               </div>
 

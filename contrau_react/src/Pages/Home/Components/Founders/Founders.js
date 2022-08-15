@@ -20,15 +20,14 @@ export default function Founders() {
     dispatch(getFounderList());
   }, []);
 
-  // handle enable animation location
-
   return (
     <div id="founderId">
       <div className="mx-[34px] md:mx-[117px] xl:mx-[100px] 2xl:mx-[300px]">
         <div className="mt-[80px] md:mt-[300px]">
-          <div className="xl:w-[1174px] 2xl:w-[1194px] h-[442px]">
+          <div className="w-[305px] h-[315px] sm:w-[1174px] 2xl:w-[1194px] sm:h-[442px]">
+            {/* start text animation */}
             <div inView={inView}>
-              <InView onChange={setInView} triggerOnce>
+              <InView onChange={setInView}>
                 {({ ref, inView }) => (
                   <div ref={ref}>
                     {inView ? <FounderTextAnimation /> : <></>}
@@ -36,18 +35,7 @@ export default function Founders() {
                 )}
               </InView>
             </div>
-
-            {/* <div className="hidden sm:block xl:w-[1174px] 2xl:w-[1194px] h-[442px]">
-
-              {offset > 2300 ? <FounderTextAnimation /> : <></>}
-            </div>
-
-
-
-            <div className="block sm:hidden w-[305px] h-[315px]">
-
-              {offset > 1100 ? <FounderTextAnimation /> : <></>}
-            </div> */}
+            {/* end text animation */}
           </div>
         </div>
 

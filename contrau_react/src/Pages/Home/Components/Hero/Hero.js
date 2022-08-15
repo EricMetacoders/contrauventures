@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import { InView } from "react-intersection-observer";
 import imgPhoto from "assets/homepage_img/img_hero.png";
 import HeroTextAnim from "./HeroTextAnim";
 import "./hero.scss";
 
 export default function Hero() {
+  const [inView, setInView] = useState(false);
   return (
     <div className=" overflow-hidden">
       <div className="lg:grid grid-cols-2">
@@ -13,7 +15,13 @@ export default function Hero() {
         >
           <div className="h-[235px] 2xl:h-[542px]">
             {/* start text animation */}
-            <HeroTextAnim />
+            <div inView={inView}>
+              <InView onChange={setInView}>
+                {({ ref, inView }) => (
+                  <div ref={ref}>{inView ? <HeroTextAnim /> : <></>}</div>
+                )}
+              </InView>
+            </div>
             {/* end text animation */}
           </div>
         </div>
