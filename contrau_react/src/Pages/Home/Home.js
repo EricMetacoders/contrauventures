@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from "react";
-import { useSelector } from "react-redux";
+import React from "react";
 import Header from "./Components/Header/Header";
 import Hero from "./Components/Hero/Hero";
 import Group from "./Components/Group/Group";
@@ -11,10 +10,8 @@ import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import "./index.css";
 import NewPortfolio from "./Components/NewPortfolio/NewPortfolio";
-import Loading from "../../Components/Loading/Loading";
-export default function Home() {
-  const loading = useSelector((state) => state.homeSlice.loading);
 
+export default function Home() {
   // scroll to top
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
@@ -27,7 +24,7 @@ export default function Home() {
       <Group />
       <Founders />
       <NewPortfolio />
-      <ValueAdd />
+      {/* <ValueAdd /> */}
       <Faq />
       {/* <News /> */}
       <Contact />

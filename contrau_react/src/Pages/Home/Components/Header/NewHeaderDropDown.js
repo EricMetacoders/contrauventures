@@ -8,6 +8,10 @@ import ListItemText from "@mui/material/ListItemText";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import * as React from "react";
 import { Link } from "react-router-dom";
+
+import "antd/dist/antd.css";
+import "./headerDropDown.css";
+
 export default function NewHeaderDropDown() {
   const [state, setState] = React.useState({
     right: false,

@@ -13,7 +13,7 @@ const interviewSlice = createSlice({
         state.listFounder = action.payload;
       })
       .addCase(getListFounder.rejected, (state, action) => {
-        console.log("error");
+        console.log("getListFounder", action.error);
       });
   },
 });
@@ -21,9 +21,8 @@ export default interviewSlice.reducer;
 
 export const getListFounder = createAsyncThunk("getListFounder", async () => {
   const response = await interviewServices.getListFounder();
-  console.log('response:', response)
+  console.log("response:", response);
   return response.data;
-
 });
 
 // export const { ccc } = interviewSlice.actions;

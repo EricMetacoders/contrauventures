@@ -20,9 +20,9 @@ export default function FounderImageCarousel({ data }) {
       />
 
       {/* Desktop */}
-      <div className="hidden sm:block absolute  bottom-[26%] lg:bottom-[9%] w-full imgText z-50 smooth">
+      <div className="hidden 2xl:block absolute bottom-[9%] w-full imgText z-50 smooth">
         <div className="flex flex-col items-center justify-center leading-[1] lineDiv">
-          <div id="nameText" className="lg:mb-[1%]">
+          <div id="nameText" className="mb-[1%]">
             <p className="text-white text-[32px] xl:text-[50px] font-[900] popinsFont text-center">
               {data?.acf?.first_name.toUpperCase()}
               &nbsp;
@@ -32,15 +32,59 @@ export default function FounderImageCarousel({ data }) {
         </div>
         <div
           id="titleText"
-          className="flex items-center justify-center mx-[20px] h-[40px] lg:h-[100px] pt-[26%] 2xl:pt-[0] relative lg:static bottom-[-31px] lg:bottom-[0]"
+          className="flex items-center justify-center mx-[20px]"
         >
-          <p className="text-white popinsFont  font-light text-[14] lg:text-[18px] lg:font-normal text-center lg:pt-[17%]">
+          <p className="h-[100px] text-white popinsFont  font-light text-[13px] lg:text-[18px] lg:font-normal text-center pt-[17%]">
+            {data?.acf?.title.slice(0, 50).concat("...")}
+          </p>
+        </div>
+      </div>
+
+      {/* Small Desktop Screen */}
+
+      <div className="hidden lg:block 2xl:hidden absolute bottom-[9%] w-full imgText z-50 smooth ">
+        <div className="flex flex-col items-center justify-center leading-[1] lineDiv">
+          <div id="nameText" className="mb-[1%]">
+            <p className="text-white text-[32px] xl:text-[50px]  font-[900] popinsFont text-center">
+              {data?.acf?.first_name.toUpperCase()}
+              &nbsp;
+              {data?.acf?.last_name.toUpperCase()}
+            </p>
+          </div>
+        </div>
+        <div
+          id="titleText"
+          className="flex items-center justify-center mx-[20px] h-[100px] pt-[17%]"
+        >
+          <p className="text-white popinsFont  font-light text-[13px] lg:text-[18px] lg:font-normal text-center">
+            {data?.acf?.title.slice(0, 50).concat("...")}
+          </p>
+        </div>
+      </div>
+
+      {/* Tablet */}
+      <div className="hidden sm:block lg:hidden absolute bottom-[26%] w-full z-50 ">
+        <div className="flex flex-col items-center justify-center leading-[1] lineDiv">
+          <div id="nameText">
+            <p className="text-white text-[31px] font-[900] popinsFont text-center">
+              {data?.acf?.first_name.toUpperCase()}
+              &nbsp;
+              {data?.acf?.last_name.toUpperCase()}
+            </p>
+          </div>
+        </div>
+        <div
+          id="titleText"
+          className="flex items-center justify-center mx-[20px] h-[40px] relative bottom-[-31px] "
+        >
+          <p className="text-white popinsFont  font-light text-[14px] text-center">
             {data?.acf?.title.slice(0, 50).concat("...")}
           </p>
         </div>
       </div>
 
       {/* Mobile */}
+
       <div className="block sm:hidden absolute bottom-[24%] w-full ">
         <div className="flex flex-col items-center justify-center z-10 ">
           <div
@@ -69,10 +113,7 @@ export default function FounderImageCarousel({ data }) {
       </div>
 
       {/* button */}
-      <div
-        id="btnPosition"
-        className="absolute  bottom-[10px]  lg:hidden w-full flex justify-center z-[100] "
-      >
+      <div className="absolute  bottom-[6%]  lg:hidden w-full flex justify-center z-[100] ">
         <div className=" w-[192px] h-[44px] bg-white  cursor-pointer">
           <div className="flex items-center justify-center w-full h-full">
             <p

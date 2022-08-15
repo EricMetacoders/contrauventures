@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import MainPageDetail from "./MainPageDetail/MainPageDetail";
-// import FooterComponent from "../Footer/Footer";
 import { useParams } from "react-router-dom";
 import NotFound from "Pages/NotFound/NotFound";
 import { interviewServices } from "services/interviewService";

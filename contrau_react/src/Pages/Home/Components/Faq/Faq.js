@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { ReactComponent as PlusImage } from "../../../../assets/homepage_img/plus.svg";
-import { ReactComponent as MinusImage } from "../../../../assets/homepage_img/minus.svg";
+import { ReactComponent as PlusImage } from "assets/homepage_img/plus.svg";
+import { ReactComponent as MinusImage } from "assets/homepage_img/minus.svg";
 import { Collapse } from "antd";
-import { getFAQList } from "../../../../reducers/homeSlice";
+import { getFAQList } from "reducers/homeSlice";
 import "./faqCollapse.css";
 
 export default function Faq() {

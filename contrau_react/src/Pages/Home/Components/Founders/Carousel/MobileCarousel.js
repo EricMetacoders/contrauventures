@@ -1,11 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import FounderImageCarousel from "../FounderImage/FounderImageCarousel";
-import { useSelector } from "react-redux";
+import FounderImageCarousel from "../ImageCarousel/FounderImageCarousel";
 
-import "./divImageSize.scss";
+import "../ImageCarousel/divImageSize.scss";
 
 export default function MobileCarousel() {
   const data = useSelector((state) => state.homeSlice.founders);
@@ -16,19 +16,6 @@ export default function MobileCarousel() {
     infinite: true,
     arrows: false,
     centerMode: true,
-    // responsive: [
-    //   {
-    //     breakpoint: 600,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1,
-    //       dots: false,
-    //       infinite: true,
-    //       arrows: false,
-    //       centerMode: true,
-    //     },
-    //   },
-    // ],
   };
   return (
     <Slider {...settings}>

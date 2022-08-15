@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getNewsList } from "../../../../reducers/homeSlice";
+import { getNewsList } from "reducers/homeSlice";
 import "./news.scss";
 
 export default function News() {

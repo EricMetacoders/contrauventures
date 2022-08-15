@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../../../assets/homepage_img/logo.svg";
-import TemporaryDrawer from "../../../InterviewPage/component/Header/TemporaryDrawer";
-import HeaderDropDown from "./HeaderDropDown";
+import logo from "assets/homepage_img/logo.svg";
 import NewHeaderDropDown from "./NewHeaderDropDown";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+
 export default function Header() {
   // handleShowHideHeader
   const refHeader = useRef();
@@ -61,7 +60,6 @@ export default function Header() {
           {/* logo Mobile */}
           <div className="block sm:hidden mb-[17px]" onClick={scrollTop}>
             <Link to="/">
-              {" "}
               <img src={logo} alt="logo" className="w-[100px] h-[30px]" />
             </Link>
           </div>
@@ -92,7 +90,6 @@ export default function Header() {
 
           {/* menu select mobile */}
           <div className="sm:hidden">
-            {/* <HeaderDropDown resultRef={resultRef} partnersRef={partnersRef} /> */}
             <div className="mt-[3px] mb-[19px]">
               <NewHeaderDropDown />
             </div>

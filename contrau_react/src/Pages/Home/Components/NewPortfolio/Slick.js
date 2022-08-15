@@ -8,147 +8,57 @@ export default function Slick() {
   // get data from HomeSlice
   const viewAll = useSelector((state) => state.homeSlice.portfolios);
 
-  // Filter Data
-  const digitalSupplyChain = viewAll?.filter((logo) => {
-    return logo.acf.category === "Digital Supply Chain";
-  });
-  const sustainableMegacity = viewAll?.filter((logo) => {
-    return logo.acf.category === "Sustainable Megacity";
-  });
-  const sWInfrastructure = viewAll?.filter((logo) => {
-    return logo.acf.category === "SW Infrastructure";
-  });
+  const [data, setData] = useState(viewAll);
 
-  const [data, setData] = useState(null);
+  const contentdatacategory = [
+    { id: 1, name: "View All" },
+    { id: 2, name: "SW Infrastructure" },
+    { id: 3, name: "Digital Supply Chain" },
+    { id: 4, name: "Sustainable Megacity" },
+  ];
+  const [clicked, setClicked] = useState(contentdatacategory[0].name);
 
   useEffect(() => {
     setData(viewAll);
   }, [viewAll]);
 
+  const datafilter = data?.filter((item) => {
+    if (clicked != "View All") {
+      return item?.acf?.category == clicked;
+    }
+    return data;
+  });
+
   // set Data
   const handleSetData = (name) => {
-    if (name === "View All") {
-      setData(viewAll);
-    } else if (name === "Digital Supply Chain") {
-      setData(digitalSupplyChain);
-    } else if (name === "Sustainable Megacity") {
-      setData(sustainableMegacity);
-    } else if (name === "SW Infrastructure") {
-      setData(sWInfrastructure);
-    }
-  };
-
-  // handle active class
-
-  const [viewAllActive, setViewAllActive] = useState(true);
-  const [digitalSupplyChainActive, setDigitalSupplyChainActive] =
-    useState(false);
-  const [sustainableMegacityActive, setSustainableMegacityActive] =
-    useState(false);
-  const [sWInfrastructureActive, setSWInfrastructureActive] = useState(false);
-
-  const handleActiveClass = (name) => {
-    if (name === "View All") {
-      setViewAllActive(true);
-      setDigitalSupplyChainActive(false);
-      setSustainableMegacityActive(false);
-      setSWInfrastructureActive(false);
-    } else if (name === "Digital Supply Chain") {
-      setDigitalSupplyChainActive(true);
-      setViewAllActive(false);
-      setSustainableMegacityActive(false);
-      setSWInfrastructureActive(false);
-    } else if (name === "Sustainable Megacity") {
-      setSustainableMegacityActive(true);
-      setDigitalSupplyChainActive(false);
-      setViewAllActive(false);
-      setSWInfrastructureActive(false);
-    } else if (name === "SW Infrastructure") {
-      setSWInfrastructureActive(true);
-      setDigitalSupplyChainActive(false);
-      setViewAllActive(false);
-      setSustainableMegacityActive(false);
-    }
+    setClicked(name);
   };
 
   return (
     <div id="slickId">
       <Carousel slidesToShow={2.5}>
         {/* View all button */}
-        <div
-          className="h-[56px]"
-          onClick={() => {
-            handleSetData("View All");
-            handleActiveClass("View All");
-          }}
-        >
-          <div className={viewAllActive ? "active" : "notActive"}>
-            <div className="flex items-center justify-center w-full h-full">
-              <p className="text-[14px] font-semibold popinsFont text-white">
-                View All
-              </p>
+        {contentdatacategory?.map((item, index) => (
+          <div
+            className="h-[56px]"
+            onClick={() => {
+              handleSetData(item.name);
+            }}
+          >
+            <div className={clicked == item.name ? "active" : "notActive"}>
+              <div className="flex items-center justify-center w-full h-full">
+                <p className="text-[14px] font-semibold popinsFont text-white">
+                  {item.name}
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-
-        {/* SWInfrastructure Button */}
-        <div
-          className=" h-[56px]"
-          onClick={() => {
-            // handleShowSWInfrastructure();
-            handleSetData("SW Infrastructure");
-            handleActiveClass("SW Infrastructure");
-          }}
-        >
-          <div className={sWInfrastructureActive ? "active" : "notActive"}>
-            <div className="flex items-center justify-center w-full h-full">
-              <p className="text-[14px] font-semibold popinsFont text-white text-center">
-                SW Infrastructure
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* DigitalSupplyChain Button */}
-        <div
-          className="h-[56px] "
-          onClick={() => {
-            // handleShowDigitalSupplyChain();
-            handleSetData("Digital Supply Chain");
-            handleActiveClass("Digital Supply Chain");
-          }}
-        >
-          <div className={digitalSupplyChainActive ? "active" : "notActive"}>
-            <div className="flex items-center justify-center w-full h-full">
-              <p className="text-[14px] font-semibold popinsFont text-white text-center">
-                Digital Supply Chain
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* SustainableMegacity Button */}
-        <div
-          className="h-[56px]"
-          onClick={() => {
-            // handleShowSustainableMegacity();
-            handleSetData("Sustainable Megacity");
-            handleActiveClass("Sustainable Megacity");
-          }}
-        >
-          <div className={sustainableMegacityActive ? "active" : "notActive"}>
-            <div className="flex items-center justify-center w-full h-full">
-              <p className="text-[14px] font-semibold popinsFont text-white text-center">
-                Sustainable Megacity
-              </p>
-            </div>
-          </div>
-        </div>
+        ))}
       </Carousel>
       {/* showAll data */}
-      {data ? (
+      {datafilter ? (
         <div className="flex flex-wrap col gap-x-[10px] gap-y-[20px] justify-left mt-[26px] mx-auto w-[300px]">
-          {data?.map((logo, i) => {
+          {datafilter?.map((logo, i) => {
             return (
               <div key={i}>
                 <a href={logo.acf.linkWebsite} target="_blank">

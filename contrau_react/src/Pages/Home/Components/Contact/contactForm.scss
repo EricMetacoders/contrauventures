@@ -4,16 +4,7 @@
 .custom-file-input::-webkit-file-upload-button {
   visibility: hidden;
 }
-.custom-file-input::before {
-  // content: "Attach File";
-  // color: #a5a5a5;
-  // background: transparent;
-  // outline: none;
-  // cursor: pointer;
-  // font-size: 18px;
-  // position: absolute;
-  // top: 28px;
-}
+
 .custom-file-input:hover::before {
   border-color: black;
 }

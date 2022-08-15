@@ -1,48 +1,52 @@
-import React, { useEffect, useState, forwardRef } from "react";
+import React, { useEffect, useState } from "react";
+import { InView } from "react-intersection-observer";
 import { Tabs } from "antd";
 import { useDispatch, useSelector } from "react-redux";
-import { getPortfolioList } from "../../../../reducers/homeSlice";
-import bg from "../../../../assets/homepage_img/porti_bg.png";
+import { getPortfolioList } from "reducers/homeSlice";
+import bg from "assets/homepage_img/porti_bg.png";
 import PortfolioTextAnimation from "./PortfolioTextAnimation";
 import Slick from "./Slick";
 
 import "./portfolio.scss";
 
-const NewPortfolio = forwardRef((props, ref) => {
+const NewPortfolio = () => {
+  const [inView, setInView] = useState(false);
+
   const { TabPane } = Tabs;
 
   // get Data from homeSlice
   const viewAll = useSelector((state) => state.homeSlice.portfolios);
 
+  const [categoryfounder, setCategoryFounder] = useState(viewAll);
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getPortfolioList());
   }, []);
+  const contentdatacategory = [
+    { id: 1, name: "View All" },
+    { id: 2, name: "SW Infrastructure" },
+    { id: 3, name: "Digital Supply Chain" },
+    { id: 4, name: "Sustainable Megacity" },
+  ];
 
-  // filter Digital Supply Chain data
-  const digitalSupplyChain = viewAll?.filter((logo) => {
-    return logo.acf.category === "Digital Supply Chain";
-  });
+  const [clicked, setClicked] = useState(contentdatacategory[0].name);
 
-  // filter Sustainable Megacity data
-  const sustainableMegacity = viewAll?.filter((logo) => {
-    return logo.acf.category === "Sustainable Megacity";
-  });
-
-  // filter SW Infrastructure data
-  const sWInfrastructure = viewAll?.filter((logo) => {
-    return logo.acf.category === "SW Infrastructure";
-  });
-
-  // set Offset of scroll position
-  const [offset, setOffset] = useState(null);
-  const handleScroll = () => setOffset(window.pageYOffset);
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+    setCategoryFounder(viewAll);
+  }, [viewAll]);
+
+  const categoryfilter = categoryfounder?.filter((item) => {
+    if (clicked != "View All") {
+      return item?.acf?.category == clicked;
+    }
+    return categoryfounder;
+  });
+
+  // Click change category
+  const clickCategory = (itemName) => {
+    setClicked(itemName);
+  };
 
   return (
     <>
@@ -61,18 +65,16 @@ const NewPortfolio = forwardRef((props, ref) => {
             <div className="bg-portfolioBg pt-[2px]">
               {/* text content */}
               <div className="relative">
-                {/* desktop animation */}
-                <div className="hidden md:block h-[454px] mt-[107px] sm:mt-0">
-                  {/* start animation */}
-                  {offset > 4100 ? <PortfolioTextAnimation /> : <></>}
-                  {/* end aimation */}
-                </div>
-
-                {/* mobile animation */}
-                <div className="block md:hidden h-[264px]">
-                  {/* start animation */}
-                  {offset > 2300 ? <PortfolioTextAnimation /> : <></>}
-                  {/* end aimation */}
+                <div className="h-[264px] md:h-[454px] md:mt-[107px] sm:mt-0">
+                  <div inView={inView}>
+                    <InView onChange={setInView}>
+                      {({ ref }) => (
+                        <div ref={ref}>
+                          {inView ? <PortfolioTextAnimation /> : <></>}
+                        </div>
+                      )}
+                    </InView>
+                  </div>
                 </div>
               </div>
 
@@ -83,64 +85,35 @@ const NewPortfolio = forwardRef((props, ref) => {
               >
                 <div className="mx-[20px]">
                   <div className="hidden sm:block">
-                    <Tabs defaultActiveKey="1">
-                      <TabPane
-                        tab={
-                          <div
-                            id="portfolioHover"
-                            className="popinsFont text-[10px] lg:text-[15px] xl:text-[20px] lg:font-semibold w-full h-full  flex items-center justify-center "
-                          >
-                            <p>View All</p>
-                          </div>
-                        }
-                        key="1"
-                      >
-                        <div className="flex flex-wrap justify-left gap-y-[30px] gap-x-[20px] mx-auto sm:w-[504px] xl:w-[877px] 2xl:w-[900px] lg:mt-[40px]">
-                          {viewAll?.map((logo, i) => {
-                            return (
-                              <div key={i}>
-                                <a href={logo.acf.linkWebsite} target="_blank">
+                    <Tabs defaultActiveKey="0">
+                      {contentdatacategory?.map((item, i) => (
+                        <TabPane
+                          tab={
+                            <div
+                              id="portfolioHover"
+                              className={
+                                i == 0
+                                  ? "popinsFont text-[10px] lg:text-[15px] xl:text-[20px] lg:font-semibold w-full h-full  flex items-center justify-center"
+                                  : `popinsFont text-[10px] lg:text-[15px] xl:text-[20px]  lg:font-semibold w-full h-full   flex flex-col items-center justify-center`
+                              }
+                              onClick={() => {
+                                clickCategory(item.name);
+                              }}
+                            >
+                              <p className="sm:block hidden">{item?.name}</p>
+                            </div>
+                          }
+                          key={i}
+                        >
+                          <div className="flex flex-wrap justify-left gap-y-[30px] gap-x-[20px] mx-auto sm:w-[504px] xl:w-[877px] 2xl:w-[900px] lg:mt-[40px]">
+                            {categoryfilter?.map((item, i) => (
+                              <>
+                                <a href={item.acf.linkWebsite} target="_blank">
                                   <div key={i}>
                                     <div className="flex items-center justify-center">
                                       <img
-                                        src={logo?.acf?.image}
-                                        alt={logo?.acf?.category}
-                                        className="imgWidth opacity-40 hover:opacity-100  w-[204px] h-[117px] object-contain"
-                                      />
-                                    </div>
-                                  </div>
-                                </a>
-                                {(i + 1) % 4 === 0 ? (
-                                  <hr className="w-full bg-white" />
-                                ) : (
-                                  <></>
-                                )}
-                              </div>
-                            );
-                          })}
-                        </div>
-                      </TabPane>
-                      <TabPane
-                        tab={
-                          <div
-                            id="portfolioHover"
-                            className="popinsFont text-[10px] lg:text-[15px] xl:text-[20px]  lg:font-semibold w-full h-full   flex flex-col items-center justify-center"
-                          >
-                            <p className="sm:block hidden">SW Infrastructure</p>
-                          </div>
-                        }
-                        key="2"
-                      >
-                        <div className="flex flex-wrap justify-left gap-y-[30px] gap-x-[20px] mx-auto sm:w-[504px] xl:w-[877px] 2xl:w-[900px] lg:mt-[40px]">
-                          {sWInfrastructure?.map((logo, i) => {
-                            return (
-                              <div key={i}>
-                                <a href={logo.acf.linkWebsite} target="_blank">
-                                  <div key={i}>
-                                    <div className="flex items-center justify-center">
-                                      <img
-                                        src={logo?.acf?.image}
-                                        alt={logo?.acf?.category}
+                                        src={item?.acf?.image}
+                                        alt={item?.acf?.category}
                                         className="imgWidth opacity-40 hover:opacity-100 w-[204px] h-[117px] object-contain"
                                       />
                                     </div>
@@ -151,87 +124,11 @@ const NewPortfolio = forwardRef((props, ref) => {
                                 ) : (
                                   <></>
                                 )}
-                              </div>
-                            );
-                          })}
-                        </div>
-                      </TabPane>
-                      <TabPane
-                        tab={
-                          <div
-                            id="portfolioHover"
-                            className=" popinsFont lg:text-[15px] text-[10px] xl:text-[20px]  lg:font-semibold w-full h-full  flex flex-col items-center justify-center"
-                          >
-                            <p className="sm:block hidden">
-                              Digital Supply Chain
-                            </p>
+                              </>
+                            ))}
                           </div>
-                        }
-                        key="3"
-                      >
-                        <div className="flex flex-wrap justify-left gap-y-[30px] gap-x-[20px] mx-auto sm:w-[504px] xl:w-[877px] 2xl:w-[900px] lg:mt-[40px]">
-                          {digitalSupplyChain?.map((logo, i) => {
-                            return (
-                              <div key={i}>
-                                <a href={logo.acf.linkWebsite} target="_blank">
-                                  <div>
-                                    <div className="flex items-center justify-center">
-                                      <img
-                                        src={logo?.acf?.image}
-                                        alt={logo?.acf?.category}
-                                        className="imgWidth opacity-40 hover:opacity-100 w-[204px] h-[117px] object-contain"
-                                      />
-                                    </div>
-                                  </div>
-                                </a>
-                                {(i + 1) % 4 === 0 ? (
-                                  <hr className="w-full bg-white" />
-                                ) : (
-                                  <></>
-                                )}
-                              </div>
-                            );
-                          })}
-                        </div>
-                      </TabPane>
-                      <TabPane
-                        tab={
-                          <div
-                            id="portfolioHover"
-                            className="popinsFont text-[10px] lg:text-[15px] xl:text-[20px]  lg:font-semibold w-full h-full flex items-center justify-center"
-                          >
-                            <p className="hidden sm:block">
-                              Sustainable Megacity
-                            </p>
-                          </div>
-                        }
-                        key="4"
-                      >
-                        <div className="flex flex-wrap justify-left gap-y-[30px] gap-x-[20px] mx-auto sm:w-[504px] xl:w-[877px] 2xl:w-[900px] lg:mt-[40px]">
-                          {sustainableMegacity?.map((logo, i) => {
-                            return (
-                              <div key={i}>
-                                <a href={logo.acf.linkWebsite} target="_blank">
-                                  <div key={i}>
-                                    <div className="flex items-center justify-center">
-                                      <img
-                                        src={logo?.acf?.image}
-                                        alt={logo?.acf?.category}
-                                        className="imgWidth opacity-40 hover:opacity-100 w-[204px] h-[117px] object-contain"
-                                      />
-                                    </div>
-                                  </div>
-                                </a>
-                                {(i + 1) % 4 === 0 ? (
-                                  <hr className="w-full bg-white" />
-                                ) : (
-                                  <></>
-                                )}
-                              </div>
-                            );
-                          })}
-                        </div>
-                      </TabPane>
+                        </TabPane>
+                      ))}
                     </Tabs>
                   </div>
                   <div className="block sm:hidden mt-[0] md:mt-[65%] lg:mt-[134px]">
@@ -247,6 +144,6 @@ const NewPortfolio = forwardRef((props, ref) => {
       </div>
     </>
   );
-});
+};
 
 export default NewPortfolio;
