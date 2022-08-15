@@ -3,8 +3,8 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 
 import "./contactForm.scss";
-import ic_file from "../../../../assets/homepage_img/ic_file.png";
-import { homeServices } from "../../../../services/homeServices";
+import ic_file from "assets/homepage_img/ic_file.png";
+import { homeServices } from "services/homeServices";
 
 export default function ContactForm() {
   const {
