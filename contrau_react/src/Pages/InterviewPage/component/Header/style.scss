@@ -4,7 +4,6 @@
   display: flex;
   position: relative;
   width: auto;
-  // height: auto;
   .frameimglayout {
     position: relative;
     width: 100%;
@@ -33,7 +32,6 @@
   .titledetaimainframeheader {
     position: absolute;
     display: flex;
-    // left: 75.8%;
     right: 90px;
     top: 0%;
     bottom: 0%;
@@ -47,38 +45,30 @@
       font-weight: 300;
       font-size: 16px;
       line-height: 24px;
-      /* WHITE */
-      color: #ffffff;
-      /* Inside auto layout */
+      color: $color-white-gallery;
       flex: none;
       order: 0;
       flex-grow: 0;
     }
     .titledetaiframeheader:hover {
-      color: #828383;
+      color: $titleheader-hover;
     }
     .titledetaiframeheader-active {
       margin-left: 48px;
-
       font-family: $font-poppin;
       font-style: normal;
       font-weight: 800;
       font-size: 16px;
       line-height: 24px;
       /* identical to box height */
-
-      /* WHITE */
-
-      color: #ffffff;
-
+      color: $color-white-gallery;
       /* Inside auto layout */
-
       flex: none;
       order: 0;
       flex-grow: 0;
     }
     .titledetaiframeheader-active:hover {
-      color: #828383;
+      color: $titleheader-hover;
     }
   }
 
@@ -97,8 +87,7 @@
     /* or 117% */
     text-align: center;
     letter-spacing: -0.01em;
-    /* WHITE */
-    color: #ffffff;
+    color: $color-white-gallery;
     .framedetailtitlemain {
       font-style: italic;
       font-weight: 100;
@@ -141,8 +130,6 @@
       left: 85%;
       font-size: 30px;
       padding-top: 15px;
-
-      // background-color: red;
     }
 
     .framemaintilecenterheader {
@@ -159,8 +146,7 @@
       line-height: 44px;
       /* or 110% */
       letter-spacing: -0.01em;
-
-      color: #ffffff;
+      color: $color-white-gallery;
       text-align: left;
       .framedetailtitlemain {
         font-style: italic;
@@ -184,7 +170,6 @@
     .titledetaimainframeheader {
       position: absolute;
       display: flex;
-      // left: 75.8%;
       right: 50px;
       top: 0%;
       bottom: 0%;
@@ -202,7 +187,7 @@
         line-height: 24px;
       }
       .titledetaiframeheader-active:hover {
-        color: #828383;
+        color: $titleheader-hover;
       }
     }
     .framemaintilecenterheader {
@@ -226,15 +211,13 @@
     .titledetaimainframeheader {
       position: absolute;
       display: flex;
-      // left: 75.8%;
       right: 50px;
       top: 0%;
       bottom: 0%;
       padding-top: 28px;
       height: fit-content;
-
       .titledetaiframeheader:hover {
-        color: #828383;
+        color: $titleheader-hover;
       }
       .titledetaiframeheader-active {
         line-height: 24px;
@@ -260,15 +243,13 @@
     .titledetaimainframeheader {
       position: absolute;
       display: flex;
-      // left: 75.8%;
       right: 50px;
       top: 0%;
       bottom: 0%;
       padding-top: 28px;
       height: fit-content;
-
       .titledetaiframeheader:hover {
-        color: #828383;
+        color: $titleheader-hover;
       }
       .titledetaiframeheader-active {
         line-height: 24px;

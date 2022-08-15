@@ -6,11 +6,9 @@
   padding-top: 15%;
   .categorydetailyear {
     display: block;
-    // background: "black",
     width: 10%;
     position: sticky;
     top: 50%;
-    // transform: translateY(-50%);
     z-index: 5;
     font-family: $font-inter;
     font-style: normal;
@@ -50,7 +48,6 @@
   .element {
     // PC 1920
     width: auto;
-    // padding-bottom: 18%;
     background-color: #151515;
 
     .rootgallery {
@@ -136,8 +133,6 @@
         // show 3 img
         .frameimgmain3 {
           height: auto;
-          // padding-top: 60px;
-          // margin-bottom: 19%;
           .frameimgtop {
             display: flex;
             column-gap: 11%;
@@ -188,9 +183,6 @@
         }
         // show 1 img
         .frameimgmain1 {
-          // height: auto;
-          // padding-top: 60px;
-          // margin-bottom: 19%;
           .frameimgtop {
             .frameimg1 {
               margin-top: 0%;
@@ -238,10 +230,8 @@
               }
             }
             .frameimg2 {
-              // max-height: 369px;
               margin-left: auto;
               width: 43%;
-              // height: 20.7vw;
               img {
                 width: 100%;
                 height: 100%;
@@ -266,8 +256,6 @@
           position: absolute;
           left: 50%;
           top: 27%;
-          // top: 35%;
-          // top: 35%;
           transform: translateX(-50%);
           display: flex;
           flex-direction: column;
@@ -305,7 +293,6 @@
             font-style: normal;
             font-weight: 400;
             font-size: 1vw;
-            // line-height: 32px;
             line-height: 1.7vw;
             /* or 160% */
             text-align: center;
@@ -402,10 +389,7 @@
                 }
               }
               .frameimg2 {
-                // height: auto;
                 margin-top: auto;
-                // width: 30vw;
-                // width: 28%;
                 width: 35%;
 
                 img {
@@ -425,9 +409,7 @@
               height: auto;
               column-gap: 12%;
               .frameimg3 {
-                // width: 70%;
                 width: 39%;
-                // height: 19vw;
                 img {
                   width: 100%;
                   height: 100%;
@@ -440,10 +422,7 @@
               .frameimg4 {
                 width: 37%;
                 margin-left: 0px;
-                // margin-top: 9vw;
-                // height: 16vw;
                 img {
-                  // 210 118
                   margin-top: 8px;
                   width: 100%;
                   height: 100%;
@@ -456,8 +435,6 @@
           }
           .frameimgmain3 {
             height: auto;
-            // padding-top: 60px;
-            // margin-bottom: 19%;
             .frameimgtop {
               display: flex;
               column-gap: 11%;
@@ -478,10 +455,7 @@
               .frameimg2 {
                 width: 70%;
                 margin-left: 0px;
-                // height: 19vw;
-                // max-height: 136px;
                 img {
-                  // 234 x156
                   width: 100%;
                   height: 100%;
                   max-width: 244px;
@@ -512,9 +486,6 @@
           }
 
           .frameimgmain1 {
-            // height: auto;
-            // padding-top: 60px;
-            // margin-bottom: 19%;
             .frameimgtop {
               .frameimg1 {
                 margin-top: 0%;
@@ -560,11 +531,8 @@
                 }
               }
               .frameimg2 {
-                // height: 18vw;
-                // max-height: 369px;
                 width: 50%;
                 margin-left: auto;
-                // height: 20.7vw;
                 img {
                   margin-left: auto;
                   width: 100%;
@@ -601,7 +569,6 @@
               font-family: $font-inter;
               font-style: normal;
               font-weight: 800;
-              // font-size: 200px;
               font-size: 60px;
               line-height: 100%;
               /* identical to box height, or 200px */
