@@ -71,14 +71,14 @@ const NewPortfolio = () => {
         </div>
 
         <div id="portfolios" className="mt-[43%] lg:mt-[33%]">
-          <div id="mobilePortfolios" class="pt-[7rem] md:pt-[7rem] md:mt-0">
+          <div id="mobilePortfolios" className="pt-[7rem] md:pt-[7rem] md:mt-0">
             <div className="bg-portfolioBg pt-[2px]">
               {/* text content */}
               <div className="relative">
                 <div className="h-[264px] md:h-[454px] md:mt-[107px] sm:mt-0">
                   <div inView={inView}>
                     <InView onChange={setInView}>
-                      {({ ref, inView }) => (
+                      {({ ref }) => (
                         <div ref={ref}>
                           {inView ? <PortfolioTextAnimation /> : <></>}
                         </div>

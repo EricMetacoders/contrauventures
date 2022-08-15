@@ -28,7 +28,7 @@ export default function Founders() {
             {/* start text animation */}
             <div inView={inView}>
               <InView onChange={setInView}>
-                {({ ref, inView }) => (
+                {({ ref }) => (
                   <div ref={ref}>
                     {inView ? <FounderTextAnimation /> : <></>}
                   </div>

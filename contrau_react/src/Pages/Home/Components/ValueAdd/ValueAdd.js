@@ -1,37 +1,30 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { InView } from "react-intersection-observer";
 import ValueAddAnimation from "./ValueAddAnimation";
 import { getEmpowerList } from "reducers/homeSlice";
 
 export default function ValueAdd() {
+  const [inView, setInView] = useState(false);
+
   const dispatch = useDispatch();
   const data = useSelector((state) => state.homeSlice.empowers);
   useEffect(() => {
     dispatch(getEmpowerList());
   }, []);
 
-  // handle enable animation location
-  const [offset, setOffset] = useState(null);
-  const handleScroll = () => setOffset(window.pageYOffset);
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  });
   return (
     <div className="mx-[34px]  md:mx-[117px] xl:mx-[100px] 2xl:mx-[300px] mt-[61px]  2xl:mt-[294px]">
       {/* desktop animation */}
-      <div className="hidden md:block md:h-[330px] mb-0 xl:mb-[9rem] 2xl:mb-0  2xl:h-[520px]">
+      <div className="h-[249.5px] sm:h-[368px] md:h-[330px] mb-0 xl:mb-[9rem] 2xl:mb-0  2xl:h-[520px]">
         {/* start animation */}
-        {offset > 5700 ? <ValueAddAnimation /> : <></>}
-        {/* end animation */}
-      </div>
-
-      {/* mobile animation*/}
-      <div className="block md:hidden h-[249.5px] sm:h-[368px]">
-        {/* start animation */}
-        {offset > 2926 ? <ValueAddAnimation /> : <></>}
+        <div inView={inView}>
+          <InView onChange={setInView}>
+            {({ ref }) => (
+              <div ref={ref}>{inView ? <ValueAddAnimation /> : <></>}</div>
+            )}
+          </InView>
+        </div>
         {/* end animation */}
       </div>
 

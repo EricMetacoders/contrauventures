@@ -31,7 +31,7 @@ export default function Group() {
               {/* start animation */}
               <div inView={inView}>
                 <InView onChange={setInView}>
-                  {({ ref, inView }) => (
+                  {({ ref }) => (
                     <div ref={ref}>
                       {inView ? <GroupTextAnimation /> : <></>}
                     </div>

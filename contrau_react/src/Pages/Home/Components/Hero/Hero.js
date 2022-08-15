@@ -17,7 +17,7 @@ export default function Hero() {
             {/* start text animation */}
             <div inView={inView}>
               <InView onChange={setInView}>
-                {({ ref, inView }) => (
+                {({ ref }) => (
                   <div ref={ref}>{inView ? <HeroTextAnim /> : <></>}</div>
                 )}
               </InView>
