@@ -57,7 +57,7 @@ export default function Founders() {
 
       {/* Small Tablet */}
 
-      <div className="hidden  sm:block md:hidden mt-[5%] lg:mt-[14%]">
+      <div className=" hidden  sm:block md:hidden mt-[5%] lg:mt-[14%]">
         <SmallTabletCarousel />
       </div>
       {/* Mobile */}
